@@ -1,9 +1,0 @@
-#!/bin/bash
-i=0
-
-while [ $i -lt 3 ]; do
-  php /var/www/bcci/cron/result.php
-	ls
-  sleep 20
-  i=$(( i + 1 ))
-done
