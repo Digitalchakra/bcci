@@ -2,7 +2,7 @@
 try
 	{
 		$data = file_get_contents('http://static.cricinfo.com/rss/livescores.xml');	
-		file_put_contents(getcwd().'/result.txt', $data);
+		file_put_contents(dirname(__FILE__).'/result.txt', $data);
 	}
 catch (Exception $e)
 	{
