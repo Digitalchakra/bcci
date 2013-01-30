@@ -5,7 +5,8 @@
     <div class = "container margin-t20">
         <div class = "row">
             <div class = "span8 margint20">
-                <div class = "grey-block">Banner</div>
+                <div id="banner" class = "grey-block">Banner
+				</div>
             </div>
             <div class = "span4 margint20">
                 <div class = "grey-block">Live Score</div>
@@ -13,8 +14,8 @@
         </div> <!---Head Banner--->
         
         <div class = "row">
-            <div class = "span12 margint20">
-                <p><strong>Trending :</strong> PepsiCo bags title sponsorship for IPL  |  IPL franchises announce initial squads  |  KKR v CSK Videos  |  Pathan Interview</p>
+            <div class = "span12 margint20" id='tweets'>
+                <p><strong>Tweets :</strong> <!--PepsiCo bags title sponsorship for IPL  |  IPL franchises announce initial squads  |  KKR v CSK Videos  |  Pathan Interview</p> -->
             </div>
         </div> <!------Trending--->
         
@@ -32,7 +33,7 @@
                     <li><a href="#upcomingMatches" data-toggle="tab">Upcoming Matches</a></li>
                 </ul>
                     <div id="matchestabContent" class="tab-content">
-                    <div class="tab-pane fade" id="pastMatches">
+                    <div class="tab-pane fade" id="pastMatches" style="max-height: 436px; scrolling='auto';">
                        <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -58,7 +59,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="tab-pane fade in active" id="presentMatches">
+                    <div class="tab-pane fade in active" id="presentMatches" style="max-height: 436px; scrolling='auto'; ">
                         <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -84,7 +85,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="tab-pane fade" id="upcomingMatches">
+                    <div class="tab-pane fade" id="upcomingMatches" style="max-height: 436px; scrolling='auto';">
                        <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -119,7 +120,7 @@
                         Results
                     </div>
                    <div class = "block-content">
-                    	<div class="accordion marginb0" id="accordion2">
+                    	<div class="accordion marginb0" id="accordion2" style="max-height: 436px; scrolling='auto';">
   							loading ...
 						</div>
                     </div>
@@ -133,13 +134,13 @@
             <div class = "span8 margint20">
                 <ul id="newstab" class="nav nav-tabs tabs-line">
                     <li class="active"><a href="#featuredNews" data-toggle="tab">Featured News</a></li>
-                    <li><a href="#recentNews" data-toggle="tab">Recent News</a></li>
+                    <li><a href="#recentNews" data-toggle="tab"  >Recent News</a></li>
                 </ul>
                 <div id="newstabContent" class="tab-content">
-                    <div class="tab-pane fade in active" id="featuredNews">
+                    <div class="tab-pane fade in active" id="featuredNews" style="max-height: 436px; scrolling='auto';">
                         Content for Featured News
                     </div>
-                    <div class="tab-pane fade" id="recentNews">
+                    <div class="tab-pane fade" id="recentNews" style="max-height: 436px; scrolling='auto';">
                         <p>Recent News Content</p>
                     </div>
                 </div>
