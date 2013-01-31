@@ -1,5 +1,5 @@
 cron.sh
 db.php
-result.txt
-news.json
-news.txt
+*.txt
+*.json
+*.log

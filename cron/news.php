@@ -54,8 +54,8 @@ try
 catch (Exception $e)
 	{
 		echo $e;
-		$error_msg="Cron: Read live result xml failed @ BCCI";
-		error_log($error_msg, 1,"manimani1014@gmail.com");
+		$error_msg="Cron: Read live result xml failed @ BCCI->".$e;
+		error_log($error_msg, 3,dirname(__FILE__).'/error.log');
 	}
 
 
