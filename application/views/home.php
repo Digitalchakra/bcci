@@ -5,7 +5,7 @@
 				</div>
             </div>
             <div class = "span4 margint20">
-                <div class = "grey-block">Live Score</div>
+                <div class = "grey-block" id="livescore">Live Score</div>
             </div>
         </div> <!---Head Banner--->
         

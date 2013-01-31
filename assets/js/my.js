@@ -4,9 +4,13 @@ $(document).ready(function()
 		tweets();
 		news();
 		result();
+		 livescore();
 	    setInterval(function() {
           result();
-    }, 10000);
+			}, 60000);
+    setInterval(function() {
+          livescore();
+			}, 22000);
 });
 function result()
 {
@@ -77,4 +81,19 @@ function tweets()
 			$('#tweets').html(html);
     //console.log(r);
 	});
+}
+function livescore()
+{
+	$.ajax({
+        url: 'live',
+        type: "GET",
+        cache: false,
+        success: function(data) {
+			$('#livescore').html(data);
+        },
+        error:function()
+        {
+			
+		}    
+    });
 }
