@@ -127,8 +127,6 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-    <script src="<?php echo base_url('assets/js/jquery-1.8.3.min.js');?>"></script>
-    <script src="<?php echo base_url('assets/js/jfeed.js');?>"></script>
     <script src="<?php echo base_url('assets/js/bootstrap-transition.js');?>"></script>
     <script src="<?php echo base_url('assets/js/bootstrap-alert.js');?>"></script>
     <script src="<?php echo base_url('assets/js/bootstrap-modal.js');?>"></script>
@@ -142,6 +140,5 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
     <script src="<?php echo base_url('assets/js/bootstrap-carousel.js');?>"></script>
     <script src="<?php echo base_url('assets/js/bootstrap-typeahead.js');?>"></script>
     <script src="<?php echo base_url('assets/js/bootstrap-affix.js');?>"></script>
-    <script src="<?php echo base_url('assets/js/my.js');?>"></script>
 </body>
 </html>

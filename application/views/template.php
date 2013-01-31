@@ -2,10 +2,10 @@
 
 <?php 
 if(isset($data)){
-	$this->load->view($body_content, $data);	
+	$this->load->view($view_page, $data);	
 }
 else{
-	$this->load->view($body_content);
+	$this->load->view($view_page);
 }
  ?>
 

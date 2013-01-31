@@ -44,7 +44,7 @@
           <div class="navbar navbar-inverse">
                  <div class="navbar-inner">
                 <ul class="nav">
-                    <li class="active"><a href="#">Home</a></li>
+                    <li class="active"><a href="<?php echo base_url(); ?>">Home</a></li>
                     <li><a href="#">Link</a></li>
                     <li><a href="#">Link</a></li>
                     <li><a href="#loginmodal" data-toggle="modal">Login</a></li>

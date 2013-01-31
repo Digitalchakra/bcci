@@ -1,7 +1,3 @@
-
-   <!---------//Container----->
-    
-    <!---------Header Ends Here----------->
     <div class = "container margin-t20">
         <div class = "row">
             <div class = "span8 margint20">
@@ -44,7 +40,7 @@
                             </thead>
                             <tbody>
                                 <?php
-                                foreach($data['past'] as $row)
+                                foreach($content['past'] as $row)
                                     {
                                         ?>
                                 <tr>
@@ -55,7 +51,6 @@
                                 <?php
                                 }
                                 ?>
-                                <?php echo $links; ?>
                             </tbody>
                         </table>
                     </div>
@@ -70,7 +65,7 @@
                             </thead>
                             <tbody>
                                 <?php
-                                foreach($data['present'] as $row)
+                                foreach($content['present'] as $row)
                                     {
                                         ?>
                                 <tr>
@@ -81,7 +76,6 @@
                                 <?php
                                 }
                                 ?>
-                                <?php echo $links; ?>
                             </tbody>
                         </table>
                     </div>
@@ -96,7 +90,7 @@
                             </thead>
                             <tbody>
                                 <?php
-                                foreach($data['upcoming'] as $row)
+                                foreach($content['upcoming'] as $row)
                                     {
                                         ?>
                                 <tr>
@@ -107,9 +101,9 @@
                                 <?php
                                 }
                                 ?>
-                                <?php echo $links; ?>
                             </tbody>
                         </table>
+                         <p class="pull-right"><a href="schedule">View all</a></p>
                     </div>
                 </div>
                 </div>
@@ -259,3 +253,4 @@
         </div> <!------Articles and Sidebar---------->
         
     </div><!------//Content--->
+    <script src="<?php echo base_url('assets/js/my.js');?>"></script>
