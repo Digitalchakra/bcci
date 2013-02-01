@@ -21,13 +21,13 @@ foreach($html->find('div#yui-main div.ycric-body-left li.ycric-livescore-sprite'
 				$link->setAttribute('href',$url_base.$href);
 				$link->setAttribute('target','_blank'); 
 			}
-		if($i>0)
+		if($i<=0)
 			{
-			file_put_contents(dirname(__FILE__).'/live.txt', $main->outertext, FILE_APPEND);
+				file_put_contents(dirname(__FILE__).'/live.txt', $main->outertext);
 			}
 		else
 			{
-			file_put_contents(dirname(__FILE__).'/live.txt', $main->outertext);
+				file_put_contents(dirname(__FILE__).'/live.txt', $main->outertext, FILE_APPEND);
 			}
 		$i++;
 	}

@@ -27,8 +27,8 @@ class Result extends CI_Controller
 			$data['resultset']=$result;
 			$this->load->view('json',$data);
 			*/
-			header('Content-Type:application/json');
-			echo file_get_contents(base_url('cron/result.json'));
+			//header('Content-Type:application/json');
+			echo file_get_contents(base_url('cron/result.txt'));
 	}
 }
 ?>

@@ -21,13 +21,14 @@ function result()
 	$.ajax({
         url: 'result',
         type: "GET",
-        dataType:'json', 
+        //dataType:'json', 
         success: function(data) {
-			for(i=0;i<data.resultset.length;i++)
+			/*for(i=0;i<data.resultset.length;i++)
 			{
 				html+='<div class="accordion-heading acc-heading">'+data.resultset[i]+'</div>';
 			}
-			$('#accordion2').html(html);
+			$('#accordion2').html(html);*/
+			$('#accordion2').html(data);
             
         },
         error:function()
