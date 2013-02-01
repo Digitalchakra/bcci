@@ -3,7 +3,7 @@ include('simple_html_dom.php');
 try
 {
 $url='http://cricket.yahoo.com/cricket/live-score';
-$url_base='http://cricket.yahoo.com/';
+$url_base='http://cricket.yahoo.com';
 $html = file_get_html($url);
 /*foreach($html->find('div#yui-main') as $main)
 	foreach($main->find('div.yom-recent-live-upcoming ul li.live div.bd') as $ul)

@@ -26,7 +26,7 @@ include('simple_html_dom.php');
 try
 {
 $url='http://www.foxsports.com.au/cricket/results';
-$url_base='http://www.foxsports.com.au/';
+$url_base='http://www.foxsports.com.au';
 $html = file_get_html($url);
 /*foreach($html->find('div#yui-main') as $main)
 	foreach($main->find('div.yom-recent-live-upcoming ul li.live div.bd') as $ul)
@@ -42,6 +42,16 @@ foreach($html->find('table.cricket-results-table tr') as $main)
 			//file_put_contents(dirname(__FILE__).'/result.htm', "");
 			//continue;
 		}
+		foreach($main->find('td.cricket-res-table-comp') as $td)
+			{
+				//to remove match type ODD
+				if($td->innertext=='ODD')
+				{
+					$main->outertext	='';
+				//	$main->outertext
+				}
+				
+			}
 		foreach($main->find('td.cricket-res-table-venue a') as $link)
 			{
 				$href=$link->getAttribute('href'); 
