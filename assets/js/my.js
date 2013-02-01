@@ -10,7 +10,7 @@ $(document).ready(function()
 			}, 60000);
     setInterval(function() {
           livescore();
-			}, 22000);
+			}, 30000);
 });
 function result()
 {

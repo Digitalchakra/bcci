@@ -5,7 +5,7 @@
 				</div>
             </div>
             <div class = "span4 margint20">
-                <div class = "grey-block" id="livescore">Live Score</div>
+                <div class = "grey-block" id="livescore" style="list-style:none; height: 436px; overflow-y:auto;">Live Score</div>
             </div>
         </div> <!---Head Banner--->
         
@@ -29,7 +29,7 @@
                     <li><a href="#upcomingMatches" data-toggle="tab">Upcoming Matches</a></li>
                 </ul>
                     <div id="matchestabContent" class="tab-content">
-                    <div class="tab-pane fade" id="pastMatches" style="max-height: 436px; scrolling='auto';">
+                    <div class="tab-pane fade" id="pastMatches" style="height: 436px; overflow-y:auto;">
                        <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -54,7 +54,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="tab-pane fade in active" id="presentMatches" style="max-height: 436px; scrolling='auto'; ">
+                    <div class="tab-pane fade in active" id="presentMatches" style="height: 436px; overflow-y:auto; ">
                         <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -79,7 +79,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="tab-pane fade" id="upcomingMatches" style="max-height: 436px; scrolling='auto';">
+                    <div class="tab-pane fade" id="upcomingMatches" style="height: 436px; overflow-y:auto;">
                        <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -114,7 +114,7 @@
                         Results
                     </div>
                    <div class = "block-content">
-                    	<div class="accordion marginb0" id="accordion2" style="max-height: 436px; scrolling='auto';">
+                    	<div class="accordion marginb0" id="accordion2" style="height: 436px; overflow-y:auto;">
   							loading ...
 						</div>
                     </div>
@@ -131,10 +131,10 @@
                     <li><a href="#recentNews" data-toggle="tab"  >Recent News</a></li>
                 </ul>
                 <div id="newstabContent" class="tab-content">
-                    <div class="tab-pane fade in active" id="featuredNews" style="max-height: 436px; scrolling='auto';">
+                    <div class="tab-pane fade in active" id="featuredNews" style="height: 436px; overflow-y:auto;">
                         Content for Featured News
                     </div>
-                    <div class="tab-pane fade" id="recentNews" style="max-height: 436px; scrolling='auto';">
+                    <div class="tab-pane fade" id="recentNews" style="height: 436px; overflow-y:auto;;">
                         <p>Recent News Content</p>
                     </div>
                 </div>
