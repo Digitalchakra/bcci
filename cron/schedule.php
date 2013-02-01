@@ -24,7 +24,7 @@ foreach( $search as $searchNode )
 		$tm=$searchNode->getAttribute('tm');	
 	}
 	$data['srs_id']=$srs_arr[0];
-	$data['name']=$srs_arr[1];
+	$data['srs_name']=$srs_arr[1];
 	$data['description']=$searchNode->getAttribute('desc');
 	$data['date']=preg_replace("/[^0-9]/","",$sdate[0]).'-'.str_replace(',','-',$searchNode->getAttribute('mnth_yr')).''.$tm;
 	$data['utc_time']=strtotime($data['date'].':00');
@@ -32,7 +32,7 @@ foreach( $search as $searchNode )
   	$values= implode(',',$data);
   	$query='SELECT srs_id FROM `tbl_matches` WHERE `srs_id`='.$data['srs_id'].' and `description`="'.$data['description'].'"';
   	$result=mysql_query($query);
-
+	//print_r($data); die;
   	if(mysql_numrows($result) <1)
 	{
 		$query='INSERT INTO `tbl_matches` (`srs_id`, `srs_name`, `description`, `date`, `utc_time`, `mt_vnu`) VALUES ("'.$data['srs_id'].'","'.$data['name'].'","'.$data['description'].'","'.$data['date'].'","'.$data['utc_time'].'","'.$data['mt_vnu'].'")';
