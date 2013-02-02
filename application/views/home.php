@@ -109,16 +109,27 @@
                 </div>
             </div>
             <div class = "span4 margint20">
-                <div class = "block-box gradient">
-                    <div class = "block-header gradient">
-                        Results
-                    </div>
-                   <div class = "block-content">
-                    	<div class="accordion marginb0" id="accordion2" style="height: 436px; overflow-y:auto;">
-  							loading ...
-						</div>
-                    </div>
-                </div>
+                <div class="sidebar-nav" id="sidebar">
+					<ul class="nav nav-tabs nav-stacked" id="accordion2">
+					  <li class="menu-heading dark-heading">Results 
+					  <div class="btn-group pull-right">
+						<button class="btn" id="menubtn">All</button>
+						<button data-toggle="dropdown" class="btn dropdown-toggle">
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" id="resultmenu">
+							<!-- dropdown menu links -->
+							<li><a href="#">India vs Sri Lanka</a></li>
+							<li><a href="#">England vs New Zealand</a></li>
+							<li><a href="#">S Africa vs Australia</a></li>
+						</ul>
+					  </div>
+						</li>
+					  <!--<li class="nav-menu">
+						<a href="#"><h4>India vs Australia</h4>India won by 3 Runs</a>
+					  </li>-->
+					</ul>
+			</div>
             </div>
     </div>
                    

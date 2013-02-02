@@ -11,6 +11,7 @@ $(document).ready(function()
     setInterval(function() {
           livescore();
 			}, 30000);
+			
 });
 function result()
 {
@@ -28,8 +29,22 @@ function result()
 				html+='<div class="accordion-heading acc-heading">'+data.resultset[i]+'</div>';
 			}
 			$('#accordion2').html(html);*/
-			$('#accordion2').html(data);
-            
+			$('#accordion2').append(data);
+			$('#resultmenu').html($('#ajaxmenu').html());
+			$('#ajaxmenu').remove();
+            $(".resultmenu").click(function()
+			{
+				$('#menubtn').html($(this).attr('link'));
+				if($(this).attr('link') == 'All')
+				{
+					$('.type').show();
+				}
+				else
+				{
+					$('.type').hide();
+					$('.'+$(this).attr('link')).show();
+				}
+			});
         },
         error:function()
         {
@@ -97,4 +112,11 @@ function livescore()
 			
 		}    
     });
+}
+function resultTab(type)
+{
+	//$('.type').hide();
+	
+	alert($(this).attr('value'));
+	alert($(this).attr('type'));
 }

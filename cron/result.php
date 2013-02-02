@@ -32,6 +32,8 @@ $html = file_get_html($url);
 	foreach($main->find('div.yom-recent-live-upcoming ul li.live div.bd') as $ul)
 		file_put_contents(dirname(__FILE__).'/live.txt', $ul->innertext);*/
 $i=0;
+$list=array();
+$menu='</table><div id="ajaxmenu"><li link="All" class="resultmenu"><a>All</a></li>';
 foreach($html->find('table.cricket-results-table tr') as $main)
 	{
 		
@@ -39,16 +41,26 @@ foreach($html->find('table.cricket-results-table tr') as $main)
 		if($tablewidth=='header')
 		{
 			//$i++;
-			//file_put_contents(dirname(__FILE__).'/result.htm', "");
+			//file_put_contents(dirname(__FILE__).'/result.htm', "<table>");
 			//continue;
 		}
 		foreach($main->find('td.cricket-res-table-comp') as $td)
 			{
 				//to remove match type ODD
-				if($td->innertext=='ODD')
+				$td_txt = $td->innertext;
+				if($td_txt=='ODD' || $td_txt=='SHEF')
 				{
-					$main->outertext	='';
+					$main->outertext='';
 				//	$main->outertext
+				}
+				else
+				{
+					$main->setAttribute('class',$td_txt.' type');
+					if(!in_array($td_txt,$list))
+					{
+						$menu=$menu.'<li class="resultmenu" link="'.$td_txt.'"><a>'.$td_txt.'</a></li>';
+						$list[]=$td_txt;
+					}
 				}
 				
 			}
@@ -60,7 +72,7 @@ foreach($html->find('table.cricket-results-table tr') as $main)
 			}
 		if($i==0)
 			{
-				file_put_contents(dirname(__FILE__).'/result.txt', $main->outertext);
+				file_put_contents(dirname(__FILE__).'/result.txt', '<table>'.$main->outertext);
 			}
 		else
 			{	
@@ -68,6 +80,8 @@ foreach($html->find('table.cricket-results-table tr') as $main)
 			}
 		$i++;
 	}
+	file_put_contents(dirname(__FILE__).'/result.txt', $menu.'</div>', FILE_APPEND);
+
 }
 catch (Exception $e)
 	{
