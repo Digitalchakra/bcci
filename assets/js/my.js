@@ -5,9 +5,9 @@ $(document).ready(function()
 		news();
 		result();
 		 livescore();
-	    setInterval(function() {
+	    /*setInterval(function() {
           result();
-			}, 60000);
+			}, 60000);*/
     setInterval(function() {
           livescore();
 			}, 30000);
