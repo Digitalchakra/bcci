@@ -32,7 +32,7 @@
   
   <!--Live SCore-->
   <div class = "span4 margint20">
-    <div class = "grey-block" style="height:420px">Live Score</div>
+    <div class = "grey-block" style="height:420px" id="livescore">Live Score</div>
   </div>
 </div>
 <div class = "row">
