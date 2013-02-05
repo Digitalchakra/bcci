@@ -21,7 +21,8 @@ try
 				$node['description']=$searchNode->getElementsByTagName('description')->item(0)->nodeValue;
 				$node['pubDate']=$searchNode->getElementsByTagName('pubDate')->item(0)->nodeValue;
 				$node['link']=$searchNode->getElementsByTagName('link')->item(0)->nodeValue;
-				$node['media']=$searchNode->getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')->item(0)->getAttribute('url');
+				$node['media'][0]=$searchNode->getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')->item(0)->getAttribute('url');
+				$node['media'][1]=$searchNode->getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')->item(1)->getAttribute('url');
 				$result[]=$node;
 			}
 			$data['resultset']=$result;

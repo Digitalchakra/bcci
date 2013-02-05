@@ -112,6 +112,7 @@ body, ul, li {
 	left:-999em; /* Hides the drop down */
 	text-align:left;
 	padding:10px 5px 10px 5px;
+	z-index:1000;
 	
 	/* Gradient background */
 	background-color: #2d2d2d;

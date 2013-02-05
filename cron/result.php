@@ -31,56 +31,63 @@ $html = file_get_html($url);
 /*foreach($html->find('div#yui-main') as $main)
 	foreach($main->find('div.yom-recent-live-upcoming ul li.live div.bd') as $ul)
 		file_put_contents(dirname(__FILE__).'/live.txt', $ul->innertext);*/
-$i=0;
+$i=-1;
 $list=array();
-$menu='</table><div id="ajaxmenu"><li link="All" class="resultmenu"><a>All</a></li>';
+$line=array();
 foreach($html->find('table.cricket-results-table tr') as $main)
 	{
-		
-		$tablewidth=$main->getAttribute('class'); 
+		$skiploop=0;
+		/*$tablewidth=$main->getAttribute('class'); 
 		if($tablewidth=='header')
 		{
 			//$i++;
 			//file_put_contents(dirname(__FILE__).'/result.htm', "<table>");
 			//continue;
-		}
-		foreach($main->find('td.cricket-res-table-comp') as $td)
+		}*/
+		foreach($main->find('td') as $td)
 			{
-				//to remove match type ODD
-				$td_txt = $td->innertext;
-				if($td_txt=='ODD' || $td_txt=='SHEF')
+				if(!$skiploop)
 				{
-					$main->outertext='';
-				//	$main->outertext
+				$td_txt = $td->plaintext;
+				if($td->getAttribute('class')=='cricket-res-table-comp')
+				{
+					if($td_txt!='ODD' && $td_txt!='SHEF')
+					{
+						$line[$i]['type'] = $td_txt;
+						if(!in_array($td_txt,$list))
+							{
+								$list[]=$td_txt;
+							}
+					}
+					else
+					{
+						$skiploop=1;
+					}
+				}
+				else if($td->getAttribute('class')=='cricket-res-table-date')
+				{
+					$line[$i]['date'] = trim($td_txt);
+				}
+				else if($td->getAttribute('class')=='cricket-res-table-teams')
+				{
+					$line[$i]['team'] = $td_txt;
 				}
 				else
 				{
-					$main->setAttribute('class',$td_txt.' type');
-					if(!in_array($td_txt,$list))
+				$line[$i]['result'] = $td_txt;
+				foreach($td->find('a') as $link)
 					{
-						$menu=$menu.'<li class="resultmenu" link="'.$td_txt.'"><a>'.$td_txt.'</a></li>';
-						$list[]=$td_txt;
+						$href=$link->getAttribute('href'); 
+						$line[$i]['link'] = $url_base.$href;
 					}
 				}
-				
+			}				
 			}
-		foreach($main->find('td.cricket-res-table-venue a') as $link)
-			{
-				$href=$link->getAttribute('href'); 
-				$link->setAttribute('href',$url_base.$href);
-				$link->setAttribute('target','_blank'); 
-			}
-		if($i==0)
-			{
-				file_put_contents(dirname(__FILE__).'/result.txt', '<table>'.$main->outertext);
-			}
-		else
-			{	
-				file_put_contents(dirname(__FILE__).'/result.txt', $main->outertext, FILE_APPEND);
-			}
-		$i++;
+			$i++;
 	}
-	file_put_contents(dirname(__FILE__).'/result.txt', $menu.'</div>', FILE_APPEND);
+	$data['menu']=$list;
+	$data['list']=$line;
+	file_put_contents(dirname(__FILE__).'/result.json', json_encode($data));
 
 }
 catch (Exception $e)

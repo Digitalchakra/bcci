@@ -50,7 +50,7 @@ $result=array();
 		{
 			foreach($type_row as $row)
 			{
-					$query='INSERT INTO `tbl_team_rank` (`team`, `matches`, `points`, `rating`, `type`) VALUES ("'.$row[0].'","'.$row[1].'","'.$row[2].'","'.$row[3].'","'.$type[$i].'")';
+					$query='INSERT INTO `tbl_team_rank` (`team`, `matches`, `points`, `rating`, `type`) VALUES ("'.$row[0].'","'.$row[1].'","'.$row[2].'","'.$row[3].'","'.trim(str_replace('ICC','',$type[$i])).'")';
 					if(!mysql_query($query))
 					{
 						echo "Failed";

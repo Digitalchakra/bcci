@@ -588,7 +588,7 @@ a:hover {
 }
 
 p {
-  margin: 0 0 10px;
+  margin: 0 0 0px;
 }
 
 .lead {
@@ -5807,9 +5807,9 @@ a.badge:hover {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
-.accordion {
+/*.accordion {
   margin-bottom: 20px;
-}
+}*/
 
 .accordion-group {
   margin-bottom: 2px;
@@ -5825,7 +5825,7 @@ a.badge:hover {
 
 .accordion-heading .accordion-toggle {
   display: block;
-  padding: 8px 15px;
+  padding: 10px 10px;
 }
 
 .accordion-toggle {
@@ -5833,8 +5833,8 @@ a.badge:hover {
 }
 
 .accordion-inner {
-  padding: 9px 15px;
-  border-top: 1px solid #e5e5e5;
+/*  padding: 9px 15px;
+*/  border-top: 1px solid #e5e5e5;
 }
 
 .carousel {
