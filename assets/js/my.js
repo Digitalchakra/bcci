@@ -74,10 +74,10 @@ function news()
         type: "GET",
         dataType:'json', 
         success: function(data) {
-			for(i=0;i<data.resultset.length;i++)
+			for(i=1;i<data.resultset.length;i++)
 			{
 				html+='<div class="accordion-heading acc-heading">'
-				html+='<p><b><a target="_blank" href="'+data.resultset[i]['link']+'">'+data.resultset[i]['title']+'</a></b> - '+data.resultset[i]['pubDate']+'</p>';
+				html+='<p><b><a target="_blank" href="'+data.resultset[i]['link']+'">'+data.resultset[i]['title']+'</a></b> - '+data.resultset[i]['pubdate']+'</p>';
 				html+='<p>'+data.resultset[i]['description']+'</p></div>';
 				/*bannerslide+='<div class="item"> <img src="'+data.resultset[i]['media'][1]+'" class = "res-image">';
 				bannerslide+='<div class = "carousel-caption">';
@@ -85,13 +85,13 @@ function news()
 				bannerslide+='<p>'+data.resultset[i]['description']+'</p></div></div>';*/
 			}
 			$('#recentNews').html(html);
-			html='<img src="'+data.resultset[0]['media'][0]+'"/>';
-			html+=data.fnews['desc'];
+			html='<img src="'+data.resultset[0]['media2']+'"/>';
+			html+=data.resultset[0]['description'];
 			$('#featuredNews').html(html);
-			bannerslide+='<div class="item active"> <img src="'+data.banner["img"]+'" class = "res-image">';
+			bannerslide+='<div class="item active"> <img src="'+data.resultset[0]['media1']+'" class = "res-image">';
 			bannerslide+='<div class = "carousel-caption">';
 			bannerslide+='<a target="_blank" href="'+data.resultset[0]['link']+'"><h4>'+data.resultset[0]['title']+'</h4></a>';
-			bannerslide+='<p>'+data.resultset[0]['description']+'</p></div></div>';
+			bannerslide+='<p>'+data.resultset[0]['description'].substring(0,200)+' ...</p></div></div>';
 			$('#bannerslide').html(bannerslide);
 			
         },
