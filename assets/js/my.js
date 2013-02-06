@@ -86,11 +86,13 @@ function news()
 			}
 			$('#recentNews').html(html);
 			html='<img src="'+data.resultset[0]['media2']+'"/>';
+			html+='<p>'+data.resultset[0]['pubdate']+'</p>';
 			html+=data.resultset[0]['description'];
 			$('#featuredNews').html(html);
 			bannerslide+='<div class="item active"> <img src="'+data.resultset[0]['media1']+'" class = "res-image">';
 			bannerslide+='<div class = "carousel-caption">';
 			bannerslide+='<a target="_blank" href="'+data.resultset[0]['link']+'"><h4>'+data.resultset[0]['title']+'</h4></a>';
+			bannerslide+='<p>'+data.resultset[0]['pubdate']+'</p>';
 			bannerslide+='<p>'+data.resultset[0]['description'].substring(0,200)+' ...</p></div></div>';
 			$('#bannerslide').html(bannerslide);
 			
