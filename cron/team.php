@@ -12,7 +12,18 @@ $result=array();
 	{
 		foreach($main->find('h3') as $h3)
 		{
-			$type[]=str_replace('Championship','',$h3->plaintext);
+			if(trim($h3->plaintext)=='ICC Test Championship')
+			{
+				$type[] ='test';
+			}
+			else if(trim($h3->plaintext)=='ICC ODI Championship')
+			{
+				$type[]='odi';
+			}
+			else if(trim($h3->plaintext)=='ICC Twenty20 Championship')
+			{
+				$type[]='t20';
+			}
 		}
 		$typecount = 0;
 		foreach($main->find('table') as $table)
@@ -50,7 +61,7 @@ $result=array();
 		{
 			foreach($type_row as $row)
 			{
-					$query='INSERT INTO `tbl_team_rank` (`team`, `matches`, `points`, `rating`, `type`) VALUES ("'.$row[0].'","'.$row[1].'","'.$row[2].'","'.$row[3].'","'.trim(str_replace('ICC','',$type[$i])).'")';
+					$query='INSERT INTO `tbl_team_rank` (`team`, `matches`, `points`, `rating`, `type`) VALUES ("'.$row[0].'","'.$row[1].'","'.$row[2].'","'.$row[3].'","'.$type[$i].'")';
 					if(!mysql_query($query))
 					{
 						echo "Failed";
