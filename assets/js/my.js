@@ -5,6 +5,9 @@ $(document).ready(function()
 		news();
 		result();
 		team();
+		rank('batsman');
+		rank('bowler');
+		rank('allrounder');
 		photos();
 		videos();
 		 livescore();
@@ -156,7 +159,7 @@ function team()
                 list+='</div><div class="clearfix"></div></div></div></div>';
 			}
 			$('#team-ranking').html(list);
-			for(i=0;i<data.resultset['Test'].length;i++)
+			for(i=0;i<data.resultset['ODI'].length;i++)
 			{
                 list1+='<div class="accordion-group"><div class="accordion-heading">';
                 list1+='<div class="content"><div class="date">';
@@ -167,7 +170,7 @@ function team()
                 list1+='</div><div class="clearfix"></div></div></div></div>';
 			}
 			$('#team-ranking01').html(list1);
-			for(i=0;i<data.resultset['Test'].length;i++)
+			for(i=0;i<data.resultset['T20'].length;i++)
 			{
                 list2+='<div class="accordion-group"><div class="accordion-heading">';
                 list2+='<div class="content"><div class="date">';
@@ -178,6 +181,66 @@ function team()
                 list2+='</div><div class="clearfix"></div></div></div></div>';
 			}
 			$('#team-ranking02').html(list2);
+			/*$('#team').html(data);
+			$('.teamMenu').click(function()
+			{	
+				$('.releanceTabBox').hide();
+				$('#'+$(this).attr('link')).show();
+				});*/
+        },
+        error:function()
+        {
+			
+		}    
+    })
+	
+}
+function rank(method)
+{
+	var list='';
+	var list1='';
+	var list2='';
+	$.ajax({
+        url: 'rank/'+method,
+        type: "GET",
+        dataType:'JSON',
+        success: function(data) {
+			for(i=0;i<data.resultset['Test'].length;i++)
+			{
+				list+='<div class="accordion-group"><div class="accordion-heading">';
+                list+='<div class="content"><div class="date">';
+                list+='<span class="red"><h3>'+parseInt(i+1)+'</h3></span>';
+                list+='</div><div class="match">';
+                list+='<h3 class="grey">'+data.resultset['Test'][i]['name']+'</h3>';
+                list+='<h4 class="grey"> - '+data.resultset['Test'][i]['country']+'</h4>';
+                list+='<h5>Rating: '+data.resultset['Test'][i]['rating']+'</h5>';
+                list+='</div><div class="clearfix"></div></div></div></div>';
+			}
+			$('#'+method+'-ranking').html(list);
+			for(i=0;i<data.resultset['ODI'].length;i++)
+			{
+                list1+='<div class="accordion-group"><div class="accordion-heading">';
+                list1+='<div class="content"><div class="date">';
+                list1+='<span class="red"><h3>'+parseInt(i+1)+'</h3></span>';
+                list1+='</div><div class="match">';
+                list1+='<h3 class="grey">'+data.resultset['ODI'][i]['name']+'</h3>';
+                list1+='<h4 class="grey"> - '+data.resultset['ODI'][i]['country']+'</h4>';
+                list1+='<h5>Rating: '+data.resultset['ODI'][i]['rating']+'</h5>';
+                list1+='</div><div class="clearfix"></div></div></div></div>';
+			}
+			$('#'+method+'-ranking01').html(list1);
+			for(i=0;i<data.resultset['T20'].length;i++)
+			{
+                list2+='<div class="accordion-group"><div class="accordion-heading">';
+                list2+='<div class="content"><div class="date">';
+                list2+='<span class="red"><h3>'+parseInt(i+1)+'</h3></span>';
+                list2+='</div><div class="match">';
+                list2+='<h3 class="grey">'+data.resultset['T20'][i]['name']+'</h3>';
+                list2+='<h4 class="grey"> - '+data.resultset['T20'][i]['country']+'</h4>';
+                list2+='<h5>Rating: '+data.resultset['T20'][i]['rating']+'</h5>';
+                list2+='</div><div class="clearfix"></div></div></div></div>';
+			}
+			$('#'+method+'-ranking02').html(list2);
 			/*$('#team').html(data);
 			$('.teamMenu').click(function()
 			{	
