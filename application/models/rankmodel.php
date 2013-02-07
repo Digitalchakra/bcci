@@ -6,7 +6,7 @@ class Rankmodel extends CI_Model
 		$data=array();
 		//$this->db->where('type', 'batting');
 		//$this->db->from('tbl_player_rank');
-		$qry = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'Test')->get('tbl_team_rank');
+		$qry = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'test')->get('tbl_team_rank');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)
@@ -14,7 +14,7 @@ class Rankmodel extends CI_Model
 					$data['Test'][]=$row;
 				}
 			}
-			$qry1 = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'ODI')->get('tbl_team_rank');
+			$qry1 = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'odi')->get('tbl_team_rank');
 		if($qry1->num_rows()>0)
 			{
 				foreach($qry1->result() as $row)
@@ -22,7 +22,7 @@ class Rankmodel extends CI_Model
 					$data['ODI'][]=$row;
 				}
 			}
-			$qry2 = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'Twenty20')->get('tbl_team_rank');
+			$qry2 = $this->db->limit(3)->order_by("rating", "desc")->where('type', 't20')->get('tbl_team_rank');
 		if($qry2->num_rows()>0)
 			{
 				foreach($qry2->result() as $row)
@@ -37,47 +37,87 @@ class Rankmodel extends CI_Model
 	function getBatsman()
 	{
 		$data=array();
-		$this->db->where('type', 'batting');
-		$this->db->from('tbl_player_rank');
-		$qry = $this->db->get();
+		$qry = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'batting')->where('match', 'test')->get('tbl_player_rank');
 		if($qry->num_rows()>0)
 			{
-				$data=array();
 				foreach($qry->result() as $row)
 				{
-					$data[]=$row;
+					$data['Test'][]=$row;
 				}
-				return $data;
 			}
+			$qry1 = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'batting')->where('match', 'odi')->get('tbl_player_rank');
+		if($qry1->num_rows()>0)
+			{
+				foreach($qry1->result() as $row)
+				{
+					$data['ODI'][]=$row;
+				}
+			}
+			$qry2 = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'batting')->where('match', 't20')->get('tbl_player_rank');
+		if($qry2->num_rows()>0)
+			{
+				foreach($qry2->result() as $row)
+				{
+					$data['T20'][]=$row;
+				}
+			}
+			return $data;
 	}
 	function getBowler()
 	{
-		$this->db->where('type', 'bowling');
-		$this->db->from('tbl_player_rank');
-		$qry = $this->db->get();
+		$data=array();
+		$qry = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'bowling')->where('match', 'test')->get('tbl_player_rank');
 		if($qry->num_rows()>0)
 			{
-				$data=array();
 				foreach($qry->result() as $row)
 				{
-					$data[]=$row;
+					$data['Test'][]=$row;
 				}
-				return $data;
 			}
+			$qry1 = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'bowling')->where('match', 'odi')->get('tbl_player_rank');
+		if($qry1->num_rows()>0)
+			{
+				foreach($qry1->result() as $row)
+				{
+					$data['ODI'][]=$row;
+				}
+			}
+			$qry2 = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'bowling')->where('match', 't20')->get('tbl_player_rank');
+		if($qry2->num_rows()>0)
+			{
+				foreach($qry2->result() as $row)
+				{
+					$data['T20'][]=$row;
+				}
+			}
+			return $data;
 	}
 	function getAllRounder()
 	{
-		$this->db->where('type', 'all-rounder');
-		$this->db->from('tbl_player_rank');
-		$qry = $this->db->get();
+		$qry = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'all-rounder')->where('match', 'test')->get('tbl_player_rank');
 		if($qry->num_rows()>0)
 			{
-				$data=array();
 				foreach($qry->result() as $row)
 				{
-					$data[]=$row;
+					$data['Test'][]=$row;
 				}
-				return $data;
 			}
+			$qry1 = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'all-rounder')->where('match', 'odi')->get('tbl_player_rank');
+		if($qry1->num_rows()>0)
+			{
+				foreach($qry1->result() as $row)
+				{
+					$data['ODI'][]=$row;
+				}
+			}
+			$qry2 = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'all-rounder')->where('match', 't20')->get('tbl_player_rank');
+		if($qry2->num_rows()>0)
+			{
+				foreach($qry2->result() as $row)
+				{
+					$data['T20'][]=$row;
+				}
+			}
+			return $data;
 	}
 }

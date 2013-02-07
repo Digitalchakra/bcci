@@ -37,8 +37,6 @@ try
 							}
 							$result[]=$node;
 					}
-			echo "<pre>";
-			//print_r($result);
 			}
 
 			
@@ -48,9 +46,7 @@ try
 			//Tbl_photo::connection()->query('TRUNCATE TABLE `Tbl_photo`');
 			foreach($result as $row)
 			{
-				Tbl_photos::create($row);
-				//echo "EFWFEW||||||||";
-				//Tbl_photos::update_attributes($row);		
+				Tbl_photos::create($row);	
 			}
 		}
 	}

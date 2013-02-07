@@ -816,18 +816,78 @@
                                     </div>
                                     <div class="tab-pane fade" id="batsman">
 										<!-- batsman rank -->
-	                                                                     
+	                                     <div class="span3">
+                                        <!--Team Ranking Accordion 01-->
+                                        <h4>Test</h4>
+                                        <div class="white-block">
+                                        	<div id="batsman-ranking" class="accordion"></div>
+                                        </div>
+                                      </div>
+                                      <div class="span3">
+                                        <!--Team Ranking Accordion 01-->
+                                        <h4>ODI</h4>
+                                        <div class="white-block">
+                                        	<div id="batsman-ranking01" class="accordion"></div>
+                                        </div>
+                                      </div>
+                                      <div class="span3">
+                                        <!--Team Ranking Accordion 01-->
+                                        <h4>T20</h4>
+                                        <div class="white-block">
+                                        	<div id="batsman-ranking02" class="accordion"></div>
+                                        </div>
+                                      </div>                                
 	                                    
                                     </div>
                                     <div class="tab-pane fade" id="bowler">
 										<!-- bowler rank -->
-
+										<div class="span3">
+                                        <!--Team Ranking Accordion 01-->
+                                        <h4>Test</h4>
+                                        <div class="white-block">
+                                        	<div id="bowler-ranking" class="accordion"></div>
+                                        </div>
+                                      </div>
+                                      <div class="span3">
+                                        <!--Team Ranking Accordion 01-->
+                                        <h4>ODI</h4>
+                                        <div class="white-block">
+                                        	<div id="bowler-ranking01" class="accordion"></div>
+                                        </div>
+                                      </div>
+                                      <div class="span3">
+                                        <!--Team Ranking Accordion 01-->
+                                        <h4>T20</h4>
+                                        <div class="white-block">
+                                        	<div id="bowler-ranking02" class="accordion"></div>
+                                        </div>
+                                      </div>
                                       
                                       
                                     </div>
                                     <div class="tab-pane fade" id="allRounder">
 										<!-- allRounder rank -->
-                                      
+										<div class="span3">
+                                        <!--Team Ranking Accordion 01-->
+                                        <h4>Test</h4>
+                                        <div class="white-block">
+                                        	<div id="allrounder-ranking" class="accordion"></div>
+                                        </div>
+                                      </div>
+                                      <div class="span3">
+                                        <!--Team Ranking Accordion 01-->
+                                        <h4>ODI</h4>
+                                        <div class="white-block">
+                                        	<div id="allrounder-ranking01" class="accordion"></div>
+                                        </div>
+                                      </div>
+                                      <div class="span3">
+                                        <!--Team Ranking Accordion 01-->
+                                        <h4>T20</h4>
+                                        <div class="white-block">
+                                        	<div id="allrounder-ranking02" class="accordion"></div>
+                                        </div>
+                                      </div>
                                       
                                     </div>
                                 </div>
