@@ -5,6 +5,7 @@ $(document).ready(function()
 		news();
 		result();
 		team();
+		photos();
 		 livescore();
 	    /*setInterval(function() {
           result();
@@ -182,6 +183,27 @@ function team()
 				$('.releanceTabBox').hide();
 				$('#'+$(this).attr('link')).show();
 				});*/
+        },
+        error:function()
+        {
+			
+		}    
+    })
+	
+}
+function photos()
+{
+	var html='';
+	$.ajax({
+        url: 'photos',
+        type: "GET",
+        dataType:'JSON',
+        success: function(data) {
+			for(i=0;i<data.resultset.length;i++)
+			{
+				html+='<div class = "grid-item"><a href = "'+data.resultset[i]['src']+'" class = "lightbox"><img src="'+data.resultset[i]['icon']+'"></a></div>';
+			}
+			$('#photosgrid').html(html);
         },
         error:function()
         {

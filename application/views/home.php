@@ -868,12 +868,48 @@
                         	<!----Photos and Videos Tab---->
                             <ul id = "gallerytab" class = "nav nav-tabs tabs-line">
                             	<li class = "active"><a href ="#photos" data-toggle = "tab">Photos</a></li>
+                            	<li><a href ="#videos" data-toggle = "tab">Videos</a></li>
                             </ul>
                             <div id = "gallerytabContent" class = "tab-content">
                             	<div class = "tab-pane fade in active" id = "photos">
                                     <div class = "row">
                                     	<div class = "span8">
-                                              <div class = "grid">
+                                              <div id="photosgrid" class = "grid">
+                                                    <div class = "grid-item">
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img02_05.jpg"></a>
+                                                    </div>
+                                                    <div class = "grid-item">
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img03_10.jpg"></a>
+                                                    </div>
+                                                    <div class = "grid-item">
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img04_12.jpg"></a>
+                                                    </div>
+                                                    <div class = "grid-item">
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img02_05.jpg"></a>
+                                                    </div>
+                                                    <div class = "grid-item">
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img03_10.jpg"></a>
+                                                    </div>
+                                                    <div class = "grid-item">
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img04_12.jpg"></a>
+                                                    </div>
+                                                    <div class = "grid-item">
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img02_05.jpg"></a>
+                                                    </div>
+                                                    <div class = "grid-item">
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img03_10.jpg"></a>
+                                                    </div>
+                                                </div>
+                                        <div class = "pull-right margint20">
+                                        	<a href = "#" class="btn btn-primary">View All</a>
+                                        </div>
+                                     </div>
+                                    </div>
+                                </div>
+                                <div class = "tab-pane fade" id = "videos">
+                                    <div class = "row">
+                                    	<div class = "span8">
+                                              <div id="videosgrid" class = "grid">
                                                     <div class = "grid-item">
                                                       <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img02_05.jpg"></a>
                                                     </div>
