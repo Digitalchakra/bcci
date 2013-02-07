@@ -6,6 +6,7 @@ $(document).ready(function()
 		result();
 		team();
 		photos();
+		videos();
 		 livescore();
 	    /*setInterval(function() {
           result();
@@ -201,9 +202,32 @@ function photos()
         success: function(data) {
 			for(i=0;i<data.resultset.length;i++)
 			{
-				html+='<div class = "grid-item"><a href = "'+data.resultset[i]['src']+'" class = "lightbox"><img src="'+data.resultset[i]['icon']+'"></a></div>';
+				html+='<div class = "grid-item"><a target="_blank" href = "'+data.resultset[i]['src']+'" class = "lightbox"><img src="'+data.resultset[i]['icon']+'"></a>';
+				html+='<p><span>'+data.resultset[i]['pubdate']+'</span></p><span>'+data.resultset[i]['description']+'</span></div>';
 			}
 			$('#photosgrid').html(html);
+        },
+        error:function()
+        {
+			
+		}    
+    })
+	
+}
+function videos()
+{
+	var html='';
+	$.ajax({
+        url: 'videos',
+        type: "GET",
+        dataType:'JSON',
+        success: function(data) {
+			for(i=0;i<data.resultset.length;i++)
+			{
+				html+='<div class = "grid-item"><a target="_blank" href = "'+data.resultset[i]['link']+'" class = "lightbox"><img src="'+data.resultset[i]['src']+'"></a>';
+				html+='<p><span>'+data.resultset[i]['pubdate']+'</span>-<span>'+data.resultset[i]['time']+'</span></p><p><b>'+data.resultset[i]['title']+'</b></p><span>'+data.resultset[i]['description']+'</span></div>';
+			}
+			$('#videosgrid').html(html);
         },
         error:function()
         {
