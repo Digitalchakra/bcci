@@ -17,6 +17,11 @@ $(document).ready(function()
     setInterval(function() {
           livescore();
 			}, 30000);
+			$('#resultmenu').change(function()
+			{
+				$('.accordion-group').hide();
+				$('.'+this.value).show();
+			});
 			
 });
 function result()
@@ -25,27 +30,33 @@ function result()
 	//to test
 	//$('#accordion2').html('');
 	var html='';
-	var select='<select><option>All</option>';
 	$.ajax({
-        url: 'result',
+        url: 'result/getlist',
         type: "GET",
         dataType:'json', 
         success: function(data) {
 			//alert(data.menu.length);
-			$.each( data.list, function( key, value )
+			$.each( data.resultset['ODI'], function(list)
 			{
-				html+='<div class="accordion-group"><div class="accordion-heading"><a href="'+data.list[key]['link']+'" target="_blank" class="accordion-toggle"><div class="content">';
-                html+='<div class="date"><span class="red">'+data.list[key]['date']+'</span></div>';
-                html+='<div class="match"><h4><span class="grey">'+data.list[key]['team']+'</span></h4><h5>'+data.list[key]['result']+'</h5></div>';
+				html+='<div class="accordion-group ODI"><div class="accordion-heading"><a href="'+data.resultset['ODI'][list]['link']+'" target="_blank" class="accordion-toggle"><div class="content">';
+                html+='<div class="date"><span class="red">'+data.resultset['ODI'][list]['date']+'</span></div>';
+                html+='<div class="match"><h4><span class="grey">'+data.resultset['ODI'][list]['team']+'</span></h4><h5>'+data.resultset['ODI'][list]['result']+'</h5></div>';
                 html+='<div class="clearfix"></div></div></a></div></div>';
-				//alert( key + ": " + value );
 			});
-			$.each( data.menu, function( key, value )
-			{ 
-				select+='<option>'+value+'</option>';
+			$.each( data.resultset['Test'], function(list)
+			{
+				html+='<div class="accordion-group Test"><div class="accordion-heading"><a href="'+data.resultset['Test'][list]['link']+'" target="_blank" class="accordion-toggle"><div class="content">';
+                html+='<div class="date"><span class="red">'+data.resultset['Test'][list]['date']+'</span></div>';
+                html+='<div class="match"><h4><span class="grey">'+data.resultset['Test'][list]['team']+'</span></h4><h5>'+data.resultset['Test'][list]['result']+'</h5></div>';
+                html+='<div class="clearfix"></div></div></a></div></div>';
 			});
-			select+='</select>';
-			$('#resultmenu').html(select);
+			$.each( data.resultset['T20'], function(list)
+			{
+				html+='<div class="accordion-group T20"><div class="accordion-heading"><a href="'+data.resultset['T20'][list]['link']+'" target="_blank" class="accordion-toggle"><div class="content">';
+                html+='<div class="date"><span class="red">'+data.resultset['T20'][list]['date']+'</span></div>';
+                html+='<div class="match"><h4><span class="grey">'+data.resultset['T20'][list]['team']+'</span></h4><h5>'+data.resultset['T20'][list]['result']+'</h5></div>';
+                html+='<div class="clearfix"></div></div></a></div></div>';
+			});
 			$('#accordion2').html(html);
 			/*$('#accordion2').append(data);
 			$('#resultmenu').html($('#ajaxmenu').html());

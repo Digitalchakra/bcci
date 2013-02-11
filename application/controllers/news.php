@@ -17,7 +17,7 @@ class News extends CI_Controller
 		//$data['resultset']=$this->newsmodel->getNews();
 		//$news_id = ($this->uri->segment(3)) ? $this->uri->segment(3) : $data['srs_list'][0]->srs_id;
 		$config = array();
-        $config['base_url'] = base_url() . 'news/getlist';
+        $config['base_url'] = base_url() . 'news/index';
         $config['total_rows'] = $this->newsmodel->recordCount();
         $config['per_page'] = 5;
         $config['uri_segment'] = 3;

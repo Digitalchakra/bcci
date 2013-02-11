@@ -10,6 +10,11 @@
 <link href="<?php echo base_url('assets/css/bcci-home.css'); ?>" rel="stylesheet" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-1.8.3.min.js'); ?>"></script>
+<style>
+.Test, .T20{
+	display:none;
+}
+</style>
 <!--[if gte IE 9]>
   <style type="text/css">
     .gradient {
@@ -53,23 +58,10 @@
       ------------------------------->
       
       <ul class ="menu">
-        <li><a href="#" class="drop">Home</a></li>
-        <li><a href="#" class="drop">Schedule</a><!-- Begin Shedule columns Item -->
+        <li><a href="/bcci" class="drop">Home</a></li>
+        <li><a href="/bcci/schedule" class="drop">Schedule</a><!-- Begin Shedule columns Item -->
           
           <div class="dropdown_5columns"><!-- Begin 5 columns container -->
-            <div class = "col_3">
-              <h2>Hot Today</h2>
-              <div class = "grey-box-hlight">
-                <div class = "hlight-item item-grey menu-item item-round">
-                  <div class = "item-inner inner-grey item-round"> <img src="Images/rajasthan-royals_03.png" alt="Rajasthan Royals"> </div>
-                </div>
-                <span style="display:inline-block;padding:5px; font-weight:600;">vs</span>
-                <div class = "hlight-item item-grey menu-item item-round">
-                  <div class = "item-inner inner-grey item-round"> <img src="Images/RC-Bangalore_05.png" alt="RC Bangalore"> </div>
-                </div>
-              </div>
-              <div class = "grey-box-hlight"> <span>Delhi Daredevils</span> <span>vs</span> <span>Kolkata Knights</span> <span class = "hline"></span> <span>IPL T20 Match  |  3.30PM IST</span> </div>
-            </div>
             <div class = "col_2">
               <ul id="srs_list" class="greybox">
                 <h2>Upcoming Series</h2>

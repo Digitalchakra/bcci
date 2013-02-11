@@ -158,6 +158,9 @@
 		<div class = "heading">
           <h4>Results 
           <select id = "resultmenu" class="span2 offset4 select-dropdown" style="margin:-15px 0 -15px 60px !important;">
+			  <option>ODI</option>
+			  <option>Test</option>
+			  <option>T20</option>
               </select>
               <a href = "#">
             <div class = "list-box pull-right"></div>
