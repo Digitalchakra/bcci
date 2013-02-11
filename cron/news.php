@@ -37,9 +37,13 @@ try
 					{
 						if($main->getAttribute('role')=='main')
 						{
+							$i=0;
 							foreach($main->find('p') as $p)
 							{
+								if($i>2)
+								break;
 								$desc_html=$desc_html.$p->outertext;
+								$i++;
 							}
 						}
 					}

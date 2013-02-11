@@ -2,14 +2,12 @@
 include('simple_html_dom.php');
 try
 {
-$url='http://cricket.yahoo.com/cricket/live-score';
-$url_base='http://cricket.yahoo.com';
-$html = file_get_html($url);
-/*foreach($html->find('div#yui-main') as $main)
-	foreach($main->find('div.yom-recent-live-upcoming ul li.live div.bd') as $ul)
-		file_put_contents(dirname(__FILE__).'/live.txt', $ul->innertext);*/
+$url='http://webclient.cricbuzz.com/includes/deccanherald/livecricketscore/filter-match-details.json';
+echo "<pre>";
+print_r(json_decode(file_get_contents($url)));
+die;
+/*$html = file_get_html($url);
 
-$i=0;
 foreach($html->find('div#yui-main div.ycric-body-left li.ycric-livescore-sprite') as $main)
 	{
 		
@@ -21,16 +19,10 @@ foreach($html->find('div#yui-main div.ycric-body-left li.ycric-livescore-sprite'
 				$link->setAttribute('href',$url_base.$href);
 				$link->setAttribute('target','_blank'); 
 			}
-		if($i<=0)
-			{
-				file_put_contents(dirname(__FILE__).'/live.txt', $main->outertext);
-			}
-		else
-			{
 				file_put_contents(dirname(__FILE__).'/live.txt', $main->outertext, FILE_APPEND);
-			}
-		$i++;
+
 	}
+	*/
 }
 catch (Exception $e)
 	{

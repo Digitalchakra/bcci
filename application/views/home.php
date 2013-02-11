@@ -155,14 +155,14 @@
   <!--Results On the right-->
   <div class = "span4 margint20">
   	<div class = "white-block">
-    	<div class = "heading">
-      	<h4>Results
-      	</h4>
-      	<!-- drop menu start-->
-      	<p class="pull-right" id="resultmenu">
-      	</p>
-			<!-- drop menu end-->
-      </div>
+		<div class = "heading">
+          <h4>Results 
+          <select id = "resultmenu" class="span2 offset4 select-dropdown" style="margin:-15px 0 -15px 60px !important;">
+              </select>
+              <a href = "#">
+            <div class = "list-box pull-right"></div>
+            </a> </h4>
+        </div>
       <div class="accordion" id="accordion2">
         <div class="accordion-group">
           <div class="accordion-heading">

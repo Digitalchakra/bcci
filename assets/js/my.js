@@ -76,7 +76,7 @@ function news()
 	var html='';
 	var bannerslide='';
 	$.ajax({
-        url: 'news',
+        url: 'news/getlist',
         type: "GET",
         dataType:'json', 
         success: function(data) {
@@ -93,7 +93,7 @@ function news()
 			$('#recentNews').html(html);
 			html='<img src="'+data.resultset[0]['media2']+'"/>';
 			html+='<p>'+data.resultset[0]['pubdate']+'</p>';
-			html+=data.resultset[0]['description'].substring(0,1000)+'....<a href="#">Read more</a>';;
+			html+=data.resultset[0]['description']+'<p class="pull-right"><a class="btn btn-primary" target="_blank" href="'+data.resultset[0]['link']+'">Read more</a></p>';;
 			$('#featuredNews').html(html);
 			bannerslide+='<div class="item active"> <img src="'+data.resultset[0]['media1']+'" class = "res-image">';
 			bannerslide+='<div class = "carousel-caption">';

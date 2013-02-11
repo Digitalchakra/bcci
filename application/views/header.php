@@ -110,7 +110,7 @@
             </div>
           </div>
         </li>
-        <li><a href="#" class="drop">News</a></li>
+        <li><a href="/bcci/news" class="drop">News</a></li>
         <li><a href="#" class="drop">Teams</a></li>
         <li><a href="#" class="drop">Photos</a></li>
         <li><a href="#" class="drop">Polls</a></li>
