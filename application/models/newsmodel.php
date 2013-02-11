@@ -6,7 +6,7 @@ class Newsmodel extends CI_Model
 		$data=array();
 		//$this->db->where('type', 'batting');
 		//$this->db->from('tbl_player_rank');
-		$qry = $this->db->get('tbl_news');
+		$qry = $this->db->limit(11)->get('tbl_news');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)

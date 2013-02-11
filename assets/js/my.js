@@ -10,6 +10,7 @@ $(document).ready(function()
 		rank('allrounder');
 		photos();
 		videos();
+		article();
 		 livescore();
 	    /*setInterval(function() {
           result();
@@ -92,7 +93,7 @@ function news()
 			$('#recentNews').html(html);
 			html='<img src="'+data.resultset[0]['media2']+'"/>';
 			html+='<p>'+data.resultset[0]['pubdate']+'</p>';
-			html+=data.resultset[0]['description'];
+			html+=data.resultset[0]['description'].substring(0,1000)+'....<a href="#">Read more</a>';;
 			$('#featuredNews').html(html);
 			bannerslide+='<div class="item active"> <img src="'+data.resultset[0]['media1']+'" class = "res-image">';
 			bannerslide+='<div class = "carousel-caption">';
@@ -192,7 +193,7 @@ function team()
         {
 			
 		}    
-    })
+    });
 	
 }
 function rank(method)
@@ -252,7 +253,7 @@ function rank(method)
         {
 			
 		}    
-    })
+    });
 	
 }
 function photos()
@@ -274,7 +275,7 @@ function photos()
         {
 			
 		}    
-    })
+    });
 	
 }
 function videos()
@@ -296,6 +297,34 @@ function videos()
         {
 			
 		}    
-    })
+    });
+	
+}
+function article()
+{
+	$.ajax({
+        url: 'article',
+        type: "GET",
+        dataType:'JSON',
+        success: function(data) {
+			html='<a class="pull-left" href="#"><img src="Images/img01_03.png"></a>';
+  			html+='<div class="media-body"><h4 class="media-heading"><a href = "#">'+data.resultset[0]['title']+'</a></h4>';
+            html+='<p>'+data.resultset[0]['content'].substring(0,800)+'....<a href="#">Read more</a></p></div>';
+            $('#farticle').html(html);
+            html='';
+			for(i=1;i<data.resultset.length;i++)
+			{
+				html+='<li class="nav-menu"><a href="#">'+data.resultset[i]['title']+' - By '+data.resultset[0]['author']+'</a></li>';
+                        
+			//	html+='<div class = "grid-item"><a target="_blank" href = "'+data.resultset[i]['link']+'" class = "lightbox"><img src="'+data.resultset[i]['src']+'"></a>';
+			//	html+='<p><span>'+data.resultset[i]['pubdate']+'</span>-<span>'+data.resultset[i]['time']+'</span></p><p><b>'+data.resultset[i]['title']+'</b></p><span>'+data.resultset[i]['description']+'</span></div>';
+			}
+			$('#rarticles').html(html);
+        },
+        error:function()
+        {
+
+		}    
+    });
 	
 }
