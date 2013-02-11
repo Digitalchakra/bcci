@@ -33,5 +33,12 @@ class Schedule extends CI_Controller
 		$data['view_page'] = 'schedule';
 		$this->load->view('template', $data);
 	}
+	function srs_list()
+	{
+		$this->load->model('match');
+		$today_end =  strtotime(date('d-M-Y',time()).' 23:59');
+		$data['resultset'] = $this->match->getUpcomingSrs($today_end,4);
+		$this->load->view('json',$data);
+	}
 
 }

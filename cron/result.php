@@ -23,6 +23,8 @@ catch (Exception $e)
 	}
 */
 include('simple_html_dom.php');
+require('db.php');
+class Tbl_results extends ActiveRecord\Model { }
 try
 {
 $url='http://www.foxsports.com.au/cricket/results';
@@ -54,10 +56,10 @@ foreach($html->find('table.cricket-results-table tr') as $main)
 					if($td_txt!='ODD' && $td_txt!='SHEF')
 					{
 						$line[$i]['type'] = $td_txt;
-						if(!in_array($td_txt,$list))
+						/*if(!in_array($td_txt,$list))
 							{
 								$list[]=$td_txt;
-							}
+							}*/
 					}
 					else
 					{
@@ -77,7 +79,8 @@ foreach($html->find('table.cricket-results-table tr') as $main)
 				$line[$i]['result'] = $td_txt;
 				foreach($td->find('a') as $link)
 					{
-						$href=$link->getAttribute('href'); 
+						$href=$link->getAttribute('href');
+						$line[$i]['match_id']=end( explode( 'matchid=', substr($href,strpos( $href, 'matchid')) ) ); 
 						$line[$i]['link'] = $url_base.$href;
 					}
 				}
@@ -85,9 +88,20 @@ foreach($html->find('table.cricket-results-table tr') as $main)
 			}
 			$i++;
 	}
-	$data['menu']=$list;
-	$data['list']=$line;
-	file_put_contents(dirname(__FILE__).'/result.json', json_encode($data));
+	//$data['menu']=$list;
+	//$data['list']=$line;
+	//echo "<pre>";
+	//print_r($line); die;
+	//db insertion
+		if(count($line)>0)
+		{
+			//Tbl_results::connection()->query('TRUNCATE TABLE `tbl_news`');
+			foreach($line as $row)
+			{
+				Tbl_results::create($row);		
+			}
+		}
+	//file_put_contents(dirname(__FILE__).'/result.json', json_encode($data));
 
 }
 catch (Exception $e)

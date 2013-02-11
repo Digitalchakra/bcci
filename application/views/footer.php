@@ -41,24 +41,11 @@
         <div class = "row">
           <div class = "span12">
             <div class = "padding20">
-              <div class = "tweet-icon">
+              <!--<div class = "tweet-icon">
                 <h3> Latest Tweets</h3>
-              </div>
-              <div class = "twitter-box">
-                <p><span class = "tweet-user">hershybru</span> Rip Tony Greig.... Good man indeed.</p>
-                <p><span class = "tweet-user">hershybru</span> Rip Tony Greig.... Good man indeed.</p>
-                <p><span class = "tweet-user">hershybru</span> Rip Tony Greig.... Good man indeed.</p>
-                <p><span class = "tweet-user">hershybru</span> Rip Tony Greig.... Good man indeed.</p>
-                <p><span class = "tweet-user">hershybru</span> Rip Tony Greig.... Good man indeed.</p>
-                <p><span class = "tweet-user">hershybru</span> Rip Tony Greig.... Good man indeed.</p>
-                <p><span class = "tweet-user">hershybru</span> Rip Tony Greig.... Good man indeed.</p>
-                <p><span class = "tweet-user">hershybru</span> Rip Tony Greig.... Good man indeed.</p>
-                <p><span class = "tweet-user">hershybru</span> Rip Tony Greig.... Good man indeed.</p>
-                <p><span class = "tweet-user">hershybru</span> Rip Tony Greig.... Good man indeed.</p>
-                <p><span class = "tweet-user">hershybru</span> Rip Tony Greig.... Good man indeed.</p>
-                <p><span class = "tweet-user">hershybru</span> Rip Tony Greig.... Good man indeed.</p>
-                <p><span class = "tweet-user">hershybru</span> Rip Tony Greig.... Good man indeed.</p>
-              </div>
+              </div>-->
+      <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/BCCICOM"  data-widget-id="300917754020634624">Tweets by @BCCICOM</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div>
           </div>
         </div>
@@ -157,6 +144,7 @@
     <script src="<?php echo base_url('assets/js/bootstrap-typeahead.js');?>"></script>
     <script src="<?php echo base_url('assets/js/bootstrap-affix.js');?>"></script>
     <script src="<?php echo base_url('assets/js/application.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/js/footer.js'); ?>"></script>
     <script type="text/javascript" src="src="<?php echo base_url('assets/js/jquery.lightbox-0.5.js'); ?>"></script>
     <link rel="stylesheet" type="text/css" href="src="<?php echo base_url('assets/css/jquery.lightbox-0.5.css'); ?>" media="screen" />
     <script type="text/javascript">

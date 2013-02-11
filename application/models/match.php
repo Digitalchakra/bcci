@@ -80,9 +80,16 @@ class Match extends CI_Model
 			}
 			return $result;
 		}
-		function getUpcomingSrs($today_end)
+		function getUpcomingSrs($today_end,$limit=NULL)
 		{
+			if($limit)
+			{
+				$qry1=$this->db->limit($limit)->group_by('srs_id')->where('utc_time >', $today_end)->order_by('utc_time', 'asc')->get('tbl_matches');
+			}
+			else
+			{
 			$qry1=$this->db->group_by('srs_id')->where('utc_time >', $today_end)->order_by('utc_time', 'asc')->get('tbl_matches');
+			}
 			if($qry1->num_rows()>0)
 			{
 				$data=array();

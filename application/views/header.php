@@ -71,7 +71,7 @@
               <div class = "grey-box-hlight"> <span>Delhi Daredevils</span> <span>vs</span> <span>Kolkata Knights</span> <span class = "hline"></span> <span>IPL T20 Match  |  3.30PM IST</span> </div>
             </div>
             <div class = "col_2">
-              <ul class="greybox">
+              <ul id="srs_list" class="greybox">
                 <h2>Upcoming Series</h2>
                 <li><a href="#">Sri Lanka vs Australia</a></li>
                 <li><a href="#">S Africa vs Zimbabwe</a></li>

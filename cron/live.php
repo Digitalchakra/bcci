@@ -2,9 +2,28 @@
 include('simple_html_dom.php');
 try
 {
-$url='http://webclient.cricbuzz.com/includes/deccanherald/livecricketscore/filter-match-details.json';
+$url='http://webclient.cricbuzz.com/includes/deccanherald/livecricketscore/filter-match-details.json?'.time();
 echo "<pre>";
-print_r(json_decode(file_get_contents($url)));
+$match_list=json_decode(file_get_contents($url));
+print_r($match_list); die;
+$matchs=array();
+foreach($match_list as $match)
+{
+	if($match->matchDataType == 'Live Data')
+	{
+		//$matchs['live'][]=$match;
+		$matchs['live'][]=array('name'=>$match->seriesFolder,'status'=>$match->status,'series'=>$match->series);
+	}
+	elseif($match->matchDataType == 'Fixture')
+	{
+		$matchs['fixture'][]['name']=array('name'=>$match->seriesFolder,'status'=>$match->status,'series'=>$match->series);
+	}
+	elseif($match->matchDataType == 'Result')
+	{
+		$matchs['result'][]['name']=array('name'=>$match->seriesFolder,'status'=>$match->status,'series'=>$match->series);
+	}
+}
+print_r($matchs);
 die;
 /*$html = file_get_html($url);
 

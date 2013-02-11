@@ -1,7 +1,6 @@
 
 $(document).ready(function()
 {
-		tweets();
 		news();
 		result();
 		team();
@@ -11,7 +10,7 @@ $(document).ready(function()
 		photos();
 		videos();
 		article();
-		 livescore();
+		livescore();
 	    /*setInterval(function() {
           result();
 			}, 60000);*/
@@ -35,7 +34,7 @@ function result()
 			//alert(data.menu.length);
 			$.each( data.list, function( key, value )
 			{
-				html+='<div class="accordion-group"><div class="accordion-heading"><a data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle"><div class="content">';
+				html+='<div class="accordion-group"><div class="accordion-heading"><a href="'+data.list[key]['link']+'" target="_blank" class="accordion-toggle"><div class="content">';
                 html+='<div class="date"><span class="red">'+data.list[key]['date']+'</span></div>';
                 html+='<div class="match"><h4><span class="grey">'+data.list[key]['team']+'</span></h4><h5>'+data.list[key]['result']+'</h5></div>';
                 html+='<div class="clearfix"></div></div></a></div></div>';
@@ -109,21 +108,7 @@ function news()
 		}    
     });
 }
-function tweets()
-{
-	var html='<p><strong>Tweets :</strong>';
-	$.getJSON("https://api.twitter.com/1/statuses/user_timeline.json?screen_name=bccicom&count=9&callback=?", 
-  function (data)
-	{
-		for(i=0;i<data.length;i++)
-			{
-				html+=data[i]['text']+' | ';
-			}
-			html+='</p>';
-			$('#tweets').html(html);
-    //console.log(r);
-	});
-}
+
 function livescore()
 {
 	$.ajax({
@@ -328,3 +313,4 @@ function article()
     });
 	
 }
+

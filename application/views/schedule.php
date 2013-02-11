@@ -55,7 +55,7 @@
   			<button class="btn dropdown-toggle" data-toggle="dropdown">
     			<span class="caret"></span>
   			</button>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu red-dropdown">
 				<?php
 				foreach($srs_list as $row)
 				{ ?>
@@ -86,7 +86,6 @@
                 <th>Teams</th>
                 <th>Venue</th>
                 <th>Date</th>
-                <th>Time</th>
               </tr>
             </thead>
             <tbody>
@@ -102,9 +101,6 @@
                 </td>
                 <td>
                   <?php echo $row->date; ?>
-                </td>
-                <td>
-                  04:00 GMT 09:30 Local
                 </td>
               </tr>
               <?php
