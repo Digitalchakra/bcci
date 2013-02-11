@@ -9,9 +9,7 @@
 <link href="<?php echo base_url('assets/css/menu.css'); ?>" rel="stylesheet" type="text/css" media="screen" />
 <link href="<?php echo base_url('assets/css/bcci-home.css'); ?>" rel="stylesheet" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-1.8.3.min.js'); ?>"></script>
-<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap-tab.js'); ?>"></script>
 <!--[if gte IE 9]>
   <style type="text/css">
     .gradient {

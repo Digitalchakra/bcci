@@ -141,6 +141,8 @@
     <!-- Placed at the end of the document so the pages load faster -->
 
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>"></script>
+
     <script src="<?php echo base_url('assets/js/bootstrap-transition.js');?>"></script>
     <script src="<?php echo base_url('assets/js/bootstrap-alert.js');?>"></script>
     <script src="<?php echo base_url('assets/js/bootstrap-modal.js');?>"></script>

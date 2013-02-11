@@ -376,7 +376,7 @@
     <div class="tab-pane fade in active" id="featuredNewsOne">
       <ul class="thumbnails">
         <li class="span3">
-          <div class = "thumbnail news-tab"> <img src="Images/featured-news_03.png">
+          <div class = "thumbnail news-tab"> <img src="<?php echo base_url('assets/Images/featured-news_03.png'); ?>">
             <div class = "caption">
               <p>
               <h5 class = "red-text">IPL News</h5>
@@ -390,7 +390,7 @@
     <div class="tab-pane fade in" id="featuredNewsTwo">
       <ul class="thumbnails">
         <li class="span3">
-          <div class = "thumbnail news-tab"> <img src="Images/footer-logo_03.png">
+          <div class = "thumbnail news-tab"> <img src="<?php echo base_url('assets/Images/footer-logo_03.png'); ?>">
             <div class = "caption">
               <p>
               <h5 class = "red-text">IPL News</h5>
@@ -404,7 +404,7 @@
     <div class="tab-pane fade in" id="featuredNewsThree">
       <ul class="thumbnails">
         <li class="span3">
-          <div class = "thumbnail news-tab"> <img src="Images/footer-logo_03.png">
+          <div class = "thumbnail news-tab"> <img src="<?php echo base_url('assets/Images/footer-logo_03.png'); ?>">
             <div class = "caption">
               <p>
               <h5 class = "red-text">IPL News</h5>
@@ -418,7 +418,7 @@
     <div class="tab-pane fade in" id="featuredNewsFour">
       <ul class="thumbnails">
         <li class="span3">
-          <div class = "thumbnail news-tab"> <img src="Images/footer-logo_03.png">
+          <div class = "thumbnail news-tab"> <img src="<?php echo base_url('assets/Images/footer-logo_03.png'); ?>">
             <div class = "caption">
               <p>
               <h5 class = "red-text">IPL News</h5>
@@ -432,7 +432,7 @@
     <div class="tab-pane fade in" id="featuredNewsFive">
       <ul class="thumbnails">
         <li class="span3">
-          <div class = "thumbnail news-tab"> <img src="Images/footer-logo_03.png">
+          <div class = "thumbnail news-tab"> <img src="<?php echo base_url('assets/Images/footer-logo_03.png'); ?>">
             <div class = "caption">
               <p>
               <h5 class = "red-text">IPL News</h5>
@@ -446,7 +446,7 @@
     <div class="tab-pane fade in" id="featuredNewsSix">
       <ul class="thumbnails">
         <li class="span3">
-          <div class = "thumbnail news-tab"> <img src="Images/footer-logo_03.png">
+          <div class = "thumbnail news-tab"> <img src="<?php echo base_url('assets/Images/footer-logo_03.png'); ?>">
             <div class = "caption">
               <p>
               <h5 class = "red-text">IPL News</h5>
@@ -480,7 +480,7 @@
                                         	<ul class="thumbnails">
   										<li class="span3">
     										<div class = "thumbnail news-tab">
-                                            <img src="Images/featured-news_03.png"> 
+                                            <img src="<?php echo base_url('assets/Images/featured-news_03.png');  ?>"> 
                                             	<div class = "caption">
                                                 <p><h5 class = "red-text">IPL News</h5></p>
                                                 <p>Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.</p>
@@ -493,7 +493,7 @@
                                         	<ul class="thumbnails">
   										<li class="span3">
     										<div class = "thumbnail news-tab">
-                                            <img src="Images/footer-logo_03.png"> 
+                                            <img src="<?php echo base_url('assets/Images/footer-logo_03.png'); ?>"> 
                                             	<div class = "caption">
                                                 <p><h5 class = "red-text">IPL News</h5></p>
                                                 <p>Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.</p>
@@ -506,7 +506,7 @@
                                         	<ul class="thumbnails">
   										<li class="span3">
     										<div class = "thumbnail news-tab">
-                                            <img src="Images/footer-logo_03.png"> 
+                                            <img src="<?php echo base_url('assetsImages/footer-logo_03.png'); ?>"> 
                                             	<div class = "caption">
                                                 <p><h5 class = "red-text">IPL News</h5></p>
                                                 <p>Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.</p>
@@ -519,7 +519,7 @@
                                         	<ul class="thumbnails">
   										<li class="span3">
     										<div class = "thumbnail news-tab">
-                                            <img src="Images/footer-logo_03.png"> 
+                                            <img src="<?php echo base_url('assets/Images/footer-logo_03.png'); ?>"> 
                                             	<div class = "caption">
                                                 <p><h5 class = "red-text">IPL News</h5></p>
                                                 <p>Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.</p>
@@ -532,7 +532,7 @@
                                         	<ul class="thumbnails">
   										<li class="span3">
     										<div class = "thumbnail news-tab">
-                                            <img src="Images/footer-logo_03.png"> 
+                                            <img src="<?php echo base_url('assets/Images/footer-logo_03.png'); ?>"> 
                                             	<div class = "caption">
                                                 <p><h5 class = "red-text">IPL News</h5></p>
                                                 <p>Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.</p>
@@ -545,7 +545,7 @@
                                         	<ul class="thumbnails">
   										<li class="span3">
     										<div class = "thumbnail news-tab">
-                                            <img src="Images/footer-logo_03.png"> 
+                                            <img src="<?php echo base_url('assets/Images/footer-logo_03.png'); ?>"> 
                                             	<div class = "caption">
                                                 <p><h5 class = "red-text">IPL News</h5></p>
                                                 <p>Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.</p>
@@ -649,7 +649,7 @@
                                             <div class="accordion-group">
                                               <div id="teamRankThree" class="accordion-body collapse">
                                                 <div class="accordion-inner">
-                                                   	<img src="Images/England_03.png" class = "res-image">
+                                                   	<img src="<?php echo base_url('assets/Images/England_03.png'); ?>" class = "res-image">
                                                 </div>
                                               </div>
                                               <div class="accordion-heading">
@@ -678,7 +678,7 @@
                                             <div class="accordion-group">
                                               <div id="teamRankOne01" class="accordion-body collapse in">
                                                 <div class="accordion-inner">
-                                                   	<img src="Images/India_03.png" class = "res-image">
+                                                   	<img src="<?php echo base_url('assets/Images/India_03.png'); ?>" class = "res-image">
                                                 </div>
                                               </div>
                                               <div class="accordion-heading">
@@ -699,7 +699,7 @@
                                             <div class="accordion-group">
                                               <div id="teamRankTwo01" class="accordion-body collapse">
                                                 <div class="accordion-inner">
-                                                   	<img src="Images/Australia_03.png" class = "res-image">
+                                                   	<img src="<?php echo base_url('assets/Images/Australia_03.png'); ?>" class = "res-image">
                                                 </div>
                                               </div>
                                               <div class="accordion-heading">
@@ -720,7 +720,7 @@
                                             <div class="accordion-group">
                                               <div id="teamRankThree01" class="accordion-body collapse">
                                                 <div class="accordion-inner">
-                                                   	<img src="Images/England_03.png" class = "res-image">
+                                                   	<img src="<?php echo base_url('assets/Images/England_03.png'); ?>" class = "res-image">
                                                 </div>
                                               </div>
                                               <div class="accordion-heading">
@@ -749,7 +749,7 @@
                                             <div class="accordion-group">
                                               <div id="teamRankOne03" class="accordion-body collapse in">
                                                 <div class="accordion-inner">
-                                                   	<img src="Images/India_03.png" class = "res-image">
+                                                   	<img src="<?php echo base_url('assets/Images/India_03.png'); ?>" class = "res-image">
                                                 </div>
                                               </div>
                                               <div class="accordion-heading">
@@ -770,7 +770,7 @@
                                             <div class="accordion-group">
                                               <div id="teamRankTwo03" class="accordion-body collapse">
                                                 <div class="accordion-inner">
-                                                   	<img src="Images/Australia_03.png" class = "res-image">
+                                                   	<img src="<?php echo base_url('assets/Images/Australia_03.png'); ?>" class = "res-image">
                                                 </div>
                                               </div>
                                               <div class="accordion-heading">
@@ -791,7 +791,7 @@
                                             <div class="accordion-group">
                                               <div id="teamRankThree03" class="accordion-body collapse">
                                                 <div class="accordion-inner">
-                                                   	<img src="Images/England_03.png" class = "res-image">
+                                                   	<img src="<?php echo base_url('assets/Images/England_03.png'); ?>" class = "res-image">
                                                 </div>
                                               </div>
                                               <div class="accordion-heading">
@@ -936,28 +936,28 @@
                                     	<div class = "span8">
                                               <div id="photosgrid" class = "grid">
                                                     <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img02_05.jpg"></a>
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img02_05.jpg'); ?>"></a>
                                                     </div>
                                                     <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img03_10.jpg"></a>
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img03_10.jpg'); ?>"></a>
                                                     </div>
                                                     <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img04_12.jpg"></a>
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img04_12.jpg'); ?>"></a>
                                                     </div>
                                                     <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img02_05.jpg"></a>
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img02_05.jpg'); ?>"></a>
                                                     </div>
                                                     <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img03_10.jpg"></a>
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img03_10.jpg'); ?>"></a>
                                                     </div>
                                                     <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img04_12.jpg"></a>
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img04_12.jpg'); ?>"></a>
                                                     </div>
                                                     <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img02_05.jpg"></a>
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img02_05.jpg'); ?>"></a>
                                                     </div>
                                                     <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img03_10.jpg"></a>
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img03_10.jpg'); ?>"></a>
                                                     </div>
                                                 </div>
                                         <div class = "pull-right margint20">
@@ -971,28 +971,28 @@
                                     	<div class = "span8">
                                               <div id="videosgrid" class = "grid">
                                                     <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img02_05.jpg"></a>
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img02_05.jpg'); ?>"></a>
                                                     </div>
                                                     <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img03_10.jpg"></a>
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img03_10.jpg'); ?>"></a>
                                                     </div>
                                                     <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img04_12.jpg"></a>
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img04_12.jpg'); ?>"></a>
                                                     </div>
                                                     <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img02_05.jpg"></a>
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img02_05.jpg'); ?>"></a>
                                                     </div>
                                                     <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img03_10.jpg"></a>
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img03_10.jpg'); ?>"></a>
                                                     </div>
                                                     <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img04_12.jpg"></a>
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img04_12.jpg'); ?>"></a>
                                                     </div>
                                                     <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img02_05.jpg"></a>
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img02_05.jpg'); ?>"></a>
                                                     </div>
                                                     <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="Images/Img03_10.jpg"></a>
+                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img03_10.jpg'); ?>"></a>
                                                     </div>
                                                 </div>
                                         <div class = "pull-right margint20">
@@ -1007,36 +1007,9 @@
                    	  <div class = "page-header">
                             <h3>Featured Articles</h3>
                       </div>
-                     	<div class="media">
+                     	<div class="media" id="farticle">
   						<a class="pull-left" href="#">
-    						<img src="Images/img01_03.png">
- 						 </a>
-  						<div class="media-body">
-    						<h4 class="media-heading"><a href = "#">The painfull reality of our times</a></h4>
-                            <p>These days cricketers and hence cricket is dogged by a long list of injuries. From minor ones that keep a player away for a match, to major ones that cut short a glorious career.</p>
-                        </div>
-                     </div>
-                     	<div class="media">
-  						<a class="pull-left" href="#">
-    						<img src="Images/img02_05.jpg">
- 						 </a>
-  						<div class="media-body">
-    						<h4 class="media-heading"><a href = "#">The painfull reality of our times</a></h4>
-                            <p>These days cricketers and hence cricket is dogged by a long list of injuries. From minor ones that keep a player away for a match, to major ones that cut short a glorious career.</p>
-                        </div>
-                     </div>
-                     	<div class="media">
-  						<a class="pull-left" href="#">
-    						<img src="Images/img03_10.jpg">
- 						 </a>
-  						<div class="media-body">
-    						<h4 class="media-heading"><a href = "#">The painfull reality of our times</a></h4>
-                            <p>These days cricketers and hence cricket is dogged by a long list of injuries. From minor ones that keep a player away for a match, to major ones that cut short a glorious career.</p>
-                        </div>
-                     </div>
-                     	<div class="media">
-  						<a class="pull-left" href="#">
-    						<img src="Images/img04_12.jpg">
+    						<img src="<?php echo base_url('assets/Images/img01_03.png'); ?>">
  						 </a>
   						<div class="media-body">
     						<h4 class="media-heading"><a href = "#">The painfull reality of our times</a></h4>
@@ -1050,22 +1023,19 @@
             <div class = "span4 margint20">
             	<div class = "content-block">
                     	<div id="sidebar" class="sidebar-nav">
-                        <ul class="nav nav-tabs nav-stacked">
-                          <li class="menu-heading dark-heading">Recent Articles</li>
+							 <div class="menu-heading dark-heading">Recent Articles</div>
+                        <ul class="nav nav-tabs nav-stacked" id="rarticles">
+                         
                           <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game - By Administrator</a></li>
-                          <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game - By Administrator</a></li>
-                          <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game - By Administrator</a></li>
-                          <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game - By Administrator</a></li>
-                          <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game - By Administrator</a></li>
-                          <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game - By Administrator</a></li>
-                          <li class="nav-menu menu-box">
+                         
+                        </ul>
+                         <div class="nav-menu menu-box">
                             <div class = "row">
                               <div class = "span3">
                                 <div class = "padding20 pull-right"> <a href = "#" class = "viewall">View All</a> </div>
                               </div>
                             </div>
-                          </li>
-                        </ul>
+                          </div>
                       </div>
                   <div class = "content-box">
                    	<div class = "page-header">
@@ -1082,4 +1052,5 @@
         </div> <!------Articles and Sidebar---------->
         
 	</div><!------//Content--->
+	
     <script src="<?php echo base_url('assets/js/my.js');?>"></script>
