@@ -5,7 +5,7 @@ class News extends CI_Controller
 	function getlist()
 	{
 		$this->load->model('newsmodel');
-		$data['resultset']=$this->newsmodel->getNews(5,0);
+		$data['resultset']=$this->newsmodel->getNews(7,0);
 		$this->load->view('json',$data);
 	}
 	function index()

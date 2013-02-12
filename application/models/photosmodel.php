@@ -6,7 +6,7 @@ class Photosmodel extends CI_Model
 		$data=array();
 		//$this->db->where('type', 'batting');
 		//$this->db->from('tbl_player_rank');
-		$qry = $this->db->limit(8)->get('tbl_photos');
+		$qry = $this->db->limit(8)->order_by("img_id", "desc")->get('tbl_photos');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)

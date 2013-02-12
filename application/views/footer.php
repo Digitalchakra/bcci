@@ -128,9 +128,9 @@
     <!-- Placed at the end of the document so the pages load faster -->
 
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-    <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>"></script>
-
-    <script src="<?php echo base_url('assets/js/bootstrap-transition.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/google-code-prettify/prettify.js');?>"></script>
+	<script src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>
+	<script src="<?php echo base_url('assets/js/bootstrap-transition.js');?>"></script>
     <script src="<?php echo base_url('assets/js/bootstrap-alert.js');?>"></script>
     <script src="<?php echo base_url('assets/js/bootstrap-modal.js');?>"></script>
     <script src="<?php echo base_url('assets/js/bootstrap-dropdown.js');?>"></script>
@@ -143,9 +143,9 @@
     <script src="<?php echo base_url('assets/js/bootstrap-carousel.js');?>"></script>
     <script src="<?php echo base_url('assets/js/bootstrap-typeahead.js');?>"></script>
     <script src="<?php echo base_url('assets/js/bootstrap-affix.js');?>"></script>
-    <script src="<?php echo base_url('assets/js/application.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/js/application.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/jquery.lightbox-0.5.js');?>"></script>
     <script src="<?php echo base_url('assets/js/footer.js'); ?>"></script>
-    <script type="text/javascript" src="src="<?php echo base_url('assets/js/jquery.lightbox-0.5.js'); ?>"></script>
     <link rel="stylesheet" type="text/css" href="src="<?php echo base_url('assets/css/jquery.lightbox-0.5.css'); ?>" media="screen" />
     <script type="text/javascript">
     $(function() {

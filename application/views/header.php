@@ -6,8 +6,11 @@
 <link href="<?php echo base_url('assets/css/bootstrap.css'); ?>" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url('assets/css/bootstrap-responsive.css'); ?>" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url('assets/css/mystyles.css'); ?>" rel="stylesheet" type="text/css">
-<link href="<?php echo base_url('assets/css/menu.css'); ?>" rel="stylesheet" type="text/css" media="screen" />
+<link href="<?php echo base_url('assets/css/menu.css'); ?>" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url('assets/css/bcci-home.css'); ?>" rel="stylesheet" type="text/css">
+<link href="<?php echo base_url('assets/css/hoverfx.css'); ?>" rel="stylesheet" type="text/css">
+<link href="<?php echo base_url('assets/css/dropdown.css'); ?>" rel="stylesheet" type="text/css">
+<link href="<?php echo base_url('assets/css/hoverfx_common.css'); ?>" rel="stylesheet" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-1.8.3.min.js'); ?>"></script>
 <style>
@@ -103,7 +106,7 @@
           </div>
         </li>
         <li><a href="/bcci/news" class="drop">News</a></li>
-        <li><a href="#" class="drop">Teams</a></li>
+        <li><a href="/bcci/article" class="drop">Articles</a></li>
         <li><a href="#" class="drop">Photos</a></li>
         <li><a href="#" class="drop">Polls</a></li>
         <li><a href="#" class="drop">About</a></li>

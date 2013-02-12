@@ -173,7 +173,7 @@
         	<div id="recentNewscont" class = "row-fluid">
             <!--recent news from my.js-->
            </div>
-           <p class="pull-right"><a href="/bcci/news" class="btn btn-primary">Read more</a></p>
+           <p class="pull-right"><a href="/bcci/news" class="btn btn-primary">View all</a></p>
         </div>
       </div>
     </div>
@@ -331,64 +331,9 @@
             <div class = "tab-pane fade in active" id = "photos">
               <div class = "row">
                 <div class = "span8">
-                    <div class="main">
-                <div class="view view-first">
-                    <img src="Images/img01_03.png">
-                    <div class="mask">
-                       <p>The painfull reality of our times</p>
-                        <a href="#" class="info">View</a>
-                    </div>
-                </div>  
-                <div class="view view-first">
-                    <img src="Images/Img02_05.jpg">
-                    <div class="mask">
-                        <p>The painfull reality of our times</p>
-                        <a href="#" class="info">View</a>
-                    </div>
-                </div>
-                <div class="view view-first">
-                    <img src="Images/Img02_05.jpg">
-                    <div class="mask">
-                        <p>The painfull reality of our times</p>
-                        <a href="#" class="info">View</a>
-                    </div>
-                </div>
-                <div class="view view-first">
-                    <img src="Images/Img02_05.jpg">
-                    <div class="mask">
-                        <p>The painfull reality of our times</p>
-                        <a href="#" class="info">View</a>
-                    </div>
-                </div>  
-                <div class="view view-first">
-                    <img src="Images/Img03_10.jpg">
-                    <div class="mask">
-                        <p>The painfull reality of our times</p>
-                        <a href="#" class="info">View</a>
-                    </div>
-                </div>  
-                <div class="view view-first">
-                    <img src="Images/Img04_12.jpg">
-                    <div class="mask">
-                        <p>The painfull reality of our times</p>
-                        <a href="#" class="info">View</a>
-                    </div>
-                </div>
-                <div class="view view-first">
-                    <img src="Images/Img04_12.jpg">
-                    <div class="mask">
-                        <p>The painfull reality of our times</p>
-                        <a href="#" class="info">View</a>
-                    </div>
-                </div>
-                <div class="view view-first">
-                    <img src="Images/Img04_12.jpg">
-                    <div class="mask">
-                        <p>The painfull reality of our times</p>
-                        <a href="#" class="info">View</a>
-                    </div>
-                </div>  
-            </div>
+                    <div class="main" id="photosgrid">  
+                 <!-- from my.js-->
+					</div>
                 </div>
                 <div class = "span pull-right margint10">
                 	<a href = "#" class="btn btn-primary">View All</a>
@@ -398,64 +343,9 @@
             <div class = "tab-pane fade" id = "videos">
               <div class = "row">
                 <div class = "span8">
-                  <div class="main">
-                <div class="view view-first">
-                    <img src="Images/img01_03.png">
-                    <div class="mask">
-                       <p>The painfull reality of our times</p>
-                        <a href="#" class="info">View</a>
-                    </div>
-                </div>  
-                <div class="view view-first">
-                    <img src="Images/Img02_05.jpg">
-                    <div class="mask">
-                        <p>The painfull reality of our times</p>
-                        <a href="#" class="info">View</a>
-                    </div>
-                </div>
-                <div class="view view-first">
-                    <img src="Images/Img03_10.jpg">
-                    <div class="mask">
-                        <p>The painfull reality of our times</p>
-                        <a href="#" class="info">View</a>
-                    </div>
-                </div>
-                <div class="view view-first">
-                    <img src="Images/Img02_05.jpg">
-                    <div class="mask">
-                        <p>The painfull reality of our times</p>
-                        <a href="#" class="info">View</a>
-                    </div>
-                </div>  
-                <div class="view view-first">
-                    <img src="Images/Img03_10.jpg">
-                    <div class="mask">
-                        <p>The painfull reality of our times</p>
-                        <a href="#" class="info">View</a>
-                    </div>
-                </div>  
-                <div class="view view-first">
-                    <img src="Images/Img04_12.jpg">
-                    <div class="mask">
-                        <p>The painfull reality of our times</p>
-                        <a href="#" class="info">View</a>
-                    </div>
-                </div>
-                <div class="view view-first">
-                    <img src="Images/Img04_12.jpg">
-                    <div class="mask">
-                        <p>The painfull reality of our times</p>
-                        <a href="#" class="info">View</a>
-                    </div>
-                </div>
-                <div class="view view-first">
-                    <img src="Images/Img04_12.jpg">
-                    <div class="mask">
-                        <p>The painfull reality of our times</p>
-                        <a href="#" class="info">View</a>
-                    </div>
-                </div>  
-            </div>
+                  <div class="main" id="videosgrid">
+                 <!-- from my.js-->
+					</div>
                 </div>
                 <div class = "span pull-right margint10">
                 	<a href = "#" class="btn btn-primary">View All</a>
@@ -468,34 +358,22 @@
           <div class = "page-header">
             <h3>Featured Articles</h3>
           </div>
-              <p><img src="../Base 01/Images/Img02_05.jpg">
-              <h4 class="media-heading"><a href="#">The fearful pace quartet disappeared</a></h4>
-              <h6>By Administrator</h6>
-              Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.
-              Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.
-              Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.
-              Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.
-              Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.
-              </p>
-              <div class="pull-right"> <a href="#" class="btn btn-primary">Read More</a> </div>
+          <div id="farticle">
+              
+           </div>
+              <div class="pull-right"> <a id="farticlerm" href="#" class="btn btn-primary">Read More</a> </div>
         </div>
       </div>
     </div>
     <div class = "span4 margint20">
       <div class = "content-block">
         <div id="sidebar" class="sidebar-nav">
-          <ul class="nav nav-tabs nav-stacked padding20">
-            <li class="menu-heading dark-heading">Recent Articles</li>
-            <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game - By Administrator</a></li>
-            <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game - By Administrator</a></li>
-            <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game - By Administrator</a></li>
-            <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game - By Administrator</a></li>
-            <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game - By Administrator</a></li>
-            <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game - By Administrator</a></li>
+          <ul class="nav nav-tabs nav-stacked padding20" id="rarticles">
+            
             <li class="nav-menu menu-box">
               <div class = "row">
                 <div class = "span pull-right padding20">
-                  <a href = "#" class = "viewall">View All</a>
+                  <a href = "/bcci/article" class = "viewall">View All</a>
                 </div>
               </div>
             </li>

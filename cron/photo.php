@@ -43,10 +43,19 @@ try
 		//db insertion
 		if(count($result)>0)
 		{
+			
 			//Tbl_photo::connection()->query('TRUNCATE TABLE `Tbl_photo`');
 			foreach($result as $row)
 			{
-				Tbl_photos::create($row);	
+				$find=array('img_id'=>$row['img_id']);
+					if($found = Tbl_photos::find($find))
+					{
+						$found->create($row);
+					}
+					else
+					{
+						Tbl_photos::create($row);
+					}
 			}
 		}
 	}

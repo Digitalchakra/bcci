@@ -95,7 +95,7 @@ function news()
 			{
 				mod=i%3;
 				html+='<li class="media news-thumb-small">' ;
-                html+='<a class="pull-left" target="_blank" href="'+data.resultset[i]['link']+'"> <img src="'+data.resultset[i]['media1']+'" class="media-object"> </a>';
+                html+='<a class="pull-left" target="_blank" href="'+data.resultset[i]['link']+'"> <img src="'+data.resultset[i]['media2']+'" class="media-object"> </a>';
                 html+='<div class="media-body">';
                 html+='<h4 class="media-heading"><a target="_blank" href="'+data.resultset[i]['link']+'">'+data.resultset[i]['title']+'</a></h4>';
                 html+='<h6>'+data.resultset[i]['pubdate']+'</h6>';
@@ -255,7 +255,7 @@ function rank(method)
                 list+=              '</div>';
                 list+=              '<div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">';
                 list+=                '<h4>'+data.resultset['Test'][i]['name']+'</h4>';
-                list+=                '<h6>'+data.resultset['Test'][i]['country']+'Points: '+data.resultset['Test'][i]['rating']+' | Rating: '+data.resultset['Test'][i]['points']+'</h6>';
+                list+=                '<h6>'+data.resultset['Test'][i]['country']+' | Points: '+data.resultset['Test'][i]['rating']+'</h6>';
                 list+=              '</div>';
                 list+=            '</div>';
                 list+=          '</li>';
@@ -276,7 +276,7 @@ function rank(method)
                 list+=              '</div>';
                 list+=              '<div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">';
                 list+=                '<h4>'+data.resultset['ODI'][i]['name']+'</h4>';
-                list+=                '<h6>'+data.resultset['ODI'][i]['country']+'Points: '+data.resultset['ODI'][i]['rating']+' | Rating: '+data.resultset['ODI'][i]['points']+'</h6>';
+                list+=                '<h6>'+data.resultset['ODI'][i]['country']+' | Points: '+data.resultset['ODI'][i]['rating']+'</h6>';
                 list+=              '</div>';
                 list+=            '</div>';
                 list+=          '</li>';
@@ -297,7 +297,7 @@ function rank(method)
                 list+=              '</div>';
                 list+=              '<div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">';
                 list+=                '<h4>'+data.resultset['T20'][i]['name']+'</h4>';
-                list+=                '<h6>'+data.resultset['T20'][i]['country']+'Points: '+data.resultset['T20'][i]['rating']+' | Rating: '+data.resultset['T20'][i]['points']+'</h6>';
+                list+=                '<h6>'+data.resultset['T20'][i]['country']+' | Points: '+data.resultset['T20'][i]['rating']+'</h6>';
                 list+=              '</div>';
                 list+=            '</div>';
                 list+=          '</li>';
@@ -327,8 +327,13 @@ function photos()
         success: function(data) {
 			for(i=0;i<data.resultset.length;i++)
 			{
-				html+='<div class = "grid-item"><a target="_blank" href = "'+data.resultset[i]['src']+'" class = "lightbox"><img src="'+data.resultset[i]['icon']+'"></a>';
-				html+='<p><span>'+data.resultset[i]['pubdate']+'</span></p><span>'+data.resultset[i]['description']+'</span></div>';
+				html+='<div class="view view-first">';
+                html+=    '<img src="'+data.resultset[i]['icon']+'">';
+                html+=    '<div class="mask">';
+                html+=       '<p>'+data.resultset[i]['pubdate']+'</p>';             
+                html+=        '<a href="'+data.resultset[i]['src']+'" class="info">'+data.resultset[i]['description']+'</a>';
+                html+=    '</div>';
+                html+='</div>';
 			}
 			$('#photosgrid').html(html);
         },
@@ -349,8 +354,13 @@ function videos()
         success: function(data) {
 			for(i=0;i<data.resultset.length;i++)
 			{
-				html+='<div class = "grid-item"><a target="_blank" href = "'+data.resultset[i]['link']+'" class = "lightbox"><img src="'+data.resultset[i]['src']+'"></a>';
-				html+='<p><span>'+data.resultset[i]['pubdate']+'</span>-<span>'+data.resultset[i]['time']+'</span></p><p><b>'+data.resultset[i]['title']+'</b></p><span>'+data.resultset[i]['description']+'</span></div>';
+				html+='<div class="view view-first">';
+                html+=    '<img src="'+data.resultset[i]['src']+'">';
+                html+=    '<div class="mask">';
+                html+=       '<p>'+data.resultset[i]['pubdate']+' - <span>'+data.resultset[i]['time']+'</span></p>';             
+                html+=        '<a href="'+data.resultset[i]['link']+'" class="info">'+data.resultset[i]['title']+'</a>';
+                html+=    '</div>';
+                html+='</div>';
 			}
 			$('#videosgrid').html(html);
         },
@@ -364,15 +374,16 @@ function videos()
 function article()
 {
 	$.ajax({
-        url: 'article',
+        url: 'article/getlist',
         type: "GET",
         dataType:'JSON',
         success: function(data) {
 			html='<a class="pull-left" href="#"><img src="Images/img01_03.png"></a>';
   			html+='<div class="media-body"><h4 class="media-heading"><a href = "#">'+data.resultset[0]['title']+'</a></h4>';
-            html+='<p>'+data.resultset[0]['content'].substring(0,800)+'....<a href="#">Read more</a></p></div>';
+            html+='<p>'+data.resultset[0]['content'].substring(0,800)+'....</p></div>';
             $('#farticle').html(html);
-            html='';
+            $('#farticlerm').attr('href','/bcci/article/get/'+data.resultset[0]['id']);
+            html='<li class="menu-heading dark-heading">Recent Articles</li>';
 			for(i=1;i<data.resultset.length;i++)
 			{
 				html+='<li class="nav-menu"><a href="#">'+data.resultset[i]['title']+' - By '+data.resultset[0]['author']+'</a></li>';
@@ -380,7 +391,7 @@ function article()
 			//	html+='<div class = "grid-item"><a target="_blank" href = "'+data.resultset[i]['link']+'" class = "lightbox"><img src="'+data.resultset[i]['src']+'"></a>';
 			//	html+='<p><span>'+data.resultset[i]['pubdate']+'</span>-<span>'+data.resultset[i]['time']+'</span></p><p><b>'+data.resultset[i]['title']+'</b></p><span>'+data.resultset[i]['description']+'</span></div>';
 			}
-			$('#rarticles').html(html);
+			$('#rarticles').prepend(html);
         },
         error:function()
         {
