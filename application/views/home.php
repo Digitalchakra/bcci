@@ -16,35 +16,43 @@
     
     <!--Live SCore-->
     <div class = "span4 margint10 livescore_bg" id="liveScore">
-    	<div class="row-fluid">
+     <div class="row-fluid">
          <div class = "padding20">
           <div class="span12">
             <div class="row-fluid" id="no_matches">
-              1 of 5 Matches
-            </div>
-            <div class="row-fluid" id="match_name" style="text-align:center">
-              <h5 class="white">IPL T20 SemiFinals</h5>
-            </div>
-            <div class="row-fluid" id="team_images" style="text-align:center">
-              <div class="span6"><!--TeamA-->
-                <div class = "team_icon">
-                	<img src="Images/csk_icon.png">
-                </div>
-                <h5 class="team_name">Chennai Super Kings</h5>
-                <h4 class="yellow">184/3*</h4>
-                <h5 class="white">15.1 Overs</h5>
+             <h5 class="white pull-left">IPL T20 SemiFinals</h5>
+              <div class="dropdown pull-right">
+                <select name="one" class="dropdown-select">
+                  <option value="1" class="red-btn">Live Matches</option>
+                  <option value="2">Australia vs England</option>
+                  <option value="2">South Africa vs Sri Lanka</option>
+                </select>
               </div>
-              <div class="span6"><!--TeamB-->
-              <div class = "team_icon">
-                	<img src="Images/MI_icon.png">
+            </div>
+            <div class="row-fluid margint20" id="team_images" style="text-align:center">
+              <div class="span5"><!--TeamA-->
+                <div class = "team_icon">
+                 <img src="Images/csk_icon.png">
                 </div>
-                <h5 class="team_name">Mumbai Indians</h5>
-                <h4 class="yellow yellow-dull">198/6</h4>
-                <h5 class="white">19.1 Overs</h5>
+                <h5 class="team_name" id="team1">Chennai Super Kings</h5>
+                <h4 class="yellow" id="team1_score">184/3*</h4>
+                <h5 class="white" id="team1_over">15.1 Overs</h5>
+              </div>
+              <div class="span2">
+               <h3 class="white" style="margin-top:42px">vs</h3>
+               </div>
+              <div class="span5"><!--TeamB-->
+              <div class = "team_icon">
+                 <img src="Images/MI_icon.png">
+                </div>
+                <h5 class="team_name" id="team2">Mumbai Indians</h5>
+                <h4 class="yellow yellow-dull" id="team2_score">198/6</h4>
+                <h5 class="white" id="team2_over">19.1 Overs</h5>
               </div>
               <div class="span12" style="text-align:left"><!--Required Runs-->
-                  <h6 class="yellow">CSK Needs 46 Runs to win
-                  <span class="marginl20 yellow">Req.RR : 11.4</span>
+                  <h6 class="yellow"><span id="status">CSK Needs 46 Runs to win</span>
+                  <span class="marginl20 yellow" id="rrr">Req.RR : 11.4</span>
+                   <span class="marginl20 yellow" id="crr">Req.RR : 11.4</span>
                   </h6>
               </div>
             </div>
@@ -121,9 +129,11 @@
             </div>
           </div>
          </div>
-    	</div>
      </div>
-  </div>
+   </div>
+   
+   
+   
   <div class = "row">
     <div class = "span12 margint20">
     <!--  <p><strong>Trending :</strong> PepsiCo bags title sponsorship for IPL  |  IPL franchises announce initial squads  |  KKR v CSK Videos  |  Pathan Interview</p> -->

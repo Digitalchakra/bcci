@@ -14,14 +14,14 @@ $(document).ready(function()
 	    /*setInterval(function() {
           result();
 			}, 60000);*/
-    setInterval(function() {
+    /*setInterval(function() {
           livescore();
 			}, 30000);
 			$('#resultmenu').change(function()
 			{
 				$('.accordion-group').hide();
 				$('.'+this.value).show();
-			});
+			});*/
 			
 });
 function result()
@@ -134,8 +134,20 @@ function livescore()
         url: 'live',
         type: "GET",
         cache: false,
+        dataType:'json',
         success: function(data) {
-			$('#livescore').html(data);
+			if(data.live.length)
+			{
+				$('#team1').html(data.live[0]['team1']['fullName']);
+				$('#team2').html(data.live[0]['team2']['fullName']);
+				$('#team1_score').html(data.live[0]['currentBatTeamScore']['runsAndWicket']);
+				$('#team2_score').html(data.live[0]['currentBowlTeamScore']['runsAndWicket']);
+				$('#team1_over').html(data.live[0]['currentBatTeamScore']['overs']+'Overs');
+				$('#team2_over').html(data.live[0]['currentBowlTeamScore']['overs']+'Overs');status
+				$('#status').html(data.live[0]['status']);
+				$('#crr').html('CRR :'+data.live[0]['crr']);
+				$('#rrr').html('RRR :'+data.live[0]['rrr']);
+			}
         },
         error:function()
         {
