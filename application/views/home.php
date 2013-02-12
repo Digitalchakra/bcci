@@ -1,112 +1,96 @@
+
 <!--MAIN CONTENT
 ===================================================================  -->
 
 <div class = "container margin-t20">
-<div class = "row">
-  <div class = "span8 margint20">
-    <div id="myCarousel" class="carousel slide" style="z-index:0"> 
-      <!-- Carousel items -->
-      <div class="carousel-inner" id="bannerslide">
-        <div class="item"> <img src="<?php echo base_url('assets/Images/csk.jpg'); ?>" class = "res-image">
-          <div class = "carousel-caption">
-            <h4>Heading</h4>
-            <p>The content for the image goes here.</p>
-          </div>
+  <div class = "row">
+    <div class = "span8 margint20">
+      <div id="myCarousel" class="carousel slide" style="z-index:0"> 
+        <!-- Carousel items -->
+        <div class="carousel-inner" id="bannerslide">
+          <!-- banner img from my.js-->
         </div>
-        <div class="item"> <img src="<?php echo base_url('assets/Images/csk.jpg'); ?>" class = "res-image">
-          <div class = "carousel-caption">
-            <h4>Heading</h4>
-            <p>The content for the image goes here.</p>
-          </div>
-        </div>
-        <div class="item"> <img src="<?php echo base_url('assets/Images/csk.jpg'); ?>" class = "res-image">
-          <div class = "carousel-caption">
-            <h4>Heading</h4>
-            <p>The content for the image goes here.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Carousel nav --> 
-      <a class="carousel-control left" href="#myCarousel" data-slide="prev" >&lsaquo;</a> <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a> </div>
+        <!-- Carousel nav --> 
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev" >&lsaquo;</a> <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a> </div>
+    </div>
+    
+    <!--Live SCore-->
+    <div class = "span4 margint20">
+      <div class = "grey-block" style="height:420px">Live Score</div>
+    </div>
+  </div>
+  <div class = "row">
+    <div class = "span12 margint20">
+    <!--  <p><strong>Trending :</strong> PepsiCo bags title sponsorship for IPL  |  IPL franchises announce initial squads  |  KKR v CSK Videos  |  Pathan Interview</p> -->
+    </div>
   </div>
   
-  <!--Live SCore-->
-  <div class = "span4 margint20">
-    <div class = "grey-block" style="height:420px" id="livescore">Live Score</div>
+  <!--Shadow FX-->
+  <div class = "row">
+    <div class = "shadowfx"> </div>
   </div>
-</div>
-<div class = "row">
-  <div class = "span12 margint20">
-    <p><strong>Trending :</strong> PepsiCo bags title sponsorship for IPL  |  IPL franchises announce initial squads  |  KKR v CSK Videos  |  Pathan Interview</p>
-  </div>
-</div>
-
-<!--Shadow FX-->
-<div class = "row">
-  <div class = "shadowfx"> </div>
-</div>
-
-<!-- Matches Tab-->
-<div class = "row">
-  <div class = "span8 margint20">
-    <div class = "tab-box-wrapper">
-      <ul id="matchestab" class="nav nav-tabs tabs-box gradient">
-        <li><a href="#pastMatches" data-toggle="tab">Past Matches</a></li>
-        <li class="active"><a href="#presentMatches" data-toggle="tab">Present Matches</a></li>
-        <li><a href="#upcomingMatches" data-toggle="tab">Upcoming Matches</a></li>
-        <div class="btn-group pull-right red-button">
-          <button class="btn red-btn">Shedule</button>
-          <button class="btn dropdown-toggle red-btn" data-toggle="dropdown"> <span class="caret"></span> </button>
-          <ul class="dropdown-menu red-dropdown">
-            <li><a href = "#">Present Matches</a></li>
-            <li><a href = "#">Past Matches</a></li>
-            <li><a href = "#">Upcoming Matches</a></li>
-            <li><a href = "#">Fixtures</a></li>
-            <li><a href = "#">Series Archive</a></li>
-          </ul>
-        </div>
-        <div class = "clearfix"></div>
-      </ul>
-      <!--Matches Tabs COntent-->
-      <div id="matchestabContent" class="tab-content">
-        <div class="tab-pane fade" id="pastMatches"> 
-          <!--Past matches Table-->
-          <table class="table table-bordered table-striped">
-            <thead>
-              <tr>
-                <th>Match</th>
-                <th>Date & Time</th>
-                <th>Venue</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php
-                                foreach($content['past'] as $row)
-                                    {
-                                        ?>
-                                <tr>
-                                    <td><?php echo $row->description; ?></td>
-                                    <td><p><?php echo $row->date; ?></p><!--<p class="redlink">09:00 GMT 08:00 EST</p>--></td>
-                                    <td><?php echo $row->mt_vnu; ?></td>
-                                </tr>
-                                <?php
-                                }
-                                ?>
-            </tbody>
-          </table>
-        </div>
-        <div class="tab-pane fade in active" id="presentMatches"> 
-          <!--Present matches Table-->
-          <table class="table table-bordered table-striped">
-            <thead>
-              <tr>
-                <th>Match</th>
-                <th>Date & Time</th>
-                <th>Venue</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php
+  
+  <!-- Matches Tab-->
+  <div class = "row">
+    <div class = "span8 margint20">
+      <div class = "tab-box-wrapper">
+        <ul id="matchestab" class="nav nav-tabs tabs-box gradient">
+          <li><a href="#pastMatches" data-toggle="tab">Past Matches</a></li>
+          <li class="active"><a href="#presentMatches" data-toggle="tab">Present Matches</a></li>
+          <li><a href="#upcomingMatches" data-toggle="tab">Upcoming Matches</a></li>
+          <div class="btn-group pull-right red-button">
+            <button class="btn red-btn">Shedule</button>
+            <button class="btn dropdown-toggle red-btn" data-toggle="dropdown"> <span class="caret"></span> </button>
+            <ul class="dropdown-menu red-dropdown">
+              <li><a href = "#">Present Matches</a></li>
+              <li><a href = "#">Past Matches</a></li>
+              <li><a href = "#">Upcoming Matches</a></li>
+              <li><a href = "#">Fixtures</a></li>
+              <li><a href = "#">Series Archive</a></li>
+            </ul>
+          </div>
+          <div class = "clearfix"></div>
+        </ul>
+        <!--Matches Tabs COntent-->
+        <div id="matchestabContent" class="tab-content">
+          <div class="tab-pane fade" id="pastMatches"> 
+            <!--Past matches Table-->
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Match</th>
+                  <th>Date & Time</th>
+                  <th>Venue</th>
+                </tr>
+              </thead>
+              <tbody>
+				  <?php
+                    foreach($content['past'] as $row)
+                     {
+                    ?>
+                <tr>
+                    <td><?php echo $row->description; ?></td>
+                    <td><p><?php echo $row->date; ?></p></td>
+                     <td><?php echo $row->mt_vnu; ?></td>
+                </tr>
+                 <?php
+                     }
+                     ?>
+              </tbody>
+            </table>
+          </div>
+          <div class="tab-pane fade in active" id="presentMatches"> 
+            <!--Present matches Table-->
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Match</th>
+                  <th>Date & Time</th>
+                  <th>Venue</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
                foreach($content['present'] as $row)
                  {
 				?>
@@ -118,942 +102,995 @@
 					<?php
 				}
 				?>
-            </tbody>
-          </table>
+              </tbody>
+            </table>
+          </div>
+          <div class="tab-pane fade" id="upcomingMatches"> 
+            <!--Upcoming matches Table-->
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Match</th>
+                  <th>Date & Time</th>
+                  <th>Venue</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                  foreach($content['upcoming'] as $row)
+                   {
+                   ?>
+                  <tr>
+                     <td><?php echo $row->description; ?></td>
+                     <td><p><?php echo $row->date; ?></p></td>
+                     <td><?php echo $row->mt_vnu; ?></td>
+                  </tr>
+                  <?php
+                   }
+                  ?>
+                </tbody>
+            </table>
+            <p class="pull-right"><a href="schedule" class="btn btn-primary">View more</a></p>
+          </div>
         </div>
-        <div class="tab-pane fade" id="upcomingMatches"> 
-          <!--Upcoming matches Table-->
-          <table class="table table-bordered table-striped">
-            <thead>
-              <tr>
-                <th>Match</th>
-                <th>Date & Time</th>
-                <th>Venue</th>
-              </tr>
-            </thead>
-            <tbody>
-             <?php
-                                foreach($content['upcoming'] as $row)
-                                    {
-                                        ?>
-                                <tr>
-                                    <td><?php echo $row->description; ?></td>
-                                    <td><p><?php echo $row->date; ?></p></td>
-                                    <td><?php echo $row->mt_vnu; ?></td>
-                                </tr>
-                                <?php
-                                }
-                                ?>
-            </tbody>
-          </table>
-          <p class="pull-right"><a href="schedule">View all</a></p>
+      </div>
+    </div>
+    
+    <!--Results On the right-->
+    <div class = "span4 margint20">
+      <div class = "white-block">
+        <div class = "heading">
+          <h4>Results
+          <div class="dropdown">
+            <select id="resultmenu" name="one" class="dropdown-select">
+              <option value="ODI" class="red-btn">ODI Matches</option>
+              <option value="T20">T20 Matches</option>
+              <option value="Test">Test Matches</option>
+            </select>
+          </div>
+               <a href = "#">
+            <div class = "list-box pull-right"></div>
+            </a> </h4>
+        </div>
+        <div class="accordion" id="accordion2">
+			<!--Result list from my.js-->
+      </div>
+    </div>
+  </div>
+  
+  <!--Match Shedule and Results-->
+  <div class = "row">
+    <div class = "span8 margint20">
+      <ul id="newstab" class="nav nav-tabs tabs-line">
+        <li class="active"><a href="#featuredNews" data-toggle="tab">Featured News</a></li>
+        <li><a href="#recentNews" data-toggle="tab">Recent News</a></li>
+      </ul>
+      <div id="newstabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="featuredNews">
+			<!-- news from my.js-->
+        </div>
+        <div class="tab-pane fade" id="recentNews"> 
+        	<div id="recentNewscont" class = "row-fluid">
+            <!--recent news from my.js-->
+           </div>
+           <p class="pull-right"><a href="/bcci/news" class="btn btn-primary">Read more</a></p>
+        </div>
+      </div>
+    </div>
+    <!-------News Tab------->
+    
+    <div class = "span4 margint20">
+      <div class = "grey-block">
+        <p>ADS</p>
+      </div>
+    </div>
+    <!-------Ads------------> 
+  </div>
+  <!------News and Ads---------->
+  
+  <div class = "row">
+    <div class = "span12 margint20">
+      <ul id="rankrecordtab" class="nav nav-tabs tabs-line">
+        <li class="active"><a href="#ranking" data-toggle="tab">Rankings</a></li>
+        <li><a href="#records" data-toggle="tab">Records</a></li>
+      </ul>
+      <div id="rankrecordtabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="ranking">
+          <div class = "span11">
+            <div class="tabbable tabs-left">
+              <ul id="ranktab" class="nav nav-tabs tabs-line-left">
+                <li class="active"><a href="#team" data-toggle="tab">Team</a></li>
+                <li><a href="#batsman" data-toggle="tab">Batsman</a></li>
+                <li><a href="#bowler" data-toggle="tab">Bowler</a></li>
+                <li><a href="#allRounder" data-toggle="tab">All Rounder</a></li>
+              </ul>
+              <div id="ranktabContent" class="tab-content">
+                <div class="tab-pane fade in active" id="team">
+                  <div class="row-fluid rankings" id = "rankings">
+                  	<div class = "span4">
+                        <ul style="list-style:none">  
+                        	<h4>Test Match</h4>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 01</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> India</h4>
+                                <h6>Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 02</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> Australia</h4>
+                                <h6>Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 03</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> England</h4>
+                                <h6>Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class = "pull-right"><a href="#">View All</a></div>
+                    </div>
+                    <div class = "span4">
+                        <ul style="list-style:none">  
+                        	<h4>ODI Match</h4>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 01</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> India</h4>
+                                <h6>Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 02</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> Australia</h4>
+                                <h6>Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 03</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> England</h4>
+                                <h6>Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class = "pull-right"><a href="#">View All</a></div>
+                    </div>
+                    <div class = "span4">
+                        <ul style="list-style:none">  
+                        	<h4>T20 Match</h4>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 01</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> India</h4>
+                                <h6>Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 02</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> Australia</h4>
+                                <h6>Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 03</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> England</h4>
+                                <h6>Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class = "pull-right"><a href="#">View All</a></div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="tab-pane fade" id="batsman"> 
+                	<div class="row-fluid rankings" id = "rankings">
+                  	<div class = "span4">
+                        <ul style="list-style:none">  
+                        	<h4>Test Match</h4>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 01</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> H.M Amla</h4>
+                                <h6>South Africa | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 02</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> S. Chanderpaul</h4>
+                                <h6>West Indies | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 03</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> Mahindra Singh Dhoni</h4>
+                                <h6>India | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class = "pull-right"><a href="#">View All</a></div>
+                    </div>
+                    <div class = "span4">
+                        <ul style="list-style:none">  
+                        	<h4>Test Match</h4>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 01</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> H.M Amla</h4>
+                                <h6>South Africa | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 02</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> S. Chanderpaul</h4>
+                                <h6>West Indies | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 03</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> Mahindra Singh Dhoni</h4>
+                                <h6>India | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class = "pull-right"><a href="#">View All</a></div>
+                    </div>
+                    <div class = "span4">
+                        <ul style="list-style:none">  
+                        	<h4>Test Match</h4>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 01</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> H.M Amla</h4>
+                                <h6>South Africa | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 02</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> S. Chanderpaul</h4>
+                                <h6>West Indies | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 03</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> Mahindra Singh Dhoni</h4>
+                                <h6>India | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class = "pull-right"><a href="#">View All</a></div>
+                    </div>
+                  </div>
+                 </div>
+                <div class="tab-pane fade" id="bowler">
+                	<div class="row-fluid rankings" id = "rankings">
+                  	<div class = "span4">
+                        <ul style="list-style:none">  
+                        	<h4>Test Match</h4>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 01</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> H.M Amla</h4>
+                                <h6>South Africa | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 02</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> S. Chanderpaul</h4>
+                                <h6>West Indies | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 03</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> Mahindra Singh Dhoni</h4>
+                                <h6>India | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class = "pull-right"><a href="#">View All</a></div>
+                    </div>
+                    <div class = "span4">
+                        <ul style="list-style:none">  
+                        	<h4>Test Match</h4>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 01</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> H.M Amla</h4>
+                                <h6>South Africa | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 02</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> S. Chanderpaul</h4>
+                                <h6>West Indies | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 03</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> Mahindra Singh Dhoni</h4>
+                                <h6>India | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class = "pull-right"><a href="#">View All</a></div>
+                    </div>
+                    <div class = "span4">
+                        <ul style="list-style:none">  
+                        	<h4>Test Match</h4>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 01</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> H.M Amla</h4>
+                                <h6>South Africa | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 02</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> S. Chanderpaul</h4>
+                                <h6>West Indies | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 03</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> Mahindra Singh Dhoni</h4>
+                                <h6>India | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class = "pull-right"><a href="#">View All</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="allRounder">
+                	<div class="row-fluid rankings" id = "rankings">
+                  	<div class = "span4">
+                        <ul style="list-style:none">  
+                        	<h4>Test Match</h4>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 01</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> H.M Amla</h4>
+                                <h6>South Africa | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 02</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> S. Chanderpaul</h4>
+                                <h6>West Indies | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 03</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> Mahindra Singh Dhoni</h4>
+                                <h6>India | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class = "pull-right"><a href="#">View All</a></div>
+                    </div>
+                    <div class = "span4">
+                        <ul style="list-style:none">  
+                        	<h4>Test Match</h4>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 01</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> H.M Amla</h4>
+                                <h6>South Africa | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 02</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> S. Chanderpaul</h4>
+                                <h6>West Indies | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 03</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> Mahindra Singh Dhoni</h4>
+                                <h6>India | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class = "pull-right"><a href="#">View All</a></div>
+                    </div>
+                    <div class = "span4">
+                        <ul style="list-style:none">  
+                        	<h4>Test Match</h4>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 01</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> H.M Amla</h4>
+                                <h6>South Africa | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 02</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> S. Chanderpaul</h4>
+                                <h6>West Indies | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="white-block">
+                            <div class = "row-fluid">
+                              <div class="span4 padding10">
+                                  <div class = "flag">
+                                    <img src="Images/thumb-Ind.png">
+                                  </div>
+                                  <div class = "rank-box">
+                                    <h4>Rank 03</h4>
+                                  </div>
+                              </div>
+                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
+                                <h4> Mahindra Singh Dhoni</h4>
+                                <h6>India | Points: 25 | Rating: 15</h6>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class = "pull-right"><a href="#">View All</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="records">
+          <div class = "span10">
+            <div class="tabbable tabs-left">
+              <ul id="recordtab" class="nav nav-tabs tabs-line-left">
+                <li class="active"><a href="#batting" data-toggle="tab">Batting</a></li>
+                <li><a href="#bowling" data-toggle="tab">Bowling</a></li>
+                <li><a href="#otherRecords" data-toggle="tab">Other Records</a></li>
+              </ul>
+              <div id="recordtabContent" class="tab-content">
+                <div class="tab-pane fade in active" id="batting"> Batting Records </div>
+                <div class="tab-pane fade" id="bowling"> Bowling Records </div>
+                <div class="tab-pane fade" id="otherRecords"> Other Records </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
   
-  <!--Results On the right-->
-  <div class = "span4 margint20">
-  	<div class = "white-block">
-		<div class = "heading">
-          <h4>Results 
-          <select id = "resultmenu" class="span2 offset4 select-dropdown" style="margin:-15px 0 -15px 60px !important;">
-			  <option>ODI</option>
-			  <option>Test</option>
-			  <option>T20</option>
-              </select>
-              <a href = "#">
-            <div class = "list-box pull-right"></div>
-            </a> </h4>
-        </div>
-      <div class="accordion" id="accordion2">
-        <div class="accordion-group">
-          <div class="accordion-heading">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-              <div class = "content">
-                <div class = "date">
-                  25 <span class="red">DEC</span>
+  <div class = "row">
+    <div class = "span8">
+      <div class = "row">
+        <div class = "span8 margint20 marginb20"> 
+          <!----Photos and Videos Tab---->
+          <ul id = "gallerytab" class = "nav nav-tabs tabs-line">
+            <li class = "active"><a href ="#photos" data-toggle = "tab">Photos</a></li>
+            <li><a href ="#videos" data-toggle = "tab">Videos</a></li>
+          </ul>
+          <div id = "gallerytabContent" class = "tab-content">
+            <div class = "tab-pane fade in active" id = "photos">
+              <div class = "row">
+                <div class = "span8">
+                    <div class="main">
+                <div class="view view-first">
+                    <img src="Images/img01_03.png">
+                    <div class="mask">
+                       <p>The painfull reality of our times</p>
+                        <a href="#" class="info">View</a>
+                    </div>
+                </div>  
+                <div class="view view-first">
+                    <img src="Images/Img02_05.jpg">
+                    <div class="mask">
+                        <p>The painfull reality of our times</p>
+                        <a href="#" class="info">View</a>
+                    </div>
                 </div>
-                <div class = "match">
-                  <h4>India* <span class = "grey">vs Australia</span></h4>
-                  <h5>India won by 6 Runs - (46.3 Overs)</h5>
+                <div class="view view-first">
+                    <img src="Images/Img02_05.jpg">
+                    <div class="mask">
+                        <p>The painfull reality of our times</p>
+                        <a href="#" class="info">View</a>
+                    </div>
                 </div>
-                <div class="clearfix"></div>
+                <div class="view view-first">
+                    <img src="Images/Img02_05.jpg">
+                    <div class="mask">
+                        <p>The painfull reality of our times</p>
+                        <a href="#" class="info">View</a>
+                    </div>
+                </div>  
+                <div class="view view-first">
+                    <img src="Images/Img03_10.jpg">
+                    <div class="mask">
+                        <p>The painfull reality of our times</p>
+                        <a href="#" class="info">View</a>
+                    </div>
+                </div>  
+                <div class="view view-first">
+                    <img src="Images/Img04_12.jpg">
+                    <div class="mask">
+                        <p>The painfull reality of our times</p>
+                        <a href="#" class="info">View</a>
+                    </div>
+                </div>
+                <div class="view view-first">
+                    <img src="Images/Img04_12.jpg">
+                    <div class="mask">
+                        <p>The painfull reality of our times</p>
+                        <a href="#" class="info">View</a>
+                    </div>
+                </div>
+                <div class="view view-first">
+                    <img src="Images/Img04_12.jpg">
+                    <div class="mask">
+                        <p>The painfull reality of our times</p>
+                        <a href="#" class="info">View</a>
+                    </div>
+                </div>  
+            </div>
+                </div>
+                <div class = "span pull-right margint10">
+                	<a href = "#" class="btn btn-primary">View All</a>
+                </div>
               </div>
-            </a>
-          </div>
-          <div id="collapseOne" class="accordion-body collapse in">
-            <div class="accordion-inner">
-            	<div class = "content">
-                <div class = "stats">
-                  <p>ICC T20 World Cup Semi Finals |  12:30 GMT</p>
-                  <div class = "content-block">
-                    <p><span class="red">MS Dhoni </span>74(65)</p>
-                    <p><span class="red">4's </span>8<span class="red"> 6's </span>8</p>
-                  </div>
-                  <div class = "content-block">
-                    <p><span class="red">S Raina </span>74(65)</p>
-                    <p><span class="red">4's </span>8<span class="red"> 6's </span>8</p>
-                  </div>
-                  <div class = "content-block">
-                    <h2>188/5</h2>
-                  </div>
-                  <div class="clearfix"></div>
-                  <p>Australia 188/6 from 50 Overs (First Down)</p>
+            </div>
+            <div class = "tab-pane fade" id = "videos">
+              <div class = "row">
+                <div class = "span8">
+                  <div class="main">
+                <div class="view view-first">
+                    <img src="Images/img01_03.png">
+                    <div class="mask">
+                       <p>The painfull reality of our times</p>
+                        <a href="#" class="info">View</a>
+                    </div>
+                </div>  
+                <div class="view view-first">
+                    <img src="Images/Img02_05.jpg">
+                    <div class="mask">
+                        <p>The painfull reality of our times</p>
+                        <a href="#" class="info">View</a>
+                    </div>
+                </div>
+                <div class="view view-first">
+                    <img src="Images/Img03_10.jpg">
+                    <div class="mask">
+                        <p>The painfull reality of our times</p>
+                        <a href="#" class="info">View</a>
+                    </div>
+                </div>
+                <div class="view view-first">
+                    <img src="Images/Img02_05.jpg">
+                    <div class="mask">
+                        <p>The painfull reality of our times</p>
+                        <a href="#" class="info">View</a>
+                    </div>
+                </div>  
+                <div class="view view-first">
+                    <img src="Images/Img03_10.jpg">
+                    <div class="mask">
+                        <p>The painfull reality of our times</p>
+                        <a href="#" class="info">View</a>
+                    </div>
+                </div>  
+                <div class="view view-first">
+                    <img src="Images/Img04_12.jpg">
+                    <div class="mask">
+                        <p>The painfull reality of our times</p>
+                        <a href="#" class="info">View</a>
+                    </div>
+                </div>
+                <div class="view view-first">
+                    <img src="Images/Img04_12.jpg">
+                    <div class="mask">
+                        <p>The painfull reality of our times</p>
+                        <a href="#" class="info">View</a>
+                    </div>
+                </div>
+                <div class="view view-first">
+                    <img src="Images/Img04_12.jpg">
+                    <div class="mask">
+                        <p>The painfull reality of our times</p>
+                        <a href="#" class="info">View</a>
+                    </div>
+                </div>  
+            </div>
+                </div>
+                <div class = "span pull-right margint10">
+                	<a href = "#" class="btn btn-primary">View All</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="accordion-group">
-          <div class="accordion-heading">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-              <div class = "content">
-                <div class = "date">
-                  25 <span class="red">DEC</span>
-                </div>
-                <div class = "match">
-                  <h4>India* <span class = "grey">vs Australia</span></h4>
-                  <h5>India won by 6 Runs - (46.3 Overs)</h5>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-            </a>
+        <div class = "span8 marginb20 news-thumb">
+          <div class = "page-header">
+            <h3>Featured Articles</h3>
           </div>
-          <div id="collapseTwo" class="accordion-body collapse">
-            <div class="accordion-inner">
-            	<div class = "content">
-                <div class = "stats">
-                  <p>ICC T20 World Cup Semi Finals |  12:30 GMT</p>
-                  <div class = "content-block">
-                    <p><span class="red">MS Dhoni </span>74(65)</p>
-                    <p><span class="red">4's </span>8<span class="red"> 6's </span>8</p>
-                  </div>
-                  <div class = "content-block">
-                    <p><span class="red">S Raina </span>74(65)</p>
-                    <p><span class="red">4's </span>8<span class="red"> 6's </span>8</p>
-                  </div>
-                  <div class = "content-block">
-                    <h2>188/5</h2>
-                  </div>
-                  <div class="clearfix"></div>
-                  <p>Australia 188/6 from 50 Overs (First Down)</p>
+              <p><img src="../Base 01/Images/Img02_05.jpg">
+              <h4 class="media-heading"><a href="#">The fearful pace quartet disappeared</a></h4>
+              <h6>By Administrator</h6>
+              Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.
+              Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.
+              Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.
+              Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.
+              Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.
+              </p>
+              <div class="pull-right"> <a href="#" class="btn btn-primary">Read More</a> </div>
+        </div>
+      </div>
+    </div>
+    <div class = "span4 margint20">
+      <div class = "content-block">
+        <div id="sidebar" class="sidebar-nav">
+          <ul class="nav nav-tabs nav-stacked padding20">
+            <li class="menu-heading dark-heading">Recent Articles</li>
+            <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game - By Administrator</a></li>
+            <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game - By Administrator</a></li>
+            <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game - By Administrator</a></li>
+            <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game - By Administrator</a></li>
+            <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game - By Administrator</a></li>
+            <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game - By Administrator</a></li>
+            <li class="nav-menu menu-box">
+              <div class = "row">
+                <div class = "span pull-right padding20">
+                  <a href = "#" class = "viewall">View All</a>
                 </div>
               </div>
-            </div>
+            </li>
+          </ul>
+        </div>
+        <div class = "content-box">
+          <div class = "page-header">
+            <h3>Articles Archive</h3>
           </div>
         </div>
-        <div class="accordion-group">
-          <div class="accordion-heading">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-              <div class = "content">
-                <div class = "date">
-                  25 <span class="red">DEC</span>
-                </div>
-                <div class = "match">
-                  <h4>India* <span class = "grey">vs Australia</span></h4>
-                  <h5>India won by 6 Runs - (46.3 Overs)</h5>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-            </a>
-          </div>
-          <div id="collapseThree" class="accordion-body collapse">
-            <div class="accordion-inner">
-            	<div class = "content">
-                <div class = "stats">
-                  <p>ICC T20 World Cup Semi Finals |  12:30 GMT</p>
-                  <div class = "content-block">
-                    <p><span class="red">MS Dhoni </span>74(65)</p>
-                    <p><span class="red">4's </span>8<span class="red"> 6's </span>8</p>
-                  </div>
-                  <div class = "content-block">
-                    <p><span class="red">S Raina </span>74(65)</p>
-                    <p><span class="red">4's </span>8<span class="red"> 6's </span>8</p>
-                  </div>
-                  <div class = "content-block">
-                    <h2>188/5</h2>
-                  </div>
-                  <div class="clearfix"></div>
-                  <p>Australia 188/6 from 50 Overs (First Down)</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-group">
-          <div class="accordion-heading">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
-              <div class = "content">
-                <div class = "date">
-                  25 <span class="red">DEC</span>
-                </div>
-                <div class = "match">
-                  <h4>India* <span class = "grey">vs Australia</span></h4>
-                  <h5>India won by 6 Runs - (46.3 Overs)</h5>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-            </a>
-          </div>
-          <div id="collapseFour" class="accordion-body collapse">
-            <div class="accordion-inner">
-            	<div class = "content">
-                <div class = "stats">
-                  <p>ICC T20 World Cup Semi Finals |  12:30 GMT</p>
-                  <div class = "content-block">
-                    <p><span class="red">MS Dhoni </span>74(65)</p>
-                    <p><span class="red">4's </span>8<span class="red"> 6's </span>8</p>
-                  </div>
-                  <div class = "content-block">
-                    <p><span class="red">S Raina </span>74(65)</p>
-                    <p><span class="red">4's </span>8<span class="red"> 6's </span>8</p>
-                  </div>
-                  <div class = "content-block">
-                    <h2>188/5</h2>
-                  </div>
-                  <div class="clearfix"></div>
-                  <p>Australia 188/6 from 50 Overs (First Down)</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-group">
-          <div class="accordion-heading">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
-              <div class = "content">
-                <div class = "date">
-                  25 <span class="red">DEC</span>
-                </div>
-                <div class = "match">
-                  <h4>India* <span class = "grey">vs Australia</span></h4>
-                  <h5>India won by 6 Runs - (46.3 Overs)</h5>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-            </a>
-          </div>
-          <div id="collapseFive" class="accordion-body collapse">
-            <div class="accordion-inner">
-            	<div class = "content">
-                <div class = "stats">
-                  <p>ICC T20 World Cup Semi Finals |  12:30 GMT</p>
-                  <div class = "content-block">
-                    <p><span class="red">MS Dhoni </span>74(65)</p>
-                    <p><span class="red">4's </span>8<span class="red"> 6's </span>8</p>
-                  </div>
-                  <div class = "content-block">
-                    <p><span class="red">S Raina </span>74(65)</p>
-                    <p><span class="red">4's </span>8<span class="red"> 6's </span>8</p>
-                  </div>
-                  <div class = "content-block">
-                    <h2>188/5</h2>
-                  </div>
-                  <div class="clearfix"></div>
-                  <p>Australia 188/6 from 50 Overs (First Down)</p>
-                </div>
-              </div>
-            </div>
+        <div class = "content-box">
+          <div class = "page-header">
+            <h3>Ads</h3>
           </div>
         </div>
       </div>
     </div>
   </div>
+  
 </div>
-
-<!--Match Shedule and Results-->
-<div class = "row">
-<div class = "span8 margint20">
-<ul id="newstab" class="nav nav-tabs tabs-line">
-  <li class="active"><a href="#featuredNews" data-toggle="tab">Featured News</a></li>
-  <li><a href="#recentNews" data-toggle="tab">Recent News</a></li>
-</ul>
-<div id="newstabContent" class="tab-content">
-<div class="tab-pane fade in active" id="featuredNews">
-
-<!--Featured News Content-->
-<div class = "row">
-<div class = "span3">
-  <div id="featurednewscontTabContent" class="tab-content">
-    <div class="tab-pane fade in active" id="featuredNewsOne">
-      <ul class="thumbnails">
-        <li class="span3">
-          <div class = "thumbnail news-tab"> <img src="<?php echo base_url('assets/Images/featured-news_03.png'); ?>">
-            <div class = "caption">
-              <p>
-              <h5 class = "red-text">IPL News</h5>
-              <p></p>
-              <p>Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.</p>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="tab-pane fade in" id="featuredNewsTwo">
-      <ul class="thumbnails">
-        <li class="span3">
-          <div class = "thumbnail news-tab"> <img src="<?php echo base_url('assets/Images/footer-logo_03.png'); ?>">
-            <div class = "caption">
-              <p>
-              <h5 class = "red-text">IPL News</h5>
-              <p></p>
-              <p>Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.</p>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="tab-pane fade in" id="featuredNewsThree">
-      <ul class="thumbnails">
-        <li class="span3">
-          <div class = "thumbnail news-tab"> <img src="<?php echo base_url('assets/Images/footer-logo_03.png'); ?>">
-            <div class = "caption">
-              <p>
-              <h5 class = "red-text">IPL News</h5>
-              <p></p>
-              <p>Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.</p>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="tab-pane fade in" id="featuredNewsFour">
-      <ul class="thumbnails">
-        <li class="span3">
-          <div class = "thumbnail news-tab"> <img src="<?php echo base_url('assets/Images/footer-logo_03.png'); ?>">
-            <div class = "caption">
-              <p>
-              <h5 class = "red-text">IPL News</h5>
-              <p></p>
-              <p>Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.</p>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="tab-pane fade in" id="featuredNewsFive">
-      <ul class="thumbnails">
-        <li class="span3">
-          <div class = "thumbnail news-tab"> <img src="<?php echo base_url('assets/Images/footer-logo_03.png'); ?>">
-            <div class = "caption">
-              <p>
-              <h5 class = "red-text">IPL News</h5>
-              <p></p>
-              <p>Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.</p>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="tab-pane fade in" id="featuredNewsSix">
-      <ul class="thumbnails">
-        <li class="span3">
-          <div class = "thumbnail news-tab"> <img src="<?php echo base_url('assets/Images/footer-logo_03.png'); ?>">
-            <div class = "caption">
-              <p>
-              <h5 class = "red-text">IPL News</h5>
-              <p></p>
-              <p>Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.</p>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-<div class = "span5">
-  <ul id = "featurednewscontTab" class = "nav nav-pills  tab-text">
-    <li class = "active"><a href="#featuredNewsOne" data-toggle="tab">'IPL would’ve impacted young Dravid’s game'</a></li>
-    <li><a href="#featuredNewsTwo" data-toggle="tab">'IPL would’ve impacted young Dravid’s game'</a></li>
-    <li><a href="#featuredNewsThree" data-toggle="tab">'IPL would’ve impacted young Dravid’s game'</a></li>
-    <li><a href="#featuredNewsFour" data-toggle="tab">'IPL would’ve impacted young Dravid’s game'</a></li>
-    <li><a href="#featuredNewsFive" data-toggle="tab">'IPL would’ve impacted young Dravid’s game'</a></li>
-    <li><a href="#featuredNewsSix" data-toggle="tab">'IPL would’ve impacted young Dravid’s game'</a></li>
-  </ul>
-</div>
-<!---------Featured News Content Ends here-->
-              		</div>
-                    </div>
-              		<div class="tab-pane fade" id="recentNews">
-                		<div class = "row">
-                            	<div class = "span3">
-                                	<div id="recentnewscontTabContent" class="tab-content">
-             							<div class="tab-pane fade in active" id="recentNewsOne">
-                                        	<ul class="thumbnails">
-  										<li class="span3">
-    										<div class = "thumbnail news-tab">
-                                            <img src="<?php echo base_url('assets/Images/featured-news_03.png');  ?>"> 
-                                            	<div class = "caption">
-                                                <p><h5 class = "red-text">IPL News</h5></p>
-                                                <p>Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.</p>
-                                                </div>
-                                            </div>
-  										</li>
-									</ul>
-                                		</div>
-                                        <div class="tab-pane fade in" id="recentNewsTwo">
-                                        	<ul class="thumbnails">
-  										<li class="span3">
-    										<div class = "thumbnail news-tab">
-                                            <img src="<?php echo base_url('assets/Images/footer-logo_03.png'); ?>"> 
-                                            	<div class = "caption">
-                                                <p><h5 class = "red-text">IPL News</h5></p>
-                                                <p>Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.</p>
-                                              </div>
-                                          </div>
-  										</li>
-									</ul>
-                                		</div>
-                                        <div class="tab-pane fade in" id="recentNewsThree">
-                                        	<ul class="thumbnails">
-  										<li class="span3">
-    										<div class = "thumbnail news-tab">
-                                            <img src="<?php echo base_url('assetsImages/footer-logo_03.png'); ?>"> 
-                                            	<div class = "caption">
-                                                <p><h5 class = "red-text">IPL News</h5></p>
-                                                <p>Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.</p>
-                                              </div>
-                                          </div>
-  										</li>
-									</ul>
-                                		</div>
-                                        <div class="tab-pane fade in" id="recentNewsFour">
-                                        	<ul class="thumbnails">
-  										<li class="span3">
-    										<div class = "thumbnail news-tab">
-                                            <img src="<?php echo base_url('assets/Images/footer-logo_03.png'); ?>"> 
-                                            	<div class = "caption">
-                                                <p><h5 class = "red-text">IPL News</h5></p>
-                                                <p>Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.</p>
-                                              </div>
-                                          </div>
-  										</li>
-									</ul>
-                                		</div>
-                                        <div class="tab-pane fade in" id="recentNewsFive">
-                                        	<ul class="thumbnails">
-  										<li class="span3">
-    										<div class = "thumbnail news-tab">
-                                            <img src="<?php echo base_url('assets/Images/footer-logo_03.png'); ?>"> 
-                                            	<div class = "caption">
-                                                <p><h5 class = "red-text">IPL News</h5></p>
-                                                <p>Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.</p>
-                                              </div>
-                                          </div>
-  										</li>
-									</ul>
-                                		</div>
-                                        <div class="tab-pane fade in" id="recentNewsSix">
-                                        	<ul class="thumbnails">
-  										<li class="span3">
-    										<div class = "thumbnail news-tab">
-                                            <img src="<?php echo base_url('assets/Images/footer-logo_03.png'); ?>"> 
-                                            	<div class = "caption">
-                                                <p><h5 class = "red-text">IPL News</h5></p>
-                                                <p>Retired legend says playing T20 from an early age would’ve influenced his batting style. Donec sed odio dui. Etiam porta sem male Donec sed odio dui.</p>
-                                              </div>
-                                          </div>
-  										</li>
-									</ul>
-                                		</div>
-                                      </div>
-                                </div>
-                                <div class = "span5">
-                                	<ul id = "recentnewscontTab" class = "nav nav-pills  tab-text">
-                                      <li class = "active"><a href="#recentNewsOne" data-toggle="tab">'IPL would’ve impacted young Dravid’s game'</a></li>
-                                      <li><a href="#recentNewsTwo" data-toggle="tab">'IPL would’ve impacted young Dravid’s game'</a></li>
-                                      <li><a href="#recentNewsThree" data-toggle="tab">'IPL would’ve impacted young Dravid’s game'</a></li>
-                                      <li><a href="#recentNewsFour" data-toggle="tab">'IPL would’ve impacted young Dravid’s game'</a></li>
-                                      <li><a href="#recentNewsFive" data-toggle="tab">'IPL would’ve impacted young Dravid’s game'</a></li>
-                                      <li><a href="#recentNewsSix" data-toggle="tab">'IPL would’ve impacted young Dravid’s game'</a></li>
-                                     </ul>
-                            </div>
-                        <!---------Featured News Content Ends here-->
-              		</div>
-              		</div>
-            	</div>
-        	</div> <!-------News Tab------->
-            
-            <div class = "span4 margint20">
-        		<div class = "grey-block">
-            		<p>ADS</p>
-            	</div>
-        	</div> <!-------Ads------------>
-        </div> <!------News and Ads---------->
-        
-        <div class = "row">
-        	<div class = "span12 margint20">
-            	<ul id="rankrecordtab" class="nav nav-tabs tabs-line">
-              		<li class="active"><a href="#ranking" data-toggle="tab">Rankings</a></li>
-              		<li><a href="#records" data-toggle="tab">Records</a></li>
-            	</ul>
-            	<div id="rankrecordtabContent" class="tab-content">
-             		<div class="tab-pane fade in active" id="ranking">
-               			<div class = "span11">
-                        	<div class="tabbable tabs-left">
-                            	<ul id="ranktab" class="nav nav-tabs tabs-line-left">
-              						<li class="active"><a href="#team" data-toggle="tab">Team</a></li>
-              						<li><a href="#batsman" data-toggle="tab">Batsman</a></li>
-                                    <li><a href="#bowler" data-toggle="tab">Bowler</a></li>
-                                    <li><a href="#allRounder" data-toggle="tab">All Rounder</a></li>
-                                    <li><a class = "redlink" href="#viewall">View All</a></li>
-            									</ul>
-                                <div id="ranktabContent" class="tab-content">
-             					<div class="tab-pane fade in active" id="team">
-									<!-- team rank -->
-                                    	<div class = "span3">
-                                        <!--Team Ranking Accordion 01-->
-                                        <h4>Test</h4>
-                                        <div class =  "white-block">
-                                        	<div class="accordion" id="team-ranking">
-                                            <div class="accordion-group">
-                                              <div id="teamRankOne" class="accordion-body collapse in">
-                                                <div class="accordion-inner">
-                                                   	<img src="<?php echo base_url('assets/Images/India_03.png'); ?>" class = "res-image">
-                                                </div>
-                                              </div>
-                                              <div class="accordion-heading">
-                                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#team-ranking" href="#teamRankOne">
-                                                  <div class = "content">
-                                                    <div class = "date">
-                                                      <span class="red"><h3>01</h3></span>
-                                                    </div>
-                                                    <div class = "match">
-                                                      <h3 class="grey">India</h3>
-                                                      <h5>Rating: 150 | Points: 09</h5>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                  </div>
-                                                </a>
-                                              </div>
-                                            </div>
-                                            <div class="accordion-group">
-                                              <div id="teamRankTwo" class="accordion-body collapse">
-                                                <div class="accordion-inner">
-                                                   	<img src="<?php echo base_url('assets/Images/Australia_03.png'); ?>" class = "res-image">
-                                                </div>
-                                              </div>
-                                              <div class="accordion-heading">
-                                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#team-ranking" href="#teamRankTwo">
-                                                  <div class = "content">
-                                                    <div class = "date">
-                                                      <span class="red"><h3>02</h3></span>
-                                                    </div>
-                                                    <div class = "match">
-                                                      <h3 class="grey">Australia</h3>
-                                                      <h5>Rating: 150 | Points: 09</h5>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                  </div>
-                                                </a>
-                                              </div>
-                                            </div>
-                                            <div class="accordion-group">
-                                              <div id="teamRankThree" class="accordion-body collapse">
-                                                <div class="accordion-inner">
-                                                   	<img src="<?php echo base_url('assets/Images/England_03.png'); ?>" class = "res-image">
-                                                </div>
-                                              </div>
-                                              <div class="accordion-heading">
-                                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#team-ranking" href="#teamRankThree">
-                                                  <div class = "content">
-                                                    <div class = "date">
-                                                      <span class="red"><h3>03</h3></span>
-                                                    </div>
-                                                    <div class = "match">
-                                                      <h3 class="grey">England</h3>
-                                                      <h5>Rating: 150 | Points: 09</h5>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                  </div>
-                                                </a>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class = "span3">
-                                        <!--Team Ranking Accordion 02-->
-                                        <h4>ODI</h4>
-                                        <div class =  "white-block">
-                                        	<div class="accordion" id="team-ranking01">
-                                            <div class="accordion-group">
-                                              <div id="teamRankOne01" class="accordion-body collapse in">
-                                                <div class="accordion-inner">
-                                                   	<img src="<?php echo base_url('assets/Images/India_03.png'); ?>" class = "res-image">
-                                                </div>
-                                              </div>
-                                              <div class="accordion-heading">
-                                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#team-ranking01" href="#teamRankOne01">
-                                                  <div class = "content">
-                                                    <div class = "date">
-                                                      <span class="red"><h3>01</h3></span>
-                                                    </div>
-                                                    <div class = "match">
-                                                      <h3 class="grey">India</h3>
-                                                      <h5>Rating: 150 | Points: 09</h5>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                  </div>
-                                                </a>
-                                              </div>
-                                            </div>
-                                            <div class="accordion-group">
-                                              <div id="teamRankTwo01" class="accordion-body collapse">
-                                                <div class="accordion-inner">
-                                                   	<img src="<?php echo base_url('assets/Images/Australia_03.png'); ?>" class = "res-image">
-                                                </div>
-                                              </div>
-                                              <div class="accordion-heading">
-                                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#team-ranking01" href="#teamRankTwo01">
-                                                  <div class = "content">
-                                                    <div class = "date">
-                                                      <span class="red"><h3>02</h3></span>
-                                                    </div>
-                                                    <div class = "match">
-                                                      <h3 class="grey">Australia</h3>
-                                                      <h5>Rating: 150 | Points: 09</h5>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                  </div>
-                                                </a>
-                                              </div>
-                                            </div>
-                                            <div class="accordion-group">
-                                              <div id="teamRankThree01" class="accordion-body collapse">
-                                                <div class="accordion-inner">
-                                                   	<img src="<?php echo base_url('assets/Images/England_03.png'); ?>" class = "res-image">
-                                                </div>
-                                              </div>
-                                              <div class="accordion-heading">
-                                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#team-ranking01" href="#teamRankThree01">
-                                                  <div class = "content">
-                                                    <div class = "date">
-                                                      <span class="red"><h3>03</h3></span>
-                                                    </div>
-                                                    <div class = "match">
-                                                      <h3 class="grey">England</h3>
-                                                      <h5>Rating: 150 | Points: 09</h5>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                  </div>
-                                                </a>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class = "span3">
-                                        <!--Team Ranking Accordion 03-->
-                                        <h4>T20</h4>
-                                        <div class =  "white-block">
-                                        	<div class="accordion" id="team-ranking02">
-                                            <div class="accordion-group">
-                                              <div id="teamRankOne03" class="accordion-body collapse in">
-                                                <div class="accordion-inner">
-                                                   	<img src="<?php echo base_url('assets/Images/India_03.png'); ?>" class = "res-image">
-                                                </div>
-                                              </div>
-                                              <div class="accordion-heading">
-                                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#team-ranking03" href="#teamRankOne03">
-                                                  <div class = "content">
-                                                    <div class = "date">
-                                                      <span class="red"><h3>01</h3></span>
-                                                    </div>
-                                                    <div class = "match">
-                                                      <h3 class="grey">India</h3>
-                                                      <h5>Rating: 150 | Points: 09</h5>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                  </div>
-                                                </a>
-                                              </div>
-                                            </div>
-                                            <div class="accordion-group">
-                                              <div id="teamRankTwo03" class="accordion-body collapse">
-                                                <div class="accordion-inner">
-                                                   	<img src="<?php echo base_url('assets/Images/Australia_03.png'); ?>" class = "res-image">
-                                                </div>
-                                              </div>
-                                              <div class="accordion-heading">
-                                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#team-ranking03" href="#teamRankTwo03">
-                                                  <div class = "content">
-                                                    <div class = "date">
-                                                      <span class="red"><h3>02</h3></span>
-                                                    </div>
-                                                    <div class = "match">
-                                                      <h3 class="grey">Australia</h3>
-                                                      <h5>Rating: 150 | Points: 09</h5>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                  </div>
-                                                </a>
-                                              </div>
-                                            </div>
-                                            <div class="accordion-group">
-                                              <div id="teamRankThree03" class="accordion-body collapse">
-                                                <div class="accordion-inner">
-                                                   	<img src="<?php echo base_url('assets/Images/England_03.png'); ?>" class = "res-image">
-                                                </div>
-                                              </div>
-                                              <div class="accordion-heading">
-                                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#team-ranking03" href="#teamRankThree03">
-                                                  <div class = "content">
-                                                    <div class = "date">
-                                                      <span class="red"><h3>03</h3></span>
-                                                    </div>
-                                                    <div class = "match">
-                                                      <h3 class="grey">England</h3>
-                                                      <h5>Rating: 150 | Points: 09</h5>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                  </div>
-                                                </a>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      
-                                    </div>
-                                    <div class="tab-pane fade" id="batsman">
-										<!-- batsman rank -->
-	                                     <div class="span3">
-                                        <!--Team Ranking Accordion 01-->
-                                        <h4>Test</h4>
-                                        <div class="white-block">
-                                        	<div id="batsman-ranking" class="accordion"></div>
-                                        </div>
-                                      </div>
-                                      <div class="span3">
-                                        <!--Team Ranking Accordion 01-->
-                                        <h4>ODI</h4>
-                                        <div class="white-block">
-                                        	<div id="batsman-ranking01" class="accordion"></div>
-                                        </div>
-                                      </div>
-                                      <div class="span3">
-                                        <!--Team Ranking Accordion 01-->
-                                        <h4>T20</h4>
-                                        <div class="white-block">
-                                        	<div id="batsman-ranking02" class="accordion"></div>
-                                        </div>
-                                      </div>                                
-	                                    
-                                    </div>
-                                    <div class="tab-pane fade" id="bowler">
-										<!-- bowler rank -->
-										<div class="span3">
-                                        <!--Team Ranking Accordion 01-->
-                                        <h4>Test</h4>
-                                        <div class="white-block">
-                                        	<div id="bowler-ranking" class="accordion"></div>
-                                        </div>
-                                      </div>
-                                      <div class="span3">
-                                        <!--Team Ranking Accordion 01-->
-                                        <h4>ODI</h4>
-                                        <div class="white-block">
-                                        	<div id="bowler-ranking01" class="accordion"></div>
-                                        </div>
-                                      </div>
-                                      <div class="span3">
-                                        <!--Team Ranking Accordion 01-->
-                                        <h4>T20</h4>
-                                        <div class="white-block">
-                                        	<div id="bowler-ranking02" class="accordion"></div>
-                                        </div>
-                                      </div>
-                                      
-                                      
-                                    </div>
-                                    <div class="tab-pane fade" id="allRounder">
-										<!-- allRounder rank -->
-										<div class="span3">
-                                        <!--Team Ranking Accordion 01-->
-                                        <h4>Test</h4>
-                                        <div class="white-block">
-                                        	<div id="allrounder-ranking" class="accordion"></div>
-                                        </div>
-                                      </div>
-                                      <div class="span3">
-                                        <!--Team Ranking Accordion 01-->
-                                        <h4>ODI</h4>
-                                        <div class="white-block">
-                                        	<div id="allrounder-ranking01" class="accordion"></div>
-                                        </div>
-                                      </div>
-                                      <div class="span3">
-                                        <!--Team Ranking Accordion 01-->
-                                        <h4>T20</h4>
-                                        <div class="white-block">
-                                        	<div id="allrounder-ranking02" class="accordion"></div>
-                                        </div>
-                                      </div>
-                                      
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-              		</div>
-              		<div class="tab-pane fade" id="records">
-                		<div class = "span10">
-                        	<div class="tabbable tabs-left">
-                            	<ul id="recordtab" class="nav nav-tabs tabs-line-left">
-              						<li class="active"><a href="#batting" data-toggle="tab">Batting</a></li>
-              						<li><a href="#bowling" data-toggle="tab">Bowling</a></li>
-                                    <li><a href="#otherRecords" data-toggle="tab">Other Records</a></li>
-                                    <li><a class = "redlink" href="#viewall">View All</a></li>
-            					</ul>
-                                <div id="recordtabContent" class="tab-content">
-             						<div class="tab-pane fade in active" id="batting">
-	                                    Batting Records
-                                    </div>
-                                    <div class="tab-pane fade" id="bowling">
-	                                    Bowling Records
-                                    </div>
-                                    <div class="tab-pane fade" id="otherRecords">
-	                                    Other Records
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-              		</div>
-            	</div>
-            </div>
-        </div>	<!------Ranking and Records---------->
-        
-		<div class = "row">
-       	  <div class = "span8">
-            	<div class = "row">
-                	<div class = "span8 margint20 marginb20">
-                        	<!----Photos and Videos Tab---->
-                            <ul id = "gallerytab" class = "nav nav-tabs tabs-line">
-                            	<li class = "active"><a href ="#photos" data-toggle = "tab">Photos</a></li>
-                            	<li><a href ="#videos" data-toggle = "tab">Videos</a></li>
-                            </ul>
-                            <div id = "gallerytabContent" class = "tab-content">
-                            	<div class = "tab-pane fade in active" id = "photos">
-                                    <div class = "row">
-                                    	<div class = "span8">
-                                              <div id="photosgrid" class = "grid">
-                                                    <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img02_05.jpg'); ?>"></a>
-                                                    </div>
-                                                    <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img03_10.jpg'); ?>"></a>
-                                                    </div>
-                                                    <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img04_12.jpg'); ?>"></a>
-                                                    </div>
-                                                    <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img02_05.jpg'); ?>"></a>
-                                                    </div>
-                                                    <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img03_10.jpg'); ?>"></a>
-                                                    </div>
-                                                    <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img04_12.jpg'); ?>"></a>
-                                                    </div>
-                                                    <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img02_05.jpg'); ?>"></a>
-                                                    </div>
-                                                    <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img03_10.jpg'); ?>"></a>
-                                                    </div>
-                                                </div>
-                                        <div class = "pull-right margint20">
-                                        	<a href = "#" class="btn btn-primary">View All</a>
-                                        </div>
-                                     </div>
-                                    </div>
-                                </div>
-                                <div class = "tab-pane fade" id = "videos">
-                                    <div class = "row">
-                                    	<div class = "span8">
-                                              <div id="videosgrid" class = "grid">
-                                                    <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img02_05.jpg'); ?>"></a>
-                                                    </div>
-                                                    <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img03_10.jpg'); ?>"></a>
-                                                    </div>
-                                                    <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img04_12.jpg'); ?>"></a>
-                                                    </div>
-                                                    <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img02_05.jpg'); ?>"></a>
-                                                    </div>
-                                                    <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img03_10.jpg'); ?>"></a>
-                                                    </div>
-                                                    <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img04_12.jpg'); ?>"></a>
-                                                    </div>
-                                                    <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img02_05.jpg'); ?>"></a>
-                                                    </div>
-                                                    <div class = "grid-item">
-                                                      <a href = "Images/Img02_05.jpg" class = "lightbox"><img src="<?php echo base_url('assets/Images/Img03_10.jpg'); ?>"></a>
-                                                    </div>
-                                                </div>
-                                        <div class = "pull-right margint20">
-                                        	<a href = "#" class="btn btn-primary">View All</a>
-                                        </div>
-                                     </div>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                    <div class = "span8 marginb20">
-                   	  <div class = "page-header">
-                            <h3>Featured Articles</h3>
-                      </div>
-                     	<div class="media" id="farticle">
-  						<a class="pull-left" href="#">
-    						<img src="<?php echo base_url('assets/Images/img01_03.png'); ?>">
- 						 </a>
-  						<div class="media-body">
-    						<h4 class="media-heading"><a href = "#">The painfull reality of our times</a></h4>
-                            <p>These days cricketers and hence cricket is dogged by a long list of injuries. From minor ones that keep a player away for a match, to major ones that cut short a glorious career.</p>
-                        </div>
-                     </div>
-                     <p class = "pull-right"><a href =  "#" class = "btn btn-primary">View All</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class = "span4 margint20">
-            	<div class = "content-block">
-                    	<div id="sidebar" class="sidebar-nav">
-							 <div class="menu-heading dark-heading">Recent Articles</div>
-                        <ul class="nav nav-tabs nav-stacked" id="rarticles">
-                         
-                          <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game - By Administrator</a></li>
-                         
-                        </ul>
-                         <div class="nav-menu menu-box">
-                            <div class = "row">
-                              <div class = "span3">
-                                <div class = "padding20 pull-right"> <a href = "#" class = "viewall">View All</a> </div>
-                              </div>
-                            </div>
-                          </div>
-                      </div>
-                  <div class = "content-box">
-                   	<div class = "page-header">
-                    	<h3>Calender</h3>
-                    	</div>
-                  </div>
-                  <div class = "content-box">
-                   	<div class = "page-header">
-                    	<h3>Ads</h3>
-                    	</div>
-                  </div>
-                </div>
-            </div>
-        </div> <!------Articles and Sidebar---------->
-        
-	</div><!------//Content--->
 	
     <script src="<?php echo base_url('assets/js/my.js');?>"></script>

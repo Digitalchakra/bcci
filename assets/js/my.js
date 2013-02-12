@@ -84,6 +84,7 @@ function result()
 function news()
 {
 	var html='';
+	var recentNews='';
 	var bannerslide='';
 	$.ajax({
         url: 'news/getlist',
@@ -92,18 +93,26 @@ function news()
         success: function(data) {
 			for(i=1;i<data.resultset.length;i++)
 			{
-				html+='<div class="accordion-heading acc-heading">'
-				html+='<p><b><a target="_blank" href="'+data.resultset[i]['link']+'">'+data.resultset[i]['title']+'</a></b> - '+data.resultset[i]['pubdate']+'</p>';
-				html+='<p>'+data.resultset[i]['description']+'</p></div>';
-				/*bannerslide+='<div class="item"> <img src="'+data.resultset[i]['media'][1]+'" class = "res-image">';
-				bannerslide+='<div class = "carousel-caption">';
-				bannerslide+='<a target="_blank" href="'+data.resultset[i]['link']+'"><h4>'+data.resultset[0]['title']+'</h4></a>';
-				bannerslide+='<p>'+data.resultset[i]['description']+'</p></div></div>';*/
+				mod=i%3;
+				html+='<li class="media news-thumb-small">' ;
+                html+='<a class="pull-left" target="_blank" href="'+data.resultset[i]['link']+'"> <img src="'+data.resultset[i]['media1']+'" class="media-object"> </a>';
+                html+='<div class="media-body">';
+                html+='<h4 class="media-heading"><a target="_blank" href="'+data.resultset[i]['link']+'">'+data.resultset[i]['title']+'</a></h4>';
+                html+='<h6>'+data.resultset[i]['pubdate']+'</h6>';
+                html+='</div>';
+                html+='</li>';
+                if((mod==0) || (i==(data.resultset.length-1)))
+                {
+					recentNews+='<div class = "span6"><ul>'+html+'</ul></div>';
+					html='';
+				}
 			}
-			$('#recentNews').html(html);
-			html='<img src="'+data.resultset[0]['media2']+'"/>';
+			$('#recentNewscont').html(recentNews);
+			html='<div class = "row-fluid"><div class = "span12 news-thumb"><p><img src="'+data.resultset[0]['media2']+'"/>';
 			html+='<p>'+data.resultset[0]['pubdate']+'</p>';
-			html+=data.resultset[0]['description']+'<p class="pull-right"><a class="btn btn-primary" target="_blank" href="'+data.resultset[0]['link']+'">Read more</a></p>';;
+			html+=data.resultset[0]['description'];
+			html+='<p class="pull-right"><a class="btn btn-primary" target="_blank" href="'+data.resultset[0]['link']+'">Read more</a></p>';
+			html+='</p></div></div>';
 			$('#featuredNews').html(html);
 			bannerslide+='<div class="item active"> <img src="'+data.resultset[0]['media1']+'" class = "res-image">';
 			bannerslide+='<div class = "carousel-caption">';
@@ -111,7 +120,6 @@ function news()
 			bannerslide+='<p>'+data.resultset[0]['pubdate']+'</p>';
 			bannerslide+='<p>'+data.resultset[0]['description'].substring(0,200)+' ...</p></div></div>';
 			$('#bannerslide').html(bannerslide);
-			
         },
         error:function()
         {

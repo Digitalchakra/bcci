@@ -191,7 +191,18 @@ td a{
 .marginr30 {
 	margin-right: 30px;
 }
-
+.marginr10 {
+	margin-right: 10px;
+}
+.borderr1{
+	border-right:solid 1px #999;
+}
+.paddingr10 {
+	padding-right:10px;
+}
+.paddingl0 {
+	padding-left:0;
+}
 
 .content-box {
 	padding: 10px;
@@ -255,7 +266,7 @@ h4 {
 	padding: 0 0 0 0px;
 	font-weight: normal;
 	font-size:18px;
-	line-height:12px;
+	line-height:16px;
 }
 
 .footer-box {
