@@ -192,7 +192,7 @@
     <div class = "span12 margint20">
       <ul id="rankrecordtab" class="nav nav-tabs tabs-line">
         <li class="active"><a href="#ranking" data-toggle="tab">Rankings</a></li>
-        <li><a href="#records" data-toggle="tab">Records</a></li>
+       <!-- <li><a href="#records" data-toggle="tab">Records</a></li>-->
       </ul>
       <div id="rankrecordtabContent" class="tab-content">
         <div class="tab-pane fade in active" id="ranking">
@@ -208,164 +208,20 @@
                 <div class="tab-pane fade in active" id="team">
                   <div class="row-fluid rankings" id = "rankings">
                   	<div class = "span4">
-                        <ul style="list-style:none">  
-                        	<h4>Test Match</h4>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 01</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> India</h4>
-                                <h6>Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 02</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> Australia</h4>
-                                <h6>Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 03</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> England</h4>
-                                <h6>Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
+                        <ul style="list-style:none" id="team-ranking">  
+                        	<!-- from my.js-->
                         </ul>
                         <div class = "pull-right"><a href="#">View All</a></div>
                     </div>
                     <div class = "span4">
-                        <ul style="list-style:none">  
-                        	<h4>ODI Match</h4>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 01</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> India</h4>
-                                <h6>Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 02</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> Australia</h4>
-                                <h6>Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 03</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> England</h4>
-                                <h6>Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
+                        <ul style="list-style:none" id="team-ranking01">  
+                        	<!-- from my.js-->
                         </ul>
                         <div class = "pull-right"><a href="#">View All</a></div>
                     </div>
                     <div class = "span4">
-                        <ul style="list-style:none">  
-                        	<h4>T20 Match</h4>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 01</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> India</h4>
-                                <h6>Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 02</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> Australia</h4>
-                                <h6>Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 03</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> England</h4>
-                                <h6>Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
+                        <ul style="list-style:none" id="team-ranking02">  
+                        	<!-- from my.js-->
                         </ul>
                         <div class = "pull-right"><a href="#">View All</a></div>
                     </div>
@@ -375,164 +231,20 @@
                 <div class="tab-pane fade" id="batsman"> 
                 	<div class="row-fluid rankings" id = "rankings">
                   	<div class = "span4">
-                        <ul style="list-style:none">  
-                        	<h4>Test Match</h4>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 01</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> H.M Amla</h4>
-                                <h6>South Africa | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 02</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> S. Chanderpaul</h4>
-                                <h6>West Indies | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 03</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> Mahindra Singh Dhoni</h4>
-                                <h6>India | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
+                        <ul style="list-style:none" id="batsman-ranking">  
+                        	<!-- from my.js-->
                         </ul>
                         <div class = "pull-right"><a href="#">View All</a></div>
                     </div>
                     <div class = "span4">
-                        <ul style="list-style:none">  
-                        	<h4>Test Match</h4>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 01</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> H.M Amla</h4>
-                                <h6>South Africa | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 02</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> S. Chanderpaul</h4>
-                                <h6>West Indies | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 03</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> Mahindra Singh Dhoni</h4>
-                                <h6>India | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
+                        <ul style="list-style:none" id="batsman-ranking01">  
+                        	<!-- from my.js-->
                         </ul>
                         <div class = "pull-right"><a href="#">View All</a></div>
                     </div>
                     <div class = "span4">
-                        <ul style="list-style:none">  
-                        	<h4>Test Match</h4>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 01</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> H.M Amla</h4>
-                                <h6>South Africa | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 02</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> S. Chanderpaul</h4>
-                                <h6>West Indies | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 03</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> Mahindra Singh Dhoni</h4>
-                                <h6>India | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
+                        <ul style="list-style:none" id="batsman-ranking02">  
+                        	<!-- from my.js-->
                         </ul>
                         <div class = "pull-right"><a href="#">View All</a></div>
                     </div>
@@ -541,164 +253,20 @@
                 <div class="tab-pane fade" id="bowler">
                 	<div class="row-fluid rankings" id = "rankings">
                   	<div class = "span4">
-                        <ul style="list-style:none">  
-                        	<h4>Test Match</h4>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 01</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> H.M Amla</h4>
-                                <h6>South Africa | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 02</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> S. Chanderpaul</h4>
-                                <h6>West Indies | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 03</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> Mahindra Singh Dhoni</h4>
-                                <h6>India | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
+                        <ul style="list-style:none" id="bowler-ranking">  
+                        	<!-- from my.js-->
                         </ul>
                         <div class = "pull-right"><a href="#">View All</a></div>
                     </div>
                     <div class = "span4">
-                        <ul style="list-style:none">  
-                        	<h4>Test Match</h4>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 01</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> H.M Amla</h4>
-                                <h6>South Africa | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 02</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> S. Chanderpaul</h4>
-                                <h6>West Indies | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 03</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> Mahindra Singh Dhoni</h4>
-                                <h6>India | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
+                        <ul style="list-style:none" id="bowler-ranking01">  
+                        	<!-- from my.js-->
                         </ul>
                         <div class = "pull-right"><a href="#">View All</a></div>
                     </div>
                     <div class = "span4">
-                        <ul style="list-style:none">  
-                        	<h4>Test Match</h4>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 01</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> H.M Amla</h4>
-                                <h6>South Africa | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 02</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> S. Chanderpaul</h4>
-                                <h6>West Indies | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 03</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> Mahindra Singh Dhoni</h4>
-                                <h6>India | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
+                        <ul style="list-style:none" id="bowler-ranking02">  
+                        <!-- from my.js-->
                         </ul>
                         <div class = "pull-right"><a href="#">View All</a></div>
                     </div>
@@ -707,164 +275,20 @@
                 <div class="tab-pane fade" id="allRounder">
                 	<div class="row-fluid rankings" id = "rankings">
                   	<div class = "span4">
-                        <ul style="list-style:none">  
-                        	<h4>Test Match</h4>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 01</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> H.M Amla</h4>
-                                <h6>South Africa | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 02</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> S. Chanderpaul</h4>
-                                <h6>West Indies | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 03</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> Mahindra Singh Dhoni</h4>
-                                <h6>India | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
+                        <ul style="list-style:none" id="allrounder-ranking">  
+                        	<!-- from my.js-->
                         </ul>
                         <div class = "pull-right"><a href="#">View All</a></div>
                     </div>
                     <div class = "span4">
-                        <ul style="list-style:none">  
-                        	<h4>Test Match</h4>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 01</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> H.M Amla</h4>
-                                <h6>South Africa | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 02</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> S. Chanderpaul</h4>
-                                <h6>West Indies | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 03</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> Mahindra Singh Dhoni</h4>
-                                <h6>India | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
+                        <ul style="list-style:none" id="allrounder-ranking01">  
+                        	<!-- from my.js-->
                         </ul>
                         <div class = "pull-right"><a href="#">View All</a></div>
                     </div>
                     <div class = "span4">
-                        <ul style="list-style:none">  
-                        	<h4>Test Match</h4>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 01</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> H.M Amla</h4>
-                                <h6>South Africa | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 02</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> S. Chanderpaul</h4>
-                                <h6>West Indies | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="white-block">
-                            <div class = "row-fluid">
-                              <div class="span4 padding10">
-                                  <div class = "flag">
-                                    <img src="Images/thumb-Ind.png">
-                                  </div>
-                                  <div class = "rank-box">
-                                    <h4>Rank 03</h4>
-                                  </div>
-                              </div>
-                              <div class="span8" style="padding:10px 10px 10px 0px; display:table-cell">
-                                <h4> Mahindra Singh Dhoni</h4>
-                                <h6>India | Points: 25 | Rating: 15</h6>
-                              </div>
-                            </div>
-                          </li>
+                        <ul style="list-style:none" id="allrounder-ranking02">  
+                        	<!-- from my.js-->
                         </ul>
                         <div class = "pull-right"><a href="#">View All</a></div>
                     </div>
@@ -874,7 +298,7 @@
             </div>
           </div>
         </div>
-        <div class="tab-pane fade" id="records">
+        <!--<div class="tab-pane fade" id="records">
           <div class = "span10">
             <div class="tabbable tabs-left">
               <ul id="recordtab" class="nav nav-tabs tabs-line-left">
@@ -889,7 +313,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div>-->
       </div>
     </div>
   </div>
