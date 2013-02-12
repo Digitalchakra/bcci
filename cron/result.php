@@ -98,7 +98,15 @@ foreach($html->find('table.cricket-results-table tr') as $main)
 			//Tbl_results::connection()->query('TRUNCATE TABLE `tbl_news`');
 			foreach($line as $row)
 			{
-				Tbl_results::create($row);		
+				$find=array('match_id'=>$row['match_id']);
+					if($found = Tbl_results::find($find))
+					{
+						$found->create($row);
+					}
+					else
+					{
+						Tbl_results::create($row);
+					}
 			}
 		}
 	//file_put_contents(dirname(__FILE__).'/result.json', json_encode($data));
