@@ -653,9 +653,7 @@ a.text-success:hover {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+{
   margin: 10px 0;
   font-family: inherit;
   font-weight: bold;
@@ -663,6 +661,7 @@ h6 {
   color: inherit;
   text-rendering: optimizelegibility;
 }
+
 
 h1 small,
 h2 small,
@@ -690,7 +689,7 @@ h2 {
 }
 
 h3 {
-  font-size: 24.5px;
+  font-size: 24px;
 }
 
 h4 {
@@ -2182,7 +2181,7 @@ table th[class*="span"],
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url("../img/glyphicons-halflings.png");
+  background-image: url("../Images/glyphicons-halflings.png");
   background-position: 14px 14px;
   background-repeat: no-repeat;
 }
@@ -2202,7 +2201,7 @@ table th[class*="span"],
 .dropdown-menu > .active > a > [class*=" icon-"],
 .dropdown-submenu:hover > a > [class^="icon-"],
 .dropdown-submenu:hover > a > [class*=" icon-"] {
-  background-image: url("../img/glyphicons-halflings-white.png");
+  background-image: url("../Images/glyphicons-halflings-white.png");
 }
 
 .icon-glass {

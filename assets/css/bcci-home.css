@@ -22,6 +22,10 @@
 	border-left:solid 1px #ccc;
 	margin-bottom:5px;
 }
+.carousel .res-image{
+	height:475px;
+	width:100%;
+}
 
 /*-----------------------LIVE SCORE----------------------------*/
 
@@ -261,24 +265,6 @@ border-radius:0px;
 	margin:-15px -10px;
 	background-image:url(../../Base%2001/Images/results-list_03.png);
 }
-/*------------Results on the Right01----------------*/
-
-.layout-table {
-	display:table;
-	border-collapse:collapse;
-	
-}
-.layout-row {
-	display:table-row;
-}
-.layout-cell25,.layout-cell50,.layout-cell75,.layout-cell100 {
-	display:table-cell;
-	padding:10px;
-}
-.layout-cell25 {width:25%;}
-.layout-cell50 {width:50%;}
-.layout-cell75 {width:75%;}
-
 
 
 /*-------------Image Grids---------------------------*/
@@ -326,7 +312,7 @@ border-radius:0px;
 }
 .news-thumb h6,.news-thumb-small h6 {
 	font-size:13px;
-	color:#b12310;
+	color:#383838;
 		line-height:14px;
 	font-family:Tahoma, Geneva, sans-serif;
 	text-transform:none;
@@ -378,3 +364,71 @@ border-radius:0px;
 	}
 /*--------------Hover FX----------------*/
 
+/*--------------Live Score--------------*/
+
+.yellow {
+	color:#ffd942;
+}
+.yellow-dull {
+	color:#ddd2a6
+}
+.white {
+	color:#FFF;
+}
+.yellow, .white {
+		text-shadow:0 1px 3px rgba(0,0,0,0.4);
+
+}
+.livescore_bg {
+	background: #b32310; /* Old browsers */
+background: -moz-linear-gradient(top,  #b32310 0%, #4c0707 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b32310), color-stop(100%,#4c0707)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #b32310 0%,#4c0707 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #b32310 0%,#4c0707 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #b32310 0%,#4c0707 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #b32310 0%,#4c0707 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b32310', endColorstr='#4c0707',GradientType=0 ); /* IE6-9 */
+color:#FFF;
+text-shadow:0px 1px 3px rgba(0,0,0,0.4);
+box-shadow:inset 0 0 0 4px rgba(0,0,0,0.45),
+					 inset 1px 1px 16px 0 rgba(0,0,0,0.8);
+}
+.livescore_bg .team_name {
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:#FFF;
+}
+.livescore_bg .team_icon {
+	border-radius:50%;
+	background: #a7200f;
+background: -moz-linear-gradient(top,  #a7200f 0%, #8a180d 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a7200f), color-stop(100%,#8a180d));
+background: -webkit-linear-gradient(top,  #a7200f 0%,#8a180d 100%);
+background: -o-linear-gradient(top,  #a7200f 0%,#8a180d 100%);
+background: -ms-linear-gradient(top,  #a7200f 0%,#8a180d 100%);
+background: linear-gradient(to bottom,  #a7200f 0%,#8a180d 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7200f', endColorstr='#8a180d',GradientType=0 );
+border:solid 3px #a8200f;
+padding:5px;
+box-shadow: 0 2px 4px rgba(0,0,0,0.5),
+						inset 0px 0px 8px rgba(0,0,0,0.3);
+width:72px;
+height:72px;
+margin-left:30px;
+}
+.livescore_bg .team_icon img {
+	width:68px;
+	height:68px;
+	margin-top:2px;
+}
+.livescore_bg h6 {
+	font-size:12px;
+	font-family:Tahoma, Geneva, sans-serif;
+	margin:0 0 5px 0;
+}
+.livescore_bg h3,.livescore_bg h4, .livescore_bg h5, .livescore_bg h6 {
+	line-height:12px;
+	margin-top:8px;
+	margin-bottom:5px;
+}

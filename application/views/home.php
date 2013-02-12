@@ -2,22 +2,127 @@
 <!--MAIN CONTENT
 ===================================================================  -->
 
-<div class = "container margin-t20">
+<div class = "container margint10">
   <div class = "row">
-    <div class = "span8 margint20">
+    <div class = "span8 margint10">
       <div id="myCarousel" class="carousel slide" style="z-index:0"> 
         <!-- Carousel items -->
         <div class="carousel-inner" id="bannerslide">
           <!-- banner img from my.js-->
         </div>
         <!-- Carousel nav --> 
-        <a class="carousel-control left" href="#myCarousel" data-slide="prev" >&lsaquo;</a> <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a> </div>
+        <!--<a class="carousel-control left" href="#myCarousel" data-slide="prev" >&lsaquo;</a> <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>--> </div>
     </div>
     
     <!--Live SCore-->
-    <div class = "span4 margint20">
-      <div class = "grey-block" style="height:420px">Live Score</div>
-    </div>
+    <div class = "span4 margint10 livescore_bg" id="liveScore">
+    	<div class="row-fluid">
+         <div class = "padding20">
+          <div class="span12">
+            <div class="row-fluid" id="no_matches">
+              1 of 5 Matches
+            </div>
+            <div class="row-fluid" id="match_name" style="text-align:center">
+              <h5 class="white">IPL T20 SemiFinals</h5>
+            </div>
+            <div class="row-fluid" id="team_images" style="text-align:center">
+              <div class="span6"><!--TeamA-->
+                <div class = "team_icon">
+                	<img src="Images/csk_icon.png">
+                </div>
+                <h5 class="team_name">Chennai Super Kings</h5>
+                <h4 class="yellow">184/3*</h4>
+                <h5 class="white">15.1 Overs</h5>
+              </div>
+              <div class="span6"><!--TeamB-->
+              <div class = "team_icon">
+                	<img src="Images/MI_icon.png">
+                </div>
+                <h5 class="team_name">Mumbai Indians</h5>
+                <h4 class="yellow yellow-dull">198/6</h4>
+                <h5 class="white">19.1 Overs</h5>
+              </div>
+              <div class="span12" style="text-align:left"><!--Required Runs-->
+                  <h6 class="yellow">CSK Needs 46 Runs to win
+                  <span class="marginl20 yellow">Req.RR : 11.4</span>
+                  </h6>
+              </div>
+            </div>
+            <div class="row-fluid margint10" style="text-align:center"><!--Player Stats-->
+              <div class="span6" style="border-right:1px dotted #b33310; padding-right:20px">
+                <h5 class="white team_name">Mahindra Singh Dhoni</h5><!--Player-->
+                <h5 class="yellow">46(32)</h5><!--Player Score-->
+                <!--Stats-->
+                <div class="row-fluid">
+                  <div class="span4">
+                    <h6 class="yellow">4's</h6>
+                    <h6 class="white">12</h6>
+                  </div>
+                  <div class="span4">
+                    <h6 class="yellow">6's</h6>
+                    <h6 class="white">1</h6>
+                  </div>
+                  <div class="span4">
+                    <h6 class="yellow">s/r</h6>
+                    <h6 class="white">48.21</h6>
+                  </div>
+                </div>
+            </div>
+              <div class="span6">
+                <h5 class="white team_name">Suresh Raina</h5><!--Player-->
+                <h5 class="yellow">36(32)</h5><!--Player Score-->
+                <div class="row-fluid">
+                  <div class="span4">
+                    <h6 class="yellow">4's</h6>
+                    <h6 class="white">12</h6>
+                  </div>
+                  <div class="span4">
+                    <h6 class="yellow">6's</h6>
+                    <h6 class="white">1</h6>
+                  </div>
+                  <div class="span4">
+                    <h6 class="yellow">s/r</h6>
+                    <h6 class="white">36.25</h6>
+                  </div>
+                </div>
+            </div>
+              <div class="span12 margint10">
+                <h6 class="yellow"><strong>This Over:</strong> 0 1 4 3 1 <span class="marginl20"><strong>Extras:</strong> 6</span></h6>
+              </div>
+          </div>
+            <div class="row-fluid"><!--Bowling-->
+              <div class="span6">
+                  <h6 class="yellow">Sachin Tendulkar</h6>
+                  <h6 class="white">6 Runs this over</h6>
+                </div>
+              <div class="span1"><!--Overs-->
+                  <h6 class="yellow">O</h6>
+                  <h6 class="white">2</h6>
+              </div>
+              <div class="span1"><!--Maidens-->
+                  <h6 class="yellow">M</h6>
+                  <h6 class="white">0</h6>
+              </div>
+              <div class="span1"><!--Runs-->
+                  <h6 class="yellow">R</h6>
+                  <h6 class="white">26</h6>
+              </div>
+              <div class="span1"><!--Wickets-->
+                  <h6 class="yellow">W</h6>
+                  <h6 class="white">1</h6>
+              </div>
+              <div class="span2"><!--Wickets-->
+                  <h6 class="yellow">Econ</h6>
+                  <h6 class="white">3.27</h6>
+              </div>
+              <div class="span12" style="text-align:center"><!--Wickets-->
+                  <h5 class="yellow">Tendulkar to MS Dhoni</h5>
+              </div>
+            </div>
+          </div>
+         </div>
+    	</div>
+     </div>
   </div>
   <div class = "row">
     <div class = "span12 margint20">
@@ -355,29 +460,38 @@
           </div>
         </div>
         <div class = "span8 marginb20 news-thumb">
-          <div class = "page-header">
-            <h3>Featured Articles</h3>
-          </div>
-          <div id="farticle">
-              
-           </div>
+			 <ul id="articles" class="nav nav-tabs tabs-line">
+        <li class="active"><a href="#featuredArticles" data-toggle="tab">Featured Articles</a></li>
+        <li><a href="#recentArticles" data-toggle="tab">Recent Articles</a></li>
+      </ul>
+      <div id="articlestabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="featuredArticles">
+          <div class = "row-fluid">
+            <div class = "span12 news-thumb">
+              <p id="farticle">
+				  
+              </p>
               <div class="pull-right"> <a id="farticlerm" href="#" class="btn btn-primary">Read More</a> </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="recentArticles"> 
+        	<div class = "row-fluid" id="rarticles">
+          
+           </div>
+           <div class = "span pull-right margint10">
+                	<a href = "/bcci/article" class="btn btn-primary">View All</a>
+                </div>
+        </div>
+      </div>  
+      
         </div>
       </div>
     </div>
+
     <div class = "span4 margint20">
       <div class = "content-block">
         <div id="sidebar" class="sidebar-nav">
-          <ul class="nav nav-tabs nav-stacked padding20" id="rarticles">
-            
-            <li class="nav-menu menu-box">
-              <div class = "row">
-                <div class = "span pull-right padding20">
-                  <a href = "/bcci/article" class = "viewall">View All</a>
-                </div>
-              </div>
-            </li>
-          </ul>
         </div>
         <div class = "content-box">
           <div class = "page-header">

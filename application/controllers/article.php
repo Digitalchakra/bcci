@@ -5,7 +5,7 @@ class Article extends CI_Controller
 	function getlist()
 	{
 		$this->load->model('articlemodel');
-		$data['resultset']=$this->articlemodel->getArticles(5,0);
+		$data['resultset']=$this->articlemodel->getArticles(7,0);
 		$this->load->view('json',$data);
 	}
 	function get()

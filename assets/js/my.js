@@ -378,20 +378,28 @@ function article()
         type: "GET",
         dataType:'JSON',
         success: function(data) {
-			html='<a class="pull-left" href="#"><img src="Images/img01_03.png"></a>';
-  			html+='<div class="media-body"><h4 class="media-heading"><a href = "#">'+data.resultset[0]['title']+'</a></h4>';
-            html+='<p>'+data.resultset[0]['content'].substring(0,800)+'....</p></div>';
+			recentArticle='';
+			html='<h4 class="media-heading"><a href="#">'+data.resultset[0]['title']+'</a></h4>';
+			html+='<h6>By Administrator</h6>';
+			html+=data.resultset[0]['content'].substring(0,500)+'...';
             $('#farticle').html(html);
             $('#farticlerm').attr('href','/bcci/article/get/'+data.resultset[0]['id']);
-            html='<li class="menu-heading dark-heading">Recent Articles</li>';
+            html='';
 			for(i=1;i<data.resultset.length;i++)
 			{
-				html+='<li class="nav-menu"><a href="#">'+data.resultset[i]['title']+' - By '+data.resultset[0]['author']+'</a></li>';
-                        
-			//	html+='<div class = "grid-item"><a target="_blank" href = "'+data.resultset[i]['link']+'" class = "lightbox"><img src="'+data.resultset[i]['src']+'"></a>';
-			//	html+='<p><span>'+data.resultset[i]['pubdate']+'</span>-<span>'+data.resultset[i]['time']+'</span></p><p><b>'+data.resultset[i]['title']+'</b></p><span>'+data.resultset[i]['description']+'</span></div>';
+				mod=i%3;
+				html+='<li class="media news-thumb-small">'; 
+				html+='<div class="media-body">';
+                html+='    	<h4 class="media-heading"><a href="/bcci/article/get/'+data.resultset[i]['id']+'">'+data.resultset[i]['title']+'</a></h4>';
+                html+='    	<h6>By '+data.resultset[i]['author']+'</h6>';
+                html+='    </div></li>';
+				if((mod==0) || (i==(data.resultset.length-1)))
+                {
+					recentArticle+='<div class = "span6"><ul>'+html+'</ul></div>';
+					html='';
+				}
 			}
-			$('#rarticles').prepend(html);
+			$('#rarticles').html(recentArticle);
         },
         error:function()
         {
