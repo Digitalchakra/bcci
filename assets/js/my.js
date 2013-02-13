@@ -153,7 +153,7 @@ function livescore()
 			{
 				if(data[listcount].matchDataType=='Live Data' && data[listcount].state !='preview')
 				{
-					option+='<option value="'+listcount+'">'+data[listcount].matchFolder+'</option>';
+					option+='<option value="'+listcount+'">'+data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName+'</option>';
 					$.myplaceholder.mylivescore.push(data[listcount]);			
 				}
 				listcount++;
@@ -195,7 +195,7 @@ function team()
                 list+=            '<div class = "row-fluid">';
                 list+=              '<div class="span4 padding10">';
                 list+=                  '<div class = "flag">';
-                list+=                     '<img src="/bcci/assets/Images/India_03.png">';
+              //  list+=                     '<img src="/bcci/assets/Images/India_03.png">';
                 list+=                  '</div>';
                 list+=                  '<div class = "rank-box">';
                 list+=                    '<h4>Rank '+parseInt(i+1)+'</h4>';
@@ -216,7 +216,7 @@ function team()
                 list+=            '<div class = "row-fluid">';
                 list+=              '<div class="span4 padding10">';
                 list+=                  '<div class = "flag">';
-                list+=                     '<img src="/bcci/assets/Images/India_03.png">';
+              //  list+=                     '<img src="/bcci/assets/Images/India_03.png">';
                 list+=                  '</div>';
                 list+=                  '<div class = "rank-box">';
                 list+=                    '<h4>Rank '+parseInt(i+1)+'</h4>';
@@ -237,7 +237,7 @@ function team()
                 list+=            '<div class = "row-fluid">';
                 list+=              '<div class="span4 padding10">';
                 list+=                  '<div class = "flag">';
-                list+=                    '<img src="/bcci/assets/Images/India_03.png">';
+             //   list+=                    '<img src="/bcci/assets/Images/India_03.png">';
                 list+=                  '</div>';
                 list+=                  '<div class = "rank-box">';
                 list+=                    '<h4>Rank '+parseInt(i+1)+'</h4>';
@@ -282,7 +282,7 @@ function rank(method)
                 list+=            '<div class = "row-fluid">';
                 list+=              '<div class="span4 padding10">';
                 list+=                  '<div class = "flag">';
-                list+=                     '<img src="/bcci/assets/Images/India_03.png">';
+                //list+=                     '<img src="/bcci/assets/Images/India_03.png">';
                 list+=                  '</div>';
                 list+=                  '<div class = "rank-box">';
                 list+=                    '<h4>Rank '+parseInt(i+1)+'</h4>';
@@ -303,7 +303,7 @@ function rank(method)
                 list+=            '<div class = "row-fluid">';
                 list+=              '<div class="span4 padding10">';
                 list+=                  '<div class = "flag">';
-                list+=                     '<img src="/bcci/assets/Images/India_03.png">';
+                //list+=                     '<img src="/bcci/assets/Images/India_03.png">';
                 list+=                  '</div>';
                 list+=                  '<div class = "rank-box">';
                 list+=                    '<h4>Rank '+parseInt(i+1)+'</h4>';
@@ -324,7 +324,7 @@ function rank(method)
                 list+=            '<div class = "row-fluid">';
                 list+=              '<div class="span4 padding10">';
                 list+=                  '<div class = "flag">';
-                list+=                     '<img src="/bcci/assets/Images/India_03.png">';
+              //  list+=                     '<img src="/bcci/assets/Images/India_03.png">';
                 list+=                  '</div>';
                 list+=                  '<div class = "rank-box">';
                 list+=                    '<h4>Rank '+parseInt(i+1)+'</h4>';
