@@ -4,6 +4,9 @@ $(document).ready(function()
 		news();
 		result();
 		team();
+		$.myplaceholder={};
+		$.myplaceholder.mylivescore=[];
+		$.myplaceholder.checkreload=0;
 		rank('batsman');
 		rank('bowler');
 		rank('allrounder');
@@ -16,11 +19,19 @@ $(document).ready(function()
 			}, 60000);*/
     setInterval(function() {
           livescore();
-			}, 30000);
+			}, 60000);
 			$('#resultmenu').change(function()
 			{
 				$('.accordion-group').hide();
 				$('.'+this.value).show();
+			});
+			$('#livescore_dd').change(function()
+			{
+				alert(this.value);
+				//alert($.myplaceholder.mylivescore[this.value].matchFolder);
+				livescoredisplay($.myplaceholder.mylivescore[this.value]);
+				//$('.accordion-group').hide();
+				//$('.'+this.value).show();
 			});
 			
 });
@@ -134,11 +145,35 @@ function livescore()
         url: 'live',
         type: "GET",
         dataType:'json', 
-        success: function(data) { 
-			//alert('t');
-        if(data[0].matchDataType =="Live Data")
+        success: function(data) {
+			listcount=0;
+			option="";
+			//alert(data[listcount].matchDataType);
+			$(data).each(function()
 			{
-				livescoredisplay(data[0]);
+				if(data[listcount].matchDataType=='Live Data')
+				{
+					option+='<option value="'+listcount+'">'+data[listcount].seriesFolder+'</option>';
+					$.myplaceholder.mylivescore.push(data[listcount]);			
+				}
+				listcount++;
+
+				}); 
+				$('#livescore_dd').html(option);
+
+			/*some bug has to fix
+			 * when ajax is loading make the current selected tab to update
+			 * instead of refresh the list
+			 */
+
+			if($.myplaceholder.checkreload==0)
+			{
+				$.myplaceholder.checkreload=1;
+				livescoredisplay($.myplaceholder.mylivescore[0]);
+			}
+			else
+			{
+				//livescoredisplay($.myplaceholder.mylivescore[$('#livescore_dd').value]);
 			}
         }
 	});
@@ -413,7 +448,8 @@ function livescoredisplay(data)
 	//alert('live');
 				
 				//series_title
-				$('#series_title').html(data.matchType+" - "+data.matchdesc);
+				//$('#series_title').html(data.matchType+" - "+data.matchdesc);
+				$('#series_title').html(data.series);
 				//team name
 				$('#team1').html(data.battingTeamName);
 				$('#team2').html(data.bowlingTeamName);

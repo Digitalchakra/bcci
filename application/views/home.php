@@ -22,10 +22,10 @@
             <div id="no_matches" class="row-fluid">
              <h5 id="series_title" class="white pull-left"></h5>
               <div class="dropdown pull-right">
-                <select class="dropdown-select" name="one">
-                  <option class="red-btn" value="1">Live Matches</option>
+                <select class="dropdown-select" name="one" id="livescore_dd">
+                  <!--<option class="red-btn" value="1">Live Matches</option>
                   <option value="2">Australia vs England</option>
-                  <option value="2">South Africa vs Sri Lanka</option>
+                  <option value="2">South Africa vs Sri Lanka</option>-->
                 </select>
               </div>
             </div>
