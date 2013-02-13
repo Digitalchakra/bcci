@@ -75,15 +75,15 @@
                 <li><a href="#">Sri Lanka vs Australia</a></li>
               </ul>
               <div class = "hline"></div>
-              <ul class="greybox">
+              <!-- <ul class="greybox">
                 <li><a href="#">Fixtures</a></li>
                 <li><a href="#">Series Archive</a></li>
-              </ul>
+              </ul> -->
             </div>
           </div>
         </li>
        <!--  <li><a href="#" class="drop">Statistics</a><!-- Begin 4 columns Item -->
-          <div class="dropdown_4columns">
+         <!-- <div class="dropdown_4columns">
             <div class = "col_2">
               <ul class="greybox">
                 <h2>Rankings</h2>
