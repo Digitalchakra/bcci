@@ -27,7 +27,7 @@ $(document).ready(function()
 			});
 			$('#livescore_dd').change(function()
 			{
-				alert(this.value);
+				//alert(this.value);
 				//alert($.myplaceholder.mylivescore[this.value].matchFolder);
 				livescoredisplay($.myplaceholder.mylivescore[this.value]);
 				//$('.accordion-group').hide();
@@ -153,7 +153,7 @@ function livescore()
 			{
 				if(data[listcount].matchDataType=='Live Data' && data[listcount].state !='preview')
 				{
-					option+='<option value="'+listcount+'">'+data[listcount].seriesFolder+'</option>';
+					option+='<option value="'+listcount+'">'+data[listcount].matchFolder+'</option>';
 					$.myplaceholder.mylivescore.push(data[listcount]);			
 				}
 				listcount++;
@@ -458,7 +458,12 @@ function livescoredisplay(data)
 				$('#team1_image').html(data.battingTeamName);
 				$('#team2_image').html(data.bowlingTeamName);
 				
+				//RunRate
+				$('#crr').html("CRR : "+data.crr);
+				$('#rrr').html("RRR : "+data.rrr);
 				
+				if(data.state != 'complete')
+				{
 				//batting team score/over
 				$('#team1_score').html(data['currentBatTeamScore'].runsAndWicket+'*');
 				$('#team1_over').html(data['currentBatTeamScore'].overs+" Overs");
@@ -492,9 +497,17 @@ function livescoredisplay(data)
 					$('#nonStriker_run').html("");
 				}
 				
-				//RunRate
-				$('#crr').html("CRR : "+data.crr);
-				$('#rrr').html("RRR : "+data.rrr);
+				//sr
+				if(data['nonStriker'].balls !="")
+				$('#nonStriker_sr').html((data['nonStriker'].runs/data['nonStriker'].balls*100).toFixed(2));
+				if(data['striker'].balls !="")
+				$('#striker_sr').html((data['striker'].runs/data['striker'].balls*100).toFixed(2));
+				
+				//last name
+				if(data['striker'].fullName != "" && data['strikerbowler'].fullName != "")
+				$('#strikers_lname').html(data['striker'].fullName.split(' ').slice(-1).join(' ')+" to "+data['strikerbowler'].fullName.split(' ').slice(-1).join(' '));
+				//split(' ').slice(-1).join(' ');
+				
 				
 				//bowler
 				$('#strikerbowler').html(data['strikerbowler'].fullName);
@@ -506,15 +519,12 @@ function livescoredisplay(data)
 				$('#strikerbowler_maidens').html(data['strikerbowler'].maidens);
 				
 				$('#strikerbowler_wickets').html(data['strikerbowler'].wickets);
+				}
+				else
+				{
+					$('#playerstate').html(data.status);
+					$('#bowlerstate').html('');
+				}
 				
-				//sr
-				if(data['nonStriker'].balls !="")
-				$('#nonStriker_sr').html((data['nonStriker'].runs/data['nonStriker'].balls*100).toFixed(2));
-				if(data['striker'].balls !="")
-				$('#striker_sr').html((data['striker'].runs/data['striker'].balls*100).toFixed(2));
 				
-				//last name
-				if(data['striker'].fullName != "" && data['strikerbowler'].fullName != "")
-				$('#strikers_lname').html(data['striker'].fullName.split(' ').slice(-1).join(' ')+" to "+data['strikerbowler'].fullName.split(' ').slice(-1).join(' '));
-				//split(' ').slice(-1).join(' ');
 }
