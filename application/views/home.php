@@ -58,7 +58,7 @@
                   </h6>
               </div>
             </div>
-            <div style="text-align:center" class="row-fluid margint10"><!--Player Stats-->
+            <div style="text-align:center" class="row-fluid margint10" id="playerstate"><!--Player Stats-->
               <div style="border-right:1px dotted #b33310; padding-right:20px" class="span6">
                 <h5 id="striker" class="white team_name"></h5><!--Player-->
                 <h5 id="striker_run" class="yellow"></h5><!--Player Score-->

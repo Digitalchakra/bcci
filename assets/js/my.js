@@ -151,7 +151,7 @@ function livescore()
 			//alert(data[listcount].matchDataType);
 			$(data).each(function()
 			{
-				if(data[listcount].matchDataType=='Live Data')
+				if(data[listcount].matchDataType=='Live Data' && data[listcount].state !='preview')
 				{
 					option+='<option value="'+listcount+'">'+data[listcount].seriesFolder+'</option>';
 					$.myplaceholder.mylivescore.push(data[listcount]);			
@@ -476,9 +476,21 @@ function livescoredisplay(data)
 				
 				//striker's runs
 				if(data['striker'].balls !="")
-				$('#striker_run').html(data['striker'].runs+"("+data['striker'].balls+")");
+				{
+					$('#striker_run').html(data['striker'].runs+"("+data['striker'].balls+")");
+				}
+				else
+				{
+					$('#striker_run').html("");
+				}
 				if(data['nonStriker'].balls !="")
-				$('#nonStriker_run').html(data['nonStriker'].runs+"("+data['nonStriker'].balls+")");
+				{
+					$('#nonStriker_run').html(data['nonStriker'].runs+"("+data['nonStriker'].balls+")");
+				}
+				else
+				{
+					$('#nonStriker_run').html("");
+				}
 				
 				//RunRate
 				$('#crr').html("CRR : "+data.crr);
