@@ -446,9 +446,12 @@ function article()
 function livescoredisplay(data)
 {
 	//alert('live');
-				
+				//alert(data.state);
 				//series_title
 				//$('#series_title').html(data.matchType+" - "+data.matchdesc);
+				$('#matchstate').html('');
+				$('#playerstate').show();
+					$('#bowlerstate').show();
 				$('#series_title').html(data.series);
 				//team name
 				$('#team1').html(data.battingTeamName);
@@ -522,8 +525,10 @@ function livescoredisplay(data)
 				}
 				else
 				{
-					$('#playerstate').html(data.status);
-					$('#bowlerstate').html('');
+					
+					$('#matchstate').html(data.status);
+					$('#playerstate').hide();
+					$('#bowlerstate').hide();
 				}
 				
 				
