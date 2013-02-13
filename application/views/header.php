@@ -30,7 +30,7 @@
 
 <body>
 <!--HEADER
-===================================================================  --> 
+===================================================================  -->
 
 <!-----LOGO and SEARCH---------->
 <div class = "container">
@@ -38,13 +38,13 @@
     <div class = "span3 margint20"> <img src="<?php echo base_url('assets/Images/Logo_03.png'); ?>" alt="BCCI"> </div>
     <div class = "span4 offset5 hidden-phone">
       <div class = "row">
-        <div class = "span4 margint20"> <img class = "pull-right" src="<?php echo base_url('assets/Images/soci-icons_03.png'); ?>"> </div>
+       <!--  <div class = "span4 margint20"> <img class = "pull-right" src="<?php echo base_url('assets/Images/soci-icons_03.png'); ?>"> </div> -->
       </div>
       <div class = "row">
         <div class = "span4  margint20">
           <div class="input-append search-box pull-right">
-            <input class="span2 search-icon" id="appendedInputButton" type="text" placeholder= "Search the site">
-            <button class="btn btn-primary" type="button"><i class="icon-search icon-white"></i></button>
+            <!-- <input class="span2 search-icon" id="appendedInputButton" type="text" placeholder= "Search the site">
+            <button class="btn btn-primary" type="button"><i class="icon-search icon-white"></i></button>-->
           </div>
           <div class = "clearfix"></div>
         </div>
@@ -56,14 +56,14 @@
 <!-----NAV MENU---------->
 <div class = "container">
   <div class = "row">
-    <div class = "span12 margint20"> 
+    <div class = "span12 margint20">
       <!---MEGA MENU
       ------------------------------->
-      
+
       <ul class ="menu">
         <li><a href="/bcci" class="drop">Home</a></li>
         <li><a href="/bcci/schedule" class="drop">Schedule</a><!-- Begin Shedule columns Item -->
-          
+
           <div class="dropdown_5columns"><!-- Begin 5 columns container -->
             <div class = "col_2">
               <ul id="srs_list" class="greybox">
@@ -82,7 +82,7 @@
             </div>
           </div>
         </li>
-        <li><a href="#" class="drop">Statistics</a><!-- Begin 4 columns Item -->
+       <!--  <li><a href="#" class="drop">Statistics</a><!-- Begin 4 columns Item -->
           <div class="dropdown_4columns">
             <div class = "col_2">
               <ul class="greybox">
@@ -104,14 +104,14 @@
               </ul>
             </div>
           </div>
-        </li>
+        </li> -->
         <li><a href="/bcci/news" class="drop">News</a></li>
         <li><a href="/bcci/article" class="drop">Articles</a></li>
-        <li><a href="#" class="drop">Photos</a></li>
+ <!--        <li><a href="#" class="drop">Photos</a></li>
         <li><a href="#" class="drop">Polls</a></li>
-        <li><a href="#" class="drop">About</a></li>
-        <li class = "menu_right"><a href="#" class="drop" style="margin-right:5px"><i class = "icon-lock icon-white" style="margin-right:15px;"></i>Register</a></li>
-        <li class = "menu_right"><a href="#" class="drop" style="margin-right:5px"><i class = "icon-user icon-white" style="margin-right:15px;"></i>Login</a></li>
+        <li><a href="#" class="drop">About</a></li> -->
+        <!-- <li class = "menu_right"><a href="#" class="drop" style="margin-right:5px"><i class = "icon-lock icon-white" style="margin-right:15px;"></i>Register</a></li>
+        <li class = "menu_right"><a href="#" class="drop" style="margin-right:5px"><i class = "icon-user icon-white" style="margin-right:15px;"></i>Login</a></li> -->
       </ul>
     </div>
   </div>
