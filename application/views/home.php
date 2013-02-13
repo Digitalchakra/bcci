@@ -5,15 +5,15 @@
 <div class = "container margint10">
   <div class = "row">
     <div class = "span8 margint10">
-      <div id="myCarousel" class="carousel slide" style="z-index:0"> 
+      <div id="myCarousel" class="carousel slide" style="z-index:0">
         <!-- Carousel items -->
         <div class="carousel-inner" id="bannerslide">
           <!-- banner img from my.js-->
         </div>
-        <!-- Carousel nav --> 
+        <!-- Carousel nav -->
         <!--<a class="carousel-control left" href="#myCarousel" data-slide="prev" >&lsaquo;</a> <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>--> </div>
     </div>
-    
+
         <!--Live SCore-->
  <div id="liveScore" class="span4 margint10 livescore_bg">
      <div class="row-fluid">
@@ -63,7 +63,7 @@
                 <h5 id="striker" class="white team_name"></h5><!--Player-->
                 <h5 id="striker_run" class="yellow"></h5><!--Player Score-->
                 <!--Stats-->
-                
+
                 <div class="row-fluid">
                   <div class="span4">
                     <h6 class="yellow"></h6>
@@ -77,14 +77,14 @@
                     <h6 class="yellow"></h6>
                     <h6 class="white"></h6>
                   </div>
-                  
+
                 </div>
-                
+
             </div>
               <div class="span6">
                 <h5 id="nonStriker" class="white team_name"></h5><!--Player-->
                 <h5 id="nonStriker_run" class="yellow"></h5><!--Player Score-->
-                
+
                 <div class="row-fluid">
                   <div class="span4">
                     <h6 class="yellow"></h6>
@@ -98,9 +98,9 @@
                     <h6 class="yellow"></h6>
                     <h6 class="white"></h6>
                   </div>
-                  
+
                 </div>
-                
+
             </div>
              <div class="span12 margint10">
                 <!--<h6 class="yellow"><strong>This Over:</strong> 0 1 4 3 1 <span class="marginl20"><strong>Extras:</strong> 6</span></h6>-->
@@ -140,20 +140,20 @@
          </div>
      </div>
 </div>
-   
-   
-   
+
+
+
   <div class = "row">
     <div class = "span12 margint20">
     <!--  <p><strong>Trending :</strong> PepsiCo bags title sponsorship for IPL  |  IPL franchises announce initial squads  |  KKR v CSK Videos  |  Pathan Interview</p> -->
     </div>
   </div>
-  
+
   <!--Shadow FX-->
   <div class = "row">
     <div class = "shadowfx"> </div>
   </div>
-  
+
   <!-- Matches Tab-->
   <div class = "row">
     <div class = "span8 margint20">
@@ -163,7 +163,7 @@
           <li class="active"><a href="#presentMatches" data-toggle="tab">Present Matches</a></li>
           <li><a href="#upcomingMatches" data-toggle="tab">Upcoming Matches</a></li>
           <div class="btn-group pull-right red-button">
-            <button class="btn red-btn">Shedule</button>
+            <button class="btn red-btn">Schedule</button>
             <button class="btn dropdown-toggle red-btn" data-toggle="dropdown"> <span class="caret"></span> </button>
             <ul class="dropdown-menu red-dropdown">
               <li><a href = "#">Present Matches</a></li>
@@ -177,7 +177,7 @@
         </ul>
         <!--Matches Tabs COntent-->
         <div id="matchestabContent" class="tab-content">
-          <div class="tab-pane fade" id="pastMatches"> 
+          <div class="tab-pane fade" id="pastMatches">
             <!--Past matches Table-->
             <table class="table table-bordered table-striped">
               <thead>
@@ -203,7 +203,7 @@
               </tbody>
             </table>
           </div>
-          <div class="tab-pane fade in active" id="presentMatches"> 
+          <div class="tab-pane fade in active" id="presentMatches">
             <!--Present matches Table-->
             <table class="table table-bordered table-striped">
               <thead>
@@ -229,7 +229,7 @@
               </tbody>
             </table>
           </div>
-          <div class="tab-pane fade" id="upcomingMatches"> 
+          <div class="tab-pane fade" id="upcomingMatches">
             <!--Upcoming matches Table-->
             <table class="table table-bordered table-striped">
               <thead>
@@ -259,7 +259,7 @@
         </div>
       </div>
     </div>
-    
+
     <!--Results On the right-->
     <div class = "span4 margint20">
       <div class = "white-block">
@@ -281,7 +281,7 @@
       </div>
     </div>
   </div>
-  
+
   <!--Match Shedule and Results-->
   <div class = "row">
     <div class = "span8 margint20">
@@ -293,7 +293,7 @@
         <div class="tab-pane fade in active" id="featuredNews">
 			<!-- news from my.js-->
         </div>
-        <div class="tab-pane fade" id="recentNews"> 
+        <div class="tab-pane fade" id="recentNews">
         	<div id="recentNewscont" class = "row-fluid">
             <!--recent news from my.js-->
            </div>
@@ -302,16 +302,16 @@
       </div>
     </div>
     <!-------News Tab------->
-    
+
     <div class = "span4 margint20">
       <div class = "grey-block">
         <p>ADS</p>
       </div>
     </div>
-    <!-------Ads------------> 
+    <!-------Ads------------>
   </div>
   <!------News and Ads---------->
-  
+
   <div class = "row">
     <div class = "span12 margint20">
       <ul id="rankrecordtab" class="nav nav-tabs tabs-line">
@@ -332,89 +332,89 @@
                 <div class="tab-pane fade in active" id="team">
                   <div class="row-fluid rankings" id = "rankings">
                   	<div class = "span4">
-                        <ul style="list-style:none" id="team-ranking">  
+                        <ul style="list-style:none" id="team-ranking">
                         	<!-- from my.js-->
                         </ul>
-                        <div class = "pull-right"><a href="#">View All</a></div>
+                        <!-- <div class = "pull-right"><a href="#">View All</a></div> -->
                     </div>
                     <div class = "span4">
-                        <ul style="list-style:none" id="team-ranking01">  
+                        <ul style="list-style:none" id="team-ranking01">
                         	<!-- from my.js-->
                         </ul>
-                        <div class = "pull-right"><a href="#">View All</a></div>
+                        <!-- <div class = "pull-right"><a href="#">View All</a></div> -->
                     </div>
                     <div class = "span4">
-                        <ul style="list-style:none" id="team-ranking02">  
+                        <ul style="list-style:none" id="team-ranking02">
                         	<!-- from my.js-->
                         </ul>
-                        <div class = "pull-right"><a href="#">View All</a></div>
+                        <!-- <div class = "pull-right"><a href="#">View All</a></div> -->
                     </div>
                   </div>
-                  
+
                 </div>
-                <div class="tab-pane fade" id="batsman"> 
+                <div class="tab-pane fade" id="batsman">
                 	<div class="row-fluid rankings" id = "rankings">
                   	<div class = "span4">
-                        <ul style="list-style:none" id="batsman-ranking">  
+                        <ul style="list-style:none" id="batsman-ranking">
                         	<!-- from my.js-->
                         </ul>
-                        <div class = "pull-right"><a href="#">View All</a></div>
+                        <!-- <div class = "pull-right"><a href="#">View All</a></div> -->
                     </div>
                     <div class = "span4">
-                        <ul style="list-style:none" id="batsman-ranking01">  
+                        <ul style="list-style:none" id="batsman-ranking01">
                         	<!-- from my.js-->
                         </ul>
-                        <div class = "pull-right"><a href="#">View All</a></div>
+                        <!-- <div class = "pull-right"><a href="#">View All</a></div> -->
                     </div>
                     <div class = "span4">
-                        <ul style="list-style:none" id="batsman-ranking02">  
+                        <ul style="list-style:none" id="batsman-ranking02">
                         	<!-- from my.js-->
                         </ul>
-                        <div class = "pull-right"><a href="#">View All</a></div>
+                       <!--  <div class = "pull-right"><a href="#">View All</a></div> -->
                     </div>
                   </div>
                  </div>
                 <div class="tab-pane fade" id="bowler">
                 	<div class="row-fluid rankings" id = "rankings">
                   	<div class = "span4">
-                        <ul style="list-style:none" id="bowler-ranking">  
+                        <ul style="list-style:none" id="bowler-ranking">
                         	<!-- from my.js-->
                         </ul>
-                        <div class = "pull-right"><a href="#">View All</a></div>
+                       <!--  <div class = "pull-right"><a href="#">View All</a></div> -->
                     </div>
                     <div class = "span4">
-                        <ul style="list-style:none" id="bowler-ranking01">  
+                        <ul style="list-style:none" id="bowler-ranking01">
                         	<!-- from my.js-->
                         </ul>
-                        <div class = "pull-right"><a href="#">View All</a></div>
+                        <!-- <div class = "pull-right"><a href="#">View All</a></div> -->
                     </div>
                     <div class = "span4">
-                        <ul style="list-style:none" id="bowler-ranking02">  
+                        <ul style="list-style:none" id="bowler-ranking02">
                         <!-- from my.js-->
                         </ul>
-                        <div class = "pull-right"><a href="#">View All</a></div>
+                        <!-- <div class = "pull-right"><a href="#">View All</a></div> -->
                     </div>
                   </div>
                 </div>
                 <div class="tab-pane fade" id="allRounder">
                 	<div class="row-fluid rankings" id = "rankings">
                   	<div class = "span4">
-                        <ul style="list-style:none" id="allrounder-ranking">  
+                        <ul style="list-style:none" id="allrounder-ranking">
                         	<!-- from my.js-->
                         </ul>
-                        <div class = "pull-right"><a href="#">View All</a></div>
+                        <!-- <div class = "pull-right"><a href="#">View All</a></div> -->
                     </div>
                     <div class = "span4">
-                        <ul style="list-style:none" id="allrounder-ranking01">  
+                        <ul style="list-style:none" id="allrounder-ranking01">
                         	<!-- from my.js-->
                         </ul>
-                        <div class = "pull-right"><a href="#">View All</a></div>
+                        <!-- <div class = "pull-right"><a href="#">View All</a></div> -->
                     </div>
                     <div class = "span4">
-                        <ul style="list-style:none" id="allrounder-ranking02">  
+                        <ul style="list-style:none" id="allrounder-ranking02">
                         	<!-- from my.js-->
                         </ul>
-                        <div class = "pull-right"><a href="#">View All</a></div>
+                        <!-- <div class = "pull-right"><a href="#">View All</a></div> -->
                     </div>
                   </div>
                 </div>
@@ -441,11 +441,11 @@
       </div>
     </div>
   </div>
-  
+
   <div class = "row">
     <div class = "span8">
       <div class = "row">
-        <div class = "span8 margint20 marginb20"> 
+        <div class = "span8 margint20 marginb20">
           <!----Photos and Videos Tab---->
           <ul id = "gallerytab" class = "nav nav-tabs tabs-line">
             <li class = "active"><a href ="#photos" data-toggle = "tab">Photos</a></li>
@@ -455,12 +455,12 @@
             <div class = "tab-pane fade in active" id = "photos">
               <div class = "row">
                 <div class = "span8">
-                    <div class="main" id="photosgrid">  
+                    <div class="main" id="photosgrid">
                  <!-- from my.js-->
 					</div>
                 </div>
                 <div class = "span pull-right margint10">
-                	<a href = "#" class="btn btn-primary">View All</a>
+                	<!-- <a href = "#" class="btn btn-primary">View All</a> -->
                 </div>
               </div>
             </div>
@@ -472,7 +472,7 @@
 					</div>
                 </div>
                 <div class = "span pull-right margint10">
-                	<a href = "#" class="btn btn-primary">View All</a>
+                	<!-- <a href = "#" class="btn btn-primary">View All</a> -->
                 </div>
               </div>
             </div>
@@ -488,27 +488,27 @@
           <div class = "row-fluid">
             <div class = "span12 news-thumb">
               <p id="farticle">
-				  
+
               </p>
               <div class="pull-right"> <a id="farticlerm" href="#" class="btn btn-primary">Read More</a> </div>
             </div>
           </div>
         </div>
-        <div class="tab-pane fade" id="recentArticles"> 
+        <div class="tab-pane fade" id="recentArticles">
         	<div class = "row-fluid" id="rarticles">
-          
+
            </div>
            <div class = "span pull-right margint10">
                 	<a href = "/bcci/article" class="btn btn-primary">View All</a>
                 </div>
         </div>
-      </div>  
-      
+      </div>
+
         </div>
       </div>
     </div>
 
-    <div class = "span4 margint20">
+<!--     <div class = "span4 margint20">
       <div class = "content-block">
         <div id="sidebar" class="sidebar-nav">
         </div>
@@ -523,9 +523,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
-  
+
 </div>
-	
+
     <script src="<?php echo base_url('assets/js/my.js');?>"></script>

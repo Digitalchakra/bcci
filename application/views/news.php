@@ -3,9 +3,9 @@
 ===================================================================  -->
 
 <div class = "container">
-  <div class = "row"> 
+  <div class = "row">
     <!--Fixtures-->
-    <div class = "span9"> 
+    <div class = "span9">
       <!--Page Header-->
       <div class = "page-header">
         <h3>News<span class = "pull-right marginr10">
@@ -30,7 +30,7 @@
                 <p></p>
                 <!----Article short description-->
                 <p><?php echo $row->description; ?></p>
-                <!--Read More--> 
+                <!--Read More-->
                 <a target="_blank" class = "btn btn-primary readon pull-right" href = "<?php echo $row->link; ?>">Read More</a> </div>
             </li>
             <?php
@@ -39,7 +39,7 @@
           </ul>
         </div>
       </div>
-      
+
       <!--PAGINATION-->
       <div class = "row">
         <div class = "span7 offset1 margint-20">
@@ -67,12 +67,12 @@
         </div>
       </div>
     </div>
-    
+
     <!--Featured Articles-->
-    <div class = "span3">
+   <!--  <div class = "span3">
         <div class = "row">
           <!--Recent Articles-->
-            <div class = "span3 margint10">
+            <!-- <div class = "span3 margint10">
             <div id="sidebar" class="sidebar-nav">
               <ul class="nav nav-tabs nav-stacked">
                 <li class="menu-heading dark-heading">Recent Articles</li>
@@ -91,14 +91,14 @@
                 </li>
               </ul>
             </div>
-          </div>
+          </div> -->
           <!--Articles Archive-->
-            <div class = "span3 margint10">
+            <!-- <div class = "span3 margint10">
           <div class = "page-header">
             <h4>Articles Archive</h4>
           </div>
           </div>
         </div>
-    </div>
+    </div> -->
   </div>
 </div>

@@ -1,7 +1,7 @@
 <div class = "container">
   <div class = "row">
     <div class = "span9">
-    
+
       <!--Page Heading-->
       <div class = "row">
         <div class = "span9">
@@ -10,7 +10,7 @@
           </div>
         </div>
       </div>
-      
+
       <!--Sub Menu Dropdown-->
       <div class = "row">
       	<div class = "span5 margint10">
@@ -27,7 +27,7 @@
                   <!--Squad Drop-->
                   <li class = "dropdown">
                     <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
-                      Squads 
+                      Squads
                     </a>
                   </li>
                   <!--Results Drop-->
@@ -39,7 +39,7 @@
                   <!--Points Table Drop-->
                   <li class = "dropdown">
                     <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
-                      Points Table 
+                      Points Table
                     </a>
                   </li>
                 </ul>
@@ -47,7 +47,7 @@
             </div>
           </div>
         </div>
-        
+
         <!--Matches Dropdown-->
         <div class = "span3 offset1 margint20">
           <div class="btn-group pull-right">
@@ -61,7 +61,7 @@
 				{ ?>
 				<li><a href = "<?php echo $base_url.$row->srs_id; ?>"><?php echo $row->srs_name; ?></a></li>
 				<?php } ?>
-                <!-- dropdown menu links 
+                <!-- dropdown menu links
                 <li><a href = "#">India vs Sri Lanka</a></li>
                 <li><a href = "#">England vs New Zealand</a></li>
                 <li><a href = "#">S Africa vs Australia</a></li>-->
@@ -69,8 +69,8 @@
           </div>
         </div>
       </div>
-      
-      <!--Table--> 
+
+      <!--Table-->
       <div class = "row">
       	<div class = "span9 margint-20">
           <p><h4>Schedule</h4></p>
@@ -109,7 +109,7 @@
         </table>
         </div>
       </div>
-      
+
       <!--PAGINATION-->
       <div class = "row">
         <div class = "span7 offset1 margint-20">
@@ -135,11 +135,11 @@
             </div>
           </div>
         </div>
-      </div>    
+      </div>
     </div>
-    
+
     <!--Side NAV-->
-    <div class = "span3 margint10">
+<!--     <div class = "span3 margint10">
       <div id="sidebar" class="sidebar-nav">
         <ul class="nav nav-tabs nav-stacked">
           <li class="menu-heading">HEADING</li>
@@ -151,9 +151,9 @@
           <li class="nav-menu"><a href="#">Rankings</a></li>
           <li class="nav-menu"><a href="#">Records</a></li>
           <li class="nav-menu"><a href="#">Teams</a></li>
-  
+
           <!--Search Box-->
-          <li class="nav-menu menu-box">
+          <!-- <li class="nav-menu menu-box">
             <div class = "row">
               <div class = "span3">
                 <div class = "padding10">
@@ -170,7 +170,7 @@
           </li>
         </ul>
       </div>
-    </div>
-  </div> 
-</div> 
+    </div> -->
+  </div>
+</div>
 <script src="<?php echo base_url('assets/js/schedule.js');?>"></script>
