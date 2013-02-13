@@ -17,31 +17,31 @@
           <div class = "paddingr115">
             <div class="navbar sub-nav">
               <div class="navbar-inner">
-                <ul class = "nav">
+                <ul class = "nav"><p><h4>Schedule</h4></p>
                   <!--Schedule Drop-->
-                  <li class = "dropdown  active">
+                  <!--<li class = "dropdown  active">
                     <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
                       Schedule
                     </a>
-                  </li>
+                  </li>-->
                   <!--Squad Drop-->
-                  <li class = "dropdown">
+                  <!--<li class = "dropdown">
                     <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
                       Squads 
                     </a>
-                  </li>
+                  </li>-->
                   <!--Results Drop-->
-                  <li class = "dropdown">
+                 <!-- <li class = "dropdown">
                     <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
                       Results
                     </a>
-                  </li>
+                  </li>-->
                   <!--Points Table Drop-->
-                  <li class = "dropdown">
+                <!--  <li class = "dropdown">
                     <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
                       Points Table 
                     </a>
-                  </li>
+                  </li>-->
                 </ul>
               </div>
             </div>
@@ -50,22 +50,19 @@
         
         <!--Matches Dropdown-->
         <div class = "span3 offset1 margint20">
-          <div class="btn-group pull-right">
-          	<button class="btn"><?php echo $content['upcoming'][0]->srs_name; ?></button>
-  			<button class="btn dropdown-toggle" data-toggle="dropdown">
-    			<span class="caret"></span>
-  			</button>
-            <ul class="dropdown-menu red-dropdown">
+          <div class="dropdown">
+            
+            <select id="shedulemenu" name="one" class="dropdown-select">
 				<?php
 				foreach($srs_list as $row)
 				{ ?>
-				<li><a href = "<?php echo $base_url.$row->srs_id; ?>"><?php echo $row->srs_name; ?></a></li>
+				<option value="<?php echo $base_url.$row->srs_id; ?>" class="red-btn"><?php echo $row->srs_name; ?></option>
 				<?php } ?>
                 <!-- dropdown menu links 
                 <li><a href = "#">India vs Sri Lanka</a></li>
                 <li><a href = "#">England vs New Zealand</a></li>
                 <li><a href = "#">S Africa vs Australia</a></li>-->
-            </ul>
+           </select>
           </div>
         </div>
       </div>
@@ -73,7 +70,7 @@
       <!--Table--> 
       <div class = "row">
       	<div class = "span9 margint-20">
-          <p><h4>Schedule</h4></p>
+          <!--<p><h4>Schedule</h4></p>-->
           <table class="table table-bordered table-striped">
             <colgroup>
               <col class="span3">
