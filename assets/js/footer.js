@@ -31,7 +31,7 @@ function srs_list()
 			html='<h2>Upcoming Series</h2>';
 			for(i=0;i<data.resultset.length;i++)
 			{
-				html+='<li><a href="schedule/index/'+data.resultset[i]['srs_id']+'">'+data.resultset[i]['srs_name']+'</a></li>';
+				html+='<li><a href="/bcci/schedule/index/'+data.resultset[i]['srs_id']+'">'+data.resultset[i]['srs_name']+'</a></li>';
 			}
 			$('#srs_list').html(html);
         },

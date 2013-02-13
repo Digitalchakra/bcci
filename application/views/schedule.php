@@ -53,6 +53,7 @@
           <div class="dropdown">
             
             <select id="shedulemenu" name="one" class="dropdown-select">
+				<option value="" class="red-btn"><?php echo $content['upcoming'][0]->srs_name; ?></option>
 				<?php
 				foreach($srs_list as $row)
 				{ ?>
