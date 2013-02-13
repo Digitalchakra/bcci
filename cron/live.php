@@ -4,6 +4,8 @@ try
 {
 $url='http://webclient.cricbuzz.com/includes/deccanherald/livecricketscore/filter-match-details.json?'.time();
 //echo "<pre>";
+file_put_contents(dirname(__FILE__).'/live.json', file_get_contents($url));
+/*
 $match_list=json_decode(file_get_contents($url));
 //print_r($match_list); die;
 $matchs=array();
@@ -27,7 +29,7 @@ foreach($match_list as $match)
 }
 //print_r($matchs);
 file_put_contents(dirname(__FILE__).'/live.json', json_encode($matchs));
-die;
+*/
 /*$html = file_get_html($url);
 
 foreach($html->find('div#yui-main div.ycric-body-left li.ycric-livescore-sprite') as $main)

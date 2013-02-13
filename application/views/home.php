@@ -14,123 +14,131 @@
         <!--<a class="carousel-control left" href="#myCarousel" data-slide="prev" >&lsaquo;</a> <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>--> </div>
     </div>
     
-    <!--Live SCore-->
-    <div class = "span4 margint10 livescore_bg" id="liveScore">
+        <!--Live SCore-->
+ <div id="liveScore" class="span4 margint10 livescore_bg">
      <div class="row-fluid">
-         <div class = "padding20">
+         <div class="padding20">
           <div class="span12">
-            <div class="row-fluid" id="no_matches">
-             <h5 class="white pull-left">IPL T20 SemiFinals</h5>
+            <div id="no_matches" class="row-fluid">
+             <h5 id="series_title" class="white pull-left"></h5>
               <div class="dropdown pull-right">
-                <select name="one" class="dropdown-select">
-                  <option value="1" class="red-btn">Live Matches</option>
+                <select class="dropdown-select" name="one">
+                  <option class="red-btn" value="1">Live Matches</option>
                   <option value="2">Australia vs England</option>
                   <option value="2">South Africa vs Sri Lanka</option>
                 </select>
               </div>
             </div>
-            <div class="row-fluid margint20" id="team_images" style="text-align:center">
+            <div style="text-align:center" id="team_images" class="row-fluid margint20">
               <div class="span5"><!--TeamA-->
-                <div class = "team_icon">
-                 <img src="Images/csk_icon.png">
+                <div class="team_icon">
+                 <!--<img src="Images/csk_icon.png">-->
+                 <span id="team1_image"></span>
                 </div>
-                <h5 class="team_name" id="team1">Chennai Super Kings</h5>
-                <h4 class="yellow" id="team1_score">184/3*</h4>
-                <h5 class="white" id="team1_over">15.1 Overs</h5>
+                <h5 id="team1" class="team_name"></h5>
+                <h4 id="team1_score" class="yellow"></h4>
+                <h5 id="team1_over" class="white"></h5>
               </div>
               <div class="span2">
-               <h3 class="white" style="margin-top:42px">vs</h3>
+               <h3 style="margin-top:42px" class="white">vs</h3>
                </div>
               <div class="span5"><!--TeamB-->
-              <div class = "team_icon">
-                 <img src="Images/MI_icon.png">
+              <div class="team_icon">
+                 <!--<img src="Images/MI_icon.png">-->
+                 <span id="team2_image"></span>
                 </div>
-                <h5 class="team_name" id="team2">Mumbai Indians</h5>
-                <h4 class="yellow yellow-dull" id="team2_score">198/6</h4>
-                <h5 class="white" id="team2_over">19.1 Overs</h5>
+                <h5 id="team2" class="team_name"></h5>
+                <h4 id="team2_score" class="yellow yellow-dull"></h4>
+                <h5 id="team2_over" class="white"></h5>
               </div>
-              <div class="span12" style="text-align:left"><!--Required Runs-->
-                  <h6 class="yellow"><span id="status">CSK Needs 46 Runs to win</span>
-                  <span class="marginl20 yellow" id="rrr">Req.RR : 11.4</span>
-                   <span class="marginl20 yellow" id="crr">Req.RR : 11.4</span>
+              <div style="text-align:left" class="span12"><!--Required Runs-->
+                  <h6 class="yellow"><!--<span id="status">CSK Needs 46 Runs to win</span>-->
+                  <span id="rrr" class="marginl20 yellow"></span>
+                   <span id="crr" class="marginl20 yellow"></span>
                   </h6>
               </div>
             </div>
-            <div class="row-fluid margint10" style="text-align:center"><!--Player Stats-->
-              <div class="span6" style="border-right:1px dotted #b33310; padding-right:20px">
-                <h5 class="white team_name">Mahindra Singh Dhoni</h5><!--Player-->
-                <h5 class="yellow">46(32)</h5><!--Player Score-->
+            <div style="text-align:center" class="row-fluid margint10"><!--Player Stats-->
+              <div style="border-right:1px dotted #b33310; padding-right:20px" class="span6">
+                <h5 id="striker" class="white team_name"></h5><!--Player-->
+                <h5 id="striker_run" class="yellow"></h5><!--Player Score-->
                 <!--Stats-->
+                
                 <div class="row-fluid">
                   <div class="span4">
-                    <h6 class="yellow">4's</h6>
-                    <h6 class="white">12</h6>
-                  </div>
-                  <div class="span4">
-                    <h6 class="yellow">6's</h6>
-                    <h6 class="white">1</h6>
+                    <h6 class="yellow"></h6>
+                    <h6 class="white"></h6>
                   </div>
                   <div class="span4">
                     <h6 class="yellow">s/r</h6>
-                    <h6 class="white">48.21</h6>
+                    <h6 id="striker_sr" class="white"></h6>
                   </div>
+                  <div class="span4">
+                    <h6 class="yellow"></h6>
+                    <h6 class="white"></h6>
+                  </div>
+                  
                 </div>
+                
             </div>
               <div class="span6">
-                <h5 class="white team_name">Suresh Raina</h5><!--Player-->
-                <h5 class="yellow">36(32)</h5><!--Player Score-->
+                <h5 id="nonStriker" class="white team_name"></h5><!--Player-->
+                <h5 id="nonStriker_run" class="yellow"></h5><!--Player Score-->
+                
                 <div class="row-fluid">
                   <div class="span4">
-                    <h6 class="yellow">4's</h6>
-                    <h6 class="white">12</h6>
-                  </div>
-                  <div class="span4">
-                    <h6 class="yellow">6's</h6>
-                    <h6 class="white">1</h6>
+                    <h6 class="yellow"></h6>
+                    <h6 class="white"></h6>
                   </div>
                   <div class="span4">
                     <h6 class="yellow">s/r</h6>
-                    <h6 class="white">36.25</h6>
+                    <h6 id="nonStriker_sr" class="white"></h6>
                   </div>
+                  <div class="span4">
+                    <h6 class="yellow"></h6>
+                    <h6 class="white"></h6>
+                  </div>
+                  
                 </div>
+                
             </div>
-              <div class="span12 margint10">
-                <h6 class="yellow"><strong>This Over:</strong> 0 1 4 3 1 <span class="marginl20"><strong>Extras:</strong> 6</span></h6>
+             <div class="span12 margint10">
+                <!--<h6 class="yellow"><strong>This Over:</strong> 0 1 4 3 1 <span class="marginl20"><strong>Extras:</strong> 6</span></h6>-->
               </div>
           </div>
             <div class="row-fluid"><!--Bowling-->
               <div class="span6">
-                  <h6 class="yellow">Sachin Tendulkar</h6>
-                  <h6 class="white">6 Runs this over</h6>
+                  <h6 id="strikerbowler" class="yellow"></h6>
+                  <!--<h6 class="white">6 Runs this over</h6>-->
                 </div>
               <div class="span1"><!--Overs-->
                   <h6 class="yellow">O</h6>
-                  <h6 class="white">2</h6>
+                  <h6 id="strikerbowler_overs" class="white"></h6>
               </div>
               <div class="span1"><!--Maidens-->
                   <h6 class="yellow">M</h6>
-                  <h6 class="white">0</h6>
+                  <h6 id="strikerbowler_maidens" class="white"></h6>
               </div>
               <div class="span1"><!--Runs-->
                   <h6 class="yellow">R</h6>
-                  <h6 class="white">26</h6>
+                  <h6 id="strikerbowler_runs" class="white"></h6>
               </div>
               <div class="span1"><!--Wickets-->
                   <h6 class="yellow">W</h6>
-                  <h6 class="white">1</h6>
+                  <h6 id="strikerbowler_wickets" class="white"></h6>
               </div>
-              <div class="span2"><!--Wickets-->
-                  <h6 class="yellow">Econ</h6>
+              <!--<div class="span2"><!--Wickets-->
+              <!--    <h6 class="yellow">Econ</h6>
                   <h6 class="white">3.27</h6>
-              </div>
-              <div class="span12" style="text-align:center"><!--Wickets-->
-                  <h5 class="yellow">Tendulkar to MS Dhoni</h5>
+              </div>-->
+              <div style="text-align:center" class="span12"><!--Wickets-->
+                  <h5 class="yellow"><span id="strikers_lname"></span></h5>
               </div>
             </div>
           </div>
          </div>
      </div>
-   </div>
+</div>
    
    
    
