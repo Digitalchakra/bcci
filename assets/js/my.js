@@ -166,8 +166,8 @@ function livescore()
 			 * when ajax is loading make the current selected tab to update
 			 * instead of refresh the list
 			 */
-
-			if($.myplaceholder.checkreload==0)
+			livescoredisplay($.myplaceholder.mylivescore[0]);
+			/*if($.myplaceholder.checkreload==0)
 			{
 				$.myplaceholder.checkreload=1;
 				livescoredisplay($.myplaceholder.mylivescore[0]);
@@ -175,7 +175,7 @@ function livescore()
 			else
 			{
 				//livescoredisplay($.myplaceholder.mylivescore[$('#livescore_dd').value]);
-			}
+			}*/
         }
 	});
 }
