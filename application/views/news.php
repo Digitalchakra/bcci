@@ -8,11 +8,11 @@
     <div class = "span9">
       <!--Page Header-->
       <div class = "page-header">
-        <h3>News<span class = "pull-right marginr10">
+        <h3>News<!--<span class = "pull-right marginr10">
         			<a href="#" rel="tooltip" title="View as Grid"><i class = "icon-th-large"></i></a>
         			<a href="#" rel="tooltip" title="View as blog"><i class = "icon-align-justify"></i></a>
         			<a href="#" rel="tooltip" title="View as list"><i class = "icon-th-list"></i></a>
-            </span></h3>
+            </span>--></h3>
       </div>
       <!--Articles-Blog-->
       <div class = "row">

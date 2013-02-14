@@ -8,11 +8,11 @@
     <div class = "span9"> 
       <!--Page Header-->
       <div class = "page-header">
-        <h3>Article<span class = "pull-right marginr10">
+        <h3>Article<!--<span class = "pull-right marginr10">
         			<a href="#" rel="tooltip" title="View as Grid"><i class = "icon-th-large"></i></a>
         			<a href="#" rel="tooltip" title="View as blog"><i class = "icon-align-justify"></i></a>
         			<a href="#" rel="tooltip" title="View as list"><i class = "icon-th-list"></i></a>
-            </span></h3>
+            </span>--></h3>
       </div>
       <!--Articles-Blog-->
       <div class = "row">
@@ -58,10 +58,10 @@
       </div>
     </div>
     <!--Featured Articles-->
-    <div class = "span3">
+   <!-- <div class = "span3">
         <div class = "row">
           <!--Recent Articles-->
-            <div class = "span3 margint10">
+           <!-- <div class = "span3 margint10">
             <div id="sidebar" class="sidebar-nav">
               <ul class="nav nav-tabs nav-stacked">
                 <li class="menu-heading dark-heading">Recent Articles</li>
@@ -82,12 +82,12 @@
             </div>
           </div>
           <!--Articles Archive-->
-            <div class = "span3 margint10">
+            <!--<div class = "span3 margint10">
           <div class = "page-header">
             <h4>Articles Archive</h4>
           </div>
           </div>
         </div>
-    </div>
+    </div>-->
   </div>
 </div>
