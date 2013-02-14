@@ -189,6 +189,8 @@
               </thead>
               <tbody>
 				  <?php
+				  if(count($content['past']))
+				  {
                     foreach($content['past'] as $row)
                      {
                     ?>
@@ -199,6 +201,7 @@
                 </tr>
                  <?php
                      }
+				 }
                      ?>
               </tbody>
             </table>
@@ -215,6 +218,8 @@
               </thead>
               <tbody>
                 <?php
+                if(count($content['present']))
+				  {
                foreach($content['present'] as $row)
                  {
 				?>
@@ -225,6 +230,7 @@
 					</tr>
 					<?php
 				}
+			}
 				?>
               </tbody>
             </table>
@@ -241,6 +247,8 @@
               </thead>
               <tbody>
                 <?php
+                if(count($content['upcoming']))
+                {
                   foreach($content['upcoming'] as $row)
                    {
                    ?>
@@ -251,6 +259,7 @@
                   </tr>
                   <?php
                    }
+			   }
                   ?>
                 </tbody>
             </table>
