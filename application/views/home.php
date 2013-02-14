@@ -297,7 +297,7 @@
         	<div id="recentNewscont" class = "row-fluid">
             <!--recent news from my.js-->
            </div>
-           <p class="pull-right"><a href="/bcci/news" class="btn btn-primary">View all</a></p>
+           <p class="pull-right"><a href="/news" class="btn btn-primary">View all</a></p>
         </div>
       </div>
     </div>
@@ -499,7 +499,7 @@
 
            </div>
            <div class = "span pull-right margint10">
-                	<a href = "/bcci/article" class="btn btn-primary">View All</a>
+                	<a href = "/article" class="btn btn-primary">View All</a>
                 </div>
         </div>
       </div>

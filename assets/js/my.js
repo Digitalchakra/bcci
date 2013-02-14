@@ -415,17 +415,17 @@ function article()
         success: function(data) {
 			recentArticle='';
 			html='<h4 class="media-heading"><a href="#">'+data.resultset[0]['title']+'</a></h4>';
-			html+='<h6>By Administrator</h6>';
+			html+='<h6> By '+data.resultset[0]['author']+'</h6>';
 			html+=data.resultset[0]['content'].substring(0,500)+'...';
             $('#farticle').html(html);
-            $('#farticlerm').attr('href','/bcci/article/get/'+data.resultset[0]['id']);
+            $('#farticlerm').attr('href','article/get/'+data.resultset[0]['id']);
             html='';
 			for(i=1;i<data.resultset.length;i++)
 			{
 				mod=i%3;
 				html+='<li class="media news-thumb-small">'; 
 				html+='<div class="media-body">';
-                html+='    	<h4 class="media-heading"><a href="/bcci/article/get/'+data.resultset[i]['id']+'">'+data.resultset[i]['title']+'</a></h4>';
+                html+='    	<h4 class="media-heading"><a href="article/get/'+data.resultset[i]['id']+'">'+data.resultset[i]['title']+'</a></h4>';
                 html+='    	<h6>By '+data.resultset[i]['author']+'</h6>';
                 html+='    </div></li>';
 				if((mod==0) || (i==(data.resultset.length-1)))

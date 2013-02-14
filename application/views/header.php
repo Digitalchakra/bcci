@@ -61,18 +61,18 @@
       ------------------------------->
 
       <ul class ="menu">
-        <li><a href="/bcci" class="drop">Home</a></li>
-        <li><a href="/bcci/schedule" class="drop">Schedule</a><!-- Begin Shedule columns Item -->
+        <li><a href="<?php echo base_url(); ?>" class="drop">Home</a></li>
+        <li><a href="<?php echo base_url('schedule'); ?>" class="drop">Schedule</a><!-- Begin Shedule columns Item -->
 
           <div class="dropdown_5columns"><!-- Begin 5 columns container -->
             <div class = "col_2">
               <ul id="srs_list" class="greybox">
-                <h2>Upcoming Series</h2>
+                <!--<h2>Upcoming Series</h2>
                 <li><a href="#">Sri Lanka vs Australia</a></li>
                 <li><a href="#">S Africa vs Zimbabwe</a></li>
                 <li><a href="#">Australia vs New Zealand</a></li>
                 <li><a href="#">India vs Australia</a></li>
-                <li><a href="#">Sri Lanka vs Australia</a></li>
+                <li><a href="#">Sri Lanka vs Australia</a></li>-->
               </ul>
               <div class = "hline"></div>
               <!-- <ul class="greybox">
@@ -105,8 +105,8 @@
             </div>
           </div>
         </li> -->
-        <li><a href="/bcci/news" class="drop">News</a></li>
-        <li><a href="/bcci/article" class="drop">Articles</a></li>
+        <li><a href="<?php echo base_url('news'); ?>" class="drop">News</a></li>
+        <li><a href="<?php echo base_url('article'); ?>" class="drop">Articles</a></li>
  <!--        <li><a href="#" class="drop">Photos</a></li>
         <li><a href="#" class="drop">Polls</a></li>
         <li><a href="#" class="drop">About</a></li> -->
