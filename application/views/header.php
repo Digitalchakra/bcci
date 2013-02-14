@@ -1,8 +1,11 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>BCCI</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="BCCI,Live Scores,Live,Scores,Cricket, India, News, Cricket Photos, Cricket Videos" />
+<meta name="keywords" content="BCCI,Cricket Live Scores,Cricket Live,Cricket Scores,Scores Cricket,Cricket Photo, Cricket Video" />
+<meta name="description" content="BCCI - Your guide to Cricket in India and Worldwide. Get latest scores, news, photos, videos and articles. " />
+<title>BCCI | Live Scores | Latest Cricket News </title>
 <link href="<?php echo base_url('assets/css/bootstrap.css'); ?>" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url('assets/css/bootstrap-responsive.css'); ?>" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url('assets/css/mystyles.css'); ?>" rel="stylesheet" type="text/css">
