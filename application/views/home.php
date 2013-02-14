@@ -162,7 +162,7 @@
           <li><a href="#pastMatches" data-toggle="tab">Past Matches</a></li>
           <li class="active"><a href="#presentMatches" data-toggle="tab">Present Matches</a></li>
           <li><a href="#upcomingMatches" data-toggle="tab">Upcoming Matches</a></li>
-          <div class="btn-group pull-right red-button">
+          <!--<div class="btn-group pull-right red-button">
             <button class="btn red-btn">Schedule</button>
             <button class="btn dropdown-toggle red-btn" data-toggle="dropdown"> <span class="caret"></span> </button>
             <ul class="dropdown-menu red-dropdown">
@@ -172,7 +172,7 @@
               <li><a href = "#">Fixtures</a></li>
               <li><a href = "#">Series Archive</a></li>
             </ul>
-          </div>
+          </div>-->
           <div class = "clearfix"></div>
         </ul>
         <!--Matches Tabs COntent-->
