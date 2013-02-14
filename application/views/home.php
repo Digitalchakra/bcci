@@ -176,7 +176,7 @@
           <div class = "clearfix"></div>
         </ul>
         <!--Matches Tabs COntent-->
-        <div id="matchestabContent" class="tab-content">
+        <div id="matchestabContent" class="tab-content" style="height: 280px;">
           <div class="tab-pane fade" id="pastMatches">
             <!--Past matches Table-->
             <table class="table table-bordered table-striped">
