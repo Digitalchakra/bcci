@@ -461,12 +461,6 @@ function livescoredisplay(data)
 				$('#team1_image').html(data.battingTeamName);
 				$('#team2_image').html(data.bowlingTeamName);
 				
-				//RunRate
-				$('#crr').html("CRR : "+data.crr);
-				$('#rrr').html("RRR : "+data.rrr);
-				
-				if(data.state != 'complete')
-				{
 				//batting team score/over
 				$('#team1_score').html(data['currentBatTeamScore'].runsAndWicket+'*');
 				$('#team1_over').html(data['currentBatTeamScore'].overs+" Overs");
@@ -478,6 +472,22 @@ function livescoredisplay(data)
 				$('#team2_over').html(data['currentBowlTeamScore'].overs+" Overs");
 				//}
 				
+				//RunRate
+				$('#crr').html("CRR : "+data.crr);
+				$('#rrr').html("RRR : "+data.rrr);
+				//batting team score/over
+				$('#team1_score').html(data['currentBatTeamScore'].runsAndWicket+'*');
+				$('#team1_over').html(data['currentBatTeamScore'].overs+" Overs");
+				
+				//bowling team score/over
+				//if(data[0]['currentBowlTeamScore'].runsAndWicket !="0/0")
+				//{
+				$('#team2_score').html(data['currentBowlTeamScore'].runsAndWicket);
+				$('#team2_over').html(data['currentBowlTeamScore'].overs+" Overs");
+				//}
+				if(data.state != 'complete')
+				{
+
 				//striker's
 				$('#striker').html(data['striker'].fullName);
 				$('#nonStriker').html(data['nonStriker'].fullName);
