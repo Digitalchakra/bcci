@@ -24,7 +24,7 @@ function tweets()
 function srs_list()
 {
 	$.ajax({
-        url: '/schedule/srs_list',
+        url: 'schedule/srs_list',
         type: "GET",
         dataType:'JSON',
         success: function(data) {
