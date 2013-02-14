@@ -488,6 +488,11 @@ function livescoredisplay(data)
 				//}
 				if(data.state != 'complete')
 				{
+				//status if not playing 
+				if(data.state != 'inprogress')
+				{
+					$('#matchstate').html(data.status);
+				}
 
 				//striker's
 				$('#striker').html(data['striker'].fullName);
