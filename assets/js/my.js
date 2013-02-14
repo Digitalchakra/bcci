@@ -144,7 +144,8 @@ function livescore()
 	$.ajax({
         url: 'live',
         type: "GET",
-        dataType:'json', 
+        dataType:'json',
+        cache:false, 
         success: function(data) {
 			listcount=0;
 			option="";
