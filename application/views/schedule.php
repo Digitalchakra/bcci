@@ -56,7 +56,10 @@
 				<option value="" class="red-btn"><?php echo $content['upcoming'][0]->srs_name; ?></option>
 				<?php
 				foreach($srs_list as $row)
-				{ ?>
+				{ 
+					if($content['upcoming'][0]->srs_name==$row->srs_name)
+					continue;
+					?>
 				<option value="<?php echo $base_url.$row->srs_id; ?>" class="red-btn"><?php echo $row->srs_name; ?></option>
 				<?php } ?>
                 <!-- dropdown menu links

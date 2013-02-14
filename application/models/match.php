@@ -64,7 +64,7 @@ class Match extends CI_Model
 		{
 			$today_start =  strtotime(date('d-M-Y',time()).' 00:01');
 			$today_end =  strtotime(date('d-M-Y',time()).' 23:59');
-			$qry2=$this->db->limit($limit, $start)->where('utc_time >', $today_end)->where('srs_id',$srs_id)->get('tbl_matches');
+			$qry2=$this->db->limit($limit, $start)->where('utc_time >', $today_end)->where('srs_id',$srs_id)->order_by('utc_time', 'asc')->get('tbl_matches');
 			if($qry2->num_rows()>0)
 			{
 				$data=array();
