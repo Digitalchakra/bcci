@@ -6,7 +6,7 @@ class Videosmodel extends CI_Model
 		$data=array();
 		//$this->db->where('type', 'batting');
 		//$this->db->from('tbl_player_rank');
-		$qry = $this->db->limit(8)->get('tbl_videos');
+		$qry = $this->db->limit(8)->order_by("video_id", "desc")->get('tbl_videos');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)

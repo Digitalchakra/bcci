@@ -1,51 +1,21 @@
 <?php
-/*try
-	{
-		$site_contents = file_get_contents('http://static.cricinfo.com/rss/livescores.xml');	
-		file_put_contents(dirname(__FILE__).'/result.txt', $site_contents);
-		$xmlDoc = new DOMDocument();
-		//$xmlpath=base_url('cron/result.txt');
-		$xmlpath=dirname(__FILE__).'/result.txt';
-		$xmlDoc->load($xmlpath);
-		$search = $xmlDoc->getElementsByTagName( "item" );
-		foreach( $search as $searchNode )
-			{
-			$result[]=$searchNode->getElementsByTagName('title')->item(0)->nodeValue;	
-			}
-			$data['resultset']=$result;
-			file_put_contents(dirname(__FILE__).'/result.json', json_encode($data));
-	}
-catch (Exception $e)
-	{
-		echo $e;
-		$error_msg="Cron: Read live result xml failed @ BCCI->".$e;
-		error_log($error_msg, 3,dirname(__FILE__).'/error.log');
-	}
-*/
+include('exception.php');
 include('simple_html_dom.php');
 require('db.php');
 class Tbl_results extends ActiveRecord\Model { }
+$log_title = "BCCI RESULT CRON ";
 try
 {
 $url='http://www.foxsports.com.au/cricket/results';
 $url_base='http://www.foxsports.com.au';
-$html = file_get_html($url);
-/*foreach($html->find('div#yui-main') as $main)
-	foreach($main->find('div.yom-recent-live-upcoming ul li.live div.bd') as $ul)
-		file_put_contents(dirname(__FILE__).'/live.txt', $ul->innertext);*/
+if($html = file_get_html($url))
+{
 $i=-1;
 $list=array();
 $line=array();
 foreach($html->find('table.cricket-results-table tr') as $main)
 	{
 		$skiploop=0;
-		/*$tablewidth=$main->getAttribute('class'); 
-		if($tablewidth=='header')
-		{
-			//$i++;
-			//file_put_contents(dirname(__FILE__).'/result.htm', "<table>");
-			//continue;
-		}*/
 		foreach($main->find('td') as $td)
 			{
 				if(!$skiploop)
@@ -56,10 +26,6 @@ foreach($html->find('table.cricket-results-table tr') as $main)
 					if($td_txt!='ODD' && $td_txt!='SHEF')
 					{
 						$line[$i]['type'] = $td_txt;
-						/*if(!in_array($td_txt,$list))
-							{
-								$list[]=$td_txt;
-							}*/
 					}
 					else
 					{
@@ -88,14 +54,9 @@ foreach($html->find('table.cricket-results-table tr') as $main)
 			}
 			$i++;
 	}
-	//$data['menu']=$list;
-	//$data['list']=$line;
-	//echo "<pre>";
-	//print_r($line); die;
-	//db insertion
+	
 		if(count($line)>0)
 		{
-			//Tbl_results::connection()->query('TRUNCATE TABLE `tbl_news`');
 			foreach($line as $row)
 			{
 				$find=array('match_id'=>$row['match_id']);
@@ -109,14 +70,20 @@ foreach($html->find('table.cricket-results-table tr') as $main)
 					}
 			}
 		}
-	//file_put_contents(dirname(__FILE__).'/result.json', json_encode($data));
+		else
+		{
+			notify($log_title,'empty records in RESULT URL');
+		}
+	}
+	else
+	{
+		notify($log_title,'failed to read the RESUTL URL');
+	}
 
 }
 catch (Exception $e)
 	{
-		echo $e;
-		$error_msg="Cron: Read live score	 failed @ BCCI->".$e;
-		error_log($error_msg, 3,dirname(__FILE__).'/error.log');
+		error_log($e, 3,dirname(__FILE__).'/error.log');
 	}
 
 ?>

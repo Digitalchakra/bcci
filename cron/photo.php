@@ -1,10 +1,10 @@
 <?php
+include('exception.php');
 ini_set('set_time_limit', 0);
 require('db.php');
 include('simple_html_dom.php');
 class Tbl_photos extends ActiveRecord\Model { }
-//Tbl_photo::connection()->query('TRUNCATE TABLE `Tbl_photo`');
-//die;
+$log_title = "BCCI NEWS CRON ";
 try
 	{
 		$result=array();
@@ -38,6 +38,10 @@ try
 							$result[]=$node;
 					}
 			}
+			else
+			{
+				notify($log_title,'failed to read the PHOTO URL');
+			}
 
 			
 		//db insertion
@@ -61,9 +65,7 @@ try
 	}
 catch (Exception $e)
 	{
-		echo $e;
-		$error_msg="Cron: Read news result xml failed @ BCCI->".$e;
-		error_log($error_msg, 3,dirname(__FILE__).'/error.log');
+		error_log($e, 3,dirname(__FILE__).'/error.log');
 	}
 
 

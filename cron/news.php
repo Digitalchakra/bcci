@@ -1,10 +1,10 @@
 <?php
+include('exception.php');
 ini_set('set_time_limit', 0);
 require('db.php');
 include('simple_html_dom.php');
 class Tbl_news extends ActiveRecord\Model { }
-//Tbl_news::connection()->query('TRUNCATE TABLE `tbl_news`');
-//die;
+$log_title = "BCCI NEWS CRON ";
 try
 	{
 		$data=array();
@@ -14,7 +14,10 @@ try
 
 		$xmlDoc = new DOMDocument();
 
-		$xmlDoc->load('http://feeds.bbci.co.uk/sport/0/cricket/rss.xml');
+		if(!$xmlDoc->load('http://feeds.bbci.co.uk/sport/0/cricket/rss.xml'))
+		{
+			notify($log_title,'failed to read the NEWS URL');
+		}
 		$search = $xmlDoc->getElementsByTagName( "item" );
 		foreach( $search as $searchNode )
 			{
@@ -68,12 +71,14 @@ try
 				Tbl_news::create($row);		
 			}
 		}
+		else
+		{
+			notify($log_title,'NEWS URL is empty');
+		}
 	}
 catch (Exception $e)
 	{
-		echo $e;
-		$error_msg="Cron: Read news result xml failed @ BCCI->".$e;
-		error_log($error_msg, 3,dirname(__FILE__).'/error.log');
+		error_log($e, 3,dirname(__FILE__).'/error.log');
 	}
 
 

@@ -1,13 +1,17 @@
 <?php
+include('exception.php');
 ini_set('set_time_limit', 0);
 require('db.php');
 include('simple_html_dom.php');
 class Tbl_matches extends ActiveRecord\Model { }
-
+$log_title = "BCCI SHEDULE CRON ";
 try
 	{	
 	$xmlDoc = new DOMDocument();
-	$xmlDoc->load( 'http://synd.cricbuzz.com/j2me/1.0/sch_calender.xml');
+	if(!$xmlDoc->load( 'http://synd.cricbuzz.com/j2me/1.0/sch_calender.xml'))
+	{
+		notify($log_title,'failed to read the SCHEDULE URL');
+	}
 	if($search = $xmlDoc->getElementsByTagName( "mch" ))
 	{
 	foreach($search as $searchNode )
@@ -45,8 +49,7 @@ try
 	}
 catch (Exception $e)
 	{
-		$error_msg="Cron: Read shedule xml failed @ BCCI";
-		error_log($error_msg, 3,dirname(__FILE__).'/error.log');
+		error_log($e, 3,dirname(__FILE__).'/error.log');
 	}
 
 

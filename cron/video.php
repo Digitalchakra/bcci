@@ -2,9 +2,9 @@
 ini_set('set_time_limit', 0);
 require('db.php');
 include('simple_html_dom.php');
+include('exception.php');
 class Tbl_videos extends ActiveRecord\Model { }
-//Tbl_photo::connection()->query('TRUNCATE TABLE `Tbl_photo`');
-//die;
+$log_title = "BCCI VIDEO CRON ";
 try
 	{
 		$result=array();
@@ -43,22 +43,35 @@ try
 							$result[]=$node;
 					}
 			}
-				//echo "<pre>"; print_r($result);
-		//db insertion
+			else
+			{
+				notify($log_title,'failed to read the VIDEO URL');
+			}
+
 		if(count($result)>0)
 		{
 			//Tbl_photo::connection()->query('TRUNCATE TABLE `Tbl_photo`');
 			foreach($result as $row)
 			{
-				Tbl_videos::create($row);	
+				$find=array('video_id'=>$row['video_id']);
+					if($found = Tbl_videos::find($find))
+					{
+						$found->create($row);
+					}
+					else
+					{
+						Tbl_videos::create($row);
+					}
 			}
+		}
+		else
+		{
+			notify($log_title,'empty record in VIDEO URL');
 		}
 	}
 catch (Exception $e)
 	{
-		echo $e;
-		$error_msg="Cron: Read news result xml failed @ BCCI->".$e;
-		error_log($error_msg, 3,dirname(__FILE__).'/error.log');
+		error_log($e, 3,dirname(__FILE__).'/error.log');
 	}
 
 
