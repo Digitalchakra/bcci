@@ -149,13 +149,14 @@ function livescore()
         success: function(data) {
 			listcount=0;
 			option="";
+			$.myplaceholder.mylivescore=[];
 			//alert(data[listcount].matchDataType);
 			$(data).each(function()
 			{
 				if(data[listcount].matchDataType=='Live Data' && data[listcount].state !='preview')
 				{
 					option+='<option value="'+listcount+'">'+data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName+'</option>';
-					$.myplaceholder.mylivescore.push(data[listcount]);			
+					 $.myplaceholder.mylivescore.push(data[listcount]);			
 				}
 				listcount++;
 
@@ -476,6 +477,7 @@ function livescoredisplay(data)
 				//RunRate
 				$('#crr').html("CRR : "+data.crr);
 				$('#rrr').html("RRR : "+data.rrr);
+				
 				//batting team score/over
 				$('#team1_score').html(data['currentBatTeamScore'].runsAndWicket+'*');
 				$('#team1_over').html(data['currentBatTeamScore'].overs+" Overs");
@@ -493,7 +495,6 @@ function livescoredisplay(data)
 				{
 					$('#matchstate').html(data.status);
 				}
-
 				//striker's
 				$('#striker').html(data['striker'].fullName);
 				$('#nonStriker').html(data['nonStriker'].fullName);
