@@ -48,5 +48,5 @@
 .flag_ZIMW{ background-position: 0 -1848px !important; width: 68px; height: 68px; } 
 
 .team_icon .flag {
-    background: url(/assets/Images/flags-big.png)  no-repeat top left;
+    background: url(../Images/flags-big.png)  no-repeat top left;
 }
