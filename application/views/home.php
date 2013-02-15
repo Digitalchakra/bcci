@@ -274,9 +274,9 @@
           <h4>Results
           <div class="dropdown">
             <select id="resultmenu" name="one" class="dropdown-select">
-              <option value="ODI" class="red-btn">ODI Matches</option>
-              <option value="T20">T20 Matches</option>
-              <option value="Test">Test Matches</option>
+              <option value="ODI" class="red-btn">ODI</option>
+              <option value="T20">T20</option>
+              <option value="Test">Test</option>
             </select>
           </div>
                <a href = "<?php echo base_url('result');?>">

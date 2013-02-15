@@ -33,18 +33,18 @@ $(document).ready(function()
 				//$('.accordion-group').hide();
 				//$('.'+this.value).show();
 			});
-			
+
 });
 function result()
 {
-	//load result scores 
+	//load result scores
 	//to test
 	//$('#accordion2').html('');
 	var html='';
 	$.ajax({
         url: baseurl+'result/getlist',
         type: "GET",
-        dataType:'json', 
+        dataType:'json',
         success: function(data) {
 			//alert(data.menu.length);
 			$.each( data.resultset['ODI'], function(list)
@@ -88,8 +88,8 @@ function result()
         },
         error:function()
         {
-			
-		}    
+
+		}
     });
 }
 function news()
@@ -100,7 +100,7 @@ function news()
 	$.ajax({
         url: baseurl+'news/getlist',
         type: "GET",
-        dataType:'json', 
+        dataType:'json',
         success: function(data) {
 			for(i=1;i<data.resultset.length;i++)
 			{
@@ -134,8 +134,8 @@ function news()
         },
         error:function()
         {
-			
-		}    
+
+		}
     });
 }
 
@@ -145,7 +145,7 @@ function livescore()
         url: baseurl+'live',
         type: "GET",
         dataType:'json',
-        cache:false, 
+        cache:false,
         success: function(data) {
 			listcount=0;
 			option="";
@@ -156,11 +156,11 @@ function livescore()
 				if(data[listcount].matchDataType=='Live Data' && data[listcount].state !='preview')
 				{
 					option+='<option value="'+listcount+'">'+data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName+'</option>';
-					 $.myplaceholder.mylivescore.push(data[listcount]);			
+					 $.myplaceholder.mylivescore.push(data[listcount]);
 				}
 				listcount++;
 
-				}); 
+				});
 				$('#livescore_dd').html(option);
 
 			/*some bug has to fix
@@ -190,7 +190,7 @@ function team()
         type: "GET",
         dataType:'JSON',
         success: function(data) {
-			list='<h4>Test Match</h4>';
+			list='<h4>Test</h4>';
 			for(i=0;i<data.resultset['Test'].length;i++)
 			{
 				list+='<li class="white-block">';
@@ -211,7 +211,7 @@ function team()
                 list+=          '</li>';
 			}
 			$('#team-ranking').html(list);
-			list='<h4>ODI Match</h4>';
+			list='<h4>ODI</h4>';
 			for(i=0;i<data.resultset['ODI'].length;i++)
 			{
                 list+='<li class="white-block">';
@@ -232,7 +232,7 @@ function team()
                 list+=          '</li>';
 			}
 			$('#team-ranking01').html(list);
-			list='<h4>T20 Match</h4>';
+			list='<h4>T20</h4>';
 			for(i=0;i<data.resultset['T20'].length;i++)
 			{
                 list+='<li class="white-block">';
@@ -255,17 +255,17 @@ function team()
 			$('#team-ranking02').html(list);
 			/*$('#team').html(data);
 			$('.teamMenu').click(function()
-			{	
+			{
 				$('.releanceTabBox').hide();
 				$('#'+$(this).attr('link')).show();
 				});*/
         },
         error:function()
         {
-			
-		}    
+
+		}
     });
-	
+
 }
 function rank(method)
 {
@@ -277,7 +277,7 @@ function rank(method)
         type: "GET",
         dataType:'JSON',
         success: function(data) {
-			list='<h4>Test Match</h4>';
+			list='<h4>Test</h4>';
 			for(i=0;i<data.resultset['Test'].length;i++)
 			{
 				list+='<li class="white-block">';
@@ -298,7 +298,7 @@ function rank(method)
                 list+=          '</li>';
 			}
 			$('#'+method+'-ranking').html(list);
-			list='<h4>ODI Match</h4>';
+			list='<h4>ODI</h4>';
 			for(i=0;i<data.resultset['ODI'].length;i++)
 			{
 				list+='<li class="white-block">';
@@ -319,7 +319,7 @@ function rank(method)
                 list+=          '</li>';
 			}
 			$('#'+method+'-ranking01').html(list);
-			list='<h4>T20 Match</h4>';
+			list='<h4>T20</h4>';
 			for(i=0;i<data.resultset['T20'].length;i++)
 			{
 				list+='<li class="white-block">';
@@ -342,17 +342,17 @@ function rank(method)
 			$('#'+method+'-ranking02').html(list);
 			/*$('#team').html(data);
 			$('.teamMenu').click(function()
-			{	
+			{
 				$('.releanceTabBox').hide();
 				$('#'+$(this).attr('link')).show();
 				});*/
         },
         error:function()
         {
-			
-		}    
+
+		}
     });
-	
+
 }
 function photos()
 {
@@ -367,7 +367,7 @@ function photos()
 				html+='<div class="view view-first">';
                 html+=    '<img src="'+data.resultset[i]['icon']+'">';
                 html+=    '<div class="mask">';
-                html+=       '<p>'+data.resultset[i]['pubdate']+'</p>';             
+                html+=       '<p>'+data.resultset[i]['pubdate']+'</p>';
                 html+=        '<a href="'+data.resultset[i]['src']+'" class="info">'+data.resultset[i]['description']+'</a>';
                 html+=    '</div>';
                 html+='</div>';
@@ -376,10 +376,10 @@ function photos()
         },
         error:function()
         {
-			
-		}    
+
+		}
     });
-	
+
 }
 function videos()
 {
@@ -394,7 +394,7 @@ function videos()
 				html+='<div class="view view-first">';
                 html+=    '<img src="'+data.resultset[i]['src']+'">';
                 html+=    '<div class="mask">';
-                html+=       '<p>'+data.resultset[i]['pubdate']+' - <span>'+data.resultset[i]['time']+'</span></p>';             
+                html+=       '<p>'+data.resultset[i]['pubdate']+' - <span>'+data.resultset[i]['time']+'</span></p>';
                 html+=        '<a href="'+data.resultset[i]['link']+'" class="info">'+data.resultset[i]['title']+'</a>';
                 html+=    '</div>';
                 html+='</div>';
@@ -403,10 +403,10 @@ function videos()
         },
         error:function()
         {
-			
-		}    
+
+		}
     });
-	
+
 }
 function article()
 {
@@ -425,7 +425,7 @@ function article()
 			for(i=1;i<data.resultset.length;i++)
 			{
 				mod=i%3;
-				html+='<li class="media news-thumb-small">'; 
+				html+='<li class="media news-thumb-small">';
 				html+='<div class="media-body">';
                 html+='    	<h4 class="media-heading"><a href="article/get/'+data.resultset[i]['id']+'">'+data.resultset[i]['title']+'</a></h4>';
                 html+='    	<h6>By '+data.resultset[i]['author']+'</h6>';
@@ -441,9 +441,9 @@ function article()
         error:function()
         {
 
-		}    
+		}
     });
-	
+
 }
 function livescoredisplay(data)
 {
@@ -458,32 +458,32 @@ function livescoredisplay(data)
 				//team name
 				$('#team1').html(data.battingTeamName);
 				$('#team2').html(data.bowlingTeamName);
-				
+
 				//team icon
 				$('#team1_image').removeAttr('class');
 				$('#team2_image').removeAttr('class');
 				$('#team1_image').addClass("flag flag_"+data.battingTeamName);
 				$('#team2_image').addClass("flag flag_"+data.bowlingTeamName);
-				
+
 				//batting team score/over
 				$('#team1_score').html(data['currentBatTeamScore'].runsAndWicket+'*');
 				$('#team1_over').html(data['currentBatTeamScore'].overs+" Overs");
-				
+
 				//bowling team score/over
 				//if(data[0]['currentBowlTeamScore'].runsAndWicket !="0/0")
 				//{
 				$('#team2_score').html(data['currentBowlTeamScore'].runsAndWicket);
 				$('#team2_over').html(data['currentBowlTeamScore'].overs+" Overs");
 				//}
-				
+
 				//RunRate
 				$('#crr').html("CRR : "+data.crr);
 				$('#rrr').html("RRR : "+data.rrr);
-				
+
 				//batting team score/over
 				$('#team1_score').html(data['currentBatTeamScore'].runsAndWicket+'*');
 				$('#team1_over').html(data['currentBatTeamScore'].overs+" Overs");
-				
+
 				//bowling team score/over
 				//if(data[0]['currentBowlTeamScore'].runsAndWicket !="0/0")
 				//{
@@ -492,7 +492,7 @@ function livescoredisplay(data)
 				//}
 				if(data.state != 'complete')
 				{
-				//status if not playing 
+				//status if not playing
 				if(data.state != 'inprogress')
 				{
 					$('#matchstate').html(data.status);
@@ -500,7 +500,7 @@ function livescoredisplay(data)
 				//striker's
 				$('#striker').html(data['striker'].fullName);
 				$('#nonStriker').html(data['nonStriker'].fullName);
-				
+
 				//striker's runs
 				if(data['striker'].balls !="")
 				{
@@ -518,37 +518,37 @@ function livescoredisplay(data)
 				{
 					$('#nonStriker_run').html("");
 				}
-				
+
 				//sr
 				if(data['nonStriker'].balls !="")
 				$('#nonStriker_sr').html((data['nonStriker'].runs/data['nonStriker'].balls*100).toFixed(2));
 				if(data['striker'].balls !="")
 				$('#striker_sr').html((data['striker'].runs/data['striker'].balls*100).toFixed(2));
-				
+
 				//last name
 				if(data['striker'].fullName != "" && data['strikerbowler'].fullName != "")
 				$('#strikers_lname').html(data['striker'].fullName.split(' ').slice(-1).join(' ')+" to "+data['strikerbowler'].fullName.split(' ').slice(-1).join(' '));
 				//split(' ').slice(-1).join(' ');
-				
-				
+
+
 				//bowler
 				$('#strikerbowler').html(data['strikerbowler'].fullName);
 
 				$('#strikerbowler_runs').html(data['strikerbowler'].runs);
 
 				$('#strikerbowler_overs').html(data['strikerbowler'].overs);
-				
+
 				$('#strikerbowler_maidens').html(data['strikerbowler'].maidens);
-				
+
 				$('#strikerbowler_wickets').html(data['strikerbowler'].wickets);
 				}
 				else
 				{
-					
+
 					$('#matchstate').html(data.status);
 					$('#playerstate').hide();
 					$('#bowlerstate').hide();
 				}
-				
-				
+
+
 }
