@@ -31,10 +31,9 @@
             </div>
             <div style="text-align:center" id="team_images" class="row-fluid margint20">
               <div class="span5"><!--TeamA-->
-                <!-- <div class="team_icon">
-                 <img src="Images/csk_icon.png">
-                 <span id="team1_image"></span>
-                </div> -->
+                <div class="team_icon">
+                 <div id="team1_image"></div>
+                </div>
                 <h5 id="team1" class="team_name"></h5>
                 <h4 id="team1_score" class="yellow"></h4>
                 <h5 id="team1_over" class="white"></h5>
@@ -43,10 +42,9 @@
                <h3 style="margin-top:42px" class="white">vs</h3>
                </div>
               <div class="span5"><!--TeamB-->
-              <!-- <div class="team_icon">
-                 <img src="Images/MI_icon.png">
-                 <span id="team2_image"></span>
-                </div> -->
+               <div class="team_icon">
+                 <div id="team2_image"></div>
+                </div>
                 <h5 id="team2" class="team_name"></h5>
                 <h4 id="team2_score" class="yellow yellow-dull"></h4>
                 <h5 id="team2_over" class="white"></h5>

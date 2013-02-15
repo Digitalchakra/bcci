@@ -459,8 +459,8 @@ function livescoredisplay(data)
 				$('#team2').html(data.bowlingTeamName);
 				
 				//team icon
-				$('#team1_image').html(data.battingTeamName);
-				$('#team2_image').html(data.bowlingTeamName);
+				$('#team1_image').addClass("flag flag_"+data.battingTeamName);
+				$('#team2_image').addClass("flag flag_"+data.bowlingTeamName);
 				
 				//batting team score/over
 				$('#team1_score').html(data['currentBatTeamScore'].runsAndWicket+'*');
