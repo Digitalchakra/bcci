@@ -283,7 +283,7 @@ function rank(method)
 				list+='<li class="white-block">';
                 list+=            '<div class = "row-fluid">';
                 list+=              '<div class="span4 padding10">';
-                list+=                  '<div class = "flag_'+data.resultset['Test'][i]['country']+'">';
+                list+=                  '<div class = "cflag_'+data.resultset['Test'][i]['country']+'">';
                 //list+=                     '<img src="/bcci/assets/Images/India_03.png">';
                 list+=                  '</div>';
                 list+=                  '<div class = "rank-box">';
@@ -304,7 +304,7 @@ function rank(method)
 				list+='<li class="white-block">';
                 list+=            '<div class = "row-fluid">';
                 list+=              '<div class="span4 padding10">';
-                list+=                  '<div class = "flag_'+data.resultset['ODI'][i]['country']+'">';
+                list+=                  '<div class = "cflag_'+data.resultset['ODI'][i]['country']+'">';
                 //list+=                     '<img src="/bcci/assets/Images/India_03.png">';
                 list+=                  '</div>';
                 list+=                  '<div class = "rank-box">';
@@ -325,7 +325,7 @@ function rank(method)
 				list+='<li class="white-block">';
                 list+=            '<div class = "row-fluid">';
                 list+=              '<div class="span4 padding10">';
-                list+=                  '<div class = "flag_'+data.resultset['T20'][i]['country']+'">';
+                list+=                  '<div class = "cflag_'+data.resultset['T20'][i]['country']+'">';
               //  list+=                     '<img src="/bcci/assets/Images/India_03.png">';
                 list+=                  '</div>';
                 list+=                  '<div class = "rank-box">';
