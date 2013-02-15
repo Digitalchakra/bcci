@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+.flag_AUS{ background-position: 0 0 !important; width: 68px; height: 68px; } 
+.flag_AUSW{ background-position: 0 0 !important; width: 68px; height: 68px; } 
+.flag_BAN{ background-position: 0 -88px !important; width: 68px; height: 68px; } 
+.flag_BANW{ background-position: 0 -88px !important; width: 68px; height: 68px; } 
+.flag_CSK{ background-position: 0 -176px !important; width: 68px; height: 68px; } 
+.flag_CSKW{ background-position: 0 -176px !important; width: 68px; height: 68px; } 
+.flag_DC{ background-position: 0 -264px !important; width: 68px; height: 68px; } 
+.flag_DCW{ background-position: 0 -264px !important; width: 68px; height: 68px; } 
+.flag_DDD{ background-position: 0 -352px !important; width: 68px; height: 68px; } 
+.flag_DDDW{ background-position: 0 -352px !important; width: 68px; height: 68px; } 
+.flag_ENG{ background-position: 0 -440px !important; width: 68px; height: 68px; } 
+.flag_ENGW{ background-position: 0 -440px !important; width: 68px; height: 68px; } 
+.flag_HK{ background-position: 0 -528px !important; width: 68px; height: 68px; } 
+.flag_HKW{ background-position: 0 -528px !important; width: 68px; height: 68px; } 
+.flag_IND{ background-position: 0 -616px !important; width: 68px; height: 68px; } 
+.flag_INDW{ background-position: 0 -616px !important; width: 68px; height: 68px; } 
+.flag_KKR{ background-position: 0 -704px !important; width: 68px; height: 68px; } 
+.flag_KKRW{ background-position: 0 -704px !important; width: 68px; height: 68px; } 
+.flag_KTK{ background-position: 0 -792px !important; width: 68px; height: 68px; } 
+.flag_KTKW{ background-position: 0 -792px !important; width: 68px; height: 68px; } 
+.flag_KXP{ background-position: 0 -880px !important; width: 68px; height: 68px; } 
+.flag_KXPW{ background-position: 0 -880px !important; width: 68px; height: 68px; } 
+.flag_MI{ background-position: 0 -968px !important; width: 68px; height: 68px; } 
+.flag_MIW{ background-position: 0 -968px !important; width: 68px; height: 68px; } 
+.flag_NZ{ background-position: 0 -1056px !important; width: 68px; height: 68px; } 
+.flag_NZW{ background-position: 0 -1056px !important; width: 68px; height: 68px; } 
+.flag_PAK{ background-position: 0 -1144px !important; width: 68px; height: 68px; } 
+.flag_PAKW{ background-position: 0 -1144px !important; width: 68px; height: 68px; } 
+.flag_PW{ background-position: 0 -1232px !important; width: 68px; height: 68px; } 
+.flag_PWW{ background-position: 0 -1232px !important; width: 68px; height: 68px; } 
+.flag_RC{ background-position: 0 -1320px !important; width: 68px; height: 68px; } 
+.flag_RCW{ background-position: 0 -1320px !important; width: 68px; height: 68px; } 
+.flag_RR{ background-position: 0 -1408px !important; width: 68px; height: 68px; } 
+.flag_RRW{ background-position: 0 -1408px !important; width: 68px; height: 68px; } 
+.flag_RSA{ background-position: 0 -1496px !important; width: 68px; height: 68px; } 
+.flag_RSAW{ background-position: 0 -1496px !important; width: 68px; height: 68px; } 
+.flag_SCO{ background-position: 0 -1584px !important; width: 68px; height: 68px; } 
+.flag_SCOW{ background-position: 0 -1584px !important; width: 68px; height: 68px; } 
+.flag_SL{ background-position: 0 -1672px !important; width: 68px; height: 68px; } 
+.flag_SLW{ background-position: 0 -1672px !important; width: 68px; height: 68px; } 
+.flag_WI{ background-position: 0 -1760px !important; width: 68px; height: 68px; } 
+.flag_WIW{ background-position: 0 -1760px !important; width: 68px; height: 68px; } 
+.flag_ZIM{ background-position: 0 -1848px !important; width: 68px; height: 68px; } 
+.flag_ZIMW{ background-position: 0 -1848px !important; width: 68px; height: 68px; } 
+
+.team_icon .flag {
+    background: url(/assets/Images/flags-big.png)  no-repeat top left;
+}

@@ -460,6 +460,8 @@ function livescoredisplay(data)
 				$('#team2').html(data.bowlingTeamName);
 				
 				//team icon
+				$('#team1_image').removeAttr('class');
+				$('#team2_image').removeAttr('class');
 				$('#team1_image').addClass("flag flag_"+data.battingTeamName);
 				$('#team2_image').addClass("flag flag_"+data.bowlingTeamName);
 				
