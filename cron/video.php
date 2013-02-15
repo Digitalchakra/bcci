@@ -56,7 +56,11 @@ try
 				$find=array('video_id'=>$row['video_id']);
 					if($found = Tbl_videos::find($find))
 					{
-						$found->create($row);
+						foreach($row as $key=>$value)
+						{
+							$found->$key = $value;
+						}
+						$found->save();
 					}
 					else
 					{

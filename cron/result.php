@@ -11,11 +11,11 @@ $url_base='http://www.foxsports.com.au';
 if($html = file_get_html($url))
 {
 $i=-1;
-$list=array();
 $line=array();
 foreach($html->find('table.cricket-results-table tr') as $main)
 	{
 		$skiploop=0;
+		$list=array();
 		foreach($main->find('td') as $td)
 			{
 				if(!$skiploop)
@@ -25,7 +25,7 @@ foreach($html->find('table.cricket-results-table tr') as $main)
 				{
 					if($td_txt!='ODD' && $td_txt!='SHEF')
 					{
-						$line[$i]['type'] = $td_txt;
+						$list['type'] = $td_txt;
 					}
 					else
 					{
@@ -34,40 +34,50 @@ foreach($html->find('table.cricket-results-table tr') as $main)
 				}
 				else if($td->getAttribute('class')=='cricket-res-table-date')
 				{
-					$line[$i]['date'] = trim($td_txt);
+					$list['date'] = trim($td_txt);
+					if($list['date']=='live')
+					$list['date'] = 'LIVE';
 				}
 				else if($td->getAttribute('class')=='cricket-res-table-teams')
 				{
-					$line[$i]['team'] = $td_txt;
+					$list['team'] = $td_txt;
 				}
 				else
 				{
-				$line[$i]['result'] = $td_txt;
+				$list['result'] = $td_txt;
 				foreach($td->find('a') as $link)
 					{
 						$href=$link->getAttribute('href');
-						$line[$i]['match_id']=end( explode( 'matchid=', substr($href,strpos( $href, 'matchid')) ) ); 
-						$line[$i]['link'] = $url_base.$href;
+						$list['match_id']=end( explode( 'matchid=', substr($href,strpos( $href, 'matchid')) ) ); 
+						$list['link'] = $url_base.$href;
 					}
 				}
 			}				
 			}
-			$i++;
+			$line[]=$list;
 	}
 	
 		if(count($line)>0)
 		{
 			foreach($line as $row)
 			{
+				if(count($row)>0)
+				{
 				$find=array('match_id'=>$row['match_id']);
 					if($found = Tbl_results::find($find))
 					{
-						$found->create($row);
+						//unset($row['match_id']);
+						foreach($row as $key=>$value)
+						{
+							$found->$key = $value;
+						}
+						$found->save();
 					}
 					else
 					{
 						Tbl_results::create($row);
 					}
+				}
 			}
 		}
 		else
