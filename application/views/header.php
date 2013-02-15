@@ -16,6 +16,9 @@
 <link href="<?php echo base_url('assets/css/hoverfx_common.css'); ?>" rel="stylesheet" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-1.8.3.min.js'); ?>"></script>
+<script type="text/javascript">
+  var baseurl = "<?php print base_url(); ?>";
+</script>
 <style>
 .Test, .T20{
 	display:none;

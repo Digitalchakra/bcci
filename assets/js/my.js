@@ -42,7 +42,7 @@ function result()
 	//$('#accordion2').html('');
 	var html='';
 	$.ajax({
-        url: 'result/getlist',
+        url: baseurl+'result/getlist',
         type: "GET",
         dataType:'json', 
         success: function(data) {
@@ -98,7 +98,7 @@ function news()
 	var recentNews='';
 	var bannerslide='';
 	$.ajax({
-        url: 'news/getlist',
+        url: baseurl+'news/getlist',
         type: "GET",
         dataType:'json', 
         success: function(data) {
@@ -142,7 +142,7 @@ function news()
 function livescore()
 {
 	$.ajax({
-        url: 'live',
+        url: baseurl+'live',
         type: "GET",
         dataType:'json',
         cache:false, 
@@ -185,7 +185,7 @@ function team()
 	var list1='';
 	var list2='';
 	$.ajax({
-        url: 'rank/team',
+        url: baseurl+'rank/team',
         type: "GET",
         dataType:'JSON',
         success: function(data) {
@@ -272,7 +272,7 @@ function rank(method)
 	var list1='';
 	var list2='';
 	$.ajax({
-        url: 'rank/'+method,
+        url: baseurl+'rank/'+method,
         type: "GET",
         dataType:'JSON',
         success: function(data) {
@@ -357,7 +357,7 @@ function photos()
 {
 	var html='';
 	$.ajax({
-        url: 'photos',
+        url: baseurl+'photos',
         type: "GET",
         dataType:'JSON',
         success: function(data) {
@@ -384,7 +384,7 @@ function videos()
 {
 	var html='';
 	$.ajax({
-        url: 'videos',
+        url: baseurl+'videos',
         type: "GET",
         dataType:'JSON',
         success: function(data) {
@@ -410,7 +410,7 @@ function videos()
 function article()
 {
 	$.ajax({
-        url: 'article/getlist',
+        url: baseurl+'article/getlist',
         type: "GET",
         dataType:'JSON',
         success: function(data) {
