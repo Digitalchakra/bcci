@@ -9,7 +9,7 @@ class Resultmodel extends CI_Model
 		//$this->db->where('type', 'batting');
 		//$this->db->from('tbl_player_rank');
 		//$qry3=$this->db->limit($limit, $start)->where('utc_time >', $today_end)->get('tbl_matches');
-		$qry = $this->db->limit($limit, $start)->where('type','ODI')->get('tbl_results');
+		$qry = $this->db->limit($limit, $start)->order_by("match_id", "desc")->where('type','ODI')->get('tbl_results');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)
@@ -25,7 +25,7 @@ class Resultmodel extends CI_Model
 					$data['T20'][]=$row;
 				}
 			}
-			$qry = $this->db->limit($limit, $start)->where('type','Test')->get('tbl_results');
+			$qry = $this->db->limit($limit, $start)->order_by("match_id", "desc")->where('type','Test')->get('tbl_results');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)
