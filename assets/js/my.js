@@ -357,7 +357,7 @@ function photos()
 {
 	var html='';
 	$.ajax({
-        url: baseurl+'photos',
+        url: baseurl+'photos/getlist',
         type: "GET",
         dataType:'JSON',
         success: function(data) {
@@ -384,7 +384,7 @@ function videos()
 {
 	var html='';
 	$.ajax({
-        url: baseurl+'videos',
+        url: baseurl+'videos/getlist',
         type: "GET",
         dataType:'JSON',
         success: function(data) {

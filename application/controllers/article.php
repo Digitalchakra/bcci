@@ -12,7 +12,7 @@ class Article extends CI_Controller
 	{
 		$this->load->helper('url');
 		$this->load->model('articlemodel');
-		$id = ($this->uri->segment(3)) ? $this->uri->segment(3) : 1;
+		$id = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 		$data['content'] = $this->articlemodel->getArticle($id);
 		//print_r($data); die;
 		$data['view_page'] = 'article';
@@ -35,7 +35,7 @@ class Article extends CI_Controller
         $config['cur_tag_open'] = '<a href="#" class="active">';
         $config['cur_tag_close'] = '</a>';
         $this->pagination->initialize($config);
-        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 1;
+        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
         $data['content'] = $this->articlemodel->getArticles($config['per_page'], $page);
 		$data['links'] = $this->pagination->create_links();
 		//print_r($data); die;
