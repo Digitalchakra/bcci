@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* CSS Document */
+
+.flag_AFG{ background-position: 0 0 !important; width: 38px; height: 38px ; } 
+.flag_ARG{ background-position: 0 -63px !important; width: 38px; height: 38px; } 
+.flag_AUC{ background-position: 0 -126px !important; width: 38px; height: 38px; } 
+.flag_AUS{ background-position: 0 -189px !important; width: 38px; height: 38px; } 
+.flag_BAN{ background-position: 0 -252px !important; width: 38px; height: 38px; } 
+.flag_BER{ background-position: 0 -315px !important; width: 38px; height: 38px; } 
+.flag_CAN{ background-position: 0 -378px !important; width: 38px; height: 38px; } 
+.flag_EA{ background-position: 0 -441px !important; width: 38px; height: 38px; } 
+.flag_ENG{ background-position: 0 -504px !important; width: 38px; height: 38px; } 
+.flag_HAM{ background-position: 0 -567px !important; width: 38px; height: 38px; } 
+.flag_HK{ background-position: 0 -630px !important; width: 38px; height: 38px; } 
+.flag_IND{ background-position: 0 -693px !important; width: 38px; height: 38px; } 
+.flag_IRE{ background-position: 0 -756px !important; width: 38px; height: 38px; } 
+.flag_KEN{ background-position: 0 -819px !important; width: 38px; height: 38px; } 
+.flag_NAM{ background-position: 0 -882px !important; width: 38px; height: 38px; } 
+.flag_NET{ background-position: 0 -945px !important; width: 38px; height: 38px; } 
+.flag_NZ{ background-position: 0 -1008px !important; width: 38px; height: 38px; } 
+.flag_PAK{ background-position: 0 -1071px !important; width: 38px; height: 38px; } 
+.flag_SA{ background-position: 0 -1134px !important; width: 38px; height: 38px; } 
+.flag_SL{ background-position: 0 -1197px !important; width: 38px; height: 38px; } 
+.flag_WI{ background-position: 0 -1260px !important; width: 38px; height: 38px; } 
+.flag_ZIM{ background-position: 0 -1323px !important; width: 38px; height: 38px; } 
+
+
+.flag_AFG,.flag_ARG,.flag_AUC,.flag_AUS,.flag_BAN,.flag_BER,
+.flag_CAN,.flag_EA,.flag_ENG,.flag_HAM,.flag_HK,.flag_IND,
+.flag_IRE,.flag_KEN,.flag_NAM,.flag_NET,.flag_NZ,.flag_PAK,
+.flag_SA,.flag_SL,.flag_WI,.flag_ZIM {
+	background: url("../Images/flags.png") no-repeat;
+	margin-left:10px;
+}
