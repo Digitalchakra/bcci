@@ -113,8 +113,9 @@
         </li> -->
         <li><a href="<?php echo base_url('news'); ?>" class="drop">News</a></li>
         <li><a href="<?php echo base_url('article'); ?>" class="drop">Articles</a></li>
- <!--        <li><a href="#" class="drop">Photos</a></li>
-        <li><a href="#" class="drop">Polls</a></li>
+        <li><a href="<?php echo base_url('photos');?>" class="drop">Photos</a></li>
+        <li><a href="<?php echo base_url('videos');?>" class="drop">Videos</a></li>
+        <!--<li><a href="#" class="drop">Polls</a></li>
         <li><a href="#" class="drop">About</a></li> -->
         <!-- <li class = "menu_right"><a href="#" class="drop" style="margin-right:5px"><i class = "icon-lock icon-white" style="margin-right:15px;"></i>Register</a></li>
         <li class = "menu_right"><a href="#" class="drop" style="margin-right:5px"><i class = "icon-user icon-white" style="margin-right:15px;"></i>Login</a></li> -->

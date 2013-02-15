@@ -469,7 +469,7 @@
 					</div>
                 </div>
                 <div class = "span pull-right margint10">
-                	<!-- <a href = "#" class="btn btn-primary">View All</a> -->
+                	 <a href = "<?php echo base_url('photos'); ?>" class="btn btn-primary">View All</a>
                 </div>
               </div>
             </div>
@@ -481,7 +481,7 @@
 					</div>
                 </div>
                 <div class = "span pull-right margint10">
-                	<!-- <a href = "#" class="btn btn-primary">View All</a> -->
+                	 <a href = "<?php echo base_url('videos');?>" class="btn btn-primary">View All</a>
                 </div>
               </div>
             </div>
