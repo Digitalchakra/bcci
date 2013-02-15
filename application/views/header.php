@@ -111,6 +111,7 @@
             </div>
           </div>
         </li> -->
+        <li><a href="<?php echo base_url('result'); ?>" class="drop">Results</a></li>
         <li><a href="<?php echo base_url('news'); ?>" class="drop">News</a></li>
         <li><a href="<?php echo base_url('article'); ?>" class="drop">Articles</a></li>
         <li><a href="<?php echo base_url('photos');?>" class="drop">Photos</a></li>

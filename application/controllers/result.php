@@ -33,9 +33,8 @@ class Result extends CI_Controller
 		
 		$data['content'] = $this->resultmodel->getResults($config['per_page'], $page,$type);
 		$data['links'] = $this->pagination->create_links();
-		//print_r($data); die;
-		 $data['view_page'] = 'result';
-		//$data['content'] = $this->match->getMatchs(5, 0);
+		$data['view_page'] = 'result';
+		$data['base_url']=base_url() . 'result/index/';
 		//print_r($data); die;
 		$this->load->view('template', $data);
 		

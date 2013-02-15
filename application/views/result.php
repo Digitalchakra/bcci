@@ -1,3 +1,6 @@
+<?php
+$menu=array('ODI','T20','Test');
+?>
 <div class = "container">
   <div class = "row">
     <div class = "span9">
@@ -17,31 +20,31 @@
           <div class = "paddingr115">
             <div class="navbar sub-nav">
               <div class="navbar-inner">
-                <ul class = "nav">
+                <ul class = "nav"><p><h4>Results</h4></p>
                   <!--Schedule Drop-->
-                  <li class = "dropdown">
+                  <!--<li class = "dropdown  active">
                     <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
                       Schedule
                     </a>
-                  </li>
+                  </li>-->
                   <!--Squad Drop-->
-                  <li class = "dropdown">
+                  <!--<li class = "dropdown">
                     <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
-                      Squads 
+                      Squads
                     </a>
-                  </li>
+                  </li>-->
                   <!--Results Drop-->
-                  <li class = "dropdown  active">
+                 <!-- <li class = "dropdown">
                     <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
                       Results
                     </a>
-                  </li>
+                  </li>-->
                   <!--Points Table Drop-->
-                  <li class = "dropdown">
+                <!--  <li class = "dropdown">
                     <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
-                      Points Table 
+                      Points Table
                     </a>
-                  </li>
+                  </li>-->
                 </ul>
               </div>
             </div>
@@ -52,9 +55,15 @@
         <div class = "span3 offset1 margint20">
           <div class="btn-group pull-right">
             <select id = "resultmenu" class="span2 offset4 select-dropdown" style="margin:-15px 0 -15px 60px !important;">
-			  <option>ODI</option>
-			  <option>Test</option>
-			  <option>T20</option>
+			  	<option value="" class="red-btn"><?php echo $content[0]->type; ?></option>
+				<?php
+				foreach($menu as $row)
+				{ 
+					if($content[0]->type==$row)
+					continue;
+					?>
+				<option value="<?php echo $base_url.$row ?>" class="red-btn"><?php echo $row; ?></option>
+				<?php } ?>
               </select>
           </div>
         </div>
@@ -63,7 +72,7 @@
       <!--Table--> 
       <div class = "row">
       	<div class = "span9 margint-20">
-          <p><h4>Schedule</h4></p>
+         <!-- <p><h4>Schedule</h4></p>-->
           <table class="table table-bordered table-striped">
             <colgroup>
               <col class="span3">
@@ -129,7 +138,7 @@
     </div>
     
     <!--Side NAV-->
-    <div class = "span3 margint10">
+  <!--  <div class = "span3 margint10">
       <div id="sidebar" class="sidebar-nav">
         <ul class="nav nav-tabs nav-stacked">
           <li class="menu-heading">HEADING</li>
@@ -143,7 +152,7 @@
           <li class="nav-menu"><a href="#">Teams</a></li>
   
           <!--Search Box-->
-          <li class="nav-menu menu-box">
+         <!-- <li class="nav-menu menu-box">
             <div class = "row">
               <div class = "span3">
                 <div class = "padding10">
@@ -160,7 +169,7 @@
           </li>
         </ul>
       </div>
-    </div>
+    </div>-->
   </div> 
 </div> 
-<script src="<?php echo base_url('assets/js/schedule.js');?>"></script>
+<script src="<?php echo base_url('assets/js/results.js');?>"></script>

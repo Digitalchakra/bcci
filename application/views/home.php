@@ -281,8 +281,8 @@
               <option value="Test">Test Matches</option>
             </select>
           </div>
-               <a href = "#">
-            <div class = "list-box pull-right"></div>
+               <a href = "<?php echo base_url('result');?>">
+            <div class = "span pull-right margint10">View all</div>
             </a> </h4>
         </div>
         <div class="accordion" id="accordion2">

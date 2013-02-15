@@ -1,4 +1,3 @@
-
 $(document).ready(function()
 {
 	//alert('test');
@@ -8,7 +7,7 @@ $(document).ready(function()
 	    setInterval(function() {
           result();
     }, 10000);*/
-    $('#shedulemenu').change(function()
+    $('#resultmenu').change(function()
 			{
 				window.location=this.value;
 			});
