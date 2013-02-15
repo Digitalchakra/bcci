@@ -17,7 +17,7 @@ class Resultmodel extends CI_Model
 					$data['ODI'][]=$row;
 				}
 			}
-			$qry = $this->db->limit($limit, $start)->where('type','T20')->get('tbl_results');
+			$qry = $this->db->limit($limit, $start)->order_by("match_id", "asc")->where('type','T20')->get('tbl_results');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)
