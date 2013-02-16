@@ -44,8 +44,9 @@
               <!--<div class = "tweet-icon">
                 <h3> Latest Tweets</h3>
               </div>-->
-      <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/BCCICOM"  data-widget-id="300917754020634624">Tweets by @BCCICOM</a>
+<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/BCCICOM"  data-widget-id="300917754020634624">Tweets by @BCCICOM</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
             </div>
           </div>
         </div>
