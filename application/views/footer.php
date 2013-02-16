@@ -17,10 +17,10 @@
           <div class = "span10 pull-right">
             <div class = "padding20">
               <p>
-              <h5>Contact</h5>
+              <!-- <h5>Contact</h5> -->
               <p></p>
-              <p>BCCI CRICKET INDIA<br>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+              <p><br>
+                bcci.com is in no way or form related to "The BCCI" or "BCCI" or "The Board for control of Cricket in India" and is a standalone portal for cricketing enthusiasts from the world over.</p>
             </div>
           </div>
         </div>
@@ -61,16 +61,17 @@
             <h5>Quick Links</h5>
             <p></p>
             <ul>
-              <li>Home</li>
-              <li>News</li>
-              <li>News</li>
-              <li>Statistics</li>
-              <li>Results</li>
-              <li>Photos </li>
-              <li>Articles</li>
+              <li><a href="<?php echo base_url();?>">Home</a></li>
+              <li><a href="<?php echo base_url('schedule');?>">Schedule</a></li>
+              <li><a href="<?php echo base_url('result');?>">Results</a></li>
+              <li><a href="<?php echo base_url('rank/team');?>">Rankings</a></li>
+              <li><a href="<?php echo base_url('news');?>">News</a></li>
+              <li><a href="<?php echo base_url('articles');?>">Article</a></li>
+              <li><a href="<?php echo base_url('photos');?>">Photos</a></li>
+              <li><a href="<?php echo base_url('videos');?>">Videos</a></li>
             </ul>
           </div>
-          <div class = "span6 padding20">
+          <!-- <div class = "span6 padding20">
             <p>
             <h5>Quick Links</h5>
             <p></p>
@@ -83,23 +84,23 @@
               <li>Photos </li>
               <li>Articles</li>
             </ul>
-          </div>
+          </div> -->
         </div>
         
         <!--Second Row-->
         <div class = "row marginl20 disclaimer-shadow">
           <div class = "span6 padding20">
             <ul>
-              <li>Disclaimer</li>
-              <li>Privacy Policy</li>
+              <li><a href="<?php echo base_url('disclaimer');?>">Disclaimer</a></li>
+              <!-- <li>Privacy Policy</li> -->
             </ul>
           </div>
-          <div class = "span6 padding20">
+          <!-- <div class = "span6 padding20">
             <ul>
               <li>Terms and Conditions</li>
               <li>Copyright</li>
             </ul>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
