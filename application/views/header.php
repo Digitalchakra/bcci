@@ -45,7 +45,7 @@
 <!-----LOGO and SEARCH---------->
 <div class = "container">
   <div class = "row">
-    <div class = "span3 margint20"> <img src="<?php echo base_url('assets/Images/Logo_03.png'); ?>" alt="BCCI"> </div>
+    <div class = "span3 margint20"> <a href="<?php echo base_url();?>"><img src="<?php echo base_url('assets/Images/Logo_03.png'); ?>" alt="BCCI"></a> </div>
     <div class = "span4 offset5 hidden-phone">
       <div class = "row">
        <!--  <div class = "span4 margint20"> <img class = "pull-right" src="<?php echo base_url('assets/Images/soci-icons_03.png'); ?>"> </div> -->
