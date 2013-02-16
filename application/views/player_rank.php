@@ -11,8 +11,8 @@
 					  </div>
 					 
 					  <ul class="nav nav-tabs tabs-box gradient" id="matchestab">
-          <li class="active"><a data-toggle="tab" href="#batsman">Batsmen</a></li>
-          <li><a data-toggle="tab" href="#batswomen">Batswomen</a></li>
+          <li class="active"><a data-toggle="tab" href="#batsman">Men</a></li>
+          <li><a data-toggle="tab" href="#batswomen">Women</a></li>
         </ul>
         <div class="tab-content tab-content-rank">
         	<?php
