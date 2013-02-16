@@ -68,10 +68,43 @@ $result=array();
 			foreach($type_row as $row)
 			{
 				$inserval['team']=$row[0];
+				$country_list=array('ENG'=>'England',
+								'AUS'=>'Australia',
+								'BAN'=>'Bangladesh',
+								'IND'=>'India',
+								'NZ'=>'New Zealand',
+								'PAK'=>'Pakistan',
+								'SA'=>'South Africa',
+								'SL'=>'Sri Lanka',
+								'WI'=>'West Indies',
+								'ZIM'=>'Zimbabwe',
+								'AFG'=>'Afghanistan',
+								'ARG'=>'Argentina',
+								'BER'=>'Bermuda',
+								'CAN'=>'Canada',
+								'KEN'=>'Kenya',
+								'AUC'=>'Auckland Aces',
+								'EA'=>'East Africa',
+								'HAM'=>'Hampshire',
+								'HK'=>'Hong Kong',
+								'IRE'=>'Ireland',
+								'NAM'=>'Namibia',
+								'NET'=>'Netherlands'				
+				);
+				//if(stripos($row[0], 'india') ||strtolower($row[0])=='india')
+				if($key=array_search($row[0],$country_list))
+				{
+					$country_code=$key;
+				}
+				else
+				{
+					$country_code='DEF';
+				}
 				$inserval['matches']=$row[1];
 				$inserval['points']=$row[2];
 				$inserval['rating']=$row[3];
 				$inserval['type']=$type[$i];
+				$inserval['country_code']=$country_code;
 				Tbl_team_rank::create($inserval);				
 				////////
 			}
