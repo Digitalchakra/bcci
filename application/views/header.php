@@ -74,7 +74,7 @@
         <li><a href="<?php echo base_url(); ?>" class="drop">Home</a></li>
         <li><a href="<?php echo base_url('schedule'); ?>" class="drop">Schedule</a><!-- Begin Shedule columns Item -->
 
-          <div class="dropdown_5columns"><!-- Begin 5 columns container -->
+          <div class="dropdown_2columns"><!-- Begin 5 columns container -->
             <div class = "col_2">
               <ul id="srs_list" class="greybox">
                 <!--<h2>Upcoming Series</h2>
@@ -92,19 +92,18 @@
             </div>
           </div>
         </li>
-       <!--  <li><a href="#" class="drop">Statistics</a><!-- Begin 4 columns Item -->
-         <!-- <div class="dropdown_4columns">
+       <li><a class="drop">Rankings</a><!-- Begin 4 columns Item -->
+         <div class="dropdown_2columns">
             <div class = "col_2">
               <ul class="greybox">
                 <h2>Rankings</h2>
-                <li><a href="#">Team Rankings</a></li>
-                <li><a href="#">Batsman Rankings</a></li>
-                <li><a href="#">Bowler Rankings</a></li>
-                <li><a href="#">India vs Australia</a></li>
-                <li><a href="#">All Rounder Rankings</a></li>
+                <li><a href="<?php echo base_url('rank/team'); ?>">Team Rankings</a></li>
+                <li><a href="<?php echo base_url('rank/batting'); ?>">Batsman Rankings</a></li>
+                <li><a href="<?php echo base_url('rank/bowling'); ?>">Bowler Rankings</a></li>
+                <li><a href="<?php echo base_url('rank/allrounder'); ?>">All Rounder Rankings</a></li>
               </ul>
             </div>
-            <div class = "col_2">
+            <!--<div class = "col_2">
               <ul class="greybox">
                 <h2>Records</h2>
                 <li><a href="#">Batting Record</a></li>
@@ -112,10 +111,11 @@
                 <li><a href="#">All Rounder Record</a></li>
                 <li><a href="#">Other Records</a></li>
               </ul>
-            </div>
+            </div>-->
           </div>
-        </li> -->
+        </li>
         <li><a href="<?php echo base_url('result'); ?>" class="drop">Results</a></li>
+        <li><a href="<?php echo base_url('rank/team'); ?>" class="drop">Rankings</a></li>
         <li><a href="<?php echo base_url('news'); ?>" class="drop">News</a></li>
         <li><a href="<?php echo base_url('article'); ?>" class="drop">Articles</a></li>
         <li><a href="<?php echo base_url('photos');?>" class="drop">Photos</a></li>

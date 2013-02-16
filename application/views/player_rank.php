@@ -1,3 +1,6 @@
+
+<div class = "container">
+
 				      <!--Page Heading-->
 					  <div class = "row">
 						<div class = "span12">
@@ -176,3 +179,4 @@
                 </div>
             </div>
 
+</div>
