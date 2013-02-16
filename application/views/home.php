@@ -11,11 +11,12 @@
           <!-- banner img from my.js-->
         </div>
         <!-- Carousel nav -->
-        <!--<a class="carousel-control left" href="#myCarousel" data-slide="prev" >&lsaquo;</a> <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>--> </div>
+        <!--<a class="carousel-control left" href="#myCarousel" data-slide="prev" >&lsaquo;</a> <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>--> 
+      </div>
     </div>
 
         <!--Live SCore-->
- <div id="liveScore" class="span4 margint10 livescore_bg">
+ 	<div id="liveScore" class="span4 margint10 livescore_bg">
      <div class="row-fluid">
          <div class="padding20">
           <div class="span12">
@@ -139,7 +140,7 @@
      </div>
 </div>
 
-
+ </div>
 
   <div class = "row">
     <div class = "span12 margint20">
@@ -288,7 +289,8 @@
       </div>
     </div>
   </div>
-
+  </div>
+	
   <!--Match Shedule and Results-->
   <div class = "row">
     <div class = "span8 margint20">
