@@ -186,7 +186,7 @@ function team()
 	var list1='';
 	var list2='';
 	$.ajax({
-        url: baseurl+'rank/team',
+        url: baseurl+'rank/team_json',
         type: "GET",
         dataType:'JSON',
         success: function(data) {
@@ -273,7 +273,7 @@ function rank(method)
 	var list1='';
 	var list2='';
 	$.ajax({
-        url: baseurl+'rank/'+method,
+        url: baseurl+'rank/'+method+'_json',
         type: "GET",
         dataType:'JSON',
         success: function(data) {
@@ -478,7 +478,14 @@ function livescoredisplay(data)
 
 				//RunRate
 				$('#crr').html("CRR : "+data.crr);
-				$('#rrr').html("RRR : "+data.rrr);
+				if(data.rrr == "")
+				{
+					$('#rrr').html("");
+				}
+				else
+				{
+					$('#rrr').html("RRR : "+data.rrr);
+				}
 
 				//batting team score/over
 				$('#team1_score').html(data['currentBatTeamScore'].runsAndWicket+'*');
@@ -527,7 +534,7 @@ function livescoredisplay(data)
 
 				//last name
 				if(data['striker'].fullName != "" && data['strikerbowler'].fullName != "")
-				$('#strikers_lname').html(data['striker'].fullName.split(' ').slice(-1).join(' ')+" to "+data['strikerbowler'].fullName.split(' ').slice(-1).join(' '));
+				$('#strikers_lname').html(data['strikerbowler'].fullName.split(' ').slice(-1).join(' ')+" to "+data['striker'].fullName.split(' ').slice(-1).join(' '));
 				//split(' ').slice(-1).join(' ');
 
 

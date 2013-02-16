@@ -14,7 +14,7 @@ class Match extends CI_Model
 		{
 			$today_start =  strtotime(date('d-M-Y',time()).' 00:01');
 			$today_end =  strtotime(date('d-M-Y',time()).' 23:59');
-			$qry1=$this->db->limit($limit, $start)->where('utc_time <', $today_start)->order_by('utc_time', 'desc')->get('tbl_matches');
+			$qry1=$this->db->limit(10)->where('utc_time <', $today_start)->order_by('utc_time', 'desc')->get('tbl_matches');
 			//$this->db->flush_cache();
 			$qry2=$this->db->where('utc_time >', $today_start)->where('utc_time <', $today_end)->order_by('utc_time', 'asc')->get('tbl_matches');
 			//$this->db->flush_cache();

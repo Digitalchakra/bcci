@@ -360,6 +360,7 @@
                         </ul>
                         <!-- <div class = "pull-right"><a href="#">View All</a></div> -->
                     </div>
+                     <div class = "pull-right"><a href="<?php echo base_url('rank/team'); ?>">View All</a></div>
                   </div>
 
                 </div>
@@ -383,6 +384,7 @@
                         </ul>
                        <!--  <div class = "pull-right"><a href="#">View All</a></div> -->
                     </div>
+                    <div class = "pull-right"><a href="<?php echo base_url('rank/batting'); ?>">View All</a></div>
                   </div>
                  </div>
                 <div class="tab-pane fade" id="bowler">
@@ -405,6 +407,7 @@
                         </ul>
                         <!-- <div class = "pull-right"><a href="#">View All</a></div> -->
                     </div>
+                    <div class = "pull-right"><a href="<?php echo base_url('rank/bowling'); ?>">View All</a></div>
                   </div>
                 </div>
                 <div class="tab-pane fade" id="allRounder">
@@ -427,6 +430,7 @@
                         </ul>
                         <!-- <div class = "pull-right"><a href="#">View All</a></div> -->
                     </div>
+                    <div class = "pull-right"><a href="<?php echo base_url('rank/allrounder'); ?>">View All</a></div>
                   </div>
                 </div>
               </div>
