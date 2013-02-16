@@ -534,7 +534,7 @@ function livescoredisplay(data)
 
 				//last name
 				if(data['striker'].fullName != "" && data['strikerbowler'].fullName != "")
-				$('#strikers_lname').html(data['striker'].fullName.split(' ').slice(-1).join(' ')+" to "+data['strikerbowler'].fullName.split(' ').slice(-1).join(' '));
+				$('#strikers_lname').html(data['strikerbowler'].fullName.split(' ').slice(-1).join(' ')+" to "+data['striker'].fullName.split(' ').slice(-1).join(' '));
 				//split(' ').slice(-1).join(' ');
 
 
