@@ -1,10 +1,10 @@
 
-.dropdown {
+.dropdown_select {
   display: inline-block;
   position: relative;
   overflow: hidden;
   height: 28px;
-  width: 150px;
+  width: auto;
   background: #f2f2f2;
   border: 1px solid;
   border-color: #999;
@@ -17,7 +17,7 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 	margin:0 0 -8px 20px;
 }
-.dropdown:before, .dropdown:after {
+.dropdown_select:before, dropdown_select:after {
   content: '';
   position: absolute;
   z-index: 2;
@@ -29,11 +29,11 @@
   border-color: #888888 transparent;
   pointer-events: none;
 }
-.dropdown:before {
+.dropdown_select:before {
   border-bottom-style: solid;
   border-top: none;
 }
-.dropdown:after {
+.dropdown_select:after {
   margin-top: 7px;
   border-top-style: solid;
   border-bottom: none;
@@ -41,9 +41,9 @@
 
 .dropdown-select {
   position: relative;
-  width: 130%;
+  width: 100%;
   margin: 0;
-  padding: 6px 8px 6px 10px;
+  padding: 6px 25px 6px 10px;
   height: 28px;
   line-height: 14px;
   font-size: 12px;

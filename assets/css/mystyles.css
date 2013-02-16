@@ -252,12 +252,19 @@ td a{
 	text-transform: none;
 	padding: 0 0 0 5px;
 	font-weight: normal;
+	margin:10px;
 }
 h5 {
 	text-transform: none;
 	padding: 0 0 0 5px;
 	font-weight: bold;
 	font-size:12px;
+	margin:10px;
+
+}
+h6 {
+		margin:10px;
+
 }
 h4 {
 	color:#a82e0f;
@@ -267,6 +274,7 @@ h4 {
 	font-weight: normal;
 	font-size:18px;
 	line-height:16px;
+	margin:10px;
 }
 
 .footer-box {

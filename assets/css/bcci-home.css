@@ -29,6 +29,13 @@
 
 /*-----------------------LIVE SCORE----------------------------*/
 
+.matches-popout {
+	width:49px;
+	height:42px;
+	margin:-20px -20px;
+	background-image:url(../Images/list-popup_03.png);
+}
+
 /*-----------------------Tabs---------------------------------*/
 .tabs-box {
 	background: #f6f5f5; /* Old browsers */
@@ -263,7 +270,7 @@ border-radius:0px;
 	width:49px;
 	height:42px;
 	margin:-15px -10px;
-	background-image:url(../../Base%2001/Images/results-list_03.png);
+	background-image:url(../Images/results-list_03.png);
 }
 
 

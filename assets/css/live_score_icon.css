@@ -49,4 +49,5 @@
 
 .team_icon .flag {
     background: url(../Images/flags-big.png)  no-repeat top left;
+	margin:2px;
 }

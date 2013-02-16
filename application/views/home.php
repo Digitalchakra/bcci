@@ -21,13 +21,16 @@
          <div class="padding20">
           <div class="span12">
             <div id="no_matches" class="row-fluid">
-             <h5 id="series_title" class="white pull-left"></h5>
-              <div class="dropdown pull-right">
-                <select class="dropdown-select" name="one" id="livescore_dd">
-                  <!--<option class="red-btn" value="1">Live Matches</option>
-                  <option value="2">Australia vs England</option>
-                  <option value="2">South Africa vs Sri Lanka</option>-->
-                </select>
+             	<div class="span7"><h5 id="series_title" class="white pull-left"></h5></div>
+              
+                <div class = "span5">
+                        <div class = "matches-popout pull-right"> </div>
+                    </div>
+                    <!--<select class="dropdown-select" name="one" id="livescore_dd">
+                      <option class="red-btn" value="1">Live Matches</option>
+                      <option value="2">Australia vs England</option>
+                      <option value="2">South Africa vs Sri Lanka</option>
+                    </select>-->
               </div>
             </div>
             <div style="text-align:center" id="team_images" class="row-fluid margint20">
@@ -140,7 +143,6 @@
      </div>
 </div>
 
- </div>
 
   <div class = "row">
     <div class = "span12 margint20">
@@ -281,7 +283,7 @@
             </select>
           </div>
                <a href = "<?php echo base_url('result');?>">
-            <div class = "span pull-right margint10">View all</div>
+            <div class = "list-box pull-right"></div>
             </a> </h4>
         </div>
         <div class="accordion" id="accordion2">

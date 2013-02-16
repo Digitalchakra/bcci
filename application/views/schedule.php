@@ -14,43 +14,12 @@
       <!--Sub Menu Dropdown-->
       <div class = "row">
       	<div class = "span5 margint10">
-          <div class = "paddingr115">
-            <div class="navbar sub-nav">
-              <div class="navbar-inner">
-                <ul class = "nav"><p><h4>Schedule</h4></p>
-                  <!--Schedule Drop-->
-                  <!--<li class = "dropdown  active">
-                    <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
-                      Schedule
-                    </a>
-                  </li>-->
-                  <!--Squad Drop-->
-                  <!--<li class = "dropdown">
-                    <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
-                      Squads
-                    </a>
-                  </li>-->
-                  <!--Results Drop-->
-                 <!-- <li class = "dropdown">
-                    <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
-                      Results
-                    </a>
-                  </li>-->
-                  <!--Points Table Drop-->
-                <!--  <li class = "dropdown">
-                    <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
-                      Points Table
-                    </a>
-                  </li>-->
-                </ul>
-              </div>
-            </div>
-          </div>
+        	<h4>Schedule</h4>
         </div>
 
         <!--Matches Dropdown-->
-        <div class = "span3 offset1 margint20">
-          <div class="dropdown">
+        <div class = "span3 offset1 margint10">
+          <div class="dropdown_select">
             
             <select id="shedulemenu" name="one" class="dropdown-select">
 				<option value="" class="red-btn"><?php echo $content['upcoming'][0]->srs_name; ?></option>
@@ -73,7 +42,7 @@
 
       <!--Table-->
       <div class = "row">
-      	<div class = "span9 margint-20">
+      	<div class = "span9 margint10">
           <!--<p><h4>Schedule</h4></p>-->
           <table class="table table-bordered table-striped">
             <colgroup>
