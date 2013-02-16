@@ -9,11 +9,12 @@
 						  </div>
 						</div>
 					  </div>
+					 
 					  <ul class="nav nav-tabs tabs-box gradient" id="matchestab">
           <li class="active"><a data-toggle="tab" href="#batsman">Batsmen</a></li>
           <li><a data-toggle="tab" href="#batswomen">Batswomen</a></li>
         </ul>
-        <div class="tab-content">
+        <div class="tab-content tab-content-rank">
         	<?php
                 	if(count($content['batsman'])>0)
                 	{
@@ -76,6 +77,7 @@
 						}
 						?>
 						</ul>
+
                     </div>
                     <div class="span4">
                         <ul style="list-style:none">
