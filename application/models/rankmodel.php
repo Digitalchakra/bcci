@@ -120,4 +120,67 @@ class Rankmodel extends CI_Model
 			}
 			return $data;
 	}
+function getBatswomen($limit, $start)
+	{
+		$data=array();
+			$qry1 = $this->db->limit($limit, $start)->order_by("rating", "desc")->where('type', 'batting')->where('match', 'womenodi')->get('tbl_player_rank');
+		if($qry1->num_rows()>0)
+			{
+				foreach($qry1->result() as $row)
+				{
+					$data['ODI'][]=$row;
+				}
+			}
+			$qry2 = $this->db->limit($limit, $start)->order_by("rating", "desc")->where('type', 'batting')->where('match', 'woment20')->get('tbl_player_rank');
+		if($qry2->num_rows()>0)
+			{
+				foreach($qry2->result() as $row)
+				{
+					$data['T20'][]=$row;
+				}
+			}
+			return $data;
+	}
+	function getBowlerwomen($limit, $start)
+	{
+		$data=array();
+			$qry1 = $this->db->limit($limit, $start)->order_by("rating", "desc")->where('type', 'bowling')->where('match', 'womenodi')->get('tbl_player_rank');
+		if($qry1->num_rows()>0)
+			{
+				foreach($qry1->result() as $row)
+				{
+					$data['ODI'][]=$row;
+				}
+			}
+			$qry2 = $this->db->limit($limit, $start)->order_by("rating", "desc")->where('type', 'bowling')->where('match', 'woment20')->get('tbl_player_rank');
+		if($qry2->num_rows()>0)
+			{
+				foreach($qry2->result() as $row)
+				{
+					$data['T20'][]=$row;
+				}
+			}
+			return $data;
+	}
+	function getAllrounderwomen($limit, $start)
+	{
+		$data=array();
+			$qry1 = $this->db->limit($limit, $start)->order_by("rating", "desc")->where('type', 'all-rounder')->where('match', 'womenodi')->get('tbl_player_rank');
+		if($qry1->num_rows()>0)
+			{
+				foreach($qry1->result() as $row)
+				{
+					$data['ODI'][]=$row;
+				}
+			}
+			$qry2 = $this->db->limit($limit, $start)->order_by("rating", "desc")->where('type', 'all-rounder')->where('match', 'woment20')->get('tbl_player_rank');
+		if($qry2->num_rows()>0)
+			{
+				foreach($qry2->result() as $row)
+				{
+					$data['T20'][]=$row;
+				}
+			}
+			return $data;
+	}
 }
