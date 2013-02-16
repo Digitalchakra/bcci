@@ -41,7 +41,7 @@ class Rank extends CI_Controller
 	function team()
 	{
 		$this->load->model('rankmodel');
-        $data['content'] = $this->rankmodel->getTeamRank(10,0);
+        $data['content'] = $this->rankmodel->getTeamRank(50,0);
         //echo "<pre>";
 		//print_r($data); die;
 		$data['view_page'] = 'team_rank';
