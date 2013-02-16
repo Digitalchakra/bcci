@@ -358,6 +358,7 @@
                         </ul>
                         <!-- <div class = "pull-right"><a href="#">View All</a></div> -->
                     </div>
+                     <div class = "pull-right"><a href="<?php echo base_url('rank/team'); ?>">View All</a></div>
                   </div>
 
                 </div>
