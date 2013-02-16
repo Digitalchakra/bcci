@@ -7,9 +7,9 @@ $(document).ready(function()
 		$.myplaceholder={};
 		$.myplaceholder.mylivescore=[];
 		$.myplaceholder.checkreload=0;
-		rank('batsman');
-		rank('bowler');
-		rank('allrounder');
+		rank('batsman_json');
+		rank('bowler_json');
+		rank('allrounder_json');
 		photos();
 		videos();
 		article();
@@ -186,7 +186,7 @@ function team()
 	var list1='';
 	var list2='';
 	$.ajax({
-        url: baseurl+'rank/team',
+        url: baseurl+'rank/team_json',
         type: "GET",
         dataType:'JSON',
         success: function(data) {

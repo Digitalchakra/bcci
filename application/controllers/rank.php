@@ -6,34 +6,34 @@ class Rank extends CI_Controller
 	{
 		$this->load->helper('url');
 	}
-	function team()
+	function team_json()
 	{
 		$this->load->model('rankmodel');
-		$result=$this->rankmodel->getTeamRank();
+		$result=$this->rankmodel->getTeamRank(3,0);
 		$data['resultset']=$result;
 		$this->load->view('json', $data);
 		//print_r($result);
 	}
-	function batsman()
+	function batsman_json()
 	{
 		$this->load->model('rankmodel');
-		$result = $this->rankmodel->getBatsman();
+		$result = $this->rankmodel->getBatsman(3,0);
 		$data['resultset']=$result;
 		$this->load->view('json', $data);
 		//print_r($result);
 	}
-	function bowler()
+	function bowler_json()
 	{
 		$this->load->model('rankmodel');
-		$result = $this->rankmodel->getBowler();
+		$result = $this->rankmodel->getBowler(3,0);
 		$data['resultset']=$result;
 		$this->load->view('json', $data);
 		//print_r($result);
 	}
-	function allrounder()
+	function allrounder_json()
 	{
 		$this->load->model('rankmodel');
-		$result = $this->rankmodel->getAllRounder();
+		$result = $this->rankmodel->getAllRounder(3,0);
 		$data['resultset']=$result;
 		$this->load->view('json', $data);
 		//print_r($result);

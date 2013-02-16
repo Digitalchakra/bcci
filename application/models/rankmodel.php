@@ -1,12 +1,12 @@
 <?php
 class Rankmodel extends CI_Model
 {
-	function getTeamRank()
+	function getTeamRank($limit, $start)
 	{
 		$data=array();
 		//$this->db->where('type', 'batting');
 		//$this->db->from('tbl_player_rank');
-		$qry = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'test')->get('tbl_team_rank');
+		$qry = $this->db->limit($limit, $start)->order_by("rating", "desc")->where('type', 'test')->get('tbl_team_rank');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)
@@ -14,7 +14,7 @@ class Rankmodel extends CI_Model
 					$data['Test'][]=$row;
 				}
 			}
-			$qry1 = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'odi')->get('tbl_team_rank');
+			$qry1 = $this->db->limit($limit, $start)->order_by("rating", "desc")->where('type', 'odi')->get('tbl_team_rank');
 		if($qry1->num_rows()>0)
 			{
 				foreach($qry1->result() as $row)
@@ -22,7 +22,7 @@ class Rankmodel extends CI_Model
 					$data['ODI'][]=$row;
 				}
 			}
-			$qry2 = $this->db->limit(3)->order_by("rating", "desc")->where('type', 't20')->get('tbl_team_rank');
+			$qry2 = $this->db->limit($limit, $start)->order_by("rating", "desc")->where('type', 't20')->get('tbl_team_rank');
 		if($qry2->num_rows()>0)
 			{
 				foreach($qry2->result() as $row)
@@ -34,10 +34,10 @@ class Rankmodel extends CI_Model
 			}
 				return $data;
 	}
-	function getBatsman()
+	function getBatsman($limit, $start)
 	{
 		$data=array();
-		$qry = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'batting')->where('match', 'test')->get('tbl_player_rank');
+		$qry = $this->db->limit($limit, $start)->order_by("rating", "desc")->where('type', 'batting')->where('match', 'test')->get('tbl_player_rank');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)
@@ -45,7 +45,7 @@ class Rankmodel extends CI_Model
 					$data['Test'][]=$row;
 				}
 			}
-			$qry1 = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'batting')->where('match', 'odi')->get('tbl_player_rank');
+			$qry1 = $this->db->limit($limit, $start)->order_by("rating", "desc")->where('type', 'batting')->where('match', 'odi')->get('tbl_player_rank');
 		if($qry1->num_rows()>0)
 			{
 				foreach($qry1->result() as $row)
@@ -53,7 +53,7 @@ class Rankmodel extends CI_Model
 					$data['ODI'][]=$row;
 				}
 			}
-			$qry2 = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'batting')->where('match', 't20')->get('tbl_player_rank');
+			$qry2 = $this->db->limit($limit, $start)->order_by("rating", "desc")->where('type', 'batting')->where('match', 't20')->get('tbl_player_rank');
 		if($qry2->num_rows()>0)
 			{
 				foreach($qry2->result() as $row)
@@ -63,10 +63,10 @@ class Rankmodel extends CI_Model
 			}
 			return $data;
 	}
-	function getBowler()
+	function getBowler($limit, $start)
 	{
 		$data=array();
-		$qry = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'bowling')->where('match', 'test')->get('tbl_player_rank');
+		$qry = $this->db->limit($limit, $start)->order_by("rating", "desc")->where('type', 'bowling')->where('match', 'test')->get('tbl_player_rank');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)
@@ -74,7 +74,7 @@ class Rankmodel extends CI_Model
 					$data['Test'][]=$row;
 				}
 			}
-			$qry1 = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'bowling')->where('match', 'odi')->get('tbl_player_rank');
+			$qry1 = $this->db->limit($limit, $start)->order_by("rating", "desc")->where('type', 'bowling')->where('match', 'odi')->get('tbl_player_rank');
 		if($qry1->num_rows()>0)
 			{
 				foreach($qry1->result() as $row)
@@ -82,7 +82,7 @@ class Rankmodel extends CI_Model
 					$data['ODI'][]=$row;
 				}
 			}
-			$qry2 = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'bowling')->where('match', 't20')->get('tbl_player_rank');
+			$qry2 = $this->db->limit($limit, $start)->order_by("rating", "desc")->where('type', 'bowling')->where('match', 't20')->get('tbl_player_rank');
 		if($qry2->num_rows()>0)
 			{
 				foreach($qry2->result() as $row)
@@ -92,9 +92,9 @@ class Rankmodel extends CI_Model
 			}
 			return $data;
 	}
-	function getAllRounder()
+	function getAllRounder($limit, $start)
 	{
-		$qry = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'all-rounder')->where('match', 'test')->get('tbl_player_rank');
+		$qry = $this->db->limit($limit, $start)->order_by("rating", "desc")->where('type', 'all-rounder')->where('match', 'test')->get('tbl_player_rank');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)
@@ -102,7 +102,7 @@ class Rankmodel extends CI_Model
 					$data['Test'][]=$row;
 				}
 			}
-			$qry1 = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'all-rounder')->where('match', 'odi')->get('tbl_player_rank');
+			$qry1 = $this->db->limit($limit, $start)->order_by("rating", "desc")->where('type', 'all-rounder')->where('match', 'odi')->get('tbl_player_rank');
 		if($qry1->num_rows()>0)
 			{
 				foreach($qry1->result() as $row)
@@ -110,7 +110,7 @@ class Rankmodel extends CI_Model
 					$data['ODI'][]=$row;
 				}
 			}
-			$qry2 = $this->db->limit(3)->order_by("rating", "desc")->where('type', 'all-rounder')->where('match', 't20')->get('tbl_player_rank');
+			$qry2 = $this->db->limit($limit, $start)->order_by("rating", "desc")->where('type', 'all-rounder')->where('match', 't20')->get('tbl_player_rank');
 		if($qry2->num_rows()>0)
 			{
 				foreach($qry2->result() as $row)
