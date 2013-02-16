@@ -478,7 +478,14 @@ function livescoredisplay(data)
 
 				//RunRate
 				$('#crr').html("CRR : "+data.crr);
-				$('#rrr').html("RRR : "+data.rrr);
+				if(data.rrr == "")
+				{
+					$('#rrr').html("");
+				}
+				else
+				{
+					$('#rrr').html("RRR : "+data.rrr);
+				}
 
 				//batting team score/over
 				$('#team1_score').html(data['currentBatTeamScore'].runsAndWicket+'*');
