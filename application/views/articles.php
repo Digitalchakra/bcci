@@ -31,7 +31,7 @@
                 <!----Article short description-->
                 <p><?php echo substr($row->content,0,strpos($row->content,' ',500)).'...'; ?></p>
                 <!--Read More-->
-                <a class = "btn btn-primary readon pull-right" href = "/article/get/<?php echo $row->id; ?>">Read More</a> </div>
+                <a class = "btn btn-primary readon pull-right" href = "<?php echo base_url('article/get/'); echo $row->id; ?>">Read More</a> </div>
             </li>
             <?php
 			}
