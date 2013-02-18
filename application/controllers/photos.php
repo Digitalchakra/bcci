@@ -15,7 +15,7 @@ class Photos extends CI_Controller
 		$config = array();
         $config['base_url'] = base_url() . 'photos/index';
         $config['total_rows'] = $this->photosmodel->recordCount();
-        $config['per_page'] = 20;
+        $config['per_page'] = 18;
         $config['uri_segment'] = 3;
         $config['num_links']=5;
         $config['full_tag_open'] = '<li>';

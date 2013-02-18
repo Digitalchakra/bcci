@@ -15,7 +15,7 @@ class Videos extends CI_Controller
 		$config = array();
         $config['base_url'] = base_url() . 'videos/index';
         $config['total_rows'] = $this->videosmodel->recordCount();
-        $config['per_page'] = 5;
+        $config['per_page'] = 18	;
         $config['uri_segment'] = 3;
         $config['num_links']=5;
         $config['full_tag_open'] = '<li>';
