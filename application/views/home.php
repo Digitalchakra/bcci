@@ -514,7 +514,7 @@
 
            </div>
            <div class = "span pull-right margint10">
-                	<a href = "/article" class="btn btn-primary">View All</a>
+                	<a href = "<?php echo base_url('article'); ?>" class="btn btn-primary">View All</a>
                 </div>
         </div>
       </div>
