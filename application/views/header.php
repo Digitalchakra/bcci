@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<link rel="icon" type="image/png" href="<?php echo base_url('assets/img/favicon.png'); ?>">
+<link rel="icon" type="image/png" href="<?php echo base_url('assets/Images/favicon.png'); ?>">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="BCCI,Live Scores,Live,Scores,Cricket, India, News, Cricket Photos, Cricket Videos" />
 <meta name="keywords" content="BCCI,Cricket Live Scores,Cricket Live,Cricket Scores,Scores Cricket,Cricket Photo, Cricket Video" />
