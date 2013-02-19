@@ -14,6 +14,10 @@ $(document).ready(function()
 		videos();
 		article();
 		livescore();
+		$(".fancybox").fancybox(
+		{
+			preload:true
+			});
 	    /*setInterval(function() {
           result();
 			}, 60000);*/
@@ -368,11 +372,12 @@ function photos()
                 html+=    '<img src="'+data.resultset[i]['icon']+'">';
                 html+=    '<div class="mask">';
                 html+=       '<p>'+data.resultset[i]['pubdate']+'</p>';
-                html+=        '<a href="'+data.resultset[i]['src']+'" class="info">'+data.resultset[i]['description']+'</a>';
+                html+=        '<a title="'+data.resultset[i]['pubdate']+' - '+data.resultset[i]['description']+'" href="'+data.resultset[i]['src']+'" class="info fancybox" rel="photos">'+data.resultset[i]['description']+'</a>';
                 html+=    '</div>';
                 html+='</div>';
 			}
 			$('#photosgrid').html(html);
+			//$(".fancybox").fancybox();
         },
         error:function()
         {

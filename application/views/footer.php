@@ -132,6 +132,7 @@
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 	<script src="<?php echo base_url('assets/js/bootstrap-extra.min.js');?>"></script>
     <script src="<?php echo base_url('assets/js/footer.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/js/jquery.fancybox.pack.js'); ?> "></script>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/jquery.lightbox-0.5.css'); ?>" media="screen" />
 
 </body>
