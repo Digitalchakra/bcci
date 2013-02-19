@@ -52,15 +52,15 @@
             <li>
                 <a href="#<?php echo $row->id; ?>">
                     <img src="<?php echo $row->icon; ?>" />
-                    <span><?php echo $row->description; ?></span>
+                    <span><?php echo $row->description; ?> - <?php echo $row->pubdate; ?></span>
                 </a>
                 <div class="lb-overlay" id="<?php echo $row->id; ?>">
                     <img src="<?php echo $row->src; ?>" />
                     <div>
                         <h4><?php echo $row->description; ?></h4>
                         <h5><?php echo $row->pubdate; ?></h5>
-                        <a href="#<?php echo (($row->id)-1); ?>" class="lb-prev">Prev</a>
-                        <a href="#<?php echo (($row->id)+1); ?>" class="lb-next">Next</a>
+                        <a href="#<?php echo (($row->id)-1); ?>" >Prev</a>
+                        <a href="#<?php echo (($row->id)+1); ?>" >Next</a>
                     </div>
                     <a href="#page" class="lb-close">Close</a>
                 </div>
