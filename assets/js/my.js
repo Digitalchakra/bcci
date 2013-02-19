@@ -34,6 +34,8 @@ $(document).ready(function()
 				//alert(this.value);
 				//alert($.myplaceholder.mylivescore[this.value].matchFolder);
 				livescoredisplay($.myplaceholder.mylivescore[this.value]);
+				$.myplaceholder.checkreload=this.value;
+				alert($.myplaceholder.checkreload);
 				//$('.accordion-group').hide();
 				//$('.'+this.value).show();
 			});
@@ -157,10 +159,18 @@ function livescore()
 			//alert(data[listcount].matchDataType);
 			$(data).each(function()
 			{
-				if(data[listcount].matchDataType=='Live Data' && data[listcount].state !='preview')
+				
+				if(data[listcount].matchDataType=='Live Data')
 				{
+					if($.myplaceholder.checkreload == listcount)
+					{
+					option+='<option value="'+listcount+'" selected="selected">'+data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName+'</option>';
+					}
+					else
+					{
 					option+='<option value="'+listcount+'">'+data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName+'</option>';
-					 $.myplaceholder.mylivescore.push(data[listcount]);
+					}
+					$.myplaceholder.mylivescore.push(data[listcount]);
 				}
 				listcount++;
 
@@ -171,7 +181,7 @@ function livescore()
 			 * when ajax is loading make the current selected tab to update
 			 * instead of refresh the list
 			 */
-			livescoredisplay($.myplaceholder.mylivescore[0]);
+			livescoredisplay($.myplaceholder.mylivescore[$.myplaceholder.checkreload]);
 			/*if($.myplaceholder.checkreload==0)
 			{
 				$.myplaceholder.checkreload=1;
