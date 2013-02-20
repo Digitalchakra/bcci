@@ -35,7 +35,7 @@ $(document).ready(function()
 				//alert($.myplaceholder.mylivescore[this.value].matchFolder);
 				livescoredisplay($.myplaceholder.mylivescore[this.value]);
 				$.myplaceholder.checkreload=this.value;
-				alert($.myplaceholder.checkreload);
+				//alert($.myplaceholder.checkreload);
 				//$('.accordion-group').hide();
 				//$('.'+this.value).show();
 			});
