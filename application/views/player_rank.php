@@ -5,7 +5,7 @@
 					  <div class = "row">
 						<div class = "span12">
 						  <div class = "page-header">
-							  <h3><?php echo $page; ?></h3>
+							  <h3><?php echo $page; ?>  <sup style="text-transform:none">via yahoocricket.com</sup></h3>
 						  </div>
 						</div>
 					  </div>

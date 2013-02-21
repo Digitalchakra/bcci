@@ -17,12 +17,12 @@ $menu=array('ODI','T20','Test');
       <!--Sub Menu Dropdown-->
       <div class = "row">
       	<div class = "span5 margint10">
-        <h4>Results</h4>
+        <h4>Results <sup style="text-transform:none">via yahoocricket.com</sup></h4>
         </div>
         
         <!--Matches Dropdown-->
         <div class = "span4 margint20">
-          <div class="dropdown_select pull-right">
+          <div class="combo-dropdown pull-right">
            
             <select id = "resultmenu" class="dropdown-select">
 			  	<option value="" class="red-btn"><?php echo $content[0]->type; ?></option>

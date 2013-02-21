@@ -14,12 +14,12 @@
       <!--Sub Menu Dropdown-->
       <div class = "row">
       	<div class = "span5 margint10">
-        	<h4>Schedule</h4>
+        	<h4>Schedule <sup style="text-transform:none">via yahoocricket.com</sup></h4>
         </div>
 
         <!--Matches Dropdown-->
         <div class = "span3 offset1 margint10">
-          <div class="dropdown_select">
+          <div class="combo-dropdown">
             
             <select id="shedulemenu" name="one" class="dropdown-select">
 				<option value="" class="red-btn"><?php echo $content['upcoming'][0]->srs_name; ?></option>

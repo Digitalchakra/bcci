@@ -13,8 +13,8 @@
 <link href="<?php echo base_url('assets/css/menu.css'); ?>" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url('assets/css/bcci-home.css'); ?>" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url('assets/css/hoverfx.css'); ?>" rel="stylesheet" type="text/css">
-<link href="<?php echo base_url('assets/css/dropdown.css'); ?>" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url('assets/css/hoverfx_common.css'); ?>" rel="stylesheet" type="text/css">
+<link href="<?php echo base_url('assets/css/dropdown.css'); ?>" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url('assets/css/live_score_icon.css'); ?>" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url('assets/css/country_flag.css'); ?>" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url('assets/css/csslightbox.css'); ?>" rel="stylesheet" type="text/css">

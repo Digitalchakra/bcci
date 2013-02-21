@@ -1,5 +1,5 @@
 
-.dropdown_select {
+.combo-dropdown {
   display: inline-block;
   position: relative;
   overflow: hidden;
@@ -15,9 +15,33 @@
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-	margin:0 0 -8px 20px;
+	margin: -10px 0px -8px 20px;
 }
-.dropdown_select:before, dropdown_select:after {
+.combo-red {
+	background: #db5d1f; /* Old browsers */
+background: -moz-linear-gradient(top,  #db5d1f 0%, #b12310 99%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#db5d1f), color-stop(99%,#b12310)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #db5d1f 0%,#b12310 99%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #db5d1f 0%,#b12310 99%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #db5d1f 0%,#b12310 99%); /* IE10+ */
+background: linear-gradient(to bottom,  #db5d1f 0%,#b12310 99%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db5d1f', endColorstr='#b12310',GradientType=0 ); /* IE6-9 */
+border:1px solid #db5d1f;
+}
+.combo-red .dropdown-select, .combo-red .dropdown-select:focus {
+	color:#FFF;
+	  text-shadow: 0 1px rgba(0,0,0,0.65);
+}
+.combo-red .dropdown-select option {
+	color:#FFF;
+}
+.combo-red .dropdown-select option{
+	background-color:#db5d1f;
+	font-size:12px;
+	line-height:16px;
+	border:1px solid #db5d1f;
+}
+.combo-dropdown:before, .combo-dropdown:after {
   content: '';
   position: absolute;
   z-index: 2;
@@ -29,11 +53,11 @@
   border-color: #888888 transparent;
   pointer-events: none;
 }
-.dropdown_select:before {
+.combo-dropdown:before {
   border-bottom-style: solid;
   border-top: none;
 }
-.dropdown_select:after {
+.combo-dropdown:after {
   margin-top: 7px;
   border-top-style: solid;
   border-bottom: none;
@@ -41,7 +65,7 @@
 
 .dropdown-select {
   position: relative;
-  width: 100%;
+  width: 130%;
   margin: 0;
   padding: 6px 25px 6px 10px;
   height: 28px;

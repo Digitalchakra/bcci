@@ -1,6 +1,5 @@
 .lb-album{
-	width: 100%;
-	margin: 0 auto;
+	width: 98%;
 	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
 }
 .lb-album li{
@@ -12,11 +11,11 @@
 .lb-album li > a,
 .lb-album li > a img{
 	display: block;
-	width: 170px;
+	width: 160px;
 	height: 140px;
 }
 .lb-album li > a{
-	width: 170px;
+	width: 160px;
 	height: 140px;
 	position: relative;
 	padding: 10px;
@@ -30,7 +29,7 @@
 }
 .lb-album li > a span{
 	position: absolute;
-	width: 150px;
+	width: 140px;
 	height: 120px;
 	top: 10px;
 	left: 10px;
@@ -86,7 +85,7 @@
 	color: rgba(27,54,81,0.8);
 	width: 550px;
 	height: 80px;
-	margin: 40px auto 0px auto;
+	margin: 10px auto 0px auto;
 	text-shadow: 0px 1px 1px rgba(255,255,255,0.6);
 }
 .lb-overlay div h3,

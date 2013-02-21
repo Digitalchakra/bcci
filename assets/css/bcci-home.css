@@ -2,7 +2,16 @@
 
 /*-------------------------COMMON-----------------------------*/
 
-
+.credits:after {
+	content:"From yahoocricket.com";
+	font-size:10px;
+	color:#C30;
+	font-family:Tahoma, Geneva, sans-serif;
+	text-transform:none;
+	margin-left:10px;
+	top:-0.5em;
+	line-height:25px;
+}
 /*-------------------------CAROUSEL---------------------------*/
 .res-image  {
 	width:100%;
