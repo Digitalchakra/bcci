@@ -29,48 +29,25 @@
             </span>--></h3>
 </div>
 </div>
-		 <!--<?php
+		 
+<!--Photos-->
+<div class="main" id="photosgrid" style="margin-left:25px"> 
+	<?php
                   foreach($content as $row)
                   {
                     ?>
-                    <div class="thumbnail span2 margint20">
-                      <a href = "<?php echo $row->src; ?>"><img style="width: 162px; height:120px;" src="<?php echo $row->icon; ?>"></a>
-                      <div class="caption">
-                        <h5 style="margin:0;"><?php echo $row->description; ?></h5>
-                        <p><h6 style="margin:0;"><?php echo $row->pubdate; ?></h6></p>
-                      </div>
-                    </div>
-           <?php
-            }
-?>-->
-          
-          <ul class="lb-album">
-          <?php
-                  foreach($content as $row)
-                  {
-                    ?>
-            <li>
-                <a href="#<?php echo $row->id; ?>">
-                    <img src="<?php echo $row->icon; ?>" />
-                    <span><?php echo $row->description; ?> - <?php echo $row->pubdate; ?></span>
-                </a>
-                <div class="lb-overlay" id="<?php echo $row->id; ?>">
-                    <img src="<?php echo $row->src; ?>" />
-                    <div>
-                    	<a href="#<?php echo (($row->id)-1); ?>" style="margin-right:20px">Prev</a>
-                        <a href="#<?php echo (($row->id)+1); ?>" style="margin-left:20px">Next</a>
-                        <h4><?php echo $row->description; ?></h4>
-                        <h5><?php echo $row->pubdate; ?></h5>
-                        
-                    </div>
-                    <a href="#page" class="lb-close">Close</a>
-                </div>
-            </li>
-             <?php
+	<div class="view view-first">
+    	<img src = "<?php echo $row->icon; ?>" />
+        <div class="mask">
+        	<p><?php echo $row->pubdate; ?></p>
+            <a title = "<?php echo $row->pubdate; ?> - <?php echo $row->description; ?>" href = "<?php echo $row->src; ?>" class="info fancybox" rel="photos"><?php echo $row->description; ?></a>
+        </div>
+    </div>
+     <?php
             }
           ?>
-        </ul>
-          
+</div>
+<!--=======-->        
 </div>
 <!--PAGINATION-->
 <div class = "row">
@@ -85,3 +62,4 @@
   </div>
 </div>
 </div>
+
