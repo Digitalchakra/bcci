@@ -287,7 +287,7 @@
     <div class = "span4 margint20">
       <div class = "white-block">
         <div class = "heading">
-          <h4>Results <sup>via yahoocricket.com</sup>
+          <h4>Results <sup>via foxsports.com.au</sup>
             <div class="btn-group red-button"  style = "margin:-15px 0 -10px 15px;">
             <button class="btn red-btn">Select Match</button>
             <button class="btn dropdown-toggle red-btn" data-toggle="dropdown"> <span class="caret"></span> </button>
@@ -326,7 +326,7 @@
     <div class = "span8 margint20">
       <ul id="newstab" class="nav nav-tabs tabs-line">
         <li class="active"><a href="#featuredNews" data-toggle="tab">Featured News</a></li>
-        <li><a href="#recentNews" data-toggle="tab">Recent News</a></li><li><sub>via yahoocricket.com</sub></li>
+        <li><a href="#recentNews" data-toggle="tab">Recent News</a></li><li><sub>via bbc.co.uk</sub></li>
       </ul>
       <div id="newstabContent" class="tab-content">
         <div class="tab-pane fade in active" id="featuredNews"> 
@@ -354,7 +354,7 @@
   <div class = "row">
     <div class = "span12 margint20">
       <ul id="rankrecordtab" class="nav nav-tabs tabs-line">
-        <li class="active"><a href="#ranking" data-toggle="tab">Rankings</a></li><li><sub>via yahoocricket.com</sub></li>
+        <li class="active"><a href="#ranking" data-toggle="tab">Rankings</a></li><li><sub>via relianceiccrankings.com</sub></li>
         <!-- <li><a href="#records" data-toggle="tab">Records</a></li>-->
       </ul>
       <div id="rankrecordtabContent" class="tab-content">
@@ -490,7 +490,7 @@
           <!----Photos and Videos Tab---->
           <ul id = "gallerytab" class = "nav nav-tabs tabs-line">
             <li class = "active"><a href ="#photos" data-toggle = "tab">Photos</a></li>
-            <li><a href ="#videos" data-toggle = "tab">Videos</a></li><li><sub>via yahoocricket.com</sub></li>
+            <li><a href ="#videos" data-toggle = "tab">Videos</a></li><li><sub>via espncricinfo.com</sub></li>
           </ul>
           <div id = "gallerytabContent" class = "tab-content">
             <div class = "tab-pane fade in active" id = "photos">

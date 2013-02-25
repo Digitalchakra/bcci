@@ -4,7 +4,7 @@
 					  <div class = "row">
 						<div class = "span12">
 						  <div class = "page-header">
-							  <h3>Team Ranking <sup style="text-transform:none">via yahoocricket.com</sup></h3>
+							  <h3>Team Ranking <sup style="text-transform:none">via relianceiccrankings.com</sup></h3>
 						  </div>
 						</div>
 					  </div>
