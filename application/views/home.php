@@ -15,7 +15,7 @@
     </div>
     
     <!--Live SCore-->
-    <div id="liveScore" class="span4 margint10 livescore_bg">
+    <div id="liveScore" class="span4 margint10 livescore_bg visible-desktop">
       <div class="row-fluid">
         <div class="padding20">
           <div class="span12">
@@ -31,22 +31,14 @@
                 <h5 id="series_title" class="white pull-left"></h5>
               </div>
               <div class = "span5">
-                   <!--<div class = "combo-dropdown combo-red">
-                	<select class="dropdown-select" name="one" id="livescore_dd">
+                   
+                	<select class="selectpicker" name="one" id="livescore_dd" data-style="btn-warning"  style="display:none">
                       <option class="red-btn" value="1">Live Matches</option>
                       <option value="2">Australia vs England</option>
                       <option value="2">South Africa vs Sri Lanka</option>
                     </select>
-                  </div>-->
-                  <div class="btn-group red-button"  style = "margin:-15px 0 -10px -10px;">
-            <button class="btn red-btn">Select Match</button>
-            <button class="btn dropdown-toggle red-btn" data-toggle="dropdown"> <span class="caret"></span> </button>
-            <ul class="dropdown-menu red-dropdown">
-              <li><a href = "#">ODI</a></li>
-              <li><a href = "#">T20</a></li>
-              <li><a href = "#">Test</a></li>
-            </ul>
-          </div>
+                  
+                  
               </div>
             </div>
           </div>
@@ -284,31 +276,26 @@
     </div>
     
     <!--Results On the right-->
-    <div class = "span4 margint20">
+    <div class = "span4 margint20 visible-desktop">
       <div class = "white-block">
         <div class = "heading">
-          <h4>Results <sup>via yahoocricket.com</sup>
-            <div class="btn-group red-button"  style = "margin:-15px 0 -10px 15px;">
-            <button class="btn red-btn">Select Match</button>
-            <button class="btn dropdown-toggle red-btn" data-toggle="dropdown"> <span class="caret"></span> </button>
-            <ul class="dropdown-menu red-dropdown">
-              <li><a href = "#">ODI</a></li>
-              <li><a href = "#">T20</a></li>
-              <li><a href = "#">Test</a></li>
-            </ul>
-          </div>
-            <!--<div class="combo-dropdown">
-              <select id="resultmenu" name="one"  class="dropdown-select">
-                <option value="ODI" class="red-btn">ODI</option>
-                
--              
-                <option value="T20">T20</option>
-                
--              
-                <option value="Test">Test</option>
-              </select>
-            </div>-->
-            </h4>
+        	<div class="row-fluid margint10">
+            	<div class="span8">
+                	<h4>Results <sup>via yahoocricket.com</sup></h4>
+                </div>
+                <div class="span4">
+                    <select id="resultmenu" name="one"  class="selectpicker" data-style = "btn-warning" style="display:none">
+                    <option value="ODI" class="red-btn">ODI</option>
+                    
+    -              
+                    <option value="T20">T20</option>
+                    
+    -              
+                    <option value="Test">Test</option>
+                  </select>
+              </div>
+            </div>
+          
         </div>
         <div class="accordion" id="accordion2"> 
           <!--Result list from my.js--> 
@@ -558,4 +545,9 @@
 </div>
 </div>
 <script src="<?php echo base_url('assets/js/my.js');?>"></script>
+<script type="application/javascript">
+ window.onload=function(){
+      $('.selectpicker').selectpicker();
+      };
+</script>
 </div>

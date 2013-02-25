@@ -19,9 +19,8 @@
 
         <!--Matches Dropdown-->
         <div class = "span3 offset1 margint10">
-          <div class="combo-dropdown">
             
-            <select id="shedulemenu" name="one" class="dropdown-select">
+            <select id="shedulemenu" name="one" class="selectpicker" style = "display:none">
 				<option value="" class="red-btn"><?php echo $content['upcoming'][0]->srs_name; ?></option>
 				<?php
 				foreach($srs_list as $row)
@@ -36,7 +35,6 @@
                 <li><a href = "#">England vs New Zealand</a></li>
                 <li><a href = "#">S Africa vs Australia</a></li>-->
            </select>
-          </div>
         </div>
       </div>
 
@@ -144,3 +142,8 @@
   </div>
 </div>
 <script src="<?php echo base_url('assets/js/schedule.js');?>"></script>
+<script type="application/javascript">
+ window.onload=function(){
+      $('.selectpicker').selectpicker();
+      };
+</script>

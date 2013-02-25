@@ -14,6 +14,17 @@
           <li class="active"><a data-toggle="tab" href="#batsman">Men</a></li>
           <li><a data-toggle="tab" href="#batswomen">Women</a></li>
         </ul>
+        <div class="row-fluid">
+        	<div class="span4">
+            	<h4 style="margin-left:20px">Test</h4>
+            </div>
+            <div class="span4">
+            	<h4 style="margin-left:20px">ODI</h4>
+            </div>
+            <div class="span4">
+            	<h4 style="margin-left:20px">T20</h4>
+            </div>
+        </div>
         <div class="tab-content tab-content-rank">
         	<?php
                 	if(count($content['batsman'])>0)
@@ -23,7 +34,6 @@
                   <div class="row-fluid rankings">
                   	<div class="span4">
                         <ul style="list-style:none">
-							<h4>Test</h4>
 							<?php
 							$i=1;
 							foreach($content['batsman']['Test'] as $test)
@@ -52,7 +62,6 @@
                     </div>
                     <div class="span4">
                         <ul style="list-style:none">
-							<h4>ODI</h4>
 							<?php
 							$i=1;
 							foreach($content['batsman']['ODI'] as $odi)
@@ -81,7 +90,6 @@
                     </div>
                     <div class="span4">
                         <ul style="list-style:none">
-							<h4>T20</h4>
 							<?php
 							$i=1;
 							foreach($content['batsman']['T20'] as $t20)
