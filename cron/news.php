@@ -45,7 +45,7 @@ try
 							{
 								if($p->getAttribute('class')=='event-coverage')
 								continue;
-								if($i>2)
+								if($i>3)
 								break;
 								$desc_html=$desc_html.$p->outertext;
 								$i++;
