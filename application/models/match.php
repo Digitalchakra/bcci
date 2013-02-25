@@ -5,7 +5,7 @@ class Match extends CI_Model
 	{
 		$today_start =  strtotime(date('d-M-Y',time()).' 00:01');
 		$today_end =  strtotime(date('d-M-Y',time()).' 23:59');
-		$this->db->where('utc_time >', $today_end);
+		$this->db->where('sutc_time >', $today_end);
 		$this->db->where('srs_id',$srs_id);
 		$this->db->from('tbl_matches');
 		return $this->db->count_all_results();
@@ -13,12 +13,12 @@ class Match extends CI_Model
 	function getMatchs($limit, $start)
 		{
 			$today_start =  strtotime(date('d-M-Y',time()).' 00:01');
-			$today_end =  strtotime(date('d-M-Y',time()).' 23:59');
-			$qry1=$this->db->limit(10)->where('utc_time <', $today_start)->order_by('utc_time', 'desc')->get('tbl_matches');
+			$today_end =  strtotime(date('d-M-Y',time()).' 23:58');
+			$qry1=$this->db->limit(10)->where('eutc_time <', $today_start)->order_by('eutc_time', 'desc')->get('tbl_matches');
 			//$this->db->flush_cache();
-			$qry2=$this->db->where('utc_time >', $today_start)->where('utc_time <', $today_end)->order_by('utc_time', 'asc')->get('tbl_matches');
+			$qry2=$this->db->where('sutc_time <', time())->where('eutc_time >', time())->order_by('sutc_time', 'asc')->get('tbl_matches');
 			//$this->db->flush_cache();
-			$qry3=$this->db->limit($limit, $start)->where('utc_time >', $today_end)->order_by('utc_time', 'asc')->get('tbl_matches');
+			$qry3=$this->db->limit($limit, $start)->where('sutc_time >', $today_end)->order_by('sutc_time', 'asc')->get('tbl_matches');
 			if($qry1->num_rows()>0)
 			{
 				$data=array();
@@ -58,13 +58,14 @@ class Match extends CI_Model
 			{
 				$result['upcoming']=NULL;
 			}
+			//print_r($result); die;
 			return $result;
 		}
 		function getUpcomingMatch($limit, $start, $srs_id)
 		{
 			$today_start =  strtotime(date('d-M-Y',time()).' 00:01');
 			$today_end =  strtotime(date('d-M-Y',time()).' 23:59');
-			$qry2=$this->db->limit($limit, $start)->where('utc_time >', $today_end)->where('srs_id',$srs_id)->order_by('utc_time', 'asc')->get('tbl_matches');
+			$qry2=$this->db->limit($limit, $start)->where('sutc_time >', $today_end)->where('srs_id',$srs_id)->order_by('sutc_time', 'asc')->get('tbl_matches');
 			if($qry2->num_rows()>0)
 			{
 				$data=array();
@@ -84,11 +85,11 @@ class Match extends CI_Model
 		{
 			if($limit)
 			{
-				$qry1=$this->db->limit($limit)->group_by('srs_id')->where('utc_time >', $today_end)->order_by('utc_time', 'asc')->get('tbl_matches');
+				$qry1=$this->db->limit($limit)->group_by('srs_id')->where('sutc_time >', $today_end)->order_by('sutc_time', 'asc')->get('tbl_matches');
 			}
 			else
 			{
-			$qry1=$this->db->group_by('srs_id')->where('utc_time >', $today_end)->order_by('utc_time', 'asc')->get('tbl_matches');
+			$qry1=$this->db->group_by('srs_id')->where('sutc_time >', $today_end)->order_by('sutc_time', 'asc')->get('tbl_matches');
 			}
 			if($qry1->num_rows()>0)
 			{

@@ -210,7 +210,7 @@
                     ?>
                 <tr>
                   <td><?php echo $row->description; ?></td>
-                  <td><p><?php echo $row->date; ?></p></td>
+                   <td><p><?php echo $row->sdate; if($row->sdate != $row->edate) echo "<b> to </b>".$row->edate; ?></p></td>
                   <td><?php echo $row->mt_vnu; ?></td>
                 </tr>
                 <?php
@@ -239,7 +239,7 @@
 				?>
                 <tr>
                   <td><?php echo $row->description; ?></td>
-                  <td><p><?php echo $row->date; ?></p></td>
+                 <td><p><?php echo $row->sdate; if($row->sdate != $row->edate) echo "<b> to </b>".$row->edate; ?></p></td>
                   <td><?php echo $row->mt_vnu; ?></td>
                 </tr>
                 <?php
@@ -268,7 +268,7 @@
                    ?>
                 <tr>
                   <td><?php echo $row->description; ?></td>
-                  <td><p><?php echo $row->date; ?></p></td>
+                  <td><p><?php echo $row->sdate; if($row->sdate != $row->edate) echo "<b> to </b>".$row->edate; ?></p></td>
                   <td><?php echo $row->mt_vnu; ?></td>
                 </tr>
                 <?php

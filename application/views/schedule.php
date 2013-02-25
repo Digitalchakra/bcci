@@ -70,7 +70,7 @@
                   <?php echo $row->mt_vnu; ?>
                 </td>
                 <td>
-                  <?php echo $row->date; ?>
+                  <?php echo $row->sdate; if($row->sdate != $row->edate) echo "<b> to </b>".$row->edate; ?>
                 </td>
               </tr>
               <?php
