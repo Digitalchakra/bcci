@@ -72,9 +72,9 @@
       <!---MEGA MENU
       ------------------------------->
 
-      <ul class ="menu">
-        <li><a href="<?php echo base_url(); ?>" class="drop">Home</a></li>
-        <li><a href="<?php echo base_url('schedule'); ?>" class="drop">Schedule</a><!-- Begin Shedule columns Item -->
+      <ul class ="menu"> 
+        <li <?php if($view_page=='home') echo 'class="active"';?> ><a href="<?php echo base_url(); ?>" class="drop">Home</a></li>
+        <li <?php if($view_page=='schedule') echo 'class="active"';?>><a href="<?php echo base_url('schedule'); ?>" class="drop">Schedule</a><!-- Begin Shedule columns Item -->
 
           <div class="dropdown_2columns"><!-- Begin 5 columns container -->
             <div class = "col_2">
@@ -94,8 +94,8 @@
             </div>
           </div>
         </li>
-        <li><a href="<?php echo base_url('result'); ?>" class="drop">Results</a></li>
-        <li><a class="drop">Rankings</a><!-- Begin 4 columns Item -->
+        <li <?php if($view_page=='result') echo 'class="active"';?>><a href="<?php echo base_url('result'); ?>" class="drop">Results</a></li>
+        <li <?php if($view_page=='team_rank') echo 'class="active"';?>><a class="drop">Rankings</a><!-- Begin 4 columns Item -->
          <div class="dropdown_2columns">
             <div class = "col_2">
               <ul class="greybox">
@@ -117,10 +117,10 @@
             </div>-->
           </div>
         </li>
-        <li><a href="<?php echo base_url('news'); ?>" class="drop">News</a></li>
-        <li><a href="<?php echo base_url('article'); ?>" class="drop">Articles</a></li>
-        <li><a href="<?php echo base_url('photos');?>" class="drop">Photos</a></li>
-        <li><a href="<?php echo base_url('videos');?>" class="drop">Videos</a></li>
+        <li <?php if($view_page=='news') echo 'class="active"';?>><a href="<?php echo base_url('news'); ?>" class="drop">News</a></li>
+        <li <?php if($view_page=='articles') echo 'class="active"';?>><a href="<?php echo base_url('article'); ?>" class="drop">Articles</a></li>
+        <li <?php if($view_page=='photos') echo 'class="active"';?>><a href="<?php echo base_url('photos');?>" class="drop">Photos</a></li>
+        <li <?php if($view_page=='videos') echo 'class="active"';?>><a href="<?php echo base_url('videos');?>" class="drop">Videos</a></li>
         <!--<li><a href="#" class="drop">Polls</a></li>
         <li><a href="#" class="drop">About</a></li> -->
         <!-- <li class = "menu_right"><a href="#" class="drop" style="margin-right:5px"><i class = "icon-lock icon-white" style="margin-right:15px;"></i>Register</a></li>

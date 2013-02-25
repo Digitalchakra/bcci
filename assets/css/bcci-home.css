@@ -463,3 +463,6 @@ margin:0 auto 0 auto;
 background: linear-gradient(to bottom, #8E140B 0%, #CC5115 100%);
 color:#FFF
 }
+.menu.active{
+background: linear-gradient(to bottom, #8E140B 0%, #CC5115 100%) 
+}
