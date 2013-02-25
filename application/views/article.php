@@ -8,7 +8,7 @@
     <div class = "span9"> 
       <!--Page Header-->
       <div class = "page-header">
-        <h3>Article  <sup style="text-transform:none">via yahoocricket.com</sup><!--<span class = "pull-right marginr10">
+        <h3>Article  <!--<span class = "pull-right marginr10">
         			<a href="#" rel="tooltip" title="View as Grid"><i class = "icon-th-large"></i></a>
         			<a href="#" rel="tooltip" title="View as blog"><i class = "icon-align-justify"></i></a>
         			<a href="#" rel="tooltip" title="View as list"><i class = "icon-th-list"></i></a>
@@ -22,7 +22,7 @@
               <div class="media-body">
                 <h4 class="media-heading"><?php echo $content[0]->title; ?></h4>
                 <p>
-                <h6>By <?php echo $content[0]->author; ?></h6>
+                <h5>By <?php echo $content[0]->author; ?></h5>
                 <p></p>
                 <!----Article short description-->
                 <p><?php echo $content[0]->content; ?></p>

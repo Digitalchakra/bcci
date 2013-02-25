@@ -241,7 +241,7 @@ td a{
 
 .page-header h1,h2,h3 {
 	color: #a82e0f;
-	font-family: 'squareBT','PT Sans Narrow', sans-serif;;
+	font-family: 'squareBT','PT Sans Narrow', sans-serif;
 	padding: 0 0 0 5px;
 	font-weight: normal;
 	text-transform: uppercase;
@@ -260,7 +260,6 @@ h5 {
 	font-weight: bold;
 	font-size:12px;
 	margin:10px;
-
 }
 h6 {
 		margin:10px;
@@ -362,7 +361,7 @@ color:#fff;
 	padding: 5px 10px 0 10px;
 }
 .red-btn .caret{
-	background-color:#86180f;
+	
 }
 .red-button.open .dropdown-toggle {
 	background: #cc5115; /* Old browsers */

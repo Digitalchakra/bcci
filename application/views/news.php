@@ -8,7 +8,7 @@
     <div class = "span9">
       <!--Page Header-->
       <div class = "page-header">
-        <h3>News  <sup style="text-transform:none">via yahoocricket.com</sup><!--<span class = "pull-right marginr10">
+        <h3>News  <sup style="text-transform:none">via bbc.co.uk</sup><!--<span class = "pull-right marginr10">
         			<a href="#" rel="tooltip" title="View as Grid"><i class = "icon-th-large"></i></a>
         			<a href="#" rel="tooltip" title="View as blog"><i class = "icon-align-justify"></i></a>
         			<a href="#" rel="tooltip" title="View as list"><i class = "icon-th-list"></i></a>
@@ -22,16 +22,16 @@
 			  foreach($content as $row)
 			  {
 				?>
-            <li class="media"> <a class="pull-left" href="#"> <img src="<?php echo $row->media2; ?>" class="media-object"> </a>
+            <li class="media"> <a class="pull-left" href="<?php echo $row->link; ?>" target="_blank"> <img src="<?php echo $row->media2; ?>" class="media-object"> </a>
               <div class="media-body">
-                <h4 class="media-heading"><?php echo $row->title; ?></h4>
+                <a href ="<?php echo $row->link; ?>"  target="_blank"><h4 class="media-heading"><?php echo $row->title; ?></h4></a>
                 <p>
-                <h6><?php echo $row->pubdate; ?></h6>
+                <h5><?php echo $row->pubdate; ?></h5>
                 <p></p>
                 <!----Article short description-->
                 <p><?php echo $row->description; ?></p>
                 <!--Read More-->
-                <a target="_blank" class = "btn btn-primary readon pull-right" href = "<?php echo $row->link; ?>">Read More</a> </div>
+                <a target="_blank" class = "red pull-right" href = "<?php echo $row->link; ?>"  target="_blank">Read More</a> </div>
             </li>
             <?php
 			}

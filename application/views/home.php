@@ -33,11 +33,16 @@
               <div class = "span5">
                    
                 	<select class="selectpicker" name="one" id="livescore_dd" data-style="btn-warning"  style="display:none">
-                      <option class="red-btn" value="1">Live Matches</option>
-                      <option value="2">Australia vs England</option>
-                      <option value="2">South Africa vs Sri Lanka</option>
                     </select>
-                  
+                 <!-- <div class="btn-group">
+                <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Pak vs India<span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Match 01</a></li>
+                  <li><a href="#">Match 01</a></li>
+                  <li><a href="#">Match 01</a></li>
+                  <li><a href="#">Match 01</a></li>
+                </ul>
+              </div>-->
                   
               </div>
             </div>
@@ -168,6 +173,7 @@
           <li><a href="#pastMatches" data-toggle="tab">Past Matches</a></li>
           <li class="active"><a href="#presentMatches" data-toggle="tab">Present Matches</a></li>
           <li><a href="#upcomingMatches" data-toggle="tab">Upcoming Matches</a></li>
+          <li><sup style = "top:5px">via cricbuzz.com</sup></li>
           <!--<div class="btn-group pull-right red-button">
             <button class="btn red-btn">Schedule</button>
             <button class="btn dropdown-toggle red-btn" data-toggle="dropdown"> <span class="caret"></span> </button>
@@ -202,7 +208,7 @@
                     ?>
                 <tr>
                   <td><?php echo $row->description; ?></td>
-                  <td><p><?php echo $row->date; ?></p></td>
+                   <td><p><?php echo $row->sdate; if($row->sdate != $row->edate) echo "<span style='color:#a82e0f'> to </span>".$row->edate; ?></p></td>
                   <td><?php echo $row->mt_vnu; ?></td>
                 </tr>
                 <?php
@@ -231,7 +237,7 @@
 				?>
                 <tr>
                   <td><?php echo $row->description; ?></td>
-                  <td><p><?php echo $row->date; ?></p></td>
+                 <td><p><?php echo $row->sdate; if($row->sdate != $row->edate) echo "<span style='color:#a82e0f'> to </span>".$row->edate; ?></p></td>
                   <td><?php echo $row->mt_vnu; ?></td>
                 </tr>
                 <?php
@@ -260,7 +266,7 @@
                    ?>
                 <tr>
                   <td><?php echo $row->description; ?></td>
-                  <td><p><?php echo $row->date; ?></p></td>
+                  <td><p><?php echo $row->sdate; if($row->sdate != $row->edate) echo "<span style='color:#a82e0f'> to </span>".$row->edate; ?></p></td>
                   <td><?php echo $row->mt_vnu; ?></td>
                 </tr>
                 <?php
@@ -269,7 +275,7 @@
                   ?>
               </tbody>
             </table>
-            <p class="pull-right"><a href="schedule" class="btn btn-primary">View more</a></p>
+            <p class="pull-right"><a href="schedule" class="red">View All</a></p>
           </div>
         </div>
       </div>
@@ -281,21 +287,16 @@
         <div class = "heading">
         	<div class="row-fluid margint10">
             	<div class="span8">
-                	<h4>Results <sup>via yahoocricket.com</sup></h4>
+                	<h4>Results <sup>via foxsports.com.au</sup></h4>
                 </div>
                 <div class="span4">
                     <select id="resultmenu" name="one"  class="selectpicker" data-style = "btn-warning" style="display:none">
                     <option value="ODI" class="red-btn">ODI</option>
-                    
-    -              
                     <option value="T20">T20</option>
-                    
-    -              
                     <option value="Test">Test</option>
                   </select>
               </div>
             </div>
-          
         </div>
         <div class="accordion" id="accordion2"> 
           <!--Result list from my.js--> 
@@ -313,7 +314,7 @@
     <div class = "span8 margint20">
       <ul id="newstab" class="nav nav-tabs tabs-line">
         <li class="active"><a href="#featuredNews" data-toggle="tab">Featured News</a></li>
-        <li><a href="#recentNews" data-toggle="tab">Recent News</a></li><li><sub>via yahoocricket.com</sub></li>
+        <li><a href="#recentNews" data-toggle="tab">Recent News</a></li><li><sub>via bbc.co.uk</sub></li>
       </ul>
       <div id="newstabContent" class="tab-content">
         <div class="tab-pane fade in active" id="featuredNews"> 
@@ -323,7 +324,7 @@
           <div id="recentNewscont" class = "row-fluid"> 
             <!--recent news from my.js--> 
           </div>
-          <p class="pull-right"><a href="/news" class="btn btn-primary">View all</a></p>
+          <p class="pull-right"><a href="/news" class="red">View All</a></p>
         </div>
       </div>
     </div>
@@ -341,7 +342,7 @@
   <div class = "row">
     <div class = "span12 margint20">
       <ul id="rankrecordtab" class="nav nav-tabs tabs-line">
-        <li class="active"><a href="#ranking" data-toggle="tab">Rankings</a></li><li><sub>via yahoocricket.com</sub></li>
+        <li class="active"><a href="#ranking" data-toggle="tab">Rankings</a></li><li><sub>via relianceiccrankings.com</sub></li>
         <!-- <li><a href="#records" data-toggle="tab">Records</a></li>-->
       </ul>
       <div id="rankrecordtabContent" class="tab-content">
@@ -375,7 +376,7 @@
                       </ul>
                       <!-- <div class = "pull-right"><a href="#">View All</a></div> --> 
                     </div>
-                    <div class = "pull-right"><a href="<?php echo base_url('rank/team'); ?>">View All</a></div>
+                    <div class = "pull-right"><a class = "red" href="<?php echo base_url('rank/team'); ?>">View All</a></div>
                   </div>
                 </div>
                 <div class="tab-pane fade" id="batsman">
@@ -398,7 +399,7 @@
                       </ul>
                       <!--  <div class = "pull-right"><a href="#">View All</a></div> --> 
                     </div>
-                    <div class = "pull-right"><a href="<?php echo base_url('rank/batting'); ?>">View All</a></div>
+                    <div class = "pull-right"><a class = "red" href="<?php echo base_url('rank/batting'); ?>">View All</a></div>
                   </div>
                 </div>
                 <div class="tab-pane fade" id="bowler">
@@ -421,7 +422,7 @@
                       </ul>
                       <!-- <div class = "pull-right"><a href="#">View All</a></div> --> 
                     </div>
-                    <div class = "pull-right"><a href="<?php echo base_url('rank/bowling'); ?>">View All</a></div>
+                    <div class = "pull-right"><a class = "red" href="<?php echo base_url('rank/bowling'); ?>">View All</a></div>
                   </div>
                 </div>
                 <div class="tab-pane fade" id="allRounder">
@@ -444,7 +445,7 @@
                       </ul>
                       <!-- <div class = "pull-right"><a href="#">View All</a></div> --> 
                     </div>
-                    <div class = "pull-right"><a href="<?php echo base_url('rank/allrounder'); ?>">View All</a></div>
+                    <div class = "pull-right"><a class = "red" href="<?php echo base_url('rank/allrounder'); ?>">View All</a></div>
                   </div>
                 </div>
               </div>
@@ -477,7 +478,7 @@
           <!----Photos and Videos Tab---->
           <ul id = "gallerytab" class = "nav nav-tabs tabs-line">
             <li class = "active"><a href ="#photos" data-toggle = "tab">Photos</a></li>
-            <li><a href ="#videos" data-toggle = "tab">Videos</a></li><li><sub>via yahoocricket.com</sub></li>
+            <li><a href ="#videos" data-toggle = "tab">Videos</a></li><li><sub>via espncricinfo.com</sub></li>
           </ul>
           <div id = "gallerytabContent" class = "tab-content">
             <div class = "tab-pane fade in active" id = "photos">
@@ -487,7 +488,7 @@
                     <!-- from my.js--> 
                   </div>
                 </div>
-                <div class = "span pull-right margint10"> <a href = "<?php echo base_url('photos'); ?>" class="btn btn-primary">View All</a> </div>
+                <div class = "span pull-right margint10"> <a href = "<?php echo base_url('photos'); ?>" class="red">View All</a> </div>
               </div>
             </div>
             <div class = "tab-pane fade" id = "videos">
@@ -497,7 +498,7 @@
                     <!-- from my.js--> 
                   </div>
                 </div>
-                <div class = "span pull-right margint10"> <a href = "<?php echo base_url('videos');?>" class="btn btn-primary">View All</a> </div>
+                <div class = "span pull-right margint10"> <a href = "<?php echo base_url('videos');?>" class="red">View All</a> </div>
               </div>
             </div>
           </div>
@@ -512,13 +513,13 @@
               <div class = "row-fluid">
                 <div class = "span12 news-thumb">
                   <p id="farticle"> </p>
-                  <div class="pull-right"> <a id="farticlerm" href="#" class="btn btn-primary">Read More</a> </div>
+                  <div class="pull-right"> <a id="farticlerm" href="#" class="red">Read More</a> </div>
                 </div>
               </div>
             </div>
             <div class="tab-pane fade" id="recentArticles">
               <div class = "row-fluid" id="rarticles"> </div>
-              <div class = "span pull-right margint10"> <a href = "<?php echo base_url('article'); ?>" class="btn btn-primary">View All</a> </div>
+              <div class = "span pull-right margint10"> <a href = "<?php echo base_url('article'); ?>" class="red">View All</a> </div>
             </div>
           </div>
         </div>

@@ -56,6 +56,9 @@ sup {
   font-size: 68%;
   line-height: 0;
   vertical-align: baseline;
+  font-family:Tahoma, Geneva, sans-serif;
+  font-size:10px;
+  color:#333;
 }
 
 sup {
@@ -2797,6 +2800,7 @@ table th[class*="span"],
 }
 
 .dropdown-menu {
+	text-shadow:none;
   position: absolute;
   top: 100%;
   left: 0;

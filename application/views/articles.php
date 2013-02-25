@@ -8,7 +8,7 @@
     <div class = "span9">
       <!--Page Header-->
       <div class = "page-header">
-        <h3>Articles  <sup style="text-transform:none">via yahoocricket.com</sup><!--<span class = "pull-right marginr10">
+        <h3>Articles <!--<span class = "pull-right marginr10">
         			<a href="#" rel="tooltip" title="View as Grid"><i class = "icon-th-large"></i></a>
         			<a href="#" rel="tooltip" title="View as blog"><i class = "icon-align-justify"></i></a>
         			<a href="#" rel="tooltip" title="View as list"><i class = "icon-th-list"></i></a>
@@ -22,16 +22,16 @@
 			  foreach($content as $row)
 			  {
 				?>
-            <li class="media"> <a class="pull-left" href="#"> <!--<img src="" class="media-object">--> </a>
+            <li class="media"> <a class="pull-left" href="<?php echo base_url('article/get'); echo '/'.$row->id; ?>"> <!--<img src="" class="media-object">--> </a>
               <div class="media-body">
-                <h4 class="media-heading"><?php echo $row->title; ?></h4>
+                <a href = "<?php echo base_url('article/get'); echo '/'.$row->id; ?>"><h4 class="media-heading"><?php echo $row->title; ?></h4></a>
                 <p>
-                <h6>By <?php echo $row->author; ?></h6>
+                <h5>By <?php echo $row->author; ?></h5>
                 <p></p>
                 <!----Article short description-->
                 <p><?php echo substr($row->content,0,strpos($row->content,' ',500)).'...'; ?></p>
                 <!--Read More-->
-                <a class = "btn btn-primary readon pull-right" href = "<?php echo base_url('article/get'); echo '/'.$row->id; ?>">Read More</a> </div>
+                <a class = "red pull-right" href = "<?php echo base_url('article/get'); echo '/'.$row->id; ?>">Read More</a> </div>
             </li>
             <?php
 			}

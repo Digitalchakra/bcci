@@ -115,7 +115,7 @@ function news()
                 html+='<a class="pull-left" target="_blank" href="'+data.resultset[i]['link']+'"> <img src="'+data.resultset[i]['media2']+'" class="media-object"> </a>';
                 html+='<div class="media-body">';
                 html+='<h4 class="media-heading"><a target="_blank" href="'+data.resultset[i]['link']+'">'+data.resultset[i]['title']+'</a></h4>';
-                html+='<h6>'+data.resultset[i]['pubdate']+'</h6>';
+                html+='<h5>'+data.resultset[i]['pubdate']+'</h5>';
                 html+='</div>';
                 html+='</li>';
                 if((mod==0) || (i==(data.resultset.length-1)))
@@ -126,15 +126,15 @@ function news()
 			}
 			$('#recentNewscont').html(recentNews);
 			html='<div class = "row-fluid"><div class = "span12 news-thumb"><p><img src="'+data.resultset[0]['media2']+'"/>';
-			html+='<p>'+data.resultset[0]['pubdate']+'</p>';
+			html+='<h5>'+data.resultset[0]['pubdate']+'</h5>';
 			html+=data.resultset[0]['description'];
-			html+='<p class="pull-right"><a class="btn btn-primary" target="_blank" href="'+data.resultset[0]['link']+'">Read more</a></p>';
+			html+='<p class="pull-right"><a class="red" target="_blank" href="'+data.resultset[0]['link']+'">Read More</a></p>';
 			html+='</p></div></div>';
 			$('#featuredNews').html(html);
 			bannerslide+='<div class="item active"> <img src="'+data.resultset[0]['media1']+'" class = "res-image">';
 			bannerslide+='<div class = "carousel-caption">';
 			bannerslide+='<a target="_blank" href="'+data.resultset[0]['link']+'"><h4>'+data.resultset[0]['title']+'</h4></a>';
-			bannerslide+='<p>'+data.resultset[0]['pubdate']+'</p>';
+			bannerslide+='<h5>'+data.resultset[0]['pubdate']+'</h5>';
 			bannerslide+='<p>'+data.resultset[0]['description'].substring(0,200)+' ...</p></div></div>';
 			$('#bannerslide').html(bannerslide);
         },
@@ -432,7 +432,7 @@ function article()
         success: function(data) {
 			recentArticle='';
 			html='<h4 class="media-heading"><a href="#">'+data.resultset[0]['title']+'</a></h4>';
-			html+='<h6> By '+data.resultset[0]['author']+'</h6>';
+			html+='<h5> By '+data.resultset[0]['author']+'</h5>';
 			html+=data.resultset[0]['content'].substring(0,500)+'...';
             $('#farticle').html(html);
             $('#farticlerm').attr('href','article/get/'+data.resultset[0]['id']);
@@ -443,7 +443,7 @@ function article()
 				html+='<li class="media news-thumb-small">';
 				html+='<div class="media-body">';
                 html+='    	<h4 class="media-heading"><a href="article/get/'+data.resultset[i]['id']+'">'+data.resultset[i]['title']+'</a></h4>';
-                html+='    	<h6>By '+data.resultset[i]['author']+'</h6>';
+                html+='    	<h5>By '+data.resultset[i]['author']+'</h5>';
                 html+='    </div></li>';
 				if((mod==0) || (i==(data.resultset.length-1)))
                 {

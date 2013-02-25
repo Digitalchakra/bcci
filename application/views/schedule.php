@@ -14,7 +14,7 @@
       <!--Sub Menu Dropdown-->
       <div class = "row">
       	<div class = "span5 margint10">
-        	<h4>Schedule <sup style="text-transform:none">via yahoocricket.com</sup></h4>
+        	<h4>Schedule <sup style="text-transform:none">via cricbuzz.com</sup></h4>
         </div>
 
         <!--Matches Dropdown-->
@@ -68,7 +68,7 @@
                   <?php echo $row->mt_vnu; ?>
                 </td>
                 <td>
-                  <?php echo $row->date; ?>
+                  <?php echo $row->sdate; if($row->sdate != $row->edate) echo "<b> to </b>".$row->edate; ?>
                 </td>
               </tr>
               <?php

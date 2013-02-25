@@ -16,15 +16,14 @@ $menu=array('ODI','T20','Test');
       
       <!--Sub Menu Dropdown-->
       <div class = "row">
-      	<div class = "span5 margint10">
-        <h4>Results <sup style="text-transform:none">via yahoocricket.com</sup></h4>
+      	<div class = "span8 margint10">
+        <h4>Results <sup style="text-transform:none">via foxsports.com.au</sup></h4>
         </div>
         
         <!--Matches Dropdown-->
-        <div class = "span4 margint20">
-          <div class="combo-dropdown pull-right">
+        <div class = "span1 margint20">
            
-            <select id = "resultmenu" class="dropdown-select">
+            <select id = "resultmenu" class="selectpicker" style = "display:none">
 			  	<option value="" class="red-btn"><?php echo $content[0]->type; ?></option>
 				<?php
 				foreach($menu as $row)
@@ -35,7 +34,6 @@ $menu=array('ODI','T20','Test');
 				<option value="<?php echo $base_url.$row ?>" class="red-btn"><?php echo $row; ?></option>
 				<?php } ?>
               </select>
-          </div>
         </div>
       </div>
       
@@ -143,3 +141,8 @@ $menu=array('ODI','T20','Test');
   </div> 
 </div> 
 <script src="<?php echo base_url('assets/js/results.js');?>"></script>
+<script type="application/javascript">
+ window.onload=function(){
+      $('.selectpicker').selectpicker();
+      };
+</script>

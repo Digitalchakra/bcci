@@ -12,6 +12,11 @@
 	top:-0.5em;
 	line-height:25px;
 }
+.square-font {
+	font-family: 'squareBTNormal','PT Sans Narrow', sans-serif;
+	font-size:12px;
+	font-weight:bold;
+}
 /*-------------------------CAROUSEL---------------------------*/
 .res-image  {
 	width:100%;
@@ -215,9 +220,12 @@ border-radius:0px;
 	color:#343434;
 	float:left;
 }
-.white-block .red {
+
+.red, .red:hover {
 	color:#a82e0f;
+	text-decoration:none;
 }
+
 .white-block .grey {
 	color:#343434;
 }
@@ -278,7 +286,7 @@ border-radius:0px;
 .white-block .heading h4 .list-box {
 	width:49px;
 	height:42px;
-	margin:-15px -10px;
+	margin:-32px -10px;
 	background-image:url(../Images/results-list_03.png);
 }
 
@@ -431,7 +439,7 @@ box-shadow: 0 2px 4px rgba(0,0,0,0.5),
 						inset 0px 0px 8px rgba(0,0,0,0.3);
 width:72px;
 height:72px;
-margin-left:30px;
+margin:0 auto 0 auto;
 }
 .livescore_bg .team_icon img {
 	width:68px;

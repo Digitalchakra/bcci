@@ -18,6 +18,10 @@ try
 	{
 		$srs_arr = explode(',',$searchNode->getAttribute('srs'));
 		$sdate = explode('-',$searchNode->getAttribute('ddt'));
+		if(!isset($sdate[1]))
+		{
+			$sdate[1]=$sdate[0];
+		}
 	//	$values = $srs_arr[0].",".$srs_arr[1].",".$searchNode->getAttribute('desc').",".preg_replace("/[^0-9]/","",$searchNode->getAttribute('ddt'))."-".str_replace(",","-",$searchNode->getAttribute("mnth_yr"))."".$searchNode->getAttribute('tm').",".strtotime($data[$i]["mch_date"].":00").",".$searchNode->getAttribute('vnu')";
 		$srs_arr = explode(',',$searchNode->getAttribute('srs'));
 		$tm='00:00';
@@ -28,11 +32,14 @@ try
 		$data['srs_id']=$srs_arr[0];
 		$data['srs_name']=$srs_arr[1];
 		$data['description']=$searchNode->getAttribute('desc');
-		$data['date']=preg_replace("/[^0-9]/","",$sdate[0]).'-'.str_replace(',','-',$searchNode->getAttribute('mnth_yr')).''.$tm;
-		$data['utc_time']=strtotime($data['date'].':00');
+		$data['sdate']=preg_replace("/[^0-9]/","",$sdate[0]).'-'.str_replace(',','-',$searchNode->getAttribute('mnth_yr'));
+		$data['edate']=preg_replace("/[^0-9]/","",$sdate[1]).'-'.str_replace(',','-',$searchNode->getAttribute('mnth_yr'));
+		$data['time']=$tm;
+		$data['sutc_time']=strtotime($data['sdate'].' 00:01:00');
+		$data['eutc_time']=strtotime($data['edate'].' 23:59:00');
 		$data['mt_vnu']=$searchNode->getAttribute('vnu');
-		$values= implode(',',$data);
-		//print_r($data); die;
+		//$values= implode(',',$data);
+		//print_r($data); //die;
 
 					$find=array('srs_id'=>$data['srs_id'],'description'=>$data['description']);
 					if($found = Tbl_matches::find($find))
