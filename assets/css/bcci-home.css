@@ -459,3 +459,7 @@ margin:0 auto 0 auto;
 .small-menu .dropdown-menu {
 	min-width:50px;
 	}
+.pagination ul li .active{
+background: linear-gradient(to bottom, #8E140B 0%, #CC5115 100%);
+color:#FFF
+}
