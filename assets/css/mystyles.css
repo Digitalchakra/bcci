@@ -72,7 +72,9 @@ td a{
 .wired {
 	border:solid 1px #b2aeae !important;
 }
-
+.marginb10 {
+	margin-bottom:10px;
+}
 .margint20 {
 	margin-top: 20px;
 }

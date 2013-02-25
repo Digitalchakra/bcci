@@ -8,8 +8,8 @@ $(document).ready(function()
 	    setInterval(function() {
           result();
     }, 10000);*/
-    $('#shedulemenu').change(function()
+    $('.shedulemenu').click(function()
 			{
-				window.location=this.value;
+				window.location=$(this).attr('ref');
 			});
 });

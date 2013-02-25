@@ -7,6 +7,7 @@ $(document).ready(function()
 		$.myplaceholder={};
 		$.myplaceholder.mylivescore=[];
 		$.myplaceholder.checkreload=0;
+		$.myplaceholder.checkloaded=0;
 		rank('batsman');
 		rank('bowler');
 		rank('allrounder');
@@ -24,20 +25,11 @@ $(document).ready(function()
     setInterval(function() {
           livescore();
 			}, 60000);
-			$('#resultmenu').change(function()
+			$('.resultmenu').click(function()
 			{
 				$('.accordion-group').hide();
-				$('.'+this.value).show();
-			});
-			$('#livescore_dd').change(function()
-			{
-				//alert(this.value);
-				//alert($.myplaceholder.mylivescore[this.value].matchFolder);
-				livescoredisplay($.myplaceholder.mylivescore[this.value]);
-				$.myplaceholder.checkreload=this.value;
-				//alert($.myplaceholder.checkreload);
-				//$('.accordion-group').hide();
-				//$('.'+this.value).show();
+				$('.'+$(this).text()).show();
+				$('#resultmenu').html($(this).text()+'<span class="caret"></span>');
 			});
 
 });
@@ -162,14 +154,7 @@ function livescore()
 				
 				if(data[listcount].matchDataType=='Live Data')
 				{
-					if($.myplaceholder.checkreload == listcount)
-					{
-					option+='<option value="'+listcount+'" selected="selected">'+data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName+'</option>';
-					}
-					else
-					{
-					option+='<option value="'+listcount+'">'+data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName+'</option>';
-					}
+					option+='<li value="'+listcount+'" class="live_team"><a>'+data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName+'</a></li>';
 					$.myplaceholder.mylivescore.push(data[listcount]);
 				}
 				listcount++;
@@ -191,6 +176,11 @@ function livescore()
 			{
 				//livescoredisplay($.myplaceholder.mylivescore[$('#livescore_dd').value]);
 			}*/
+			$('.live_team').click(function()
+			{
+				livescoredisplay($.myplaceholder.mylivescore[this.value]);
+				$.myplaceholder.checkreload=this.value;
+			});
         }
 	});
 }
@@ -466,6 +456,7 @@ function livescoredisplay(data)
 				//alert(data.state);
 				//series_title
 				//$('#series_title').html(data.matchType+" - "+data.matchdesc);
+				$('#livescore_dd_title').html(data['team1'].shortName+' vs '+data['team2'].shortName+'<span class="caret"></span>');
 				$('#matchstate').html('');
 				$('#playerstate').show();
 					$('#bowlerstate').show();

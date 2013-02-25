@@ -456,3 +456,6 @@ margin:0 auto 0 auto;
 	margin-top:8px;
 	margin-bottom:5px;
 }
+.small-menu .dropdown-menu {
+	min-width:50px;
+	}

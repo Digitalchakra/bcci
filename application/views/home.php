@@ -32,17 +32,13 @@
               </div>
               <div class = "span5">
                    
-                	<select class="selectpicker" name="one" id="livescore_dd" data-style="btn-warning"  style="display:none">
-                    </select>
-                 <!-- <div class="btn-group">
-                <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Pak vs India<span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Match 01</a></li>
-                  <li><a href="#">Match 01</a></li>
-                  <li><a href="#">Match 01</a></li>
-                  <li><a href="#">Match 01</a></li>
+                	<!--<select class="selectpicker" name="one" id="livescore_dd" data-style="btn-warning"  style="display:none">
+                    </select>-->
+                <div class="btn-group marginb10 pull-right small-menu">
+                <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown" id="livescore_dd_title"></button>
+                <ul id="livescore_dd" class="dropdown-menu">
                 </ul>
-              </div>-->
+                </div>
                   
               </div>
             </div>
@@ -289,12 +285,20 @@
             	<div class="span8">
                 	<h4>Results <sup>via foxsports.com.au</sup></h4>
                 </div>
-                <div class="span4">
-                    <select id="resultmenu" name="one"  class="selectpicker" data-style = "btn-warning" style="display:none">
+                <div class="span3">
+                    <!--<select id="resultmenu" name="one"  class="selectpicker" data-style = "btn-warning" style="display:none">
                     <option value="ODI" class="red-btn">ODI</option>
                     <option value="T20">T20</option>
                     <option value="Test">Test</option>
-                  </select>
+                  </select>-->
+                  <div class="btn-group marginb10 pull-right small-menu">
+                    <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown" id="resultmenu">ODI<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li class="resultmenu"><a>ODI</a></li>
+                      <li class="resultmenu"><a>Test</a></li>
+                      <li class="resultmenu"><a>T20</a></li>
+                    </ul>
+                </div>
               </div>
             </div>
         </div>

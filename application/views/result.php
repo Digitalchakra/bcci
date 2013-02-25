@@ -22,18 +22,19 @@ $menu=array('ODI','T20','Test');
         
         <!--Matches Dropdown-->
         <div class = "span1 margint20">
-           
-            <select id = "resultmenu" class="selectpicker" style = "display:none">
-			  	<option value="" class="red-btn"><?php echo $content[0]->type; ?></option>
+			  	<div class="btn-group marginb10 pull-right small-menu">
+                    <button class="btn dropdown-toggle" data-toggle="dropdown"><?php echo $content[0]->type; ?><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
 				<?php
 				foreach($menu as $row)
 				{ 
 					if($content[0]->type==$row)
 					continue;
 					?>
-				<option value="<?php echo $base_url.$row ?>" class="red-btn"><?php echo $row; ?></option>
+				<li class="resultmenu" ref="<?php echo $base_url.$row ?>"><a><?php echo $row; ?></a></li>
 				<?php } ?>
-              </select>
+              </ul>
+              </div>
         </div>
       </div>
       

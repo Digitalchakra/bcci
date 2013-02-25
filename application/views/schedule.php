@@ -19,22 +19,19 @@
 
         <!--Matches Dropdown-->
         <div class = "span3 offset1 margint10">
-            
-            <select id="shedulemenu" name="one" class="selectpicker" style = "display:none">
-				<option value="" class="red-btn"><?php echo $content['upcoming'][0]->srs_name; ?></option>
+				 <div class="btn-group marginb10 pull-right small-menu">
+                    <button class="btn dropdown-toggle" data-toggle="dropdown"><?php echo $content['upcoming'][0]->srs_name; ?><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
 				<?php
 				foreach($srs_list as $row)
 				{ 
 					if($content['upcoming'][0]->srs_name==$row->srs_name)
 					continue;
 					?>
-				<option value="<?php echo $base_url.$row->srs_id; ?>" class="red-btn"><?php echo $row->srs_name; ?></option>
+				 <li class="shedulemenu" ref="<?php echo $base_url.$row->srs_id; ?>"><a><?php echo $row->srs_name; ?></a></li>
 				<?php } ?>
-                <!-- dropdown menu links
-                <li><a href = "#">India vs Sri Lanka</a></li>
-                <li><a href = "#">England vs New Zealand</a></li>
-                <li><a href = "#">S Africa vs Australia</a></li>-->
-           </select>
+           </ul>
+           </div>
         </div>
       </div>
 

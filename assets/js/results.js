@@ -7,8 +7,8 @@ $(document).ready(function()
 	    setInterval(function() {
           result();
     }, 10000);*/
-    $('#resultmenu').change(function()
+    $('.resultmenu').click(function()
 			{
-				window.location=this.value;
+				window.location=$(this).attr('ref');
 			});
 });

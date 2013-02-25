@@ -3699,7 +3699,7 @@ input[type="submit"].btn.btn-mini {
 
 .btn .caret {
   margin-top: 8px;
-  margin-left: 0;
+  margin-left: 5px;
 }
 
 .btn-mini .caret,
