@@ -150,20 +150,20 @@
       </div>
     </div>
   </div>
-  <div class = "row">
+<!--   <div class = "row">
     <div class = "span12 margint20"> 
-      <!--  <p><strong>Trending :</strong> PepsiCo bags title sponsorship for IPL  |  IPL franchises announce initial squads  |  KKR v CSK Videos  |  Pathan Interview</p> --> 
+       <p><strong>Trending :</strong> PepsiCo bags title sponsorship for IPL  |  IPL franchises announce initial squads  |  KKR v CSK Videos  |  Pathan Interview</p> 
     </div>
-  </div>
+  </div> -->
   
   <!--Shadow FX-->
   <div class = "row">
-    <div class = "shadowfx"> </div>
+    <div class = "shadowfx" style="height:12px;"> </div>
   </div>
   
   <!-- Matches Tab-->
   <div class = "row">
-    <div class="page-header"><h3>Matches</h3></div>
+    <div class="span8 page-header"><h3>Matches</h3></div>
     <div class = "span8 margint20">
       <div class = "tab-box-wrapper">
         <ul id="matchestab" class="nav nav-tabs tabs-box gradient">
