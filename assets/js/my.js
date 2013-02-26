@@ -566,7 +566,7 @@ function livescoredisplay(data)
 				if(data.state=='preview')
 				{
 				$('#playerstate, #bowlerstate, .not_live').hide();
-				$('#matchstate').html('Starting at '+data.startdayandtimeGMT+' GMT');
+				$('#matchstate').html('Starting '+data.startdayandtimeGMT+' GMT');
 				}
 
 
