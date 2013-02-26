@@ -153,7 +153,7 @@ function livescore()
 			$(data).each(function()
 			{
 				
-				if(data[listcount].matchDataType=='Live Data')
+				if(data[listcount].matchDataType=='Live Data' && data[listcount].state !='preview')
 				{
 					option+='<li value="'+listcount+'" class="live_team"><a>'+data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName+'</a></li>';
 					$.myplaceholder.mylivescore.push(data[listcount]);
