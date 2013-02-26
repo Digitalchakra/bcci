@@ -28,7 +28,9 @@ try
 				$node['link']=$searchNode->getElementsByTagName('link')->item(0)->nodeValue;
 				$node['media1']=$searchNode->getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')->item(0)->getAttribute('url');
 				$node['media2']=$searchNode->getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')->item(1)->getAttribute('url');
-				$result[]=$node;
+				if(strpos($node['link'], 'sport')==21 && strpos($node['link'], 'cricket')==29){
+					$result[]=$node;
+				}	
 			}
 		
 			
