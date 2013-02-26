@@ -163,13 +163,13 @@
   
   <!-- Matches Tab-->
   <div class = "row">
+    <div class="page-header"><h3>Matches</h3></div>
     <div class = "span8 margint20">
       <div class = "tab-box-wrapper">
         <ul id="matchestab" class="nav nav-tabs tabs-box gradient">
-          <li><a href="#pastMatches" data-toggle="tab">Past Matches</a></li>
-          <li class="active"><a href="#presentMatches" data-toggle="tab">Present Matches</a></li>
-          <li><a href="#upcomingMatches" data-toggle="tab">Upcoming Matches</a></li>
-          <li><sup style = "top:5px">via cricbuzz.com</sup></li>
+          <li><a href="#pastMatches" data-toggle="tab">Completed</a></li>
+          <li class="active"><a href="#presentMatches" data-toggle="tab">On-going</a></li>
+          <li><a href="#upcomingMatches" data-toggle="tab">Upcoming</a></li>
           <!--<div class="btn-group pull-right red-button">
             <button class="btn red-btn">Schedule</button>
             <button class="btn dropdown-toggle red-btn" data-toggle="dropdown"> <span class="caret"></span> </button>
@@ -182,7 +182,9 @@
             </ul>
           </div>-->
           <div class = "clearfix"></div>
+
         </ul>
+
         <!--Matches Tabs COntent-->
         <div id="matchestabContent" class="tab-content" style="height: 280px;">
           <div class="tab-pane fade" id="pastMatches"> 
@@ -271,9 +273,10 @@
                   ?>
               </tbody>
             </table>
-            <p class="pull-right"><a href="schedule" class="red">View All</a></p>
           </div>
         </div>
+        <span class="pull-left padding10"><sup>via cricbuzz.com</sup></span>
+        <span class="pull-right padding10"><a href="schedule" class="red">View All</a></span>
       </div>
     </div>
     
@@ -283,7 +286,7 @@
         <div class = "heading">
         	<div class="row-fluid margint10">
             	<div class="span8">
-                	<h4>Results <sup>via foxsports.com.au</sup></h4>
+                	<h4>Results</h4>
                 </div>
                 <div class="span3">
                     <!--<select id="resultmenu" name="one"  class="selectpicker" data-style = "btn-warning" style="display:none">
@@ -306,9 +309,11 @@
           <!--Result list from my.js--> 
           
         </div>
+        <span class="padding10 pull-left"> <sup>via foxsports.com.au</sup></span>
         <a href = "<?php echo base_url('result');?>">
             <!--<div class = "list-box pull-right"></div>--><span class="padding10 pull-right">View All</span>
             </a> 
+
       </div>
     </div>
   </div>
@@ -318,7 +323,7 @@
     <div class = "span8 margint20">
       <ul id="newstab" class="nav nav-tabs tabs-line">
         <li class="active"><a href="#featuredNews" data-toggle="tab">Featured News</a></li>
-        <li><a href="#recentNews" data-toggle="tab">Recent News</a></li><li><sub>via bbc.co.uk</sub></li>
+        <li><a href="#recentNews" data-toggle="tab">Recent News</a></li>
       </ul>
       <div id="newstabContent" class="tab-content">
         <div class="tab-pane fade in active" id="featuredNews"> 
@@ -328,6 +333,7 @@
           <div id="recentNewscont" class = "row-fluid"> 
             <!--recent news from my.js--> 
           </div>
+          <span class="pull-left"><sub>via bbc.co.uk</sub></span>
           <p class="pull-right"><a href="/news" class="red">View All</a></p>
         </div>
       </div>
@@ -346,7 +352,7 @@
   <div class = "row">
     <div class = "span12 margint20">
       <ul id="rankrecordtab" class="nav nav-tabs tabs-line">
-        <li class="active"><a href="#ranking" data-toggle="tab">Rankings</a></li><li><sub>via relianceiccrankings.com</sub></li>
+        <li class="active"><a href="#ranking" data-toggle="tab">Rankings</a></li>
         <!-- <li><a href="#records" data-toggle="tab">Records</a></li>-->
       </ul>
       <div id="rankrecordtabContent" class="tab-content">
@@ -380,6 +386,7 @@
                       </ul>
                       <!-- <div class = "pull-right"><a href="#">View All</a></div> --> 
                     </div>
+                    <span class="pull-left"><sub>via relianceiccrankings.com</sub></span>
                     <div class = "pull-right"><a class = "red" href="<?php echo base_url('rank/team'); ?>">View All</a></div>
                   </div>
                 </div>
@@ -403,6 +410,7 @@
                       </ul>
                       <!--  <div class = "pull-right"><a href="#">View All</a></div> --> 
                     </div>
+                    <span class="pull-left"><sub>via relianceiccrankings.com</sub></span>
                     <div class = "pull-right"><a class = "red" href="<?php echo base_url('rank/batting'); ?>">View All</a></div>
                   </div>
                 </div>
@@ -426,6 +434,7 @@
                       </ul>
                       <!-- <div class = "pull-right"><a href="#">View All</a></div> --> 
                     </div>
+                    <span class="pull-left"><sub>via relianceiccrankings.com</sub></span>
                     <div class = "pull-right"><a class = "red" href="<?php echo base_url('rank/bowling'); ?>">View All</a></div>
                   </div>
                 </div>
@@ -449,6 +458,7 @@
                       </ul>
                       <!-- <div class = "pull-right"><a href="#">View All</a></div> --> 
                     </div>
+                    <span class="pull-left"><sub>via relianceiccrankings.com</sub></span>
                     <div class = "pull-right"><a class = "red" href="<?php echo base_url('rank/allrounder'); ?>">View All</a></div>
                   </div>
                 </div>
@@ -482,7 +492,7 @@
           <!----Photos and Videos Tab---->
           <ul id = "gallerytab" class = "nav nav-tabs tabs-line">
             <li class = "active"><a href ="#photos" data-toggle = "tab">Photos</a></li>
-            <li><a href ="#videos" data-toggle = "tab">Videos</a></li><li><sub>via espncricinfo.com</sub></li>
+            <li><a href ="#videos" data-toggle = "tab">Videos</a></li>
           </ul>
           <div id = "gallerytabContent" class = "tab-content">
             <div class = "tab-pane fade in active" id = "photos">
@@ -492,6 +502,7 @@
                     <!-- from my.js--> 
                   </div>
                 </div>
+                <span class="pull-left padding10"><sub>via espncricinfo.com</sub></span>
                 <div class = "span pull-right margint10"> <a href = "<?php echo base_url('photos'); ?>" class="red">View All</a> </div>
               </div>
             </div>
@@ -502,6 +513,7 @@
                     <!-- from my.js--> 
                   </div>
                 </div>
+                <span class="pull-left"><sub>via espncricinfo.com</sub></span>
                 <div class = "span pull-right margint10"> <a href = "<?php echo base_url('videos');?>" class="red">View All</a> </div>
               </div>
             </div>
