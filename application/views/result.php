@@ -17,7 +17,7 @@ $menu=array('ODI','T20','Test');
       <!--Sub Menu Dropdown-->
       <div class = "row">
       	<div class = "span8 margint10">
-        <h4>Results <sup style="text-transform:none">via foxsports.com.au</sup></h4>
+        <h4>Results</h4>
         </div>
         
         <!--Matches Dropdown-->
@@ -75,7 +75,9 @@ $menu=array('ODI','T20','Test');
 				} ?>
             </tbody>
         </table>
+        <sup>via foxsports.com.au</sup>
         </div>
+
       </div>
       
       <!--PAGINATION-->

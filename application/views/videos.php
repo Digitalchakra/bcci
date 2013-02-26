@@ -6,7 +6,7 @@
     <div class="row">
       <div class="span12"> 
         <div class = "page-header">
-            <h3>Videos  <sup style="text-transform:none">via espncricinfo.com</sup></h3>
+            <h3>Videos</h3>
          </div>
       </div>
     </div>
@@ -29,6 +29,7 @@
                       ?>
              </div>
     	</div>
+      <sup style="padding-left:30px">via espncricinfo.com</sup>
   	</div>
   <!--PAGINATION-->
   <div class = "row">

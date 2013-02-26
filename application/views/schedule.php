@@ -14,7 +14,7 @@
       <!--Sub Menu Dropdown-->
       <div class = "row">
       	<div class = "span5 margint10">
-        	<h4>Schedule <sup style="text-transform:none">via cricbuzz.com</sup></h4>
+        	<h4>Schedule</h4>
         </div>
 
         <!--Matches Dropdown-->
@@ -72,6 +72,7 @@
 				} ?>
             </tbody>
         </table>
+        <sup>via cricbuzz.com</sup>
         </div>
       </div>
 

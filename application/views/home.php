@@ -502,7 +502,7 @@
                     <!-- from my.js--> 
                   </div>
                 </div>
-                <span class="pull-left padding10"><sub>via espncricinfo.com</sub></span>
+                <span class="pull-left" style="padding-left:30px"><sub>via espncricinfo.com</sub></span>
                 <div class = "span pull-right margint10"> <a href = "<?php echo base_url('photos'); ?>" class="red">View All</a> </div>
               </div>
             </div>
@@ -513,7 +513,7 @@
                     <!-- from my.js--> 
                   </div>
                 </div>
-                <span class="pull-left"><sub>via espncricinfo.com</sub></span>
+                <span class="pull-left" style="padding-left:30px"><sub>via espncricinfo.com</sub></span>
                 <div class = "span pull-right margint10"> <a href = "<?php echo base_url('videos');?>" class="red">View All</a> </div>
               </div>
             </div>

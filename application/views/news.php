@@ -8,7 +8,7 @@
     <div class = "span9">
       <!--Page Header-->
       <div class = "page-header">
-        <h3>News  <sup style="text-transform:none">via bbc.co.uk</sup><!--<span class = "pull-right marginr10">
+        <h3>News<!--<span class = "pull-right marginr10">
         			<a href="#" rel="tooltip" title="View as Grid"><i class = "icon-th-large"></i></a>
         			<a href="#" rel="tooltip" title="View as blog"><i class = "icon-align-justify"></i></a>
         			<a href="#" rel="tooltip" title="View as list"><i class = "icon-th-list"></i></a>
@@ -37,7 +37,9 @@
 			}
 			?>
           </ul>
+          <sup>via bbc.co.uk</sup>
         </div>
+        
       </div>
 
       <!--PAGINATION-->

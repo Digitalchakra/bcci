@@ -22,7 +22,7 @@
 <div class = "row">
 <div class="span12">
 	<div class = "page-header">
-  <h3>Photos  <sup style="text-transform:none">via espncricinfo.com</sup><!--<span class = "pull-right marginr10">
+  <h3>Photos<!--<span class = "pull-right marginr10">
         			<a href="#" rel="tooltip" title="View as Grid"><i class = "icon-th-large"></i></a>
         			<a href="#" rel="tooltip" title="View as blog"><i class = "icon-align-justify"></i></a>
         			<a href="#" rel="tooltip" title="View as list"><i class = "icon-th-list"></i></a>
@@ -47,6 +47,7 @@
             }
           ?>
 </div>
+<sup style="padding-left:30px">via espncricinfo.com</sup>
 <!--=======-->        
 </div>
 <!--PAGINATION-->

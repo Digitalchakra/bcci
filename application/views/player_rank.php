@@ -5,7 +5,7 @@
 					  <div class = "row">
 						<div class = "span12">
 						  <div class = "page-header">
-							  <h3><?php echo $page; ?>  <sup style="text-transform:none">via relianceiccrankings.com</sup></h3>
+							  <h3><?php echo $page; ?></h3>
 						  </div>
 						</div>
 					  </div>
@@ -187,6 +187,7 @@
               }
               ?>
                 </div>
+				<sup>via relianceiccrankings.com</sup>
             </div>
 
 </div>
