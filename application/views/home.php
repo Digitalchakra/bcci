@@ -386,7 +386,7 @@
                       </ul>
                       <!-- <div class = "pull-right"><a href="#">View All</a></div> --> 
                     </div>
-                    <span class="pull-left"><sub>via relianceiccrankings.com</sub></span>
+                    <span class="pull-left" style="padding-left:30px"><sub>via relianceiccrankings.com</sub></span>
                     <div class = "pull-right"><a class = "red" href="<?php echo base_url('rank/team'); ?>">View All</a></div>
                   </div>
                 </div>
@@ -529,7 +529,7 @@
               <div class = "row-fluid">
                 <div class = "span12 news-thumb">
                   <p id="farticle"> </p>
-                  <div class="pull-right"> <a id="farticlerm" href="#" class="red">Read More</a> </div>
+                  <div class="pull-right padding10"> <a id="farticlerm" href="#" class="red">Read More</a> </div>
                 </div>
               </div>
             </div>
@@ -560,11 +560,9 @@
     </div> --> 
   </div>
 </div>
-</div>
 <script src="<?php echo base_url('assets/js/my.js');?>"></script>
 <script type="application/javascript">
  window.onload=function(){
       $('.selectpicker').selectpicker();
       };
 </script>
-</div>
