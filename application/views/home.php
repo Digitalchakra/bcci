@@ -49,8 +49,8 @@
                 <div id="team1_image"></div>
               </div>
               <h5 id="team1" class="team_name"></h5>
-              <h4 id="team1_score" class="yellow"></h4>
-              <h5 id="team1_over" class="white"></h5>
+              <h4 id="team1_score" class="yellow not_live"></h4>
+              <h5 id="team1_over" class="white not_live"></h5>
             </div>
             <div class="span2">
               <h3 style="margin-top:42px" class="white">vs</h3>
@@ -60,12 +60,12 @@
                 <div id="team2_image"></div>
               </div>
               <h5 id="team2" class="team_name"></h5>
-              <h4 id="team2_score" class="yellow yellow-dull"></h4>
-              <h5 id="team2_over" class="white"></h5>
+              <h4 id="team2_score" class="yellow yellow-dull not_live"></h4>
+              <h5 id="team2_over" class="white not_live"></h5>
             </div>
             <div style="text-align:left" class="span12"><!--Required Runs-->
               <h6 class="yellow"><!--<span id="status">CSK Needs 46 Runs to win</span>--> 
-                <span id="rrr" class="marginl20 yellow"></span> <span id="crr" class="marginl20 yellow"></span> </h6>
+                <span id="rrr" class="marginl20 yellow not_live"></span> <span id="crr" class="marginl20 yellow not_live"></span> </h6>
             </div>
           </div>
           <div style="text-align:center" class="row-fluid margint10" id="playerstate"><!--Player Stats-->
@@ -116,7 +116,7 @@
               <!--<h6 class="yellow"><strong>This Over:</strong> 0 1 4 3 1 <span class="marginl20"><strong>Extras:</strong> 6</span></h6>--> 
             </div>
           </div>
-          <div id="matchstate" style="text-align:center"></div>
+          <div id="matchstate" class="team_name" style="text-align:center"></div>
           <div class="row-fluid" id="bowlerstate"><!--Bowling-->
             <div class="span6">
               <h6 id="strikerbowler" class="yellow"></h6>

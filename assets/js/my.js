@@ -153,7 +153,7 @@ function livescore()
 			$(data).each(function()
 			{
 				
-				if(data[listcount].matchDataType=='Live Data' && data[listcount].state !='preview')
+				if(data[listcount].matchDataType=='Live Data')
 				{
 					option+='<li value="'+listcount+'" class="live_team"><a>'+data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName+'</a></li>';
 					$.myplaceholder.mylivescore.push(data[listcount]);
@@ -459,8 +459,7 @@ function livescoredisplay(data)
 				//$('#series_title').html(data.matchType+" - "+data.matchdesc);
 				$('#livescore_dd_title').html(data['team1'].shortName+' vs '+data['team2'].shortName+'<span class="caret"></span>');
 				$('#matchstate').html('');
-				$('#playerstate').show();
-					$('#bowlerstate').show();
+				$('#playerstate, #bowlerstate, .not_live').show();
 				$('#series_title').html(data.series);
 				//team name
 				$('#team1').html(data.battingTeamName);
@@ -562,6 +561,11 @@ function livescoredisplay(data)
 					$('#matchstate').html(data.status);
 					$('#playerstate').hide();
 					$('#bowlerstate').hide();
+				}
+				if(data.state=='preview')
+				{
+				$('#playerstate, #bowlerstate, .not_live').hide();
+				$('#matchstate').html('Starting at '+data.startdayandtimeGMT+' GMT');
 				}
 
 
