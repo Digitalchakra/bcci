@@ -167,8 +167,8 @@
     <div class = "span8 margint20">
       <div class = "tab-box-wrapper">
         <ul id="matchestab" class="nav nav-tabs tabs-box gradient">
-          <li><a href="#pastMatches" data-toggle="tab">Completed</a></li>
-          <li class="active"><a href="#presentMatches" data-toggle="tab">On-going</a></li>
+          <li><a href="#pastMatches" data-toggle="tab">Recent</a></li>
+          <li class="active"><a href="#presentMatches" data-toggle="tab">Live</a></li>
           <li><a href="#upcomingMatches" data-toggle="tab">Upcoming</a></li>
           <!--<div class="btn-group pull-right red-button">
             <button class="btn red-btn">Schedule</button>
