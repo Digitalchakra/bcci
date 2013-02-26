@@ -116,10 +116,10 @@
               <!--<h6 class="yellow"><strong>This Over:</strong> 0 1 4 3 1 <span class="marginl20"><strong>Extras:</strong> 6</span></h6>--> 
             </div>
           </div>
-          <div id="matchstate" class="team_name" style="text-align:center"></div>
+          <div id="matchstate" style="text-align:center" class="white team_name"></div>
           <div class="row-fluid" id="bowlerstate"><!--Bowling-->
             <div class="span6">
-              <h6 id="strikerbowler" class="yellow"></h6>
+              <h6 id="strikerbowler" class="white team_name"></h6>
               <!--<h6 class="white">6 Runs this over</h6>--> 
             </div>
             <div class="span1"><!--Overs-->
