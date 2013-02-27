@@ -21,6 +21,10 @@ try
 		$search = $xmlDoc->getElementsByTagName( "item" );
 		foreach( $search as $searchNode )
 			{
+				$search_link="bbc.co.uk/sport/0/cricket/";
+				if(!strpos($searchNode->getElementsByTagName('link')->item(0)->nodeValue, $search_link)){
+					continue;
+				}
 				//$node['title']=str_replace($str_to_remove,'',$searchNode->getElementsByTagName('title')->item(0)->nodeValue);
 				$node['title']=$searchNode->getElementsByTagName('title')->item(0)->nodeValue;
 				$node['description']=$searchNode->getElementsByTagName('description')->item(0)->nodeValue;
@@ -28,9 +32,7 @@ try
 				$node['link']=$searchNode->getElementsByTagName('link')->item(0)->nodeValue;
 				$node['media1']=$searchNode->getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')->item(0)->getAttribute('url');
 				$node['media2']=$searchNode->getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')->item(1)->getAttribute('url');
-				if(strpos($node['link'], 'sport')==21 && strpos($node['link'], 'cricket')==29){
-					$result[]=$node;
-				}	
+				$result[]=$node;	
 			}
 		
 			
