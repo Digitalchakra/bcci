@@ -282,30 +282,17 @@
     
     <!--Results On the right-->
     <div class = "span4 margint20 visible-desktop">
-      <div class = "white-block">
-        <div class = "heading">
-        	<div class="row-fluid margint10">
-            	<div class="span8">
-                	<h4>Results</h4>
-                </div>
-                <div class="span3">
-                    <!--<select id="resultmenu" name="one"  class="selectpicker" data-style = "btn-warning" style="display:none">
-                    <option value="ODI" class="red-btn">ODI</option>
-                    <option value="T20">T20</option>
-                    <option value="Test">Test</option>
-                  </select>-->
-                  <div class="btn-group marginb10 pull-right small-menu">
-                    <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown" id="resultmenu">ODI<span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li class="resultmenu"><a>ODI</a></li>
-                      <li class="resultmenu"><a>Test</a></li>
-                      <li class="resultmenu"><a>T20</a></li>
-                    </ul>
-                </div>
-              </div>
-            </div>
-        </div>
-        <div class="accordion" id="accordion2"> 
+      <div class="tab-box-wrapper">
+        <ul id="Acctab" class="nav nav-tabs tabs-box gradient">
+          <li class="active"><a href="#Acc01" data-toggle="tab">ODI</a></li>
+          <li class=""><a href="#Acc02" data-toggle="tab">Test</a></li>
+          <li class=""><a href="#Acc03" data-toggle="tab">T20</a></li>
+          <div class="clearfix"></div>
+        </ul>
+        <div  class="tab-content" style="height: 280px;" id="accordion2"> 
+        <div id="Acc01" class="tab-pane fade active in"> </div>
+        <div id="Acc02" class="tab-pane fade"> </div>
+        <div id="Acc03" class="tab-pane fade"> </div>
           <!--Result list from my.js--> 
           
         </div>
