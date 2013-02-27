@@ -45,7 +45,7 @@ body, ul, li {
 	background: linear-gradient(to bottom,  #8e140b 0%,#cc5115 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8e140b', endColorstr='#cc5115',GradientType=0 );*/
 	box-shadow:inset 0 0 3px rgba(0,0,0,0.3);
-	border-bottom:3px solid #CC5115;
+	border-bottom:2px solid #CC5115;
 }
 
 .menu li {

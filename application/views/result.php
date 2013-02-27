@@ -4,7 +4,7 @@
     
 
 
-<div class="span9 margint20">
+<div class="span9">
   <div class = "page-header">
               <h3>Results</h3>
           </div>

@@ -78,7 +78,7 @@
 
       <!--PAGINATION-->
       <div class = "row">
-        <div class = "span7 offset1 margint-20">
+        <div class = "span7 margint-20">
           <div class = "container">
             <div class="pagination">
               <ul>

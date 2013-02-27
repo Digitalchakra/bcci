@@ -247,6 +247,7 @@ td a{
 	padding: 0 0 0 5px;
 	font-weight: normal;
 	text-transform: uppercase;
+	margin: 10px 5px;
 }
 .page-header h5,h6 {
 	color: #a82e0f;
@@ -266,6 +267,9 @@ h5 {
 h6 {
 		margin:10px;
 
+}
+.nav{
+	margin-bottom: 0px;
 }
 h4 {
 	color:#a82e0f;
