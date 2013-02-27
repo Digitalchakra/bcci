@@ -1,48 +1,25 @@
-<?php
-$menu=array('ODI','T20','Test');
-?>
 <div class = "container">
   <div class = "row">
     <div class = "span9">
     
-      <!--Page Heading-->
-      <div class = "row">
-        <div class = "span9">
-          <div class = "page-header">
-              <h3>Current Series</h3>
+
+
+<div class="span9 margint20">
+  <div class = "page-header">
+              <h3>Results</h3>
           </div>
-        </div>
-      </div>
-      
-      <!--Sub Menu Dropdown-->
-      <div class = "row">
-      	<div class = "span8 margint10">
-        <h4>Results</h4>
-        </div>
-        
-        <!--Matches Dropdown-->
-        <div class = "span1 margint20">
-			  	<div class="btn-group marginb10 pull-right small-menu">
-                    <button class="btn dropdown-toggle" data-toggle="dropdown"><?php echo $content[0]->type; ?><span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-				<?php
-				foreach($menu as $row)
-				{ 
-					if($content[0]->type==$row)
-					continue;
-					?>
-				<li class="resultmenu" ref="<?php echo $base_url.$row ?>"><a><?php echo $row; ?></a></li>
-				<?php } ?>
-              </ul>
-              </div>
-        </div>
-      </div>
-      
-      <!--Table--> 
-      <div class = "row">
-      	<div class = "span9 margint20">
-         <!-- <p><h4>Schedule</h4></p>-->
-          <table class="table table-bordered table-striped">
+      <div class="tab-box-wrapper">
+        <ul class="nav nav-tabs tabs-box gradient" id="matchestab">
+          <li class="active"><a data-toggle="tab" href="#ODIMatches">ODI</a></li>
+          <li class=""><a data-toggle="tab" href="#TestMatches">Test</a></li>
+          <li class=""><a data-toggle="tab" href="#T20Matches">T20</a></li>
+          <div class="clearfix"></div>
+        </ul>
+
+        <!--Matches Tabs COntent-->
+        <div style="height: 280px;" class="tab-content" id="matchestabContent">
+          <div id="ODIMatches" class="tab-pane fade"> 
+            <table class="table table-bordered table-striped">
             <colgroup>
               <col class="span3">
               <col class="span2">
@@ -57,12 +34,12 @@ $menu=array('ODI','T20','Test');
               </tr>
             </thead>
             <tbody>
-				<?php
-				foreach($content as $row)
-				{ ?>
+        <?php
+        foreach($content['ODI'] as $row)
+        { ?>
               <tr>
                 <td>
-					<?php echo $row->team; ?>
+          <?php echo $row->team; ?>
                 </td>
                 <td>
                   <?php echo $row->date; ?>
@@ -72,41 +49,90 @@ $menu=array('ODI','T20','Test');
                 </td>
               </tr>
               <?php
-				} ?>
+        } ?>
             </tbody>
         </table>
-        <sup>via foxsports.com.au</sup>
-        </div>
-
-      </div>
-      
-      <!--PAGINATION-->
-      <div class = "row">
-        <div class = "span7 offset1 margint-20">
-          <div class = "container">
-            <div class="pagination">
-              <ul>
-                <!--<li><a href="#">Prev</a></li>
-                <li class = "active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">6</a></li>
-                <li><a href="#">7</a></li>
-                <li><a href="#">8</a></li>
-                <li><a href="#">9</a></li>
-                <li><a href="#">10</a></li>
-                <li><a href="#">11</a></li>
-                <li><a href="#">12</a></li>
-                <li><a href="#">Next</a></li>-->
-                <?php echo $links; ?>
-              </ul>
-            </div>
+            
+          </div>
+          <div id="TestMatches" class="tab-pane fade"> 
+            <table class="table table-bordered table-striped">
+            <colgroup>
+              <col class="span3">
+              <col class="span2">
+              <col class="span2">
+              <col class="span2">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Teams</th>
+                <th>Date</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody>
+        <?php
+        foreach($content['Test'] as $row)
+        { ?>
+              <tr>
+                <td>
+          <?php echo $row->team; ?>
+                </td>
+                <td>
+                  <?php echo $row->date; ?>
+                </td>
+                <td>
+                  <?php echo $row->result; ?>
+                </td>
+              </tr>
+              <?php
+        } ?>
+            </tbody>
+        </table>
+            
+          </div>
+          <div id="T20Matches" class="tab-pane fade active in"> 
+            <table class="table table-bordered table-striped">
+            <colgroup>
+              <col class="span3">
+              <col class="span2">
+              <col class="span2">
+              <col class="span2">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Teams</th>
+                <th>Date</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody>
+        <?php
+        foreach($content['T20'] as $row)
+        { ?>
+              <tr>
+                <td>
+          <?php echo $row->team; ?>
+                </td>
+                <td>
+                  <?php echo $row->date; ?>
+                </td>
+                <td>
+                  <?php echo $row->result; ?>
+                </td>
+              </tr>
+              <?php
+        } ?>
+            </tbody>
+        </table>
+            
           </div>
         </div>
-      </div>    
+        <span class="pull-left padding10"><sup>via foxsports.com.au</sup></span>
+      </div>
     </div>
+
+  </div>  
+</div>
     
     <!--Side NAV-->
   <!--  <div class = "span3 margint10">
@@ -142,7 +168,6 @@ $menu=array('ODI','T20','Test');
       </div>
     </div>-->
   </div> 
-</div> 
 <script src="<?php echo base_url('assets/js/results.js');?>"></script>
 <script type="application/javascript">
  window.onload=function(){
