@@ -38,7 +38,7 @@ class Resultmodel extends CI_Model
 	function getResults($limit, $start, $type)
 	{
 		$data=array();
-		$qry = $this->db->limit($limit, $start)->where('type',$type)->get('tbl_results');
+		$qry = $this->db->limit($limit, $start)->order_by("match_id", "desc")->where('type',$type)->get('tbl_results');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)
