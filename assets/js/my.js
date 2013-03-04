@@ -146,12 +146,11 @@ function news()
 
 function livescore()
 {
-	$.ajax({
-        url: baseurl+'live',
-        type: "GET",
-        dataType:'json',
-        cache:false,
-        success: function(data) {
+	 var site='http://webclient.cricbuzz.com/includes/deccanherald/livecricketscore/filter-match-details.json';  
+    // Take the provided url, and add it to a YQL query. Make sure you encode it!  
+    var yql = 'http://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('select * from json where url="' + site + '"') + '&format=json';  	
+	 $.getJSON( yql,function(result) {
+		var data=result.query.results.json.json
 			listcount=0;
 			option="";
 			$.myplaceholder.mylivescore=[];
@@ -188,8 +187,7 @@ function livescore()
 				livescoredisplay($.myplaceholder.mylivescore[this.value]);
 				$.myplaceholder.checkreload=this.value;
 			});
-        }
-	});
+        });
 }
 function team()
 {
