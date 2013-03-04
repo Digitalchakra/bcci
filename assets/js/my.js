@@ -1,20 +1,21 @@
 
 $(document).ready(function()
 {
-		news();
-		result();
-		team();
 		$.myplaceholder={};
 		$.myplaceholder.mylivescore=[];
 		$.myplaceholder.checkreload=0;
 		$.myplaceholder.checkloaded=0;
+		livescore();
+		news();
+		result();
+		team();
 		rank('batsman');
 		rank('bowler');
 		rank('allrounder');
 		photos();
 		videos();
 		article();
-		livescore();
+
 		$(".fancybox").fancybox(
 		{
 			preload:true
@@ -37,6 +38,7 @@ function result()
         url: baseurl+'result/getlist',
         type: "GET",
         dataType:'json',
+        async: false,
         success: function(data) {
 			//alert(data.menu.length);
 			html='<div class="white-block"><div class="accordion">';
@@ -101,6 +103,7 @@ function news()
         url: baseurl+'news/getlist',
         type: "GET",
         dataType:'json',
+        async: false,
         success: function(data) {
 			for(i=1;i<data.resultset.length;i++)
 			{
@@ -197,6 +200,7 @@ function team()
         url: baseurl+'rank/team_json',
         type: "GET",
         dataType:'JSON',
+        async: false,
         success: function(data) {
 			list='<h4>Test</h4>';
 			for(i=0;i<data.resultset['Test'].length;i++)
@@ -284,6 +288,7 @@ function rank(method)
         url: baseurl+'rank/'+method+'_json',
         type: "GET",
         dataType:'JSON',
+        async: false,
         success: function(data) {
 			list='<h4>Test</h4>';
 			for(i=0;i<data.resultset['Test'].length;i++)
@@ -369,6 +374,7 @@ function photos()
         url: baseurl+'photos/getlist',
         type: "GET",
         dataType:'JSON',
+        async: false,
         success: function(data) {
 			for(i=0;i<data.resultset.length;i++)
 			{
@@ -397,6 +403,7 @@ function videos()
         url: baseurl+'videos/getlist',
         type: "GET",
         dataType:'JSON',
+        async: false,
         success: function(data) {
 			for(i=0;i<data.resultset.length;i++)
 			{
@@ -423,6 +430,7 @@ function article()
         url: baseurl+'article/getlist',
         type: "GET",
         dataType:'JSON',
+        async: false,
         success: function(data) {
 			recentArticle='';
 			html='<h4 class="media-heading"><a href="#">'+data.resultset[0]['title']+'</a></h4>';
