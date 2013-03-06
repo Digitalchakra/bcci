@@ -127,7 +127,7 @@ function news()
 			html+='<a target="_blank" href="'+data.resultset[0]['link']+'"><h4>'+data.resultset[0]['title']+'</h4></a>';
 			html+='<h5>'+data.resultset[0]['pubdate']+'</h5>';
 			html+=data.resultset[0]['description'];
-			html+='<span class="pull-left padding10"><sub>via bbc.co.uk</sub></span>';
+			//html+='<span class="pull-left padding10"><sub>via bbc.co.uk</sub></span>';
 			html+='<p class="pull-right padding10"><a class="red" target="_blank" href="'+data.resultset[0]['link']+'">Read More</a></p>';
 			html+='</p></div></div>';
 			$('#featuredNews').html(html);
