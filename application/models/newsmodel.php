@@ -7,7 +7,7 @@ class Newsmodel extends CI_Model
 		//$this->db->where('type', 'batting');
 		//$this->db->from('tbl_player_rank');
 		//$qry3=$this->db->limit($limit, $start)->where('utc_time >', $today_end)->get('tbl_matches');
-		$qry = $this->db->limit($limit, $start)->get('tbl_news');
+		$qry = $this->db->limit($limit, $start)->order_by('news_id','desc')->get('tbl_news');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)
