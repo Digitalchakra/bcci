@@ -16,13 +16,13 @@
         </ul>
         <div class="row-fluid">
         	<div class="span4">
-            	<h4 style="margin-left:20px">Test</h4>
-            </div>
-            <div class="span4">
             	<h4 style="margin-left:20px">ODI</h4>
             </div>
             <div class="span4">
             	<h4 style="margin-left:20px">T20</h4>
+            </div>
+            <div class="span4">
+            	<h4 style="margin-left:20px">Test</h4>
             </div>
         </div>
         <div class="tab-content tab-content-rank">
@@ -36,7 +36,7 @@
                         <ul style="list-style:none">
 							<?php
 							$i=1;
-							foreach($content['batsman']['Test'] as $test)
+							foreach($content['batsman']['ODI'] as $test)
 							{
 							?>
 							<li class="white-block">
@@ -64,7 +64,7 @@
                         <ul style="list-style:none">
 							<?php
 							$i=1;
-							foreach($content['batsman']['ODI'] as $odi)
+							foreach($content['batsman']['T20'] as $odi)
 							{
 							?>
 							<li class="white-block">
@@ -92,7 +92,7 @@
                         <ul style="list-style:none">
 							<?php
 							$i=1;
-							foreach($content['batsman']['T20'] as $t20)
+							foreach($content['batsman']['Test'] as $t20)
 							{
 							?>
 							<li class="white-block">
@@ -128,7 +128,6 @@
                   <div class="row-fluid rankings">
                     <div class="span4">
                         <ul style="list-style:none">
-							<h4>ODI</h4>
 							<?php
 							$i=1;
 							foreach($content['batswomen']['ODI'] as $odi)
@@ -156,7 +155,6 @@
                     </div>
                     <div class="span4">
                         <ul style="list-style:none">
-							<h4>T20</h4>
 							<?php
 							$i=1;
 							foreach($content['batswomen']['T20'] as $t20)
