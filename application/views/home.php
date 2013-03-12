@@ -5,7 +5,7 @@
   <div class = "row">
   <!--Top Ads-->
   <div class="row">
-  	<div class="span8" style="margin-left: 60px;">
+  	<div class="span8">
     	<div class = "ads-728X90">
         <script type="text/javascript"><!--
 		google_ad_client = "ca-pub-1444369114752839";
