@@ -169,12 +169,15 @@ function livescore()
 					{
 						option+= 'class="live_team dark-block">';
 					}
-					option+= '<div class="padding10"><p class="team_name">'+data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName;
+					option+= '<div class="padding10"><p class="team_name">'+data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName+'</p>';
 					if(data[listcount].type !='T20')
 					{
-					option+=' - '+data[listcount].matchdesc;
+					option+='<span class="yellow">'+data[listcount].matchdesc+'</span>';
 					}
-					option+='</p><h6>'+data[listcount]['venue-city']+'</h6><span>'+data[listcount]['match-day']+'</span></div></li>';
+					else{
+						option+='<span class="yellow">'+data[listcount]['type']+'</span>';
+					}
+					option+='<p class="yellow">'+data[listcount]['venue-city']+'</p><span class="yellow">'+data[listcount]['match-day']+'</span></div></li>';
 					$.myplaceholder.mylivescore.push(data[listcount]);
 				}
 				listcount++;
