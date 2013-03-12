@@ -1,10 +1,10 @@
 <div class = "container">
   <div class = "row">
-    <div class = "span9">
+    <div class = "span8">
 
       <!--Page Heading-->
       <div class = "row">
-        <div class = "span9">
+        <div class = "span8">
           <div class = "page-header">
               <h3>Current Series</h3>
           </div>
@@ -13,7 +13,7 @@
 
       <!--Sub Menu Dropdown-->
       <div class = "row">
-      	<div class = "span5 margint10">
+      	<div class = "span4 margint10">
         	<h4>Schedule</h4>
         </div>
 
@@ -37,7 +37,7 @@
 
       <!--Table-->
       <div class = "row">
-      	<div class = "span9 margint10">
+      	<div class = "span8 margint10">
           <!--<p><h4>Schedule</h4></p>-->
           <table class="table table-bordered table-striped">
             <colgroup>
@@ -78,7 +78,7 @@
 
       <!--PAGINATION-->
       <div class = "row">
-        <div class = "span7 margint-20">
+        <div class = "span8 margint-20">
           <div class = "container">
             <div class="pagination">
               <ul>
@@ -102,6 +102,15 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="span4 margint20">
+        <div class="row" style="margin-top:30px;">
+          <div class="span4">
+            <div class="ads-336X280">
+              <img src="<?php echo base_url('assets/Images/336X280.png');?>" />
+            </div>
+          </div>
+        </div>
     </div>
 
     <!--Side NAV-->
@@ -140,8 +149,3 @@
   </div>
 </div>
 <script src="<?php echo base_url('assets/js/schedule.js');?>"></script>
-<script type="application/javascript">
- window.onload=function(){
-      $('.selectpicker').selectpicker();
-      };
-</script>

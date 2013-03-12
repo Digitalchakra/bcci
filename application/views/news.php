@@ -5,7 +5,7 @@
 <div class = "container">
   <div class = "row">
     <!--Fixtures-->
-    <div class = "span9">
+    <div class = "span8">
       <!--Page Header-->
       <div class = "page-header">
         <h3>News<!--<span class = "pull-right marginr10">
@@ -16,7 +16,7 @@
       </div>
       <!--Articles-Blog-->
       <div class = "row">
-        <div class = "span9">
+        <div class = "span8">
           <ul class="media-list">
 			  <?php
 			  foreach($content as $row)
@@ -39,12 +39,11 @@
           </ul>
           <sup>via bbc.co.uk</sup>
         </div>
-        
       </div>
 
       <!--PAGINATION-->
       <div class = "row">
-        <div class = "span7 offset1 margint-20">
+        <div class = "span8 margint-20">
           <div class = "container">
             <div class="pagination">
               <ul>
@@ -65,6 +64,22 @@
                 <?php echo $links; ?>
               </ul>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="span4 margint20">
+    	<div class="row" style="margin-top:30px;">
+      	<div class="span4">
+        	<div class="ads-336X280">
+          	<img src="<?php echo base_url('assets/Images/336X280I.png');?>" />
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top:80px;">
+      	<div class="span4">
+        	<div class="ads-336X280">
+          	<img src="<?php echo base_url('assets/Images/336X280I.png');?>" />
           </div>
         </div>
       </div>

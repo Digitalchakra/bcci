@@ -3,7 +3,20 @@
 
 <div class = "container margint10">
   <div class = "row">
-    <div class = "span8 margint10">
+  <!--Top Ads-->
+  <div class="row">
+  	<div class="span8">
+    	<div class = "ads-728X90">
+        <img src="<?php echo base_url('assets/Images/720X90.png');?>" />
+      </div>
+    </div>
+    <div class = "span4">
+      <div class = "ads-200X90 pull-left">
+        <img src="<?php echo base_url('assets/Images/200X90.png');?>" />
+      </div>
+     </div>
+  </div>
+    <div class = "span7 margint10">
       <div id="myCarousel" class="carousel slide" style="z-index:0"> 
         <!-- Carousel items -->
         <div class="carousel-inner" id="bannerslide"> 
@@ -15,34 +28,17 @@
     </div>
     
     <!--Live SCore-->
-    <div id="liveScore" class="span4 margint10 livescore_bg visible-desktop">
-      <div class="row-fluid">
-        <div class="padding20">
-          <div class="span12">
-            <!--<div id="livescoreTabContent" class="tab-content">
-              <div style="position:relative;height:120px;background-color:#333;margin-bottom:-120px" class="tab-pane fade in" id="livescoreMenu">
-                <div class="row-fluid">
-                  <div class="span12"> Menu </div>
-                </div>
+    <div id="liveScore" class="span5 margint10 livescore_bg visible-desktop">
+     	 		<div class="row-fluid" id="no_matches">
+            <div class="span7">
+          <div class="padding20">
+            
+          <div id="no_matches" class="row-fluid">
+              <div class="span12">
+                <h5 id="series_title" class="white team_name align-center"></h5>
               </div>
-            </div>-->
-            <div id="no_matches" class="row-fluid">
-              <div class="span7">
-                <h5 id="series_title" class="white pull-left"></h5>
-              </div>
-              <div class = "span5">
-                   
-                	<!--<select class="selectpicker" name="one" id="livescore_dd" data-style="btn-warning"  style="display:none">
-                    </select>-->
-                <div class="btn-group marginb10 pull-right small-menu">
-                <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown" id="livescore_dd_title"></button>
-                <ul id="livescore_dd" class="dropdown-menu">
-                </ul>
-                </div>
-                  
-              </div>
+              
             </div>
-          </div>
           <div style="text-align:center" id="team_images" class="row-fluid margint20">
             <div class="span5"><!--TeamA-->
               <div class="team_icon">
@@ -50,7 +46,7 @@
               </div>
               <h5 id="team1" class="team_name"></h5>
               <h4 id="team1_score" class="yellow not_live"></h4>
-              <h5 id="team1_over" class="white not_live"></h5>
+              <p id="team1_over" class="white not_live small-text"></p>
             </div>
             <div class="span2">
               <h3 style="margin-top:42px" class="white">vs</h3>
@@ -61,7 +57,7 @@
               </div>
               <h5 id="team2" class="team_name"></h5>
               <h4 id="team2_score" class="yellow yellow-dull not_live"></h4>
-              <h5 id="team2_over" class="white not_live"></h5>
+              <p id="team2_over" class="white not_live small-text"></p>
             </div>
             <div style="text-align:left" class="span12"><!--Required Runs-->
               <h6 class="yellow"><!--<span id="status">CSK Needs 46 Runs to win</span>--> 
@@ -118,37 +114,40 @@
           </div>
           <div id="matchstate" style="text-align:center" class="white team_name"></div>
           <div class="row-fluid" id="bowlerstate"><!--Bowling-->
-            <div class="span6">
-              <h6 id="strikerbowler" class="white team_name"></h6>
+            <div class="span4">
+              <p id="strikerbowler" class="white small-text"></p>
               <!--<h6 class="white">6 Runs this over</h6>--> 
             </div>
-            <div class="span1"><!--Overs-->
+            <div class="span2"><!--Overs-->
               <h6 class="yellow">O</h6>
               <h6 id="strikerbowler_overs" class="white"></h6>
             </div>
-            <div class="span1"><!--Maidens-->
+            <div class="span2"><!--Maidens-->
               <h6 class="yellow">M</h6>
               <h6 id="strikerbowler_maidens" class="white"></h6>
             </div>
-            <div class="span1"><!--Runs-->
+            <div class="span2"><!--Runs-->
               <h6 class="yellow">R</h6>
               <h6 id="strikerbowler_runs" class="white"></h6>
             </div>
-            <div class="span1"><!--Wickets-->
+            <div class="span2"><!--Wickets-->
               <h6 class="yellow">W</h6>
               <h6 id="strikerbowler_wickets" class="white"></h6>
             </div>
-            <!--<div class="span2"><!--Wickets--> 
-            <!--    <h6 class="yellow">Econ</h6>
-                  <h6 class="white">3.27</h6>
-              </div>-->
+            
             <div style="text-align:center" class="span12"><!--Wickets-->
               <h5 class="yellow"><span id="strikers_lname"></span></h5>
             </div>
           </div>
+         </div>
         </div>
-      </div>
-    </div>
+          	<div class="span5 livescore-sidebar">
+            	<ul style="list-style:none" id="livescore_dd">
+               <!-- from my.js -->
+              </ul>
+            </div>
+          </div>
+ 		</div>
   </div>
 <!--   <div class = "row">
     <div class = "span12 margint20"> 
@@ -157,14 +156,14 @@
   </div> -->
   
   <!--Shadow FX-->
-  <div class = "row">
+  <!--<div class = "row">
     <div class = "shadowfx" style="height:12px;"> </div>
-  </div>
+  </div>-->
   
   <!-- Matches Tab-->
   <div class = "row">
-    <div class="span8 page-header"><h3>Matches</h3></div><div class="span4 page-header"><h3>Results</h3></div>
-    <div class = "span8 margint20">
+    <div class = "span8">
+    	<div class="page-header margin0" style="margin:0 0 10px 0;"><h3>Matches</h3></div>
       <div class = "tab-box-wrapper">
         <ul id="matchestab" class="nav nav-tabs tabs-box gradient">
           <li><a href="#pastMatches" data-toggle="tab">Recent</a></li>
@@ -281,7 +280,8 @@
     </div>
     
     <!--Results On the right-->
-    <div class = "span4 margint20 visible-desktop">
+    <div class = "span4 visible-desktop">
+    	<div class="page-header" style="margin:0 0 10px 0;"><h3>Results</h3></div>
       <div class="tab-box-wrapper">
         <ul id="Acctab" class="nav nav-tabs tabs-box gradient">
           <li class="active"><a href="#Acc01" data-toggle="tab">ODI</a></li>
@@ -320,16 +320,17 @@
           <div id="recentNewscont" class = "row-fluid"> 
             <!--recent news from my.js--> 
           </div>
-          <span class="pull-left"><sub>via bbc.co.uk</sub></span>
           <p class="pull-right"><a href="/news" class="red">View All</a></p>
         </div>
       </div>
+      <span class="pull-left"><sub>via wisdenindia.com</sub></span>
     </div>
+    
     <!-------News Tab------->
     
-    <div class = "span4 margint20">
-      <div class = "grey-block">
-        <p>ADS</p>
+    <div class = "span4 margint20" style="margin-top:30px;">
+      <div class = "ads-336X280">
+        <img src="<?php echo base_url('assets/Images/336X280I.png');?>" />
       </div>
     </div>
     <!-------Ads------------> 
@@ -473,7 +474,7 @@
     </div>
   </div>
   <div class = "row">
-    <div class = "span8">
+    <div class = "span12">
       <div class = "row">
         <div class = "span8 margint20 marginb20"> 
           <!----Photos and Videos Tab---->
@@ -506,7 +507,22 @@
             </div>
           </div>
         </div>
-        <div class = "span8 marginb20 news-thumb">
+        <div class="span4 margint20">
+    	<div class="row" style="margin-top:60px;">
+      	<div class="span4">
+        	<div class="ads-336X280">
+          	<img src="<?php echo base_url('assets/Images/336X280I.png');?>" />
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+  	<div class="span12">
+    	<div class="row">
+      	<div class = "span8 marginb20 news-thumb">
           <ul id="articles" class="nav nav-tabs tabs-line">
             <li class="active"><a href="#featuredArticles" data-toggle="tab">Featured Articles</a></li>
             <li><a href="#recentArticles" data-toggle="tab">Recent Articles</a></li>
@@ -528,28 +544,7 @@
         </div>
       </div>
     </div>
-    
-    <!--     <div class = "span4 margint20">
-      <div class = "content-block">
-        <div id="sidebar" class="sidebar-nav">
-        </div>
-        <div class = "content-box">
-          <div class = "page-header">
-            <h3>Articles Archive</h3>
-          </div>
-        </div>
-        <div class = "content-box">
-          <div class = "page-header">
-            <h3>Ads</h3>
-          </div>
-        </div>
-      </div>
-    </div> --> 
   </div>
 </div>
 <script src="<?php echo base_url('assets/js/my.js');?>"></script>
-<script type="application/javascript">
- window.onload=function(){
-      $('.selectpicker').selectpicker();
-      };
-</script>
+

@@ -21,6 +21,8 @@
 <link href="<?php echo base_url('assets/css/bootstrap-select.css'); ?>" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="<?php echo base_url('assets/css/jquery.fancybox.css'); ?>" type="text/css" media="screen" />
 <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="<?php echo base_url('assets/css/flexslider.css'); ?>" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php echo base_url('assets/css/ads.css'); ?>" type="text/css" media="screen" />
 <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-1.8.3.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap-select.min.js'); ?>"></script>
 <script type="text/javascript">
@@ -31,7 +33,7 @@
 	display:none;
 }
 </style>
-<!--[if gte IE 9]>
+<!--[if gte IE 9]> 
   <style type="text/css">
     .gradient {
        filter: none;

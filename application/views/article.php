@@ -5,7 +5,7 @@
 <div class = "container">
   <div class = "row"> 
     <!--Fixtures-->
-    <div class = "span9"> 
+    <div class = "span8"> 
       <!--Page Header-->
       <div class = "page-header">
         <h3>Article  <!--<span class = "pull-right marginr10">
@@ -16,79 +16,73 @@
       </div>
       <!--Articles-Blog-->
       <div class = "row">
-        <div class = "span9">
+        <div class = "span8">
           <ul class="media-list">
             <li class="media"> <a class="pull-left" href="#"> <!--<img src="" class="media-object">--> </a>
               <div class="media-body">
                 <h4 class="media-heading"><?php echo $content[0]->title; ?></h4>
-                <p>
                 <h5>By <?php echo $content[0]->author; ?></h5>
-                <p></p>
+                
                 <!----Article short description-->
                 <p><?php echo $content[0]->content; ?></p>
+                </div>
             </li>
-
           </ul>
         </div>
       </div>
       
-    <div class = "row">
-        <div class = "span7 offset1 margint-20">
-          <div class = "container">
-            <div class="pagination">
-              <ul>
-                <!--<li><a href="#">Prev</a></li>
-                <li  class = "active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">6</a></li>
-                <li><a href="#">7</a></li>
-                <li><a href="#">8</a></li>
-                <li><a href="#">9</a></li>
-                <li><a href="#">10</a></li>
-                <li><a href="#">11</a></li>
-                <li><a href="#">12</a></li>
-                <li><a href="#">Next</a></li>-->
-              </ul>
+      <div class = "row">
+          <div class = "span8 margint-20">
+            <div class = "container">
+              <div class="pagination">
+                <ul>
+                  <!--<li><a href="#">Prev</a></li>
+                  <li  class = "active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">6</a></li>
+                  <li><a href="#">7</a></li>
+                  <li><a href="#">8</a></li>
+                  <li><a href="#">9</a></li>
+                  <li><a href="#">10</a></li>
+                  <li><a href="#">11</a></li>
+                  <li><a href="#">12</a></li>
+                  <li><a href="#">Next</a></li>-->
+                </ul>
+              </div>
             </div>
+          </div>
+        </div>
+    </div>
+    <div class="span4 margint20">
+    	<div class="row">
+      	<div class="span4">
+        	<div class="ads-336X280">
+          	<img src="<?php echo base_url('assets/Images/336X280I.png');?>" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+      	<div class="span2 margint10">
+        	<div class="ads-160X600">
+          	<img src="<?php echo base_url('assets/Images/160X600I.png');?>" />
+          </div>
+        </div>
+        <div class="span2 margint10">
+        	<div class="ads-160X600">
+          	<img src="<?php echo base_url('assets/Images/160X600.png');?>" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+      	<div class="span4 margint10">
+        	<div class="ads-234X60">
+          	<img src="<?php echo base_url('assets/Images/234X60.png');?>" />
           </div>
         </div>
       </div>
     </div>
-    <!--Featured Articles-->
-   <!-- <div class = "span3">
-        <div class = "row">
-          <!--Recent Articles-->
-           <!-- <div class = "span3 margint10">
-            <div id="sidebar" class="sidebar-nav">
-              <ul class="nav nav-tabs nav-stacked">
-                <li class="menu-heading dark-heading">Recent Articles</li>
-                <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game</a></li>
-                <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game</a></li>
-                <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game</a></li>
-                <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game</a></li>
-                <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game</a></li>
-                <li class="nav-menu"><a href="#">Ipl would've affected young Dravid's Game</a></li>
-                <li class="nav-menu menu-box">
-                  <div class = "row">
-                    <div class = "span3">
-                      <div class = "padding20 pull-right"> <a href = "#" class = "viewall">View All</a> </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!--Articles Archive-->
-            <!--<div class = "span3 margint10">
-          <div class = "page-header">
-            <h4>Articles Archive</h4>
-          </div>
-          </div>
-        </div>
-    </div>-->
   </div>
-</div>
 </div>

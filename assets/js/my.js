@@ -155,13 +155,26 @@ function livescore()
 			listcount=0;
 			option="";
 			$.myplaceholder.mylivescore=[];
+			$('.live_team').removeClass('active');
 			//alert(data[listcount].matchDataType);
 			$(data).each(function()
 			{
-				
 				if(data[listcount].matchDataType=='Live Data')
 				{
-					option+='<li value="'+listcount+'" class="live_team"><a>'+data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName+'</a></li>';
+					option+='<li value="'+listcount+'"';
+					if(listcount ===$.myplaceholder.checkreload)
+					{
+						option+= 'class="live_team dark-block active">';
+					}else
+					{
+						option+= 'class="live_team dark-block">';
+					}
+					option+= '<div class="padding10"><p class="team_name">'+data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName;
+					if(data[listcount].type !='T20')
+					{
+					option+=' - '+data[listcount].matchdesc;
+					}
+					option+='</p><h6>'+data[listcount]['venue-city']+'</h6><span>'+data[listcount]['match-day']+'</span></div></li>';
 					$.myplaceholder.mylivescore.push(data[listcount]);
 				}
 				listcount++;
@@ -185,7 +198,9 @@ function livescore()
 			}*/
 			$('.live_team').click(function()
 			{
+				$('.live_team').removeClass('active');
 				livescoredisplay($.myplaceholder.mylivescore[this.value]);
+				$(this).addClass('active');
 				$.myplaceholder.checkreload=this.value;
 			});
         });
