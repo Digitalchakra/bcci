@@ -170,6 +170,10 @@ function livescore()
 						option+= 'class="live_team dark-block">';
 					}
 					option+= '<div class="padding10"><p class="team_name">'+data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName+'</p>';
+					if(data[listcount].state=='inprogress')
+					{
+						option+='<img src="'+baseurl+'assets/Images/live.gif">';
+					}
 					if(data[listcount].type !='T20')
 					{
 					option+='<span class="yellow">'+data[listcount].matchdesc+'</span>';
