@@ -57,31 +57,42 @@
         </div>
     </div>
     <div class="span4 margint20">
-    	<div class="row">
+    	<div class="row" style="margin-top:30px;">
       	<div class="span4">
         	<div class="ads-336X280">
-          	<img src="<?php echo base_url('assets/Images/336X280I.png');?>" />
+          	<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-1444369114752839";
+		/* 336x280, created 6/2/10 */
+		google_ad_slot = "3029230199";
+		google_ad_width = 336;
+		google_ad_height = 280;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
           </div>
         </div>
       </div>
-      <div class="row">
-      	<div class="span2 margint10">
-        	<div class="ads-160X600">
-          	<img src="<?php echo base_url('assets/Images/160X600I.png');?>" />
-          </div>
-        </div>
-        <div class="span2 margint10">
-        	<div class="ads-160X600">
-          	<img src="<?php echo base_url('assets/Images/160X600.png');?>" />
+      <div class="row" style="margin-top:80px;">
+      	<div class="span4">
+        	<div class="ads-336X280">
+          	<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-1444369114752839";
+		/* 336x280, created 6/2/10 */
+		google_ad_slot = "3029230199";
+		google_ad_width = 336;
+		google_ad_height = 280;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
           </div>
         </div>
       </div>
-      <div class="row">
-      	<div class="span4 margint10">
-        	<div class="ads-234X60">
-          	<img src="<?php echo base_url('assets/Images/234X60.png');?>" />
-          </div>
-        </div>
+
+
       </div>
     </div>
   </div>

@@ -5,14 +5,34 @@
   <div class = "row">
   <!--Top Ads-->
   <div class="row">
-  	<div class="span8">
+  	<div class="span8" style="margin-left: 60px;">
     	<div class = "ads-728X90">
-        <img src="<?php echo base_url('assets/Images/720X90.png');?>" />
+        <script type="text/javascript"><!--
+		google_ad_client = "ca-pub-1444369114752839";
+		/* 728x90, created 12/12/07 */
+		google_ad_slot = "2932032750";
+		google_ad_width = 728;
+		google_ad_height = 90;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
       </div>
     </div>
     <div class = "span4">
       <div class = "ads-200X90 pull-left">
-        <img src="<?php echo base_url('assets/Images/200X90.png');?>" />
+       <script type="text/javascript"><!--
+		google_ad_client = "ca-pub-1444369114752839";
+		/* live-score-top */
+		google_ad_slot = "7901791092";
+		google_ad_width = 200;
+		google_ad_height = 90;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
       </div>
      </div>
   </div>
@@ -330,7 +350,17 @@
     
     <div class = "span4 margint20" style="margin-top:30px;">
       <div class = "ads-336X280">
-        <img src="<?php echo base_url('assets/Images/336X280I.png');?>" />
+       <script type="text/javascript"><!--
+		google_ad_client = "ca-pub-1444369114752839";
+		/* 336x280, created 6/2/10 */
+		google_ad_slot = "3029230199";
+		google_ad_width = 336;
+		google_ad_height = 280;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
       </div>
     </div>
     <!-------Ads------------> 
@@ -511,7 +541,17 @@
     	<div class="row" style="margin-top:60px;">
       	<div class="span4">
         	<div class="ads-336X280">
-          	<img src="<?php echo base_url('assets/Images/336X280I.png');?>" />
+        <script type="text/javascript"><!--
+		google_ad_client = "ca-pub-1444369114752839";
+		/* 336x280, created 6/2/10 */
+		google_ad_slot = "3029230199";
+		google_ad_width = 336;
+		google_ad_height = 280;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
           </div>
         </div>
       </div>

@@ -14,8 +14,8 @@ try
 			
 			foreach($html->find('div#loop div.post') as $div)
 			{
-				$node['media2']= '/assets/Images/thumb-Ind.png';
-				$node['media1']= '/assets/Images/csk01.jpg';
+				$node['media2']= '/assets/Images/news-default.png';
+				$node['media1']= '/assets/Images/news-default.png';
 				$node['news_id']=$id=ereg_replace("[^0-9]","",$div->getAttribute('id'));
 				foreach($div->find('img.attachment-general') as $img)
 				{
