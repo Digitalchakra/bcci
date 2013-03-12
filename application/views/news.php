@@ -37,7 +37,7 @@
 			}
 			?>
           </ul>
-          <sup>via bbc.co.uk</sup>
+          <sup>via wisdenindia.com</sup>
         </div>
       </div>
 
