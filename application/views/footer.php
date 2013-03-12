@@ -114,7 +114,7 @@
     <div class = "row">
       <div class = "span6 hidden-phone"> © Copyright BCCI <?php echo date('Y');?>. All Rights reserved. </div>
       <div class = "span6">
-        <div class = "pull-right"> Powered by <a href = "http://www.digitalchakra.in"><img src="<?php echo base_url('assets/Images/DigitalChakra.png'); ?>"></a></div>
+        <div class = "pull-right"> Powered by <a href = "http://www.digitalchakra.in" target="_blank"><img src="<?php echo base_url('assets/Images/DigitalChakra.png'); ?>"></a></div>
         <div class = "clearfix"></div>
       </div>
     </div>
