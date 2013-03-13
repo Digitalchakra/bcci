@@ -52,13 +52,7 @@
      	 		<div class="row-fluid" id="no_matches">
             <div class="span7">
           <div class="padding20">
-            
-          <div id="no_matches" class="row-fluid">
-              <div class="span12">
-                <h5 id="series_title" class="white team_name align-center"></h5>
-              </div>
-              
-            </div>
+			  <div id="matchstate" style="text-align:center" class="white team_name"></div>
           <div style="text-align:center" id="team_images" class="row-fluid margint20">
             <div class="span5"><!--TeamA-->
               <div class="team_icon">
@@ -132,7 +126,7 @@
               <!--<h6 class="yellow"><strong>This Over:</strong> 0 1 4 3 1 <span class="marginl20"><strong>Extras:</strong> 6</span></h6>--> 
             </div>
           </div>
-          <div id="matchstate" style="text-align:center" class="white team_name"></div>
+          
           <div class="row-fluid" id="bowlerstate"><!--Bowling-->
             <div class="span4">
               <p id="strikerbowler" class="white small-text"></p>
@@ -158,8 +152,15 @@
             <div style="text-align:center" class="span12"><!--Wickets-->
               <h5 class="yellow"><span id="strikers_lname"></span></h5>
             </div>
+            
           </div>
          </div>
+         <div id="no_matches" class="row-fluid">
+              <div class="span12">
+                <h5 id="series_title" class="white team_name align-center"></h5>
+              </div>
+              
+            </div>
         </div>
           	<div class="span5 livescore-sidebar">
             	<ul style="list-style:none" id="livescore_dd">

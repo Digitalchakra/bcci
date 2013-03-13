@@ -485,8 +485,7 @@ function article()
 }
 function livescoredisplay(data)
 {
-	//alert('live');
-				//alert(data.state);
+	//alert(new Date(data.startdayandtimeGMT));
 				//series_title
 				//$('#series_title').html(data.matchType+" - "+data.matchdesc);
 				$('#livescore_dd_title').html(data['team1'].shortName+' vs '+data['team2'].shortName+'<span class="caret"></span>');
@@ -540,7 +539,14 @@ function livescoredisplay(data)
 				//status if not playing
 				if(data.state != 'inprogress')
 				{
+					if(data.state === 'stump')
+					{
+						$('#matchstate').html('Stumps - '+data.status);
+					}
+					else
+					{
 					$('#matchstate').html(data.status);
+					}
 				}
 				//striker's
 				$('#striker').html(data['striker'].fullName);
@@ -589,7 +595,6 @@ function livescoredisplay(data)
 				}
 				else
 				{
-
 					$('#matchstate').html(data.status);
 					$('#playerstate').hide();
 					$('#bowlerstate').hide();
@@ -597,7 +602,7 @@ function livescoredisplay(data)
 				if(data.state=='preview')
 				{
 				$('#playerstate, #bowlerstate, .not_live').hide();
-				$('#matchstate').html('Starting '+data.startdayandtimeGMT+' GMT');
+				$('#matchstate').html('Starting '+new Date(data.startdayandtimeGMT));
 				}
 
 
