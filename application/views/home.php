@@ -362,7 +362,7 @@
     <!-------News Tab------->
     
     <div class = "span4 margint20" style="margin-top:30px;">
-      <div class = "ads-336X280">
+      <div class = "ads-336X280 pull-right">
        <script type="text/javascript"><!--
 		google_ad_client = "ca-pub-1444369114752839";
 		/* 336x280, created 6/2/10 */
@@ -553,7 +553,7 @@
         <div class="span4 margint20">
     	<div class="row" style="margin-top:60px;">
       	<div class="span4">
-        	<div class="ads-336X280">
+        	<div class="ads-336X280 pull-right">
         <script type="text/javascript"><!--
 		google_ad_client = "ca-pub-1444369114752839";
 		/* 336x280, created 6/2/10 */
