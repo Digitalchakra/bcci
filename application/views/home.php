@@ -156,7 +156,7 @@
           </div>
          </div>
          <div id="no_matches" class="row-fluid">
-              <div class="span12">
+              <div class="span12 margint-10">
                 <h5 id="series_title" class="white team_name align-center"></h5>
               </div>
               

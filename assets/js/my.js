@@ -534,75 +534,72 @@ function livescoredisplay(data)
 				$('#team2_score').html(data['currentBowlTeamScore'].runsAndWicket);
 				$('#team2_over').html(data['currentBowlTeamScore'].overs+" Overs");
 				//}
+				$('#matchstate').html(data.status);
 				if(data.state != 'complete')
-				{
-				//status if not playing
-				if(data.state != 'inprogress')
-				{
-					if(data.state === 'stump')
+				{	
+					//status if not playing
+					if(data.state != 'inprogress')
 					{
-						$('#matchstate').html('Stumps - '+data.status);
+						if(data.state === 'stump')
+						{
+							$('#matchstate').html('Stumps - '+data.status);
+						}
+					}
+					//striker's
+					$('#striker').html(data['striker'].fullName);
+					$('#nonStriker').html(data['nonStriker'].fullName);
+
+					//striker's runs
+					if(data['striker'].balls !="")
+					{
+						$('#striker_run').html(data['striker'].runs+"("+data['striker'].balls+")");
 					}
 					else
 					{
-					$('#matchstate').html(data.status);
+						$('#striker_run').html("");
 					}
-				}
-				//striker's
-				$('#striker').html(data['striker'].fullName);
-				$('#nonStriker').html(data['nonStriker'].fullName);
+					if(data['nonStriker'].balls !="")
+					{
+						$('#nonStriker_run').html(data['nonStriker'].runs+"("+data['nonStriker'].balls+")");
+					}
+					else
+					{
+						$('#nonStriker_run').html("");
+					}
 
-				//striker's runs
-				if(data['striker'].balls !="")
-				{
-					$('#striker_run').html(data['striker'].runs+"("+data['striker'].balls+")");
-				}
-				else
-				{
-					$('#striker_run').html("");
-				}
-				if(data['nonStriker'].balls !="")
-				{
-					$('#nonStriker_run').html(data['nonStriker'].runs+"("+data['nonStriker'].balls+")");
-				}
-				else
-				{
-					$('#nonStriker_run').html("");
-				}
+					//sr
+					if(data['nonStriker'].balls !="")
+					$('#nonStriker_sr').html((data['nonStriker'].runs/data['nonStriker'].balls*100).toFixed(2));
+					if(data['striker'].balls !="")
+					$('#striker_sr').html((data['striker'].runs/data['striker'].balls*100).toFixed(2));
 
-				//sr
-				if(data['nonStriker'].balls !="")
-				$('#nonStriker_sr').html((data['nonStriker'].runs/data['nonStriker'].balls*100).toFixed(2));
-				if(data['striker'].balls !="")
-				$('#striker_sr').html((data['striker'].runs/data['striker'].balls*100).toFixed(2));
-
-				//last name
-				if(data['striker'].fullName != "" && data['strikerbowler'].fullName != "")
-				$('#strikers_lname').html(data['strikerbowler'].fullName.split(' ').slice(-1).join(' ')+" to "+data['striker'].fullName.split(' ').slice(-1).join(' '));
-				//split(' ').slice(-1).join(' ');
+					//last name
+					if(data['striker'].fullName != "" && data['strikerbowler'].fullName != "")
+					$('#strikers_lname').html(data['strikerbowler'].fullName.split(' ').slice(-1).join(' ')+" to "+data['striker'].fullName.split(' ').slice(-1).join(' '));
+					//split(' ').slice(-1).join(' ');
 
 
-				//bowler
-				$('#strikerbowler').html(data['strikerbowler'].fullName);
+					//bowler
+					$('#strikerbowler').html(data['strikerbowler'].fullName);
 
-				$('#strikerbowler_runs').html(data['strikerbowler'].runs);
+					$('#strikerbowler_runs').html(data['strikerbowler'].runs);
 
-				$('#strikerbowler_overs').html(data['strikerbowler'].overs);
+					$('#strikerbowler_overs').html(data['strikerbowler'].overs);
 
-				$('#strikerbowler_maidens').html(data['strikerbowler'].maidens);
+					$('#strikerbowler_maidens').html(data['strikerbowler'].maidens);
 
-				$('#strikerbowler_wickets').html(data['strikerbowler'].wickets);
+					$('#strikerbowler_wickets').html(data['strikerbowler'].wickets);
 				}
 				else
 				{
-					$('#matchstate').html(data.status);
+					//$('#matchstate').html(data.status);
 					$('#playerstate').hide();
 					$('#bowlerstate').hide();
 				}
 				if(data.state=='preview')
 				{
-				$('#playerstate, #bowlerstate, .not_live').hide();
-				$('#matchstate').html('Starting '+new Date(data.startdayandtimeGMT));
+					$('#playerstate, #bowlerstate, .not_live').hide();
+					$('#matchstate').html('Starting '+new Date(data.startdayandtimeGMT));
 				}
 
 
