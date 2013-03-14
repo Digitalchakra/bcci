@@ -4,6 +4,7 @@
 <div class = "container margint10">
   <div class = "row">
   <!--Top Ads-->
+<div class="span12">
   <div class="row">
   	<div class="span8">
     	<div class = "ads-728X90">
@@ -36,6 +37,7 @@
       </div>
      </div>
   </div>
+</div>
     <div class = "span6 margint10">
       
       

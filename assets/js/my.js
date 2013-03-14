@@ -133,10 +133,10 @@ function news()
 			bannerslide+='<div class="item active"> <img src="'+data.resultset[0]['media1']+'" class = "res-image">';
 			bannerslide+='</div>';
 			$('#bannerslide').html(bannerslide);
-			bannertxt='<div class = "carousel-caption" style = "position:relative";>';
+			bannertxt='<div class = "carousel-caption" style = "position:relative; height:72px; overflow:hidden;";>';
 			bannertxt+='<a target="_blank" href="'+data.resultset[0]['link']+'"><h4>'+data.resultset[0]['title']+'</h4></a>';
 			bannertxt+='<div><span class="small-text yellow">'+data.resultset[0]['pubdate']+'</span></div>';
-			bannertxt+='<p>'+data.resultset[0]['description'].substring(0,200)+' ...</p></div>';
+			bannertxt+='<p style="margin-top:-5px">'+data.resultset[0]['description'].substring(0,200)+' ...</p></div>';
 			$('#bannertxt').html(bannertxt);
         },
         error:function()
