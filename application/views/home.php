@@ -36,8 +36,12 @@
       </div>
      </div>
   </div>
-    <div class = "span7 margint10">
-      <div id="myCarousel" class="carousel slide" style="z-index:0"> 
+    <div class = "span6 margint10">
+      
+      
+      <div class="row">
+      	<div class="span6">
+        	<div id="myCarousel" class="carousel slide" style="z-index:0"> 
         <!-- Carousel items -->
         <div class="carousel-inner" id="bannerslide"> 
           <!-- banner img from my.js--> 
@@ -45,12 +49,19 @@
         <!-- Carousel nav --> 
         <!--<a class="carousel-control left" href="#myCarousel" data-slide="prev" >&lsaquo;</a> <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>--> 
       </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top:-20px;">
+      	<div class="span6" id="bannertxt">
+          <!-- banner img from my.js--> 
+        </div>
+      </div>
     </div>
     
     <!--Live SCore-->
-    <div id="liveScore" class="span5 margint10 livescore_bg visible-desktop">
+    <div id="liveScore" class="span6 margint10 livescore_bg visible-desktop">
      	 		<div class="row-fluid" id="no_matches">
-            <div class="span7">
+            <div class="span8">
           <div class="padding20">
 			  <div id="matchstate" style="text-align:center" class="white team_name"></div>
           <div style="text-align:center" id="team_images" class="row-fluid margint20">
@@ -162,7 +173,7 @@
               
             </div>
         </div>
-          	<div class="span5 livescore-sidebar">
+          	<div class="span4 livescore-sidebar">
             	<ul style="list-style:none" id="livescore_dd">
                <!-- from my.js -->
               </ul>
@@ -177,10 +188,9 @@
   </div> -->
   
   <!--Shadow FX-->
-  <!--<div class = "row">
+ 	<div class = "row margint10">
     <div class = "shadowfx" style="height:12px;"> </div>
-  </div>-->
-  
+  </div>
   <!-- Matches Tab-->
   <div class = "row">
     <div class = "span8">
