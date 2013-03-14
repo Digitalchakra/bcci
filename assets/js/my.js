@@ -553,30 +553,29 @@ function livescoredisplay(data)
 				$('#nonStriker').html(data['nonStriker'].fullName);
 
 				//striker's runs
+				$('#striker_run').html("");
 				if(data['striker'].balls !="")
 				{
 					$('#striker_run').html(data['striker'].runs+"("+data['striker'].balls+")");
 				}
-				else
-				{
-					$('#striker_run').html("");
-				}
+				
+				$('#nonStriker_run').html("");
 				if(data['nonStriker'].balls !="")
 				{
 					$('#nonStriker_run').html(data['nonStriker'].runs+"("+data['nonStriker'].balls+")");
 				}
-				else
-				{
-					$('#nonStriker_run').html("");
-				}
 
 				//sr
+				$('#nonStriker_sr').html("");
 				if(data['nonStriker'].balls !="")
 				$('#nonStriker_sr').html((data['nonStriker'].runs/data['nonStriker'].balls*100).toFixed(2));
+				
+				$('#striker_sr').html("");
 				if(data['striker'].balls !="")
 				$('#striker_sr').html((data['striker'].runs/data['striker'].balls*100).toFixed(2));
 
 				//last name
+				$('#strikers_lname').html("");
 				if(data['striker'].fullName != "" && data['strikerbowler'].fullName != "")
 				$('#strikers_lname').html(data['strikerbowler'].fullName.split(' ').slice(-1).join(' ')+" to "+data['striker'].fullName.split(' ').slice(-1).join(' '));
 				//split(' ').slice(-1).join(' ');
