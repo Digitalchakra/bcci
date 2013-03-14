@@ -16,7 +16,6 @@
 <link href="<?php echo base_url('assets/css/hoverfx_common.css'); ?>" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url('assets/css/live_score_icon.css'); ?>" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url('assets/css/country_flag.css'); ?>" rel="stylesheet" type="text/css">
-<link href="<?php echo base_url('assets/css/csslightbox.css'); ?>" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/jquery.lightbox-0.5.css'); ?>" media="screen" />
 <link rel="stylesheet" href="<?php echo base_url('assets/css/jquery.fancybox.css'); ?>" type="text/css" media="screen" />
 <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
