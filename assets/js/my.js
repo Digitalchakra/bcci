@@ -24,7 +24,16 @@ $(document).ready(function()
 			}, 60000);*/
     setInterval(function() {
           livescore();
-			}, 60000);
+			}, 30000);
+    $("#chat_minimize").click(function(){
+    if($(this).html() == "-"){
+        $(this).html("+");
+    }
+    else{
+        $(this).html("-");
+    }
+    $("#chat_box").toggle();
+});
 
 });
 function result()
@@ -565,12 +574,24 @@ function livescoredisplay(data)
 
 				//sr
 				$('#nonStriker_sr').html("");
-				if(data['nonStriker'].balls !="")
-				$('#nonStriker_sr').html((data['nonStriker'].runs/data['nonStriker'].balls*100).toFixed(2));
-				
+				if(data['nonStriker'].balls != ""){
+					if(data['nonStriker'].balls != 0){
+						$('#nonStriker_sr').html((data['nonStriker'].runs/data['nonStriker'].balls*100).toFixed(2));
+					}
+					else{
+						$('#nonStriker_sr').html("0.00");
+					}
+				}
+
 				$('#striker_sr').html("");
-				if(data['striker'].balls !="")
-				$('#striker_sr').html((data['striker'].runs/data['striker'].balls*100).toFixed(2));
+				if(data['striker'].balls != ""){
+					if(data['striker'].balls != 0){
+						$('#striker_sr').html((data['striker'].runs/data['striker'].balls*100).toFixed(2));
+					}
+					else{
+						$('#striker_sr').html("0.00");
+					}
+				}
 
 				//last name
 				$('#strikers_lname').html("");

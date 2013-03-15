@@ -112,9 +112,9 @@
 <div class = "row-fluid dark-bg">
   <div class = "container">
     <div class = "row">
-      <div class = "span6 hidden-phone"> &copy; Copyright BCCI <?php echo date('Y');?>. All Rights reserved. </div>
-      <div class = "span6">
-        <div class = "pull-right"> Powered by <a href = "http://www.digitalchakra.in" target="_blank"><img src="<?php echo base_url('assets/Images/DigitalChakra.png'); ?>"></a></div>
+      <div class = "span4 hidden-phone"> &copy; Copyright BCCI <?php echo date('Y');?>. All Rights reserved. </div>
+      <div class = "span4">
+        <div class = "pull-left"> Powered by <a href = "http://www.digitalchakra.in" target="_blank"><img src="<?php echo base_url('assets/Images/DigitalChakra.png'); ?>"></a></div>
         <div class = "clearfix"></div>
       </div>
     </div>
@@ -128,7 +128,6 @@
    <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 	  <script src="<?php echo base_url('assets/js/bootstrap-extra.min.js');?>"></script>
     <script src="<?php echo base_url('assets/js/footer.js'); ?>"></script>

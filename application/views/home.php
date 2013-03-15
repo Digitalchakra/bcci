@@ -601,3 +601,16 @@
 </div>
 <script src="<?php echo base_url('assets/js/my.js');?>"></script>
 
+<!-- Chat stuff goes here -->
+
+<div class = "chat">
+      <div id="chat_window">
+        <div id="chat_box">
+          <script id="sid0010000024330758669" type="text/javascript" src="<?php echo base_url('assets/js/chat.js'); ?> "></script>
+        </div>
+        <div id="chat_title_bar" class = "chat_title_bar">
+          <span>Chat with other members!</span>
+          <div id="chat_minimize">-</div>
+        </div>
+      </div>
+    </div>
