@@ -133,6 +133,7 @@
 	  <script src="<?php echo base_url('assets/js/bootstrap-extra.min.js');?>"></script>
     <script src="<?php echo base_url('assets/js/footer.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/js/jquery.fancybox.pack.js'); ?> "></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/js/analytics.js'); ?> "></script>
     <script src="<?php echo base_url('assets/js/photos.js');?>"></script>
 </body>
 </html>
