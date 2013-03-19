@@ -175,10 +175,13 @@ function livescore()
 					if(listcount ===$.myplaceholder.checkreload)
 					{
 						option+= 'class="live_team dark-block active">';
+						option+= '<div class = "arrow"></div>';
 					}else
 					{
 						option+= 'class="live_team dark-block">';
+						option+= '<div class = "arrow"></div>';
 					}
+					
 					option+= '<div class="padding10"><p class="team_name">'+data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName;
 					if(data[listcount].state=='inprogress')
 					{
@@ -186,12 +189,12 @@ function livescore()
 					}
 					if(data[listcount].type !='T20')
 					{
-					option+='</p><span class="yellow small-text">'+data[listcount].matchdesc+'</span>';
+					option+='</p><span class="yellow small-text">'+data[listcount].matchdesc+', </span>';
 					}
 					else{
-						option+='</p><span class="yellow small-text">'+data[listcount]['type']+'</span>';
+						option+='</p><span class="yellow small-text">'+data[listcount]['type']+', </span>';
 					}
-					option+='<p class="yellow small-text">'+data[listcount]['venue-city']+'</p><span class="yellow small-text">'+data[listcount]['match-day']+'</span></div></li>';
+					option+='<span class="white small-text">'+data[listcount]['venue-city']+' | '+'</span><span class="yellow small-text">'+data[listcount]['match-day']+'</span></div></li>';
 					$.myplaceholder.mylivescore.push(data[listcount]);
 				}
 				listcount++;

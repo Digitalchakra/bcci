@@ -176,8 +176,12 @@ background: -ms-linear-gradient(top,  #363636 0%,#292929 100%);
 background: linear-gradient(to bottom,  #363636 0%,#292929 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#363636', endColorstr='#292929',GradientType=0 );
 	color:#FFF;
-	box-shadow:inset 0 0 0 4px rgba(0,0,0,0.45),
-					 inset 1px 1px 10px 0 rgba(0,0,0,0.8);
+	border:solid 1px #252525;
+	cursor:pointer;
+	transition:all 0.4s ease-in-out;
+	-webkit-transition:all 0.4s ease-in-out;
+	-o-transition:all 0.4s ease-in-out;
+	-moz-transition:all 0.4s ease-in-out;
 }
 .dark-block:hover {
 background: #191919;
@@ -189,12 +193,41 @@ background: -ms-linear-gradient(top,  #191919 0%,#282828 100%);
 background: linear-gradient(to bottom,  #191919 0%,#282828 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#191919', endColorstr='#282828',GradientType=0 );
 color:#FFF;
-border:solid 1px #292929;
+border:solid 1px #282828;
+transition:all 0.4s ease-in-out;
+-webkit-transition:all 0.4s ease-in-out;
+-o-transition:all 0.4s ease-in-out;
+-moz-transition:all 0.4s ease-in-out;
 }
-#livescore_dd .active {
-	background:#b32310;
+.livescore-sidebar .active {
+	background: #b32310; 
+	background: -moz-linear-gradient(top,  #b32310 0%, #4c0707 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b32310), color-stop(100%,#4c0707)); 
+	background: -webkit-linear-gradient(top,  #b32310 0%,#4c0707 100%); 
+	background: -o-linear-gradient(top,  #b32310 0%,#4c0707 100%); 
+	background: -ms-linear-gradient(top,  #b32310 0%,#4c0707 100%); 
+	background: linear-gradient(to bottom,  #b32310 0%,#4c0707 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b32310', endColorstr='#4c0707',GradientType=0 );
 	color:#FFF;
-	border:solid 1px #a31d0b;
+	border:solid 1px #500808;
+	box-shadow:none;
+	transition:all 0.4s ease-in-out;
+	-webkit-transition:all 0.4s ease-in-out;
+	-o-transition:all 0.4s ease-in-out;
+	-moz-transition:all 0.4s ease-in-out;
+}
+.livescore-sidebar .active .arrow {
+	background-image: url(../Images/arrow.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	width:14px;
+	height:56px;
+	margin-left:-14px;
+	float:left;
+	z-index:10000;
+		transition:all 0.4s ease-in-out;
+	-webkit-transition:all 0.4s ease-in-out;
+	-o-transition:all 0.4s ease-in-out;
 }
 .white-block .heading {
 	background: #f6f5f5; /* Old browsers */
@@ -570,8 +603,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5e5e5e', end
 }
 .livescore-sidebar {
 	height:485px;
-	overflow-x:hidden;
-	overflow-y:auto;
+	overflow:visible;
+	background-color:#333;
+	border-left:solid 3px #444;
 }
 .chat {
 	position: fixed;
@@ -611,4 +645,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b32310', end
 color:#FFF;
 font-size: 12px;
 font-weight: bold;
+}
+.batsman {
 }

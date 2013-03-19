@@ -63,7 +63,7 @@
     <!--Live SCore-->
     <div id="liveScore" class="span6 margint10 livescore_bg visible-desktop">
      	 		<div class="row-fluid" id="no_matches">
-            <div class="span8">
+            <div class="span7">
           <div class="padding20">
 			  <div id="matchstate" style="text-align:center" class="white team_name"></div>
           <div style="text-align:center" id="team_images" class="row-fluid margint20">
@@ -92,7 +92,8 @@
             </div>
           </div>
           <div style="text-align:center" class="row-fluid margint10" id="playerstate"><!--Player Stats-->
-            <div style="border-right:1px dotted #b33310; padding-right:20px" class="span6">
+          	<div class = "span1 batsman"></div>
+            <div class="span5">
               <h5 id="striker" class="white team_name"></h5>
               <!--Player-->
               <h5 id="striker_run" class="yellow"></h5>
@@ -114,7 +115,7 @@
                 </div>
               </div>
             </div>
-            <div class="span6">
+            <div class="span5">
               <h5 id="nonStriker" class="white team_name"></h5>
               <!--Player-->
               <h5 id="nonStriker_run" class="yellow"></h5>
@@ -135,29 +136,28 @@
                 </div>
               </div>
             </div>
-            <div class="span12 margint10"> 
-              <!--<h6 class="yellow"><strong>This Over:</strong> 0 1 4 3 1 <span class="marginl20"><strong>Extras:</strong> 6</span></h6>--> 
-            </div>
+            <div class="runner span1"></div>
           </div>
           
-          <div class="row-fluid" id="bowlerstate"><!--Bowling-->
-            <div class="span4">
+          <div class="row-fluid margint10" id="bowlerstate"><!--Bowling-->
+          	<div class="span1 bowler"></div>
+            <div class="span6">
               <p id="strikerbowler" class="white small-text"></p>
               <!--<h6 class="white">6 Runs this over</h6>--> 
             </div>
-            <div class="span2"><!--Overs-->
+            <div class="span1"><!--Overs-->
               <h6 class="yellow">O</h6>
               <h6 id="strikerbowler_overs" class="white"></h6>
             </div>
-            <div class="span2"><!--Maidens-->
+            <div class="span1"><!--Maidens-->
               <h6 class="yellow">M</h6>
               <h6 id="strikerbowler_maidens" class="white"></h6>
             </div>
-            <div class="span2"><!--Runs-->
+            <div class="span1"><!--Runs-->
               <h6 class="yellow">R</h6>
               <h6 id="strikerbowler_runs" class="white"></h6>
             </div>
-            <div class="span2"><!--Wickets-->
+            <div class="span1"><!--Wickets-->
               <h6 class="yellow">W</h6>
               <h6 id="strikerbowler_wickets" class="white"></h6>
             </div>
@@ -175,8 +175,8 @@
               
             </div>
         </div>
-          	<div class="span4 livescore-sidebar">
-            	<ul style="list-style:none" id="livescore_dd">
+          	<div class="span5 livescore-sidebar">
+            	<ul style="list-style:none;margin-left:0;" id="livescore_dd">
                <!-- from my.js -->
               </ul>
             </div>

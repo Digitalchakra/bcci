@@ -28,7 +28,7 @@
         <!--Second Row-->
         <div class = "row">
           <div class = "span12">
-            <div class = "bottom-logo pull-right margint20"> <img src="<?php echo base_url('assets/Images/Logo_03.png'); ?>"> </div>
+            <div class = "bottom-logo pull-right margint20"> <div class="logo"></div> </div>
             <div class = "clearfix"></div>
           </div>
         </div>
@@ -112,10 +112,13 @@
 <div class = "row-fluid dark-bg">
   <div class = "container">
     <div class = "row">
-      <div class = "span4 hidden-phone"> &copy; Copyright BCCI <?php echo date('Y');?>. All Rights reserved. </div>
-      <div class = "span4">
-        <div class = "pull-left"> Powered by <a href = "http://www.digitalchakra.in" target="_blank"><img src="<?php echo base_url('assets/Images/DigitalChakra.png'); ?>"></a></div>
-        <div class = "clearfix"></div>
+      <div class = "span4"> 
+      	&copy; Copyright BCCI <?php echo date('Y');?>. All Rights reserved.
+       </div>
+      <div class = "span4 pull-left">
+        
+        	Powered by <a href = "http://www.digitalchakra.in" target="_blank"><div class="digital_chakra pull-right"></div></a>
+        
       </div>
     </div>
   </div>

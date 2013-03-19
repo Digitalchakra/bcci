@@ -168,7 +168,7 @@ body {
 	line-height: 20px;
 	color: #333333;
 	background-color: #f2f1f1;
-	background-image: url(../Images/Header-Bg-l_01.png);
+	/*background-image: url(../Images/Header-Bg-l_01.png);*/
 	background-repeat: repeat-x;
 	background-position: left top;
 }
