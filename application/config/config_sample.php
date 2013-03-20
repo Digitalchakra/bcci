@@ -14,8 +14,8 @@
 | path to your installation.
 |
 */
-$config['base_url']	= '';
-
+$config['base_url']	= 'http://localbcci.com/';
+//$config['base_url']	= 'http://192.168.1.75/bcci/';
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -26,7 +26,7 @@ $config['base_url']	= '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -224,7 +224,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'ajjwhebfwefvw%$ed^e^5cy&R';
 
 /*
 |--------------------------------------------------------------------------
@@ -357,6 +357,8 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 
-
+//Forum config
+$config['forumclientID']	= '1285837910';
+$config['forumsecret']	= '522aa686c89be0a02e0ea69c63339432';
 /* End of file config.php */
 /* Location: ./application/config/config.php */
