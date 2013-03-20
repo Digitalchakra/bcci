@@ -39,22 +39,22 @@
 
                  <ul>
                  <li id="first" class="firstanimation">  <!-- ID for tooltip and class for animation -->
-                 <a href="#"> <img src="<?php echo base_url('assets/Images/k1.jpg'); ?>" alt="KVM Academy"/> </a>
+                 <a target="_blank" href="http://kvmacademy.com/"> <img src="<?php echo base_url('assets/Images/k1.jpg'); ?>" alt="KVM Academy"/> </a>
                  </li>
          
                  <li id="second" class="secondanimation">
-                <a href="#"> <img src="<?php echo base_url('assets/Images/k2.jpg'); ?>" alt="KVM Academy"/> </a>
+                <a target="_blank" href="http://kvmacademy.com/"> <img src="<?php echo base_url('assets/Images/k2.jpg'); ?>" alt="KVM Academy"/> </a>
                  </li>
                  <li id="third" class="thirdanimation">
-                 <a href="#"> <img src="<?php echo base_url('assets/Images/k3.jpg'); ?>" alt="KVM Academy"/> </a>
+                 <a target="_blank" href="http://kvmacademy.com/"> <img src="<?php echo base_url('assets/Images/k3.jpg'); ?>" alt="KVM Academy"/> </a>
                  </li>
 
                  <li id="fourth" class="fourthanimation">
-                 <a href="#"> <img src="<?php echo base_url('assets/Images/k4.jpg'); ?>" alt="KVM Academy"/> </a>
+                 <a target="_blank" href="http://kvmacademy.com/"> <img src="<?php echo base_url('assets/Images/k4.jpg'); ?>" alt="KVM Academy"/> </a>
                  </li>
 
                  <li id="fifth" class="fifthanimation">
-                 <a href="#"> <img src="<?php echo base_url('assets/Images/k5.jpg'); ?>" alt="KVM Academy"/> </a>
+                 <a target="_blank" href="http://kvmacademy.com/"> <img src="<?php echo base_url('assets/Images/k5.jpg'); ?>" alt="KVM Academy"/> </a>
                  </li>
                  </ul>
 
