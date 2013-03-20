@@ -1,6 +1,6 @@
  <!--MAIN CONTENT
 ===================================================================  -->
-
+<link rel="stylesheet" href="<?php echo base_url('assets/css/kvm.css'); ?>" type="text/css" media="screen" />
 <div class = "container margint10">
   <div class = "row">
   <!--Top Ads-->
@@ -23,17 +23,44 @@
     </div>
     <div class = "span4">
       <div class = "ads-200X90 pull-left">
-       <script type="text/javascript"><!--
+       <!--<script type="text/javascript"><!--
 		google_ad_client = "ca-pub-1444369114752839";
 		/* live-score-top */
 		google_ad_slot = "7901791092";
 		google_ad_width = 200;
 		google_ad_height = 90;
-		//-->
 		</script>
 		<script type="text/javascript"
 		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-		</script>
+		</script>-->
+    <!-- kvm ads start -->
+              <div id="kvmslider">  <!-- Slider container -->
+                 <div id="mask">  <!-- Mask -->
+
+                 <ul>
+                 <li id="first" class="firstanimation">  <!-- ID for tooltip and class for animation -->
+                 <a href="#"> <img src="<?php echo base_url('assets/Images/k1.jpg'); ?>" alt="KVM Academy"/> </a>
+                 </li>
+         
+                 <li id="second" class="secondanimation">
+                <a href="#"> <img src="<?php echo base_url('assets/Images/k2.jpg'); ?>" alt="KVM Academy"/> </a>
+                 </li>
+                 <li id="third" class="thirdanimation">
+                 <a href="#"> <img src="<?php echo base_url('assets/Images/k3.jpg'); ?>" alt="KVM Academy"/> </a>
+                 </li>
+
+                 <li id="fourth" class="fourthanimation">
+                 <a href="#"> <img src="<?php echo base_url('assets/Images/k4.jpg'); ?>" alt="KVM Academy"/> </a>
+                 </li>
+
+                 <li id="fifth" class="fifthanimation">
+                 <a href="#"> <img src="<?php echo base_url('assets/Images/k5.jpg'); ?>" alt="KVM Academy"/> </a>
+                 </li>
+                 </ul>
+
+                 </div>  <!-- End Mask -->
+              </div>  <!-- End Slider Container -->
+<!-- kvm ads end -->
       </div>
      </div>
   </div>
