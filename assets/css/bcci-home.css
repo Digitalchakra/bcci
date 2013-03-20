@@ -646,5 +646,29 @@ color:#FFF;
 font-size: 12px;
 font-weight: bold;
 }
-.batsman {
+
+@-webkit-keyframes pulsate
+{
+	0%   { color: #ddd; text-shadow: 0 -1px 0 #000; }
+	50%  { color: #fff; text-shadow: 0 -1px 0 #444, 0 0 5px #d43c0d, 0 0 8px #fff; }
+	100% { color: #ddd; text-shadow: 0 -1px 0 #000; }
+}
+		
+@keyframes pulsate
+{
+	0%   { color: #ddd; text-shadow: 0 -1px 0 #000; }
+	50%  { color: #fff; text-shadow: 0 -1px 0 #444, 0 0 5px #d43c0d, 0 0 8px #fff; }
+	100% { color: #ddd; text-shadow: 0 -1px 0 #000; }
+}
+
+
+.pulsate {
+	-webkit-animation: pulsate 1.2s linear infinite;
+	animation: pulsate 1.2s linear infinite;
+	-moz-animation: pulsate 1.2s linear infinite;
+}
+.pulsate:hover {
+	-webkit-animation: none;
+	-moz-animation: none;
+	animation: none;
 }

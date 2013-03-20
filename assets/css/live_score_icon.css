@@ -1,68 +1,69 @@
 @charset "utf-8";
 /* CSS Document */
 
-.flag_AFG{ background-position: 0 0 !important; width: 68px; height: 68px; } 
-.flag_ARG{ background-position: 0 -118px !important; width: 68px; height: 68px; } 
-.flag_AUS{ background-position: 0 -236px !important; width: 68px; height: 68px; } 
-.flag_BAN{ background-position: 0 -354px !important; width: 68px; height: 68px; } 
-.flag_CAN{ background-position: 0 -472px !important; width: 68px; height: 68px; } 
-.flag_CSK{ background-position: 0 -590px !important; width: 68px; height: 68px; } 
-.flag_DC{ background-position: 0 -708px !important; width: 68px; height: 68px; } 
-.flag_DDD{ background-position: 0 -826px !important; width: 68px; height: 68px; } 
-.flag_ENG{ background-position: 0 -944px !important; width: 68px; height: 68px; } 
-.flag_HK{ background-position: 0 -1062px !important; width: 68px; height: 68px; } 
-.flag_IND{ background-position: 0 -1180px !important; width: 68px; height: 68px; } 
-.flag_IRE{ background-position: 0 -1298px !important; width: 68px; height: 68px; } 
-.flag_KEN{ background-position: 0 -1416px !important; width: 68px; height: 68px; } 
-.flag_KKR{ background-position: 0 -1534px !important; width: 68px; height: 68px; } 
-.flag_KTK{ background-position: 0 -1652px !important; width: 68px; height: 68px; } 
-.flag_KXP{ background-position: 0 -1770px !important; width: 68px; height: 68px; } 
-.flag_MI{ background-position: 0 -1888px !important; width: 68px; height: 68px; } 
-.flag_NAM{ background-position: -118px 0 !important; width: 68px; height: 68px; } 
-.flag_NZ{ background-position: -118px -118px !important; width: 68px; height: 68px; } 
-.flag_PAK{ background-position: -118px -236px !important; width: 68px; height: 68px; } 
-.flag_PW{ background-position: -118px -354px !important; width: 68px; height: 68px; } 
-.flag_RC{ background-position: -118px -472px !important; width: 68px; height: 68px; } 
-.flag_RR{ background-position: -118px -590px !important; width: 68px; height: 68px; } 
-.flag_RSA{ background-position: -118px -708px !important; width: 68px; height: 68px; } 
-.flag_SCO{ background-position: -118px -826px !important; width: 68px; height: 68px; } 
-.flag_SL{ background-position: -118px -944px !important; width: 68px; height: 68px; } 
-.flag_SUR{ background-position: -118px -1062px !important; width: 68px; height: 68px; } 
-.flag_WI{ background-position: -118px -1180px !important; width: 68px; height: 68px; } 
-.flag_ZIM{ background-position: -118px -1298px !important; width: 68px; height: 68px; } 
-.flag_AFGW{ background-position: 0 0 !important; width: 68px; height: 68px; } 
-.flag_ARGW{ background-position: 0 -118px !important; width: 68px; height: 68px; } 
-.flag_AUSW{ background-position: 0 -236px !important; width: 68px; height: 68px; } 
-.flag_BANW{ background-position: 0 -354px !important; width: 68px; height: 68px; } 
-.flag_CANW{ background-position: 0 -472px !important; width: 68px; height: 68px; } 
-.flag_CSK{ background-position: 0 -590px !important; width: 68px; height: 68px; } 
-.flag_DC{ background-position: 0 -708px !important; width: 68px; height: 68px; } 
-.flag_DDD{ background-position: 0 -826px !important; width: 68px; height: 68px; } 
-.flag_ENGW{ background-position: 0 -944px !important; width: 68px; height: 68px; } 
-.flag_HKW{ background-position: 0 -1062px !important; width: 68px; height: 68px; } 
-.flag_INDW{ background-position: 0 -1180px !important; width: 68px; height: 68px; } 
-.flag_IREW{ background-position: 0 -1298px !important; width: 68px; height: 68px; } 
-.flag_KENW{ background-position: 0 -1416px !important; width: 68px; height: 68px; } 
-.flag_KKR{ background-position: 0 -1534px !important; width: 68px; height: 68px; } 
-.flag_KTK{ background-position: 0 -1652px !important; width: 68px; height: 68px; } 
-.flag_KXP{ background-position: 0 -1770px !important; width: 68px; height: 68px; } 
-.flag_MI{ background-position: 0 -1888px !important; width: 68px; height: 68px; } 
-.flag_NAMW{ background-position: -118px 0 !important; width: 68px; height: 68px; } 
-.flag_NZW{ background-position: -118px -118px !important; width: 68px; height: 68px; } 
-.flag_PAKW{ background-position: -118px -236px !important; width: 68px; height: 68px; } 
-.flag_PW{ background-position: -118px -354px !important; width: 68px; height: 68px; } 
-.flag_RC{ background-position: -118px -472px !important; width: 68px; height: 68px; } 
-.flag_RR{ background-position: -118px -590px !important; width: 68px; height: 68px; } 
-.flag_RSAW{ background-position: -118px -708px !important; width: 68px; height: 68px; } 
-.flag_SCOW{ background-position: -118px -826px !important; width: 68px; height: 68px; } 
-.flag_SLW{ background-position: -118px -944px !important; width: 68px; height: 68px; } 
-.flag_SUR{ background-position: -118px -1062px !important; width: 68px; height: 68px; } 
-.flag_WIW{ background-position: -118px -1180px !important; width: 68px; height: 68px; } 
-.flag_ZIMW{ background-position: -118px -1298px !important; width: 68px; height: 68px; } 
+.flag_AFG{ background: url(../Images/AFG.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_ARG{ background: url(../Images/ARG.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_AUS{ background: url(../Images/AUS.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_BAN{ background: url(../Images/BAN.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_CAN{ background: url(../Images/CAN.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_CSK{ background: url(../Images/CSK.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_DC{ background: url(../Images/DC.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_DDD{ background: url(../Images/DDD.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_ENG{ background: url(../Images/ENG.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_HK{ background: url(../Images/HK.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_IND{ background: url(../Images/IND.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_IRE{ background: url(../Images/IRE.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_KEN{ background: url(../Images/KEN.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_KKR{ background: url(../Images/KKR.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_KTK{ background: url(../Images/KTK.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_KXP{ background: url(../Images/KXP.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_MI{ background: url(../Images/MI.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_NAM{ background: url(../Images/NAM.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_NZ{ background: url(../Images/NZ.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_PAK{ background: url(../Images/PAK.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_PW{ background: url(../Images/PW.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_RC{ background: url(../Images/RC.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_RR{ background: url(../Images/RR.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_RSA{ background: url(../Images/RSA.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_SCO{ background: url(../Images/SCO.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_SL{ background: url(../Images/SL.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_SUR{ background: url(../Images/SUR.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_WI{ background: url(../Images/WI.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_ZIM{ background: url(../Images/ZIM.png)  no-repeat top left; width: 68px; height: 68px; } 
+
+.flag_AFGW{ background: url(../Images/AFG.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_ARGW{ background: url(../Images/ARG.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_AUSW{ background: url(../Images/AUS.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_BANW{ background: url(../Images/BAN.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_CANW{ background: url(../Images/CAN.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_CSKW{ background: url(../Images/CSK.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_DCW{ background: url(../Images/DC.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_DDDW{ background: url(../Images/DDD.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_ENGW{ background: url(../Images/ENG.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_HKW{ background: url(../Images/HK.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_INDW{ background: url(../Images/IND.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_IREW{ background: url(../Images/IRE.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_KENW{ background: url(../Images/KEN.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_KKRW{ background: url(../Images/KKR.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_KTKW{ background: url(../Images/KTK.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_KXPW{ background: url(../Images/KXP.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_MIW{ background: url(../Images/MI.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_NAMW{ background: url(../Images/NAM.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_NZW{ background: url(../Images/NZ.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_PAKW{ background: url(../Images/PAK.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_PWW{ background: url(../Images/PW.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_RCW{ background: url(../Images/RC.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_RRW{ background: url(../Images/RR.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_RSAW{ background: url(../Images/RSA.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_SCOW{ background: url(../Images/SCO.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_SLW{ background: url(../Images/SL.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_SURW{ background: url(../Images/SUR.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_WIW{ background: url(../Images/WI.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_ZIMW{ background: url(../Images/ZIM.png)  no-repeat top left; width: 68px; height: 68px; } 
+
 
 /* Small Flags */
 
 .team_icon .flag {
-    background: url(../Images/flags-big.png)  no-repeat top left;
-	margin:2px;
+		margin:4px;
 }

@@ -119,111 +119,93 @@
         <li <?php if($view_page=='articles') echo 'class="active"';?>><a href="<?php echo base_url('article'); ?>" class="drop">Articles</a></li>
         <li <?php if($view_page=='photos') echo 'class="active"';?>><a href="<?php echo base_url('photos');?>" class="drop">Photos</a></li>
         <li <?php if($view_page=='videos') echo 'class="active"';?>><a href="<?php echo base_url('videos');?>" class="drop">Videos</a></li>
-
-        <!--login start-->
-        <?php if($session_data = $this->session->userdata('logged_in'))
+				<!--<li <?php if($view_page=='forum') echo 'class="active"';?>><a href="<?php echo base_url('forum'); ?>" class="drop pulsate">Forum</a></li> -->
+        
+        <!--Signup-->
+         <?php if(!$session_data = $this->session->userdata('logged_in'))
         { ?>
-         <li><a>Welcome! <?php echo $session_data['firstname']; ?></a>
-         <div class="dropdown_2columns">
-            <div class = "col_2">
-              <ul class="greybox">
-                <li><a href="<?php echo base_url('login/logout'); ?>">Logout</a></li>
-              </ul>
+        <li class = "dropdown menu_right">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px">
+            	<i class = "icon-lock icon-white" style="margin-right:15px;"></i>Register
+            </a>
+                <div class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
+                  <div class="row">
+                  	<div class = "span3">
+                  	<div class="padding20" style="text-align:left">
+                    	<h4 style = "text-align:left">Registration</h4>
+                      <div class="divider"></div>
+                      <span id="error_msg1" class="errorMessage"></span>
+
+                      <form class="form-horizontal">
+                         <span>First Name: </span><input type="text" class="input-large" name="firstname" id="firstname" placeholder="First name" style="text-align:left">
+                         <div class="margint10"></div>
+                         <span>Last Name: </span><input type="text" class="input-large" name="lastname" id="firstname" placeholder="Last name" style="text-align:left">
+                         <div class="margint10"></div>
+                         <span>E-Mail: </span><input type="text" class="input-large" name="email_address" id="inputEmail" placeholder="Email" style="text-align:left">
+                         <div class="margint10"></div>
+                         <span>Password: </span><input type="password" class="input-large" name="pass_word" id="inputPassword" placeholder="Password" style="text-align:left">
+                         <div class="margint20"></div>
+                         <a href="" class="btn btn-primary span1 pull-right marginb15" id="signupsubmit">Register</a>
+                  		</form>
+                      
+                    </div>
+                  </div>
+                  </div>
+                </div>
+          </li>
+          <?php } ?>
+        
+        <!--Login
+         <?php if($session_data = $this->session->userdata('logged_in'))
+        { ?>
+        <li class = "menu_right dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px">
+           <i class = "icon-user icon-white" style="margin-right:15px;"></i><?php echo $session_data['firstname']; ?>
+          </a>
+          <div class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
+            <div class="row">
+              <div class = "span2">
+                <div class="padding20" style="text-align:left">
+                  <a class = "btn btn-primary" href="<?php echo base_url('login/logout'); ?>">Logout</a>
+                </div>
+              </div>
             </div>
           </div>
         </li>
-     <?php }
-      else
-      { ?>
-                <li><a class="drop">Login</a>
-      <div class="dropdown_2columns">
-            <div class = "col_2">
-              <div class="span8 offset1 signIn">
-                <div class="signIn-Inner">
-                  <span id="error_msg" class="signInError"></span>
-                    <form class"signInRight">
-                      <div class="signIn-email">
-                        <input type="text"  class="login" placeholder="Email" id="username" name="username">
-                      </div>
-                      <div class="signIn-pass">
-                        <input type="password" class="login" placeholder="Password" id="passowrd" name="password">
-                        <input type="text"  class="forget" placeholder="Email" id="fusername" name="fusername" style="display:none;">
-                        <span id="forget" class="signIn-fp login" >Forgot Password?</span>
-                        <span id="login" class="forget signIn-fp" style="display:none;">Back to login</span>
-                      </div>
-                      <div class="signIn-Button">
-                        <span id="loginsubmit" class="button login">Sign in</span>
-                          <span id="forgetsubmit" class="forget button" style="display:none;">Submit</span>
-                      </div>
-                       
-                    </form>
-               </div>
+        
+         <?php }
+				else
+				{ ?>
+        <li class = "menu_right dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px">
+         	 <i class = "icon-user icon-white" style="margin-right:15px;"></i>Login
+          </a>
+          <div class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
+            <div class="row">
+              <div class = "span3">
+                <div class="padding20" style="text-align:left">
+                	
+                  <h4 style = "text-align:left">Login</h4>
+                  <div class="divider"></div>
+                  <form class="form-horizontal">
+                  	<span>UserName: </span><input type="text" class="input-large" placeholder="Email" id="username" name="username" style="text-align:left">
+                    <div class="margint10"></div>
+                    <span>Password: </span><input type="password" class="input-large" placeholder="Password" id="passowrd" name="password">
+                    <input type="text"  class="forget input-large margint20" placeholder="Email" id="fusername" name="fusername" style="display:none;">
+                    <span id="forget" class="pull-right margint10" >Forgot Password?</span>
+                    <span id="login" class="pull-right margint10" style="display:none;">Back to login</span>
+                    <div class="margint20"></div>
+                         <a href="" class="btn btn-primary span1 pull-right marginb15 margint10" id="loginsubmit">Login</a>
+                         <a href="" class="btn btn-primary span1 pull-left marginb15 margint10" id="forgetsubmit" style="display:none;">Submit</a>
+                  </form>                  
+                  
+                </div>
               </div>
-            </div>
-        </div>
-        </li>
-       <?php } ?>
-        <!--login end-->
-        <!--signup start-->
-        <?php if(!$session_data = $this->session->userdata('logged_in'))
-        { ?>
-         <li><a class="drop">Sign up</a>
-          <!-- signup start-->
-       <div class="dropdown_2columns">
-        <div class = "col_2">
-         
-          <div class="row-fluid loginPage" >
-              <div class="span4 offset2 video">
-                
-              </div>
-              <div class="span5  signUp"> 
-                <span id="error_msg1" class="errorMessage"></span>
-
-                <form class="form-horizontal">
-                  <div class="control-group">
-                    <label class="control-label" for="input">First name</label>
-                    <div class="controls">
-                      <input type="text" class="input-xlarge" name="firstname" id="firstname" placeholder="First name">
-                    </div>
-                  </div>
-                  <div class="control-group">
-                    <label class="control-label" for="input">Last name</label>
-                    <div class="controls">
-                      <input type="text" class="input-xlarge" name="lastname" id="lastname" placeholder="Last name">
-                    </div>
-                  </div>
-                  <div class="control-group">
-                    <label class="control-label" for="inputEmail">Email</label>
-                    <div class="controls">
-                      <input type="text" class="input-xlarge" name="email_address" id="inputEmail" placeholder="Email">
-                    </div>
-                  </div>
-                  <div class="control-group">
-                    <label class="control-label" for="inputPassword">Password</label>
-                    <div class="controls">
-                      <input type="password" class="input-xlarge" name="pass_word" id="inputPassword" placeholder="Password">
-                    </div>
-                  </div>
-                  <div class="control-group">
-                    <div class="controls">
-                        <span id="signupsubmit" class="signUpbutton">Sign Up</span>
-                    </div>
-                  </div>
-                </form>
-              </div>  
             </div>
           </div>
-        </div>
-
-<!-- signup end -->
-         </li>
-     <?php } ?>
-        <!-- signup end-->
-        <!--<li><a href="#" class="drop">Polls</a></li>
-        <li><a href="#" class="drop">About</a></li> -->
-        <!-- <li class = "menu_right"><a href="#" class="drop" style="margin-right:5px"><i class = "icon-lock icon-white" style="margin-right:15px;"></i>Register</a></li>
-        <li class = "menu_right"><a href="#" class="drop" style="margin-right:5px"><i class = "icon-user icon-white" style="margin-right:15px;"></i>Login</a></li> -->
+        </li>
+        <?php } ?>-->
       </ul>
-    </div>
   </div>
+</div>
 </div>

@@ -54,7 +54,7 @@ body, ul, li {
 	text-align:center;
 	position:relative;
 	padding: 15px 10px 10px 10px;
-	margin-right:30px;
+	margin-right:20px;
 	margin-bottom:3px;
 	border-bottom:solid 2px transparent;
 }
@@ -84,7 +84,7 @@ body, ul, li {
 }
 
 .menu li:hover a {
-	color:#cecece;
+	color:#FFF;
 }
 .menu li .drop {
 :url("img/drop.png") no-repeat right 8px;
@@ -163,7 +163,7 @@ body, ul, li {
 color:#FFF;
 }
 .menu .menu_right a:hover {
-color:#feebe2;
+color:#FFF;
 }
 
 
@@ -178,9 +178,12 @@ color:#feebe2;
 	background: -ms-linear-gradient(top,  #8e140b 0%,#cc5115 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #8e140b 0%,#cc5115 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8e140b', endColorstr='#cc5115',GradientType=0 ); /* IE6-9 */
-
+	color:#666;
 }
-
+.menu li:hover .btn {
+	color:#FFF;
+	font-size:13px;
+}
 .menu li:hover .align_right {
 	left:auto;
 	right:-1px;
@@ -217,8 +220,8 @@ color:#feebe2;
 	color:#015b86;
 }
 .menu li:hover div a:hover {
-	color:#029feb;
-}
+	/*color:#029feb;
+*/}
 
 
 .strong {
