@@ -39,22 +39,22 @@
 
                  <ul>
                  <li id="img1" class="kvmslider" style="">  <!-- ID for tooltip and class for animation -->
-                 <a target="_blank" href="http://kvmacademy.com/"> <img src="<?php echo base_url('assets/Images/k1.jpg'); ?>" alt="KVM Academy"/> </a>
+                 <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k1.jpg'); ?>" alt="KVM Academy"/> </a>
                  </li>
          
                  <li id="img2" class="kvmslider" style="display:none;">
-                <a target="_blank" href="http://kvmacademy.com/"> <img src="<?php echo base_url('assets/Images/k2.jpg'); ?>" alt="KVM Academy"/> </a>
+                <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k2.jpg'); ?>" alt="KVM Academy"/> </a>
                  </li>
                  <li id="img3" class="kvmslider" style="display:none;">
-                 <a target="_blank" href="http://kvmacademy.com/"> <img src="<?php echo base_url('assets/Images/k3.jpg'); ?>" alt="KVM Academy"/> </a>
+                 <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k3.jpg'); ?>" alt="KVM Academy"/> </a>
                  </li>
 
                  <li id="img4" class="kvmslider" style="display:none;">
-                 <a target="_blank" href="http://kvmacademy.com/"> <img src="<?php echo base_url('assets/Images/k4.jpg'); ?>" alt="KVM Academy"/> </a>
+                 <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k4.jpg'); ?>" alt="KVM Academy"/> </a>
                  </li>
 
                  <li id="img5" class="kvmslider" style="display:none;">
-                 <a target="_blank" href="http://kvmacademy.com/"> <img src="<?php echo base_url('assets/Images/k5.jpg'); ?>" alt="KVM Academy"/> </a>
+                 <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k5.jpg'); ?>" alt="KVM Academy"/> </a>
                  </li>
                  </ul>
 
@@ -425,7 +425,7 @@
               </ul>
               <div id="ranktabContent" class="tab-content">
                 <div class="tab-pane fade in active" id="team">
-                  <div class="row-fluid rankings" id = "rankings">
+                  <div class="row-fluid rankings">
                     <div class = "span4">
                       <ul style="list-style:none" id="team-ranking">
                         <!-- from my.js-->
@@ -449,7 +449,7 @@
                   </div>
                 </div>
                 <div class="tab-pane fade" id="batsman">
-                  <div class="row-fluid rankings" id = "rankings">
+                  <div class="row-fluid rankings">
                     <div class = "span4">
                       <ul style="list-style:none" id="batsman-ranking">
                         <!-- from my.js-->
@@ -473,7 +473,7 @@
                   </div>
                 </div>
                 <div class="tab-pane fade" id="bowler">
-                  <div class="row-fluid rankings" id = "rankings">
+                  <div class="row-fluid rankings">
                     <div class = "span4">
                       <ul style="list-style:none" id="bowler-ranking">
                         <!-- from my.js-->
@@ -497,7 +497,7 @@
                   </div>
                 </div>
                 <div class="tab-pane fade" id="allRounder">
-                  <div class="row-fluid rankings" id = "rankings">
+                  <div class="row-fluid rankings" >
                     <div class = "span4">
                       <ul style="list-style:none" id="allrounder-ranking">
                         <!-- from my.js-->
