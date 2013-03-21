@@ -121,7 +121,7 @@
         <li <?php if($view_page=='videos') echo 'class="active"';?>><a href="<?php echo base_url('videos');?>" class="drop">Videos</a></li>
 				<!--<li <?php if($view_page=='forum') echo 'class="active"';?>><a href="<?php echo base_url('forum'); ?>" class="drop pulsate">Forum</a></li> -->
         
-        <!--Signup-->
+        <!--Signup
          <?php if(!$session_data = $this->session->userdata('logged_in'))
         { ?>
         <li class = "dropdown menu_right">
@@ -153,7 +153,7 @@
                   </div>
                 </div>
           </li>
-          <?php } ?>
+          <?php } ?> -->
         
         <!--Login
          <?php if($session_data = $this->session->userdata('logged_in'))
