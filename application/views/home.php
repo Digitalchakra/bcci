@@ -89,7 +89,7 @@
     
     <!--Live SCore-->
     <div id="liveScore" class="span6 margint10 livescore_bg visible-desktop">
-     	 		<div class="row-fluid" id="no_matches">
+     	 		<div class="row-fluid">
             <div class="span7">
           <div class="padding20">
 			  <div id="matchstate" style="text-align:center" class="white team_name"></div>
@@ -386,7 +386,7 @@
       <span class="pull-left"><sub>via wisdenindia.com</sub></span>
     </div>
     
-    <!-------News Tab------->
+    <!--News Tab-->
     
     <div class = "span4 margint20" style="margin-top:30px;">
       <div class = "ads-336X280 pull-right">
@@ -403,9 +403,9 @@
 		</script>
       </div>
     </div>
-    <!-------Ads------------> 
+    <!--Ads--> 
   </div>
-  <!------News and Ads---------->
+  <!--News and Ads-->
   
   <div class = "row">
     <div class = "span12 margint20">
@@ -547,7 +547,7 @@
     <div class = "span12">
       <div class = "row">
         <div class = "span8 margint20 marginb20"> 
-          <!----Photos and Videos Tab---->
+          <!---Photos and Videos Tab--->
           <ul id = "gallerytab" class = "nav nav-tabs tabs-line">
             <li class = "active"><a href ="#photos" data-toggle = "tab">Photos</a></li>
             <li><a href ="#videos" data-toggle = "tab">Videos</a></li>
