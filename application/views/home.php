@@ -38,22 +38,22 @@
                  <div id="mask">  <!-- Mask -->
 
                  <ul>
-                 <li id="first" class="firstanimation">  <!-- ID for tooltip and class for animation -->
+                 <li id="img1" class="kvmslider" style="">  <!-- ID for tooltip and class for animation -->
                  <a target="_blank" href="http://kvmacademy.com/"> <img src="<?php echo base_url('assets/Images/k1.jpg'); ?>" alt="KVM Academy"/> </a>
                  </li>
          
-                 <li id="second" class="secondanimation">
+                 <li id="img2" class="kvmslider" style="display:none;">
                 <a target="_blank" href="http://kvmacademy.com/"> <img src="<?php echo base_url('assets/Images/k2.jpg'); ?>" alt="KVM Academy"/> </a>
                  </li>
-                 <li id="third" class="thirdanimation">
+                 <li id="img3" class="kvmslider" style="display:none;">
                  <a target="_blank" href="http://kvmacademy.com/"> <img src="<?php echo base_url('assets/Images/k3.jpg'); ?>" alt="KVM Academy"/> </a>
                  </li>
 
-                 <li id="fourth" class="fourthanimation">
+                 <li id="img4" class="kvmslider" style="display:none;">
                  <a target="_blank" href="http://kvmacademy.com/"> <img src="<?php echo base_url('assets/Images/k4.jpg'); ?>" alt="KVM Academy"/> </a>
                  </li>
 
-                 <li id="fifth" class="fifthanimation">
+                 <li id="img5" class="kvmslider" style="display:none;">
                  <a target="_blank" href="http://kvmacademy.com/"> <img src="<?php echo base_url('assets/Images/k5.jpg'); ?>" alt="KVM Academy"/> </a>
                  </li>
                  </ul>
@@ -627,6 +627,7 @@
   </div>
 </div>
 <script src="<?php echo base_url('assets/js/my.js');?>"></script>
+<script src="<?php echo base_url('assets/js/kvm.js');?>"></script>
 
 <!-- Chat stuff goes here -->
 
