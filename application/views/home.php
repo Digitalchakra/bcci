@@ -39,22 +39,22 @@
 
                  <ul>
                  <li id="img1" class="kvmslider" style="">  <!-- ID for tooltip and class for animation -->
-                 <a target="_blank" href="http://kvmacademy.com/"> <img src="<?php echo base_url('assets/Images/k1.jpg'); ?>" alt="KVM Academy"/> </a>
+                 <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k1.jpg'); ?>" alt="KVM Academy"/> </a>
                  </li>
          
                  <li id="img2" class="kvmslider" style="display:none;">
-                <a target="_blank" href="http://kvmacademy.com/"> <img src="<?php echo base_url('assets/Images/k2.jpg'); ?>" alt="KVM Academy"/> </a>
+                <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k2.jpg'); ?>" alt="KVM Academy"/> </a>
                  </li>
                  <li id="img3" class="kvmslider" style="display:none;">
-                 <a target="_blank" href="http://kvmacademy.com/"> <img src="<?php echo base_url('assets/Images/k3.jpg'); ?>" alt="KVM Academy"/> </a>
+                 <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k3.jpg'); ?>" alt="KVM Academy"/> </a>
                  </li>
 
                  <li id="img4" class="kvmslider" style="display:none;">
-                 <a target="_blank" href="http://kvmacademy.com/"> <img src="<?php echo base_url('assets/Images/k4.jpg'); ?>" alt="KVM Academy"/> </a>
+                 <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k4.jpg'); ?>" alt="KVM Academy"/> </a>
                  </li>
 
                  <li id="img5" class="kvmslider" style="display:none;">
-                 <a target="_blank" href="http://kvmacademy.com/"> <img src="<?php echo base_url('assets/Images/k5.jpg'); ?>" alt="KVM Academy"/> </a>
+                 <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k5.jpg'); ?>" alt="KVM Academy"/> </a>
                  </li>
                  </ul>
 
