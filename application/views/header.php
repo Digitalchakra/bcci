@@ -39,10 +39,9 @@
 
 </head>
 <body>
-<!--HEADER
-===================================================================  -->
+<!-- ######## HEADER ######### -->
 <div class="red-bg"></div>
-<!-----LOGO and SEARCH---------->
+<!--LOGO and SEARCH-->
 <div class = "container">
   <div class = "row">
     <div class = "span3 margint20"> <a href="<?php echo base_url();?>"><div class="logo"></div></a></div>
@@ -63,12 +62,12 @@
   </div>
 </div>
 
-<!-----NAV MENU---------->
+<!--NAV MENU-->
 <div class = "container">
   <div class = "row">
     <div class = "span12 margint20">
-      <!---MEGA MENU
-      ------------------------------->
+      <!--MEGA MENU
+      -->
 
       <ul class ="menu"> 
         <li <?php if($view_page=='home') echo 'class="active"';?> ><a href="<?php echo base_url(); ?>" class="drop">Home</a></li>

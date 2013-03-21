@@ -1,5 +1,4 @@
- <!--FOOTER
-===================================================================  --> 
+ <!-- ######## FOOTER ######## --> 
 
 <!--REDFX-->
 <div class = "row-fluid redfx"></div>
@@ -125,11 +124,10 @@
 </div>
 	  
     
-    <!--------------------End of FOOTER AREA-------------->
+    <!--End of FOOTER AREA-->
 	  
     
-   <!-- Le javascript
-    ================================================== -->
+   <!-- Le javascript -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 	  <script src="<?php echo base_url('assets/js/bootstrap-extra.min.js');?>"></script>
