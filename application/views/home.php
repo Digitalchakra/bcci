@@ -425,7 +425,7 @@
               </ul>
               <div id="ranktabContent" class="tab-content">
                 <div class="tab-pane fade in active" id="team">
-                  <div class="row-fluid rankings" id = "rankings">
+                  <div class="row-fluid rankings">
                     <div class = "span4">
                       <ul style="list-style:none" id="team-ranking">
                         <!-- from my.js-->
@@ -449,7 +449,7 @@
                   </div>
                 </div>
                 <div class="tab-pane fade" id="batsman">
-                  <div class="row-fluid rankings" id = "rankings">
+                  <div class="row-fluid rankings">
                     <div class = "span4">
                       <ul style="list-style:none" id="batsman-ranking">
                         <!-- from my.js-->
@@ -473,7 +473,7 @@
                   </div>
                 </div>
                 <div class="tab-pane fade" id="bowler">
-                  <div class="row-fluid rankings" id = "rankings">
+                  <div class="row-fluid rankings">
                     <div class = "span4">
                       <ul style="list-style:none" id="bowler-ranking">
                         <!-- from my.js-->
@@ -497,7 +497,7 @@
                   </div>
                 </div>
                 <div class="tab-pane fade" id="allRounder">
-                  <div class="row-fluid rankings" id = "rankings">
+                  <div class="row-fluid rankings" >
                     <div class = "span4">
                       <ul style="list-style:none" id="allrounder-ranking">
                         <!-- from my.js-->
