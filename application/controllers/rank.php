@@ -67,7 +67,7 @@ class Rank extends CI_Controller
         /*we are string 100 records only for odi(100) , test(100) , t20(100)
          * and the pagenation is same for above there and along with men/women in same page 
          */ 
-        $data['content']['batsman']= $this->rankmodel->getBatsman(100, 0);
+        $data['content']['batsman']= $this->rankmodel->getBowler(100, 0);
         $data['content']['batswomen']= $this->rankmodel->getBowlerwomen(100, 0);
 		$data['links'] = $this->pagination->create_links();
 		//echo "<pre>"; print_r($data); die;
@@ -81,7 +81,7 @@ class Rank extends CI_Controller
         /*we are string 100 records only for odi(100) , test(100) , t20(100)
          * and the pagenation is same for above there and along with men/women in same page 
          */ 
-        $data['content']['batsman']= $this->rankmodel->getBatsman(100, 0);
+        $data['content']['batsman']= $this->rankmodel->getAllRounder(100, 0);
         $data['content']['batswomen']= $this->rankmodel->getAllrounderwomen(100, 0);
 		$data['links'] = $this->pagination->create_links();
 		//echo "<pre>"; print_r($data); die;
