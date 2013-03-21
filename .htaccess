@@ -43,5 +43,7 @@ Header append Vary User-Agent env=!dont-vary
 
 ########################################
 RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 RewriteCond $1 !^(index\.php|assets|images|cron|forum|sitemap.xml|robots\.txt)
 RewriteRule ^(.*)$ index.php/$1 [L]
