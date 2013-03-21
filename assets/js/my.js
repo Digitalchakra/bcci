@@ -187,7 +187,7 @@ function livescore()
 					{
 						option+='&nbsp;&nbsp;<sup><img src="'+baseurl+'assets/Images/live.gif"></sup>';
 					}
-					if(data[listcount].type !='T20')
+					if(data[listcount].matchdesc !='')
 					{
 					option+='</p><span class="yellow small-text">'+data[listcount].matchdesc+', </span>';
 					}
