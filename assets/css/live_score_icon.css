@@ -30,6 +30,8 @@
 .flag_SUR{ background: url(../Images/flags/SUR.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_WI{ background: url(../Images/flags/WI.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_ZIM{ background: url(../Images/flags/ZIM.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_NED{ background: url(../Images/flags/NED.png)  no-repeat top left; width: 68px; height: 68px; } 
+
 
 .flag_AFGW{ background: url(../Images/flags/AFG.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_ARGW{ background: url(../Images/flags/ARG.png)  no-repeat top left; width: 68px; height: 68px; } 
@@ -60,7 +62,7 @@
 .flag_SURW{ background: url(../Images/flags/SUR.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_WIW{ background: url(../Images/flags/WI.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_ZIMW{ background: url(../Images/flags/ZIM.png)  no-repeat top left; width: 68px; height: 68px; } 
-
+.flag_NEDW{ background: url(../Images/flags/NED.png)  no-repeat top left; width: 68px; height: 68px; } 
 
 /* Small Flags */
 

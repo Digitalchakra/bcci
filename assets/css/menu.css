@@ -1,9 +1,4 @@
-body, ul, li {
-	font-size:14px; 
-	font-family:Arial, Helvetica, sans-serif;
-	line-height:21px;
-	text-align:left;
-}
+
 
 .menu {
 	list-style:none;
@@ -72,7 +67,7 @@ body, ul, li {
 }
 
 .menu li a {
-	font: normal normal 700 13px/20px Arial;
+	font: normal normal 700 13px/20px;
 	line-height:20px;
 	font-size: 13px;
 	color: #bbbbbb;
@@ -84,7 +79,7 @@ body, ul, li {
 }
 
 .menu li:hover a {
-	color:#FFF;
+	/*color:#FFF;*/
 }
 .menu li .drop {
 :url("img/drop.png") no-repeat right 8px;
@@ -159,13 +154,15 @@ body, ul, li {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc5115', endColorstr='#8e140b',GradientType=0 ); /* IE6-9 */
 	text-shadow:1px 1px 5px rgba(0,0,0,0.4);
 }
-.menu .menu_right a {
+.menu .menu_right>a {
 color:#FFF;
 }
 .menu .menu_right a:hover {
-color:#FFF;
-}
 
+}
+.menu .menu_right a:hover ul li a {
+	color:#333;
+}
 
 .menu .menu_right:hover {
 	float:right;
@@ -372,6 +369,23 @@ color:#FFF;
 	height:1px;
 	margin-top:10px;
 }
-.menu ul li:last-child {
+/*.menu ul li:last-child {
 	border-bottom:1px solid #2d2d2d;
+}*/
+
+.profile-dropdown {
+	
+}
+.profile-dropdown li {
+	width:100% !important;
+	padding:10px;
+	
+}
+.profile-dropdown li a {
+	color:#333;
+	text-transform:none;
+	text-shadow:none;
+}
+.profile-dropdown li:last-child {
+	border-bottom:none;
 }

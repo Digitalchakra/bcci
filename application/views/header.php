@@ -118,9 +118,9 @@
         <li <?php if($view_page=='articles') echo 'class="active"';?>><a href="<?php echo base_url('article'); ?>" class="drop">Articles</a></li>
         <li <?php if($view_page=='photos') echo 'class="active"';?>><a href="<?php echo base_url('photos');?>" class="drop">Photos</a></li>
         <li <?php if($view_page=='videos') echo 'class="active"';?>><a href="<?php echo base_url('videos');?>" class="drop">Videos</a></li>
-				<!--<li <?php if($view_page=='forum') echo 'class="active"';?>><a href="<?php echo base_url('forum'); ?>" class="drop pulsate">Forum</a></li> -->
+				<li <?php if($view_page=='forum') echo 'class="active"';?>><a href="<?php echo base_url('forum'); ?>" class="drop pulsate">Forum</a></li>
         
-        <!--Signup
+       
          <?php if(!$session_data = $this->session->userdata('logged_in'))
         { ?>
         <li class = "dropdown menu_right">
@@ -154,22 +154,28 @@
           </li>
           <?php } ?> -->
         
-        <!--Login
+        
          <?php if($session_data = $this->session->userdata('logged_in'))
         { ?>
         <li class = "menu_right dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px">
            <i class = "icon-user icon-white" style="margin-right:15px;"></i><?php echo $session_data['firstname']; ?>
           </a>
+          <!-- 
           <div class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
-            <div class="row">
+           <div class="row">
               <div class = "span2">
                 <div class="padding20" style="text-align:left">
-                  <a class = "btn btn-primary" href="<?php echo base_url('login/logout'); ?>">Logout</a>
-                </div>
+-->                <ul class="dropdown-menu pull-right profile-dropdown">
+                    <li><a tabindex="-1" href="#">Profile</a></li>
+                    <li><a tabindex="-1" href="#">Settings</a></li>
+                    <li><a tabindex="-1" href="<?php echo base_url('login/logout'); ?>">Logout</a></li>
+                  </ul>
+<!--                </div>
               </div>
             </div>
-          </div>
+         </div>
+         --> 
         </li>
         
          <?php }
@@ -203,7 +209,7 @@
             </div>
           </div>
         </li>
-        <?php } ?>-->
+        <?php } ?>
       </ul>
   </div>
 </div>
