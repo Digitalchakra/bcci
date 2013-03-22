@@ -101,7 +101,7 @@ $(document).ready(function()
 				{
 					if(data.resultset.success=='yes')
 					{
-						$('#error_msg1').html("success msg");
+						$('#error_msg1').html("Registration successfull, Please check your email.");
 					}
 					else
 					{

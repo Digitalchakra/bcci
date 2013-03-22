@@ -25,8 +25,9 @@
   var baseurl = "<?php print base_url(); ?>";
 </script>
 <style>
-.Test, .T20{
-	display:none;
+.errorMessage, .errorMessage p
+{
+  color:#A82E0F;"
 }
 </style>
 <!--[if gte IE 9]> 
@@ -118,12 +119,12 @@
         <li <?php if($view_page=='articles') echo 'class="active"';?>><a href="<?php echo base_url('article'); ?>" class="drop">Articles</a></li>
         <li <?php if($view_page=='photos') echo 'class="active"';?>><a href="<?php echo base_url('photos');?>" class="drop">Photos</a></li>
         <li <?php if($view_page=='videos') echo 'class="active"';?>><a href="<?php echo base_url('videos');?>" class="drop">Videos</a></li>
-				<li <?php if($view_page=='forum') echo 'class="active"';?>><a href="<?php echo base_url('forum'); ?>" class="drop pulsate">Forum</a></li>
+				<li style="display:none;" <?php if($view_page=='forum') echo 'class="active"';?>><a href="<?php echo base_url('forum'); ?>" class="drop pulsate">Forum</a></li>
         
        
          <?php if(!$session_data = $this->session->userdata('logged_in'))
         { ?>
-        <li class = "dropdown menu_right">
+        <li class = "dropdown menu_right" style="display:none;">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px">
             	<i class = "icon-lock icon-white" style="margin-right:15px;"></i>Register
             </a>
@@ -138,13 +139,13 @@
                       <form class="form-horizontal">
                          <span>First Name: </span><input type="text" class="input-large" name="firstname" id="firstname" placeholder="First name" style="text-align:left">
                          <div class="margint10"></div>
-                         <span>Last Name: </span><input type="text" class="input-large" name="lastname" id="firstname" placeholder="Last name" style="text-align:left">
+                         <span>Last Name: </span><input type="text" class="input-large" name="lastname" id="lastname" placeholder="Last name" style="text-align:left">
                          <div class="margint10"></div>
                          <span>E-Mail: </span><input type="text" class="input-large" name="email_address" id="inputEmail" placeholder="Email" style="text-align:left">
                          <div class="margint10"></div>
                          <span>Password: </span><input type="password" class="input-large" name="pass_word" id="inputPassword" placeholder="Password" style="text-align:left">
                          <div class="margint20"></div>
-                         <a href="" class="btn btn-primary span1 pull-right marginb15" id="signupsubmit">Register</a>
+                         <a class="btn btn-primary span1 pull-right marginb15" id="signupsubmit">Register</a>
                   		</form>
                       
                     </div>
@@ -152,12 +153,12 @@
                   </div>
                 </div>
           </li>
-          <?php } ?> -->
+          <?php } ?>
         
         
          <?php if($session_data = $this->session->userdata('logged_in'))
         { ?>
-        <li class = "menu_right dropdown">
+        <li class = "menu_right dropdown" style="display:none;">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px">
            <i class = "icon-user icon-white" style="margin-right:15px;"></i><?php echo $session_data['firstname']; ?>
           </a>
@@ -181,7 +182,7 @@
          <?php }
 				else
 				{ ?>
-        <li class = "menu_right dropdown">
+        <li class = "menu_right dropdown" style="display:none;">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px">
          	 <i class = "icon-user icon-white" style="margin-right:15px;"></i>Login
           </a>
@@ -191,17 +192,17 @@
                 <div class="padding20" style="text-align:left">
                 	
                   <h4 style = "text-align:left">Login</h4>
-                  <div class="divider"></div>
+                  <div class="divider"></div><span id="error_msg" class="errorMessage"></span>
                   <form class="form-horizontal">
-                  	<span>UserName: </span><input type="text" class="input-large" placeholder="Email" id="username" name="username" style="text-align:left">
+                  	<span class="login">UserName: </span><input type="text" class="input-large login" placeholder="Email" id="username" name="username" style="text-align:left">
                     <div class="margint10"></div>
-                    <span>Password: </span><input type="password" class="input-large" placeholder="Password" id="passowrd" name="password">
+                    <span class="login">Password: </span><input type="password" class="input-large login" placeholder="Password" id="passowrd" name="password">
                     <input type="text"  class="forget input-large margint20" placeholder="Email" id="fusername" name="fusername" style="display:none;">
-                    <span id="forget" class="pull-right margint10" >Forgot Password?</span>
-                    <span id="login" class="pull-right margint10" style="display:none;">Back to login</span>
+                    <span id="forget" class="pull-right margint10 login" >Forgot Password?</span>
+                    <span id="login" class="pull-right margint10 forget" style="display:none;">Back to login</span>
                     <div class="margint20"></div>
-                         <a href="" class="btn btn-primary span1 pull-right marginb15 margint10" id="loginsubmit">Login</a>
-                         <a href="" class="btn btn-primary span1 pull-left marginb15 margint10" id="forgetsubmit" style="display:none;">Submit</a>
+                         <a class="btn btn-primary span1 pull-right marginb15 margint10 login" id="loginsubmit">Login</a>
+                         <a class="btn btn-primary span1 pull-left marginb15 margint10 forget" id="forgetsubmit" style="display:none;">Submit</a>
                   </form>                  
                   
                 </div>

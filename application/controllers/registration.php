@@ -79,7 +79,7 @@ class Registration extends CI_Controller {
 			}
 			else
 			{
-				$data['errors']="eamil is not available";
+				$data['errors']="Email is already registered";
 				$data['success']='no';
 				$result['resultset']=$data;
 				$this->load->view('json',$result);
@@ -99,7 +99,7 @@ class Registration extends CI_Controller {
 		 $this->load->model('user');
 		 if($this->user->activate_user($id,$code))
 		 {
-			$data['view_page'] = 'congrats';
+			$data['view_page'] = 'regiter_success';
 			$this->load->view('template', $data);
 		 }
 		 else
