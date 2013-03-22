@@ -104,12 +104,12 @@ class Registration extends CI_Controller {
 		 }
 		 else
 		 {
-			 redirect('login', 'refresh');
+			 redirect('home', 'refresh');
 		 }
 	 }
 	 else
 	 {
-		 redirect('login', 'refresh');
+		 redirect('home', 'refresh');
 	 }
  }
 
