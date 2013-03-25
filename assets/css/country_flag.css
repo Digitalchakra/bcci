@@ -23,12 +23,12 @@
 .cflag_SL{ background-position: 0 -1197px !important; width: 38px; height: 38px; } 
 .cflag_WI{ background-position: 0 -1260px !important; width: 38px; height: 38px; } 
 .cflag_ZIM{ background-position: 0 -1323px !important; width: 38px; height: 38px; } 
-
+.cflag_SCO{ background-position: 0 -1386px !important; width: 38px; height: 38px; } 
 
 .cflag_AFG,.cflag_ARG,.cflag_AUC,.cflag_AUS,.cflag_BAN,.cflag_BER,
 .cflag_CAN,.cflag_EA,.cflag_ENG,.cflag_HAM,.cflag_HK,.cflag_IND,
 .cflag_IRE,.cflag_KEN,.cflag_NAM,.cflag_NET,.cflag_NZ,.cflag_PAK,
-.cflag_SA,.cflag_SL,.cflag_WI,.cflag_ZIM {
+.cflag_SA,.cflag_SL,.cflag_WI,.cflag_ZIM,.cflag_SCO {
 	background: url("../Images/flags.png") no-repeat;
 	margin-left:10px;
 }
