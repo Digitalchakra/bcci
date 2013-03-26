@@ -14,11 +14,11 @@ $mail->SetFrom('bcci_cron@bcci.com', 'BCCI CRON');
 
 $mail->AddReplyTo('bcci_cron@bcci.com', 'BCCI CRON');
 
-$address = "manimani1014@gmail.com";
-$mail->AddAddress($address, "Mani");
+//$address = "manimani1014@gmail.com";
+//$mail->AddAddress($address, "Mani");
 
-//$address = "aditya@digitalchakra.in";
-//$mail->AddAddress($address, "Aditya");
+$address = "dhatraditya@gmail.com";
+$mail->AddAddress($address, "Aditya");
 //$address = "manikandan@digitalchakra.in";
 //$mail->AddAddress($address, "Mani");
 
