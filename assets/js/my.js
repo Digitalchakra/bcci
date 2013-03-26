@@ -158,6 +158,7 @@ function news()
 function livescore()
 {
 	 var site='http://webclient.cricbuzz.com/includes/deccanherald/livecricketscore/filter-match-details.json';
+	 // Fall back URL incase the above URL does not work
 	 //var site='http://webclient.cricbuzz.com/includes/deccanherald/livecricketscore/web-client-match-details.json';  
     // Take the provided url, and add it to a YQL query. Make sure you encode it!  
     var yql = 'http://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('select * from json where url="' + site + '"') + '&format=json';  	
