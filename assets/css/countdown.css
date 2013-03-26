@@ -1,0 +1,33 @@
+
+
+.countdown_section{ 
+	background:#1b1b1b;
+	width:30px;
+	margin:5px 5px;
+	border-radius:10px;
+	height:30px;
+	float:left;
+	text-align:center;
+}
+.countdown_amount{
+	color:#fff;
+	font-size:14px;
+	font-weight:bold;
+	line-height:35px;
+	text-align:center;
+}
+.countdown_day{
+	margin-top:0px;
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+	color:#fff;
+	text-transform:uppercase;
+}
+
+.titleTextCT{
+	color: #ffffff;
+	padding: 0px;
+	margin: 0px;
+	margin-top: 5px;
+}
