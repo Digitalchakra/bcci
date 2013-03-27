@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="../assets/css/bootstrap.css" rel="stylesheet" type="text/css">
-<link href="../assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
-<link href="../assets/css/mystyles.css" rel="stylesheet" type="text/css">
-<link href="../assets/css/bcci-home.css" rel="stylesheet" type="text/css">
-<link href="../assets/css/menu.css" rel="stylesheet" type="text/css">
+<link href="{link path="../assets/css/bootstrap.css"}" rel="stylesheet" type="text/css">
+<link href="{link path="../assets/css/bootstrap-responsive.min.css"}" rel="stylesheet" type="text/css">
+<link href="{link path="../assets/css/mystyles.css"}" rel="stylesheet" type="text/css">
+<link href="{link path="../assets/css/bcci-home.css"}" rel="stylesheet" type="text/css">
+<link href="{link path="../assets/css/menu.css"}" rel="stylesheet" type="text/css">
 
   {asset name="Head"}
 </head>
