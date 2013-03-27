@@ -8,7 +8,7 @@
    echo ButtonGroup($Controller->EventArguments['MemberOptions'], 'NavButton MemberButtons');
    echo ' ';
    echo ButtonDropDown($Controller->EventArguments['ProfileOptions'], 
-      'NavButton ProfileButtons Button-EditProfile',
+      'btn btn-primary',
       Sprite('SpEditProfile', 'Sprite16').' <span class="Hidden">'.T('Edit Profile').'</span>'
    );
    ?>

@@ -8,9 +8,10 @@ if (!$ModPermission && !$AdminPermission)
    return;
 
 ?>
-<div class="BoxFilter BoxActivityFilter">
-   <ul class="FilterMenu">
-      <li <?php if ($Controller->Data('Filter') == 'public') echo 'class="Active"'; ?>>
+<div class="sidebar-nav">
+   <ul class="nav nav-tabs nav-stacked">
+   		<li class="menu-heading">My Activities</li>
+      <li <?php if ($Controller->Data('Filter') == 'public') echo 'class="Active'; else echo 'class ="' ?> nav-menu">
          <?php
          echo Anchor(Sprite('SpActivity').' '.T('Recent Activity'), '/activity');
          ?>
@@ -18,7 +19,7 @@ if (!$ModPermission && !$AdminPermission)
       <?php
       if ($ModPermission): 
       ?>
-      <li <?php if ($Controller->Data('Filter') == 'mods') echo 'class="Active"'; ?>>
+      <li <?php if ($Controller->Data('Filter') == 'mods') echo 'class="Active';else echo 'class ="' ?> nav-menu">
          <?php
          echo Anchor(Sprite('SpMod').' '.T('Moderator Activity'), '/activity/mods');
          ?>
@@ -28,7 +29,7 @@ if (!$ModPermission && !$AdminPermission)
       
       if ($AdminPermission):
       ?>
-      <li <?php if ($Controller->Data('Filter') == 'admins') echo 'class="Active"'; ?>>
+      <li <?php if ($Controller->Data('Filter') == 'admins') echo 'class="Active';else echo 'class ="' ?> nav-menu">
          <?php
          echo Anchor(Sprite('SpDashboard').' '.T('Administrator Activity'), '/activity/admins');
          ?>

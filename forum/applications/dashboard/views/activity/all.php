@@ -1,6 +1,8 @@
 <?php if (!defined('APPLICATION')) exit(); ?>
 <div class="ActivityFormWrap">
-<h1 class="H"><?php echo $this->Data('Title'); ?></h1>
+<div class="page-header">
+<h3 class="H"><?php echo $this->Data('Title'); ?></h3>
+</div>
 <?php
 include_once $this->FetchViewLocation('helper_functions');
 

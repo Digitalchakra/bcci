@@ -7,11 +7,14 @@ if ($this->Data !== FALSE) {
       $CountDiscussions = $CountDiscussions + $Category->CountDiscussions;
    }
    ?>
-<div class="Box BoxCategories">
-   <h4><?php echo T('Categories'); ?></h4>
-   <ul class="PanelInfo PanelCategories">
+<!--<div class="page-header">
+   <h3><?php echo T('Categories'); ?></h3>
+</div>-->
+<div class="sidebar-nav">
+   <ul class="nav nav-tabs nav-stacked">
+   	<li class="menu-heading"><?php echo T('Categories'); ?></li>
    <?php
-   echo '<li'.($OnCategories ? ' class="Active"' : '').'>'.
+   echo '<li'.($OnCategories ? ' class="Active' : '').' class = "nav-menu">'.
       Anchor(T('All Categories')
       .' <span class="Aside"><span class="Count">'.BigPlural($CountDiscussions, '%s discussion').'</span></span>', '/categories', 'ItemLink')
       .'</li>';
@@ -26,7 +29,7 @@ if ($this->Data !== FALSE) {
       if ($DoHeadings && $Category->Depth == 1)
          $CssClass = 'Heading '.$Category->CssClass;
       else
-         $CssClass = 'Depth'.$Category->Depth.($CategoryID == $Category->CategoryID ? ' Active' : '').' '.$Category->CssClass;
+         $CssClass = 'Depth'.$Category->Depth.($CategoryID == $Category->CategoryID ? ' Active' : '').' nav-menu '.$Category->CssClass;
       
       echo '<li class="ClearFix '.$CssClass.'">';
 

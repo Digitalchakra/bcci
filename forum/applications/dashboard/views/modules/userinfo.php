@@ -6,51 +6,36 @@ if (Gdn::Config('Garden.Profile.ShowAbout')) {
 ?>
 <div class="About P">
    <h2 class="H"><?php echo T('About'); ?></h2>
-   <dl class="About">
-      <?php
+   <div class="About well">
+   <!--Custom Design-->
+   <div class="row-fluid">
+   		<?php
       if ($this->User->Banned) {
          echo '<dd class="Value"><span class="Tag Tag-Banned">'.T('Banned').'</span></dd>';
       }
       ?>
-      <dt class="Name"><?php echo T('Username'); ?></dt>
-      <dd class="Name" itemprop="name"><?php echo $this->User->Name; ?></dd>
       
-      <?php if ($Loc = GetValue('Location', $this->User)): ?>
-      <dt class="Location"><?php echo T('Location'); ?></dt>
-      <dd class="Location"><?php echo htmlspecialchars($Loc); ?></dd>
-      <?php endif; ?>
-      
-      <?php               
+      <!--Column one-->
+      <div class="span6">
+      	<h4 class="grey"><?php echo T('Username: '); ?><span class="red"><?php echo $this->User->Name; ?></span></h4>
+        
+        <h5 class="grey"><?php               
       if ($this->User->Email && ($this->User->ShowEmail || $Session->CheckPermission('Garden.Moderation.Manage'))) {
-         echo '<dt class="Email">'.T('Email').'</dt>
-         <dd class="Email" itemprop="email">'.Gdn_Format::Email($this->User->Email).'</dd>';
+         echo T('Email: ').'
+         <span class="red" itemprop="email">'.Gdn_Format::Email($this->User->Email).'</span>';
       }
-      ?>
-      <dt class="Joined"><?php echo T('Joined'); ?></dt>
-      <dd class="Joined"><?php echo Gdn_Format::Date($this->User->DateFirstVisit, 'html'); ?></dd>
-      <dt class="Visits"><?php echo T('Visits'); ?></dt>
-      <dd class="Visits"><?php echo number_format($this->User->CountVisits); ?></dd>
-      <dt class="LastActive"><?php echo T('Last Active'); ?></dt>
-      <dd class="LastActive"><?php echo Gdn_Format::Date($this->User->DateLastActive, 'html'); ?></dd>
-      <dt class="Roles"><?php echo T('Roles'); ?></dt>
-      <dd class="Roles"><?php 
-         if (Gdn::Session()->CheckPermission('Garden.Moderation.Manage')) {
-            echo UserVerified($this->User).', ';
-         }
-         
-         if (empty($this->Roles))
-            echo T('No Roles');
-         else
-            echo htmlspecialchars(implode(', ', ConsolidateArrayValuesByKey($this->Roles, 'Name'))); 
+      ?></h5>
       
-      ?></dd>
-      <?php if ($Points = GetValueR('User.Points', $this, 0)) : // Only show positive point totals ?>
-      <dt class="Points"><?php echo T('Points'); ?></dt>
-      <dd class="Points"><?php echo number_format($Points); ?></dd>
-      <?php 
-      endif; 
+      <h5 class="grey">
+      	<?php if ($Loc = GetValue('Location', $this->User)): ?>
+        <?php echo T('Location: '); ?>
+        <span class="red"><?php echo htmlspecialchars($Loc); ?></span>
+        <?php endif; ?>
+        </h5>
+        
+        <?php 
       
-      if ($Session->CheckPermission('Garden.Moderation.Manage')): ?>
+     /* if ($Session->CheckPermission('Garden.Moderation.Manage')): ?>
       <dt class="IP"><?php echo T('Register IP'); ?></dt>
       <dd class="IP"><?php 
          $IP = IPAnchor($this->User->InsertIPAddress);
@@ -63,17 +48,52 @@ if (Gdn::Config('Garden.Profile.ShowAbout')) {
       ?></dd>
       <?php
       endif;
-
+*/
+			
       if ($this->User->InviteUserID > 0) {
          $Inviter = Gdn::UserModel()->GetID($this->User->InviteUserID);
          if ($Inviter) {
-            echo '<dt class="Invited">'.T('Invited by').'</dt>
-            <dd class="Invited">'.UserAnchor($Inviter).'</dd>';
+            echo '<h6 class="grey">'.T('Invited by: ').'<span class="red">'.UserAnchor($Inviter).'</span></h6>';
          }
       }
       $this->FireEvent('OnBasicInfo');
       ?>
-   </dl>
+        
+      </div>
+      
+      <!--Column Two-->
+      <div class="span6">
+       <div class="well">
+        
+        <h5 class="grey"><?php echo T('Joined: '); ?><span class="red"><?php echo Gdn_Format::Date($this->User->DateFirstVisit, 'html'); ?></span></h5>
+        <h5 class="grey"><?php echo T('Visits: '); ?><span class="red"><?php echo number_format($this->User->CountVisits); ?></span></h5>
+        <h6 class="grey"><?php echo T('Last Active: '); ?><span class="red"><?php echo Gdn_Format::Date($this->User->DateLastActive, 'html'); ?></span></h6>
+        
+        <?php if ($Points = GetValueR('User.Points', $this, 0)) : ?>
+        <h6 class="grey"><?php echo T('Points: '); ?><span class="red"><?php echo number_format($Points); ?></span></h6>
+        <?php endif; ?>
+				
+        <h6 class="grey"><?php echo T('Roles: '); ?><span class="red">
+						<?php 
+							 if (Gdn::Session()->CheckPermission('Garden.Moderation.Manage')) {
+									echo UserVerified($this->User).', ';
+							 }
+							 
+							 if (empty($this->Roles))
+									echo T('No Roles');
+							 else
+									echo htmlspecialchars(implode(', ', ConsolidateArrayValuesByKey($this->Roles, 'Name'))); 
+						
+						?>
+          </span></h6>
+    	</div>
+     </div> 
+   </div>
+   
+   <!--End of custom design-->
+     
+      
+   </div>
 </div>
 <?php
 }

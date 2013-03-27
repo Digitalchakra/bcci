@@ -18,10 +18,12 @@ WriteDiscussionOptions();
 WriteAdminCheck();
 
 echo '</div>';
-
-echo '<h1>'.$this->Data('Discussion.Name').'</h1>';
-
 echo "</div>\n\n";
+
+echo '<div class="forum-header-title">';
+echo '<h3>'.$this->Data('Discussion.Name').'</h3>';
+echo '</div>';
+
 
 $this->FireEvent('AfterDiscussionTitle');
 

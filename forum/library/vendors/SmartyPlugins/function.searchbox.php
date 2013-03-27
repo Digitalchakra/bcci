@@ -22,8 +22,8 @@ function smarty_function_searchbox($Params, &$Smarty) {
    $Form->InputPrefix = '';
    $Result =
       $Form->Open(array('action' => Url('/search'), 'method' => 'get')).
-      $Form->TextBox('Search', array('placeholder' => $Placeholder)).
-      $Form->Button('Go', array('Name' => '')).
+      $Form->TextBox('Search', array('placeholder' => $Placeholder, 'class' => 'span2 search-icon')).
+      $Form->Button('Go', array('Name' => '', 'class' => 'btn btn-primary')).
       $Form->Close();
 
    return $Result;

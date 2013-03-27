@@ -2,10 +2,10 @@
 $Session = Gdn::Session();
 include_once $this->FetchViewLocation('helper_functions', 'discussions', 'vanilla');
 
-echo '<h1 class="H HomepageTitle">'.
+echo '<div class = "page-header"><h3 class="H HomepageTitle">'.
    AdminCheck(NULL, array('', ' ')).
    $this->Data('Title').
-   '</h1>';
+   '</h3></div>';
 
 if ($Description = $this->Description()) {
    echo Wrap($Description, 'div', array('class' => 'P PageDescription'));
@@ -18,10 +18,7 @@ $PagerOptions = array('Wrapper' => '<span class="PagerNub">&#160;</span><div %1$
 if ($this->Data('_PagerUrl'))
    $PagerOptions['Url'] = $this->Data('_PagerUrl');
 
-echo '<div class="PageControls Top">';
-   PagerModule::Write($PagerOptions);
-   echo Gdn_Theme::Module('NewDiscussionModule', $this->Data('_NewDiscussionProperties', array('CssClass' => 'Button Action Primary')));
-echo '</div>';
+
 
 if ($this->DiscussionData->NumRows() > 0 || (isset($this->AnnounceData) && is_object($this->AnnounceData) && $this->AnnounceData->NumRows() > 0)) {
 ?>

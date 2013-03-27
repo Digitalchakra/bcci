@@ -19,8 +19,12 @@ foreach ($Controller->ProfileTabs as $TabCode => $TabInfo) {
       $SortOrder[] = $TabCode;
 }
 ?>
-<div class="BoxFilter BoxProfileFilter">
-   <ul class="FilterMenu">
+<div class="sidebar-nav">
+   <ul class="nav nav-tabs nav-stacked">
+   	<li class="menu-heading">My Profile</li>
+    <li class="nav-menu menu-box">
+    
+    </li>
    <?php
    // Get sorted filter links
    foreach ($SortOrder as $TabCode) {
@@ -29,7 +33,7 @@ foreach ($Controller->ProfileTabs as $TabCode => $TabInfo) {
       if (array_key_exists($TabCode, $Controller->ProfileTabs)) {
          $TabInfo = GetValue($TabCode, $Controller->ProfileTabs, array());
          $CssClass .= GetValue('CssClass', $TabInfo, '');
-         echo '<li'.($CssClass == '' ? '' : ' class="'.$CssClass.'"').'>'.Anchor(GetValue('TabHtml', $TabInfo, $TabCode), GetValue('TabUrl', $TabInfo))."</li>\r\n";
+         echo '<li'.($CssClass == '' ? '' : ' class="'.$CssClass.' nav-menu"').'>'.Anchor(GetValue('TabHtml', $TabInfo, $TabCode), GetValue('TabUrl', $TabInfo))."</li>\r\n";
       }
    }
    ?>

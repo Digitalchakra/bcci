@@ -32,7 +32,7 @@
       </div>
       <div id="Foot">
          <div class="Row">
-            <a href="{vanillaurl}" class="PoweredByVanilla" title="Community Software by Vanilla Forums">Powered by Vanilla</a>
+            <a href="www.bcci.com"  title="BCCI.com Forum">Powered by Digitalchakra</a>
             {asset name="Foot"}
          </div>
       </div>
