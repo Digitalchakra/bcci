@@ -38,6 +38,13 @@ try
 		$data['sutc_time']=strtotime($data['sdate'].' 00:01:00');
 		$data['eutc_time']=strtotime($data['edate'].' 23:59:00');
 		$data['mt_vnu']=$searchNode->getAttribute('vnu');
+		if($data['srs_id']=='2170')
+		{
+			$search  = array('KOL', 'DEL', 'BLR', 'MUM', 'HYD', 'PUNE', 'JAI', 'CHN' ,'MOH');
+			$replace = array('KKR', 'DD', 'RCB', 'MI', 'SH', 'PWI', 'RR', 'CSK' ,'KXIP');
+			$data['description']=str_ireplace($search, $replace, $data['description']);
+			$data['srs_name']='Indian Premier League VI 2013';
+		}
 		//$values= implode(',',$data);
 		//print_r($data); //die;
 

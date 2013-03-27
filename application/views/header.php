@@ -165,7 +165,7 @@
         
          <?php if($session_data = $this->session->userdata('logged_in'))
         { ?>
-        <li class = "menu_right dropdown" style="display:none;">
+        <li class = "menu_right dropdown" >
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px">
            <i class = "icon-user icon-white" style="margin-right:15px;"></i><?php echo $session_data['firstname']; ?>
           </a>
@@ -189,7 +189,7 @@
          <?php }
 				else
 				{ ?>
-        <li class = "menu_right dropdown" style="display:none;">
+        <li class = "menu_right dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px">
          	 <i class = "icon-user icon-white" style="margin-right:15px;"></i>Login
           </a>
