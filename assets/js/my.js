@@ -25,12 +25,13 @@ $(document).ready(function()
     setInterval(function() {
           livescore();
 			}, 30000);
+		$("#chat_box").hide();
     $("#chat_minimize").click(function(){
-    if($(this).html() == "-"){
-        $(this).html("+");
+    if($(this).html() == "+"){
+        $(this).html("-");
     }
     else{
-        $(this).html("-");
+        $(this).html("+");
     }
     $("#chat_box").toggle();
 });

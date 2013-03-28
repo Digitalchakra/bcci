@@ -638,7 +638,7 @@
         </div>
         <div id="chat_title_bar" class = "chat_title_bar">
           <span>Chat with other members!</span>
-          <div id="chat_minimize">-</div>
+          <div id="chat_minimize">+</div>
         </div>
       </div>
     </div>
