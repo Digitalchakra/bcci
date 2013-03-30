@@ -63,7 +63,7 @@
     </div>
      <!-- timer -->
       <div id="ipltimer" class="pull-right">
-              <h4 class="titleTextCT">IPL Starts in . . .</h4>
+              <a href="<?php echo site_url('ipl');?>"><div class="ipl_logo"></div></a>
               <span id="defaultCountdown" class="countdown"></span>
       </div>
       <!-- timer end-->

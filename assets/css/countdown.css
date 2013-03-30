@@ -1,19 +1,39 @@
-
-
-.countdown_section{ 
-	background:#1b1b1b;
-	width:30px;
-	margin:5px 5px;
-	border-radius:10px;
-	height:30px;
-	float:left;
-	text-align:center;
+     
+.countdown_show4 span:nth-child(1) {
+	border:4px solid #acac0a;
+	box-shadow:inset 0 0 12px rgba(0,0,0,.6);
+  }
+.countdown_show4 span:nth-child(2) {
+	border:4px solid #bf56de;
+	box-shadow:inset 0 0 12px rgba(0,0,0,.6);
+}
+.countdown_show4 span:nth-child(3) {
+	border:4px solid #e99531;
+	box-shadow:inset 0 0 12px rgba(0,0,0,.6);
+}
+.countdown_show4 span:nth-child(4) {
+	border:4px solid #30aee3;
+	box-shadow:inset 0 0 12px rgba(0,0,0,.6);
+}
+.countdown_show4 span .countdown_amount,.countdown_show4 span .countdown_day {
+	border:none !important;
+	box-shadow: none !important;
+}
+.countdown_section{
+	background: #626262;
+	width: 40px;
+	margin: 5px 5px;
+	border-radius: 50%;
+	height: 40px;
+	float: left;
+	text-align: center;
+	border: 3px solid #e08f2f;
 }
 .countdown_amount{
 	color:#fff;
 	font-size:14px;
 	font-weight:bold;
-	line-height:35px;
+	line-height:43px;
 	text-align:center;
 }
 .countdown_day{
@@ -23,11 +43,14 @@
 	font-weight:bold;
 	color:#fff;
 	text-transform:uppercase;
+	
 }
 
-.titleTextCT{
-	color: #ffffff;
-	padding: 0px;
-	margin: 0px;
-	margin-top: 5px;
+
+.ipl_logo{
+  background-image: url("../Images/ipl_logo.png");
+  height: 45px;
+  width: 90px;
+  margin-top: -20px;
+	margin-left: 55px;
 }
