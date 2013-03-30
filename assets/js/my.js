@@ -370,7 +370,7 @@ function rank(method)
 			}
 			$('#'+method+'-ranking01').html(list);
 			list='<h4>T20</h4>';
-			for(i=0;i<data.resultset['T20'].length;i++)
+			for(i=0;i<data.resultset['T20'].['length'];i++)
 			{
 				list+='<li class="white-block">';
                 list+=            '<div class = "row-fluid">';
