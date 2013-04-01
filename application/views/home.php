@@ -227,8 +227,16 @@
       <div class = "tab-box-wrapper">
         <ul id="matchestab" class="nav nav-tabs tabs-box gradient">
           <li><a href="#pastMatches" data-toggle="tab">Recent</a></li>
+          <? if(count($content['present']))
+          { ?>
           <li class="active"><a href="#presentMatches" data-toggle="tab">Live</a></li>
           <li><a href="#upcomingMatches" data-toggle="tab">Upcoming</a></li>
+          <? } 
+          else
+            { ?>
+          <li><a href="#presentMatches" data-toggle="tab">Live</a></li>
+          <li  class="active"><a href="#upcomingMatches" data-toggle="tab">Upcoming</a></li>
+          <? } ?>
           <!--<div class="btn-group pull-right red-button">
             <button class="btn red-btn">Schedule</button>
             <button class="btn dropdown-toggle red-btn" data-toggle="dropdown"> <span class="caret"></span> </button>
@@ -275,7 +283,14 @@
               </tbody>
             </table>
           </div>
-          <div class="tab-pane fade in active" id="presentMatches"> 
+          <? if(count($content['present']))
+          { ?>
+          <div class="tab-pane fade in active" id="presentMatches">
+          <? }
+          else
+          { ?>
+          <div class="tab-pane fade" id="presentMatches">
+          <? } ?>
             <!--Present matches Table-->
             <table class="table table-bordered table-striped">
               <thead>
@@ -304,7 +319,14 @@
               </tbody>
             </table>
           </div>
-          <div class="tab-pane fade" id="upcomingMatches"> 
+          <? if(count($content['present']))
+          { ?>
+          <div class="tab-pane fade" id="upcomingMatches">
+          <? }
+          else
+          { ?>
+          <div class="tab-pane fade in active" id="upcomingMatches">
+          <? } ?>
             <!--Upcoming matches Table-->
             <table class="table table-bordered table-striped">
               <thead>
