@@ -1,21 +1,21 @@
 <div class = "container">
   <div class = "row">
-    <div class = "span8">
+    <div class = "span12">
 
       <!--Page Heading-->
       <div class = "row">
-        <div class = "span8">
+        <div class = "span12">
           <div class = "page-header">
-              <h3>IPL Rank</h3>
+              <h3>IPL Points Table</h3>
           </div>
         </div>
       </div>
 
       <!--Table-->
       <div class = "row">
-      	<div class = "span8 margint10">
-          <!--<p><h4>Schedule</h4></p>-->
-          <table class="table table-bordered table-striped">
+      	<div class = "span12 margint10">
+         <div class="well">
+          <table class="table table-simple">
             <colgroup>
               <col class="span3">
               <col class="span2">
@@ -24,15 +24,16 @@
             </colgroup>
             <thead>
               <tr>
-                <th>Teams</th>
+              	<th>Pos</th>
+                <th style="text-align:left">Teams</th>
                 <th>Played</th>
                 <th>Points</th>
-                <th>netRunRate</th>
+                <th>N/R</th>
                 <th>Won</th>
                 <th>Lost</th>
                 <th>Tied</th>
-                <th>noResult</th>
-                <th>recentForm</th>
+                <th>No Result</th>
+                <th style="text-align:left">Last 5 Matches</th>
               </tr>
             </thead>
             <tbody>
@@ -40,9 +41,13 @@
 				foreach($content as $row)
 				{ ?>
               <tr>
-                <td>
-					       <?php echo $row->fullName; ?>
+              	<td>
+                <?php echo $row->id; ?>
                 </td>
+              	<td style="text-align:left">
+                <img src="<?php echo base_url('/assets/Images/flags/').'/'.$row->abbreviation.'.'.'png' ?>" width="42" height="42" /><span><?php echo $row->abbreviation; ?></span>
+                </td>
+                
                 <td>
                   <?php echo $row->played; ?>
                 </td>
@@ -65,12 +70,25 @@
                   <?php echo $row->noResult;?>
                 </td>
                 <td>
-                  <?php foreach(explode(',',$row->recentForm) as $flag)
+                  <?php 
+										$limit = 5;
+									foreach(explode(',',$row->recentForm) as $flag)
                   {
-                    if($flag)
+										$limit--;
+                    if($flag=='W')
                     {
-                      echo "<span class=".$flag.">F</span>";
+                      echo "<div class=".$flag."></div>";
                     }
+										if($flag=='L')
+                    {
+                      echo "<div class=".$flag."></div>";
+                    }
+										if($flag=='NR'){
+												echo "<div class=".$flag."></div>";
+											}
+										if($limit==0){
+											break;
+										}
                   }
                   ?>
                 </td>
@@ -79,10 +97,11 @@
 				} ?>
             </tbody>
         </table>
+         </div>
         </div>
       </div>
     </div>
-    <div class="span4 margint20">
+    <!--<div class="span4 margint20">
         <div class="row" style="margin-top:30px;">
           <div class="span4">
             <div class="ads-336X280 pull-right">
@@ -93,6 +112,7 @@
 		google_ad_width = 336;
 		google_ad_height = 280;
 		//-->
+    <!--
 		</script>
 		<script type="text/javascript"
 		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
@@ -100,10 +120,10 @@
             </div>
           </div>
         </div>
-    </div>
+    </div>-->
 
     <!--Side NAV-->
-<!--     <div class = "span3 margint10">
+   <!--<div class = "span3 margint10">
       <div id="sidebar" class="sidebar-nav">
         <ul class="nav nav-tabs nav-stacked">
           <li class="menu-heading">HEADING</li>
@@ -117,7 +137,7 @@
           <li class="nav-menu"><a href="#">Teams</a></li>
 
           <!--Search Box-->
-          <!-- <li class="nav-menu menu-box">
+           <!--<li class="nav-menu menu-box">
             <div class = "row">
               <div class = "span3">
                 <div class = "padding10">
@@ -135,6 +155,356 @@
         </ul>
       </div>
     </div> -->
+  </div>
+  <div class="row">
+  	<div class="span12">
+    	<div class="well">
+      	<div class="row-fluid">
+        	<div class="span12">
+            <div class="page-header">
+              <h4>Batting Statistics</h4>
+            </div>
+        	</div>
+        </div>
+        <div class="row-fluid margint10">
+          <div class="span3">
+          	<div class="row-fluid">
+            	<div class="span12 orange">
+              	<h5>Most Runs</h5>
+              </div>
+            </div>
+            <div class="row-fluid">
+            	<div class="span12">
+             	<img src="<?php echo base_url('assets/Images/ChrisGayle.jpg'); ?>" class="res-image"/>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Chris Gayle</h5>
+                <h5>RCB  |  590Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>01</h2>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Gautam Gambhir</h5>
+                <h5>KKR | 590 Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>02</h2>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Shikhar Dhawan</h5>
+                <h5>DC | 569 Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>03</h2>
+              </div>
+            </div>
+          </div>
+          
+          <div class="span3">
+          	<div class="row-fluid">
+            	<div class="span12 orange">
+              	<h5>Maximum Sixes</h5>
+              </div>
+            </div>
+            <div class="row-fluid">
+            	<div class="span12">
+             	<img src="<?php echo base_url('assets/Images/ChrisGayle.jpg'); ?>" class="res-image"/>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Chris Gayle</h5>
+                <h5>RCB  |  590Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>01</h2>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Gautam Gambhir</h5>
+                <h5>KKR | 590 Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>02</h2>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Shikhar Dhawan</h5>
+                <h5>DC | 569 Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>03</h2>
+              </div>
+            </div>
+          </div>
+          
+          <div class="span3">
+          	<div class="row-fluid">
+            	<div class="span12 orange">
+              	<h5>Highest Individual Score</h5>
+              </div>
+            </div>
+            <div class="row-fluid">
+            	<div class="span12">
+             	<img src="<?php echo base_url('assets/Images/ChrisGayle.jpg'); ?>" class="res-image"/>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Chris Gayle</h5>
+                <h5>RCB  |  590Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>01</h2>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Gautam Gambhir</h5>
+                <h5>KKR | 590 Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>02</h2>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Shikhar Dhawan</h5>
+                <h5>DC | 569 Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>03</h2>
+              </div>
+            </div>
+          </div>
+          
+          <div class="span3">
+          	<div class="row-fluid">
+            	<div class="span12 orange">
+              	<h5>Highest Strike Rate</h5>
+              </div>
+            </div>
+            <div class="row-fluid">
+            	<div class="span12">
+             	<img src="<?php echo base_url('assets/Images/ChrisGayle.jpg'); ?>" class="res-image"/>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Chris Gayle</h5>
+                <h5>RCB  |  590Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>01</h2>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Gautam Gambhir</h5>
+                <h5>KKR | 590 Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>02</h2>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Shikhar Dhawan</h5>
+                <h5>DC | 569 Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>03</h2>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+  	<div class="span12">
+    	<div class="well">
+      	<div class="row-fluid">
+        	<div class="span12">
+            <div class="page-header">
+              <h4>Bowling Statistics</h4>
+            </div>
+        	</div>
+        </div>
+        <div class="row-fluid margint10">
+          <div class="span3">
+          	<div class="row-fluid">
+            	<div class="span12 orange">
+              	<h5>Most Wickets</h5>
+              </div>
+            </div>
+            <div class="row-fluid">
+            	<div class="span12">
+             	<img src="<?php echo base_url('assets/Images/ChrisGayle.jpg'); ?>" class="res-image"/>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Chris Gayle</h5>
+                <h5>RCB  |  590Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>01</h2>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Gautam Gambhir</h5>
+                <h5>KKR | 590 Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>02</h2>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Shikhar Dhawan</h5>
+                <h5>DC | 569 Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>03</h2>
+              </div>
+            </div>
+          </div>
+          
+          <div class="span3">
+          	<div class="row-fluid">
+            	<div class="span12 orange">
+              	<h5>Best Bowling Figures</h5>
+              </div>
+            </div>
+            <div class="row-fluid">
+            	<div class="span12">
+             	<img src="<?php echo base_url('assets/Images/ChrisGayle.jpg'); ?>" class="res-image"/>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Chris Gayle</h5>
+                <h5>RCB  |  590Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>01</h2>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Gautam Gambhir</h5>
+                <h5>KKR | 590 Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>02</h2>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Shikhar Dhawan</h5>
+                <h5>DC | 569 Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>03</h2>
+              </div>
+            </div>
+          </div>
+          
+          <div class="span3">
+          	<div class="row-fluid">
+            	<div class="span12 orange">
+              	<h5>Best Average</h5>
+              </div>
+            </div>
+            <div class="row-fluid">
+            	<div class="span12">
+             	<img src="<?php echo base_url('assets/Images/ChrisGayle.jpg'); ?>" class="res-image"/>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Chris Gayle</h5>
+                <h5>RCB  |  590Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>01</h2>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Gautam Gambhir</h5>
+                <h5>KKR | 590 Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>02</h2>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Shikhar Dhawan</h5>
+                <h5>DC | 569 Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>03</h2>
+              </div>
+            </div>
+          </div>
+          
+          <div class="span3">
+          	<div class="row-fluid">
+            	<div class="span12 orange">
+              	<h5>Best Economy Rates</h5>
+              </div>
+            </div>
+            <div class="row-fluid">
+            	<div class="span12">
+             	<img src="<?php echo base_url('assets/Images/ChrisGayle.jpg'); ?>" class="res-image"/>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Chris Gayle</h5>
+                <h5>RCB  |  590Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>01</h2>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Gautam Gambhir</h5>
+                <h5>KKR | 590 Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>02</h2>
+              </div>
+            </div>
+            <div class="row-fluid dark-grey-bg">
+            	<div class="span9">
+              	<h5>Shikhar Dhawan</h5>
+                <h5>DC | 569 Runs</h5>
+              </div>
+              <div class="span3">
+              	<h2>03</h2>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 <script src="<?php echo base_url('assets/js/schedule.js');?>"></script>
