@@ -54,14 +54,14 @@
       <div class = "row">
        <!--  <div class = "span4 margint20"> <img class = "pull-right" src="<?php echo base_url('assets/Images/soci-icons_03.png'); ?>"> </div> -->
       </div>
-      <div class = "row">
-        <div class = "span4  margint20">
+			<div class = "row">
+       <!-- <div class = "span4  margint20">
           <div class="input-append search-box pull-right">
-            <!-- <input class="span2 search-icon" id="appendedInputButton" type="text" placeholder= "Search the site">
-            <button class="btn btn-primary" type="button"><i class="icon-search icon-white"></i></button>-->
+             <input class="span2 search-icon" id="appendedInputButton" type="text" placeholder= "Search the site">
+            <button class="btn btn-primary" type="button"><i class="icon-search icon-white"></i></button
           </div>
           <div class = "clearfix"></div>
-        </div>
+        </div> -->
       </div>
     </div>
      <!-- timer -->
