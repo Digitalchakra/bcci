@@ -46,11 +46,12 @@
 	
 }
 
-
 .ipl_logo{
-  background-image: url("../Images/ipl_logo.png");
-  height: 45px;
-  width: 90px;
-  margin-top: -20px;
-	margin-left: 55px;
+	background-image: url(../Images/ipl_logo.png);
+	height: 35px;
+	width: 208px;
+	background-repeat: no-repeat;
+	margin-left: 10px;
+  	
 }
+
