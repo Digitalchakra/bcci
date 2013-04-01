@@ -27,12 +27,6 @@ $(document).ready(function()
 			}, 30000);
 		$("#chat_box").hide();
     $("#chat_minimize").click(function(){
-    if($(this).html() == "+"){
-        $(this).html("-");
-    }
-    else{
-        $(this).html("+");
-    }
     $("#chat_box").toggle();
 });
 
@@ -168,7 +162,8 @@ function livescore()
 			listcount=0;
 			option="";
 			$.myplaceholder.mylivescore=[];
-			$('.live_team').removeClass('active');
+			//$('.live_team').removeClass('active');
+			$('.slides li').removeClass('active');
 			//alert(data[listcount].matchDataType);
 			$(data).each(function()
 			{
@@ -177,27 +172,27 @@ function livescore()
 					option+='<li value="'+listcount+'"';
 					if(listcount ===$.myplaceholder.checkreload)
 					{
-						option+= 'class="live_team dark-block active">';
-						option+= '<div class = "arrow"></div>';
+						option+= 'class="active" id = "ls_match_list">';
+						//option+= '<div class = "arrow"></div>';
 					}else
 					{
-						option+= 'class="live_team dark-block">';
-						option+= '<div class = "arrow"></div>';
+						//option+= 'class="live_team dark-block">';
+						option+= '<span class="row-fluid"><span class="span12">';
 					}
 					
-					option+= '<div class="padding10"><p class="team_name">'+data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName;
+					option+= '<h5 class="red  align-center">'+data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName;
 					if(data[listcount].state=='inprogress')
 					{
 						option+='&nbsp;&nbsp;<sup><img src="'+baseurl+'assets/Images/live.gif"></sup>';
 					}
 					if(data[listcount].matchdesc !='')
 					{
-					option+='</p><span class="yellow small-text">'+data[listcount].matchdesc+', </span>';
+					option+='</h5><h6 class="red  align-left">'+data[listcount].matchdesc+', </span>';
 					}
 					else{
-						option+='</p><span class="yellow small-text">'+data[listcount]['type']+', </span>';
+						option+='<span class="dark-grey">'+data[listcount]['type']+' | ';
 					}
-					option+='<span class="white small-text">'+data[listcount]['venue-city']+' | '+'</span><span class="yellow small-text">'+data[listcount]['match-day']+'</span></div></li>';
+					option+='<span class="dark-grey">'+data[listcount]['venue-city']+' | '+'</span><span class="dark-grey">'+data[listcount]['match-day']+'</span></h6></li><li></li>';
 					$.myplaceholder.mylivescore.push(data[listcount]);
 				}
 				listcount++;
@@ -505,52 +500,54 @@ function livescoredisplay(data)
 				//series_title
 				//$('#series_title').html(data.matchType+" - "+data.matchdesc);
 				$('#livescore_dd_title').html(data['team1'].shortName+' vs '+data['team2'].shortName+'<span class="caret"></span>');
-				$('#matchstate').html('');
-				$('#playerstate, #bowlerstate, .not_live').show();
-				$('#series_title').html(data.series);
+				$('.matchstate').html('');
+				$('.playerstate, .bowlerstate, .not_live').show();
+				$('.series_title').html(data.series);
 				//team name
-				$('#team1').html(data.battingTeamName);
-				$('#team2').html(data.bowlingTeamName);
+				$('.team1').html(data.battingTeamName);
+				$('.team2').html(data.bowlingTeamName);
 
 				//team icon
-				$('#team1_image').removeAttr('class');
-				$('#team2_image').removeAttr('class');
-				$('#team1_image').addClass("flag flag_"+data.battingTeamName);
-				$('#team2_image').addClass("flag flag_"+data.bowlingTeamName);
+				$('.team1_image').removeAttr('class');
+				$('.team_icon1>div').addClass('team1_image');
+				$('.team2_image').removeAttr('class');
+				$('.team_icon2>div').addClass('team2_image');
+				$('.team1_image').addClass("flag flag_"+data.battingTeamName);
+				$('.team2_image').addClass("flag flag_"+data.bowlingTeamName);
 
 				//batting team score/over
-				$('#team1_score').html(data['currentBatTeamScore'].runsAndWicket+'*');
-				$('#team1_over').html(data['currentBatTeamScore'].overs+" Overs");
+				$('.team1_score').html(data['currentBatTeamScore'].runsAndWicket+'*');
+				$('.team1_over').html(data['currentBatTeamScore'].overs+" Overs");
 
 				//bowling team score/over
 				//if(data[0]['currentBowlTeamScore'].runsAndWicket !="0/0")
 				//{
-				$('#team2_score').html(data['currentBowlTeamScore'].runsAndWicket);
-				$('#team2_over').html(data['currentBowlTeamScore'].overs+" Overs");
+				$('.team2_score').html(data['currentBowlTeamScore'].runsAndWicket);
+				$('.team2_over').html(data['currentBowlTeamScore'].overs+" Overs");
 				//}
 
 				//RunRate
-				$('#crr').html("CRR : "+data.crr);
+				$('.crr').html("CRR : "+data.crr);
 				if(data.rrr == "")
 				{
-					$('#rrr').html("");
+					$('.rrr').html("");
 				}
 				else
 				{
-					$('#rrr').html("RRR : "+data.rrr);
+					$('.rrr').html("RRR : "+data.rrr);
 				}
 
 				//batting team score/over
-				$('#team1_score').html(data['currentBatTeamScore'].runsAndWicket+'*');
-				$('#team1_over').html(data['currentBatTeamScore'].overs+" Overs");
+				$('.team1_score').html(data['currentBatTeamScore'].runsAndWicket+'*');
+				$('.team1_over').html(data['currentBatTeamScore'].overs+" Overs");
 
 				//bowling team score/over
 				//if(data[0]['currentBowlTeamScore'].runsAndWicket !="0/0")
 				//{
-				$('#team2_score').html(data['currentBowlTeamScore'].runsAndWicket);
-				$('#team2_over').html(data['currentBowlTeamScore'].overs+" Overs");
+				$('.team2_score').html(data['currentBowlTeamScore'].runsAndWicket);
+				$('.team2_over').html(data['currentBowlTeamScore'].overs+" Overs");
 				//}
-				$('#matchstate').html(data.status);
+				$('.matchstate').html(data.status);
 				if(data.state != 'complete')
 				{
 				//status if not playing
@@ -558,75 +555,76 @@ function livescoredisplay(data)
 				{
 					if(data.state === 'stump')
 					{
-						$('#matchstate').html('Stumps - '+data.status);
+						$('.matchstate').html('Stumps - '+data.status);
 					}
 				}
 				//striker's
-				$('#striker').html(data['striker'].fullName);
-				$('#nonStriker').html(data['nonStriker'].fullName);
+				$('.striker').html(data['striker'].fullName);
+				$('.nonStriker').html(data['nonStriker'].fullName);
 
 				//striker's runs
-				$('#striker_run').html("");
+				$('.striker_run').html("");
 				if(data['striker'].balls !="")
 				{
-					$('#striker_run').html(data['striker'].runs+"("+data['striker'].balls+")");
+					$('.striker_run').html(data['striker'].runs+"("+data['striker'].balls+")");
 				}
 				
-				$('#nonStriker_run').html("");
+				$('.nonStriker_run').html("");
 				if(data['nonStriker'].balls !="")
 				{
-					$('#nonStriker_run').html(data['nonStriker'].runs+"("+data['nonStriker'].balls+")");
+					$('.nonStriker_run').html(data['nonStriker'].runs+"("+data['nonStriker'].balls+")");
 				}
 
 				//sr
-				$('#nonStriker_sr').html("");
+				$('.nonStriker_sr').html("");
 				if(data['nonStriker'].balls != ""){
 					if(data['nonStriker'].balls != 0){
-						$('#nonStriker_sr').html((data['nonStriker'].runs/data['nonStriker'].balls*100).toFixed(2));
+						$('.nonStriker_sr').html((data['nonStriker'].runs/data['nonStriker'].balls*100).toFixed(2));
 					}
 					else{
-						$('#nonStriker_sr').html("0.00");
+						$('.nonStriker_sr').html("0.00");
 					}
 				}
 
-				$('#striker_sr').html("");
+				$('.striker_sr').html("");
 				if(data['striker'].balls != ""){
 					if(data['striker'].balls != 0){
-						$('#striker_sr').html((data['striker'].runs/data['striker'].balls*100).toFixed(2));
+						$('.striker_sr').html((data['striker'].runs/data['striker'].balls*100).toFixed(2));
 					}
 					else{
-						$('#striker_sr').html("0.00");
+						$('.striker_sr').html("0.00");
 					}
 				}
 
 				//last name
-				$('#strikers_lname').html("");
+				$('.strikers_lname').html("");
 				if(data['striker'].fullName != "" && data['strikerbowler'].fullName != "")
-				$('#strikers_lname').html(data['strikerbowler'].fullName.split(' ').slice(-1).join(' ')+" to "+data['striker'].fullName.split(' ').slice(-1).join(' '));
+				$('.strikers_lname').html(data['strikerbowler'].fullName.split(' ').slice(-1).join(' ')+" to "+data['striker'].fullName.split(' ').slice(-1).join(' '));
 				//split(' ').slice(-1).join(' ');
 
 
 				//bowler
-				$('#strikerbowler').html(data['strikerbowler'].fullName);
+				$('.strikerbowler').html(data['strikerbowler'].fullName);
 
-				$('#strikerbowler_runs').html(data['strikerbowler'].runs);
+				$('.strikerbowler_runs').html(data['strikerbowler'].runs);
 
-				$('#strikerbowler_overs').html(data['strikerbowler'].overs);
+				$('.strikerbowler_overs').html(data['strikerbowler'].overs);
 
-				$('#strikerbowler_maidens').html(data['strikerbowler'].maidens);
+				$('.strikerbowler_maidens').html(data['strikerbowler'].maidens);
 
-				$('#strikerbowler_wickets').html(data['strikerbowler'].wickets);
+				$('.strikerbowler_wickets').html(data['strikerbowler'].wickets);
 				}
 				else
 				{
-					$('#playerstate').hide();
-					$('#bowlerstate').hide();
+					$('.playerstate').hide();
+					$('.bowlerstate').hide();
 				}
 				if(data.state=='preview')
 				{
-				$('#playerstate, #bowlerstate, .not_live').hide();
-				$('#matchstate').html('Starting '+new Date(data.startdayandtimeGMT));
+				$('.playerstate, .bowlerstate, .not_live').hide();
+				$('.matchstate').html('Starting '+new Date(data.startdayandtimeGMT));
 				}
 
 
 }
+

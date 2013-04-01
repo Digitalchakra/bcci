@@ -92,38 +92,38 @@
      	 		<div class="row-fluid">
             <div class="span7">
           <div class="padding20">
-			  <div id="matchstate" style="text-align:center" class="white team_name"></div>
-          <div style="text-align:center" id="team_images" class="row-fluid margint20">
+			  <div style="text-align:center" class="white team_name matchstate"></div>
+          <div style="text-align:center" class="team_images row-fluid margint20">
             <div class="span5"><!--TeamA-->
-              <div class="team_icon">
-                <div id="team1_image"></div>
+              <div class="team_icon1">
+                <div class="team1_image"></div>
               </div>
-              <h5 id="team1" class="team_name"></h5>
-              <h4 id="team1_score" class="yellow not_live"></h4>
-              <p id="team1_over" class="white not_live small-text"></p>
+              <h5 class="team1 team_name"></h5>
+              <h4 class="team1_score yellow not_live"></h4>
+              <p class="team1_over white not_live small-text"></p>
             </div>
             <div class="span2">
               <h3 style="margin-top:42px" class="white">vs</h3>
             </div>
             <div class="span5"><!--TeamB-->
-              <div class="team_icon">
-                <div id="team2_image"></div>
+              <div class="team_icon2">
+                <div class="team2_image"></div>
               </div>
-              <h5 id="team2" class="team_name"></h5>
-              <h4 id="team2_score" class="yellow yellow-dull not_live"></h4>
-              <p id="team2_over" class="white not_live small-text"></p>
+              <h5 class="team2 team_name"></h5>
+              <h4 class="team2_score yellow yellow-dull not_live"></h4>
+              <p class="team2_over white not_live small-text"></p>
             </div>
             <div style="text-align:left" class="span12"><!--Required Runs-->
               <h6 class="yellow"><!--<span id="status">CSK Needs 46 Runs to win</span>--> 
-                <span id="rrr" class="marginl20 yellow not_live"></span> <span id="crr" class="marginl20 yellow not_live"></span> </h6>
+                <span class="rrr marginl20 yellow not_live"></span> <span class="crr marginl20 yellow not_live"></span> </h6>
             </div>
           </div>
-          <div style="text-align:center" class="row-fluid margint10" id="playerstate"><!--Player Stats-->
+          <div style="text-align:center" class="row-fluid margint10 playerstate"><!--Player Stats-->
           	<div class = "span1 batsman"></div>
             <div class="span5">
-              <h5 id="striker" class="white team_name"></h5>
+              <h5 class="striker white team_name"></h5>
               <!--Player-->
-              <h5 id="striker_run" class="yellow"></h5>
+              <h5 class="striker_run yellow"></h5>
               <!--Player Score--> 
               <!--Stats-->
               
@@ -134,7 +134,7 @@
                 </div>
                 <div class="span4">
                   <h6 class="yellow">s/r</h6>
-                  <h6 id="striker_sr" class="white"></h6>
+                  <h6 class="white striker_sr"></h6>
                 </div>
                 <div class="span4">
                   <h6 class="yellow"></h6>
@@ -143,9 +143,9 @@
               </div>
             </div>
             <div class="span5">
-              <h5 id="nonStriker" class="white team_name"></h5>
+              <h5 class="nonStriker white team_name"></h5>
               <!--Player-->
-              <h5 id="nonStriker_run" class="yellow"></h5>
+              <h5 class="nonStriker_run yellow"></h5>
               <!--Player Score-->
               
               <div class="row-fluid">
@@ -155,7 +155,7 @@
                 </div>
                 <div class="span4">
                   <h6 class="yellow">s/r</h6>
-                  <h6 id="nonStriker_sr" class="white"></h6>
+                  <h6 class="nonStriker_sr white"></h6>
                 </div>
                 <div class="span4">
                   <h6 class="yellow"></h6>
@@ -166,38 +166,38 @@
             <div class="runner span1"></div>
           </div>
           
-          <div class="row-fluid margint10" id="bowlerstate"><!--Bowling-->
+          <div class="row-fluid margint10 bowlerstate"><!--Bowling-->
           	<div class="span1 bowler"></div>
             <div class="span6">
-              <p id="strikerbowler" class="white small-text"></p>
+              <p class="strikerbowler white small-text"></p>
               <!--<h6 class="white">6 Runs this over</h6>--> 
             </div>
             <div class="span1"><!--Overs-->
               <h6 class="yellow">O</h6>
-              <h6 id="strikerbowler_overs" class="white"></h6>
+              <h6 class="strikerbowler_overs white"></h6>
             </div>
             <div class="span1"><!--Maidens-->
               <h6 class="yellow">M</h6>
-              <h6 id="strikerbowler_maidens" class="white"></h6>
+              <h6 class="strikerbowler_maidens white"></h6>
             </div>
             <div class="span1"><!--Runs-->
               <h6 class="yellow">R</h6>
-              <h6 id="strikerbowler_runs" class="white"></h6>
+              <h6 class="strikerbowler_runs white"></h6>
             </div>
             <div class="span1"><!--Wickets-->
               <h6 class="yellow">W</h6>
-              <h6 id="strikerbowler_wickets" class="white"></h6>
+              <h6 class="strikerbowler_wickets white"></h6>
             </div>
             
             <div style="text-align:center" class="span12"><!--Wickets-->
-              <h5 class="yellow"><span id="strikers_lname"></span></h5>
+              <h5 class="yellow"><span class="strikers_lname"></span></h5>
             </div>
             
           </div>
          </div>
-         <div id="no_matches" class="row-fluid">
+         <div class="no_matches row-fluid">
               <div class="span12 margint-10">
-                <h5 id="series_title" class="white team_name align-center"></h5>
+                <h5 class="series_title white team_name align-center"></h5>
               </div>
               
             </div>
@@ -636,9 +636,6 @@
         <div id="chat_box">
           <script id="sid0010000024330758669" type="text/javascript" src="<?php echo base_url('assets/js/chat.js'); ?> "></script>
         </div>
-        <div id="chat_title_bar" class = "chat_title_bar">
-          <span>Chat with other members!</span>
-          <div id="chat_minimize">+</div>
-        </div>
+        
       </div>
     </div>
