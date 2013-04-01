@@ -5,7 +5,7 @@ $(document).ready(function()
 		srs_list();
 		var time = new Date();
 		//time = new Date("March 25, 2013 11:02:00 + GMT");
-		time = new Date("April 3, 2013 14:30:00 + GMT");
+		time = new Date("April 3, 2013 14:30:00 GMT");
 		//time = new Date(2013,04-1,14,30,0);
 		$('#defaultCountdown').countdown({until: time,onExpiry:function(){ $('#ipltimer').hide();}});
 			
