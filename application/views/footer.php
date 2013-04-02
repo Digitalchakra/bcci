@@ -140,7 +140,7 @@
     <script src="<?php echo base_url('assets/js/login.js');?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/js/countdown.js'); ?>">
     </script>
-    <script src="<?php echo base_url('assets/js/my.js');?>"></script>
     <script src="<?php echo base_url('assets/js/kvm.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/my.js');?>"></script>
 </body>
 </html>
