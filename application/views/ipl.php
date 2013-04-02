@@ -333,6 +333,37 @@
 					<div class="ipl-schedule-arrow"></div></a>
 				</div>
 			</div>
+			
+
+		
+			
+			<div class="ipl-cards5">
+				<!--==============================================================Polls=======================-->
+				<div class="ipl-cards-title ipl-polls">
+					<h3>IPL Polls</h3>
+				</div>
+				<div class="ipl-cards-content">
+					<div class="ipl-cards3-inner">
+					<!-- <div class="bg-violet">
+					</div> -->
+				</div>
+						
+					<div class="ipl-polls-content">
+						<p id="poll_question">loading...</p>
+						<br/>
+						<div id="poll_answer">
+							<!-- from ipl.sj -->
+            			</div>
+
+            			  <button class="ipl-button" id="ipl-polls-button" style="display:none;">Vote</button>
+							
+					</div>
+				</div>
+				<div class="ipl-polls-footer">
+					<!-- <div class="ipl-polls-arrow"></div> -->
+				</div>
+			</div>
+
 			<div class="ipl-cards4">
 					<!--========================================================Photos=======================-->
 				<div class="ipl-cards-title ipl-photos">
@@ -369,35 +400,6 @@
 				<div class="ipl-photos-footer">
 					<a href="<?=base_url('photos')?>">
 					<div class="ipl-photos-arrow"></div></a>
-				</div>
-			</div>
-
-		
-			
-			<div class="ipl-cards5">
-				<!--==============================================================Polls=======================-->
-				<div class="ipl-cards-title ipl-polls">
-					<h3>IPL Polls</h3>
-				</div>
-				<div class="ipl-cards-content">
-					<div class="ipl-cards3-inner">
-					<!-- <div class="bg-violet">
-					</div> -->
-				</div>
-						
-					<div class="ipl-polls-content">
-						<p id="poll_question">loading...</p>
-						<br/>
-						<div id="poll_answer">
-							<!-- from ipl.sj -->
-            			</div>
-
-            			  <button class="ipl-button" id="ipl-polls-button" style="display:none;">Vote</button>
-							
-					</div>
-				</div>
-				<div class="ipl-polls-footer">
-					<!-- <div class="ipl-polls-arrow"></div> -->
 				</div>
 			</div>
 			<div class="ipl-cards1">
