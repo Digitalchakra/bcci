@@ -100,8 +100,22 @@ class Subpoll extends CI_Controller
 	 */
 	public function admin_polls()
 	{
-		$data['polls'] = $this->poll->get_all_polls();
-		$this->load->view('poll_admin', $data);
+		if($session_data = $this->session->userdata('logged_in'))
+		{
+			if($session_data['admin']==1)
+			{
+				$data['polls'] = $this->poll->get_all_polls();
+				$this->load->view('poll_admin', $data);
+			}
+			else
+			{
+				redirect('home');
+			}
+		}
+		else
+		{
+			redirect('home');
+		}
 	}
 	
 	/**
@@ -110,27 +124,42 @@ class Subpoll extends CI_Controller
 	 */
 	public function add_new_poll()
 	{
-		if($this->input->post('submit'))
+		if($session_data = $this->session->userdata('logged_in'))
 		{
-			$this->load->library('form_validation');
-			$val = $this->form_validation;
-			$val->set_rules('poll', 'Poll Question', 'required|trim');
-			foreach($this->input->post() as $key => $value)
+			if($session_data['admin']==1)
 			{
-				if(substr($key, 0, 6) == 'answer')
+		
+				if($this->input->post('submit'))
 				{
-					$val->set_rules('answer'.substr($key, 6), 'Answer '.substr($key, 6), 'required|trim');
-					$data['answers'][substr($key, 6)] = $value;
+					$this->load->library('form_validation');
+					$val = $this->form_validation;
+					$val->set_rules('poll', 'Poll Question', 'required|trim');
+					foreach($this->input->post() as $key => $value)
+					{
+						if(substr($key, 0, 6) == 'answer')
+						{
+							$val->set_rules('answer'.substr($key, 6), 'Answer '.substr($key, 6), 'required|trim');
+							$data['answers'][substr($key, 6)] = $value;
+						}
+					}
+					if($val->run())
+					{
+						$data['question'] = $val->set_value('poll');
+						$this->poll->save_new_poll($data);
+						redirect('subpoll/admin_polls');
+					}
 				}
+				$this->load->view('poll_new');
 			}
-			if($val->run())
+			else
 			{
-				$data['question'] = $val->set_value('poll');
-				$this->poll->save_new_poll($data);
-				redirect('subpoll/admin_polls');
+				redirect('home');
 			}
 		}
-		$this->load->view('poll_new');
+		else
+		{
+			redirect('home');
+		}
 	}
 	
 	/**
@@ -140,8 +169,22 @@ class Subpoll extends CI_Controller
 	 */
 	public function set_poll_status($id)
 	{
-		$this->poll->set_poll_status($id);
-		redirect('subpoll/admin_polls');
+		if($session_data = $this->session->userdata('logged_in'))
+		{
+			if($session_data['admin']==1)
+			{
+				$this->poll->set_poll_status($id);
+				redirect('subpoll/admin_polls');
+			}
+			else
+			{
+				redirect('home');
+			}
+		}
+		else
+		{
+			redirect('home');
+		}
 	}
 	
     /**
@@ -151,7 +194,21 @@ class Subpoll extends CI_Controller
 	 */
 	public function reset_poll($id)
 	{
-		$this->poll->reset_poll($id);
-		redirect('subpoll/admin_polls');	
+		if($session_data = $this->session->userdata('logged_in'))
+		{
+			if($session_data['admin']==1)
+			{
+				$this->poll->reset_poll($id);
+				redirect('subpoll/admin_polls');
+			}
+			else
+			{
+				redirect('home');
+			}
+		}
+		else
+		{
+			redirect('home');
+		}	
 	}
 }

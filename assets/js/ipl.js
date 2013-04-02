@@ -238,6 +238,7 @@ function getpoll()
 		dataType:"json",
 		success:function(data)
 		{
+			$('#poll_question').html("No polls");
 			if(data.resultset.success===1)
 			{
 				$('#poll_question').html(data.resultset.question);

@@ -388,9 +388,9 @@
 					<div class="ipl-polls-content">
 						<p id="poll_question">loading...</p>
 						<br/>
-						<form id="poll_answer">
+						<div id="poll_answer">
 							<!-- from ipl.sj -->
-            			</form>
+            			</div>
 
             			  <button class="ipl-button" id="ipl-polls-button" style="display:none;">Vote</button>
 							
