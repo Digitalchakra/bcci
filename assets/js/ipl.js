@@ -5,6 +5,10 @@ $(document).ready(function()
 		$.myplaceholder.checkreload=0;
 		$.myplaceholder.checkloaded=0;
 		livescore();
+		getpoll();
+		$('#ipl-polls-button').click(function(){
+			setpoll();
+		});
 		$('.ipl-header3').hover(function(){ $(".ipl-teams", this).stop().animate({right:'-300px'},{queue:false,duration:180}); }, 
 			function() { $(".ipl-teams", this).stop().animate({right:'0px'},{queue:false,duration:180}); 
 			});	 
@@ -14,7 +18,7 @@ $(document).ready(function()
 			}, 30000);
      setInterval(function() {
          //$('#ipl-schedule-back, #ipl-schedule-front').toggle('drop', {direction: 'right'}, 150)
-        // $('#ipl-schedule-back, #ipl-schedule-front').toggle("blind", {}, 'slow');
+         $('#ipl-schedule-back, #ipl-schedule-front').toggle("blind", {}, 'slow');
 			}, 3000);
 });
 
@@ -225,6 +229,74 @@ function livescoredisplay(data)
 				$('#ipl_playerstate, #ipl_bowlerstate, .not_live').hide();
 				$('#ipl_matchstate').html('Starting '+new Date(data.startdayandtimeGMT));
 				}
+}
+function getpoll()
+{
+	$.ajax({
+		url:baseurl+"subpoll/pollitem",
+		type:"GET",
+		dataType:"json",
+		success:function(data)
+		{
+			if(data.resultset.success===1)
+			{
+				$('#poll_question').html(data.resultset.question);
+				list="";
+				$.each(data.resultset.poll_ans, function(i, item) {
+					list+='<input type="radio" value="'+item+'" name="polloption" id="pollans'+i+'"/><label for="pollans'+i+'"><span></span>'+item+'</label>';
+				});
+				$('#poll_answer').html(list);
+				$('#ipl-polls-button').show();
+			}
+			if(data.resultset.success===2)
+			{
+				$('#poll_question').html(data.resultset.question);
+				list="";
+				$.each(data.resultset.poll_ans, function(i, item) {
+					//list+='<input type="radio" value="'+item+'" name="polloption" id="pollans'+i+'"/><label for="pollans'+i+'"><span></span>'+item+'</label>';
+					list+='<label for="pollans'+i+'"><span></span>'+item+'</label>';
+				});
+				$('#poll_answer').html(list);
+				$('#ipl-polls-button').remove();
+			}
+		},
+		error:function()
+		{
+			$('#poll_question').html("Internal error, please try again!");
+		}
+	});
 
+}
+function setpoll()
+{
+	checked = $('input:radio[name=polloption]:checked').val();
+	if(!checked)
+	{
+		return false;
+	}
+	$.ajax({
+		url:baseurl+"subpoll/pollitem",
+		type:"POST",
+		data:{"submit":"Vote","answer":checked},
+		dataType:"json",
+		success:function(data)
+		{
+			if(data.resultset.success===2)
+			{
+				$('#ipl-polls-button').remove();
+				$('#poll_question').html(data.resultset.question);
+				list="";
+				$.each(data.resultset.poll_ans, function(i, item) {
+					//list+='<input type="radio" value="'+item+'" name="polloption" id="pollans'+i+'"/><label for="pollans'+i+'"><span></span>'+item+'</label>';
+					list+='<label for="pollans'+i+'"><span></span>'+item+'</label>';
+				});
+				$('#poll_answer').html(list);
+			}
+		},
+		error:function()
+		{
+			$('#poll_question').html("Internal error, please try again!");
+		}
+	});
 
 }

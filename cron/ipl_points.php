@@ -7,7 +7,7 @@ class Ipl_team_ranks extends ActiveRecord\Model { }
 $log_title = "IPL POINTS CRON ";
 try
 	{
-		$jsonurl = "http://dynamic.pulselive.com/dynamic/data/core/cricket/2012/ipl2012/groupStandings.js?_".time();
+		$jsonurl = "http://dynamic.pulselive.com/dynamic/data/core/cricket/2012/ipl2013/groupStandings.js?_".time();
 		$json = file_get_contents($jsonurl);
 		$json =strstr($json, '{');
 		$json = substr($json, 0, -2);

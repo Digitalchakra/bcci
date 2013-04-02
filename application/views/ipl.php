@@ -480,18 +480,13 @@
 				</div>
 						
 					<div class="ipl-polls-content">
-						<p>Do you think Sachin Tendulkar should call it a day from Test cricket after Australia’s 4-0 whitewash?</p>
+						<p id="poll_question">loading...</p>
 						<br/>
-						  <input type="radio" id="r1" name="rr" />
-          				  <label for="r1"><span></span>Yes</label>
-          				 
-           				  <input type="radio" id="r2" name="rr" />
-            			  <label for="r2"><span></span>No</label>
+						<form id="poll_answer">
+							<!-- from ipl.sj -->
+            			</form>
 
-            			  <input type="radio" id="r3" name="rr" />
-            			  <label for="r3"><span></span>Can't Say</label>
-
-            			  <button class="ipl-button">Vote</button>
+            			  <button class="ipl-button" id="ipl-polls-button" style="display:none;">Vote</button>
 							
 					</div>
 				</div>
