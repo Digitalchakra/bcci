@@ -73,7 +73,7 @@
     <div class = "span3 hidden-phone">
       <div class = "row">
        <!--  <div class = "span4 margint20"> <img class = "pull-right" src="<?php echo base_url('assets/Images/soci-icons_03.png'); ?>"> </div> -->
-       <div id="ipltimer" class="pull-right ipltimer margint10">
+       <div id="ipltimer" class="pull-right ipltimer">
               <a href="<?php echo site_url('ipl');?>"><div class="ipl_logo"></div></a>
               <span id="defaultCountdown" class="countdown"></span>
       </div>
