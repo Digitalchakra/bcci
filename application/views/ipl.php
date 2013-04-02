@@ -11,7 +11,7 @@
 				</div>
 				
 			</div>
-			<div class="span6 ipl-scoreboard" id="liveScore">
+			<div class="span6 ipl-scoreboard" id="ipl_liveScore">
 				<div >
 					<h4 class="ipl-matchState" id="ipl_matchstate"></h4>
 				</div>
@@ -32,8 +32,8 @@
 									<h3 id="ipl_team1_score">128/4</h3>
 									<h4 id="ipl_team1_over">15.1 Overs</h4>
 									<div class="ipl-sb-rr">
-									<h5 id="rrr">Req. RR:</h5>	
-									<h5 id="crr">Cur. RR:</h5>	
+										<h5 id="rrr">Req. RR:</h5>	
+										<h5 id="crr">Cur. RR:</h5>	
 									</div>
 							</div>
 						</div>
@@ -86,7 +86,7 @@
 										<div class="ipl-sb-striker-inner">
 											 <h5>s/r</h5>
 											 
-											<h6 id="ipl_striker_sr">48.21</h6>
+											<h6 id="ipl_nonStriker_sr">48.21</h6>
 										</div>
 									</div>
 								</div>
@@ -96,17 +96,17 @@
 					
 				</div>
 				
-				<div class="row-fluid ipl-sb-team2">
+				<div class="row-fluid ipl-sb-team2 ipl-team2-flag2">
 					
 						<div class="span5">
-							<div class="span6 ipl-sb-flag">
-								<p style="margin-top:-25px; color:#f4f4f4; background-color:#282828; width:20px; height:20px; margin-left:44px;">Vs</p>
+							<div class="span6 ipl-sb-flag ">
+								<p class="ipl-sb-vs">Vs</p>
 								<h3 id="ipl_team2" class="centerFix">MI</h3>
 								<div id="ipl_team2_image" class="ipl-MI clearBoth centerFix leftFix">
 								</div>
 
 							</div>
-							<div class="span6 ipl-sb-score top40">
+							<div class="span6 ipl-sb-score">
 									<h3 id="ipl_team2_score">128/4</h3>
 									<h4 id="ipl_team2_over">15.1 Overs</h4>
 							</div>
@@ -115,7 +115,7 @@
 							<div class="span4 ipl-sb-striker">
 									<div class="ipl-bowler">
 
-								</div>
+									</div>
 								<div class="ipl-sb-inner-bowler">
 									<h3 id="ipl_strikerbowler">TENDULKAR</h3>
 									<h4>46(25)</h4>
@@ -123,7 +123,7 @@
 								</div>
 							</div>
 							<div class="span8 ipl-sb-bowler">
-									<div CLASS="ipl-sb-bowler-SET" >
+								<div class="ipl-sb-bowler-SET" >
 									<div class="ipl-sb-bowler-inner" >
 										<h5>O</h5>	
 										
@@ -144,7 +144,7 @@
 										 
 										<h6 id="ipl_strikerbowler_wickets">1</h6>
 									</div>
-									</div>
+								</div>
 									<div class="clearBoth ipl-bowler-lname">
 										<h5 id="strikers_lname"></h5>		
 									</div>
@@ -182,80 +182,35 @@
 					}
 					?>
 					<tr class="<?=$pointClass?>">
-						<td><?php echo $single_point->abbreviation; ?></td>
-						<td><?php echo $single_point->played; ?></td>
-						<td><?php echo $single_point->netRunRate; ?></td>
-						<td><?php echo $single_point->points; ?></td>					
+						<td width="25%"><?php echo $single_point->abbreviation; ?></td>
+						<td width="25%"><?php echo $single_point->played; ?></td>
+						<td width="25%"><?php echo $single_point->netRunRate; ?></td>
+						<td width="25%"><?php echo $single_point->points; ?></td>					
 					</tr>
 				<? }
 							?>
 				</tbody>
-					<!-- <tr class="ipl-table-c2">
-						<td>DD</td>
-						<td>0</td>
-						<td>+0.0000</td>
-						<td>0</td>					
-					</tr>
-					<tr class="ipl-table-c1">
-						<td>KKR</td>
-						<td>0</td>
-						<td>+0.0000</td>
-						<td>0</td>					
-					</tr>
-					<tr class="ipl-table-c2">
-						<td>KXIP</td>
-						<td>0</td>
-						<td>+0.0000</td>
-						<td>0</td>					
-					</tr>
-					<tr class="ipl-table-c1">
-						<td>MI</td>
-						<td>0</td>
-						<td>+0.0000</td>
-						<td>0</td>					
-					</tr>
-					<tr class="ipl-table-c2">
-						<td>PWI</td>
-						<td>0</td>
-						<td>+0.0000</td>
-						<td>0</td>					
-					</tr>
-					<tr class="ipl-table-c1">
-						<td>PCB</td>
-						<td>0</td>
-						<td>+0.0000</td>
-						<td>0</td>					
-					</tr>
-					<tr class="ipl-table-c2">
-						<td>RR</td>
-						<td>0</td>
-						<td>+0.0000</td>
-						<td>0</td>					
-					</tr>
-					<tr class="ipl-table-c1">
-						<td>SH</td>
-						<td>0</td>
-						<td>+0.0000</td>
-						<td>0</td>					
-					</tr> -->
 					</table>
 					<a href="<?=base_url('ipl/points')?>">View full table</a>
 				</div>
 
-				<ul class="ipl-teams">
-					<li style="height:200px; width:20px; float:left; ">
+				<div class="ipl-teams">
+					<div style="height:200px; width:20px; float:left; ">
 						<div class="ipl-arrow">
 
 						</div>
-					</li>
+					</div>
+					<div class="ipl-ranking-title" >
+						<h4>Rankings</h4>
+					</div>
 					<?php
 							foreach($points as $single_point)
 							{
-								echo "<li class='ipl-".$single_point->abbreviation." floatLeft'>";
+								echo "<div class='ipl-".$single_point->abbreviation." floatLeft'>";
 								echo "<div class='ipl-teams-badge'>";
-								echo "<p>".$single_point->points."</p>";
+								echo "<p>".$single_point->position."</p>";
 								echo "</div>";
-								echo "</li>";
+								echo "</div>";
 								/*echo "<div> fullName: ".$single_point->fullName."</div>";
 								echo "<div> abbreviation: ".$single_point->abbreviation."</div>";
 								echo "<div> primaryColor: ".$single_point->primaryColor."</div>";
@@ -270,57 +225,11 @@
 								
 							}
 							?>
-					
-					<!-- <li class="ipl-csk">
-						<div class="ipl-teams-badge">
-							<p>1</p>
-						</div>
-					</li>
-					<li class="ipl-kkr">
-						<div class="ipl-teams-badge">
-							<p>2</p>
-						</div>
-					</li>
-					<li class="ipl-rcb">
-						<div class="ipl-teams-badge">
-							<p>3</p>
-						</div>
-					</li>
-					<li class="ipl-mi">
-						<div class="ipl-teams-badge">
-							<p>4</p>
-						</div>
-					</li>
-					<li class="ipl-dd">
-						<div class="ipl-teams-badge">
-							<p>5</p>
-						</div>
-					</li>
-					<li class="ipl-kxip">
-						<div class="ipl-teams-badge">
-							<p>6</p>
-						</div>
-					</li>
-					<li class="ipl-pwi">
-						<div class="ipl-teams-badge">
-							<p>7</p>
-						</div>
-					</li>
-					<li class="ipl-rr">
-						<div class="ipl-teams-badge">
-							<p>8</p>
-						</div>
-					</li>
-					<li class="ipl-sh">
-						<div class="ipl-teams-badge">
-							<p>9</p>
-						</div>
-					</li> -->
-				</ul>
+					</div>
 
+				</div>
 			</div>
 		</div>
-	</div>
 
 </header>	 
 <div class="container">
@@ -332,9 +241,9 @@
 	</div>
 </div>
 	<!--=====================================================Content=======================-->
-	<div class="row-fluid ipl-content">
-		<div class="span7">
-			<div class="span4 ipl-cards3">
+	<div class="row-fluid ipl-content" >
+		<div style="width:100%">	
+			<div class="ipl-cards3">
 				<!--=============================================================Forums=======================-->
 				<div class="ipl-cards-title ipl-forums">
 					<h3>IPL Forums</h3>
@@ -358,7 +267,7 @@
 				</div>
 			</div>
 			
-			<div class="span4 ipl-cards2">
+			<div class="ipl-cards2">
 				<!--=============================================================Schedule=======================-->
 				<div class="ipl-cards-title ipl-schedule">
 					<h3>IPL Schedule</h3>
@@ -424,7 +333,7 @@
 					<div class="ipl-schedule-arrow"></div></a>
 				</div>
 			</div>
-			<div class="span4 ipl-cards4">
+			<div class="ipl-cards4">
 					<!--========================================================Photos=======================-->
 				<div class="ipl-cards-title ipl-photos">
 					<h3>IPL Photos</h3>
@@ -463,12 +372,9 @@
 				</div>
 			</div>
 
-		</div>
-
 		
-		<div class="span5">
 			
-			<div class="span6 ipl-cards5">
+			<div class="ipl-cards5">
 				<!--==============================================================Polls=======================-->
 				<div class="ipl-cards-title ipl-polls">
 					<h3>IPL Polls</h3>
@@ -494,7 +400,7 @@
 					<!-- <div class="ipl-polls-arrow"></div> -->
 				</div>
 			</div>
-			<div class="span6 ipl-cards1">
+			<div class="ipl-cards1">
 				<div class="ipl-cards-title ipl-news">
 					<h3>IPL News</h3>
 				</div>
@@ -502,22 +408,22 @@
 					<div class="bg-blue">
 					</div>
 
-					<ul>
+					<div class="ipl-news-content">
 
 						<?php
 							foreach($news as $single_news)
 							{
-								echo "<li>";
+								echo "<div class='ipl-news-repeat'>";
 								echo "<p><a href=".$single_news->link." target='_blank'>".$single_news->title."</a></p>";
 
 								echo "<div class='ipl-news-date'>".$single_news->pubdate."</div>";
-								echo "</li>";
+								echo "</div>";
 							}
 						?>
 						<!-- <li><p><a href="">Pepsi IPL Opening Ceremony - BUY TICKETS</a></p></li>
 						<li><p><a href="">Salt Lake Stadium to host IPL Opening Ceremony</a></p></li>
 						<li><p><a href="">The Spin in the tale of Valley</a></p></li> -->
-					</ul>
+					</div>
 				</div>
 				<div class="ipl-news-footer" id="iar1">
 					<a href="<?=base_url('news')?>">
