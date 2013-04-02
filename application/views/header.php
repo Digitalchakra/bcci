@@ -54,14 +54,14 @@
       <div class = "row">
        <!--  <div class = "span4 margint20"> <img class = "pull-right" src="<?php echo base_url('assets/Images/soci-icons_03.png'); ?>"> </div> -->
       </div>
-      <div class = "row">
-        <div class = "span4  margint20">
+			<div class = "row">
+       <!-- <div class = "span4  margint20">
           <div class="input-append search-box pull-right">
-            <!-- <input class="span2 search-icon" id="appendedInputButton" type="text" placeholder= "Search the site">
-            <button class="btn btn-primary" type="button"><i class="icon-search icon-white"></i></button>-->
+             <input class="span2 search-icon" id="appendedInputButton" type="text" placeholder= "Search the site">
+            <button class="btn btn-primary" type="button"><i class="icon-search icon-white"></i></button
           </div>
           <div class = "clearfix"></div>
-        </div>
+        </div> -->
       </div>
     </div>
      <!-- timer -->
@@ -240,118 +240,117 @@
           	<div class="slider">
       	<div class="flexslider carousel">
         <!--Toggle Box-->
-        	<div class="static-toggle  livescore_bg" id="lsToggleBox">
+        	<div class="static-toggle livescore_bg" id="lsToggleBox">
           <div class="ls_close pull-right"  id="lsCloseButton"></div>
           	<!--Toggle Box Live Score-->
           	<div class="row-fluid">
             	<div class="span12">
               	<div class="padding20">
-                	<div class="span12 white team_name align-center" id="matchstate">
+                	<div class="span12 white team_name align-center matchstate">
                   </div>
                 	<div class="row-fluid  align-center">
                   	<div class="span5">
-                    	<div class="team_icon">
-                      	<div id="team1_image"></div>
+                    	<div class="team_icon1">
+                      	<div class="team1_image"></div>
                       </div>
-                      <h5 class="team_name" id="team1"></h5>
-                      <h4 class="yellow nolive" id="team1_score"></h4>
-                      <p class="white not_live small-text" id="team1_over"></p>
+                      <h5 class="team_name team1"></h5>
+                      <h4 class="yellow nolive team1_score"></h4>
+                      <p class="white not_live small-text team1_over"></p>
                     </div>
                     <div class="span1">
                     	<h3 style="margin-top:42px" class="white">vs</h3>
                     </div>
                     <div class="span5 pull-right">
-                    	<div class="team_icon">
-                      	<div id="team2_image"></div>
+                    	<div class="team_icon2">
+                      	<div class="team2_image"></div>
                       </div>
-                      <h5 class="team_name" id="team2"></h5>
-                      <h4 class="yellow nolive" id="team2_score"></h4>
-                      <p class="white not_live small-text" id="team2_over"></p>
+                      <h5 class="team_name team2"></h5>
+                      <h4 class="yellow nolive team2_score"></h4>
+                      <p class="white not_live small-text team2_over"></p>
                     </div>
                   </div>
                   
                   <div class="row-fluid  align-center margint10">
                   	 <h6 class="yellow"><!--<span id="status">CSK Needs 46 Runs to win</span>--> 
-                  <span id="rrr" class="marginl20 yellow not_live"></span> <span id="crr" class="marginl20 yellow not_live"></span> </h6>
+                  <span class="marginl20 yellow not_live rrr"></span> <span class="marginl20 yellow not_live crr"></span> </h6>
                   </div>
                   
-             			<div style="text-align:center" class="row-fluid margint20"><!--Player Stats-->
+             			<div style="text-align:center" class="row-fluid margint20 playerstate"><!--Player Stats-->
               <div class = "span1 batsman"></div>
               <div class="span5">
-                <h5 class="white team_name" id="striker"></h5>
+                <h5 class="white team_name striker"></h5>
                 <!--Player-->
-                <h5 class="yellow" id="striker_run"></h5>
+                <h5 class="yellow striker_run"></h5>
                 
                 <div class="row-fluid">
                   <div class="span4">
-                    <h6 class="yellow">4s</h6>
-                    <h6 class="white">3</h6>
+                    <h6 class="yellow"></h6>
+                    <h6 class="white"></h6>
                   </div>
                   <div class="span4">
                     <h6 class="yellow">s/r</h6>
-                    <h6 id="striker_sr" class="white">12.5</h6>
+                    <h6 class="white striker_sr"></h6>
                   </div>
                   <div class="span4">
-                    <h6 class="yellow">6s</h6>
-                    <h6 class="white">2</h6>
+                    <h6 class="yellow"></h6>
+                    <h6 class="white"></h6>
                   </div>
                 </div>
               </div>
               <div class="vline"></div>
               <div class="span5">
-                <h5 class="white team_name">Runner</h5>
+                <h5 class="white team_name nonStriker"></h5>
                 <!--Player-->
-                <h5 class="yellow">80<span class="yellow"> (50)</span></h5>
+                <h5 class="yellow nonStriker_run"></h5>
                 <!--Player Score-->
                 
                 <div class="row-fluid">
                   <div class="span4">
-                    <h6 class="yellow">4s</h6>
-                    <h6 class="white">5</h6>
+                    <h6 class="yellow"></h6>
+                    <h6 class="white"></h6>
                   </div>
                   <div class="span4">
-                    <h6 class="yellow">s/r</h6>
-                    <h6 id="nonStriker_sr" class="white">11.2</h6>
+                    <h6 class="yellow">sr</h6>
+                    <h6 class="white nonStriker_sr"></h6>
                   </div>
                   <div class="span4">
-                    <h6 class="yellow">6s</h6>
-                    <h6 class="white">2</h6>
+                    <h6 class="yellow"></h6>
+                    <h6 class="white"></h6>
                   </div>
                 </div>
               </div>
               <div class="runner span1"></div>
             </div>
-            			<div class="row-fluid margint20 align-center"><!--Bowling-->
+            			<div class="row-fluid margint20 align-center bowlerstate">
               <div class="span1 bowler"></div>
               <div class="span6">
-                <p class="white small-text">Bowler</p>
-                <!--<h6 class="white">6 Runs this over</h6>--> 
+                <p class="white small-text strikerbowler"></p>
               </div>
               <div class="span1"><!--Overs-->
                 <h6 class="yellow">O</h6>
-                <h6 class="white">5</h6>
+                <h6 class="white strikerbowler_overs"></h6>
               </div>
               <div class="span1"><!--Maidens-->
                 <h6 class="yellow">M</h6>
-                <h6 class="white">0</h6>
+                <h6 class="white strikerbowler_maidens"></h6>
               </div>
               <div class="span1"><!--Runs-->
                 <h6 class="yellow">R</h6>
-                <h6 class="white">25</h6>
+                <h6 class="white strikerbowler_runs"></h6>
               </div>
               <div class="span1"><!--Wickets-->
                 <h6 class="yellow">W</h6>
-                <h6 class="white">3</h6>
+                <h6 class="white strikerbowler_wickets"></h6>
               </div>
               <div style="text-align:center" class="span12 margint20"><!--Wickets-->
-                <span class="yellow team_name">Bowler to<span class = "white"> Batsman</span></span>
+                <span class="yellow team_name"><span class="strikers_lname"></span></span>
               </div>
             </div>
             
                 </div>
                 <div id="no_matches" class="row-fluid">
                   <div class="span12 margint-10">
-                    <h5 id="series_title" class="white team_name align-center">Bangladesh tour of Sri Lanka 2013</h5>
+                    <h5 class="series_title white team_name align-center"></h5>
                   </div>
                 </div>
               </div>
@@ -367,88 +366,12 @@
                 <h6 class="red  align-left">India <span class="dark-grey">124/5</span> | <span class="dark-grey">12.4 Overs</span></h6>
                 <h6 class="red  align-left">MS Dhoni <span class="dark-grey">80(64)</span> <span class="red">R Raina</span><span class="dark-grey"> 80(64)</span></h6>
                 <h6 class="red  align-left">India <span class="dark-grey">vs</span> Australia (220/6) </h6>
+                </span>
               </span>
   	    		</li>
+            
             <li>
-              <span class="row-fluid">
-                <span class="span12" id="test">
-                <h5 class="red  align-center">T20 Semi Finals</h5>
-                <h6 class="red  align-left">India <span class="dark-grey">124/5</span> | <span class="dark-grey">12.4 Overs</span></h6>
-                <h6 class="red  align-left">MS Dhoni <span class="dark-grey">80(64)</span> <span class="red">R Raina</span><span class="dark-grey"> 80(64)</span></h6>
-                <h6 class="red  align-left">India <span class="dark-grey">vs</span> Australia (220/6) </h6>
-              </span>
-  	    		</li>
-            <li>
-              <span class="row-fluid">
-                <span class="span12">
-                <h5 class="red  align-center">T20 Semi Finals</h5>
-                <h6 class="red  align-left">India <span class="dark-grey">124/5</span> | <span class="dark-grey">12.4 Overs</span></h6>
-                <h6 class="red  align-left">MS Dhoni <span class="dark-grey">80(64)</span> <span class="red">R Raina</span><span class="dark-grey"> 80(64)</span></h6>
-                <h6 class="red  align-left">India <span class="dark-grey">vs</span> Australia (220/6) </h6>
-              </span>
-  	    		</li>
-            <li>
-              <span class="row-fluid">
-                <span class="span12">
-                <h5 class="red  align-center">T20 Semi Finals</h5>
-                <h6 class="red  align-left">India <span class="dark-grey">124/5</span> | <span class="dark-grey">12.4 Overs</span></h6>
-                <h6 class="red  align-left">MS Dhoni <span class="dark-grey">80(64)</span> <span class="red">R Raina</span><span class="dark-grey"> 80(64)</span></h6>
-                <h6 class="red  align-left">India <span class="dark-grey">vs</span> Australia (220/6) </h6>
-              </span>
-  	    		</li>
-            <li>
-              <span class="row-fluid">
-                <span class="span12">
-                <h5 class="red  align-center">T20 Semi Finals</h5>
-                <h6 class="red  align-left">India <span class="dark-grey">124/5</span> | <span class="dark-grey">12.4 Overs</span></h6>
-                <h6 class="red  align-left">MS Dhoni <span class="dark-grey">80(64)</span> <span class="red">R Raina</span><span class="dark-grey"> 80(64)</span></h6>
-                <h6 class="red  align-left">India <span class="dark-grey">vs</span> Australia (220/6) </h6>
-              </span>
-  	    		</li>
-            <li>
-              <span class="row-fluid">
-                <span class="span12">
-                <h5 class="red  align-center">T20 Semi Finals</h5>
-                <h6 class="red  align-left">India <span class="dark-grey">124/5</span> | <span class="dark-grey">12.4 Overs</span></h6>
-                <h6 class="red  align-left">MS Dhoni <span class="dark-grey">80(64)</span> <span class="red">R Raina</span><span class="dark-grey"> 80(64)</span></h6>
-                <h6 class="red  align-left">India <span class="dark-grey">vs</span> Australia (220/6) </h6>
-              </span>
-  	    		</li>
-            <li>
-              <span class="row-fluid">
-                <span class="span12">
-                <h5 class="red  align-center">T20 Semi Finals</h5>
-                <h6 class="red  align-left">India <span class="dark-grey">124/5</span> | <span class="dark-grey">12.4 Overs</span></h6>
-                <h6 class="red  align-left">MS Dhoni <span class="dark-grey">80(64)</span> <span class="red">R Raina</span><span class="dark-grey"> 80(64)</span></h6>
-                <h6 class="red  align-left">India <span class="dark-grey">vs</span> Australia (220/6) </h6>
-              </span>
-  	    		</li>
-            <li>
-              <span class="row-fluid">
-                <span class="span12">
-                <h5 class="red  align-center">T20 Semi Finals</h5>
-                <h6 class="red  align-left">India <span class="dark-grey">124/5</span> | <span class="dark-grey">12.4 Overs</span></h6>
-                <h6 class="red  align-left">MS Dhoni <span class="dark-grey">80(64)</span> <span class="red">R Raina</span><span class="dark-grey"> 80(64)</span></h6>
-                <h6 class="red  align-left">India <span class="dark-grey">vs</span> Australia (220/6) </h6>
-              </span>
-  	    		</li>
-            <li>
-              <span class="row-fluid">
-                <span class="span12">
-                <h5 class="red  align-center">T20 Semi Finals</h5>
-                <h6 class="red  align-left">India <span class="dark-grey">124/5</span> | <span class="dark-grey">12.4 Overs</span></h6>
-                <h6 class="red  align-left">MS Dhoni <span class="dark-grey">80(64)</span> <span class="red">R Raina</span><span class="dark-grey"> 80(64)</span></h6>
-                <h6 class="red  align-left">India <span class="dark-grey">vs</span> Australia (220/6) </h6>
-              </span>
-  	    		</li>
-            <li>
-              <span class="row-fluid">
-                <span class="span12">
-                <h5 class="red  align-center">T20 Semi Finals</h5>
-                <h6 class="red  align-left">India <span class="dark-grey">124/5</span> | <span class="dark-grey">12.4 Overs</span></h6>
-                <h6 class="red  align-left">MS Dhoni <span class="dark-grey">80(64)</span> <span class="red">R Raina</span><span class="dark-grey"> 80(64)</span></h6>
-                <h6 class="red  align-left">India <span class="dark-grey">vs</span> Australia (220/6) </h6>
-              </span>
+              
   	    		</li>
           </ul>
         </div>
@@ -462,7 +385,7 @@
 </div>
 
 <div class="ls-popout-button pull-right"><img src="<?php echo base_url('assets/Images/LS-Button.png');?>" class="res-image" id = "ls_bt_close"> </div>
-
+<div id="chat_minimize" class="chat-button pull-right"><img src="<?php echo base_url('assets/Images/chat_button.png');?>" class="res-image" id="chat-button"> </div>
 <script type="text/javascript">
 		
     $(window).load(function(){
