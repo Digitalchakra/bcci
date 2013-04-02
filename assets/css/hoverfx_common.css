@@ -22,8 +22,8 @@
 .view img {
    display: block;
    position: relative;
-	 width:188px;
-	 height:120px;
+	 min-width:100%;
+	 min-height:100%;
 }
 .view h2 {
    text-transform: uppercase;

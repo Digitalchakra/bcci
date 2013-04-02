@@ -22,6 +22,8 @@
 <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="<?php echo base_url('assets/css/Ads.css'); ?>" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php echo base_url('assets/css/countdown.css'); ?>" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php echo base_url('assets/css/bcci-tablet.css'); ?>" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php echo base_url('assets/css/kvm.css'); ?>" type="text/css" media="screen" />
 <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-1.8.3.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/jquery.flexslider.js'); ?>"></script>
 <script type="text/javascript">
@@ -50,9 +52,31 @@
 <div class = "container">
   <div class = "row">
     <div class = "span3 margint20"> <a href="<?php echo base_url();?>"><div class="logo"></div></a></div>
-    <div class = "span4 offset5 hidden-phone">
+    <div class="span3 offset3 margint20">
+    	 <!-- kvm ads start -->
+            <div id="kvmslider" class="pull-right margint20"> <!-- Slider container -->
+              <div id="mask"> <!-- Mask -->
+                
+                <ul style="list-style:none">
+                  <li id="img1" class="kvmslider" style=""> <!-- ID for tooltip and class for animation --> 
+                    <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k1.jpg'); ?>" alt="KVM Academy"/> </a> </li>
+                  <li id="img2" class="kvmslider" style="display:none;"> <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k2.jpg'); ?>" alt="KVM Academy"/> </a> </li>
+                  <li id="img3" class="kvmslider" style="display:none;"> <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k3.jpg'); ?>" alt="KVM Academy"/> </a> </li>
+                  <li id="img4" class="kvmslider" style="display:none;"> <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k4.jpg'); ?>" alt="KVM Academy"/> </a> </li>
+                  <li id="img5" class="kvmslider" style="display:none;"> <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k5.jpg'); ?>" alt="KVM Academy"/> </a> </li>
+                </ul>
+              </div>
+              <!-- End Mask --> 
+            </div>
+        <!-- End Slider Container --> 
+    </div>
+    <div class = "span3 hidden-phone">
       <div class = "row">
        <!--  <div class = "span4 margint20"> <img class = "pull-right" src="<?php echo base_url('assets/Images/soci-icons_03.png'); ?>"> </div> -->
+       <div id="ipltimer" class="pull-right ipltimer margint10">
+              <a href="<?php echo site_url('ipl');?>"><div class="ipl_logo"></div></a>
+              <span id="defaultCountdown" class="countdown"></span>
+      </div>
       </div>
 			<div class = "row">
        <!-- <div class = "span4  margint20">
@@ -61,18 +85,13 @@
             <button class="btn btn-primary" type="button"><i class="icon-search icon-white"></i></button
           </div>
           <div class = "clearfix"></div>
-        </div> -->
-      </div>
+        </div>
+      </div> -->
     </div>
-     <!-- timer -->
-      <div id="ipltimer" class="pull-right">
-              <a href="<?php echo site_url('ipl');?>"><div class="ipl_logo"></div></a>
-              <span id="defaultCountdown" class="countdown"></span>
-      </div>
-      <!-- timer end-->
+     
   </div>
 </div>
-
+</div>
 <!--NAV MENU-->
 <div class = "container">
   <div class = "row visible-desktop">
@@ -82,6 +101,7 @@
 
       <ul class ="menu"> 
         <li <?php if($view_page=='home') echo 'class="active"';?> ><a href="<?php echo base_url(); ?>" class="drop">Home</a></li>
+        <li <?php if($view_page=='ipl') echo 'class="active"';?> id="ipl_menu"><a href="<?php echo base_url('ipl'); ?>" class="drop" >IPL</a>
         <li <?php if($view_page=='schedule') echo 'class="active"';?>><a href="<?php echo base_url('schedule'); ?>" class="drop">Schedule</a><!-- Begin Shedule columns Item -->
 
           <div class="dropdown_2columns"><!-- Begin 5 columns container -->
@@ -142,18 +162,18 @@
                   <div class="row">
                   	<div class = "span3">
                   	<div class="padding20" style="text-align:left">
-                    	<h4 style = "text-align:left">Registration</h4>
+                    	<h4 style = "text-align:left;margin-left:0;">Registration</h4>
                       <div class="divider"></div>
                       <span id="error_msg1" class="errorMessage"></span>
 
                       <form class="form-horizontal">
-                         <span>First Name: </span><input type="text" class="input-large" name="firstname" id="firstname" placeholder="First name" style="text-align:left">
+                         <span>First Name: </span><input type="text" class="input-large" name="firstname" id="firstname" style="text-align:left">
                          <div class="margint10"></div>
-                         <span>Last Name: </span><input type="text" class="input-large" name="lastname" id="lastname" placeholder="Last name" style="text-align:left">
+                         <span>Last Name: </span><input type="text" class="input-large" name="lastname" id="lastname" style="text-align:left">
                          <div class="margint10"></div>
-                         <span>E-Mail: </span><input type="text" class="input-large" name="email_address" id="inputEmail" placeholder="Email" style="text-align:left">
+                         <span>E-Mail: </span><input type="text" class="input-large" name="email_address" id="inputEmail" style="text-align:left">
                          <div class="margint10"></div>
-                         <span>Password: </span><input type="password" class="input-large" name="pass_word" id="inputPassword" placeholder="Password" style="text-align:left">
+                         <span>Password: </span><input type="password" class="input-large" name="pass_word" id="inputPassword" style="text-align:left">
                          <div class="margint20"></div>
                          <a class="btn btn-primary span1 pull-right marginb15" id="signupsubmit">Register</a>
                   		</form>
@@ -201,18 +221,18 @@
               <div class = "span3">
                 <div class="padding20" style="text-align:left">
                 	
-                  <h4 style = "text-align:left">Login</h4>
+                  <h4 style = "text-align:left;margin-left:0;" id="login_header">Login</h4>
                   <div class="divider"></div><span id="error_msg" class="errorMessage"></span>
                   <form class="form-horizontal">
-                  	<span class="login">UserName: </span><input type="text" class="input-large login" placeholder="Email" id="username" name="username" style="text-align:left">
+                  	<span class="login">Email: </span><input type="text" class="input-large login" id="username" name="username" style="text-align:left">
                     <div class="margint10"></div>
-                    <span class="login">Password: </span><input type="password" class="input-large login" placeholder="Password" id="passowrd" name="password">
-                    <input type="text"  class="forget input-large margint20" placeholder="Email" id="fusername" name="fusername" style="display:none;">
-                    <span id="forget" class="pull-right margint10 login" >Forgot Password?</span>
-                    <span id="login" class="pull-right margint10 forget" style="display:none;">Back to login</span>
+                    <span class="login">Password: </span><input type="password" class="input-large login" id="passowrd" name="password">
+                    <span id="forgot_pw_txt"></span><input type="text"  class="forget input-large margint20" id="fusername" name="fusername" style="display:none; margin-top:10px">
+                    <span id="forget" class="pull-right margint10 login red" style="cursor:pointer;margin-left:0;" >Forgot Password?</span>
                     <div class="margint20"></div>
                          <a class="btn btn-primary span1 pull-right marginb15 margint10 login" id="loginsubmit">Login</a>
-                         <a class="btn btn-primary span1 pull-left marginb15 margint10 forget" id="forgetsubmit" style="display:none;">Submit</a>
+                         <a id="login" class="btn btn-primary pull-left margint10 forget red" style="display:none;cursor:pointer;">Cancel</a>
+                         <a class="btn btn-primary marginb15 pull-right margint10 forget" id="forgetsubmit" style="display:none;">Reset Password</a>
                   </form>                  
                   
                 </div>
@@ -224,14 +244,74 @@
       </ul>
   </div>
 </div>
+</div>
 
-	<!--Tablets & phones Navbar-->
-  
+<!--Nav Menu for Tablets-->
+ 
+
+
+  <div class = "row-fluid visible-tablet">
+    <div class = "span12 margint20">
+      <!--MEGA MENU
+      -->
+
+      <ul class ="menu"> 
+        <li <?php if($view_page=='home') echo 'class="active"';?> ><a href="<?php echo base_url(); ?>" class="drop">Home</a></li>
+        <li <?php if($view_page=='schedule') echo 'class="active"';?>><a href="<?php echo base_url('schedule'); ?>" class="drop">Schedule</a><!-- Begin Shedule columns Item -->
+
+          <div class="dropdown_2columns"><!-- Begin 5 columns container -->
+            <div class = "col_2">
+              <ul id="srs_list" class="greybox">
+                <!--<h2>Upcoming Series</h2>
+                <li><a href="#">Sri Lanka vs Australia</a></li>
+                <li><a href="#">S Africa vs Zimbabwe</a></li>
+                <li><a href="#">Australia vs New Zealand</a></li>
+                <li><a href="#">India vs Australia</a></li>
+                <li><a href="#">Sri Lanka vs Australia</a></li>-->
+              </ul>
+              <div class = "hline"></div>
+              <!-- <ul class="greybox">
+                <li><a href="#">Fixtures</a></li>
+                <li><a href="#">Series Archive</a></li>
+              </ul> -->
+            </div>
+          </div>
+        </li>
+        <li <?php if($view_page=='result') echo 'class="active"';?>><a href="<?php echo base_url('result'); ?>" class="drop">Results</a></li>
+        <li <?php if($view_page=='team_rank') echo 'class="active"';?>><a class="drop">Rankings</a><!-- Begin 4 columns Item -->
+         <div class="dropdown_2columns">
+            <div class = "col_2">
+              <ul class="greybox">
+                <h2>Rankings</h2>
+                <li><a href="<?php echo base_url('rank/team'); ?>">Team Rankings</a></li>
+                <li><a href="<?php echo base_url('rank/batting'); ?>">Batsman Rankings</a></li>
+                <li><a href="<?php echo base_url('rank/bowling'); ?>">Bowler Rankings</a></li>
+                <li><a href="<?php echo base_url('rank/allrounder'); ?>">All Rounder Rankings</a></li>
+              </ul>
+            </div>
+            <!--<div class = "col_2">
+              <ul class="greybox">
+                <h2>Records</h2>
+                <li><a href="#">Batting Record</a></li>
+                <li><a href="#">Bowling Record</a></li>
+                <li><a href="#">All Rounder Record</a></li>
+                <li><a href="#">Other Records</a></li>
+              </ul>
+            </div>-->
+          </div>
+        </li>
+        <li <?php if($view_page=='news') echo 'class="active"';?>><a href="<?php echo base_url('news'); ?>" class="drop">News</a></li>
+        <li <?php if($view_page=='articles') echo 'class="active"';?>><a href="<?php echo base_url('article'); ?>" class="drop">Articles</a></li>
+        <li <?php if($view_page=='photos') echo 'class="active"';?>><a href="<?php echo base_url('photos');?>" class="drop">Photos</a></li>
+        <li <?php if($view_page=='videos') echo 'class="active"';?>><a href="<?php echo base_url('videos');?>" class="drop">Videos</a></li>
+				<li <?php if($view_page=='forum') echo 'class="active"';?>><a href="<?php echo base_url('forum'); ?>" class="drop pulsate">Forum</a></li>
+      </ul>
+  </div>
 </div>
 
 
 <!--Static Live Score-->
-<div class="static-bottom-container visible-desktop" id="closeBg">
+<div class="static-bottom-container visible-desktop" id="closeBg" style="width:96%">
 	<div class="row-fluid" id="liveScore">
   	<div class="span11">
     	<div class="container-fluid"  id="lsClose">
@@ -253,9 +333,9 @@
                     	<div class="team_icon1">
                       	<div class="team1_image"></div>
                       </div>
-                      <h5 class="team_name team1"></h5>
-                      <h4 class="yellow nolive team1_score"></h4>
-                      <p class="white not_live small-text team1_over"></p>
+                      <h5 class="team_name team2"></h5>
+                      <h4 class="yellow nolive team2_score"></h4>
+                      <p class="white not_live small-text team2_over"></p>
                     </div>
                     <div class="span1">
                     	<h3 style="margin-top:42px" class="white">vs</h3>
@@ -264,9 +344,9 @@
                     	<div class="team_icon2">
                       	<div class="team2_image"></div>
                       </div>
-                      <h5 class="team_name team2"></h5>
-                      <h4 class="yellow nolive team2_score"></h4>
-                      <p class="white not_live small-text team2_over"></p>
+                      <h5 class="team_name team1"></h5>
+                      <h4 class="yellow nolive team1_score"></h4>
+                      <p class="white not_live small-text team1_over"></p>
                     </div>
                   </div>
                   
@@ -384,8 +464,8 @@
   
 </div>
 
-<div class="ls-popout-button pull-right"><img src="<?php echo base_url('assets/Images/LS-Button.png');?>" class="res-image" id = "ls_bt_close"> </div>
-<div id="chat_minimize" class="chat-button pull-right"><img src="<?php echo base_url('assets/Images/chat_button.png');?>" class="res-image" id="chat-button"> </div>
+<div class="ls-popout-button pull-right visible-desktop" style="right:0%"><img src="<?php echo base_url('assets/Images/LS-Button.png');?>" class="res-image" id = "ls_bt_close"> </div>
+<!--<div id="chat_minimize" class="chat-button pull-right visible-desktop"><img src="<?php echo base_url('assets/Images/chat_button.png');?>" class="res-image" id="chat-button"> </div>-->
 <script type="text/javascript">
 		
     $(window).load(function(){
@@ -422,4 +502,15 @@
 		$("#lsCloseButton").click(function() {
 			$("#lsToggleBox").animate({"left":"-300px"},{duration:300});
 		});
+		
+		$("#forget").click(function(){
+			$("#login_header").text("Forgot Password?");
+			$("#forgot_pw_txt").text("Email: ");
+		});
+		$("#login").click(function(){
+			$("#login_header").text("Login");
+			$("#forgot_pw_txt").text("");
+		});
+		
 	</script>
+<script src="<?php echo base_url('assets/js/kvm.js');?>"></script> 

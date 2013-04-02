@@ -4,7 +4,7 @@
 <div class = "row-fluid redfx"></div>
 
 <!--Footer BOX-->
-<div class = "row-fluid darktex">
+<div class = "row-fluid darktex visible-desktop">
   <div class = "container">
     <div class = "row  footer-box"> 
       
@@ -62,6 +62,7 @@
             <p></p>
             <ul>
               <li><a href="<?php echo base_url();?>">Home</a></li>
+              <li><a href="<?php echo base_url('IPL');?>">IPL</a></li>
               <li><a href="<?php echo base_url('schedule');?>">Schedule</a></li>
               <li><a href="<?php echo base_url('result');?>">Results</a></li>
               <li><a href="<?php echo base_url('rank/team');?>">Rankings</a></li>
@@ -69,6 +70,7 @@
               <li><a href="<?php echo base_url('articles');?>">Article</a></li>
               <li><a href="<?php echo base_url('photos');?>">Photos</a></li>
               <li><a href="<?php echo base_url('videos');?>">Videos</a></li>
+              <li><a href="<?php echo base_url('forum');?>">Forum</a></li>
             </ul>
           </div>
           <!-- <div class = "span6 padding20">
@@ -136,6 +138,9 @@
     <script type="text/javascript" src="<?php echo base_url('assets/js/analytics.js'); ?> "></script>
     <script src="<?php echo base_url('assets/js/photos.js');?>"></script>
     <script src="<?php echo base_url('assets/js/login.js');?>"></script>
-    <script type="text/javascript" src="<?php echo base_url('assets/js/countdown.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/js/countdown.js'); ?>">
+    </script>
+    <script src="<?php echo base_url('assets/js/my.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/kvm.js');?>"></script>
 </body>
 </html>

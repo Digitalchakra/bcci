@@ -405,6 +405,10 @@ transition:all 0.4s ease-in-out;
 	font-family:Tahoma, Geneva, sans-serif;
 	text-transform:none;
 }
+.news-thumb h5 {
+	margin-left:0;
+	padding-left:0;
+}
 .news-thumb h6,.news-thumb-small h6 {
 	font-size:13px;
 	color:#383838;
@@ -441,9 +445,11 @@ transition:all 0.4s ease-in-out;
 	height:38px;
 }
  .rankings h4 {
+	 color:#444;
 	 font-family:squareBT;
-	 font-size:18px;
+	 font-size:15px;
 	 text-transform:uppercase;
+	 font-weight:600;
 }
 .rankings ul li:last-child {
 		border:solid 1px #afafaf;
@@ -487,6 +493,7 @@ color:#FFF;
 text-shadow:0px 1px 3px rgba(0,0,0,0.4);
 box-shadow:inset 0 0 0 4px rgba(0,0,0,0.45),
 					 inset 1px 1px 16px 0 rgba(0,0,0,0.8);
+					 height:440px;
 }
 .livescore_bg .team_name {
 	font-family:Tahoma, Geneva, sans-serif;
@@ -511,7 +518,7 @@ box-shadow: 0 2px 4px rgba(0,0,0,0.5),
 						inset 0px 0px 8px rgba(0,0,0,0.3);
 width:72px;
 height:72px;
-margin:o auto;
+margin:0 auto;
 text-align:center;
 }
 .team1_image,.team2_image {
