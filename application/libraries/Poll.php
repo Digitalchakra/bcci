@@ -299,9 +299,17 @@ class Poll
 	 */
 	public function save_new_poll($datas)
 	{
+		$answer_count=1;
+		$datas['votes']=array();
+		foreach($datas['answers'] as $answer)
+		{
+			$datas['votes'][$answer_count]=0;
+			$answer_count++;
+		}
 		$data = array(
 			'question' => $datas['question'],
 			'answers' => serialize($datas['answers']),
+			'votes' => serialize($datas['votes']),
 			'status' => 'inactive'
 		);
 		$this->CI->db->insert('polls', $data);
