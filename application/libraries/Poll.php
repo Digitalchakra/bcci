@@ -215,21 +215,23 @@ class Poll
 			(is_array($votes)) ? ksort($votes) : '';
 			$question = $row->question;
 			$vote_ = '';
-			$answer_ = '';
+			//$answer_ = '';
 			
 			if($votes != FALSE)
 			{
 				for($i = 1; $i <= count($answers); $i++)
-				{	
+				{
+					$vote_rate[$i]=0;	
 					if(array_key_exists($i, $votes))
 					{
 					    $vote_ .= ($i < count($answers)) ? $votes[$i].', ' : $votes[$i];
-					    $answer_ .= ($i < count($answers)) ? ''.$answers[$i].' ('.$votes[$i].'), ' : $answers[$i].' ('.$votes[$i].')';	  	
+					   // $answer_ .= ($i < count($answers)) ? ''.$answers[$i].' ('.$votes[$i].'), ' : $answers[$i].' ('.$votes[$i].')';
+					    $vote_rate[$i]=	$votes[$i];  	
 					}
 					else
 					{
 					    $vote_ .= ($i < count($answers)) ? 0 .', ' : 0;	
-					    $answer_ .= ($i < count($answers)) ? ''.$answers[$i].' (0), ' : $answers[$i].' (0)';	  						
+					    //$answer_ .= ($i < count($answers)) ? ''.$answers[$i].' (0), ' : $answers[$i].' (0)';	  						
 					}
 				}
 			}
@@ -238,11 +240,13 @@ class Poll
 				for($k = 1; $k <= count($answers); $k++)
 				{
 				    $vote_ .= ($k < count($answers)) ? 0 .', ' : 0;
-				    $answer_ .= ($k < count($answers)) ? ''.$answers[$k].' (0), ' : $answers[$k].' (0)';	
+				    //$answer_ .= ($k < count($answers)) ? ''.$answers[$k].' (0), ' : $answers[$k].' (0)';	
 				}
 			}
 			$data['question']=$question;
-			$data['poll_ans']=explode(",",$answer_);
+			//$data['poll_ans']=explode(",",$answer_);
+			$data['poll_ans']=$answers;
+			$data['vote_rate']=$vote_rate;
 			return $data;
 		}
 	}	

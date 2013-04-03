@@ -265,6 +265,7 @@ function getpoll()
 		success:function(data)
 		{
 			$('#poll_question').html("No polls");
+			var maxvote=0;
 			if(data.resultset.success===1)
 			{
 				$('#poll_question').html(data.resultset.question);
@@ -280,11 +281,16 @@ function getpoll()
 				$('#poll_question').html(data.resultset.question);
 				list="";
 				$.each(data.resultset.poll_ans, function(i, item) {
-					//list+='<input type="radio" value="'+item+'" name="polloption" id="pollans'+i+'"/><label for="pollans'+i+'"><span></span>'+item+'</label>';
-					list+='<label for="pollans'+i+'"><span></span>'+item+'</label>';
+					if(data.resultset.vote_rate[i] > maxvote)
+						maxvote=data.resultset.vote_rate[i];
+						list+='<div>'+item+'</div><div id="pollans'+i+'">'+data.resultset.vote_rate[i]+'</div>';
 				});
 				$('#poll_answer').html(list);
 				$('#ipl-polls-button').remove();
+				$.each(data.resultset.vote_rate, function(i, item) {
+					barvalue=(item/maxvote)*100;
+					$("#pollans"+i).progressbar({ value: barvalue});
+				});
 			}
 		},
 		error:function()
@@ -310,14 +316,19 @@ function setpoll()
 		{
 			if(data.resultset.success===2)
 			{
-				$('#ipl-polls-button').remove();
 				$('#poll_question').html(data.resultset.question);
 				list="";
 				$.each(data.resultset.poll_ans, function(i, item) {
-					//list+='<input type="radio" value="'+item+'" name="polloption" id="pollans'+i+'"/><label for="pollans'+i+'"><span></span>'+item+'</label>';
-					list+='<label for="pollans'+i+'"><span></span>'+item+'</label>';
+					if(data.resultset.vote_rate[i] > maxvote)
+						maxvote=data.resultset.vote_rate[i];
+						list+='<div>'+item+'</div><div id="pollans'+i+'">'+data.resultset.vote_rate[i]+'</div>';
 				});
 				$('#poll_answer').html(list);
+				$('#ipl-polls-button').remove();
+				$.each(data.resultset.vote_rate, function(i, item) {
+					barvalue=(item/maxvote)*100;
+					$("#pollans"+i).progressbar({ value: barvalue});
+				});
 			}
 		},
 		error:function()

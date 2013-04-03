@@ -1,4 +1,5 @@
 <link href="<?php echo base_url('assets/css/bcci-ipl.css'); ?>" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
 <header>
 	<div class="container ipl-header" >
 		<div class="row">
