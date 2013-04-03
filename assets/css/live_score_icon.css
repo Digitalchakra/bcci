@@ -8,7 +8,7 @@
 .flag_CAN{ background: url(../Images/flags/CAN.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_CSK{ background: url(../Images/flags/CSK.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_DC{ background: url(../Images/flags/DC.png)  no-repeat top left; width: 68px; height: 68px; } 
-.flag_DDD{ background: url(../Images/flags/DDD.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_DD{ background: url(../Images/flags/DD.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_ENG{ background: url(../Images/flags/ENG.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_HK{ background: url(../Images/flags/HK.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_IND{ background: url(../Images/flags/IND.png)  no-repeat top left; width: 68px; height: 68px; } 
@@ -16,18 +16,18 @@
 .flag_KEN{ background: url(../Images/flags/KEN.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_KKR{ background: url(../Images/flags/KKR.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_KTK{ background: url(../Images/flags/KTK.png)  no-repeat top left; width: 68px; height: 68px; } 
-.flag_KXP{ background: url(../Images/flags/KXP.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_KXIP{ background: url(../Images/flags/KXIP.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_MI{ background: url(../Images/flags/MI.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_NAM{ background: url(../Images/flags/NAM.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_NZ{ background: url(../Images/flags/NZ.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_PAK{ background: url(../Images/flags/PAK.png)  no-repeat top left; width: 68px; height: 68px; } 
-.flag_PW{ background: url(../Images/flags/PW.png)  no-repeat top left; width: 68px; height: 68px; } 
-.flag_RC{ background: url(../Images/flags/RC.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_PWI{ background: url(../Images/flags/PWI.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_RCB{ background: url(../Images/flags/RCB.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_RR{ background: url(../Images/flags/RR.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_RSA{ background: url(../Images/flags/RSA.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_SCO{ background: url(../Images/flags/SCO.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_SL{ background: url(../Images/flags/SL.png)  no-repeat top left; width: 68px; height: 68px; } 
-.flag_SUR{ background: url(../Images/flags/SUR.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_SH{ background: url(../Images/flags/SH.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_WI{ background: url(../Images/flags/WI.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_ZIM{ background: url(../Images/flags/ZIM.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_NED{ background: url(../Images/flags/NED.png)  no-repeat top left; width: 68px; height: 68px; } 
@@ -40,7 +40,7 @@
 .flag_CANW{ background: url(../Images/flags/CAN.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_CSKW{ background: url(../Images/flags/CSK.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_DCW{ background: url(../Images/flags/DC.png)  no-repeat top left; width: 68px; height: 68px; } 
-.flag_DDDW{ background: url(../Images/flags/DDD.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_DDW{ background: url(../Images/flags/DD.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_ENGW{ background: url(../Images/flags/ENG.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_HKW{ background: url(../Images/flags/HK.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_INDW{ background: url(../Images/flags/IND.png)  no-repeat top left; width: 68px; height: 68px; } 
@@ -48,22 +48,21 @@
 .flag_KENW{ background: url(../Images/flags/KEN.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_KKRW{ background: url(../Images/flags/KKR.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_KTKW{ background: url(../Images/flags/KTK.png)  no-repeat top left; width: 68px; height: 68px; } 
-.flag_KXPW{ background: url(../Images/flags/KXP.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_KXIPW{ background: url(../Images/flags/KXIP.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_MIW{ background: url(../Images/flags/MI.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_NAMW{ background: url(../Images/flags/NAM.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_NZW{ background: url(../Images/flags/NZ.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_PAKW{ background: url(../Images/flags/PAK.png)  no-repeat top left; width: 68px; height: 68px; } 
-.flag_PWW{ background: url(../Images/flags/PW.png)  no-repeat top left; width: 68px; height: 68px; } 
-.flag_RCW{ background: url(../Images/flags/RC.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_PWIW{ background: url(../Images/flags/PWI.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_RCBW{ background: url(../Images/flags/RCB.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_RRW{ background: url(../Images/flags/RR.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_RSAW{ background: url(../Images/flags/RSA.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_SCOW{ background: url(../Images/flags/SCO.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_SLW{ background: url(../Images/flags/SL.png)  no-repeat top left; width: 68px; height: 68px; } 
-.flag_SURW{ background: url(../Images/flags/SUR.png)  no-repeat top left; width: 68px; height: 68px; } 
+.flag_SHW{ background: url(../Images/flags/SH.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_WIW{ background: url(../Images/flags/WI.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_ZIMW{ background: url(../Images/flags/ZIM.png)  no-repeat top left; width: 68px; height: 68px; } 
 .flag_NEDW{ background: url(../Images/flags/NED.png)  no-repeat top left; width: 68px; height: 68px; } 
-
 /* Small Flags */
 
 .team_icon .flag {
