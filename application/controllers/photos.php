@@ -5,7 +5,7 @@ class Photos extends CI_Controller
 	function getlist()
 	{
 		$this->load->model('photosmodel');
-		$data['resultset']=$this->photosmodel->getList(8,0);
+		$data['resultset']=$this->photosmodel->getList(12,0);
 		$this->load->view('json',$data);
 	}
 	function index()
