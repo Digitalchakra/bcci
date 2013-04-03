@@ -15,7 +15,7 @@ class Ipl extends CI_Controller
 		$data['schedule']=$this->match->getUpcomingMatch(2, 0,2170);
 
 		$this->load->model('photosmodel');
-		$data['photos']=$this->photosmodel->getList(2,0);
+		$data['photos']=$this->photosmodel->getList(10,0);
 
 		$data['view_page'] = 'ipl';
 		//echo "<pre>";

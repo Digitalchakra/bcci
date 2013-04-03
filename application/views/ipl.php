@@ -21,19 +21,19 @@
 						<div class="span5">
 							<div class="span6 ipl-sb-flag">
 								<div >
-									<h3 id="ipl_team1" class="centerFix">CSK</h3>
+									<h3 id="ipl_team1" class="centerFix"></h3>
 								</div>
 								 
-								<div id="ipl_team1_image" class="ipl-CSK clearBoth centerFix leftFix">
+								<div id="ipl_team1_image" class="clearBoth centerFix leftFix">
 								</div>
 							</div>
 							<div class="span6 ipl-sb-score">
 								
-									<h3 id="ipl_team1_score">128/4</h3>
-									<h4 id="ipl_team1_over">15.1 Overs</h4>
+									<h3 id="ipl_team1_score"></h3>
+									<h4 id="ipl_team1_over"></h4>
 									<div class="ipl-sb-rr">
-										<h5 id="rrr">Req. RR:</h5>	
-										<h5 id="crr">Cur. RR:</h5>	
+										<h5 id="rrr"></h5>	
+										<h5 id="crr"></h5>	
 									</div>
 							</div>
 						</div>
@@ -43,8 +43,8 @@
 
 								</div>
 								<div class="ipl-sb-inner">
-									<h3 id="ipl_striker">MS DHONI</h3>
-									<h4 id="ipl_striker_run">46(25)</h4>
+									<h3 id="ipl_striker"></h3>
+									<h4 id="ipl_striker_run"></h4>
 									<div CLASS="ipl-sb-striker-SET">
 										<!-- <div class="ipl-sb-striker-inner">
 											<h5>4s</h5>	
@@ -59,7 +59,7 @@
 										<div class="ipl-sb-striker-inner">
 											 <h5>s/r</h5>
 											 
-											<h6 id="ipl_striker_sr">48.21</h6>
+											<h6 id="ipl_striker_sr"></h6>
 										</div>
 									</div>
 								</div>
@@ -70,8 +70,8 @@
 
 								</div>
 								<div class="ipl-sb-inner">
-									<h3 id="ipl_nonStriker">MS DHONI</h3>
-									<h4 id="ipl_nonStriker_run">46(25)</h4>
+									<h3 id="ipl_nonStriker"></h3>
+									<h4 id="ipl_nonStriker_run"></h4>
 									<div CLASS="ipl-sb-striker-SET">
 										<!-- <div class="ipl-sb-striker-inner">
 											<h5>4s</h5>	
@@ -86,7 +86,7 @@
 										<div class="ipl-sb-striker-inner">
 											 <h5>s/r</h5>
 											 
-											<h6 id="ipl_nonStriker_sr">48.21</h6>
+											<h6 id="ipl_nonStriker_sr"></h6>
 										</div>
 									</div>
 								</div>
@@ -101,14 +101,14 @@
 						<div class="span5">
 							<div class="span6 ipl-sb-flag ">
 								<p class="ipl-sb-vs">Vs</p>
-								<h3 id="ipl_team2" class="centerFix">MI</h3>
-								<div id="ipl_team2_image" class="ipl-MI clearBoth centerFix leftFix">
+								<h3 id="ipl_team2" class="centerFix"></h3>
+								<div id="ipl_team2_image" class="clearBoth centerFix leftFix">
 								</div>
 
 							</div>
 							<div class="span6 ipl-sb-score">
-									<h3 id="ipl_team2_score">128/4</h3>
-									<h4 id="ipl_team2_over">15.1 Overs</h4>
+									<h3 id="ipl_team2_score"></h3>
+									<h4 id="ipl_team2_over"></h4>
 							</div>
 						</div>
 						<div class="span7">
@@ -117,8 +117,8 @@
 
 									</div>
 								<div class="ipl-sb-inner-bowler">
-									<h3 id="ipl_strikerbowler">TENDULKAR</h3>
-									<h4>46(25)</h4>
+									<h3 id="ipl_strikerbowler"></h3>
+									<h4></h4>
 									
 								</div>
 							</div>
@@ -127,22 +127,22 @@
 									<div class="ipl-sb-bowler-inner" >
 										<h5>O</h5>	
 										
-										<h6 id="ipl_strikerbowler_overs">2</h6>
+										<h6 id="ipl_strikerbowler_overs"></h6>
 									</div>
 									<div class="ipl-sb-bowler-inner">
 										<h5>M</h5>
 										
-										<h6 id="ipl_strikerbowler_maidens">0</h6>
+										<h6 id="ipl_strikerbowler_maidens"></h6>
 									</div>
 									<div class="ipl-sb-bowler-inner">
 										 <h5>R</h5>
 										 
-										<h6 id="ipl_strikerbowler_runs">25</h6>
+										<h6 id="ipl_strikerbowler_runs"></h6>
 									</div>
 									<div class="ipl-sb-bowler-inner">
 										 <h5>W</h5>
 										 
-										<h6 id="ipl_strikerbowler_wickets">1</h6>
+										<h6 id="ipl_strikerbowler_wickets"></h6>
 									</div>
 								</div>
 									<div class="clearBoth ipl-bowler-lname">
@@ -376,18 +376,29 @@
 					</div>
 					<div class="ipl-photo-content">
 						<div class='ipl-photo-title'><h4>Day 3 IPL Highlights</h4></div>
-						<ul>
+						<div>
 							<?php
+							$photocount=0;
 							foreach($photos as $single_photos)
 							{
-
-								echo "<li>";
-								echo "<a href=".$single_photos->link." target='_blank'><img src=".$single_photos->icon."></a>";
-								echo "</li>";
+								if($photocount==0)
+								{
+									echo "<div>";
+									echo '<a class="info fancybox" rel="photos" href="'.$single_photos->src.'" title="'.$single_photos->pubdate.' - '.$single_photos->description.'"><img src="'.$single_photos->icon.'"></a>';
+									echo $single_photos->pubdate.' - '.$single_photos->description;
+									echo "</div>";
+								}
+								else
+								{
+								echo "<div style='display:none'>";
+								echo '<a class="info fancybox" rel="photos" href="'.$single_photos->src.'" title=""></a>';
+								echo "</div>";	
+								}
+								$photocount++;
 							}
 							?>
 							
-						</ul>
+						</div>
 						<!-- <div class="ipl-photo">
 
 						</div>
