@@ -25,6 +25,16 @@ $(document).ready(function()
 
 function ipllivescore()
 {
+	var iplteams={};
+	iplteams['KOL']="KKR";
+	iplteams['DEL']="DD";
+	iplteams['BLR']="RCB";
+	iplteams['MUM']="MI";
+	iplteams['HYD']="SH";
+	iplteams['PUNE']="PWI";
+	iplteams['JAI']="RR";
+	iplteams['CHN']="CSK";
+	iplteams['MOH']="KXIP"; 
 	 var site='http://webclient.cricbuzz.com/includes/deccanherald/livecricketscore/filter-match-details.json';
 	 // Fall back URL incase the above URL does not work
 	 //var site='http://webclient.cricbuzz.com/includes/deccanherald/livecricketscore/web-client-match-details.json';  
@@ -43,6 +53,22 @@ function ipllivescore()
 			{
 				if(data[listcount].matchDataType==='Live Data'&& data[listcount].seriesFolder==='2013_T20_LEAGUE')
 				{
+					if(data[listcount].series === 'T20 Cricket League 2013')
+					data[listcount].series='Indian Premier League VI 2013'
+					
+					$.each(iplteams, function(index, value) {
+						if(data[listcount]['team1'].shortName === index)
+						data[listcount]['team1'].shortName=value;
+						
+						if(data[listcount]['team2'].shortName === index)
+						data[listcount]['team2'].shortName=value;
+						
+						if(data[listcount].battingTeamName === index)
+						data[listcount].battingTeamName=value;
+						
+						if(data[listcount].bowlingTeamName === index)
+						data[listcount].bowlingTeamName=value;
+					});
 					option+='<li value="'+listcount+'"';
 					if(listcount ===$.myplaceholder.checkreload)
 					{
@@ -116,8 +142,8 @@ function ipllivescoredisplay(data)
 				//$('#ipl_team2_image').removeAttr('class');
 				//$('#ipl_team1_image').addClass("flag flag_"+data.battingTeamName);
 				//$('#ipl_team2_image').addClass("flag flag_"+data.bowlingTeamName);
-				$('#team1_image').addClass("ipl-"+data.battingTeamName);
-				$('#team2_image').addClass("ipl-"+data.bowlingTeamName);
+				$('#ipl_team1_image').addClass("ipl-"+data.battingTeamName);
+				$('#ipl_team2_image').addClass("ipl-"+data.bowlingTeamName);
 
 				//batting team score/over
 				$('#ipl_team1_score').html(data['currentBatTeamScore'].runsAndWicket+'*');
