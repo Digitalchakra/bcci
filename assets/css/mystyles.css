@@ -799,5 +799,5 @@ li a {
 	display:none !important;
 }
 .fancybox-nav span {
-    visibility: visible;
+    visibility: visible !Important;
 }
