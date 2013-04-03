@@ -4,7 +4,7 @@ $(document).ready(function()
 		$.myplaceholder.mylivescore=[];
 		$.myplaceholder.checkreload=0;
 		$.myplaceholder.checkloaded=0;
-		livescore();
+		ipllivescore();
 		getpoll();
 		$('#ipl-polls-button').click(function(){
 			setpoll();
@@ -14,7 +14,7 @@ $(document).ready(function()
 			});	 
 
     setInterval(function() {
-         livescore();
+         ipllivescore();
 			}, 30000);
      setInterval(function() {
          //$('#ipl-schedule-back, #ipl-schedule-front').toggle('drop', {direction: 'right'}, 150)
@@ -23,7 +23,7 @@ $(document).ready(function()
 });
 
 
-function livescore()
+function ipllivescore()
 {
 	 var site='http://webclient.cricbuzz.com/includes/deccanherald/livecricketscore/filter-match-details.json';
 	 // Fall back URL incase the above URL does not work
@@ -41,7 +41,7 @@ function livescore()
 			//alert(data[listcount].matchDataType);
 			$(data).each(function()
 			{
-				if(data[listcount].matchDataType=='Live Data')
+				if(data[listcount].matchDataType==='Live Data'&& data[listcount].seriesFolder==='2013_T20_LEAGUE')
 				{
 					option+='<li value="'+listcount+'"';
 					if(listcount ===$.myplaceholder.checkreload)
@@ -78,7 +78,7 @@ function livescore()
 			 * when ajax is loading make the current selected tab to update
 			 * instead of refresh the list
 			 */
-			livescoredisplay($.myplaceholder.mylivescore[$.myplaceholder.checkreload]);
+			ipllivescoredisplay($.myplaceholder.mylivescore[$.myplaceholder.checkreload]);
 			/*if($.myplaceholder.checkreload==0)
 			{
 				$.myplaceholder.checkreload=1;
@@ -91,14 +91,14 @@ function livescore()
 			$('.live_team').click(function()
 			{
 				$('.live_team').removeClass('active');
-				livescoredisplay($.myplaceholder.mylivescore[this.value]);
+				ipllivescoredisplay($.myplaceholder.mylivescore[this.value]);
 				$(this).addClass('active');
 				$.myplaceholder.checkreload=this.value;
 			});
         });
 }
 
-function livescoredisplay(data)
+function ipllivescoredisplay(data)
 {
 	//alert(new Date(data.startdayandtimeGMT));
 				//series_title
@@ -116,8 +116,8 @@ function livescoredisplay(data)
 				//$('#ipl_team2_image').removeAttr('class');
 				//$('#ipl_team1_image').addClass("flag flag_"+data.battingTeamName);
 				//$('#ipl_team2_image').addClass("flag flag_"+data.bowlingTeamName);
-				//$('#team1_image').addClass("flag ipl-"+data.battingTeamName);
-				//$('#team2_image').addClass("flag ipl-"+data.bowlingTeamName);
+				$('#team1_image').addClass("ipl-"+data.battingTeamName);
+				$('#team2_image').addClass("ipl-"+data.bowlingTeamName);
 
 				//batting team score/over
 				$('#ipl_team1_score').html(data['currentBatTeamScore'].runsAndWicket+'*');
