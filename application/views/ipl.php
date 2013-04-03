@@ -375,7 +375,7 @@
 						</div>
 					</div>
 					<div class="ipl-photo-content">
-						<div class='ipl-photo-title'><h4>Day 3 IPL Highlights</h4></div>
+						<div class='ipl-photo-title'><h4>Day 1 IPL Highlights</h4></div>
 						<div>
 							<?php
 							$photocount=0;
@@ -384,14 +384,14 @@
 								if($photocount==0)
 								{
 									echo "<div>";
-									echo '<a class="info fancybox" rel="photos" href="'.$single_photos->src.'" title="'.$single_photos->pubdate.' - '.$single_photos->description.'"><img src="'.$single_photos->icon.'"></a>';
-									echo $single_photos->pubdate.' - '.$single_photos->description;
+									echo '<a class="info fancybox ipl-photo-photo" rel="photos" href="'.$single_photos->src.'" title="'.$single_photos->pubdate.' - '.$single_photos->description.'"><img src="'.$single_photos->icon.'"></a>';
+									echo "<p class='ipl-photo-desc'>".$single_photos->pubdate.' - '.$single_photos->description."</p>";
 									echo "</div>";
 								}
 								else
 								{
 								echo "<div style='display:none'>";
-								echo '<a class="info fancybox" rel="photos" href="'.$single_photos->src.'" title=""></a>';
+								echo '<a class="info fancybox ipl-photo-photo" rel="photos" href="'.$single_photos->src.'" title="'.$single_photos->pubdate.' - '.$single_photos->description.'"><img src="'.$single_photos->icon.'"></a>';
 								echo "</div>";	
 								}
 								$photocount++;
