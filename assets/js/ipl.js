@@ -283,7 +283,7 @@ function getpoll()
 				$.each(data.resultset.poll_ans, function(i, item) {
 					if(data.resultset.vote_rate[i] > maxvote)
 						maxvote=data.resultset.vote_rate[i];
-						list+='<div>'+item+'</div><div id="pollans'+i+'"></div>';
+						list+='<div>'+item+'</div><div id="pollans'+i+'">'+data.resultset.vote_rate[i]+'</div>';
 				});
 				$('#poll_answer').html(list);
 				$('#ipl-polls-button').remove();
@@ -321,7 +321,7 @@ function setpoll()
 				$.each(data.resultset.poll_ans, function(i, item) {
 					if(data.resultset.vote_rate[i] > maxvote)
 						maxvote=data.resultset.vote_rate[i];
-						list+='<div>'+item+'</div><div id="pollans'+i+'"></div>';
+						list+='<div>'+item+'</div><div id="pollans'+i+'">'+data.resultset.vote_rate[i]+'</div>';
 				});
 				$('#poll_answer').html(list);
 				$('#ipl-polls-button').remove();
