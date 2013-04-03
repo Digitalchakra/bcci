@@ -27,7 +27,7 @@
 								<div id="ipl_team1_image" class="clearBoth centerFix leftFix">
 								</div>
 							</div>
-							<div class="span6 ipl-sb-score">
+							<div class="span6 ipl-sb-score not_live">
 								
 									<h3 id="ipl_team1_score"></h3>
 									<h4 id="ipl_team1_over"></h4>
@@ -37,7 +37,7 @@
 									</div>
 							</div>
 						</div>
-						<div class="span7">
+						<div class="span7" id="ipl_playerstate">
 							<div class="span6 ipl-sb-striker ">
 								<div class="ipl-batsman">
 
@@ -106,12 +106,12 @@
 								</div>
 
 							</div>
-							<div class="span6 ipl-sb-score">
+							<div class="span6 ipl-sb-score not_live">
 									<h3 id="ipl_team2_score"></h3>
 									<h4 id="ipl_team2_over"></h4>
 							</div>
 						</div>
-						<div class="span7">
+						<div class="span7" id="ipl_bowlerstate">
 							<div class="span4 ipl-sb-striker">
 									<div class="ipl-bowler">
 
