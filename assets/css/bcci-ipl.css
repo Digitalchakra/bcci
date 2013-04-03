@@ -105,12 +105,6 @@ body{ background:#e6e6e6; font:12px;  }
 .ipl-RR{		background:transparent url(../Images/ipl-flags.png) no-repeat;	background-position: 0 -434px; }
 .ipl-SH{		background:transparent url(../Images/ipl-flags.png) no-repeat;	background-position: 0 -496px; }	
 
-.ipl-ads{
-	margin-top: 20px;
-	background-color: #ffffff;
-	border: solid 1px #a2a2a2;
-	height: 100px; 
-}
 
 
 /*-----------------------------------------------------------------IPL Points table-----------------------------*/
@@ -459,7 +453,9 @@ body{ background:#e6e6e6; font:12px;  }
 .ipl-cards5{	height: 400px;	min-width: 160px;}
 
  
-  .ipl-cards1, .ipl-cards2, .ipl-cards3, .ipl-cards4, .ipl-cards5{padding-left: 9px; width:19%; float:left;}
+  .ipl-cards1, .ipl-cards2,  .ipl-cards4, .ipl-cards5{padding-left: 9px; width:24%; float:left;}
+
+.ipl-cards3 {display: none;}
 
 .ipl-news{	color: #20baff;	background-position: 0 0px;	border-bottom: solid 8px #20baff;}
 .ipl-schedule{	color: #ff7e00;	background-position: 0 -40px;	border-bottom: solid 8px #ff7e00;}
@@ -683,7 +679,19 @@ padding-top: 10px;
     background:url(../Images/ipl_radioBtn.png) -57px top no-repeat;
 }
 
-.ipl-button{margin-left: 50px; margin-top: 10px;	border-radius: 0px;		border: solid 1px #65398b; text-align: center;  padding: 6px; padding-top: 4px;	background:#784a9f;	color: #ffffff;	height: 30px; width: 80px;  font-size: 12px;}
+.ipl-button{
+display: block;	
+	margin: 0 auto; 
+	margin-top: 10px;	
+	border-radius: 0px;		
+	border: solid 1px #65398b; 
+	text-align: center;  
+	padding: 6px; 
+	padding-top: 4px;	
+	background:#784a9f;	
+	color: #ffffff;	
+	height: 30px; width: 80px;  font-size: 12px;}
+
 .ipl-button:hover{	background:#65398b;}
 
 .ipl-button2{ margin-top: 20px;	border-radius: 0px;		border: solid 1px #803131; text-align: center;  padding: 6px; padding-top: 4px;	background:#994141;	color: #ffffff;	height: 30px; width: 120px;	font-size: 12px;}
@@ -699,11 +707,20 @@ padding-top: 10px;
 
 .ipl-ads2{	display: none;}
 .ipl-ads{  	margin-top: 20px;
-	display: block;x`
+	display: block;
 	border: solid 1px #a2a2a2;
 	height: 100px; 
 	width: 200px; 
 	background-color: #232323;}
 
+}
 
+.ipl-ads{
+	margin-top: 20px;
+	background: transparent;
+	/*border: solid 1px #a2a2a2;*/
+	height: 100px; 
+	display: block;
+	text-align: center;
+	padding-top: 4px;
 }

@@ -236,8 +236,36 @@
 	<!--======================================================ADs=======================-->
 <div class="row-fluid">
 	<div class="span8 ipl-ads">
+		
+			<script type="text/javascript"><!--
+google_ad_client = "ca-pub-1444369114752839";
+/* 728x90, created 12/12/07 */
+google_ad_slot = "2932032750";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+		
 	</div>
 	<div class="span4 ipl-ads">
+		
+			
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-1444369114752839";
+/* live-score-top */
+google_ad_slot = "7901791092";
+google_ad_width = 200;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+			
+		
 	</div>
 </div>
 	<!--=====================================================Content=======================-->
@@ -354,7 +382,7 @@
 						<div id="poll_answer">
 							<!-- from ipl.sj -->
             			</div>
-
+            			
             			  <button class="ipl-button" id="ipl-polls-button" style="display:none;">Vote</button>
 							
 					</div>
