@@ -283,7 +283,7 @@ function getpoll()
 				$.each(data.resultset.poll_ans, function(i, item) {
 					if(data.resultset.vote_rate[i] > maxvote)
 						maxvote=data.resultset.vote_rate[i];
-						list+='<div>'+item+'</div><div id="pollans'+i+'">'+data.resultset.vote_rate[i]+'</div>';
+						list+='<div>'+item+'</div><div style="height:20px; margin-top:5px; border: 1px solid #c2c2c2;" id="pollans'+i+'"><p style="padding-left: 10px; width: 30px; color:#ffffff; float: left; font-size:12px;">'+data.resultset.vote_rate[i]+'<p></div>';
 				});
 				$('#poll_answer').html(list);
 				$('#ipl-polls-button').remove();
