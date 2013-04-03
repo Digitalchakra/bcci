@@ -378,7 +378,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 				</div>
 						
 					<div class="ipl-polls-content">
-						<p id="poll_question">loading...</p>
+						<p class="ipl-polls-question" id="poll_question">loading...</p>
 						<br/>
 						<div id="poll_answer">
 							<!-- from ipl.sj -->

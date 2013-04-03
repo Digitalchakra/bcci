@@ -724,3 +724,15 @@ display: block;
 	text-align: center;
 	padding-top: 4px;
 }
+
+.ipl-polls-question{
+	color:#784a9f;
+	font-weight: bold;
+	border-bottom: solid 1px #e1e1e1;
+	padding-bottom: 5px;
+}
+
+#poll_answer{
+
+	color:#626262;
+}
