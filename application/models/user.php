@@ -51,7 +51,7 @@ Class User extends CI_Model
  function check_user($data)
  {
     //$email=$this->input->post('email_address');
-	$this -> db -> select('id');
+	$this -> db -> select('id, email');
 	$this -> db -> from('users');
 	$this -> db -> where($data);
 	$query = $this -> db -> get();

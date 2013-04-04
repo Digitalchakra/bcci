@@ -74,6 +74,7 @@ class Forget extends CI_Controller {
 	 $password = $this->input->post('password');
 	 $cpassword = $this->input->post('cpassword');
 	 $active = $this->input->post('acode');
+	 $email = $this->input->post('email');
 	 $id = $this->input->post('uid');
 	 if($id)
 	 {
@@ -96,7 +97,7 @@ class Forget extends CI_Controller {
 	 }
 	 else
 	 {
-		$check_data=array('active'=>$active,'id'=>$id, 'error'=>'invalid password');
+		$check_data=array('active'=>$active,'email'=>$email,'id'=>$id, 'error'=>'invalid password');
 		$check_data['view_page'] = 'reset';
 		$this->load->view('template', $check_data);
 	 }
@@ -117,6 +118,8 @@ class Forget extends CI_Controller {
 		 if($result = $this->user->check_user($check_data))
 		 {
 			$check_data['error']='';
+			$check_data['email']=$result[0]['email'];
+			$check_data['id']=$result[0]['id'];
 			$check_data['view_page'] = 'reset';
 			$this->load->view('template', $check_data);
 		 }
