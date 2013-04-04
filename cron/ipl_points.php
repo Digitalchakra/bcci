@@ -48,11 +48,12 @@ try
 				$find=array('team_id'=>$row['team_id']);
 					if($found = Ipl_team_ranks::find($find))
 					{
-						foreach($row as $key=>$value)
+						/*foreach($row as $key=>$value)
 						{
 							$found->$key = $value;
 						}
-						$found->save();
+						$found->save();*/
+						$found->update_attributes($row);
 					}
 					else
 					{

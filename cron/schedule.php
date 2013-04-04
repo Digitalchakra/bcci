@@ -51,11 +51,7 @@ try
 					$find=array('srs_id'=>$data['srs_id'],'description'=>$data['description']);
 					if($found = Tbl_matches::find($find))
 					{
-						foreach($data as $key=>$value)
-						{
-							$found->$key = $value;
-						}
-						$found->save();
+						$found->update_attributes($row);
 					}
 					else
 					{

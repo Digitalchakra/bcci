@@ -54,11 +54,7 @@ try
 				$find=array('img_id'=>$row['img_id']);
 					if($found = Tbl_photos::find($find))
 					{
-						foreach($row as $key=>$value)
-						{
-							$found->$key = $value;
-						}
-						$found->save();
+						$found->update_attributes($row);
 					}
 					else
 					{

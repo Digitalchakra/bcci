@@ -60,11 +60,7 @@ try
 				$find=array('news_id'=>$row['news_id']);
 				if($found = Tbl_news::find($find))
 					{
-						foreach($row as $key=>$value)
-						{
-							$found->$key = $value;
-						}
-						$found->save();
+						$found->update_attributes($row);
 					}
 					else
 					{

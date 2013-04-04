@@ -67,11 +67,7 @@ foreach($html->find('table.cricket-results-table tr') as $main)
 					if($found = Tbl_results::find($find))
 					{
 						//unset($row['match_id']);
-						foreach($row as $key=>$value)
-						{
-							$found->$key = $value;
-						}
-						$found->save();
+						$found->update_attributes($row);
 					}
 					else
 					{
