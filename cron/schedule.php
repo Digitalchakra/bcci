@@ -35,7 +35,7 @@ try
 		$data['sdate']=preg_replace("/[^0-9]/","",$sdate[0]).'-'.str_replace(',','-',$searchNode->getAttribute('mnth_yr'));
 		$data['edate']=preg_replace("/[^0-9]/","",$sdate[1]).'-'.str_replace(',','-',$searchNode->getAttribute('mnth_yr'));
 		$data['time']=$tm;
-		$data['sutc_time']=strtotime($data['sdate'].' 00:01:00');
+		$data['sutc_time']=strtotime($data['sdate'].' '.$tm.':00');
 		$data['eutc_time']=strtotime($data['edate'].' 23:59:00');
 		$data['mt_vnu']=$searchNode->getAttribute('vnu');
 		if($data['srs_id']=='2170')
