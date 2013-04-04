@@ -17,7 +17,7 @@ try
 		foreach ($json_output->groups[0]->standings as $single) {
 			$matchend="";
 			$data['position']=$single->position;
-			$data['points']=$single->team->type;
+			$data['points']=$single->points;
 			$data['netRunRate']=$single->netRunRate;
 			$data['played']=$single->played;
 			$data['won']=$single->won;
