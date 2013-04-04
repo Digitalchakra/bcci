@@ -785,13 +785,28 @@ li a {
 	background-repeat: no-repeat;
 	background-position: 0 0; width: 20px; height: 30px;
 }
+.batsman-dark {
+	background-image: url(../Images/icons-ls-dark.png);
+	background-repeat: no-repeat;
+	background-position: 0 0; width: 20px; height: 30px;
+}
 .runner {
 	background-image: url(../Images/icons-ls.png);
 	background-repeat: no-repeat;
 	background-position: 0 -163px; width: 17px; height: 36px;
 }
+.runner-dark {
+	background-image: url(../Images/icons-ls-dark.png);
+	background-repeat: no-repeat;
+	background-position: 0 -163px; width: 17px; height: 36px;
+}
 .bowler {
 	background-image: url(../Images/icons-ls.png);
+	background-repeat: no-repeat;
+	background-position: 0 -80px; width: 18px; height: 33px;
+}
+.bowler-dark {
+	background-image: url(../Images/icons-ls-dark.png);
 	background-repeat: no-repeat;
 	background-position: 0 -80px; width: 18px; height: 33px;
 }

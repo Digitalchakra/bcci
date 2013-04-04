@@ -75,4 +75,14 @@ class Ipl extends CI_Controller
 		$data['view_page'] = 'iplSchedule';
 		$this->load->view('template', $data);
 	}
+
+	function crossword(){
+		$data['view_page'] = 'crossword';
+		$this->load->view('template', $data);
+	}
+
+	function quiz(){
+		$data['view_page'] = 'quiz';
+		$this->load->view('template', $data);
+	}
 }

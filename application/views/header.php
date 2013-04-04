@@ -312,7 +312,7 @@
 
 <!--Static Live Score-->
 <div class="static-bottom-container visible-desktop" id="closeBg" style="width:96%">
-	<div class="row-fluid" id="liveScore">
+	<div class="row-fluid">
   	<div class="span11">
     	<div class="container-fluid"  id="lsClose">
       	<div class="row-fluid">
@@ -320,118 +320,119 @@
           	<div class="slider">
       	<div class="flexslider carousel">
         <!--Toggle Box-->
-        	<div class="static-toggle livescore_bg" id="lsToggleBox">
+        	<div class="static-toggle livescore_bg livescore_bg_white" id="lsToggleBox">
           <div class="ls_close pull-right"  id="lsCloseButton"></div>
+          <?php if($view_page=='home') echo '<div class="ls_default pull-right"  id="lsMakeDefault"><a class="btn">Make Default</a></div>'?>
           	<!--Toggle Box Live Score-->
           	<div class="row-fluid">
             	<div class="span12">
               	<div class="padding20">
-                	<div class="span12 white team_name align-center matchstate">
+                <div id="no_matches" class="row-fluid">
+                  <div class="span12 margint-10">
+                    <h5 class="series_title team_name align-center" style="color:#900"></h5>
+                  </div>
+                </div>
+                	<div class="span12 red team_name align-center matchstate" style="color:#900;">
                   </div>
                 	<div class="row-fluid  align-center">
                   	<div class="span5">
                     	<div class="team_icon1">
                       	<div class="team1_image"></div>
                       </div>
-                      <h5 class="team_name team2"></h5>
-                      <h4 class="yellow nolive team2_score"></h4>
-                      <p class="white not_live small-text team2_over"></p>
+                      <h5 class="team_name team1" style="color:#4d4d4d"></h5>
+                      <h4 class="red nolive team1_score" style = "font-weight:bold"></h4>
+                      <p class="not_live small-text team1_over"></p>
                     </div>
                     <div class="span1">
-                    	<h3 style="margin-top:42px" class="white">vs</h3>
+                    	<h3 style="margin-top:42px; font-weight:bold; font-size:16px" class="red">vs</h3>
                     </div>
                     <div class="span5 pull-right">
                     	<div class="team_icon2">
                       	<div class="team2_image"></div>
                       </div>
-                      <h5 class="team_name team1"></h5>
-                      <h4 class="yellow nolive team1_score"></h4>
-                      <p class="white not_live small-text team1_over"></p>
+                      <h5 class="team_name team2" style="color:#4d4d4d"></h5>
+                      <h4 class="nolive team2_score"  style = "font-weight:bold"></h4>
+                      <p class="not_live small-text team2_over"></p>
                     </div>
                   </div>
                   
                   <div class="row-fluid  align-center margint10">
-                  	 <h6 class="yellow"><!--<span id="status">CSK Needs 46 Runs to win</span>--> 
-                  <span class="marginl20 yellow not_live rrr"></span> <span class="marginl20 yellow not_live crr"></span> </h6>
+                  	 <h6 class="red"><!--<span id="status">CSK Needs 46 Runs to win</span>--> 
+                  <span class="marginl20 red not_live rrr"></span> <span class="marginl20 red not_live crr" style="text-shadow:none;font-weight:bold"></span> </h6>
                   </div>
                   
              			<div style="text-align:center" class="row-fluid margint20 playerstate"><!--Player Stats-->
-              <div class = "span1 batsman"></div>
+              <div class = "span1 batsman-dark"></div>
               <div class="span5">
-                <h5 class="white team_name striker"></h5>
+                <h5 class="team_name striker" style="color:#900"></h5>
                 <!--Player-->
-                <h5 class="yellow striker_run"></h5>
+                <h5 class="red striker_run"  style="font-weight:bold;color:#4d4d4d"></h5>
                 
                 <div class="row-fluid">
                   <div class="span4">
-                    <h6 class="yellow"></h6>
-                    <h6 class="white"></h6>
+                    <h6 class="red"></h6>
+                    <h6 style="color:#4d4d4d"></h6>
                   </div>
                   <div class="span4">
-                    <h6 class="yellow">s/r</h6>
-                    <h6 class="white striker_sr"></h6>
+                    <h6 style="text-shadow:none;color:#900">s/r</h6>
+                    <h6 class="striker_sr" style="color:#4d4d4d;text-shadow:none;font-weight:bold"></h6>
                   </div>
                   <div class="span4">
-                    <h6 class="yellow"></h6>
-                    <h6 class="white"></h6>
+                    <h6 class="red"></h6>
+                    <h6 style="color:#4d4d4d"></h6>
                   </div>
                 </div>
               </div>
-              <div class="vline"></div>
+              <div class="vline" style="border-right:solid 1px #900"></div>
               <div class="span5">
-                <h5 class="white team_name nonStriker"></h5>
+                <h5 class="team_name nonStriker" style="color:#900"></h5>
                 <!--Player-->
-                <h5 class="yellow nonStriker_run"></h5>
+                <h5 class="red nonStriker_run" style="font-weight:bold;color:#4d4d4d"></h5>
                 <!--Player Score-->
                 
                 <div class="row-fluid">
                   <div class="span4">
-                    <h6 class="yellow"></h6>
-                    <h6 class="white"></h6>
+                    <h6 class="red"></h6>
+                    <h6 style="color:#4d4d4d"></h6>
                   </div>
                   <div class="span4">
-                    <h6 class="yellow">sr</h6>
-                    <h6 class="white nonStriker_sr"></h6>
+                    <h6 style="text-shadow:none;color:#900">sr</h6>
+                    <h6 class="nonStriker_sr" style="color:#4d4d4d;text-shadow:none;font-weight:bold"></h6>
                   </div>
                   <div class="span4">
-                    <h6 class="yellow"></h6>
-                    <h6 class="white"></h6>
+                    <h6 class="red"></h6>
+                    <h6 style="color:#4d4d4d"></h6>
                   </div>
                 </div>
               </div>
-              <div class="runner span1"></div>
+              <div class="runner-dark span1"></div>
             </div>
             			<div class="row-fluid margint20 align-center bowlerstate">
-              <div class="span1 bowler"></div>
+              <div class="span1 bowler-dark"></div>
               <div class="span6">
-                <p class="white small-text strikerbowler"></p>
+                <p class="small-text strikerbowler" style="color:#4d4d4d;font-weight:bold;font-size:12px"></p>
               </div>
               <div class="span1"><!--Overs-->
-                <h6 class="yellow">O</h6>
-                <h6 class="white strikerbowler_overs"></h6>
+                <h6 style="color:#900;text-shadow:none;">O</h6>
+                <h6 class="strikerbowler_overs" style="color:#4d4d4d;text-shadow:none;"></h6>
               </div>
               <div class="span1"><!--Maidens-->
-                <h6 class="yellow">M</h6>
-                <h6 class="white strikerbowler_maidens"></h6>
+                <h6 style="color:#900;text-shadow:none;">M</h6>
+                <h6 class="strikerbowler_maidens" style="color:#4d4d4d;text-shadow:none;"></h6>
               </div>
               <div class="span1"><!--Runs-->
-                <h6 class="yellow">R</h6>
-                <h6 class="white strikerbowler_runs"></h6>
+                <h6 style="color:#900;text-shadow:none;">R</h6>
+                <h6 class="strikerbowler_runs" style="color:#4d4d4d;text-shadow:none;"></h6>
               </div>
               <div class="span1"><!--Wickets-->
-                <h6 class="yellow">W</h6>
-                <h6 class="white strikerbowler_wickets"></h6>
+                <h6 style="color:#900;text-shadow:none;">W</h6>
+                <h6 class="strikerbowler_wickets" style="color:#4d4d4d;text-shadow:none;"></h6>
               </div>
               <div style="text-align:center" class="span12 margint20"><!--Wickets-->
-                <span class="yellow team_name"><span class="strikers_lname"></span></span>
+                <span class="team_name"><span class="strikers_lname" style="color:#900;text-shadow:none;"></span></span>
               </div>
             </div>
             
-                </div>
-                <div id="no_matches" class="row-fluid">
-                  <div class="span12 margint-10">
-                    <h5 class="series_title white team_name align-center"></h5>
-                  </div>
                 </div>
               </div>
             </div>
@@ -449,7 +450,16 @@
                 </span>
               </span>
   	    		</li>
-            
+            <li>
+              <span class="row-fluid">
+                <span class="span12">
+                <h5 class="red  align-center">T20 Semi Finals</h5>
+                <h6 class="red  align-left">India <span class="dark-grey">124/5</span> | <span class="dark-grey">12.4 Overs</span></h6>
+                <h6 class="red  align-left">MS Dhoni <span class="dark-grey">80(64)</span> <span class="red">R Raina</span><span class="dark-grey"> 80(64)</span></h6>
+                <h6 class="red  align-left">India <span class="dark-grey">vs</span> Australia (220/6) </h6>
+                </span>
+              </span>
+  	    		</li>
             <li>
               
   	    		</li>
@@ -486,6 +496,7 @@
   </script>
   
 	<script type="text/javascript">
+		
 		$("#ls_bt_close").click(function() {
     $("#lsClose").toggle(200);
 		$("#closeBg").toggleClass("static-bottom-bg");
@@ -493,14 +504,26 @@
 		
 		$(".slides li").click(function() {
 			var offset = $(this).offset();
-			$("#lsToggleBox").animate({"left":(offset.left-30)},{duration:300});
+			var toggleboxOffset = $("#lsToggleBox").offset();
+			if (toggleboxOffset.left === -350 || toggleboxOffset.left != (offset.left-30))
+			{
+			$("#lsToggleBox").animate({"left":(offset.left-50)},{duration:300});
+			}
+			if (toggleboxOffset.left === (offset.left-50))
+			{
+			$("#lsToggleBox").animate({"left":"-350px"},{duration:300});
+			}
 			$(".slides li").removeClass("active");
 			$(this).addClass("active");
-		}
-		);
+		});
+		
+		$("#lsMakeDefault").click(function() {
+			$("html, body").animate({ scrollTop: (100) }, 500);
+		});
 		
 		$("#lsCloseButton").click(function() {
-			$("#lsToggleBox").animate({"left":"-300px"},{duration:300});
+			$("#lsToggleBox").animate({"left":"-350px"},{duration:300});
+			toggleState=0;
 		});
 		
 		$("#forget").click(function(){
@@ -513,4 +536,3 @@
 		});
 		
 	</script>
-<script src="<?php echo base_url('assets/js/kvm.js');?>"></script> 
