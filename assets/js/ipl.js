@@ -1,9 +1,9 @@
 $(document).ready(function()
 {
-		$.myplaceholder={};
-		$.myplaceholder.mylivescore=[];
-		$.myplaceholder.checkreload=0;
-		$.myplaceholder.checkloaded=0;
+		$.iplmyplaceholder={};
+		$.iplmyplaceholder.mylivescore=[];
+		$.iplmyplaceholder.checkreload=0;
+		$.iplmyplaceholder.checkloaded=0;
 		ipllivescore();
 		getpoll();
 		$('#ipl-polls-button').click(function(){
@@ -47,7 +47,7 @@ function ipllivescore()
 	//	var data=result
 			listcount=0;
 			option="";
-			$.myplaceholder.mylivescore=[];
+			$.iplmyplaceholder.mylivescore=[];
 			$('.live_team').removeClass('active');
 			//alert(data[listcount].matchDataType);
 			$(data).each(function()
@@ -71,7 +71,7 @@ function ipllivescore()
 						data[listcount].bowlingTeamName=value;
 					});
 					option+='<li value="'+listcount+'"';
-					if(listcount ===$.myplaceholder.checkreload)
+					if(listcount ===$.iplmyplaceholder.checkreload)
 					{
 						option+= 'class="live_team dark-block active">';
 						option+= '<div class = "arrow"></div>';
@@ -94,7 +94,7 @@ function ipllivescore()
 						option+='</p><span class="yellow small-text">'+data[listcount]['type']+', </span>';
 					}
 					option+='<span class="white small-text">'+data[listcount]['venue-city']+' | '+'</span><span class="yellow small-text">'+data[listcount]['match-day']+'</span></div></li>';
-					$.myplaceholder.mylivescore.push(data[listcount]);
+					$.iplmyplaceholder.mylivescore.push(data[listcount]);
 				}
 				listcount++;
 
@@ -105,22 +105,22 @@ function ipllivescore()
 			 * when ajax is loading make the current selected tab to update
 			 * instead of refresh the list
 			 */
-			ipllivescoredisplay($.myplaceholder.mylivescore[$.myplaceholder.checkreload]);
-			/*if($.myplaceholder.checkreload==0)
+			ipllivescoredisplay($.iplmyplaceholder.mylivescore[$.iplmyplaceholder.checkreload]);
+			/*if($.iplmyplaceholder.checkreload==0)
 			{
-				$.myplaceholder.checkreload=1;
-				livescoredisplay($.myplaceholder.mylivescore[0]);
+				$.iplmyplaceholder.checkreload=1;
+				livescoredisplay($.iplmyplaceholder.mylivescore[0]);
 			}
 			else
 			{
-				//livescoredisplay($.myplaceholder.mylivescore[$('#livescore_dd').value]);
+				//livescoredisplay($.iplmyplaceholder.mylivescore[$('#livescore_dd').value]);
 			}*/
 			$('.live_team').click(function()
 			{
 				$('.live_team').removeClass('active');
-				ipllivescoredisplay($.myplaceholder.mylivescore[this.value]);
+				ipllivescoredisplay($.iplmyplaceholder.mylivescore[this.value]);
 				$(this).addClass('active');
-				$.myplaceholder.checkreload=this.value;
+				$.iplmyplaceholder.checkreload=this.value;
 			});
         });
 }
