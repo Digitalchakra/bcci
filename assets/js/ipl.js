@@ -15,7 +15,8 @@ $(document).ready(function()
 
     setInterval(function() {
          ipllivescore();
-			}, 30000);
+         getpoll();
+			}, 20000);
      setInterval(function() {
          //$('#ipl-schedule-back, #ipl-schedule-front').toggle('drop', {direction: 'right'}, 150)
          $('#ipl-schedule-back, #ipl-schedule-front').toggle("blind", {}, 'slow');
