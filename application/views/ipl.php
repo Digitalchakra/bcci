@@ -330,8 +330,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 								echo "<div class='ipl-".trim($teams[1])." floatLeft ipl-schedule-50'></div></div>";
 
 								echo "<div class='ipl-schedule-match'>";
-								$vs = explode(",", $single_schedule->description);
-								echo "<p>".$vs[0]."</p></div>";
+								echo "<p>".trim($teams[0])." <br/>Vs <br/>".trim($teams[1])."</p></div>";
 								echo "<div class='ipl-schedule-venue'>";
 								echo "<p>".$single_schedule->sdate." <br/>".$single_schedule->time."<br/>".$single_schedule->mt_vnu."</p></div></div></div>";
 								}
