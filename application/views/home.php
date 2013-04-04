@@ -42,11 +42,12 @@
     
   <div class = "row"> 
     <!--Live SCore-->
-    <div id="liveScore" class="span4 margint10 livescore_bg">
+    <div id="liveScore" class="span4 margint10 livescore_bg livescore_bg_red">
       <div class="row-fluid">
         <div class="span12">
           <div class="padding20">
 			  <div style="text-align:center" class="white team_name matchstate"></div>
+        <h5 class="series_title white team_name align-center"></h5>
           <div style="text-align:center" class="team_images row-fluid margint20">
             <div class="span5"><!--TeamA-->
               <div class="team_icon1">
@@ -72,7 +73,7 @@
                 <span class="rrr marginl20 yellow not_live"></span> <span class="crr marginl20 yellow not_live"></span> </h6>
             </div>
           </div>
-          <div style="text-align:center" class="row-fluid margint10 playerstate"><!--Player Stats-->
+          <div style="text-align:center" class="row-fluid playerstate"><!--Player Stats-->
           	<div class = "span1 batsman"></div>
             <div class="span5">
               <h5 class="striker white team_name"></h5>
@@ -153,7 +154,6 @@
               <div class="span12 margint-10">
                 <h5 class="series_title white team_name align-center"></h5>
               </div>
-              
             </div>
         </div>
           	<!--<div class="span5 livescore-sidebar visible-desktop">
@@ -203,7 +203,7 @@
           <li><a href="#pastMatches" data-toggle="tab">Recent</a></li>
           <? if(count($content['present']))
           { ?>
-          <li class="active"><a href="#presentMatches" data-toggle="tab">Live</a></li>
+          <li class="active"><a href="#presentMatches" data-toggle="tab">Today</a></li>
           <li><a href="#upcomingMatches" data-toggle="tab">Upcoming</a></li>
           <? } 
           else
@@ -330,7 +330,6 @@
           </div>
         </div>
         <span class="pull-left padding10"><sup>via cricbuzz.com</sup></span> <span class="pull-right padding10"><a href="schedule" class="red">View All</a></span> </div>
-        <span class="pull-right padding10"><a href="schedule" class="red">View All</a></span>
       </div>
   	<!--Results On the right-->
     <div class = "span4">
