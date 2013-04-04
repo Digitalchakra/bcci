@@ -51,7 +51,7 @@ try
 					$find=array('srs_id'=>$data['srs_id'],'description'=>$data['description']);
 					if($found = Tbl_matches::find($find))
 					{
-						$found->update_attributes($row);
+						$found->update_attributes($data);
 					}
 					else
 					{
