@@ -64,9 +64,7 @@
                 <td>
                   <?php echo $row->mt_vnu; ?>
                 </td>
-                <td>
-                  <?php echo $row->sdate; if($row->sdate != $row->edate) echo "<b> to </b>".$row->edate; ?>
-                </td>
+                <td><p><?php echo date("M d, Y H:i",strtotime($row->sdate." ".$row->time." GMT")); if($row->sdate != $row->edate) echo "<span style='color:#a82e0f'> to </span>".date("Y-m-d",strtotime($row->edate)); ?></p></td>
               </tr>
               <?php
 				} ?>

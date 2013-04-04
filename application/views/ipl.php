@@ -332,7 +332,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 								echo "<div class='ipl-schedule-match'>";
 								echo "<p>".trim($teams[0])." <br/>Vs <br/>".trim($teams[1])."</p></div>";
 								echo "<div class='ipl-schedule-venue'>";
-								echo "<p>".$single_schedule->sdate." <br/>".$single_schedule->time."<br/>".$single_schedule->mt_vnu."</p></div></div></div>";
+								echo "<p>".date("M d, Y H:i",strtotime($single_schedule->sdate." ".$single_schedule->time." GMT"))." <br/>".$single_schedule->mt_vnu."</p></div></div></div>";
 								}
 						?>
 				<!-- <div class="ipl-cards-content">
