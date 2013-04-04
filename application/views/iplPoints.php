@@ -42,7 +42,7 @@
 				{ ?>
               <tr>
               	<td>
-                <?php echo $row->id; ?>
+                <?php echo $row->position; ?>
                 </td>
               	<td style="text-align:left">
                 <img src="<?php echo base_url('/assets/Images/flags/').'/'.$row->abbreviation.'.'.'png' ?>" width="42" height="42" /><span><?php echo $row->abbreviation; ?></span>
