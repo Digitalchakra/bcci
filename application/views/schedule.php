@@ -23,6 +23,8 @@
                     <button class="btn dropdown-toggle" data-toggle="dropdown"><?php echo $content['upcoming'][0]->srs_name; ?><span class="caret"></span></button>
                     <ul class="dropdown-menu">
 				<?php
+        //make IST time zone
+                date_default_timezone_set('Asia/Kolkata');
 				foreach($srs_list as $row)
 				{ 
 					if($content['upcoming'][0]->srs_name==$row->srs_name)

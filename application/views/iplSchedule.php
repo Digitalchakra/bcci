@@ -31,6 +31,8 @@
             </thead>
             <tbody>
 				<?php
+        //make IST time zone
+                date_default_timezone_set('Asia/Kolkata');
 				foreach($content['upcoming'] as $row)
 				{ ?>
               <tr>

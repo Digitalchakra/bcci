@@ -213,6 +213,8 @@
 					</thead>
 					<tbody>
 				<?php
+				//make IST time zone
+                date_default_timezone_set('Asia/Kolkata');
 				$pointCount=1;
 				foreach($points as $single_point)
 				{ 

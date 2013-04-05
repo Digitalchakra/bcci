@@ -232,7 +232,7 @@
               <thead>
                 <tr>
                   <th>Match</th>
-                  <th>Date & Time</th>
+                  <th>Date </th>
                   <th>Venue</th>
                 </tr>
               </thead>
@@ -270,7 +270,7 @@
               <thead>
                 <tr>
                   <th>Match</th>
-                  <th>Date & Time</th>
+                  <th>Date </th>
                   <th>Venue</th>
                 </tr>
               </thead>
@@ -306,7 +306,7 @@
               <thead>
                 <tr>
                   <th>Match</th>
-                  <th>Date & Time</th>
+                  <th>Date </th>
                   <th>Venue</th>
                 </tr>
               </thead>
