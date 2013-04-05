@@ -48,7 +48,7 @@
         <li  id="ipl_menu"><a href="../" class="drop">IPL</a></li>
         <li><a href="../schedule" class="drop">Schedule</a></li> 
         <li><a href="../result" class="drop">Results</a></li> 
-        <li><a href="../ranking/team" class="drop">Ranking</a></li> 
+        <li><a href="../rank/team" class="drop">Ranking</a></li> 
         <li><a href="index.php" class="drop">Forum</a></li>   
         <li><a href="../articles" class="drop">Articles</a></li> 
         <li><a href="../news" class="drop">News</a></li> 
