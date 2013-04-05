@@ -14,7 +14,10 @@ $(document).ready(function()
 		photos();
 		videos();
 		article();
-
+		$("#lsCloseButton").click(function() {
+			$("#lsToggleBox").animate({"left":"-350px"},{duration:300});
+			toggleState=0;
+		});
 		$(".fancybox").fancybox(
 		{
 			preload:true
@@ -213,10 +216,10 @@ function livescore()
 					option+='			<h5 class="red  align-center">'+data[listcount].matchdesc+'</h5>';
 					}
 					else{
-						option+='		<h5 class="red  align-center">'+data[listcount]['type']+'</h5>';
+						option+='		<p class="red  align-center">'+data[listcount]['type']+'</p>';
 					}
-                   	option+='			<h6 class="red  align-left">'+data[listcount]['team1'].shortName+' <span class="dark-grey">vs</span>'+data[listcount]['team2'].shortName+'</h6>';
-                	option+='			<h6 class="red  align-left">'+data[listcount]['venue-city']+' <span class="dark-grey"> | </span>'+data[listcount]['match-day']+'</h6>';
+                  option+='			<p class="red  align-left">'+data[listcount]['team1'].shortName+' <span class="dark-grey">vs </span>'+data[listcount]['team2'].shortName+'</p>';
+                	option+='			<p class="red  align-left">'+data[listcount]['venue-city']+' <span class="dark-grey"> | </span>'+data[listcount]['match-day']+'</p>';
                 	option+='		 </span>';
                 	option+='	 </span>';
                 	option+='</li>';
@@ -251,6 +254,18 @@ function livescore()
 				$('.live_team').removeClass('active');
 				livescoredisplay($.myplaceholder.mylivescore[this.value]);
 				$(this).addClass('active');
+				var offset = $(this).offset();
+				var toggleboxOffset = $("#lsToggleBox").offset();
+				if (toggleboxOffset.left === -350 || toggleboxOffset.left != (offset.left-30))
+				{
+				$("#lsToggleBox").animate({"left":(offset.left-50)},{duration:300});
+				}
+				if (toggleboxOffset.left === (offset.left-50))
+				{
+				$("#lsToggleBox").animate({"left":"-350px"},{duration:300});
+				}
+				//$(".slides li").removeClass("active");
+				//$(this).addClass("active");
 				$.myplaceholder.checkreload=this.value;
 			});
         });

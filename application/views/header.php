@@ -25,7 +25,6 @@
 <link rel="stylesheet" href="<?php echo base_url('assets/css/bcci-tablet.css'); ?>" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php echo base_url('assets/css/kvm.css'); ?>" type="text/css" media="screen" />
 <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-1.8.3.min.js'); ?>"></script>
-<script type="text/javascript" src="<?php echo base_url('assets/js/jquery.flexslider.js'); ?>"></script>
 <script type="text/javascript">
   var baseurl = "<?php print base_url(); ?>";
 </script>
@@ -311,14 +310,12 @@
 
 
 <!--Static Live Score-->
-<div class="static-bottom-container visible-desktop" id="closeBg" style="width:96%">
+<div class="static-bottom-container static-bottom-bg visible-desktop" id="closeBg" style="width:96%">
 	<div class="row-fluid">
-  	<div class="span11">
+  	<div class="span12">
     	<div class="container-fluid"  id="lsClose">
       	<div class="row-fluid">
-        	<div class="span11 offset1">
-          	<div class="slider">
-      	<div class="flexslider carousel">
+        	<div class="span12">
         <!--Toggle Box-->
         	<div class="static-toggle livescore_bg livescore_bg_white" id="lsToggleBox">
           <div class="ls_close pull-right"  id="lsCloseButton"></div>
@@ -340,7 +337,7 @@
                       	<div class="team1_image"></div>
                       </div>
                       <h5 class="team_name team1" style="color:#4d4d4d"></h5>
-                      <h4 class="red nolive team1_score" style = "font-weight:bold"></h4>
+                      <h4 class="red not_live team1_score" style = "font-weight:bold"></h4>
                       <p class="not_live small-text team1_over"></p>
                     </div>
                     <div class="span1">
@@ -439,33 +436,11 @@
             <!--End of Toggle Box Live Score-->
           </div>
         <!--EO Toggle Box-->
-        	<ul class="slides" id="livescore_dd">
-            <li>
-              <span class="row-fluid">
-                <span class="span12">
-                <h5 class="red  align-center">T20 Semi Finals</h5>
-                <h6 class="red  align-left">India <span class="dark-grey">124/5</span> | <span class="dark-grey">12.4 Overs</span></h6>
-                <h6 class="red  align-left">MS Dhoni <span class="dark-grey">80(64)</span> <span class="red">R Raina</span><span class="dark-grey"> 80(64)</span></h6>
-                <h6 class="red  align-left">India <span class="dark-grey">vs</span> Australia (220/6) </h6>
-                </span>
-              </span>
-  	    		</li>
-            <li>
-              <span class="row-fluid">
-                <span class="span12">
-                <h5 class="red  align-center">T20 Semi Finals</h5>
-                <h6 class="red  align-left">India <span class="dark-grey">124/5</span> | <span class="dark-grey">12.4 Overs</span></h6>
-                <h6 class="red  align-left">MS Dhoni <span class="dark-grey">80(64)</span> <span class="red">R Raina</span><span class="dark-grey"> 80(64)</span></h6>
-                <h6 class="red  align-left">India <span class="dark-grey">vs</span> Australia (220/6) </h6>
-                </span>
-              </span>
-  	    		</li>
-            <li>
-              
-  	    		</li>
+        	<div class="pull-right">
+        	<ul class="grid" id="livescore_dd">
+           
           </ul>
-        </div>
-      </div>
+          </div>
           </div>
         </div>
       </div>
@@ -476,26 +451,9 @@
 
 <div class="ls-popout-button pull-right visible-desktop" style="right:0%"><img src="<?php echo base_url('assets/Images/LS-Button.png');?>" class="res-image" id = "ls_bt_close"> </div>
 <!--<div id="chat_minimize" class="chat-button pull-right visible-desktop"><img src="<?php echo base_url('assets/Images/chat_button.png');?>" class="res-image" id="chat-button"> </div>-->
-<script type="text/javascript">
-		
-    $(window).load(function(){
-			$("#lsClose").hide(200);
-      $('.flexslider').flexslider({
-        animation: "slide",
-        animationLoop: false,
-        itemWidth: 220,
-        itemMargin: 10,
-				directionNav: true,
-				controlNav: false,
-				slideshow: false,    
-        start: function(slider){
-          $('body').removeClass('loading');
-        }
-      });
-    });
-  </script>
-  
-	<script type="text/javascript">
+ 
+  <!--Old Toggle Script-->
+	<!--<script type="text/javascript">
 		
 		$("#ls_bt_close").click(function() {
     $("#lsClose").toggle(200);
@@ -535,4 +493,4 @@
 			$("#forgot_pw_txt").text("");
 		});
 		
-	</script>
+	</script>-->

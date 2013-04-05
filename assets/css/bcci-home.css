@@ -248,7 +248,7 @@ transition:all 0.4s ease-in-out;
 .white-block h4{
 	font-family: Tahoma, Geneva, sans-serif;
 	color: #a82e0f;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: normal;
 	text-transform: none;
 }
@@ -284,9 +284,9 @@ transition:all 0.4s ease-in-out;
 	text-align: right;
 	border-right: 1px solid #666;
 	padding: 0 10px 0 0;
-	width: 18%;
+	width: 20%;
 	overflow: hidden;
-	font-size: 16px;
+	font-size: 14px;
 	color:#343434;
 	float:left;
 }
@@ -307,7 +307,7 @@ transition:all 0.4s ease-in-out;
 	padding:0 0 0 10px;
 	float:left;
 	line-height:16px;
-	width:74%;
+	width:72%;
 }
 .white-block .content .match:after {
 	clear:both;
@@ -496,7 +496,7 @@ color:#FFF;
 box-shadow:inset 0 0 0 4px rgba(0,0,0,0.45),
 					 inset 1px 1px 16px 0 rgba(0,0,0,0.8);
 					 text-shadow:0px 1px 3px rgba(0,0,0,0.4);
-					 height:440px;
+					 height:455px;
 }
 
 .livescore_bg_white{
@@ -875,13 +875,7 @@ font-weight: bold;
 .block-container:after {
     clear: both;
 }
- 
-.block-container li {
-    width: 16%;
-    display: inline-block;
-    margin:10px 5px;
-		border-right:1px solid #999;
-}
+
 
 .block-container .block-cell01 {
     width: 95%;
@@ -896,12 +890,6 @@ font-weight: bold;
 		border-right:1px solid #999;
 }
 
-.block-container li:first-child, .block-container li:last-child {
-		border-right:none;
-}
-.block-container li:nth-child(6) {
-		border-right:none;
-}
 .block-item {
     width: 100%;
     height: 100%;
@@ -1027,4 +1015,56 @@ font-weight: bold;
 .ls-nav-right{
 	margin-right:-10px;
 	background-position:40px 0;
+}
+.slides li h5{
+	margin:0;
+}
+.h-seperator {
+	border-top:1px solid #FFF;
+	padding:10px 0;
+}
+/*-------------Livescore Grids---------------------------*/
+
+.grid {
+	width:100%;
+	padding:0;
+	display:block;
+	height:auto;
+}
+.grid li {
+	width:164px;
+	display:inline-block;
+	border-right:1px solid #999;
+	padding:10px;
+	cursor:pointer;
+}
+.grid li h5{
+	margin:0;
+	text-align:left;
+	padding-left:0;
+	width:100%;
+	border-bottom:1px solid #AAA;
+}
+.grid li p{
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+	margin:5px;
+	padding:0;
+	line-height:12px;
+}
+ 
+.grid li:first-child {
+	border-left:1px solid #AAA;
+}
+.grid li:hover, .grid .active {
+background: #dddddd;
+background: -moz-linear-gradient(top,  #dddddd 0%, #f7f7f7 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dddddd), color-stop(100%,#f7f7f7));
+background: -webkit-linear-gradient(top,  #dddddd 0%,#f7f7f7 100%);
+background: -o-linear-gradient(top,  #dddddd 0%,#f7f7f7 100%);
+background: -ms-linear-gradient(top,  #dddddd 0%,#f7f7f7 100%);
+background: linear-gradient(to bottom,  #dddddd 0%,#f7f7f7 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#f7f7f7',GradientType=0 );
+box-shadow:inset 0px 0px 3px rgba(0,0,0,0.5);
 }
