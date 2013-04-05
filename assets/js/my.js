@@ -218,12 +218,30 @@ function livescore()
                 	option+='		<span class="span12">';
                 	if(data[listcount].matchdesc !='')
 					{
-					option+='			<h5 class="red  align-center">'+data[listcount].matchdesc+'</h5>';
+						if(data[listcount].state=='inprogress')
+						{
+							option+='			<h5 class="red  align-center">'+data[listcount].battingTeamName+' * <span class="dark-grey">vs </span>'+data[listcount].bowlingTeamName+' - '+data[listcount]['currentBatTeamScore'].runsAndWicket+' ('+data[listcount]['currentBatTeamScore'].overs+')</h5>';
+							 option+='			<p class="dark-grey  align-left">'+data[listcount].matchdesc+'</p>';
+							
+						}
+						else
+						{
+							option+='			<h5 class="red  align-center">'+data[listcount]['team1'].shortName+' <span class="dark-grey">vs </span>'+data[listcount]['team2'].shortName+'</h5>';
+							 option+='			<p class="dark-grey  align-left">'+data[listcount].matchdesc+'</p>';
+						}
 					}
 					else{
-						option+='		<p class="red  align-center">'+data[listcount]['type']+'</p>';
+						if(data[listcount].state=='inprogress')
+						{
+							option+='			<h5 class="red  align-center">'+data[listcount].battingTeamName+' * <span class="dark-grey">vs </span>'+data[listcount].bowlingTeamName+' - '+data[listcount]['currentBatTeamScore'].runsAndWicket+' ('+data[listcount]['currentBatTeamScore'].overs+')</h5>';
+							 option+='			<p class="dark-grey  align-left">'+data[listcount]['type']+'</p>';
+						}
+						else
+						{
+							option+='			<h5 class="red  align-center">'+data[listcount]['team1'].shortName+' <span class="dark-grey">vs </span>'+data[listcount]['team2'].shortName+'</h5>';
+							 option+='			<p class="dark-grey  align-left">'+data[listcount]['type']+'</p>';
+						}
 					}
-                  option+='			<p class="red  align-left">'+data[listcount]['team1'].shortName+' <span class="dark-grey">vs </span>'+data[listcount]['team2'].shortName+'</p>';
                 	option+='			<p class="red  align-left">'+data[listcount]['venue-city']+' <span class="dark-grey"> | </span>'+data[listcount]['match-day']+'</p>';
                 	option+='		 </span>';
                 	option+='	 </span>';

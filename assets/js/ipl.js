@@ -70,7 +70,7 @@ function ipllivescore()
 						if(data[listcount].bowlingTeamName === index)
 						data[listcount].bowlingTeamName=value;
 					});
-					option+='<li value="'+listcount+'"';
+					/*option+='<li value="'+listcount+'"';
 					if(listcount ===$.iplmyplaceholder.checkreload)
 					{
 						option+= 'class="live_team dark-block active">';
@@ -94,7 +94,7 @@ function ipllivescore()
 						option+='</p><span class="yellow small-text">'+data[listcount]['type']+', </span>';
 					}
 					option+='<span class="white small-text">'+data[listcount]['venue-city']+' | '+'</span><span class="yellow small-text">'+data[listcount]['match-day']+'</span></div></li>';
-					$.iplmyplaceholder.mylivescore.push(data[listcount]);
+					*/ $.iplmyplaceholder.mylivescore.push(data[listcount]);
 				}
 				listcount++;
 
