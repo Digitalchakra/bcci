@@ -63,7 +63,12 @@ class Registration extends CI_Controller {
 					$message= 'You\'re almost there! Just confirm your Email.<br><br>
 					You have successfully created a bcci.com account and all you need to do is activate it. It will give you full access to bcci.com and all future notifications will be sent to this email address.
 					<br><br>
-					Verify your Account in <a href="'.base_url('registration/activation/'.$this->db->insert_id().'/'.$post_data['active']).'">Bindas Cricket Cafe!</a>
+					Please click on the link below to verify your email.  <a href="'.base_url('registration/activation/'.$this->db->insert_id().'/'.$post_data['active']).'">Confirm my account now</a>
+					<br><br>
+					Or click on the link below:
+					<br><br>
+					'.base_url('registration/activation/'.$this->db->insert_id().'/'.$post_data['active']).'
+					<br><br>
 					<br><br>
 					<b>It\'s your Bindas Cricket Cafe!</b>	'; 
 					$this->email->message($message);

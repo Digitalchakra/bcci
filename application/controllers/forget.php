@@ -31,12 +31,13 @@ class Forget extends CI_Controller {
 					$config['wordwrap'] = TRUE;
 					$config['mailtype']='html';
 					$this->email->initialize($config);
-					$this->email->from('resume@digitalchakra.in', 'Digital Chakra');
+					$this->email->from('bcci@digitalchakra.in', 'Bindaas Cricket Cafe!');
 					$this->email->to($email);
 					#$this->email->cc('another@another-example.com');
 					#$this->email->bcc('them@their-example.com');
-					$this->email->subject('Verify your account @ Digitalchakra');
-					$message= 'Verify your the registered account in <a href="'.base_url('forget/reset/'.$result[0]['id'].'/'.$update_data['active']).'"> Digitalchakra Resume App </a>'; 
+					$this->email->subject('Forgot your password , '.$post_data['firstname'].' '.$post_data['lastname'].'?');
+					$message= 'Bcci.com received a request to reset the password to your bcci.com account. To reset your password, click the link below (or copy and paste the URL into your browser):'.base_url('forget/reset/'.$result[0]['id'].'/'.$update_data['active']).
+					'<br><br>It\'s your Bindas Cricket Cafe!'; 
 					$this->email->message($message);
 					$this->email->send();
 					$data['success']='yes';
@@ -55,7 +56,7 @@ class Forget extends CI_Controller {
 			}
 			else
 			{
-				$data['errors']="invalid email";
+				$data['errors']="Invalid email";
 				$data['success']='no';
 				$result['resultset']=$data;
       			$this->load->view('json',$result);
