@@ -71,11 +71,11 @@
     </div>
     <div class = "span3 hidden-phone">
       <div class = "row">
-       <!--  <div class = "span4 margint20"> <img class = "pull-right" src="<?php echo base_url('assets/Images/soci-icons_03.png'); ?>"> </div> -->
+        <!--<div class = "span4 margint20"> <img class = "pull-right" src="<?php echo base_url('assets/Images/soci-icons_03.png'); ?>"> </div> 
        <div id="ipltimer" class="pull-right ipltimer">
               <a href="<?php echo site_url('ipl');?>"><div class="ipl_logo"></div></a>
               <span id="defaultCountdown" class="countdown"></span>
-      </div>
+      </div>-->
       </div>
 			<div class = "row">
        <!-- <div class = "span4  margint20">
@@ -94,7 +94,7 @@
 <!--NAV MENU-->
 <div class = "container">
   <div class = "row visible-desktop">
-    <div class = "span12 margint20">
+    <div class = "span12" style="margin-top:18px">
       <!--MEGA MENU
       -->
 
@@ -113,8 +113,8 @@
                 <li><a href="#">India vs Australia</a></li>
                 <li><a href="#">Sri Lanka vs Australia</a></li>-->
               </ul>
-              <div class = "hline"></div>
-              <!-- <ul class="greybox">
+              <!-- <div class = "hline"></div>
+              <ul class="greybox">
                 <li><a href="#">Fixtures</a></li>
                 <li><a href="#">Series Archive</a></li>
               </ul> -->
@@ -122,6 +122,7 @@
           </div>
         </li>
         <li <?php if($view_page=='result') echo 'class="active"';?>><a href="<?php echo base_url('result'); ?>" class="drop">Results</a></li>
+        <li <?php if($view_page=='forum') echo 'class="active"';?>><a href="<?php echo base_url('forum'); ?>" class="drop">Forum</a></li>
         <li <?php if($view_page=='team_rank') echo 'class="active"';?>><a class="drop">Rankings</a><!-- Begin 4 columns Item -->
          <div class="dropdown_2columns">
             <div class = "col_2">
@@ -144,12 +145,10 @@
             </div>-->
           </div>
         </li>
-        <li <?php if($view_page=='news') echo 'class="active"';?>><a href="<?php echo base_url('news'); ?>" class="drop">News</a></li>
         <li <?php if($view_page=='articles') echo 'class="active"';?>><a href="<?php echo base_url('article'); ?>" class="drop">Articles</a></li>
+        <li <?php if($view_page=='news') echo 'class="active"';?>><a href="<?php echo base_url('news'); ?>" class="drop">News</a></li>
         <li <?php if($view_page=='photos') echo 'class="active"';?>><a href="<?php echo base_url('photos');?>" class="drop">Photos</a></li>
         <li <?php if($view_page=='videos') echo 'class="active"';?>><a href="<?php echo base_url('videos');?>" class="drop">Videos</a></li>
-				<li <?php if($view_page=='forum') echo 'class="active"';?>><a href="<?php echo base_url('forum'); ?>" class="drop pulsate">Forum</a></li>
-        
        
          <?php if(!$session_data = $this->session->userdata('logged_in'))
         { ?>
@@ -197,8 +196,8 @@
               <div class = "span2">
                 <div class="padding20" style="text-align:left">
 -->                <ul class="dropdown-menu pull-right profile-dropdown">
-                    <li><a tabindex="-1" href="#">Profile</a></li>
-                    <li><a tabindex="-1" href="#">Settings</a></li>
+                   <!-- <li><a tabindex="-1" href="#">Profile</a></li>
+                    <li><a tabindex="-1" href="#">Settings</a></li>-->
                     <li><a tabindex="-1" href="<?php echo base_url('login/logout'); ?>">Logout</a></li>
                   </ul>
 <!--                </div>
@@ -324,11 +323,6 @@
           	<div class="row-fluid">
             	<div class="span12">
               	<div class="padding20">
-                <div id="no_matches" class="row-fluid">
-                  <div class="span12 margint-10">
-                    <h5 class="series_title team_name align-center" style="color:#900"></h5>
-                  </div>
-                </div>
                 	<div class="span12 red team_name align-center matchstate" style="color:#900;">
                   </div>
                 	<div class="row-fluid  align-center">
@@ -430,6 +424,11 @@
               </div>
             </div>
             
+                </div>
+                <div id="no_matches" class="row-fluid">
+                  <div class="span12 margint-10">
+                    <h5 class="series_title team_name align-center" style="color:#900"></h5>
+                  </div>
                 </div>
               </div>
             </div>

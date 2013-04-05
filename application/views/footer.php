@@ -13,22 +13,21 @@
         
         <!--First Row-->
         <div class = "row">
-          <div class = "span10 pull-right">
-            <div class = "padding20">
+          <div class = "span12">
+            <div class = "bottom-logo pull-right margint20"> <div class="logo pull-right"></div> </div>
+            <div class = "clearfix"></div>
+          </div>
+        </div>
+        <!--Second Row-->
+        <div class = "row">
+          <div class = "span10 pull-right" style="padding-bottom:72px">
+            <div class = "padding20 bottom-rline">
               <p>
               <!-- <h5>Contact</h5> -->
               <p></p>
               <p><br>
                 bcci.com is in no way or form related to "The BCCI" or "BCCI" or "The Board for control of Cricket in India" and is a standalone portal for cricketing enthusiasts from the world over.</p>
             </div>
-          </div>
-        </div>
-        
-        <!--Second Row-->
-        <div class = "row">
-          <div class = "span12">
-            <div class = "bottom-logo pull-right margint20"> <div class="logo"></div> </div>
-            <div class = "clearfix"></div>
           </div>
         </div>
       </div>
@@ -65,12 +64,12 @@
               <li><a href="<?php echo base_url('IPL');?>">IPL</a></li>
               <li><a href="<?php echo base_url('schedule');?>">Schedule</a></li>
               <li><a href="<?php echo base_url('result');?>">Results</a></li>
+              <li><a href="<?php echo base_url('forum');?>">Forum</a></li>
               <li><a href="<?php echo base_url('rank/team');?>">Rankings</a></li>
-              <li><a href="<?php echo base_url('news');?>">News</a></li>
               <li><a href="<?php echo base_url('articles');?>">Article</a></li>
+              <li><a href="<?php echo base_url('news');?>">News</a></li>
               <li><a href="<?php echo base_url('photos');?>">Photos</a></li>
               <li><a href="<?php echo base_url('videos');?>">Videos</a></li>
-              <li><a href="<?php echo base_url('forum');?>">Forum</a></li>
             </ul>
           </div>
           <!-- <div class = "span6 padding20">

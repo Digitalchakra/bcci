@@ -101,7 +101,7 @@ $(document).ready(function()
 				{
 					if(data.resultset.success=='yes')
 					{
-						$('#error_msg1').html("Registration successfull, Please check your email.");
+						$('#error_msg1').html("You’re almost done! Please check your inbox to activate your account. <br> Note: This is the only message that should appear within the registration pull down menu. There should be no fields below it. Center the message vertically and horizontally to the sides of the box. The email verification process should not be valid for more than a week.");
 					}
 					else
 					{

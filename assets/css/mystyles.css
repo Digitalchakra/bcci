@@ -32,7 +32,7 @@ td a{
 .logo {
 	background-image: url(../Images/logos.png);
 	background-position: 0 -78px;
-	width: 153px;
+	width: 215px;
 	height: 88px;
 }
 .searchbox {
@@ -291,20 +291,18 @@ h4 {
 	font-size:13px;
 }
 .bottom-logo {
+	padding:20px;
+	width: 220px;
+}
+.bottom-rline {
 	background-image: url(../Images/bottomlogo-shadow_03.png);
 	background-repeat: no-repeat;
 	background-position: right top;
-	padding-top: 20px;
-	padding-right: 40px;
-	padding-bottom: 92px;
-	padding-left: 40px;
-	width: 220px;
-}
 }
 .bottom-logo .logo{
 	background-repeat: no-repeat;
 	background-image: url(../Images/logos.png);	
-	background-position: 0 -78px; width: 153px; height: 88px;
+	background-position: 0 -78px; width: 215px; height: 88px;
 }
 .dark-bg {
 	background-color: #212121;
@@ -555,7 +553,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#686868', end
 }
 .sidebar-nav ul .nav-menu a:hover,.sidebar-nav ul .nav-menu .active{
 		color:#a82e0f;
-		background: #e6e4e4; /* Old browsers */
+	background: #e6e4e4; /* Old browsers */
 	background: -moz-linear-gradient(top,  #e6e4e4 0%, #f6f5f5 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e6e4e4), color-stop(100%,#f6f5f5)); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(top,  #e6e4e4 0%,#f6f5f5 100%); /* Chrome10+,Safari5.1+ */

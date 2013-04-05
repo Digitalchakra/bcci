@@ -520,7 +520,7 @@ border-bottom:1px solid #b12310;
 	color:#FFF;
 	line-height:14px;
 }
-.livescore_bg_red .team_icon1,.livescore_bg_red .team_icon2 {
+.livescore_bg_red .team_icon1,.livescore_bg_red .team_icon2,.livescore_bg_red #def_team_icon1,.livescore_bg_red #def_team_icon2 {
 	border-radius:50%;
 	background: #a7200f;
 background: -moz-linear-gradient(top,  #a7200f 0%, #8a180d 100%);
@@ -996,6 +996,7 @@ font-weight: bold;
 	background:#ececec ;
 	padding:2px;
 	border:solid 1px #AAA;
+	border-bottom:none;
 }
 .ls-nav-left,.ls-nav-right {
 	margin-top:-50px;
@@ -1020,7 +1021,7 @@ font-weight: bold;
 	margin:0;
 }
 .h-seperator {
-	border-top:1px solid #FFF;
+	border-top:1px solid rgba(255,255,255,0.5);
 	padding:10px 0;
 }
 /*-------------Livescore Grids---------------------------*/
@@ -1067,4 +1068,7 @@ background: -ms-linear-gradient(top,  #dddddd 0%,#f7f7f7 100%);
 background: linear-gradient(to bottom,  #dddddd 0%,#f7f7f7 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#f7f7f7',GradientType=0 );
 box-shadow:inset 0px 0px 3px rgba(0,0,0,0.5);
+}
+#def_team1_image,#def_team2_image {
+	margin:4px;
 }

@@ -20,9 +20,9 @@
       </div>
       <div class="row">
       	<div class="span12 margint20">
-         	<p style="font-weight:bold;font-style:italic;font-family:Georgia, 'Times New Roman', Times, serif">Quizzes are amongst the hottest contests of today, and this one is on one of India’s most popular sporting events, the IPL-6.
+         	<p style="font-weight:bold;font-style:italic;">Quizzes are amongst the hottest contests of today, and this one is on one of India’s most popular sporting events, the IPL-6.
           </p>
-          <p style="font-weight:bold;font-style:italic;font-family:Georgia, 'Times New Roman', Times, serif">There are six questions, representing one full over. Try and hit each of these for a six to win big! </p>
+          <p style="font-weight:bold;font-style:italic;">There are six questions, representing one full over. Try and hit each of these for a six to win big! </p>
           <ul class="margint20">
           	<li>One IPL Quiz will be published on BCCI.com every Wednesday till the end of IPL-6. That gives you SEVEN great ways to win!</li>
             <li>All entries will need to be sent to contact@bcci.com with the subject line, "IPL Quiz Entry". All entries should be received latest by 6 PM IST the Wednesday after the Quiz was published. For example, the deadline for IPL6 Quiz 01 will be 6 PM (IST) on 10th April 2013.</li>
