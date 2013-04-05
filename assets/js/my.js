@@ -244,7 +244,7 @@ function livescore()
 			 * when ajax is loading make the current selected tab to update
 			 * instead of refresh the list
 			 */
-			livescoredisplay($.myplaceholder.mylivescore[0]);
+			//livescoredisplay($.myplaceholder.mylivescore[getCookieValue("def_live")]);
 			defaultlivescoredisplay($.myplaceholder.mylivescore[getCookieValue("def_live")]);
 			/*if($.myplaceholder.checkreload==0)
 			{
@@ -259,8 +259,11 @@ function livescore()
 			{
 				$('#lsMakeDefault').attr('listid',this.value);
 				$('.live_team').removeClass('active');
-				livescoredisplay($.myplaceholder.mylivescore[this.value]);
-				var offset = $(this).offset();
+				$(this).addClass("active");
+				//livescoredisplay($.myplaceholder.mylivescore[this.value]);
+				defaultlivescoredisplay($.myplaceholder.mylivescore[this.value]);
+				document.cookie="def_live="+this.value;
+				/*var offset = $(this).offset();
 				var toggleboxOffset = $("#lsToggleBox").offset();
 				if (toggleboxOffset.left === -350 || toggleboxOffset.left != (offset.left-30))
 				{
@@ -271,7 +274,7 @@ function livescore()
 				{
 				$('.live_team').removeClass('active');
 				$("#lsToggleBox").animate({"left":"-350px"},{duration:300});
-				}
+				}*/
 
 			});
         });
