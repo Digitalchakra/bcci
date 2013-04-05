@@ -24,7 +24,7 @@ $(document).ready(function()
 			}, 60000);*/
     setInterval(function() {
           livescore();
-			}, 30000);
+			}, 20000);
 		$("#chat_box").hide();
     $("#chat_minimize").click(function(){
     $("#chat_box").toggle();
@@ -195,30 +195,36 @@ function livescore()
 						if(data[listcount].bowlingTeamName === index)
 						data[listcount].bowlingTeamName=value;
 					});
-					option+='<li value="'+listcount+'"';
+
+					option+='<li value="'+listcount+'" class="live_team">';
 					if(listcount ===$.myplaceholder.checkreload)
 					{
-						option+= 'class="active" id = "ls_match_list">';
+						//option+= 'class="active" id = "ls_match_list">';
 						//option+= '<div class = "arrow"></div>';
 					}else
 					{
 						//option+= 'class="live_team dark-block">';
-						option+= '<span class="row-fluid"><span class="span12">';
+						//option+= '<span class="row-fluid"><span class="span12">';
 					}
-					
-					option+= '<h5 class="red  align-center">'+data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName;
-					if(data[listcount].state=='inprogress')
+					option+='	<span class="row-fluid">';
+                	option+='		<span class="span12">';
+                	if(data[listcount].matchdesc !='')
 					{
-						option+='&nbsp;&nbsp;<sup><img src="'+baseurl+'assets/Images/live.gif"></sup>';
-					}
-					if(data[listcount].matchdesc !='')
-					{
-					option+='</h5><h6 class="red  align-left">'+data[listcount].matchdesc+', </span>';
+					option+='			<h5 class="red  align-center">'+data[listcount].matchdesc+'</h5>';
 					}
 					else{
-						option+='<span class="dark-grey">'+data[listcount]['type']+' | ';
+						option+='		<h5 class="red  align-center">'+data[listcount]['type']+'</h5>';
 					}
-					option+='<span class="dark-grey">'+data[listcount]['venue-city']+' | '+'</span><span class="dark-grey">'+data[listcount]['match-day']+'</span></h6></li><li></li>';
+                   	option+='			<h6 class="red  align-left">'+data[listcount]['team1'].shortName+' <span class="dark-grey">vs</span>'+data[listcount]['team2'].shortName+'</h6>';
+                	option+='			<h6 class="red  align-left">'+data[listcount]['venue-city']+' <span class="dark-grey"> | </span>'+data[listcount]['match-day']+'</h6>';
+                	option+='		 </span>';
+                	option+='	 </span>';
+                	option+='</li>';
+
+					if(data[listcount].state=='inprogress')
+					{
+						//option+='&nbsp;&nbsp;<sup><img src="'+baseurl+'assets/Images/live.gif"></sup>';
+					}
 					$.myplaceholder.mylivescore.push(data[listcount]);
 				}
 				listcount++;

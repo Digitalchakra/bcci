@@ -439,7 +439,7 @@
             <!--End of Toggle Box Live Score-->
           </div>
         <!--EO Toggle Box-->
-        	<ul class="slides">
+        	<ul class="slides" id="livescore_dd">
             <li>
               <span class="row-fluid">
                 <span class="span12">
