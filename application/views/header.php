@@ -164,7 +164,7 @@
                       <div class="divider"></div>
                       <span id="error_msg1" class="errorMessage"></span>
 
-                      <form class="form-horizontal">
+                      <form class="form-horizontal" id="register_form">
                          <span>First Name: </span><input type="text" class="input-large" name="firstname" id="firstname" style="text-align:left">
                          <div class="margint10"></div>
                          <span>Last Name: </span><input type="text" class="input-large" name="lastname" id="lastname" style="text-align:left">
