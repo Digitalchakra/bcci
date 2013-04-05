@@ -2,8 +2,9 @@ $(document).ready(function()
 {
 		$.myplaceholder={};
 		$.myplaceholder.mylivescore=[];
+		if(getCookieValue("def_live")==="")
+		document.cookie="def_live="+"0";
 		$.myplaceholder.checkreload=0;
-		$.myplaceholder.checkloaded=0;
 		livescore();
 		news();
 		result();
@@ -17,7 +18,19 @@ $(document).ready(function()
 		$("#lsCloseButton").click(function() {
 			$("#lsToggleBox").animate({"left":"-350px"},{duration:300});
 			toggleState=0;
+			$(".live_team").removeClass("active");
 		});
+			$('#lsMakeDefault').click(function(){
+				//alert($(this).attr('listid'));
+				document.cookie="def_live="+$(this).attr('listid');
+				defaultlivescoredisplay($.myplaceholder.mylivescore[$(this).attr('listid')]);
+				//document.cookie="def_live="+"0";
+				});
+				$("#ls_bt_close").click(function() {
+				$("#lsClose").toggle(200);
+					$("#closeBg").toggleClass("static-bottom-bg");
+					});		
+				$.myplaceholder.checkreload=this.value;
 		$(".fancybox").fancybox(
 		{
 			preload:true
@@ -174,7 +187,8 @@ function livescore()
 		var data=result.query.results.json.json
 			listcount=0;
 			option="";
-			$.myplaceholder.mylivescore=[];
+			$('#ls_bt_close , #closeBg').show();
+			//$.myplaceholder.mylivescore=[];
 			//$('.live_team').removeClass('active');
 			$('.slides li').removeClass('active');
 			//alert(data[listcount].matchDataType);
@@ -200,15 +214,6 @@ function livescore()
 					});
 
 					option+='<li value="'+listcount+'" class="live_team">';
-					if(listcount ===$.myplaceholder.checkreload)
-					{
-						//option+= 'class="active" id = "ls_match_list">';
-						//option+= '<div class = "arrow"></div>';
-					}else
-					{
-						//option+= 'class="live_team dark-block">';
-						//option+= '<span class="row-fluid"><span class="span12">';
-					}
 					option+='	<span class="row-fluid">';
                 	option+='		<span class="span12">';
                 	if(data[listcount].matchdesc !='')
@@ -239,7 +244,8 @@ function livescore()
 			 * when ajax is loading make the current selected tab to update
 			 * instead of refresh the list
 			 */
-			livescoredisplay($.myplaceholder.mylivescore[$.myplaceholder.checkreload]);
+			livescoredisplay($.myplaceholder.mylivescore[0]);
+			defaultlivescoredisplay($.myplaceholder.mylivescore[getCookieValue("def_live")]);
 			/*if($.myplaceholder.checkreload==0)
 			{
 				$.myplaceholder.checkreload=1;
@@ -251,22 +257,22 @@ function livescore()
 			}*/
 			$('.live_team').click(function()
 			{
+				$('#lsMakeDefault').attr('listid',this.value);
 				$('.live_team').removeClass('active');
 				livescoredisplay($.myplaceholder.mylivescore[this.value]);
-				$(this).addClass('active');
 				var offset = $(this).offset();
 				var toggleboxOffset = $("#lsToggleBox").offset();
 				if (toggleboxOffset.left === -350 || toggleboxOffset.left != (offset.left-30))
 				{
 				$("#lsToggleBox").animate({"left":(offset.left-50)},{duration:300});
+				$(this).addClass("active");
 				}
 				if (toggleboxOffset.left === (offset.left-50))
 				{
+				$('.live_team').removeClass('active');
 				$("#lsToggleBox").animate({"left":"-350px"},{duration:300});
 				}
-				//$(".slides li").removeClass("active");
-				//$(this).addClass("active");
-				$.myplaceholder.checkreload=this.value;
+
 			});
         });
 }
@@ -673,4 +679,146 @@ function livescoredisplay(data)
 				}
 
 
+}
+function defaultlivescoredisplay(data)
+{
+	//alert(new Date(data.startdayandtimeGMT));
+				//series_title
+				//$('#series_title').html(data.matchType+" - "+data.matchdesc);
+				$('#livescore_dd_title').html(data['team1'].shortName+' vs '+data['team2'].shortName+'<span class="caret"></span>');
+				$('#def_matchstate').html('');
+				$('#def_playerstate, #def_bowlerstate, .def_not_live').show();
+				$('#def_series_title').html(data.series);
+				//team name
+				$('#def_team1').html(data.battingTeamName);
+				$('#def_team2').html(data.bowlingTeamName);
+
+				//team icon
+				$('#def_team1_image').removeAttr('class');
+				//$('#def_team_icon1>div').addClass('team1_image');
+				$('#def_team2_image').removeAttr('class');
+				//$('#def_team_icon2>div').addClass('team2_image');
+				$('#def_team1_image').addClass("flag flag_"+data.battingTeamName);
+				$('#def_team2_image').addClass("flag flag_"+data.bowlingTeamName);
+
+				//batting team score/over
+				$('#def_team1_score').html(data['currentBatTeamScore'].runsAndWicket+'*');
+				$('#def_team1_over').html(data['currentBatTeamScore'].overs+" Overs");
+
+				//bowling team score/over
+				//if(data[0]['currentBowlTeamScore'].runsAndWicket !="0/0")
+				//{
+				$('#def_team2_score').html(data['currentBowlTeamScore'].runsAndWicket);
+				$('#def_team2_over').html(data['currentBowlTeamScore'].overs+" Overs");
+				//}
+
+				//RunRate
+				$('#def_crr').html("CRR : "+data.crr);
+				if(data.rrr == "")
+				{
+					$('#def_rrr').html("");
+				}
+				else
+				{
+					$('#def_rrr').html("RRR : "+data.rrr);
+				}
+
+				$('#def_matchstate').html(data.status);
+				if(data.state != 'complete')
+				{
+				//status if not playing
+				if(data.state != 'inprogress')
+				{
+					if(data.state === 'stump')
+					{
+						$('#def_matchstate').html('Stumps - '+data.status);
+					}
+				}
+				//striker's
+				$('#def_striker').html(data['striker'].fullName);
+				$('#def_nonStriker').html(data['nonStriker'].fullName);
+
+				//striker's runs
+				$('#def_striker_run').html("");
+				if(data['striker'].balls !="")
+				{
+					$('#def_striker_run').html(data['striker'].runs+"("+data['striker'].balls+")");
+				}
+				
+				$('#def_nonStriker_run').html("");
+				if(data['nonStriker'].balls !="")
+				{
+					$('#def_nonStriker_run').html(data['nonStriker'].runs+"("+data['nonStriker'].balls+")");
+				}
+
+				//sr
+				$('#def_nonStriker_sr').html("");
+				if(data['nonStriker'].balls != ""){
+					if(data['nonStriker'].balls != 0){
+						$('#def_nonStriker_sr').html((data['nonStriker'].runs/data['nonStriker'].balls*100).toFixed(2));
+					}
+					else{
+						$('#def_nonStriker_sr').html("0.00");
+					}
+				}
+
+				$('#def_striker_sr').html("");
+				if(data['striker'].balls != ""){
+					if(data['striker'].balls != 0){
+						$('#def_striker_sr').html((data['striker'].runs/data['striker'].balls*100).toFixed(2));
+					}
+					else{
+						$('#def_striker_sr').html("0.00");
+					}
+				}
+
+				//last name
+				$('#def_strikers_lname').html("");
+				if(data['striker'].fullName != "" && data['strikerbowler'].fullName != "")
+				$('#def_strikers_lname').html(data['strikerbowler'].fullName.split(' ').slice(-1).join(' ')+" to "+data['striker'].fullName.split(' ').slice(-1).join(' '));
+				//split(' ').slice(-1).join(' ');
+
+
+				//bowler
+				$('#def_strikerbowler').html(data['strikerbowler'].fullName);
+
+				$('#def_strikerbowler_runs').html(data['strikerbowler'].runs);
+
+				$('#def_strikerbowler_overs').html(data['strikerbowler'].overs);
+
+				$('#def_strikerbowler_maidens').html(data['strikerbowler'].maidens);
+
+				$('#def_strikerbowler_wickets').html(data['strikerbowler'].wickets);
+				}
+				else
+				{
+					$('#def_playerstate').hide();
+					$('#def_bowlerstate').hide();
+				}
+				if(data.state=='preview')
+				{
+				$('#def_playerstate, #def_bowlerstate, .def_not_live').hide();
+				$('#def_matchstate').html('Starting '+new Date(data.startdayandtimeGMT));
+				}
+
+
+}
+function getCookieValue(key)
+{
+    currentcookie = document.cookie;
+    if (currentcookie.length > 0)
+    {
+        firstidx = currentcookie.indexOf(key + "=");
+        if (firstidx != -1)
+        {
+            firstidx = firstidx + key.length + 1;
+            lastidx = currentcookie.indexOf(";",firstidx);
+            if (lastidx == -1)
+            {
+                lastidx = currentcookie.length;
+            }
+            return unescape(currentcookie.substring(firstidx, lastidx));
+        }
+    }
+    return "";
 }

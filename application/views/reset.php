@@ -12,7 +12,7 @@
       </div>
       <div class = "row">
         <div class = "span8">
-          <div class = "page-header">
+          <div class = "">
             <h3><?=$error?></h3>
           </div>
         </div>

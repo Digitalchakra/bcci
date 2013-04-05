@@ -319,7 +319,7 @@
         <!--Toggle Box-->
         	<div class="static-toggle livescore_bg livescore_bg_white" id="lsToggleBox">
           <div class="ls_close pull-right"  id="lsCloseButton"></div>
-          <?php if($view_page=='home') echo '<div class="ls_default pull-right"  id="lsMakeDefault"><a class="btn">Make Default</a></div>'?>
+          <?php if($view_page=='home') echo '<div class="ls_default pull-right"  id="lsMakeDefault" listid="0"><a class="btn">Make Default</a></div>'?>
           	<!--Toggle Box Live Score-->
           	<div class="row-fluid">
             	<div class="span12">
