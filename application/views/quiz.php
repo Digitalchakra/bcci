@@ -18,31 +18,17 @@
           <h5 style="margin-top:-5px">Facebook: facebook.com/forkarthik</h5>
           </span> </div>
       </div>
-      <div class="row">
-      	<div class="span12 margint20">
-         	<p style="font-weight:bold;font-style:italic;">Quizzes are amongst the hottest contests of today, and this one is on one of India’s most popular sporting events, the IPL-6.
+            <div class="row">
+        <div class="span12 margint20">
+          <p style="font-weight:bold;font-style:italic;">Quizzes are amongst the hottest contests of today, and this one is on one of India’s most popular sporting events, the IPL-6.
           </p>
           <p style="font-weight:bold;font-style:italic;">There are six questions, representing one full over. Try and hit each of these for a six to win big! </p>
-          <ul class="margint20">
-          	<li>One IPL Quiz will be published on BCCI.com every Wednesday till the end of IPL-6. That gives you SEVEN great ways to win!</li>
-            <li>All entries will need to be sent to contact@bcci.com with the subject line, "IPL Quiz Entry". All entries should be received latest by 6 PM IST the Wednesday after the Quiz was published. For example, the deadline for IPL6 Quiz 01 will be 6 PM (IST) on 10th April 2013.</li>
-            <li>Include your full name, home city, mobile number and email address in your email entry.</li>
-            <li>Type in your answers in the body of the email with the Question number and answer.</li>
-            <li>In the case of more than one all-correct entry for any weekly quiz, the first tie-breaker will be answers to questions that are underlined. If ties still remain, ultimate winners will be decided based on draw of lots.</li>
-            <li> Winners will be announced on BCCI.com every Thursday.</li>
-            <li>Even if you don't win a particular weekly contest, you are still in the game! The contestant with the most correct entries can win a grand prize based on the seven weekly contests.</li>
-            <li>Hurry! Email us your answers immediately!</li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="span12 margint20">
           <div class="well">
             <div class="row-fluid">
               <div class="span12"> 
-              	<h4>Questions</h4>
+                <h4>Questions</h4>
                 <ol>
-                	
+                  
                   <li>There are three Sachins in IPL-6. The most obvious is the ‘Little Master’. Provide the full names of the other two, along with the teams they will play for.</li>
                   <li>Name the cricketer who scored the first-ever IPL century. For full-points, also the name the team against which he scored this century.</li>
                   <li>Matthew Hayden introduced a rather interesting innovation in IPL3. Name the innovation and its inventor.</li>
@@ -56,6 +42,22 @@
           </div>
         </div>
       </div>
+      <div class="row">
+      	<div class="span6 margint20">
+          <p>Rules: </p>
+          <ul class="margint20" style="font-size:10px; font-weight:bold;">
+          	<li>One IPL Quiz will be published on BCCI.com every Wednesday till the end of IPL-6. That gives you SEVEN great ways to win!</li>
+            <li>All entries will need to be sent to contact@bcci.com with the subject line, "IPL Quiz Entry". All entries should be received latest by 6 PM IST the Wednesday after the Quiz was published. For example, the deadline for IPL6 Quiz 01 will be 6 PM (IST) on 10th April 2013.</li>
+            <li>Include your full name, home city, mobile number and email address in your email entry.</li>
+            <li>Type in your answers in the body of the email with the Question number and answer.</li>
+            <li>In the case of more than one all-correct entry for any weekly quiz, the first tie-breaker will be answers to questions that are underlined. If ties still remain, ultimate winners will be decided based on draw of lots.</li>
+            <li> Winners will be announced on BCCI.com every Thursday.</li>
+            <li>Even if you don't win a particular weekly contest, you are still in the game! The contestant with the most correct entries can win a grand prize based on the seven weekly contests.</li>
+            <li>Hurry! Email us your answers immediately!</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>

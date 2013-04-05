@@ -4,7 +4,7 @@
     <div class = "span12"> 
       
       <!--Page Heading-->
-      <div class = "row">
+      <!--<div class = "row">
         <div class = "span12 margint20">
           <div class = "page-header align-center">
             <h3>IPL Crossword Contest for BCCI.com (IPL-6/001)</h3>
@@ -15,19 +15,53 @@
           </span> <span class="pull-right">
           <h5 style="margin-top:-5px">Facebook: facebook.com/forkarthik</h5>
           </span> </div>
-      </div>
-      <div class="row">
-      	<div class="span12 margint20">
-        	<div class="align-center">
-          	<img src="<?php echo base_url('assets/Images/games/crossword/crossword_ipl_6_001.png');?>" style="border:solid 2px #AAA"/>
+      </div>-->
+      <!--<div class="row">
+      	
+      </div>-->
+      <!--<div class="row">
+        <div class="span12 margint20">
+          <div class="well" style="background:#72180d;">
+            <div class="row-fluid">
+            <div class="span12 margint20">
+        	<div class="pull-left">
+          	<img src="<?php echo base_url('assets/Images/games/crossword/Crossword.png');?>" />
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="span12 margint20">
-          <div class="well">
-            <div class="row-fluid">
-              <div class="span12"> 
+              
+            </div>
+          </div>
+        </div>
+      </div>-->
+       <div class="row margint20">
+  <div class="span12">
+       <div class="row crossword">
+      <div class="span4">
+      <div class="pull-left">
+      <div class="padding20">
+          	<img src="<?php echo base_url('assets/Images/games/crossword/crossgrid.jpg');?>" />
+          </div></div></div>
+      <div class="span8">
+       <div class="padding20">
+      <div class="page-header">
+            <h3 style="color:#FFF;">IPL Crossword Contest for BCCI.com (IPL-6/001)</h3>
+            <h4 style="color:#FFF;">Compiler: Karthik K Ramamurthy </h4>
+          </div>
+          <div class="social_links  margint20">
+           <h4 style="color:#FFF;">Facebook: facebook.com/forkarthik</h4>
+            <h4  style="color:#FFF;">Twitter: @fromkarthik</h4>
+            <div class="pdf-icon">
+             <h4 class=" margint20 text-warning">Download the crossword puzzle here</h4>
+         <a href="<?php echo base_url('assets/Images/games/crossword/Crossword.pdf');?>"> <img src="<?php echo base_url('assets/Images/games/crossword/pdf_icon.png');?>" /></a>
+          </div>
+            </div>
+          </div>
+          
+          </div>
+    </div>
+  </div>
+</div>
+        <div class="span12"> 
               	<h4>Guidelines</h4>
                 <ol>
                 	<li>Send all completed entries to contact@bcci.com with the subject line “IPL6 Crossword 1”on or before Wednesday, 10th April 2013.</li>
@@ -36,10 +70,6 @@
                   <li>In case of a tie breaker, where more than one person has submitted all correct answers, a winner will be chosen through means of a lucky draw</li>
                 </ol>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>
