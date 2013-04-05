@@ -55,12 +55,17 @@ class Registration extends CI_Controller {
 					$config['wordwrap'] = TRUE;
 					$config['mailtype']='html';
 					$this->email->initialize($config);
-					$this->email->from('resume@digitalchakra.in', 'Digital Chakra');
+					$this->email->from('bcci@digitalchakra.in', 'Bindaas Cricket Cafe!');
 					$this->email->to($post_data['email']);
 					#$this->email->cc('another@another-example.com');
 					#$this->email->bcc('them@their-example.com');
-					$this->email->subject('Verify your account @ Digitalchakra');
-					$message= 'Verify your the registered account in <a href="'.base_url('registration/activation/'.$this->db->insert_id().'/'.$post_data['active']).'"> Digitalchakra Resume App </a>'; 
+					$this->email->subject('Confirm your bcci.com account, '.$post_data['firstname'].' '.$post_data['lastname']);
+					$message= 'You\'re almost there! Just confirm your Email.<br><br>
+					You have successfully created a bcci.com account and all you need to do is activate it. It will give you full access to bcci.com and all future notifications will be sent to this email address.
+					<br><br>
+					Verify your Account in <a href="'.base_url('registration/activation/'.$this->db->insert_id().'/'.$post_data['active']).'">Bindas Cricket Cafe!</a>
+					<br><br>
+					<b>It\'s your Bindas Cricket Cafe!</b>	'; 
 					$this->email->message($message);
 					if($this->email->send())
 					{
@@ -116,4 +121,3 @@ class Registration extends CI_Controller {
 }
 
 ?>
-
