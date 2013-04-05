@@ -7,10 +7,33 @@
 				<!--<div class="ipl-logo-inner1">
 					<a href="http://bcci.com/"><div class="ipl-logo1"></div></a>
 				</div>-->
-				<div class="ipl-logo-inner2">
-					<a href="http://bcci.com/"><div class="ipl-logo2"></div></a>
-				</div>
 				
+					<div class="ipl-logo-inner2">
+						<a href="http://bcci.com/"><div class="ipl-logo2"></div></a>
+						
+					</div>	
+				
+					<div>
+						<a href="<?=base_url('ipl/crossword')?>">
+						
+						<span class="ipl-crossword-btn">
+							<p>Crossword</p>
+							<div class="ipl-crs-text"></div>
+							<div class="clearBoth"></div>
+							<div class="ipl-crossword-btn-bg"></div>
+						</span>
+						</a>
+						<a href="<?=base_url('ipl/quiz')?>">
+						<span class="ipl-quiz-btn">
+							<p>Quiz</p>
+							<div class="ipl-crs-text"></div>
+							<div class="clearBoth"></div>
+						
+							<div class="ipl-quiz-btn-bg"></div>
+						</span>
+						</a>
+					</div>
+	
 			</div>
 			<div class="span6 ipl-scoreboard" id="ipl_liveScore">
 				<div >
@@ -154,6 +177,28 @@
 						</div>
 					
 			</div>
+				<div class="ipl-header-stats">
+					<table WIDTH="100%" HEIGHT="100%">
+						<tr WIDTH="100%">
+							<td class="clbl1"><p class="ipl-font24">567</p><h4>Runs</h4></td>
+							<td class="clbl2"><p class="ipl-font24">197</p><h4>Dot Balls</h4></td>
+							<td class="clbl3"><p class="ipl-font24">95m</p><h4>Longest Six</h4></td>
+						</tr>
+						<tr WIDTH="100%">
+							<td class="clbl4"><p class="ipl-font24">14</p><h4>Sixes</h4></td>
+							<td class="clbl5"><p class="ipl-font24">24</p><h4>Wickets</h4></td>
+							<td class="clbl6"><p class="ipl-font24">3</p><h4>Half Centuries</h4></td>
+						</tr>
+						<tr WIDTH="100%">
+							<td class="clbl7"><p class="ipl-font24">316</p><h4>Runs from Boundaries</h4></td>
+							<td class="clbl8"><p class="ipl-font12">146.67 KPH</p><h4>Fastest Ball</h4></td>
+							<td class="clbl9">
+								<a href="#"class="ipl-font18" >View all</a>
+								<div class="ipl-arrow-right"></div>
+							</td>
+						</tr>
+					</table>
+				</div>
 			</div>
 			<div class="span3 ipl-header3">
 				<div class="ipl-pts">
@@ -285,12 +330,12 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 					</div>
 					
 					<div class="ipl-forumIntro">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut bibendum nisi. Donec a tristique dolor.</p>
+						<p>Here’s the latest on IPL! Be the first to know and interact with our members on Bcci.com forums. </p>
 					</div>
 					
 					
-					<button class="ipl-button2">Join the forums</button>
-				</div>
+					<button class="ipl-button2">Join Now</button>
+				</div>   
 				<div class="ipl-forums-footer">
 					<a href="<?=base_url('forum')?>"><div class="ipl-forums-arrow"></div></a>
 				</div>
@@ -330,7 +375,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 								echo "<div class='ipl-".trim($teams[1])." floatLeft ipl-schedule-50'></div></div>";
 
 								echo "<div class='ipl-schedule-match'>";
-								echo "<p>".trim($teams[0])." <br/>Vs <br/>".trim($teams[1])."</p></div>";
+								echo "<p>".trim($teams[0])." Vs ".trim($teams[1])."</p></div>";
 								echo "<div class='ipl-schedule-venue'>";
 								echo "<p>".date("M d, Y H:i",strtotime($single_schedule->sdate." ".$single_schedule->time." GMT"))." <br/>".$single_schedule->mt_vnu."</p></div></div></div>";
 								}
@@ -404,7 +449,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 						</div>
 					</div>
 					<div class="ipl-photo-content">
-						<div class='ipl-photo-title'><h4>Day 1 IPL Highlights</h4></div>
+						<div class='ipl-photo-title'><h4>IPL Highlights</h4></div>
 						<div>
 							<?php
 							$photocount=0;
