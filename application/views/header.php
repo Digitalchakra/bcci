@@ -122,7 +122,7 @@
           </div>
         </li>
         <li <?php if($view_page=='result') echo 'class="active"';?>><a href="<?php echo base_url('result'); ?>" class="drop">Results</a></li>
-        <!--<li <?php //if($view_page=='forum') echo 'class="active"';?>><a href="<?php echo base_url('forum'); ?>" class="drop">Forum</a></li>-->
+        <li <?php if($view_page=='forum') echo 'class="active"';?>><a href="<?php echo base_url('forum'); ?>" class="drop">Forum</a></li>
         <li <?php if($view_page=='team_rank') echo 'class="active"';?>><a class="drop">Rankings</a><!-- Begin 4 columns Item -->
          <div class="dropdown_2columns">
             <div class = "col_2">

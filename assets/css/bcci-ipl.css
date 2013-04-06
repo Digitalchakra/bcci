@@ -515,7 +515,7 @@ body{ background:#e6e6e6; font:12px;  }
 .ipl-cards5{	height: 400px;	min-width: 160px;}
 
  
-  .ipl-cards1, .ipl-cards2,  .ipl-cards4, .ipl-cards5, .ipl-cards3{padding-left: 9px; width:24%; float:left;}
+  .ipl-cards1, .ipl-cards2,  .ipl-cards4, .ipl-cards5, .ipl-cards3{padding-left: 9px; width:19%; float:left;}
 
 
 
@@ -901,5 +901,5 @@ display: block;
 }
 
 .ipl-cards3{
-	display: none;
+	
 }
