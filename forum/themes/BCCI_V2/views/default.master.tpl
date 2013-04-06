@@ -45,7 +45,7 @@
 
       <ul class ="menu"> 
         <li><a href="../" class="drop">Home</a></li>
-        <li  id="ipl_menu"><a href="../" class="drop">IPL</a></li>
+        <li  id="ipl_menu"><a href="../ipl" class="drop">IPL 2013</a></li>
         <li><a href="../schedule" class="drop">Schedule</a></li> 
         <li><a href="../result" class="drop">Results</a></li> 
         <li><a href="../rank/team" class="drop">Ranking</a></li> 
