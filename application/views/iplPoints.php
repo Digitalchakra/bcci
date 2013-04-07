@@ -72,7 +72,7 @@
                 <td>
                   <?php 
 										$limit = 5;
-									foreach(explode(',',$row->recentForm) as $flag)
+									foreach(explode(',',strrev($row->recentForm)) as $flag)
                   {
 										$limit--;
                     if($flag=='W')
