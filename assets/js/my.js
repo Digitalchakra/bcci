@@ -173,10 +173,13 @@ function livescore()
 	iplteams['DEL']="DD";
 	iplteams['BLR']="RCB";
 	iplteams['MUM']="MI";
-	iplteams['HYD']="SH";
 	iplteams['PUNE']="PWI";
+	iplteams['HYD']="SH";
+	iplteams['SUN RISERS']="SH";
 	iplteams['RAJ']="RR";
+	iplteams['JAI']="RR";
 	iplteams['CHN']="CSK";
+	iplteams['MOH']="KXIP";
 	iplteams['PUN']="KXIP";
 	 var site='http://webclient.cricbuzz.com/includes/deccanherald/livecricketscore/filter-match-details.json';
 	 // Fall back URL incase the above URL does not work
