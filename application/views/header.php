@@ -309,7 +309,7 @@
 
 
 <!--Static Live Score-->
-<div class="static-bottom-container static-bottom-bg visible-desktop" id="closeBg" style="width:96%">
+<div class="static-bottom-container static-bottom-bg visible-desktop" id="closeBg" style="width:96%; display:none !important;">
 	<div class="row-fluid">
   	<div class="span12">
     	<div class="container-fluid"  id="lsClose">
@@ -448,7 +448,7 @@
   
 </div>
 
-<div class="ls-popout-button pull-right visible-desktop" style="right:0%"><img src="<?php echo base_url('assets/Images/LS-Button.png');?>" class="res-image" id = "ls_bt_close"> </div>
+<div class="ls-popout-button pull-right visible-desktop" style="right:0%; display:none !important;" id = "ls_bt_close"><img src="<?php echo base_url('assets/Images/LS-Button.png');?>" class="res-image"> </div>
 <!--<div id="chat_minimize" class="chat-button pull-right visible-desktop"><img src="<?php echo base_url('assets/Images/chat_button.png');?>" class="res-image" id="chat-button"> </div>-->
  
   <!--Old Toggle Script-->

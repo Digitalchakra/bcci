@@ -196,9 +196,10 @@ function livescore()
 			//$('.live_team').removeClass('active');
 			$('.slides li').removeClass('active');
 			//alert(data[listcount].matchDataType);
+			$('#liveScore, #ls_bt_close, #closeBg').show();
 			$(data).each(function()
 			{
-				if(data[listcount].matchDataType=='Live Data')
+				if(data[listcount].matchDataType==='Live Data')
 				{
 					if(data[listcount].series === 'T20 Cricket League 2013')
 					data[listcount].series='Indian Premier League VI 2013'
@@ -228,6 +229,12 @@ function livescore()
 							 option+='			<p class="dark-grey  align-left">'+data[listcount].matchdesc+'</p>';
 							
 						}
+						else if(data[listcount].state==='complete')
+						{
+							option+='			<h5 class="red  align-center">'+data[listcount]['team1'].shortName+' <span class="dark-grey">vs </span>'+data[listcount]['team2'].shortName+'</h5>';
+							option+='			<p>'+data[listcount].status+'</p>';
+							 option+='			<p class="dark-grey  align-left">'+data[listcount].matchdesc+'</p>';
+						}
 						else
 						{
 							option+='			<h5 class="red  align-center">'+data[listcount]['team1'].shortName+' <span class="dark-grey">vs </span>'+data[listcount]['team2'].shortName+'</h5>';
@@ -239,6 +246,12 @@ function livescore()
 						{
 							option+='			<h5 class="red  align-center">'+data[listcount].battingTeamName+' * <span class="dark-grey">vs </span>'+data[listcount].bowlingTeamName+' - '+data[listcount]['currentBatTeamScore'].runsAndWicket+' ('+data[listcount]['currentBatTeamScore'].overs+')</h5>';
 							 option+='			<p class="dark-grey  align-left">'+data[listcount]['type']+'</p>';
+						}
+						else if(data[listcount].state==='complete')
+						{
+							option+='			<h5 class="red  align-center">'+data[listcount]['team1'].shortName+' <span class="dark-grey">vs </span>'+data[listcount]['team2'].shortName+' <span> COMP</span></h5>';
+							option+='			<p>'+data[listcount].status+'</p>';
+							option+='			<p class="dark-grey  align-left">'+data[listcount]['type']+'</p>';
 						}
 						else
 						{

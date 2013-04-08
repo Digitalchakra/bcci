@@ -42,7 +42,7 @@
     
   <div class = "row"> 
     <!--Live SCore-->
-    <div id="liveScore" class="span4 margint10 livescore_bg livescore_bg_red">
+    <div id="liveScore" class="span4 margint10 livescore_bg livescore_bg_red" style="display:none">
       <div class="row-fluid">
         <div class="span12">
           <div class="padding20">
