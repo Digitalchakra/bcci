@@ -13,7 +13,7 @@
       <div class = "row">
         <div class = "span8">
           <div class = "">
-            <h3><?=$error?></h3>
+            <div class = "alert" style = "font-size:14px"><?=$error?></div>
           </div>
         </div>
       </div>

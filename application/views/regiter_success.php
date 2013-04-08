@@ -2,7 +2,7 @@
 <div class = "container">
   <div class = "row"> 
     <!--Fixtures-->
-    <div class = "span8"> 
+    <div class = "span12"> 
       <!--Page Header-->
       <div class = "page-header">
         <h3>Thank You!  <!--<span class = "pull-right marginr10">
@@ -14,7 +14,7 @@
     </div>
     
 </div>
-<div class="span4 margint20"> 
-      Success! Your email has been verified! You are now being redirected to BCCI Home...
+<div class="span12 margint20"> 
+      <div class = "alert alert-success" style = "font-size:14px">Success! Your email has been verified! You are now being redirected to BCCI Home...</div>
 </div>
 </div>
