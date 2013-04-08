@@ -5,7 +5,7 @@ class Videos extends CI_Controller
 	function getlist()
 	{
 		$this->load->model('videosmodel');
-		$data['resultset']=$this->videosmodel->getVideos(12,0);
+		$data['resultset']=$this->videosmodel->getVideos(10,0);
 		$this->load->view('json',$data);
 	}
 	function index()
