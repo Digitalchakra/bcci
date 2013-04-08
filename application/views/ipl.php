@@ -1,8 +1,9 @@
 <link href="<?php echo base_url('assets/css/bcci-ipl.css'); ?>" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
-<header>
-	<div class="container ipl-header" >
-		<div class="row">
+
+	<div class="container" > 
+		<div style="margin-right:20px;" class="ipl-header">
+		<div class="row" >
 			<div class="span3 ipl-logo">
 				<!--<div class="ipl-logo-inner1">
 					<a href="http://bcci.com/"><div class="ipl-logo1"></div></a>
@@ -41,7 +42,7 @@
 				</div>
 				<div class="row-fluid ipl-sb-team">
 					
-						<div class="row-fluid"> 
+						
 						<div class="span5">
 							<div class="span6 ipl-sb-flag">
 								<div >
@@ -116,7 +117,7 @@
 								</div>
 							</div>
 						</div>
-						</div>
+						
 					
 				</div>
 				
@@ -239,11 +240,12 @@
 							?>
 				</tbody>
 					</table>
+					<p>via iplt20.com</p>
 					<a href="<?=base_url('ipl/points')?>">View full table</a>
 				</div>
 
 				<div class="ipl-teams">
-					<div style="height:200px; width:20px; float:left; ">
+					<div style="height:200px; width:20px; margin-left:-10px; float:left; ">
 						<div class="ipl-arrow">
 
 						</div>
@@ -279,7 +281,7 @@
 			</div>
 		</div>
 
-</header>	 
+</div>	 
 <div class="container">
 	<!--======================================================ADs=======================-->
 <div class="row-fluid">
@@ -426,8 +428,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 						
 					<div class="ipl-polls-content">
 						<p class="ipl-polls-question" id="poll_question">loading...</p>
-						<br/>
-						<div id="poll_answer">
+						
+						<div id="poll_answer" class="ipl-poll-answer">
 							<!-- from ipl.sj -->
             			</div>
             			
