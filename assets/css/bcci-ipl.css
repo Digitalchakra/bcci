@@ -108,7 +108,7 @@ body{ background:#e6e6e6; font:12px;  }
 	padding-top: 10px;
 	padding-left:10px;
 	width: 100%;
-	height: 205px;
+	height: 225px;
 	position: relative;
 	margin-right: 0px;
 	background-color: #282828;
@@ -183,8 +183,8 @@ body{ background:#e6e6e6; font:12px;  }
 }
 
 .ipl-pts p{
-	padding-top: 10px;
-	color: #828282;
+	padding-top: 5px;
+	color: #929292;
 	font-size: 8px;
 	float: left;
 }
@@ -195,10 +195,10 @@ body{ background:#e6e6e6; font:12px;  }
 
 	color: #ffffff;
 	font-size: 13px;
-	padding-right: 25px;
+	padding-right: 15px;
 	line-height: 18px;
 	display: block;
-	padding-top: 10px;
+	padding-top: 5px;
 
 }
 
