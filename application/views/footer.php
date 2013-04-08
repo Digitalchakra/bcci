@@ -61,12 +61,12 @@
             <p></p>
             <ul>
               <li><a href="<?php echo base_url();?>">Home</a></li>
-              <li><a href="<?php echo base_url('IPL');?>">IPL</a></li>
+              <li><a href="<?php echo base_url('ipl');?>">IPL</a></li>
               <li><a href="<?php echo base_url('schedule');?>">Schedule</a></li>
               <li><a href="<?php echo base_url('result');?>">Results</a></li>
              <!-- <li><a href="<?php echo base_url('forum');?>">Forum</a></li>-->
               <li><a href="<?php echo base_url('rank/team');?>">Rankings</a></li>
-              <li><a href="<?php echo base_url('articles');?>">Article</a></li>
+              <li><a href="<?php echo base_url('article');?>">Article</a></li>
               <li><a href="<?php echo base_url('news');?>">News</a></li>
               <li><a href="<?php echo base_url('photos');?>">Photos</a></li>
               <li><a href="<?php echo base_url('videos');?>">Videos</a></li>
