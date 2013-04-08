@@ -1,6 +1,7 @@
 $(document).ready(function()
 {
 	$('#forget').click(function(){
+		$('#fusername').val($('#username').val());
 		$('.login').hide();
 		$('.forget').show();
 		$("#login_header").text("Forgot Password?");
