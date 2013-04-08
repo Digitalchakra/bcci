@@ -8,7 +8,7 @@
 <meta name="description" content="bcci.com is in no way or form related to The BCCI or BCCI or The Board for Control of Cricket in India and is a standalone portal for cricketing enthusiasts from the world over. We provide live scores, series fixtures, latest news feeds, articles by eminent cricket writers and articles by enthusiasts, cricket statistics, records, current rankings, opinion polls and a public message board. " />
 <title>BCCI | Live Scores | Latest Cricket News </title>
 <link href="<?php echo base_url('assets/css/bootstrap.css'); ?>" rel="stylesheet" type="text/css">
-<link href="<?php echo base_url('assets/css/bootstrap-responsive.css'); ?>" rel="stylesheet" type="text/css">
+<!--<link href="<?php echo base_url('assets/css/bootstrap-responsive.css'); ?>" rel="stylesheet" type="text/css">-->
 <link href="<?php echo base_url('assets/css/mystyles.css'); ?>" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url('assets/css/bcci-home.css'); ?>" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url('assets/css/menu.css'); ?>" rel="stylesheet" type="text/css">
@@ -33,6 +33,9 @@
 {
   color:#A82E0F;"
 }
+.container {
+	width:960px;
+}
 
 </style>
 <!--[if gte IE 9]> 
@@ -51,7 +54,7 @@
 <div class = "container">
   <div class = "row">
     <div class = "span3 margint20"> <a href="<?php echo base_url();?>"><div class="logo"></div></a></div>
-    <div class="span3 offset3 margint20">
+    <div class="span3 offset6 margint20">
     	 <!-- kvm ads start -->
             <div id="kvmslider" class="pull-right margint20"> <!-- Slider container -->
               <div id="mask"> <!-- Mask -->
@@ -93,14 +96,14 @@
 </div>
 <!--NAV MENU-->
 <div class = "container">
-  <div class = "row visible-desktop">
+  <div class = "row">
     <div class = "span12" style="margin-top:18px">
       <!--MEGA MENU
       -->
 
       <ul class ="menu"> 
         <li <?php if($view_page=='home') echo 'class="active"';?> ><a href="<?php echo base_url(); ?>" class="drop">Home</a></li>
-        <li <?php if($view_page=='ipl') echo 'class="active"';?> id="ipl_menu"><a href="<?php echo base_url('ipl'); ?>" class="drop" >IPL 2013</a>
+        <li <?php if($view_page=='ipl') echo 'class="ipl-blue"';?> id="ipl_menu"><a href="<?php echo base_url('ipl'); ?>" class="drop" >IPL 2013</a>
         <li <?php if($view_page=='schedule') echo 'class="active"';?>><a href="<?php echo base_url('schedule'); ?>" class="drop">Schedule</a><!-- Begin Shedule columns Item -->
 
           <div class="dropdown_2columns"><!-- Begin 5 columns container -->
@@ -243,70 +246,6 @@
   </div>
 </div>
 </div>
-
-<!--Nav Menu for Tablets-->
- 
-
-
-  <div class = "row-fluid visible-tablet">
-    <div class = "span12 margint20">
-      <!--MEGA MENU
-      -->
-
-      <ul class ="menu"> 
-        <li <?php if($view_page=='home') echo 'class="active"';?> ><a href="<?php echo base_url(); ?>" class="drop">Home</a></li>
-        <li <?php if($view_page=='schedule') echo 'class="active"';?>><a href="<?php echo base_url('schedule'); ?>" class="drop">Schedule</a><!-- Begin Shedule columns Item -->
-
-          <div class="dropdown_2columns"><!-- Begin 5 columns container -->
-            <div class = "col_2">
-              <ul id="srs_list" class="greybox">
-                <!--<h2>Upcoming Series</h2>
-                <li><a href="#">Sri Lanka vs Australia</a></li>
-                <li><a href="#">S Africa vs Zimbabwe</a></li>
-                <li><a href="#">Australia vs New Zealand</a></li>
-                <li><a href="#">India vs Australia</a></li>
-                <li><a href="#">Sri Lanka vs Australia</a></li>-->
-              </ul>
-              <div class = "hline"></div>
-              <!-- <ul class="greybox">
-                <li><a href="#">Fixtures</a></li>
-                <li><a href="#">Series Archive</a></li>
-              </ul> -->
-            </div>
-          </div>
-        </li>
-        <li <?php if($view_page=='result') echo 'class="active"';?>><a href="<?php echo base_url('result'); ?>" class="drop">Results</a></li>
-        <li <?php if($view_page=='team_rank') echo 'class="active"';?>><a class="drop">Rankings</a><!-- Begin 4 columns Item -->
-         <div class="dropdown_2columns">
-            <div class = "col_2">
-              <ul class="greybox">
-                <h2>Rankings</h2>
-                <li><a href="<?php echo base_url('rank/team'); ?>">Team Rankings</a></li>
-                <li><a href="<?php echo base_url('rank/batting'); ?>">Batsman Rankings</a></li>
-                <li><a href="<?php echo base_url('rank/bowling'); ?>">Bowler Rankings</a></li>
-                <li><a href="<?php echo base_url('rank/allrounder'); ?>">All Rounder Rankings</a></li>
-              </ul>
-            </div>
-            <!--<div class = "col_2">
-              <ul class="greybox">
-                <h2>Records</h2>
-                <li><a href="#">Batting Record</a></li>
-                <li><a href="#">Bowling Record</a></li>
-                <li><a href="#">All Rounder Record</a></li>
-                <li><a href="#">Other Records</a></li>
-              </ul>
-            </div>-->
-          </div>
-        </li>
-        <li <?php if($view_page=='news') echo 'class="active"';?>><a href="<?php echo base_url('news'); ?>" class="drop">News</a></li>
-        <li <?php if($view_page=='articles') echo 'class="active"';?>><a href="<?php echo base_url('article'); ?>" class="drop">Articles</a></li>
-        <li <?php if($view_page=='photos') echo 'class="active"';?>><a href="<?php echo base_url('photos');?>" class="drop">Photos</a></li>
-        <li <?php if($view_page=='videos') echo 'class="active"';?>><a href="<?php echo base_url('videos');?>" class="drop">Videos</a></li>
-			<!--	<li <?php //if($view_page=='forum') echo 'class="active"';?>><a href="<?//php echo base_url('forum'); ?>" class="drop pulsate">Forum</a></li>-->
-      </ul>
-  </div>
-</div>
-
 
 <!--Static Live Score-->
 <div class="static-bottom-container static-bottom-bg visible-desktop" id="closeBg" style="width:96%; display:none !important;">

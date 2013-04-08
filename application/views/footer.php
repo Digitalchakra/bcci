@@ -14,7 +14,7 @@
         <!--First Row-->
         <div class = "row">
           <div class = "span12">
-            <div class = "bottom-logo pull-right margint20"> <div class="logo pull-right"></div> </div>
+            <div class = "bottom-logo pull-right margint20"> <div class="logo pull-left"></div> </div>
             <div class = "clearfix"></div>
           </div>
         </div>
@@ -123,6 +123,9 @@
     </div>
   </div>
 </div>
+<div class="row">
+	<div class="span12" style="margin-bottom:76px"></div>
+</div>
 	  
     
     <!--End of FOOTER AREA-->
@@ -131,7 +134,7 @@
    <!-- Le javascript -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-	  <script src="<?php echo base_url('assets/js/bootstrap-extra.min.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/bootstrap-extra.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/footer.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/js/jquery.fancybox.pack.js'); ?> "></script>
     <script type="text/javascript" src="<?php echo base_url('assets/js/analytics.js'); ?> "></script>

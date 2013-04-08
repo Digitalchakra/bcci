@@ -36,12 +36,12 @@
        <div class="row margint20">
   <div class="span12">
        <div class="row crossword">
-      <div class="span4">
+      <div class="span5 margint20">
       <div class="pull-left">
       <div class="padding20">
-          	<img src="<?php echo base_url('assets/Images/games/crossword/crossgrid.jpg');?>" />
+          	<img src="<?php echo base_url('assets/Images/games/crossword/crossgrid.jpg');?>" class="res-image" />
           </div></div></div>
-      <div class="span8">
+      <div class="span7">
        <div class="padding20">
       <div class="page-header">
             <h3 style="color:#FFF;">IPL Crossword Contest for BCCI.com (IPL-6/001)</h3>

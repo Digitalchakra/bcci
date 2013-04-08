@@ -408,3 +408,7 @@ color:#FFF;
 .profile-dropdown li:last-child {
 	border-bottom:none;
 }
+.ipl-blue{
+	background:#19398a !important;
+	border-color:#09F !important;
+}
