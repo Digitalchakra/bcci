@@ -51,7 +51,6 @@ function ipllivescore()
 			listcount=0;
 			option="";
 			$.iplmyplaceholder.mylivescore=[];
-			$('.live_team').removeClass('active');
 			//alert(data[listcount].matchDataType);
 			$(data).each(function()
 			{
@@ -102,7 +101,7 @@ function ipllivescore()
 				listcount++;
 
 				});
-				$('#livescore_dd').html(option);
+				//$('#livescore_dd').html(option);
 
 			/*some bug has to fix
 			 * when ajax is loading make the current selected tab to update
@@ -118,13 +117,13 @@ function ipllivescore()
 			{
 				//livescoredisplay($.iplmyplaceholder.mylivescore[$('#livescore_dd').value]);
 			}*/
-			$('.live_team').click(function()
+			/*$('.live_team').click(function()
 			{
 				$('.live_team').removeClass('active');
 				ipllivescoredisplay($.iplmyplaceholder.mylivescore[this.value]);
 				$(this).addClass('active');
 				$.iplmyplaceholder.checkreload=this.value;
-			});
+			});*/
         });
 }
 
