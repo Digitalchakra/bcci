@@ -332,11 +332,11 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 					</div>
 					
 					<div class="ipl-forumIntro">
-						<p>Here’s the latest on IPL! Be the first to know and interact with our members on Bcci.com forums. </p>
+						<p>Here’s the latest on IPL! Be the first to know and interact with our members on bcci.com forums! </p>
 					</div>
 					
 					
-					<button class="ipl-button2">Join Now</button>
+					<a class="white" href="<?=base_url('forum')?>"><button class="ipl-button2">Join Now</button></a>
 				</div>   
 				<div class="ipl-forums-footer">
 					<a href="<?=base_url('forum')?>"><div class="ipl-forums-arrow"></div></a>

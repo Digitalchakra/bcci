@@ -86,12 +86,16 @@ class Forget extends CI_Controller {
 		 $this->load->model('user');
 		 if($this->user->update_user($where,$update_data))
 		 {
-		 	$data['view_page'] = 'reset_success';
-			$this->load->view('template', $data);
+		 	$check_data=array('active'=>'bcci','id'=>'bcci', 'email'=>'', 'error'=>'Your password was reset successfully!');
+			$check_data['view_page'] = 'reset';
+			header( "refresh:5; url=".base_url() );
+			$this->load->view('template', $check_data);
+		 	//$data['view_page'] = 'reset_success';
+			//$this->load->view('template', $data);
 		 }
 		 else
 		 {
-			$check_data=array('active'=>$active,'id'=>$id, 'error'=>'internal error');
+			$check_data=array('active'=>$active,'id'=>$id, 'email'=>$email, 'error'=>'internal error');
 			$check_data['view_page'] = 'reset';
 			$this->load->view('template', $check_data);
 		 }

@@ -33,7 +33,7 @@ function srs_list()
         type: "GET",
         dataType:'JSON',
         success: function(data) {
-			html='<h2>Upcoming Series</h2>';
+			html='<h2>Series</h2>';
 			for(i=0;i<data.resultset.length;i++)
 			{
 				html+='<li><a href="'+baseurl+'schedule/index/'+data.resultset[i]['srs_id']+'">'+data.resultset[i]['srs_name']+'</a></li>';
