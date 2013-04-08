@@ -226,40 +226,40 @@ function livescore()
 						if(data[listcount].state=='inprogress')
 						{
 							option+='			<h5 class="red  align-center">'+data[listcount].battingTeamName+' * <span class="dark-grey">vs </span>'+data[listcount].bowlingTeamName+' - '+data[listcount]['currentBatTeamScore'].runsAndWicket+' ('+data[listcount]['currentBatTeamScore'].overs+')</h5>';
-							 option+='			<p class="dark-grey  align-left">'+data[listcount].matchdesc+'</p>';
+							 option+='			<p class="dark-grey  align-left">'+data[listcount].matchdesc;
 							
 						}
 						else if(data[listcount].state==='complete')
 						{
 							option+='			<h5 class="red  align-center">'+data[listcount]['team1'].shortName+' <span class="dark-grey">vs </span>'+data[listcount]['team2'].shortName+'</h5>';
 							option+='			<p>'+data[listcount].status+'</p>';
-							 option+='			<p class="dark-grey  align-left">'+data[listcount].matchdesc+'</p>';
+							 option+='			<p class="dark-grey  align-left">'+data[listcount].matchdesc;
 						}
 						else
 						{
 							option+='			<h5 class="red  align-center">'+data[listcount]['team1'].shortName+' <span class="dark-grey">vs </span>'+data[listcount]['team2'].shortName+'</h5>';
-							 option+='			<p class="dark-grey  align-left">'+data[listcount].matchdesc+'</p>';
+							 option+='			<p class="dark-grey  align-left">'+data[listcount].matchdesc;
 						}
 					}
 					else{
 						if(data[listcount].state=='inprogress')
 						{
 							option+='			<h5 class="red  align-center">'+data[listcount].battingTeamName+' * <span class="dark-grey">vs </span>'+data[listcount].bowlingTeamName+' - '+data[listcount]['currentBatTeamScore'].runsAndWicket+' ('+data[listcount]['currentBatTeamScore'].overs+')</h5>';
-							 option+='			<p class="dark-grey  align-left">'+data[listcount]['type']+'</p>';
+							 option+='			<p class="dark-grey  align-left">'+data[listcount]['type'];
 						}
 						else if(data[listcount].state==='complete')
 						{
 							option+='			<h5 class="red  align-center">'+data[listcount]['team1'].shortName+' <span class="dark-grey">vs </span>'+data[listcount]['team2'].shortName+' <span> COMP</span></h5>';
 							option+='			<p>'+data[listcount].status+'</p>';
-							option+='			<p class="dark-grey  align-left">'+data[listcount]['type']+'</p>';
+							option+='			<p class="dark-grey  align-left">'+data[listcount]['type'];
 						}
 						else
 						{
 							option+='			<h5 class="red  align-center">'+data[listcount]['team1'].shortName+' <span class="dark-grey">vs </span>'+data[listcount]['team2'].shortName+'</h5>';
-							 option+='			<p class="dark-grey  align-left">'+data[listcount]['type']+'</p>';
+							 option+='			<p class="dark-grey  align-left">'+data[listcount]['type'];
 						}
 					}
-                	option+='			<p class="red  align-left">'+data[listcount]['venue-city']+' <span class="dark-grey"> | </span>'+data[listcount]['match-day']+'</p>';
+                	option+='			<span class="red  align-left">  '+data[listcount]['venue-city']+' <span class="dark-grey"> | </span>'+data[listcount]['match-day']+'</span></p>';
                 	option+='		 </span>';
                 	option+='	 </span>';
                 	option+='</li>';
@@ -832,6 +832,7 @@ function defaultlivescoredisplay(data)
 				{
 					$('#def_playerstate').hide();
 					$('#def_bowlerstate').hide();
+					$('.h-seperator').hide();
 				}
 				if(data.state=='preview')
 				{

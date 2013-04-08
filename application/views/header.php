@@ -9,6 +9,7 @@
 <title>BCCI | Live Scores | Latest Cricket News </title>
 <link href="<?php echo base_url('assets/css/bootstrap.css'); ?>" rel="stylesheet" type="text/css">
 <!--<link href="<?php echo base_url('assets/css/bootstrap-responsive.css'); ?>" rel="stylesheet" type="text/css">-->
+<link href="<?php echo base_url('assets/css/bcci-fixedLayout.css'); ?>" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url('assets/css/mystyles.css'); ?>" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url('assets/css/bcci-home.css'); ?>" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url('assets/css/menu.css'); ?>" rel="stylesheet" type="text/css">
@@ -168,15 +169,16 @@
                       <span id="error_msg1" class="errorMessage"></span>
 
                       <form class="form-horizontal" id="register_form">
+                     		 <div class="margint10"></div>
+                      	<span>E-Mail: </span><input type="text" class="input-large" name="email_address" id="inputEmail" style="text-align:left">
+                         <div class="margint10"></div>
+                         <span>Password: </span><input type="password" class="input-large" name="pass_word" id="inputPassword" style="text-align:left">
+                         <div class="margint10"></div>
                          <span>First Name: </span><input type="text" class="input-large" name="firstname" id="firstname" style="text-align:left">
                          <div class="margint10"></div>
                          <span>Last Name: </span><input type="text" class="input-large" name="lastname" id="lastname" style="text-align:left">
-                         <div class="margint10"></div>
-                         <span>E-Mail: </span><input type="text" class="input-large" name="email_address" id="inputEmail" style="text-align:left">
-                         <div class="margint10"></div>
-                         <span>Password: </span><input type="password" class="input-large" name="pass_word" id="inputPassword" style="text-align:left">
                          <div class="margint20"></div>
-                         <a class="btn btn-primary span1 pull-right marginb15" id="signupsubmit">Register</a>
+                         <a class="btn btn-mini btn-primary span1 pull-right marginb15" id="signupsubmit">Register</a>
                   		</form>
                       
                     </div>
@@ -231,9 +233,9 @@
                     <span id="forgot_pw_txt"></span><input type="text"  class="forget input-large margint20" id="fusername" name="fusername" style="display:none; margin-top:10px">
                     <span id="forget" class="pull-right margint10 login red" style="cursor:pointer;margin-left:0;" >Forgot Password?</span>
                     <div class="margint20"></div>
-                         <a class="btn btn-primary span1 pull-right marginb15 margint10 login" id="loginsubmit">Login</a>
-                         <a id="login" class="btn btn-primary pull-left margint10 forget red" style="display:none;cursor:pointer;">Cancel</a>
-                         <a class="btn btn-primary marginb15 pull-right margint10 forget" id="forgetsubmit" style="display:none;">Reset Password</a>
+                         <a class="btn btn-mini btn-primary span1 pull-right marginb15 margint10 login" id="loginsubmit">Login</a>
+                         <a id="login" class="btn btn-mini btn-primary pull-left margint10 forget red" style="display:none;cursor:pointer;">Cancel</a>
+                         <a class="btn btn-mini btn-primary marginb15 pull-right margint10 forget" id="forgetsubmit" style="display:none;">Reset Password</a>
                   </form>                  
                   
                 </div>

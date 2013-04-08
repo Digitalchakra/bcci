@@ -45,7 +45,7 @@
     <div id="liveScore" class="span4 margint10 livescore_bg livescore_bg_red" style="display:none">
       <div class="row-fluid">
         <div class="span12">
-          <div class="padding20">
+          <div class="padding10">
 			  <div style="text-align:center" class="white team_name" id="def_matchstate"></div>
           <div style="text-align:center" class="team_images row-fluid margint20">
             <div class="span5"><!--TeamA-->
@@ -72,6 +72,7 @@
                 <span id="def_rrr" class="marginl20 yellow def_not_live"></span> <span id="def_crr" class="marginl20 yellow def_not_live"></span> </h6>
             </div>
           </div>
+          <div class="h-seperator"></div>
           <div style="text-align:center" class="row-fluid" id="def_playerstate"><!--Player Stats-->
           	<div class = "span1 batsman"></div>
             <div class="span5">
@@ -119,7 +120,7 @@
             </div>
             <div class="runner span1"></div>
           </div>
-          
+          <div class="h-seperator"></div>
           <div class="row-fluid margint10" id="def_bowlerstate"><!--Bowling-->
           	<div class="span1 bowler"></div>
             <div class="span6">
@@ -149,9 +150,15 @@
             
           </div>
          </div>
-         <div class="no_matches row-fluid">
+         	<div class="no_matches row-fluid">
               <div class="span12 margint-10">
                 <h5 id="def_series_title" class="white team_name align-center"></h5>
+              </div>
+            </div>
+            
+            <div class="row-fluid">
+            	<div class="span12 ticker">
+              	<!--Ticker-->
               </div>
             </div>
         </div>
@@ -160,6 +167,7 @@
           </ul>
         </div>-->
       </div>
+      <span class="pull-right padding20"><a href="<?php echo base_url('schedule'); ?>" class="yellow-dull">View All</a></span>
     </div>
     <div class = "span8 margint10">
       <div class="row-fluid">
@@ -336,7 +344,7 @@
     <div class = "span4">
       <div class="page-header" style="margin:0 0 10px 0;">
         <h3>Results</h3>
-        <span class="hidden-desktop pull-right" style="margin:-25px 10px 0 0;"><a href="<?php echo base_url('result');?>">View All</a></span>
+        <!--<span class="hidden-desktop pull-right" style="margin:-25px 10px 0 0;"><a href="<?php echo base_url('result');?>">View All</a></span>-->
       </div>
       <div class="tab-box-wrapper">
         <ul id="Acctab" class="nav nav-tabs tabs-box gradient">
@@ -545,7 +553,7 @@
   <div class = "row">
 		<div class = "span12 margint20 marginb20">       
     <!---Photos and Videos Tab--->
-    <span class="hidden-desktop pull-right" style="margin:12px 10px 0 0;"><a href="<?php echo base_url('photos'); ?>">View All</a></span>
+    <!--<span class="hidden-desktop pull-right" style="margin:12px 10px 0 0;"><a href="<?php echo base_url('photos'); ?>">View All</a></span>-->
           <ul id = "gallerytab" class = "nav nav-tabs tabs-line">
             <li class = "active"><a href ="#photos" data-toggle = "tab">Photos</a></li>
             <li><a href ="#videos" data-toggle = "tab">Videos</a></li>
@@ -579,7 +587,7 @@
   
   <div class = "row">
     <div class = "span8 margint20">
-    <span class="hidden-desktop pull-right" style="margin:12px 10px 0 0;"><a href="/news">View All</a></span>
+    <!--<span class="hidden-desktop pull-right" style="margin:12px 10px 0 0;"><a href="/news">View All</a></span>-->
       <ul id="newstab" class="nav nav-tabs tabs-line">
         <li class="active"><a href="#featuredNews" data-toggle="tab">Featured News</a></li>
         <li><a href="#recentNews" data-toggle="tab">Recent News</a></li>

@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* Resolution specific styles for fixed width layout */
+
+@media (min-width: 480px) {
+	body {
+		font-size:12px !important;
+	}
+	.menu li {
+		padding: 15px 8px 10px 8px !important;
+		margin-right: 10px !important;
+	}
+	.menu li a {
+		font-size:12px !important;
+	}
+	.menu .menu_right {
+		margin-right:0px !important;
+	}
+	.white-block .content .date {
+		font-size:12px !important;
+		width:18% !important;
+	}
+	.white-block h4 {
+		font-size:12px !important;
+	}
+	.white-block h5 {
+		font-size:12px !important;
+	}
+	.table th {
+		font-size:12px !important;
+	}
+	.white-block h4 {
+		font-size:12px !important;
+	}
+	.rankings ul {
+		width:100%;
+		margin-left:0px !important;
+	}
+	.ads-336X280 iframe {
+		margin-left:25px !important;
+	}
+	.view {
+		width:168px !important;
+	}
+	.menu_right .input-large {
+		width:92%;
+	}
+	.menu .btn {
+		font-size:11px !important;
+	}
+	.grid li{
+		min-width:186px;
+		width:auto !important;
+		height:176px !important;
+	}
+}
+

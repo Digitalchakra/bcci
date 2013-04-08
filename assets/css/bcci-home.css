@@ -472,6 +472,10 @@ transition:all 0.4s ease-in-out;
 .yellow-dull {
 	color:#ddd2a6
 }
+.yellow-dull:hover{
+	color:#ddd2a6;
+	text-decoration:underline;
+}
 .white {
 	color:#FFF;
 }
