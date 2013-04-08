@@ -167,7 +167,7 @@
           </ul>
         </div>-->
       </div>
-      <span class="pull-right padding20"><a href="<?php echo base_url('schedule'); ?>" class="yellow-dull">View All</a></span>
+      <!--<span class="pull-right padding20"><a href="<?php echo base_url('schedule'); ?>" class="yellow-dull">View All</a></span>-->
     </div>
     <div class = "span8 margint10">
       <div class="row-fluid">

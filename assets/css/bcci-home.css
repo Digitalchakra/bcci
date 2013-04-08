@@ -1076,3 +1076,6 @@ box-shadow:inset 0px 0px 3px rgba(0,0,0,0.5);
 #def_team1_image,#def_team2_image {
 	margin:4px;
 }
+.table th, .table td {
+	text-align:center !important;
+}
