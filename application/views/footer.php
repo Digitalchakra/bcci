@@ -64,7 +64,7 @@
               <li><a href="<?php echo base_url('IPL');?>">IPL</a></li>
               <li><a href="<?php echo base_url('schedule');?>">Schedule</a></li>
               <li><a href="<?php echo base_url('result');?>">Results</a></li>
-              <li><a href="<?php echo base_url('forum');?>">Forum</a></li>
+             <!-- <li><a href="<?php echo base_url('forum');?>">Forum</a></li>-->
               <li><a href="<?php echo base_url('rank/team');?>">Rankings</a></li>
               <li><a href="<?php echo base_url('articles');?>">Article</a></li>
               <li><a href="<?php echo base_url('news');?>">News</a></li>
