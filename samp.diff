@@ -1,0 +1,49 @@
+diff --git a/assets/js/my.js b/assets/js/my.js
+index 1a002fb..1299704 100644
+--- a/assets/js/my.js
++++ b/assets/js/my.js
+@@ -4,7 +4,8 @@ $(document).ready(function()
+ 		$.myplaceholder.mylivescore=[];
+ 		if(getCookieValue("def_live")==="")
+ 		document.cookie="def_live="+"0";
+-		$.myplaceholder.checkreload=0;
++		if(getCookieValue("bot_live")==="")
++		document.cookie="bot_live="+"0";
+ 		livescore();
+ 		news();
+ 		result();
+@@ -262,7 +263,7 @@ function livescore()
+ 			 * when ajax is loading make the current selected tab to update
+ 			 * instead of refresh the list
+ 			 */
+-			//livescoredisplay($.myplaceholder.mylivescore[getCookieValue("def_live")]);
++			livescoredisplay($.myplaceholder.mylivescore[getCookieValue("bot_live")]);
+ 			defaultlivescoredisplay($.myplaceholder.mylivescore[getCookieValue("def_live")]);
+ 			/*if($.myplaceholder.checkreload==0)
+ 			{
+@@ -277,11 +278,11 @@ function livescore()
+ 			{
+ 				$('#lsMakeDefault').attr('listid',this.value);
+ 				$('.live_team').removeClass('active');
+-				$(this).addClass("active");
+-				//livescoredisplay($.myplaceholder.mylivescore[this.value]);
+-				defaultlivescoredisplay($.myplaceholder.mylivescore[this.value]);
+-				document.cookie="def_live="+this.value;
+-				/*var offset = $(this).offset();
++				//$(this).addClass("active");
++				livescoredisplay($.myplaceholder.mylivescore[this.value]);
++				//defaultlivescoredisplay($.myplaceholder.mylivescore[this.value]);
++				document.cookie="bot_live="+this.value;
++				var offset = $(this).offset();
+ 				var toggleboxOffset = $("#lsToggleBox").offset();
+ 				if (toggleboxOffset.left === -350 || toggleboxOffset.left != (offset.left-30))
+ 				{
+@@ -292,7 +293,7 @@ function livescore()
+ 				{
+ 				$('.live_team').removeClass('active');
+ 				$("#lsToggleBox").animate({"left":"-350px"},{duration:300});
+-				}*/
++				}
+ 
+ 			});
+         });
