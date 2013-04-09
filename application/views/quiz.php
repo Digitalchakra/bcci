@@ -25,7 +25,7 @@
           <p style="font-weight:bold;font-style:italic;">There are six questions, representing one full over. Try and hit each of these for a six to win big! </p>
           <div class="well">
             <div class="row-fluid">
-              <div class="span12"> 
+              <div class="span9"> 
                 <h4>Questions</h4>
                 <ol>
                   
@@ -38,6 +38,10 @@
                   
                 </ol>
               </div>
+               <div class="span3 align-center">
+               <h4>Download Here</h4>
+        	<a href="<?php echo base_url('assets/Images/games/quiz/quiz.doc');?>"> <img src="<?php echo base_url('assets/Images/games/crossword/doc_icon.png');?>" style="border:3px solid #EEE" /></a>
+        </div>
             </div>
           </div>
         </div>

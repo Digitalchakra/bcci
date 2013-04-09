@@ -53,6 +53,7 @@
             <div class="pdf-icon">
              <h4 class=" margint20 text-warning">Download the crossword puzzle here</h4>
          <a href="<?php echo base_url('assets/Images/games/crossword/Crossword.pdf');?>"> <img src="<?php echo base_url('assets/Images/games/crossword/pdf_icon.png');?>" /></a>
+         <a href="<?php echo base_url('assets/Images/games/crossword/Crossword.doc');?>"> <img src="<?php echo base_url('assets/Images/games/crossword/doc_icon.png');?>" /></a>
           </div>
             </div>
           </div>
