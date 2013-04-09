@@ -820,7 +820,7 @@ display: block;
 }
 
 .ipl-header-stats{
-	/*display: none;*/
+	display: none;
 	background-color: #adadad;
 	width: 58%;
 	top: 27px;
