@@ -201,12 +201,7 @@ function livescore()
 			$('#liveScore, #ls_bt_close, #closeBg').show();
 			$(data).each(function()
 			{
-				if(data[listcount].matchDataType==='Live Data')
-				{
-					if(data[listcount].series === 'T20 Cricket League 2013')
-					data[listcount].series='Indian Premier League VI 2013'
-					
-					$.each(iplteams, function(index, value) {
+				$.each(iplteams, function(index, value) {
 						if(data[listcount]['team1'].shortName === index)
 						data[listcount]['team1'].shortName=value;
 						
@@ -219,7 +214,10 @@ function livescore()
 						if(data[listcount].bowlingTeamName === index)
 						data[listcount].bowlingTeamName=value;
 					});
-
+				if(data[listcount].matchDataType==='Live Data')
+				{
+					if(data[listcount].series === 'T20 Cricket League 2013')
+					data[listcount].series='Indian Premier League VI 2013'
 					option+='<li value="'+listcount+'" class="live_team">';
 					option+='	<span class="row-fluid">';
                 	option+='		<span class="span12">';
