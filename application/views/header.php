@@ -103,8 +103,8 @@
       -->
 
       <ul class ="menu"> 
-        <li <?php if($view_page=='home') echo 'class="active"';?> ><a href="<?php echo base_url(); ?>" class="drop">Home</a></li>
-        <li <?php if($this->uri->segment(1) =='ipl') echo 'class="ipl-blue"';?> id="ipl_menu"><a href="<?php echo base_url('ipl'); ?>" class="drop" >IPL 2013</a>
+        <li <?php if($view_page=='home') echo 'class="active"';?> ><a href="<?php echo base_url('home'); ?>" class="drop">Home</a></li>
+        <li <?php if($this->uri->segment(1) =='ipl' || $this->uri->segment(1) =='') echo 'class="ipl-blue"';?> id="ipl_menu"><a href="<?php echo base_url('ipl'); ?>" class="drop" >IPL 2013</a>
         <li <?php if($view_page=='schedule') echo 'class="active"';?>><a href="<?php echo base_url('schedule'); ?>" class="drop">Schedule</a><!-- Begin Shedule columns Item -->
 
           <div class="dropdown_2columns"><!-- Begin 5 columns container -->
