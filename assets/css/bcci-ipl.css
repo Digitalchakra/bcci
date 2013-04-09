@@ -285,11 +285,13 @@ body{ background:#e6e6e6; font:12px;  }
 
 .ipl-matchState{
 	text-align: center;
+	width: 350px;
 	height: 22px;
 	padding-top: 4px;
-	margin: 0 auto;
+	padding-left: 5px;
 	color: #ffd942;
 	font-size: 14px;
+	float: left;
 }
 	
 .ipl-sb-score{

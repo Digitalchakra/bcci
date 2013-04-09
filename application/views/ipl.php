@@ -37,9 +37,11 @@
 	
 			</div>
 			<div class="span6 ipl-scoreboard" id="ipl_liveScore">
-				<div >
+				<div style="height:21px;">
+					<h4 style="float:left;padding-top:5px; color:#ffd942;padding-left:10px; font-size:14px; font-weight:bold;">Score board</h4>
 					<h4 class="ipl-matchState" id="ipl_matchstate"></h4>
 				</div>
+				<div class="clearBoth"></div>
 				<div class="row-fluid ipl-sb-team">
 					
 						
