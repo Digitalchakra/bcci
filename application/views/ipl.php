@@ -180,27 +180,7 @@
 						</div>
 					
 			</div>
-				<div class="ipl-header-stats">
-					<table WIDTH="100%" HEIGHT="100%">
-						<tr WIDTH="100%">
-							<td class="clbl1"><p class="ipl-font24">567</p><h4>Runs</h4></td>
-							<td class="clbl2"><p class="ipl-font24">197</p><h4>Dot Balls</h4></td>
-							<td class="clbl3"><p class="ipl-font24">95m</p><h4>Longest Six</h4></td>
-						</tr>
-						<tr WIDTH="100%">
-							<td class="clbl4"><p class="ipl-font24">14</p><h4>Sixes</h4></td>
-							<td class="clbl5"><p class="ipl-font24">24</p><h4>Wickets</h4></td>
-							<td class="clbl6"><p class="ipl-font24">3</p><h4>Half Centuries</h4></td>
-						</tr>
-						<tr WIDTH="100%">
-							<td class="clbl7"><p class="ipl-font24">316</p><h4>Runs from Boundaries</h4></td>
-							<td class="clbl8"><p class="ipl-font12">146.67 KPH</p><h4>Fastest Ball</h4></td>
-							<td class="clbl9">
-								<a href="#"class="ipl-font18" >View all</a>
-								<div class="ipl-arrow-right"></div>
-							</td>
-						</tr>
-					</table>
+				<div class="ipl-header-stats" id="ipl-header-stats">
 				</div>
 			</div>
 			<div class="span3 ipl-header3">
@@ -543,5 +523,6 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </footer>-->
 
 <script src="<?php echo base_url('assets/js/ipl.js');?>"></script>
+<script src="<?php echo base_url('assets/js/ipl_statistics.js');?>"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.js"></script>               
  				            
