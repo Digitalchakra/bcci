@@ -191,6 +191,7 @@ function livescore()
 		var data=result.query.results.json.json
 			listcount=0;
 			option="";
+			fixture="";
 			$('#ls_bt_close , #closeBg').show();
 			//$.myplaceholder.mylivescore=[];
 			//$('.live_team').removeClass('active');
@@ -270,10 +271,16 @@ function livescore()
 					}
 					$.myplaceholder.mylivescore.push(data[listcount]);
 				}
+				else if(data[listcount].matchDataType==='Fixture')
+				{
+					fixture+=data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName+'-'+data[listcount].matchdesc+'-'+data[listcount]['match-day']+'-'+data[listcount]['venue-city']+' | ';
+				}
 				listcount++;
 
 				});
 				$('#livescore_dd').html(option);
+				$('#fixture_list').html(fixture);
+				
 
 			/*some bug has to fix
 			 * when ajax is loading make the current selected tab to update
