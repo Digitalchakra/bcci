@@ -274,12 +274,13 @@ function livescore()
 				}
 				else if(data[listcount].matchDataType==='Fixture')
 				{
-					fixture+=data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName+'-'+data[listcount].matchdesc+'-'+data[listcount]['match-day']+'-'+data[listcount]['venue-city']+'  |  ';
+					fixture+='<li>'+data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName+'-'+data[listcount].matchdesc+'-'+data[listcount]['match-day']+'-'+data[listcount]['venue-city']+'</li>';
 				}
 				listcount++;
 
 				});
 				$('#livescore_dd').html(option);
+				fixture+='<li><span> </span></li>';
 				$('#fixture_list').html(fixture);
 				
 
@@ -868,4 +869,15 @@ function getCookieValue(key)
         }
     }
     return "";
+}
+function test()
+{
+	 var site='http://dynamic.pulselive.com/dynamic/data/core/cricket/2012/ipl2013/TournamentInNumbers.js';
+	 // Fall back URL incase the above URL does not work
+	 //var site='http://webclient.cricbuzz.com/includes/deccanherald/livecricketscore/web-client-match-details.json';  
+    // Take the provided url, and add it to a YQL query. Make sure you encode it!  
+    var yql = 'http://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('select * from json where url="' + site + '"') + '&format=json';  	
+	 $.getJSON( yql,function(result) {
+		 alert("wrrf");
+        });
 }

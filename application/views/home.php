@@ -47,7 +47,7 @@
         <div class="span12">
           <div class="padding10">
 			  <div style="text-align:center" class="white team_name" id="def_matchstate"></div>
-          <div style="text-align:center" class="team_images row-fluid margint20">
+          <div style="text-align:center" class="team_images row-fluid margint10">
             <div class="span5"><!--TeamA-->
               <div id="def_team_icon1">
                 <div id="def_team1_image"></div>
@@ -145,7 +145,7 @@
             </div>
             
             <div style="text-align:center" class="span12"><!--Wickets-->
-              <h5 class="yellow"><span id="def_strikers_lname"></span></h5>
+              <h5 class="yellow" style="margin-top:12px"><span id="def_strikers_lname"></span></h5>
             </div>
             
           </div>
@@ -159,7 +159,11 @@
             <div class="row-fluid">
             	<div class="span12">
               	<div class="ticker-bg">
-                	<span class = "yellow">Upcoming:</span><marquee direction="left" scrollamount="3"  id="fixture_list" class="white pull-right" width="220px" ></marquee>
+                	<span class = "yellow">Upcoming:</span>
+                    <span id="ticker">
+                      <ul id="fixture_list" >
+                   		</ul>
+                  </span>
                 </div>
               </div>
             </div>
@@ -177,7 +181,7 @@
         <div class="span12">
           <div id="myCarousel" class="carousel slide" style="z-index:0"> 
             <!-- Carousel items -->
-           <div class="carousel-inner" id="bannerslide" style="height:440px"> 
+           <div class="carousel-inner" id="bannerslide" style="height:460px"> 
               <!-- banner img from my.js--> 
             </div>
              <!-- Carousel nav --> 
@@ -642,3 +646,9 @@
         
       </div>
     </div>-->
+   <script type="text/javascript">
+   function tick(){
+		$('#ticker ul li:first').slideUp( function () { $(this).appendTo($('#ticker ul')).slideDown(); });
+		}
+		setInterval(function(){ tick () }, 5000);
+		</script>

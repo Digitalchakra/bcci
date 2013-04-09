@@ -500,7 +500,7 @@ color:#FFF;
 box-shadow:inset 0 0 0 4px rgba(0,0,0,0.45),
 					 inset 1px 1px 16px 0 rgba(0,0,0,0.8);
 					 text-shadow:0px 1px 3px rgba(0,0,0,0.4);
-					 height:455px;
+					 height:460px;
 }
 
 .livescore_bg_white{
@@ -635,7 +635,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5e5e5e', end
 }
 .livescore_bg h5 {
 	font-size:16px;
-	line-height:18px;
+	line-height:8px;
 }
 .align-left {
 	text-align:left;
@@ -1026,7 +1026,7 @@ font-weight: bold;
 }
 .h-seperator {
 	border-top:1px solid rgba(255,255,255,0.5);
-	padding:10px 0;
+	margin:5px 0;
 }
 /*-------------Livescore Grids---------------------------*/
 
@@ -1106,135 +1106,22 @@ box-shadow:inset 0px 0px 3px rgba(0,0,0,0.5);
 	padding:4px;
 	height:22px;
 }
-.ticker-wrapper.has-js {
-	
-}
-.ticker {
-	width: 100%;
-	height: 23px;
-	display: block;
-	position: relative;
-	overflow: hidden;
-	padding-left:5px;
-}
-.ticker-title {
-	color: #F90;
-	font-weight: bold;
-	text-transform: uppercase;
-	font-size:10px;
-}
-.ticker-content {
-	position: absolute;
-	overflow: hidden;
-	white-space: nowrap;
+.ticker-bg .yellow {
+	color:#F90;
 	font-size:11px;
+	font-weight:bold;
 }
-.ticker-content:focus {
-	none;
+#ticker{
+	overflow:hidden;
 }
-.ticker-content a {
-	text-decoration: none;	
-	color: #FFF;
-	text-shadow:1px 1px 2px rgba(0,0,0,0.3);
+#ticker ul{
+	height:40px;
+	overflow:hidden;
+	margin:-20px 0 0 65px;
 }
-.ticker-content a:hover {
-	text-decoration: underline;	
-	color: #FEB096;
-}
-/*
-.ticker-swipe {
-	position: absolute;
-	top: 0px;
-	background-color: #f8f0db;
-	display: block;
-	width: 800px;
-	height: 23px; 
-}
-.ticker-swipe span {
-	margin-left: 1px;
-	background-color: #f8f0db;
-	border-bottom: 1px solid #1F527B;
-	height: 12px;
-	width: 7px;
-	display: block;
-}
-*/
-.ticker-controls {
-	padding: 8px 0px 0px 0px;
-	list-style-type: none;
-	float: left;
-}
-.ticker-controls li {
-	padding: 0px;
-	margin-left: 5px;
-	float: left;
-	cursor: pointer;
-	height: 16px;
-	width: 16px;
-	display: block;
-}
-.ticker-controls li.jnt-play-pause {
-	background-image: url('../images/controls.png');
-	background-position: 32px 16px;
-}
-.ticker-controls li.jnt-play-pause.over {
-	background-position: 32px 32px;
-}
-.ticker-controls li.jnt-play-pause.down {
-	background-position: 32px 0px;
-}
-.ticker-controls li.jnt-play-pause.paused {
-	background-image: url('../images/controls.png');	
-	background-position: 48px 16px;
-}
-.ticker-controls li.jnt-play-pause.paused.over {
-	background-position: 48px 32px;
-}
-.ticker-controls li.jnt-play-pause.paused.down {
-	background-position: 48px 0px;
-}
-.ticker-controls li.jnt-prev {
-	background-image: url('../images/controls.png');
-	background-position: 0px 16px;		
-}
-.ticker-controls li.jnt-prev.over {
-	background-position: 0px 32px;		
-}
-.ticker-controls li.jnt-prev.down {
-	background-position: 0px 0px;		
-}
-.ticker-controls li.jnt-next {
-	background-image: url('../images/controls.png');	
-	background-position: 16px 16px;	
-}
-.ticker-controls li.jnt-next.over {
-	background-position: 16px 32px;	
-}
-.ticker-controls li.jnt-next.down {	
-	background-position: 16px 0px;	
-}
-.js-hidden {
-	display: none;
-}
-.no-js-news {
-	padding: 10px 0px 0px 45px; 
-	color: #F8F0DB;
-}
-.left .ticker-swipe {
-	/*left: 80px;*/
-}
-.left .ticker-controls, .left .ticker-content, .left .ticker-title, .left .ticker {
-    float: left;
-}
-.left .ticker-controls {
-    padding-left: 6px;
-}
-.right .ticker-swipe {
-	/*right: 80px;*/
-}
-.right .ticker-controls, .right .ticker-content, .right .ticker-title, .right .ticker {
-    float: right;
-}
-.right .ticker-controls {
-    padding-right: 6px;
+#ticker ul li {
+	height:40px;
+	font-size:11px;
+	font-weight:bold;
+	overflow:hidden;
 }

@@ -20,7 +20,7 @@
         </div>
         <!--Second Row-->
         <div class = "row">
-          <div class = "span10 pull-right" style="padding-bottom:72px">
+          <div class = "span10 pull-right" style="padding-bottom:32px">
             <div class = "padding20 bottom-rline">
               <p>
               <!-- <h5>Contact</h5> -->
@@ -115,7 +115,7 @@
       <div class = "span4"> 
       	&copy; Copyright BCCI <?php echo date('Y');?>. All Rights reserved.
        </div>
-      <div class = "span4 pull-left">
+      <div class = "span5 pull-left">
         
         	Powered by <a href = "http://www.digitalchakra.in" target="_blank"><div class="digital_chakra pull-right"></div></a>
         
