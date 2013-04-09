@@ -123,7 +123,7 @@
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row" id="footer-space">
 	<div class="span12" style="margin-bottom:76px"></div>
 </div>
 	  

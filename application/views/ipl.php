@@ -54,7 +54,7 @@
 								<div id="ipl_team1_image" class="clearBoth centerFix leftFix">
 								</div>
 							</div>
-							<div class="span6 ipl-sb-score not_live">
+							<div class="span6 ipl-sb-score iplnot_live">
 								
 									<h3 id="ipl_team1_score"></h3>
 									<h4 id="ipl_team1_over"></h4>
@@ -133,7 +133,7 @@
 								</div>
 
 							</div>
-							<div class="span6 ipl-sb-score not_live">
+							<div class="span6 ipl-sb-score iplnot_live">
 									<h3 id="ipl_team2_score"></h3>
 									<h4 id="ipl_team2_over"></h4>
 							</div>

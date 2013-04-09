@@ -30,6 +30,7 @@ $(document).ready(function()
 				$("#ls_bt_close").click(function() {
 				$("#lsClose").toggle(200);
 					$("#closeBg").toggleClass("static-bottom-bg");
+					$("#footer-space").toggleClass("hide-footer-space");
 					});		
 				$.myplaceholder.checkreload=this.value;
 		$(".fancybox").fancybox(
@@ -273,7 +274,7 @@ function livescore()
 				}
 				else if(data[listcount].matchDataType==='Fixture')
 				{
-					fixture+=data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName+'-'+data[listcount].matchdesc+'-'+data[listcount]['match-day']+'-'+data[listcount]['venue-city']+' | ';
+					fixture+=data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName+'-'+data[listcount].matchdesc+'-'+data[listcount]['match-day']+'-'+data[listcount]['venue-city']+'  |  ';
 				}
 				listcount++;
 

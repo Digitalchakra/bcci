@@ -134,7 +134,7 @@ function ipllivescoredisplay(data)
 				//$('#series_title').html(data.matchType+" - "+data.matchdesc);
 				$('#livescore_dd_title').html(data['team1'].shortName+' vs '+data['team2'].shortName+'<span class="caret"></span>');
 				$('#ipl_matchstate').html('');
-				$('#ipl_playerstate, #ipl_bowlerstate, .not_live').show();
+				$('#ipl_playerstate, #ipl_bowlerstate, .iplnot_live').show();
 				$('#ipl_series_title').html(data.series);
 				//team name
 				$('#ipl_team1').html(data.battingTeamName);
@@ -255,7 +255,7 @@ function ipllivescoredisplay(data)
 				}
 				if(data.state=='preview')
 				{
-				$('#ipl_playerstate, #ipl_bowlerstate, .not_live').hide();
+				$('#ipl_playerstate, #ipl_bowlerstate, .iplnot_live').hide();
 				$('#ipl_matchstate').html('Starting '+new Date(data.startdayandtimeGMT));
 				}
 }
