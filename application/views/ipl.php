@@ -267,7 +267,7 @@
 <div class="container">
 	<!--======================================================ADs=======================-->
 <div class="row-fluid">
-	<div class="span8 ipl-ads">
+	<div class="span9 ipl-ads">
 		
 			<script type="text/javascript"><!--
 google_ad_client = "ca-pub-1444369114752839";
@@ -282,7 +282,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 		
 	</div>
-	<div class="span4 ipl-ads">
+	<div class="span3 ipl-ads">
 		
 			
 <script type="text/javascript"><!--

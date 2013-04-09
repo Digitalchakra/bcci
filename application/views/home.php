@@ -5,8 +5,8 @@
   <!--Top Ads-->
 	<div class="span12">
   <div class="row">
-        <div class="span8 offset2">
-          <div class = "ads-728X90"> 
+        <div class="span8 offset1">
+          <div class = "ads-728X90" style="margin-left:10px;"> 
             <script type="text/javascript"><!--
 		google_ad_client = "ca-pub-1444369114752839";
 		/* 728x90, created 12/12/07 */
@@ -159,11 +159,9 @@
             <div class="row-fluid">
             	<div class="span12">
               	<div class="ticker-bg">
-                	<span class = "yellow">Upcoming:</span>
-                    <span id="ticker">
-                      <ul id="fixture_list" >
-                   		</ul>
-                  </span>
+                	<span><a class = "yellow" href="<?php echo base_url('schedule'); ?>">Upcoming:</a><div class="pull-right" style="width:220px">
+                  <marquee class="white" id="fixture_list" scrollamount="2" scrolldelay="1" behavior="scroll"></marquee>
+                  </div> </span>
                 </div>
               </div>
             </div>

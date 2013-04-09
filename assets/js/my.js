@@ -272,13 +272,12 @@ function livescore()
 				}
 				else if(data[listcount].matchDataType==='Fixture')
 				{
-					fixture+='<li>'+data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName+'-'+data[listcount].matchdesc+'-'+data[listcount]['match-day']+'-'+data[listcount]['venue-city']+'</li>';
+					fixture+='&#8226; <span style = "opacity:0">---</span>'+data[listcount]['team1'].shortName+' vs '+data[listcount]['team2'].shortName+'-'+data[listcount].matchdesc+'-'+data[listcount]['match-day']+'-'+data[listcount]['venue-city']+'<span style = "opacity:0">---</span>';
 				}
 				listcount++;
 
 				});
 				$('#livescore_dd').html(option);
-				fixture+='<li><span> </span></li>';
 				$('#fixture_list').html(fixture);
 				
 
