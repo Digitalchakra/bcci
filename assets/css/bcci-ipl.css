@@ -214,7 +214,6 @@ body{ background:#e6e6e6; font:12px;  }
 	border: 1px #282828;
 	text-align: center;
 	color: #ffffff;
-
 }
 
 .ipl-pts th{
@@ -231,14 +230,19 @@ body{ background:#e6e6e6; font:12px;  }
 
 .ipl-pts tr{
 	height: 18px;
-	border-spacing: 0px;
+	
 }
 
-.ipl-pts tr.ipl-table-c1 td{background-color: #383838;}
-.ipl-pts tr.ipl-table-c2 td{background-color: #545454;}
+
+
+
+.ipl-pts tr.ipl-table-c1 td{background-color: #383838; }
+.ipl-pts tr.ipl-table-c2 td{background-color: #545454; color: #ffffff;}
 	
 
-
+.ipl-pts table,th, td{
+border: 1px solid #282828;
+}
 
 
 /*---------------------------------------------------------------Scoreboard---------------------------------*/

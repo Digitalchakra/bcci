@@ -256,7 +256,7 @@ function ipllivescoredisplay(data)
 				if(data.state=='preview')
 				{
 				$('#ipl_playerstate, #ipl_bowlerstate, .iplnot_live').hide();
-				$('#ipl-header-stats').show();
+				//$('#ipl-header-stats').show();
 				$('#ipl_matchstate').html('Starting '+new Date(data.startdayandtimeGMT));
 				}
 }

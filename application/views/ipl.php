@@ -523,6 +523,6 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </footer>-->
 
 <script src="<?php echo base_url('assets/js/ipl.js');?>"></script>
-<script src="<?php echo base_url('assets/js/ipl_statistics.js');?>"></script>
+<!--<script src="<?php //echo base_url('assets/js/ipl_statistics.js');?>"></script> -->
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.js"></script>               
  				            
