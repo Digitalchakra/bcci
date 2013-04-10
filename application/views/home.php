@@ -400,16 +400,16 @@
 <div class = "span4 margint20 visible-desktop" style="margin-top:30px;">
       <div class = "ads-300X250 pull-right"> 
         <script type="text/javascript"><!--
-		google_ad_client = "ca-pub-1444369114752839";
-		/* 336x280, created 6/2/10 */
-		google_ad_slot = "3029230199";
-		google_ad_width = 300;
-		google_ad_height = 250;
-		//-->
-		</script>
-		<script type="text/javascript"
-		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-		</script>
+google_ad_client = "ca-pub-1444369114752839";
+/* 300X250 ad */
+google_ad_slot = "6084393496";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
     </div>
     </div>
       </div>
@@ -610,20 +610,20 @@
       </div>
       <span class="pull-left"><sub>via wisdenindia.com</sub></span> </div>
     <div class="span4 margint20">
-          <div class="row visible-desktop" style="margin-top:60px;">
+          <div class="row visible-desktop">
             <div class="span4">
               <div class="ads-300X250 pull-right"> 
                 <script type="text/javascript"><!--
-		google_ad_client = "ca-pub-1444369114752839";
-		/* 336x280, created 6/2/10 */
-		google_ad_slot = "3029230199";
-		google_ad_width = 300;
-		google_ad_height = 250;
-		//-->
-		</script>
-		<script type="text/javascript"
-		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-		</script> 
+google_ad_client = "ca-pub-1444369114752839";
+/* 300X250 ad */
+google_ad_slot = "6084393496";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
               </div>
             </div>
             
