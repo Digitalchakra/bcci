@@ -1,6 +1,9 @@
 $(document).ready(function()
 {
-	statistics();
+	setInterval(function() {
+          statistics();
+			}, 300000);
+	
 });
 function statistics()
 {
@@ -26,7 +29,7 @@ function statistics()
 		html+=				'</tr>';
 		html+=				'<tr WIDTH="100%">';
 		html+=					'<td class="clbl7"><p class="ipl-font24">'+jsondata.tournamentInNumbers[0].runsFromBoundaries+'</p><h4>Runs from Boundaries</h4></td>';
-		html+=					'<td class="clbl8"><p class="ipl-font12">'+jsondata.tournamentInNumbers[0].fastestBallKmh+' KPH</p><h4>Fastest Ball</h4></td>';
+		html+=					'<td class="clbl8"><p class="ipl-font24">'+jsondata.tournamentInNumbers[0].fastestBallKmh+'</p><h4>Fastest Ball</h4></td>';
 		html+=					'<td class="clbl9">';
 		html+=						'<a href="#"class="ipl-font18" >View all</a>';
 		html+=						'<div class="ipl-arrow-right"></div>';
