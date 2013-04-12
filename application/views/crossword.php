@@ -44,7 +44,7 @@
       <div class="span7">
        <div class="padding20">
       <div class="page-header">
-            <h3 style="color:#FFF;">IPL Crossword Contest for BCCI.com (IPL-6/001)</h3>
+            <h3 style="color:#FFF;">IPL Crossword Contest for BCCI.com (IPL-6/002)</h3>
             <h4 style="color:#FFF;">Compiler: Karthik K Ramamurthy </h4>
           </div>
           <div class="social_links  margint20">
@@ -52,8 +52,8 @@
             <h4  style="color:#FFF;">Twitter: @fromkarthik</h4>
             <div class="pdf-icon">
              <h4 class=" margint20 text-warning">Download the crossword puzzle here</h4>
-         <a href="<?php echo base_url('assets/Images/games/crossword/Crossword.pdf');?>"> <img src="<?php echo base_url('assets/Images/games/crossword/pdf_icon.png');?>" /></a>
-         <a href="<?php echo base_url('assets/Images/games/crossword/Crossword.doc');?>"> <img src="<?php echo base_url('assets/Images/games/crossword/doc_icon.png');?>" /></a>
+         <a href="<?php echo base_url('assets/Images/games/crossword/BCCI_IPL6_Crossword02.xls');?>"> <img src="<?php echo base_url('assets/Images/games/crossword/excel_icon.png');?>" /></a>
+         <!-- <a href="<?php //echo base_url('assets/Images/games/crossword/Crossword.doc');?>"> <img src="<?php //echo base_url('assets/Images/games/crossword/doc_icon.png');?>" /></a> -->
           </div>
             </div>
           </div>
