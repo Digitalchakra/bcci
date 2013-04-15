@@ -9,7 +9,7 @@
       <div class = "row">
         <div class = "span12 margint20">
           <div class = "page-header align-center">
-            <h3>IPL Quiz Contest for BCCI.com (IPL-6/001)</h3>
+            <h3>IPL Quiz Contest for BCCI.com (IPL-6/002)</h3>
             <h4 class="dark-grey">Compiler: Karthik K Ramamurthy </h4>
           </div>
           <span class="pull-left">
@@ -29,18 +29,18 @@
                 <h4>Questions</h4>
                 <ol>
                   
-                  <li>There are three Sachins in IPL-6. The most obvious is the ‘Little Master’. Provide the full names of the other two, along with the teams they will play for.</li>
-                  <li>Name the cricketer who scored the first-ever IPL century. For full-points, also the name the team against which he scored this century.</li>
-                  <li>Matthew Hayden introduced a rather interesting innovation in IPL3. Name the innovation and its inventor.</li>
-                  <li>Owner of the franchise: IndiaWin Sports Pvt Ltd. Name the franchise and its captain in IPL6.</li>
-                  <li>Name the head coach and mentor of the Sunrisers Hyderabad, the team making its debut in IPL6.</li>
-                  <li>Which IPL6 player has the best economy rate of all bowlers who have bowled at least 300 deliveries in T-20 cricket? For full points, name the team he plays for in this year’s IPL.</li>
+                  <li>Who was the first ever player purchased by an IPL franchise at the auction held on April 20, 2008 at Mumbai.</li>
+                  <li>As of 3rd April 2013, which Indian stadium held the record for the most IPL matches held at the venue?</li>
+                  <li>The “Orange cap” was handed over to three different IPL batsmen on April 9, 2013. For full points, provide their names in the right order – earliest to latest.</li>
+                  <li>Name the wicket keeper with the most dismissals in IPL history till the start of IPL6.</li>
+                  <li>Which IPL team did Ishank Jaggi represent in IPL 2012?</li>
+                  <li>Sixers are an appropriate subject for Question 6! Name the batsman who scored the maximum number of sixers in IPL-1. For maximum points, your answer should include the number of sixers he hit in that edition.</li>
                   
                 </ol>
               </div>
                <div class="span3 align-center">
                <h4>Download Here</h4>
-        	<a href="<?php echo base_url('assets/Images/games/quiz/quiz.doc');?>"> <img src="<?php echo base_url('assets/Images/games/crossword/doc_icon.png');?>" style="border:3px solid #EEE" /></a>
+        	<a href="<?php echo base_url('assets/Images/games/quiz/BCCI_IPL6_Quiz02.xlsx');?>"> <img src="<?php echo base_url('assets/Images/games/crossword/excel_icon.png');?>" style="border:3px solid #EEE" /></a>
         </div>
             </div>
           </div>

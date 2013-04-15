@@ -1,5 +1,6 @@
 $(document).ready(function()
 {
+	statistics();
 	setInterval(function() {
           statistics();
 			}, 300000);
