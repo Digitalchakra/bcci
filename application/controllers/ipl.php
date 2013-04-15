@@ -31,7 +31,6 @@ class Ipl extends CI_Controller
 		$data['mostSix']=$this->iplmodel->mostSix();
 		$data['highestScore']=$this->iplmodel->highestScore();
 		$data['highestStrikeRate']=$this->iplmodel->highestStrikeRate();
-		
 		$data['view_page'] = 'ipl_batting_stats';
 		//echo "<pre>";
 		//print_r($data); die;
@@ -40,13 +39,12 @@ class Ipl extends CI_Controller
 	function bowling_stats()
 	{
 		$this->load->helper('url');
-		
+		$total_count=array();
 		$this->load->model('iplmodel');
 		$data['mostWicket']=$this->iplmodel->mostWicket();
 		$data['bestBowling']=$this->iplmodel->bestBowling();
 		$data['bestBowlingAvg']=$this->iplmodel->bestBowlingAvg();
 		$data['bestBowlingEconomy']=$this->iplmodel->bestBowlingEconomy();
-		
 		$data['view_page'] = 'ipl_bowling_stats';
 		//echo "<pre>";
 		//print_r($data); die;

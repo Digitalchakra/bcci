@@ -1,12 +1,23 @@
 <div class="container">	
 	<div class="span12 container">
 		<div class="span3">
+			<input type="text" id="wick_pname" autocomplete="off"/>
+			<div class="span12 container">
+				<ul id="testul"></ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">	
+	<div class="span12 container">
+		<div class="span3">
 			<? foreach($mostWicket as $single)
 			{?>
+			<div class="wick_pname" wick_pname="<?=strtolower($single->pfullName)?>" id="<? echo 'w'.$single->pid;?>">
 				<div>Wickets : <?=$single->w?></div>
 				<div>Name : <?=$single->pfullName?></div>
 				<div>Team : <?=$single->team_abbreviation?></div>
-				<div id="<? echo $single->pid.$single->team_id?>">
+				<div>
 					<u>Extra-Data</u>
 					<div>DOB : <?=$single->pdob?></div>
 					<div>Nationality : <?=$single->nationality?></div>
@@ -31,18 +42,20 @@
 					<div>10w : <?=$single->{'10w'}?></div>
 					<div>maid : <?=$single->maid?></div>
 					<div>wmaid : <?=$single->wmaid?></div>
-					<div>Inns<?=$single->inns?></div>
+					<div>Inns : <?=$single->inns?></div>
 				</div>
 				<hr></hr>
+			</div>
 			<?}?>
 		</div>
 		<div class="span3">
 			<? foreach($bestBowling as $single)
 			{?>
+			<div class="pname" bowling_pname="<?=strtolower($single->pfullName)?>" id="<? echo'bb'.$single->pid;?>">
 				<div>Wickets/Runs : <?=$single->w?>/<?=$single->r?></div>
 				<div>Name : <?=$single->pfullName?></div>
 				<div>Team : <?=$single->team_abbreviation?></div>
-				<div id="<? echo $single->pid.$single->team_id?>">
+				<div>
 					<u>Extra-Data</u>
 					<div>DOB : <?=$single->pdob?></div>
 					<div>Nationality : <?=$single->nationality?></div>
@@ -67,18 +80,20 @@
 					<div>10w : <?=$single->{'10w'}?></div>
 					<div>maid : <?=$single->maid?></div>
 					<div>wmaid : <?=$single->wmaid?></div>
-					<div>Inns<?=$single->inns?></div>
+					<div>Inns : <?=$single->inns?></div>
 				</div>
 				<hr></hr>
+			</div>
 			<?}?> 
 		</div>
 		<div class="span3">
 			<? foreach($bestBowlingAvg as $single)
 			{?>
+			<div class="pname" avg_pname="<?=strtolower($single->pfullName)?>" id="<? echo 'ba'.$single->pid;?>">
 				<div>Average : <?=$single->a?></div>
 				<div>Name : <?=$single->pfullName?></div>
 				<div>Team : <?=$single->team_abbreviation?></div>
-				<div id="<? echo $single->pid.$single->team_id?>">
+				<div>
 					<u>Extra-Data</u>
 					<div>DOB : <?=$single->pdob?></div>
 					<div>Nationality : <?=$single->nationality?></div>
@@ -103,18 +118,20 @@
 					<div>10w : <?=$single->{'10w'}?></div>
 					<div>maid : <?=$single->maid?></div>
 					<div>wmaid : <?=$single->wmaid?></div>
-					<div>Inns<?=$single->inns?></div>
+					<div>Inns : <?=$single->inns?></div>
 				</div>
 				<hr></hr>
+			</div>
 			<?}?>
 		</div>
 		<div class="span3">
 			<? foreach($bestBowlingEconomy as $single)
 			{?>
+			<div class="pname" econ_pname="<?=strtolower($single->pfullName)?>" id="<? echo 'be'.$single->pid;?>">
 				<div>Econ : <?=$single->e?></div>
 				<div>Name : <?=$single->pfullName?></div>
 				<div>Team : <?=$single->team_abbreviation?></div>
-				<div id="<? echo $single->pid.$single->team_id?>">
+				<div>
 					<u>Extra-Data</u>
 					<div>DOB : <?=$single->pdob?></div>
 					<div>Nationality : <?=$single->nationality?></div>
@@ -139,10 +156,38 @@
 					<div>10w : <?=$single->{'10w'}?></div>
 					<div>maid : <?=$single->maid?></div>
 					<div>wmaid : <?=$single->wmaid?></div>
-					<div>Inns<?=$single->inns?></div>
+					<div>Inns : <?=$single->inns?></div>
 				</div>
 				<hr></hr>
+			</div>
 			<?}?> 
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#wick_pname').keyup(function(){
+		//alert($(this).val());
+		$('#testul').html('');
+		search_txt=$.trim($(this).val());
+		//$('.wick_pname').hide();
+		if(search_txt.length>0)
+		{
+			$("div[wick_pname^='"+$('#wick_pname').val().toLowerCase()+"'], div[wick_pname*='"+$('#wick_pname').val().toLowerCase()+"']").each(function(){
+				$('#testul').append('<li onclick=searchresult("'+$(this).attr('id')+'");>'+$(this).attr('wick_pname')+'</li>');
+			});
+		}
+		else
+		{
+			$('#testul').html('');
+		}
+	});
+});
+function searchresult(divID)
+{
+	//alert(divID);
+	$('#testul').html('');
+	$('.wick_pname').hide();
+	$('#'+divID).show();
+}
+</script>

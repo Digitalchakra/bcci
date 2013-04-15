@@ -19,6 +19,8 @@ try
 		echo "<pre>"; 
 		//print_r($json_output); die;
 		foreach ($json_output['bestStrikeRate'][0]['topPlayers'] as $single) {
+			if(!isset($single['battingStats']['b']))
+				$single['battingStats']['b']=0;
 			$data['pid']=$single['player']['id'];
 			$data['pfullName']=$single['player']['fullName'];
 			$data['pdob']=$single['player']['dateOfBirth'];
