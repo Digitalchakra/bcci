@@ -32,10 +32,10 @@ class Ipl extends CI_Controller
 		$data['highestScore']=$this->iplmodel->highestScore();
 		$data['highestStrikeRate']=$this->iplmodel->highestStrikeRate();
 		
-		$data['view_page'] = 'ipl';
-		echo "<pre>";
-		print_r($data); die;
-		//$this->load->view('template', $data);
+		$data['view_page'] = 'ipl_batting_stats';
+		//echo "<pre>";
+		//print_r($data); die;
+		$this->load->view('template', $data);
 	}
 	function bowling_stats()
 	{
@@ -47,10 +47,10 @@ class Ipl extends CI_Controller
 		$data['bestBowlingAvg']=$this->iplmodel->bestBowlingAvg();
 		$data['bestBowlingEconomy']=$this->iplmodel->bestBowlingEconomy();
 		
-		$data['view_page'] = 'ipl';
-		echo "<pre>";
-		print_r($data); die;
-		//$this->load->view('template', $data);
+		$data['view_page'] = 'ipl_bowling_stats';
+		//echo "<pre>";
+		//print_r($data); die;
+		$this->load->view('template', $data);
 	}
 	function points_json()
 	{

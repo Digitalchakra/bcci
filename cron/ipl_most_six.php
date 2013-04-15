@@ -16,8 +16,8 @@ try
 		$json =strstr($json, '{');
 		$json = substr($json, 0, -2);
 		$json_output = json_decode($json,true);
-		echo "<pre>"; 
-		print_r($json_output); die;
+//		echo "<pre>"; 
+//		print_r($json_output); die;
 		foreach ($json_output['mostSixes'][0]['topPlayers'] as $single) {
 			$data['pid']=$single['player']['id'];
 			$data['pfullName']=$single['player']['fullName'];
