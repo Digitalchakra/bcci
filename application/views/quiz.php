@@ -51,7 +51,7 @@
           <p>Rules: </p>
           <ul class="margint20" style="font-size:10px; font-weight:bold;">
           	<li>One IPL Quiz will be published on BCCI.com every Wednesday till the end of IPL-6. That gives you SEVEN great ways to win!</li>
-            <li>All entries will need to be sent to contact@bcci.com with the subject line, "IPL Quiz Entry". All entries should be received latest by 6 PM IST the Wednesday after the Quiz was published. For example, the deadline for IPL6 Quiz 01 will be 6 PM (IST) on 10th April 2013.</li>
+            <li>All entries will need to be sent to contact@bcci.com with the subject line, "IPL Quiz Entry". All entries should be received latest by 6 PM IST the Wednesday after the Quiz was published.</li>
             <li>Include your full name, home city, mobile number and email address in your email entry.</li>
             <li>Type in your answers in the body of the email with the Question number and answer.</li>
             <li>In the case of more than one all-correct entry for any weekly quiz, the first tie-breaker will be answers to questions that are underlined. If ties still remain, ultimate winners will be decided based on draw of lots.</li>
