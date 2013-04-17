@@ -44,7 +44,7 @@
       <div class="span7">
        <div class="padding20">
       <div class="page-header">
-            <h3 style="color:#FFF;">IPL Crossword Contest for BCCI.com (IPL-6/002)</h3>
+            <h3 style="color:#FFF;">IPL Crossword Contest for BCCI.com (IPL-6/003)</h3>
             <h4 style="color:#FFF;">Compiler: Karthik K Ramamurthy </h4>
           </div>
           <div class="social_links  margint20">
@@ -65,7 +65,7 @@
         <div class="span12"> 
               	<h4>Guidelines</h4>
                 <ol>
-                	<li>Send all completed entries to contact@bcci.com with the subject line “IPL6 Crossword 2” on or before Wednesday, 17th April 2013.</li>
+                	<li>Send all completed entries to contact@bcci.com with the subject line “IPL6 Crossword 3” on or before Wednesday, 24th April 2013.</li>
                   <li>Remember to include your full name, email address, mobile number and City.</li>
                   <li>Simply type in the clue number and corresponding answer.</li>
                   <li>In case of a tie breaker, where more than one person has submitted all correct answers, a winner will be chosen through means of a lucky draw</li>
