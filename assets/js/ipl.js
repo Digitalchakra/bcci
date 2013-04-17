@@ -290,7 +290,7 @@ function getpoll()
 						list+='<div>'+item+'</div><div style="height:20px; margin-top:5px; border: 1px solid #c2c2c2;" id="pollans'+i+'"><p style="padding-left: 10px; color:#ffffff; float: left; font-size:11px; font-weight:bold;">'+data.resultset.vote_rate[i]+'<p></div>';
 				});
 				$('#poll_answer').html(list);
-				$('#ipl-polls-button').remove();
+				$('#ipl-polls-button').hide();
 				$.each(data.resultset.vote_rate, function(i, item) {
 					barvalue=(item/maxvote)*100;
 					$("#pollans"+i).progressbar({ value: barvalue});
@@ -331,7 +331,7 @@ function setpoll()
 						list+='<div>'+item+'</div><div style="height:20px; margin-top:5px; border: 1px solid #c2c2c2;" id="pollans'+i+'"><p style="padding-left: 10px; width: 30px; color:#ffffff; float: left; font-size:12px;">'+data.resultset.vote_rate[i]+'<p></div>';
 				});
 				$('#poll_answer').html(list);
-				$('#ipl-polls-button').remove();
+				$('#ipl-polls-button').hide();
 				$.each(data.resultset.vote_rate, function(i, item) {
 					barvalue=(item/maxvote)*100;
 					$("#pollans"+i).progressbar({ value: barvalue});
