@@ -3,17 +3,14 @@
 
 class Login extends CI_Controller {
 
- function __construct()
- {
-   parent::__construct();
- }
-
  function logout()
  {
-   $this->session->unset_userdata('logged_in');
-   //session_destroy();
-   $this->session->sess_destroy();
-   redirect('home', 'refresh');
+ // print_r($this->phpbb_library->get_session_user()); die;
+  $this->phpbb_library->user_logout();
+  $this->session->unset_userdata('logged_in');
+  $this->session->sess_destroy();
+  $this->load->helper('url');
+  header( 'Location:'.base_url() ) ;
  }
  function getjsonp()
  {
@@ -40,4 +37,3 @@ class Login extends CI_Controller {
 }
 
 ?>
-

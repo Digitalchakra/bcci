@@ -95,6 +95,7 @@
   </div>
 </div>
 </div>
+<? $userdata=$this->phpbb_library->get_session_user(); ?>
 <!--NAV MENU-->
 <div class = "container">
   <div class = "row">
@@ -154,7 +155,7 @@
         <li <?php if($view_page=='photos') echo 'class="active"';?>><a href="<?php echo base_url('photos');?>" class="drop">Photos</a></li>
         <li <?php if($view_page=='videos') echo 'class="active"';?>><a href="<?php echo base_url('videos');?>" class="drop">Videos</a></li>
        
-         <?php if(!$session_data = $this->session->userdata('logged_in'))
+         <?php if($userdata['is_registered'] != 1)
         { ?>
         <li class = "dropdown menu_right">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px">
@@ -189,11 +190,11 @@
           <?php } ?>
         
         
-         <?php if($session_data = $this->session->userdata('logged_in'))
+        <?php if($userdata['is_registered'] == 1)
         { ?>
         <li class = "menu_right dropdown" >
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px">
-           <i class = "icon-user icon-white" style="margin-right:15px;"></i><?php echo $session_data['firstname']; ?>
+           <i class = "icon-user icon-white" style="margin-right:15px;"></i><?php echo $userdata['username_clean']; ?>
           </a>
           <!-- 
           <div class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
