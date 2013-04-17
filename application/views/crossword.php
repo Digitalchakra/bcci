@@ -65,7 +65,7 @@
         <div class="span12"> 
               	<h4>Guidelines</h4>
                 <ol>
-                	<li>Send all completed entries to contact@bcci.com with the subject line “IPL6 Crossword 3” on or before Wednesday, 17th April 2013.</li>
+                	<li>Send all completed entries to contact@bcci.com with the subject line “IPL6 Crossword 2” on or before Wednesday, 17th April 2013.</li>
                   <li>Remember to include your full name, email address, mobile number and City.</li>
                   <li>Simply type in the clue number and corresponding answer.</li>
                   <li>In case of a tie breaker, where more than one person has submitted all correct answers, a winner will be chosen through means of a lucky draw</li>
