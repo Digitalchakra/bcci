@@ -74,7 +74,6 @@
 										$limit = 5;
 									foreach(explode(',',strrev($row->recentForm)) as $flag)
                   {
-										$limit--;
                     if($flag=='W')
                     {
                       echo "<div class=".$flag."></div>";
@@ -89,6 +88,7 @@
 										if($limit==0){
 											break;
 										}
+										$limit--;
                   }
                   ?>
                 </td>
