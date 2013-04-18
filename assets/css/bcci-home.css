@@ -361,25 +361,6 @@ transition:all 0.4s ease-in-out;
 }
 
 
-/*-------------Image Grids---------------------------*/
-
-.grid {
-	width:96%;
-	padding:0;
-	display:block;
-	height:auto;
-}
-.grid-item {
-	width:215px;
-	display:inline-block;
-	padding:20px 0 0 15px;
-}
-.grid-item a img {
-	width:100%;
-	height:auto;
-	border:solid 3px #ccc;
-}
-/*-----------LightBox-----*/
 
 /*----------NEWS TABS-------*/
 
@@ -771,16 +752,28 @@ font-weight: bold;
 }
 .dark-grey-bg {
 	background:#333;
-	border-bottom:3px solid #fff;
 	color:#CCC;
+	border-top:1px solid #f80;
+	transition:all 0.3s ease-in-out;
+}
+.dark-grey-bg:hover {
+	background:#222;
+	color:#CCC;
+	border-top:1px solid #F70;
+	transition:all 0.3s ease-in-out;
 }
 .dark-grey-bg h4,.dark-grey-bg h5 {
 		color:#FFF;
 	margin:5px 0 0 5px;
+	line-height:14px;
 }
 .dark-grey-bg h2 {
 	color:#BBB;
-	margin:20px 5px 5px 5px;
+	margin:15px 5px 15px 5px;
+}
+.grey-border {
+	box-sizing: border-box;
+	border: 1px solid #AAA;
 }
 .W {
 	width:6px !important;
@@ -806,6 +799,8 @@ font-weight: bold;
 	margin:5px;
 	float:left;
 }
+
+
 /*========= New classes for livescore and popout ====*/
 .static-bottom-container {
 	position:fixed;

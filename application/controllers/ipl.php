@@ -22,6 +22,14 @@ class Ipl extends CI_Controller
 		//print_r($data); die;
 		$this->load->view('template', $data);
 	}
+	function stats()
+	{
+		$this->load->helper('url');
+		$this->load->model('iplmodel');
+		$data['content']=$this->iplmodel->getPoints(10,0);
+		$data['view_page'] = 'iplStatistics';
+		$this->load->view('template', $data);
+	}
 	function batting_stats()
 	{
 		$this->load->helper('url');
@@ -31,7 +39,7 @@ class Ipl extends CI_Controller
 		$data['mostSix']=$this->iplmodel->mostSix();
 		$data['highestScore']=$this->iplmodel->highestScore();
 		$data['highestStrikeRate']=$this->iplmodel->highestStrikeRate();
-		$data['view_page'] = 'ipl_batting_stats';
+		$data['view_page'] = 'iplBattingStatistics';
 		//echo "<pre>";
 		//print_r($data); die;
 		$this->load->view('template', $data);

@@ -154,7 +154,7 @@ body{ background:#e6e6e6; font:12px;  }
 	padding-top: 0px;
 }
 
-.ipl-CSK, .ipl-KKR, .ipl-RCB, .ipl-MI, .ipl-DD, .ipl-KXIP, .ipl-PWI, .ipl-RR, .ipl-SH{ width:65px;	height: 60px;}
+.ipl-CSK, .ipl-KKR, .ipl-RCB, .ipl-MI, .ipl-DD, .ipl-KXIP, .ipl-PWI, .ipl-RR, .ipl-SH, .ipl-DC{ width:65px;	height: 60px;}
 
 .ipl-CSK{		background:transparent url(../Images/ipl-flags.png) no-repeat;	background-position: 0 0px; }
 .ipl-KKR{		background:transparent url(../Images/ipl-flags.png) no-repeat;	background-position: 0 -62px; }
@@ -165,6 +165,7 @@ body{ background:#e6e6e6; font:12px;  }
 .ipl-PWI{		background:transparent url(../Images/ipl-flags.png) no-repeat;	background-position: 0 -372px; }
 .ipl-RR{		background:transparent url(../Images/ipl-flags.png) no-repeat;	background-position: 0 -434px; }
 .ipl-SH{		background:transparent url(../Images/ipl-flags.png) no-repeat;	background-position: 0 -496px; }	
+.ipl-DC{		background:transparent url(../Images/ipl-flags.png) no-repeat;	background-position: 0 -496px; }	
 
 
 
@@ -925,4 +926,383 @@ display: block;
 .ipl-cards3{
 	display:none;
 	
+}
+
+
+/*--IPL Stats Grid--*/
+.ipl-stats-grid {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+ 
+.ipl-stats-grid:after,
+.ipl-stats-item:before {
+    content: '';
+    display: table;
+}
+ 
+.ipl-stats-grid:after {
+    clear: both;
+}
+ 
+.ipl-stats-grid .team-block {
+    width: 172px;
+		height:318px;
+    display: inline-block;
+    margin: 10px 5px;
+		padding:0px;
+		background:#FFF;
+		border:1px solid #c5c5c5;
+		transition:all 0.2s ease-in-out;
+		overflow:hidden;
+}
+.ipl-stats-grid .team-block:hover,.ipl-stats-grid .team-block:hover .team-stats{
+	box-shadow:inset 0 0 8px rgba(0,0,0,0.3);
+	transition:all 0.2s ease-in-out;
+}
+	
+.team-block div[class^="ipl-"] {
+	width:50px;
+	height:48px;
+	margin:15px auto 15px auto;
+	border:2px solid rgba(255,255,255,0.4);
+	box-shadow:0 0 3px rgba(0,0,0,0.3);
+}
+.team-block h4{
+	font-size:16px;
+	text-align:left;
+	margin:5px 5px 5px 15px;
+	color:#545454;
+	text-transform:none;
+}
+.team-block h5{
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:11px;
+	text-align:left;
+	color:#a82e0f;
+}
+.team-stats{
+	margin:5px 0 0 0;
+	padding:15px;
+}
+.team-stats h5{
+	text-shadow:1px 1px 3px rgba(0,0,0,0.5);
+	color:#FFF;
+	font-size:13px;
+	font-weight:normal;
+}
+.team-stats h4{
+	text-transform:uppercase;
+	margin-left:0;
+	color:#FFF;
+	text-shadow:1px 1px 3px rgba(0,0,0,0.5);
+}
+.CSK .team-stats {
+	background:#f4b228;
+	border-bottom:2px solid #f1901d;
+}
+.MI .team-stats {
+	background:#00aeef;
+	border-bottom:2px solid #00719e;
+}
+.RCB .team-stats {
+	background:#f1901d;
+	border-bottom:2px solid #f1681d;
+}
+.DD .team-stats {
+	background:#b22e2a;
+	border-bottom:2px solid #891814;
+}
+.KXIP .team-stats {
+	background:#da1f3d;
+	border-bottom:2px solid #8b0c20;
+}
+.PWI .team-stats {
+	background:#00719e;
+	border-bottom:2px solid #083e54;
+}
+.RR .team-stats {
+	background:#004b8c;
+	border-bottom:2px solid #0b3050;
+}
+.KKR .team-stats {
+	background:#6f2c91;
+	border-bottom:2px solid #340d47;
+}
+.DC .team-stats {
+	background:#fdb913;
+	border-bottom:2px solid #d8720e;
+}
+.SH .team-stats {
+	background:#fdb913;
+	border-bottom:2px solid #d8720e;
+}
+
+/*========IPL Statistics four column list ===========*/
+/*.ipl-stats-columns ul{
+	height:400px;
+	overflow-x:hidden;
+	overflow-y:auto:
+}*/
+.ipl-stats-columns ul li{
+	list-style:none;
+	padding:10px;
+	box-sizing:border-box;
+	border:1px solid #bebebe;
+	border-top:none;
+	background:#FFF;
+	transition:box-shadow 0.2s ease-in-out;
+}
+.ipl-stats-columns ul li:hover{
+	box-shadow:inset 0 0 6px rgba(0,0,0,0.25);
+	transition:box-shadow 0.2s ease-in-out;
+}
+.ipl-stats-columns h5{
+	font-family:"squareBT";
+	font-size:16px;
+	text-transform:none;
+	font-weight:normal;
+	color:#444;
+}
+.ipl-stats-columns ul li .details{
+	float:left;
+	cursor:pointer;
+}
+
+.ipl-stats-columns .heading h4{
+	color:#FFF;
+	text-shadow:1px 1px 3px rgba(0,0,0,0.4);
+	font-size:16px;
+}
+
+.ipl-stats-columns .rank{
+	color:#444;
+	padding:10px;
+	font-size:26px;
+	font-family:"SquareBT";
+	margin-right:10px;
+	margin-left:5px;
+	float:left;
+	width:25px;
+	font-size:20px;
+	transition:all 0.2s ease-in-out;
+}
+.ipl-stats-columns .first .rank{
+	padding:10px;
+	color:#FFF;
+	font-size:24px;
+	text-shadow:1px 1px 3px rgba(0,0,0,0.4);
+}
+.ipl-stats-columns input[type="search"]{
+	margin:0;
+}
+.ipl-stats-columns .search{
+	border-bottom:none;
+}
+.orange-cap .first .rank{
+	background:#f25a29;
+}
+.ipl-stats-columns .orange-cap ul .heading{
+	background:#f25a29;
+	border:1px solid #f76739;
+}
+.max-sixes .first .rank{
+	background:#edb520;
+}
+.ipl-stats-columns .max-sixes ul .heading{
+	background:#edb520;
+	border:1px solid #f3c039;
+}
+.high-score .first .rank{
+	background:#829f29;
+}
+.ipl-stats-columns .high-score ul .heading{
+	background:#829f29;
+	border:1px solid #a1c23c;
+}
+.high-strike .first .rank{
+	background:#2594c9;
+}
+.ipl-stats-columns .high-strike ul .heading{
+	background:#2594c9;
+	border:1px solid #4ab3e5;
+}
+.orange-cap ul li:hover .rank{
+	background:#f25a29;
+	color:#FFF !important;
+	transition:all 0.2s ease-in-out;
+}
+.max-sixes ul li:hover .rank{
+	background:#edb520;
+	color:#FFF !important;
+	transition:all 0.2s ease-in-out;
+}
+.high-score ul li:hover .rank{
+	background:#829f29;
+	color:#FFF !important;
+	transition:all 0.2s ease-in-out;
+}
+.high-strike ul li:hover .rank{
+	background:#2594c9;
+	color:#FFF !important;
+	transition:all 0.2s ease-in-out;
+}
+/*====IPL Stats Popout====*/
+
+.ipl-statout{
+ width: 425px;
+ height: 300px;
+ /*background-color: #282828;*/
+ display: block;
+ position:absolute;
+ left:936px;
+ top:420px;
+ text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  *background-color: #e6e6e6;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #bbbbbb;
+  *border: 0;
+  border-color: #a2a2a2;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  *zoom: 1;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+					box-shadow:0 1px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(255, 255, 255, 0.05);
+}
+
+.ipl-statout-title{
+ width: 320px;
+ display: block;
+ height:40px;
+ float: left;
+ padding-top: 20px;
+ padding-left: 20px;
+}
+
+.ipl-statout-title p, h4{
+ color: #444;
+}
+
+.ipl-statout-spacer{
+
+ margin-top: 10px;
+ margin-left: 10px;
+}
+
+.ipl-statout table tr{
+ height: 68px;
+}
+.ipl-statout table tr p{
+	font-family:"squareBT";
+	font-weight:normal;
+	font-size:24px;
+}
+.ipl-statout table tr td{
+ border: solid 3px #282828;
+ width: 33.36%;
+}
+
+.ipl-statout-table{
+ padding-left: 10px;
+ padding-right: 10px;
+ position:absolute;
+ top:75px;
+ width:95%;
+}
+
+.ipl-statout-table p{
+ font-size: 26px;
+ color: #ffffff;
+ float: right;
+ padding-right: 10px;
+ margin-top: 0px;
+}
+
+.ipl-statout-table h4{
+ font-size: 16px;
+ color: #f4f4f4;
+ float: left;
+ padding-left: 8px;
+ padding-top: 25px;
+
+}
+
+.ipl-floatLeft{
+ float: left;
+}
+
+.ipl-statout-down{
+ padding-top: 6px;
+}
+.ipl-statout-leftarrow{background:transparent url(../Images/ipl-icons.png) no-repeat left top; width: 17px; height: 24px; display: block; margin-left: -17px; top:50%; position: absolute;}
+.ipl-statout-leftarrow{ background-position: 0 -560px; }
+
+.ipl-statout-rightarrow{background:transparent url(../Images/ipl-icons.png) no-repeat left top; width: 17px; height: 24px; display: block;}
+.ipl-statout-rightarrow{ background-position: -17 -560px; }
+.clbl1{ background-color: #456cd0;}
+.clbl2{ background-color: #3457b0;}
+.clbl3{ background-color: #304d95;}
+.clbl4{ background-color: #5e85ea;}
+.clbl5{ background-color: #304d95;}
+.clbl6{ background-color: #456cd0;}
+.clbl7{ background-color: #456cd0;}
+.clbl8{ background-color: #3457b0;}
+
+/*---Settings Icon---*/
+
+.ipl-settings-icon{
+	width: 27px;
+	height: 27px;
+	padding: 5px;
+	margin: -10px -10px 0 0;
+	background-image: url(../Images/settings.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	transition:all 0.2s ease-in-out;
+	cursor:pointer;
+}
+.ipl-settings-icon:hover{
+	box-shadow:inset 0 2px 5px rgba(51,51,51,0.4);
+	background-color:#FFF;
+	transition:all 0.2s ease-in-out;
+}
+/*.max-sixes .ipl-settings-icon:hover{
+	background-color:#f77e3c;
+	transition:all 0.2s ease-in-out;
+}
+.high-score .ipl-settings-icon:hover{
+	background-color:#f77e3c;
+	transition:all 0.2s ease-in-out;
+}
+.high-strike .ipl-settings-icon:hover{
+	background-color:#f77e3c;
+	transition:all 0.2s ease-in-out;
+}*/
+.heading .active{
+	background-color:#FFF;
+}
+.drop-icon{
+	width: 18px;
+	height: 18px;
+	background-image: url(../Images/drop.png);
+	background-repeat: no-repeat;
+	display:inline-block;
+	margin:3px 0 -4px 5px;
 }
