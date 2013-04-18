@@ -30,7 +30,6 @@
 										$limit = 5;
 									foreach(explode(',',strrev($row->recentForm)) as $flag)
                   {
-										$limit--;
                     if($flag=='W')
                     {
                       echo "<span class=".$flag."></span>";
@@ -45,6 +44,7 @@
 										if($limit==0){
 											break;
 										}
+                    $limit--;
                   }
                   ?>
                 </h4>
