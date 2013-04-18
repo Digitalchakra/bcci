@@ -24,6 +24,7 @@
             <div class="team-block align-center <?php echo $row->abbreviation;?>">
               <div class="team-details">
                 <div class="ipl-<?php echo $row->abbreviation;?>"></div>
+                <div><?php echo $row->abbreviation;?></div>
                 <h4>Points: <?php echo $row->points; ?></h4>
                 <h4><span class="pull-left">Last 5: </span> 
                 	<?php 
@@ -55,18 +56,18 @@
                 <h5>Won: <?php echo $row->won; ?></h5>
                 <h5>Lost: <?php echo $row->lost; ?></h5>
                 <h5>Tied:  <?php echo $row->tied;?></h5>
-                <h5>N/R: </h5>
+                <h5>N/R: <?php echo $row->netRunRate; ?></h5>
                 <h5>Net RR: <?php echo $row->netRunRate; ?></h5>
-                <h5>For: 510/60.0</h5>
-                <h5>Against: 460/60.0</h5>
+               <!-- <h5>For: 510/60.0</h5>
+                <h5>Against: 460/60.0</h5>-->
               </div>
-              <div class="team-stats hover">
+              <!--<div class="team-stats hover">
                 <h4>CHENNAI SUPER KINGS</h4>
                 <h5>Owner: Bharati Cements</h5>
                 <h5>Coach: John Wright</h5>
                 <h5>Captain: Mahendra Singh Dhoni</h5>
                 <h5>IPL Best: Won IPL Cup 2times</h5>
-              </div>
+              </div>-->
             </div>
           <?php
 				} ?>
