@@ -26,7 +26,7 @@ class Phpbb_library
    $rootPath = $this->CI->config->item('root_path');
 
    define('IN_PHPBB', TRUE);
-   define('FORUM_ROOT_PATH', $rootPath.'phpBB3/');
+   define('FORUM_ROOT_PATH', $rootPath.'forum/');
 
    $phpbb_root_path = (defined('PHPBB_ROOT_PATH')) ? PHPBB_ROOT_PATH : FORUM_ROOT_PATH;
    $phpEx = substr(strrchr(__FILE__, '.'), 1);
