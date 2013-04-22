@@ -1,20 +1,20 @@
 $(document).ready(function(){
-  /*$('#run_pname').keyup(function(){
+  $('#run_pname').keyup(function(){
     //alert($(this).val());
     $('#testul').html('');
     search_txt=$.trim($(this).val());
     //$('.run_pname').hide();
     if(search_txt.length>0)
     {
-      $("div[run_pname^='"+$('#run_pname').val().toLowerCase()+"'], div[run_pname*='"+$('#run_pname').val().toLowerCase()+"']").each(function(){
-        $('#testul').append('<li onclick=searchresult("'+$(this).attr('id')+'");>'+$(this).attr('run_pname')+'</li>');
+      $("li[run_pname^='"+$('#run_pname').val().toLowerCase()+"'], div[run_pname*='"+$('#run_pname').val().toLowerCase()+"']").each(function(){
+        $('#testul').append('<li onclick=searchresult("'+$(this).attr('pid')+'");>'+$(this).attr('run_pname')+'</li>');
       });
     }
     else
     {
       $('#testul').html('');
     }
-  });*/
+  });
   $('.pname').click(function(){
     //$('#e'+$(this).attr('id')).toggle();
     targetID='e'+$(this).attr('id');
@@ -78,10 +78,11 @@ $(document).ready(function(){
     });
   });
 });
-function searchresult(divID)
+function searchresult(pid)
 {
   //alert(divID);
   $('#testul').html('');
-  $('.run_pname').hide();
-  $('#'+divID).show();
+  $('.pname').hide();
+  $('.ipl-statout').hide();
+  $('#r'+pid +', #s'+pid+', #hs'+pid+', #sr'+pid+', .first').show();
 }
