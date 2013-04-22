@@ -30,6 +30,14 @@ class Ipl extends CI_Controller
 		$data['view_page'] = 'iplStatistics';
 		$this->load->view('template', $data);
 	}
+	function compare_stats()
+	{
+		$this->load->helper('url');
+		
+		$this->load->model('iplmodel');
+		$data['view_page'] = 'iplStatsCompare';
+		$this->load->view('template', $data);
+	}
 	function batting_stats()
 	{
 		$this->load->helper('url');
