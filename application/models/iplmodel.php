@@ -16,11 +16,15 @@ class Iplmodel extends CI_Model
 			}
 				return $data;
 	}
-	function mostRun()	
+	function mostRun($pids=NULL)	
 	{
 		$data=array();
 		$this->db->select('ipl_most_runs.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
 		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_most_runs.team_id');
+		if($pids)
+		{
+			$this->db->where_in('pid', $pids);
+		}
 		$qry = $this->db->order_by("r", "desc")->get('ipl_most_runs');
 		if($qry->num_rows()>0)
 			{
@@ -34,9 +38,9 @@ class Iplmodel extends CI_Model
 	function mostSix()
 	{
 		$data=array();
-		$this->db->select('ipl_most_sixes.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
-		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_most_sixes.team_id');
-		$qry = $this->db->order_by("6s", "desc")->get('ipl_most_sixes');
+		$this->db->select('ipl_most_runs.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
+		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_most_runs.team_id');
+		$qry = $this->db->order_by("6s", "desc")->get('ipl_most_runs');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)
@@ -49,9 +53,9 @@ class Iplmodel extends CI_Model
 	function highestScore()
 	{
 		$data=array();
-		$this->db->select('ipl_highest_scores.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
-		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_highest_scores.team_id');
-		$qry = $this->db->order_by("hs", "desc")->get('ipl_highest_scores');
+		$this->db->select('ipl_most_runs.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
+		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_most_runs.team_id');
+		$qry = $this->db->order_by("hs", "desc")->get('ipl_most_runs');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)
@@ -64,9 +68,9 @@ class Iplmodel extends CI_Model
 	function highestStrikeRate()
 	{
 		$data=array();
-		$this->db->select('ipl_highest_strikerates.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
-		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_highest_strikerates.team_id');
-		$qry = $this->db->order_by("sr", "desc")->get('ipl_highest_strikerates');
+		$this->db->select('ipl_most_runs.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
+		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_most_runs.team_id');
+		$qry = $this->db->order_by("sr", "desc")->get('ipl_most_runs');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)

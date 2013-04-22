@@ -35,6 +35,7 @@ try
 			$data['wb']=$single['bowlingStats']['wb'];
 			$data['nb']=$single['bowlingStats']['nb'];
 			$data['inns']=$single['bowlingStats']['inns'];
+			$data['m']=$single['bowlingStats']['m'];
 			$data['d']=$single['bowlingStats']['d'];
 			$data['w']=$single['bowlingStats']['w'];
 			$data['bbiw']=$single['bowlingStats']['bbiw'];

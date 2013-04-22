@@ -8,7 +8,7 @@
           <div class="btn-group margint20 small-menu">
             <button class="btn dropdown-toggle" data-toggle="dropdown">Statistics<span class="caret"></span></button>
             <ul class="dropdown-menu">
-              <li><a href="">Batting Statistics</a></li>
+              <li><a href="<? echo base_url('ipl/batting_stats'); ?>">Batting Statistics</a></li>
               <li><a href="">Bowling Statistics</a></li>
             </ul>
           </div>

@@ -44,6 +44,21 @@ class Ipl extends CI_Controller
 		//print_r($data); die;
 		$this->load->view('template', $data);
 	}
+	function batting_player()
+	{
+		$this->load->helper('url');
+		$this->load->model('iplmodel');
+		if($pids=$this->input->get('pids', TRUE))
+		{
+			$data['resultset']['data']=$this->iplmodel->mostRun(explode(',', $pids));
+			$data['resultset']['success']=1;
+		}
+		else
+		{
+			$data['resultset']['success']=-1;
+		}
+		$this->load->view('json',$data);
+	}
 	function bowling_stats()
 	{
 		$this->load->helper('url');
