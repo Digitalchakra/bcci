@@ -56,7 +56,7 @@
                 <h5>Won: <?php echo $row->won; ?></h5>
                 <h5>Lost: <?php echo $row->lost; ?></h5>
                 <h5>Tied:  <?php echo $row->tied;?></h5>
-                <h5>Net RR: <?php echo $row->netRunRate; ?></h5>
+                <h5>NRR: <?php echo $row->netRunRate; ?></h5>
                <!-- <h5>For: 510/60.0</h5>
                 <h5>Against: 460/60.0</h5>-->
               </div>
