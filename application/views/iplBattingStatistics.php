@@ -61,16 +61,16 @@
             {
             if($count==1)
             {?>
-              <li class="pname run_pname first" pname="<?=$single->pfullName?>" run_pname="<?=strtolower($single->pfullName)?>" pid="<? echo $single->pid;?>" rank="<?=$single->id?>" id="<? echo 'r'.$single->pid;?>"> 
+              <li class="pname run_pname first ipl_stats_list" pname="<?=$single->pfullName?>" run_pname="<?=strtolower($single->pfullName)?>" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 'r'.$single->pid;?>"> 
             <?}
             else
             {?>
-              <li class="pname run_pname" pname="<?=$single->pfullName?>" run_pname="<?=strtolower($single->pfullName)?>" pid="<? echo $single->pid;?>" rank="<?=$single->id?>" id="<? echo 'r'.$single->pid;?>"> 
+              <li class="pname run_pname ipl_stats_list" pname="<?=$single->pfullName?>" run_pname="<?=strtolower($single->pfullName)?>" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 'r'.$single->pid;?>"> 
             <? } ?>
             <span class="rank"><?=$count?></span> <span class="details">
               <h5><?=$single->pfullName?></h5>
               <h5><?=$single->r?> Runs, <?=$single->team_abbreviation?></h5>
-              </span> <span class="clearfix"></span> </li>
+              </span> <span class="clearfix"></span> 
               <!-- popup -->
                       <div class="ipl-statout" id="<? echo 'er'.$single->pid;?>">
                        <!-- <div class="ipl-statout-title">
@@ -113,12 +113,12 @@
                           </table>
                         </div>
                         <div class="ipl-statout-leftarrow" > </div>-->
-                      </div>
+                      </div></li>
             <?$count++; }?>
           </ul>
         </div>
         <div class="span3 margint20 marginb10  max-sixes">
-          <ul>
+          <ul class="ipl_stats_list">
             <li class="heading">
               <h4>Maximum Sixes<span class="pull-right ipl-settings-icon" id="max-sixes-settings-icon"></span></h4>
             </li>
@@ -127,16 +127,16 @@
              {
             if($count==1)
             { ?>
-              <li class="pname first" pid="<? echo $single->pid;?>" rank="<?=$single->id?>" id="<? echo 's'.$single->pid;?>"> 
+              <li class="pname first ipl_stats_list" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 's'.$single->pid;?>"> 
             <? }
           else
             { ?>
-              <li class="pname" pid="<? echo $single->pid;?>" rank="<?=$single->id?>" id="<? echo 's'.$single->pid;?>"> 
+              <li class="pname ipl_stats_list" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 's'.$single->pid;?>"> 
             <? } ?>
             <span class="rank"><?=$count?></span> <span class="details">
               <h5><?=$single->pfullName?></h5>
               <h5><?=$single->{'6s'}?> Sixes, <?=$single->team_abbreviation?></h5>
-              </span> <span class="clearfix"></span> </li>
+              </span> <span class="clearfix"></span>
               <!-- popup -->
                       <div class="ipl-statout" id="<? echo 'es'.$single->pid;?>">
                        <!-- <div class="ipl-statout-title">
@@ -179,12 +179,12 @@
                           </table>
                         </div>
                         <div class="ipl-statout-leftarrow" > </div>-->
-                      </div>
+                      </div> </li>
               <?$count++; }?>
           </ul>
         </div>
         <div class="span3 margint20 marginb10  high-score">
-          <ul>
+          <ul class="ipl_stats_list">
             <li class="heading">
               <h4>Highest Individual Score<span class="pull-right ipl-settings-icon" id="high-score-settings-icon"></span></h4>
             </li>
@@ -193,16 +193,16 @@
             {
             if($count==1)
             {?>
-                <li class="pname first" pid="<? echo $single->pid;?>" rank="<?=$single->id?>" id="<? echo 'hs'.$single->pid;?>"> 
+                <li class="pname first ipl_stats_list" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 'hs'.$single->pid;?>"> 
             <?}
             else
               {?>
-                <li class="pname" pid="<? echo $single->pid;?>" rank="<?=$single->id?>" id="<? echo 'hs'.$single->pid;?>"> 
+                <li class="pname ipl_stats_list" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 'hs'.$single->pid;?>"> 
           <? }?>
             <span class="rank"><?=$count?></span> <span class="details">
               <h5><?=$single->pfullName?></h5>
               <h5><?=$single->{'hs*'}?> Runs, <?=$single->team_abbreviation?></h5>
-              </span> <span class="clearfix"></span> </li>
+              </span> <span class="clearfix"></span> 
               <!-- popup -->
                       <div class="ipl-statout" id="<? echo 'ehs'.$single->pid;?>">
                         <!--<div class="ipl-statout-title">
@@ -245,12 +245,12 @@
                           </table>
                         </div>
                         <div class="ipl-statout-leftarrow" > </div>-->
-                      </div>
+                      </div></li>
               <?$count++; }?>
           </ul>
         </div>
         <div class="span3 margint20 marginb10  high-strike">
-          <ul>
+          <ul class="ipl_stats_list">
             <li class="heading">
               <h4>Highest Strike Rate<span class="pull-right ipl-settings-icon" id="high-strike-settings-icon"></span></h4>
             </li>
@@ -259,16 +259,16 @@
             {
             if($count==1)
             {?>
-                <li class="pname first" pid="<? echo $single->pid;?>" rank="<?=$single->id?>" id="<? echo 'sr'.$single->pid;?>">
+                <li class="pname first ipl_stats_list" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 'sr'.$single->pid;?>">
             <?}
             else
               {?>
-                <li class="pname" pid="<? echo $single->pid;?>" rank="<?=$single->id?>" id="<? echo 'sr'.$single->pid;?>">
+                <li class="pname ipl_stats_list" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 'sr'.$single->pid;?>">
           <? }?>
             <span class="rank"><?=$count?></span> <span class="details">
                <h5><?=$single->pfullName?></h5>
               <h5>S/R: <?=$single->sr?>, <?=$single->team_abbreviation?></h5>
-              </span> <span class="clearfix"></span> </li>
+              </span> <span class="clearfix"></span> 
               <!-- popup -->
                       <div class="ipl-statout" id="<? echo 'esr'.$single->pid;?>">
                         <!--<div class="ipl-statout-title">
@@ -311,7 +311,7 @@
                           </table>
                         </div>
                         <div class="ipl-statout-leftarrow" > </div>-->
-                      </div>
+                      </div></li>
               <?$count++; }?>
           </ul>
         </div>

@@ -1,43 +1,17 @@
 <link href="<?php echo base_url('assets/css/bcci-ipl.css'); ?>" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
-
-	<div class="container" > 
-		<div style="margin-right:20px;" class="ipl-header">
-		<div class="row" >
-			<div class="span3 ipl-logo">
-				<!--<div class="ipl-logo-inner1">
-					<a href="http://bcci.com/"><div class="ipl-logo1"></div></a>
-				</div>-->
-				
-					<div class="ipl-logo-inner2">
-						<a href="http://bcci.com/"><div class="ipl-logo2"></div></a>
-						
-					</div>	
-				
-					<div>
-						<a href="<?=base_url('ipl/crossword')?>">
-						
-						<span class="ipl-crossword-btn">
-							<p>Crossword</p>
-							<div class="ipl-crs-text"></div>
-							<div class="clearBoth"></div>
-							<div class="ipl-crossword-btn-bg"></div>
-						</span>
-						</a>
-						<a href="<?=base_url('ipl/quiz')?>">
-						<span class="ipl-quiz-btn">
-							<p>Quiz</p>
-							<div class="ipl-crs-text"></div>
-							<div class="clearBoth"></div>
-						
-							<div class="ipl-quiz-btn-bg"></div>
-						</span>
-						</a>
-					</div>
 	
+	<div class="container" > 
+		<div class="row">
+			<div class="span12 ipl-maintitle">
+			<h4 style="color:#19398A;">INDIAN PREMIER LEAGUE</h4>
 			</div>
+		</div>
+		<div  class="ipl-header">
+			<div class="row" >
+			
 			<div class="span6 ipl-scoreboard" id="ipl_liveScore">
-				<div style="height:21px;">
+				<div style="height:21px; margin-left:-10px;">
 					<h4 style="float:left;padding-top:5px; color:#ffd942;padding-left:10px; font-size:14px; font-weight:bold;">Score board</h4>
 					<h4 class="ipl-matchState" id="ipl_matchstate"></h4>
 				</div>
@@ -180,8 +154,40 @@
 						</div>
 					
 			</div>
-				<div class="ipl-header-stats" id="ipl-header-stats">
-				</div>
+				<!-- <div class="ipl-header-stats" id="ipl-header-stats">
+				</div> -->
+			</div>
+			<div class="span3 ipl-logo">
+				<!--<div class="ipl-logo-inner1">
+					<a href="http://bcci.com/"><div class="ipl-logo1"></div></a>
+				</div>-->
+				
+					<!-- <div class="ipl-logo-inner2">
+						<a href="http://bcci.com/"><div class="ipl-logo2"></div></a>
+						
+					</div> -->	
+				
+					<div>
+						<a href="<?=base_url('ipl/crossword')?>">
+						
+						<span class="ipl-crossword-btn">
+							<p>Crossword</p>
+							<div class="ipl-crs-text"></div>
+							<div class="clearBoth"></div>
+							<div class="ipl-crossword-btn-bg"></div>
+						</span>
+						</a>
+						<a href="<?=base_url('ipl/quiz')?>">
+						<span class="ipl-quiz-btn">
+							<p>Quiz</p>
+							<div class="ipl-crs-text"></div>
+							<div class="clearBoth"></div>
+						
+							<div class="ipl-quiz-btn-bg"></div>
+						</span>
+						</a>
+					</div>
+	
 			</div>
 			<div class="span3 ipl-header3">
 				<div class="ipl-pts">
@@ -227,13 +233,8 @@
 				</div>
 
 				<div class="ipl-teams">
-					<div style="height:200px; width:20px; margin-left:-10px; float:left; ">
-						<div class="ipl-arrow">
-
-						</div>
-					</div>
-					<div class="ipl-ranking-title" >
-						<h4>Rankings</h4>
+										<div class="ipl-ranking-title" >
+						<h4>Points Table</h4>
 					</div>
 					<?php
 							foreach($points as $single_point)
@@ -257,49 +258,93 @@
 								
 							}
 							?>
+							<div style="height:200px; width:20px; margin-left:0px; margin-top:-135px;float:left; ">
+						<div class="ipl-arrow">
+
+						</div>
 					</div>
+					</div>
+
 
 				</div>
 			</div>
 		</div>
-
-</div>	 
+<div class="row">
+		<div class="span12 ipl-stats-bottom">
+			<div class="ipl-stats-cell ipl-statscelltitle">
+				<p>IPL13 </p>
+				<h4>in numbers</h4>
+			</div>
+			<div class="ipl-stats-cell ipl-statscell1"> 
+				<p>5116</p>
+				<h4>RUNS</h4>
+			</div>
+			<div class="ipl-stats-cell ipl-statscell-small"> 
+				<p>224</p>
+				<h4>WICKETS</h4>
+			</div>
+			<div class="ipl-stats-cell ipl-statscell-small"> 
+				<p>1621</p>
+				<h4>DOT BALLS</h4>
+			</div>
+			<div class="ipl-stats-cell ipl-statscell1"> 
+				<p>106m</p>
+				<h4>LONGEST SIX</h4>
+			</div>
+			<div class="ipl-stats-cell ipl-statscell-small"> 
+				<p>136</p>
+				<h4>SIXES</h4>
+			</div>
+			<div class="ipl-stats-cell ipl-statscell2"> 
+				<p>152.40KM</p>
+				<h4>FASTEST BALL</h4>
+			</div>
+			<div class="ipl-stats-cell ipl-statscell3"> 
+				<p>2604</p>
+				<h4>RUNS FROM BOUNDARIES</h4>
+			</div>
+			<div class="ipl-stats-cell"> 
+				<p>23</p>
+				<h4>HALF CENTURIES</h4>
+			</div>
+		</div>
+		<button class="ipl-button3">Statistics<i class="icon-arrow-up icon-white" style="margin-left:10px; margin-top:-1px;"></i></button>
+	</div>
+	</div>	 
+	
 <div class="container">
 	<!--======================================================ADs=======================-->
-<div class="row-fluid">
-	<div class="span9 ipl-ads">
-		
-			<script type="text/javascript"><!--
-google_ad_client = "ca-pub-1444369114752839";
-/* 728x90, created 12/12/07 */
-google_ad_slot = "2932032750";
-google_ad_width = 728;
-google_ad_height = 90;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-		
+	<div class="span12">
+		<div class="row">
+			<div class="span9 ipl-ads">
+				<script type="text/javascript"><!--
+					google_ad_client = "ca-pub-1444369114752839";
+					/* 728x90, created 12/12/07 */
+					google_ad_slot = "2932032750";
+					google_ad_width = 728;
+					google_ad_height = 90;
+					//-->
+				</script>
+				<script type="text/javascript"
+					src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+				</script>
+			</div>
+			<div class="span3 ipl-ads">
+				<script type="text/javascript"><!--
+					google_ad_client = "ca-pub-1444369114752839";
+					/* live-score-top */
+					google_ad_slot = "7901791092";
+					google_ad_width = 200;
+					google_ad_height = 90;
+					//-->
+				</script>
+				<script type="text/javascript"
+					src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+				</script>
+			</div>
+		</div>
 	</div>
-	<div class="span3 ipl-ads">
-		
-			
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-1444369114752839";
-/* live-score-top */
-google_ad_slot = "7901791092";
-google_ad_width = 200;
-google_ad_height = 90;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-			
-		
-	</div>
-</div>
+	
 	<!--=====================================================Content=======================-->
 	<div class="row-fluid ipl-content" >
 		<div style="width:100%">	
@@ -523,6 +568,6 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </footer>-->
 
 <script src="<?php echo base_url('assets/js/ipl.js');?>"></script>
-<!--<script src="<?php //echo base_url('assets/js/ipl_statistics.js');?>"></script> -->
+<script src="<?php echo base_url('assets/js/ipl_statistics.js');?>"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.js"></script>               
  				            

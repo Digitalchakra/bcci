@@ -19,18 +19,24 @@ body{ background:#e6e6e6; font:12px;  }
 .ipl-up10{margin-top: -10px;}
 
 
-
+.ipl-maintitle{
+	height: 25px;
+	background-color: #e6e6e6;
+	color: #ffffff;
+	text-align: center;
+	padding-top: 8px;
+}
 
 .ipl-header{
 	padding-top: 0px;
-	background-color: #282828;
-	border-top: solid 3px #c14343;
-	border-bottom: solid 1px #121212;
+	/*background-color: #282828;*/
+	/*border-top: solid 3px #c14343;
+	border-bottom: solid 1px #121212;*/
 	height: 225px;
 
 }
 
-.ipl-logo{	background-color: #383838;	border-top: solid 1px #121212; height: 225px; margin-right: -20px;}
+.ipl-logo{	height: 225px; margin-left: 5px;}
 .ipl-logo-inner1{  height: 105px; background:#65100a; padding-top: 5px; margin-right: -20px; }
 .ipl-logo-inner2{  height: 112px; background:#19398a;  margin-right: 0px; display: block; padding-top: 14px; border-bottom: 1px solid #e6e6e6;}
 .ipl-logo1{	background:transparent url(../Images/logos.png) no-repeat;	background-position: 0 -78px;	margin: 0 auto;	width:153px;	height: 88px;}
@@ -38,10 +44,12 @@ body{ background:#e6e6e6; font:12px;  }
 
 
 
-	.ipl-crossword-btn{ background-color: #3757a8;
-						float: left;
-						width: 54%;
-						height: 98px;	
+	.ipl-crossword-btn{ background-color: #3757a8 ;
+						
+						width: 100%;
+						height: 110px;
+						margin-bottom: 5px;
+						display: block;	
 						cursor:pointer;
 						
 
@@ -49,10 +57,10 @@ body{ background:#e6e6e6; font:12px;  }
 .ipl-crossword-btn:hover{
 							background-color: #5271c1;
 						}
-						.ipl-quiz-btn{ background-color: #284389;
-						float: left;
-						width: 46%;
-						height: 98px;	
+						.ipl-quiz-btn{ background-color: #284389 ;
+						display: block;
+						width: 100%;
+						height: 110px;	
 						cursor: pointer;
 						}
 
@@ -72,21 +80,21 @@ body{ background:#e6e6e6; font:12px;  }
 
      .ipl-crossword-btn-bg{
      	float: right;
-     	padding-right: 20px;
-     	margin-top: 20px;
+     	padding-right: 10px;
+     	margin-top: 10px;
      	background:transparent url(../Images/ipl-icons.png) no-repeat left top; 
-     	background-position: 0 -460px;	
-     	width:40px;
-     	height: 40px;
+     	background-position: 0 -590px;	
+     	width:135px;
+     	height: 66px;
      }		
      .ipl-quiz-btn-bg{
      	float: right;
-     	padding-right: 20px;
-     	margin-top: 20px;
+     	padding-right: 10px;
+     	margin-top: 0px;
      	background:transparent url(../Images/ipl-icons.png) no-repeat left top; 
-     	background-position: 0 -502px;	
-     	width:40px;
-     	height: 40px;
+     	background-position: 0 -656px;	
+     	width:135px;
+     	height: 76px;
      }					
 
 .ipl-logo1{	background:transparent url(../Images/logos.png) no-repeat left top;	background-position: 0 -78px;	margin: 0 auto;	width:153px;	height: 88px;}					
@@ -96,11 +104,13 @@ body{ background:#e6e6e6; font:12px;  }
 	.ipl-quiz-btn p{ color: #ffffff; font-size: 18px; padding-top: 10px; padding-left: 10px; width:44px; height: 23px; display: block; float: left;}	
 
 .ipl-scoreboard{
+	background-color: #282828;
 	border-right:solid 1px #424242;
 	border-left:solid 1px #424242;
 	height: 225px;
 	position: relative;
 	display: block;
+	padding-left: 14px;
 }
 
 .ipl-teams{
@@ -110,17 +120,17 @@ body{ background:#e6e6e6; font:12px;  }
 	width: 100%;
 	height: 225px;
 	position: relative;
-	margin-right: 0px;
 	background-color: #282828;
 	overflow: hidden;
 	text-align: right;	
 }
 
 .ipl-header3{
+	margin-left: 5px;
 	overflow: hidden;
 	position: relative;
 	height: 225px;
-
+	width:233px;
 }
 /*----------------------------------------------------IPL RANKINGS-----------------------------*/
 
@@ -180,7 +190,6 @@ body{ background:#e6e6e6; font:12px;  }
 	margin-right: 0px;
 	width: 100%;
 	text-align: right;
-	padding-left: 10px;
 }
 
 .ipl-pts p{
@@ -188,6 +197,7 @@ body{ background:#e6e6e6; font:12px;  }
 	color: #929292;
 	font-size: 8px;
 	float: left;
+	padding-left: 10px;
 }
 
 
@@ -212,7 +222,7 @@ body{ background:#e6e6e6; font:12px;  }
 .ipl-pts table{
 	width: 100%;
 	border-collapse:collapse;
-	border: 1px #282828;
+	
 	text-align: center;
 	color: #ffffff;
 }
@@ -267,12 +277,14 @@ border: 1px solid #282828;
 
 	border-top: solid 1px #525252;
 	height: 100px;
+	margin-left: -10px;
 }
 
 .ipl-sb-team2{ 
 	padding-top: 20px;
 	border-top: solid 1px #525252;
 	height: 100px;
+	margin-left: -10px;
 }
 .ipl-sb-flag{
 	text-align: right;
@@ -532,9 +544,9 @@ border: 1px solid #282828;
 .ipl-cards5{	height: 400px;	min-width: 160px;}
 
  
-  .ipl-cards1, .ipl-cards2,  .ipl-cards4, .ipl-cards5, .ipl-cards3{padding-left: 9px; width: 24%;/*width: 19%;*/ float:left;}
+  .ipl-cards1,   .ipl-cards4, .ipl-cards5, .ipl-cards3{padding-left: 9px; width: 24%;/*width: 19%;*/ float:left;}
 
-
+	.ipl-cards2{ width: 24%; float: left;}
 
 .ipl-news{	color: #20baff;	background-position: 0 0px;	border-bottom: solid 8px #20baff;}
 .ipl-schedule{	color: #ff7e00;	background-position: 0 -40px;	border-bottom: solid 8px #ff7e00;}
@@ -784,6 +796,22 @@ display: block;
 .ipl-button2:hover{	background:#803131;}
 
 
+.ipl-button3{
+display: block;	
+	margin-left: 20px;
+	width: 110px;
+	margin-top: 12px;	
+	border-radius: 0px;		
+	border: solid 1px #132f76; 
+	text-align: center;  
+	padding: 6px; 
+	padding-top: 4px;	
+	background:#19398A;	
+	color: #ffffff;	
+	height: 30px;
+	 font-size: 12px;}
+
+.ipl-button3:hover{	background:#132f76;}
 
 /*---------------------------------------------- Landscape phone to portrait tablet -----------------------------------------*/
 
@@ -792,20 +820,22 @@ display: block;
 
 
 .ipl-ads2{	display: none;}
+
 .ipl-ads{  	margin-top: 20px;
 	display: block;
 	border: solid 1px #a2a2a2;
-	height: 100px; 
+	
 	width: 200px; 
 	background-color: #232323;}
 
 }
 
 .ipl-ads{
-	margin-top: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	background: transparent;
 	/*border: solid 1px #a2a2a2;*/
-	height: 100px; 
+	
 	display: block;
 	text-align: center;
 	padding-top: 4px;
@@ -894,13 +924,16 @@ display: block;
 }
 
 .clbl9 a{
+	font-size: 14px;
 	float: left;
-	margin-left: 16px;
+	margin-left: 10px;
 	margin-top: 0px;
 	padding-right: 5px;
 	text-decoration: none;
 	color: #ffffff;
 	cursor: pointer;
+	height: 20px;
+	width: 50px;
 }
 
 .clbl9 a:hover{
@@ -917,6 +950,7 @@ display: block;
 	height: 20px;
 	display: inline-block;
 	float: left;
+	margin-top: 2px;
 }
 .ipl-photo-title h4{
 	font-size: 16px;
@@ -988,6 +1022,8 @@ display: block;
 .team-stats{
 	margin:5px 0 0 0;
 	padding:15px;
+    height: 136px;
+
 }
 .team-stats h5{
 	text-shadow:1px 1px 3px rgba(0,0,0,0.5);
@@ -1157,10 +1193,11 @@ display: block;
  width: 425px;
  height: 300px;
  /*background-color: #282828;*/
- display: block;
+ display: none;
  position:absolute;
- left:936px;
- top:420px;
+ z-index: 999;
+ left:220px;
+ top:-133px;
  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   vertical-align: middle;
   cursor: pointer;
@@ -1256,6 +1293,11 @@ display: block;
 
 .ipl-statout-rightarrow{background:transparent url(../Images/ipl-icons.png) no-repeat left top; width: 17px; height: 24px; display: block;}
 .ipl-statout-rightarrow{ background-position: -17 -560px; }
+
+.ipl_stats_list{
+	position:relative;
+}
+
 .clbl1{ background-color: #456cd0;}
 .clbl2{ background-color: #3457b0;}
 .clbl3{ background-color: #304d95;}
@@ -1306,3 +1348,128 @@ display: block;
 	display:inline-block;
 	margin:3px 0 -4px 5px;
 }
+
+
+.ipl-stats-bottom{
+	margin-top: 3px;
+	margin-bottom:3px;
+	height: 60px;
+	background-color: #3757a8 ;
+}
+
+.ipl-stats-cell{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 100px;
+	height: 40px;
+	float: left;
+	display: block;
+	text-align: right;
+	border-right: solid 1px #929292;
+	padding-right: 10px;
+}
+
+.ipl-stats-cell h5{
+	color: #e1e1e1;
+	text-align: right;
+	text-transform: capitalize;
+}
+
+.ipl-stats-cell p{
+	font-size: 24px;
+	color: #e1e1e1;
+	text-align: right;
+}
+
+.ipl-statscell-small{	width: 62px;}
+.ipl-statscell3{ width: 151px;}
+.ipl-statscell2{ width: 127px;}
+.ipl-statscell1{ width: 70px;}
+
+
+.ipl-stats-cell h4{
+	font-size: 14px;
+	color: #f4f4f4;
+	text-align: right;
+}
+
+.ipl-statscelltitle{ background-color: #19398a; padding-bottom: 10px; padding-top: 10px; margin-top: 0px; }
+
+
+/*Compare player*/
+
+.com1{	background-color: #f4f4f4; border: solid 1px #ffffff; border-top: solid 10px #19398A;	text-align: center;margin-bottom: 10px; }
+
+.com2{	background-color: #d2d2d2; border:solid 1px #c2c2c2; margin-bottom: 10px;}
+
+.com3 table{	width: 100%;	border-collapse:collapse;	text-align: center;	color: #323232;}
+
+.com3 tr{	border-bottom:2px solid #e6e6e6;	height:40px;}
+
+.com3 td{	border-spacing: 0px;	width: 16.65%;		background-color: #383838;	font-size: 13px;}
+
+.com3 tbody td{	background-color: #ffffff;}
+.com3 thead td{	color: #ffffff;}
+
+.com3 table, .com3 th, .com3 td{	border: 2px solid #e6e6e6;}
+
+.com3 tbody td:nth-child(1)
+{
+	background-color: #f4f4f4 !important;
+	color: #232323;
+	text-align:left; 
+	padding-left: 10px;	
+}
+
+.com3 thead td:nth-child(2){	background-color: #3f86f2 !important;}
+.com3 thead td:nth-child(3){	background-color: #6db842 !important;}
+.com3 thead td:nth-child(4){	background-color: #da6a45 !important;}
+.com3 thead td:nth-child(5){	background-color: #974e97 !important;}
+.com3 thead td:nth-child(6){	background-color: #34a7e0 !important;}
+
+/*.com3 tbody td:nth-child(2){	background-color: #5392f3 !important;}
+.com3 tbody td:nth-child(3){	background-color: #81c25e !important;}
+.com3 tbody td:nth-child(4){	background-color: #fb8b66 !important;}
+.com3 tbody td:nth-child(5){	background-color: #a367a3 !important;}
+.com3 tbody td:nth-child(6){	background-color: #54bff3 !important;}
+*/
+
+.com1_sp1{
+	margin: 10px;
+}
+
+.btn_cp{ clear: both;display: block;
+
+}
+
+.com2{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.com2_sbox{
+	padding-left: 20px;
+	margin: 10 auto;
+	text-align: center;
+}
+
+.com2_btn{
+	display: block;
+	border-top: solid 1px #B1B1B1;
+	margin-top: 10px;
+}
+
+.com2_btn button{
+
+	margin-top: 10px;
+	position: relative;
+	margin-left: 	0px;
+	
+}
+
+.com2 h4{
+	padding-bottom: 10px;
+}
+
+.comblock{ display: block;}
