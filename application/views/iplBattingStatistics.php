@@ -15,13 +15,38 @@
           </div>
         </div>
       </div>
+      <!-- search panel -->
       <div class="container"> 
         <div class="span12 container">
           <div class="span3">
-            <input type="text" id="run_pname" autocomplete="off"/>
+            <input type="text" id="run_pname" autocomplete="off" placeholder="Search Player"  /><span id="clearsearch">clear</span>
             <div class="span12 container">
-              <ul id="testul"></ul>
+              <ul id="searchul"></ul>
             </div>
+            <div id="searchResult">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- compare panel -->
+      <div class="container" id="cmp_div" style="display:none;"> 
+        <div class="span12 container">
+          <div class="span3">
+            <lable id="cmp_with"></lable>
+          </div>
+          <div id="cmp_panel" class="span3">
+          </div>
+          <div class="span3">
+            <input type="text" id="cmp_pname" autocomplete="off" placeholder="Add Another Player" />
+            <div class="span12 container">
+              <ul id="cmpsearchul"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="span12 container">
+          <form action="" method="POST" id="compareform">
+            <button>Compare</button>
+          </form>
           </div>
         </div>
       </div>
@@ -36,11 +61,11 @@
             {
             if($count==1)
             {?>
-              <li class="pname run_pname first" run_pname="<?=strtolower($single->pfullName)?>" pid="<? echo $single->pid;?>" rank="<?=$single->id?>" id="<? echo 'r'.$single->pid;?>"> 
+              <li class="pname run_pname first" pname="<?=$single->pfullName?>" run_pname="<?=strtolower($single->pfullName)?>" pid="<? echo $single->pid;?>" rank="<?=$single->id?>" id="<? echo 'r'.$single->pid;?>"> 
             <?}
             else
             {?>
-              <li class="pname run_pname" run_pname="<?=strtolower($single->pfullName)?>" pid="<? echo $single->pid;?>" rank="<?=$single->id?>" id="<? echo 'r'.$single->pid;?>"> 
+              <li class="pname run_pname" pname="<?=$single->pfullName?>" run_pname="<?=strtolower($single->pfullName)?>" pid="<? echo $single->pid;?>" rank="<?=$single->id?>" id="<? echo 'r'.$single->pid;?>"> 
             <? } ?>
             <span class="rank"><?=$count?></span> <span class="details">
               <h5><?=$single->pfullName?></h5>
