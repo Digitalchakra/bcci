@@ -36,6 +36,7 @@ class Ipl extends CI_Controller
 		
 		$this->load->model('iplmodel');
 		$data['view_page'] = 'iplStatsCompare';
+		$data['players'] = $this->get_player_list();
 		$this->load->view('template', $data);
 	}
 	function batting_stats()
@@ -58,13 +59,36 @@ class Ipl extends CI_Controller
 		$this->load->model('iplmodel');
 		if($pids=$this->input->get('pids', TRUE))
 		{
-			$data['resultset']['data']=$this->iplmodel->mostRun(explode(',', $pids));
+			$data['resultset']['data']=$this->iplmodel->mostRun($pids);
 			$data['resultset']['success']=1;
 		}
 		else
 		{
 			$data['resultset']['success']=-1;
 		}
+		$this->load->view('json',$data);
+	}
+	function get_player_list()
+	{
+		$this->load->helper('url');
+		$this->load->model('iplmodel');
+		return $this->iplmodel->getPlayersList();
+	}
+	function get_players()
+	{
+		$this->load->helper('url');
+		$this->load->model('iplmodel');
+		if($pids=$this->input->get('pids', TRUE))
+		{
+			$data['resultset']['data']=$this->iplmodel->getPlayers(explode(',', $pids));
+			$data['resultset']['success']=1;
+		}
+		else
+		{
+			$data['resultset']['success']=-1;
+		}
+		//echo "<pre>";
+		//print_r($data);
 		$this->load->view('json',$data);
 	}
 	function bowling_stats()
