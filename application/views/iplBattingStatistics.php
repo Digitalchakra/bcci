@@ -268,7 +268,7 @@
 			  <h4>Highest Strike Rate<span class="pull-right ipl-settings-icon" id="high-strike-settings-icon"></span></h4>
 			</li>
 			<!--blue cap ,  highest strike rate -->
-			<? $count=1; foreach($highestScore as $single)
+			<? $count=1; foreach($highestStrikeRate as $single)
 			{
 			if($count==1)
 			{?>
