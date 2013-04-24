@@ -1187,6 +1187,12 @@ display: block;
 	color:#FFF !important;
 	transition:all 0.2s ease-in-out;
 }
+
+.ipl-stats-columns{
+	margin-left: 0px;
+}
+
+
 /*====IPL Stats Popout====*/
 
 .ipl-statout{
@@ -1195,7 +1201,7 @@ display: block;
  /*background-color: #282828;*/
  display: none;
  position:absolute;
- z-index: 999;
+ z-index: 998;
  left:220px;
  top:-133px;
  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
@@ -1221,16 +1227,38 @@ display: block;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
      -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-					box-shadow:0 1px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(255, 255, 255, 0.05);
+		  box-shadow:0 1px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(255, 255, 255, 0.05);
 }
 
+.statout-close{
+	position: absolute;
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-top: 24px;
+	margin-left: 10px;
+	color: #ffffff;
+	text-align: center;
+	padding-top: -2px;
+	background-color: #2594c9;
+	border: solid 1px #1c84b5;
+	-webkit-border-radius: 15px;
+	     -moz-border-radius: 15px;
+	          border-radius: 15px;
+}
+
+.statout-close:hover{
+	background-color: #1976a2;
+}
+
+
 .ipl-statout-title{
- width: 320px;
+ width: 280px;
  display: block;
  height:40px;
  float: left;
  padding-top: 20px;
- padding-left: 20px;
+ padding-left: 40px;
 }
 
 .ipl-statout-title p, h4{
@@ -1293,6 +1321,17 @@ display: block;
 
 .ipl-statout-rightarrow{background:transparent url(../Images/ipl-icons.png) no-repeat left top; width: 17px; height: 24px; display: block;}
 .ipl-statout-rightarrow{ background-position: -17 -560px; }
+
+
+.orange-cap .ipl-statout{}
+
+.max-sixes .ipl-statout{}
+
+.high-score .ipl-statout{	left: -428px;}
+.high-score .ipl-statout .ipl-statout-leftarrow{ background-position: -17px -560px !important; margin-left: 424px; }
+
+.high-strike .ipl-statout {	left: -428px;}
+.high-strike .ipl-statout .ipl-statout-leftarrow{ background-position: -17px -560px !important; margin-left: 424px; }
 
 .ipl_stats_list{
 	position:relative;
@@ -1398,7 +1437,7 @@ display: block;
 
 /*Compare player*/
 
-.com1{	background-color: #f4f4f4; border: solid 1px #ffffff; border-top: solid 10px #19398A;	text-align: center;margin-bottom: 10px; }
+.com1{	background-color: #f4f4f4; border: solid 1px #ffffff; border-top: solid 10px #19398A;	text-align: center; margin-bottom: 10px; padding-top: 10px; padding-bottom: 10px; }
 
 .com2{	background-color: #d2d2d2; border:solid 1px #c2c2c2; margin-bottom: 10px;}
 
@@ -1464,7 +1503,7 @@ display: block;
 
 	margin-top: 10px;
 	position: relative;
-	margin-left: 	0px;
+	margin-left: 0px;
 	
 }
 
@@ -1473,3 +1512,152 @@ display: block;
 }
 
 .comblock{ display: block;}
+
+
+/*Batting statistics*/
+
+.bs1{	background-color: #ffffff; margin-top: 20px; border-top: solid 10px #19398A;	text-align: center; padding-top: 10px; position:relative;}
+
+
+.bs1_search{
+
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+.bs1_searchUl{
+	text-align: left;
+	min-height: 0px;
+	position: absolute;
+	width: 300px;
+	margin-left: 257px;
+	margin-top: -15px;
+	background-color: #ffffff;
+	border: solid 1px #e1e1e1;
+	z-index:999;
+}
+
+.bs1_searchUl ul li{
+	list-style-type: none;	padding: 5px; width: 300px;	border-bottom: solid 1px #e1e1e1;	z-index: 9999;
+}
+
+
+.bs1_searchResult{
+	padding: 10px;
+}
+
+.bs1_searchResult p{
+	color: #ffffff;
+	text-align: center;
+	font-size: 18px;
+	padding: 0px;
+	margin: 0px;
+	padding-top: 5px;
+
+}
+
+.bs1_searchResult h4{
+	color: #ffffff;
+	padding-top: 5px;
+}
+
+.stat_flag{
+	color: #ffffff;
+	background-color: #323232;
+	width: 60px;
+	text-align: center;
+}
+
+.stat_flag_span{
+	display: block;	
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.stat_flag p{
+	width: 60px;
+	margin-top: -5px;
+}
+
+.stat_name{
+	 width: 100px;
+	 background-color: #323232;
+	 color: #ffffff;
+	 text-align: left;
+	 
+	 padding-left: 10px;
+}
+
+.stat_name p{
+	text-align: left;
+	font-size: 16px;
+	width: 100px;
+}
+
+.bs2{ background-color: #d2d2d2; border:solid 1px #c2c2c2; margin-bottom: 10px;}
+
+.cmp_label{
+ 	float: left; padding: 5px; width: 202px; background-color: #4da6d0; color: #ffffff; margin-right: 5px; margin-bottom: 10px; margin-top: 10px; border: solid 1px #429ac4; position: relative;
+}
+.cmp_label_close{
+		width: 30px;	height: 25px; cursor: pointer;	position:absolute; right: 0; background-color: #3289b2; border-left: solid 1px #247da7; text-align: center; display: block; margin-top: -25px; padding-top: 5px;
+}
+
+.cmp_label_close:hover{
+		 background-color: #247da7;
+}
+
+.cmp_title{
+		  margin: 5px; /*width: 160px; float: left;*/ font-size: 14px; vertical-align: middle; height: 100%;
+}
+
+.cmp_search{
+	float: left; display: block; width: 200px; height: 30px; position: relative; padding-top: 5px;
+}
+
+.cmp_search input{
+	width: 200px;	margin-top: 5px;
+}
+
+.cmp_searchul{
+	background-color: #ffffff;	border:solid 1px #e1e1e1;	position: absolute; margin-top: -10px; z-index:999;
+}
+
+.cmp_searchul ul li{
+	list-style-type: none;	padding: 5px; width: 202px;	border-bottom: solid 1px #e1e1e1; 
+}
+
+.cmpBtn{
+	margin: 0 auto;
+}
+
+
+.cmp_player_btn{
+	float: left;
+
+	width: 160px;
+	padding-left: 20px;
+	margin-top: 10px;
+}
+
+.bs2_1, .bs2_2, .bs2_3{
+	border-bottom: solid 1px #c1c1c1;
+	padding-top: 10px;
+	margin-left: 20px;
+	padding-bottom: 10px;
+	margin-right: 10px;
+	
+}
+
+.bs2_3{
+	
+	border: none;
+	text-align: center;
+}
+
+.bs2_3 form{
+	text-align: center;
+}
+
+.cmp_panel, .cmp_search, .cmp_title, .cmp_label{
+	margin-left: 10px;
+}

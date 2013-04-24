@@ -54,7 +54,7 @@ $(document).ready(function(){
       {
         //alert(data.resultset.data[0]['6s']);
         //alert($(this).attr('id'));
-        html=                '<span>X</span>';
+        html=                '<span class="statout-close">X</span>';
         html+=                '<div class="ipl-statout-title">';
         html+=                  '<h4>Batting Statistics, Max 6s</h4>';
         html+=                  '<p>'+rank+' '+data.resultset.data[0].pfullName+'</p>';
@@ -119,8 +119,8 @@ function searchresult(pid)
       {
         html=                  '<table WIDTH="100%" HEIGHT="100%">';
         html+=                    '<tr WIDTH="100%">';
-        html+=                      '<td class="ipl-'+data.resultset.data[0].team_abbreviation+'"><p>'+data.resultset.data[0].team_abbreviation+'</p></td>';
-        html+=                      '<td><p>'+data.resultset.data[0].pfullName+'</p></td>';
+        html+=                      '<td class="stat_flag"><span class="stat_flag_span ipl-'+data.resultset.data[0].team_abbreviation+'"></span><p>'+data.resultset.data[0].team_abbreviation+'</p></td>';
+        html+=                      '<td class="stat_name"><p>'+data.resultset.data[0].pfullName+'</p></td>';
         html+=                      '<td class="clbl1"><p>'+data.resultset.data[0].m+'</p>';
         html+=                        '<h4>MAT</h4></td>';
         html+=                      '<td class="clbl2"><p>'+data.resultset.data[0].inns+'</p>';
@@ -149,7 +149,7 @@ function searchresult(pid)
         $('#searchResult').html(html);
         $('#run_pname').val(data.resultset.data[0].pfullName);
         $('#cmp_with').html('Compare '+data.resultset.data[0].pfullName+' with');
-      },
+      },  
       error:function()
       {
         //alert('Internal error, try agian...');
@@ -160,6 +160,6 @@ function cmpsearchresult(pid)
 {
   $('#cmp_pname').val("");
   $('#cmpsearchul').html("");
-  $('#cmp_panel').append('<div id="'+pid+'">'+$('#r'+pid).attr('pname')+'<span>X</span></div>');
+  $('#cmp_panel').append('<div class="cmp_label" id="'+pid+'">'+$('#r'+pid).attr('pname')+'<span class="cmp_label_close">X</span></div>');
   $('#compareform').append('<input type="hidden" pid="'+pid+'" />');
 }
