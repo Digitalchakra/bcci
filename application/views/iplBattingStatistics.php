@@ -55,7 +55,7 @@
 		 </div>
 		
 		<div class=" span12 bs2_3" id="compform"  style="display:none;">
-		  <form class="cmpBtn" action="" method="POST" id="compareform" >
+		  <form class="cmpBtn" action="<?=base_url('ipl/compare_stats')?>" method="POST" id="compareform" >
 			<button class="btn btn-success">Compare Players</button>
 		  </form>
 		</div>

@@ -33,7 +33,8 @@ class Ipl extends CI_Controller
 	function compare_stats()
 	{
 		$this->load->helper('url');
-		
+		$data['pids']=$this->input->post('pids', TRUE);
+		$data['pnames']=$this->input->post('pnames', TRUE);
 		$this->load->model('iplmodel');
 		$data['view_page'] = 'iplStatsCompare';
 		$data['players'] = $this->get_player_list();
