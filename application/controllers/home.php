@@ -9,5 +9,12 @@ class Home extends CI_Controller
 		$data['content'] = $this->match->getMatchs(5, 0);
 		$this->load->view('template', $data);
 	}
+	function test()
+	{
+		$this->load->helper('url');
+		$data['view_page'] = 'test';
+		$this->load->view('template', $data);
+
+	}
 
 }
