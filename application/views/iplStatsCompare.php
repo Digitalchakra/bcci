@@ -30,6 +30,16 @@
 				<h4>Add players to Compare</h4>
 			</div>
 		 	<div id="filterList" >
+		 		<?if($pids)
+					{
+						$count=0;
+						foreach($pids as $pid) 
+							{?>
+					<div class="cmp_label searchIds" id="<?=$pid?>">
+					<lable class="span2"><?=$pnames[$count]?></lable>
+					<span class="cmp_label_close" style="margin-top:-5px;"  lableid="<?=$pid?>" type="button">X</span>
+					</div>
+					<? $count++;} }?>
 		  	</div>
 		  	<div class="cmp_search">
 				<input type="text" id="search_pname" autocomplete="off" placeholder="Add Player" />
