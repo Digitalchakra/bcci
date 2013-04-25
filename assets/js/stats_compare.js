@@ -1,5 +1,13 @@
 $(document).ready(function()
 {
+   pids='';
+    if($('.searchIds').length >0)
+    {
+    $('.searchIds').each(function(plist){
+      pids+=$(this).attr('id')+',';
+    });
+    }
+    getresult(pids);
 	$('#search_pname').keyup(function(){
     //alert($(this).val());
     $('#searchul').html('');
@@ -17,14 +25,18 @@ $(document).ready(function()
     }
   });
   $('#addPlayer').click(function(){
-    $('#search_pname').toggle();
+    $('#search_pnale, #compare').show();
+    $(this).hide();
   });
   $('#compare').click(function(){
     pids='';
-  $('.searchIds').each(function(plist){
-    pids+=$(this).attr('id')+',';
-  });
-  getresult(pids);
+    if($('.searchIds').length >0)
+    {
+    $('.searchIds').each(function(plist){
+      pids+=$(this).attr('id')+',';
+    });
+    getresult(pids);
+  }
 
   });
   //searchresult(0);
@@ -32,21 +44,24 @@ $(document).ready(function()
 });
 function searchresult(pid)
 { 
-  $('#search_pname').hide();
+  $('#search_pnale').hide();
   $('#search_pname').val('');
   $('#searchul').html('');
-
-
- // $('#cmp_panel').append('<div class="cmp_label" id="'+pid+'">'+$('#r'+pid).attr('pname')+'<span class="cmp_label_close">X</span></div>');
- //  $('#compareform').append('<input type="hidden" pid="'+pid+'" />');
-
- // html='<div class="cmp_label searchIds" id="'+pid+'">'+$('#s'+pid).attr('pname')+'<span class="cmp_label_close" lableid="'+pid+'" type="button">X</span></div>');
-
+  $('#addPlayer').show();
   html='<div class="cmp_label searchIds" id="'+pid+'">';
   html+='<lable class="span2">'+$('#s'+pid).attr('pname')+'</lable>';
-  html+='<span class="cmp_label_close" style="margin-top:-5px;" lableid="'+pid+'" type="button">X</span>';
+  html+='<span class="cmp_label_close" style="margin-top:-5px;" lableid="'+pid+'" type="button" onclick="removeMe('+pid+');">X</span>';
   html+='</div>';
   $('#filterList').append(html);
+  listcount = $('.searchIds').length;
+  if(listcount >= 4)
+  {
+    $('#addPlayer').hide();  
+  }
+  else
+  {
+    $('#addPlayer').show();
+  }
 }
 function getresult(pids)
 {
@@ -95,6 +110,7 @@ function getresult(pids)
         html1+='</table>';
          $('#bat_comparedstats').append(html);
          $('#bow_comparedstats').append(html1);
+         $('#compareDiv').show();
         });
       },
       error:function()
@@ -102,4 +118,18 @@ function getresult(pids)
         alert('Internal error, try agian...');
       }
     });
+}
+function removeMe(divId)
+{
+  $('#addPlayer').show();
+  $('#'+divId).remove();
+  listcount = $('.searchIds').length;
+  if(listcount <= 0)
+  {
+    $('#compform').hide();  
+  }
+  else
+  {
+    $('#compform').show();
+  }
 }

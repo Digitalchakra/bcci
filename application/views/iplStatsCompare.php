@@ -37,25 +37,25 @@
 							{?>
 					<div class="cmp_label searchIds" id="<?=$pid?>">
 					<lable class="span2"><?=$pnames[$count]?></lable>
-					<span class="cmp_label_close" style="margin-top:-5px;"  lableid="<?=$pid?>" type="button">X</span>
+					<span class="cmp_label_close" style="margin-top:-5px;"  lableid="<?=$pid?>" type="button" onclick="removeMe(<?=$pid?>);">X</span>
 					</div>
 					<? $count++;} }?>
 		  	</div>
-		  	<div class="cmp_search">
+		  	<div class="cmp_search" id="search_pnale" style="display:none;">
 				<input type="text" id="search_pname" autocomplete="off" placeholder="Add Player" />
 				<div class="cmp_searchul">
 					<ul id="searchul"></ul>
 				</div>
 			</div>
-			<div class="cmp_player_btn">
-				<button class="btn btn-info floatLeft" id="addPlayer"><i class="icon-plus icon-white"></i>Add Player</button>
+			<div class="cmp_player_btn" id="addPlayer">
+				<button class="btn btn-info floatLeft"><i class="icon-plus icon-white"></i>Add Player</button>
 			</div>
 			
 		 </div>
 		
-		<div class=" span12 bs2_3 cmp_templeft">
+		<div class=" span12 bs2_3 cmp_templeft" id="compare"  style="display:none;">
 		  
-			<button id="compare" class="btn btn-success big_btn" type="button">Compare Players</button>
+			<button class="btn btn-success big_btn" type="button">Compare Players</button>
 		  
 		</div>
 	  	</div>
@@ -82,7 +82,7 @@
 		</div>
 	</div> -->
 	<!-- my code - mani-->
-
+<div id="compareDiv" style="display:none;">
 	<div class="row com3" >
 		<div class="span12 ">
 			<!-- batting-->
@@ -129,5 +129,6 @@
 			</div>
 		
 	</div>
+</div>
 </div>
 <script src="<?php echo base_url('assets/js/stats_compare.js');?>"></script>
