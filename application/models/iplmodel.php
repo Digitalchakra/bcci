@@ -25,7 +25,7 @@ class Iplmodel extends CI_Model
 		{
 			$this->db->where('pid', $pids);
 		}
-		$this->db->where('r >', 0);
+		//$this->db->where('r >', 0);
 		$qry = $this->db->order_by("r", "desc")->get('ipl_most_runs');
 		if($qry->num_rows()>0)
 			{

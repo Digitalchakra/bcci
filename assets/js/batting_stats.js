@@ -8,6 +8,11 @@ $(document).ready(function(){
       $('#run_pname').val("");
 
     });
+  $('#compare').click(function(){
+    $('#cmp_imput').show();
+    $(this).hide();    
+  });
+
   $('#run_pname').keyup(function(){
     //alert($(this).val());
     $('#searchul').html('');
@@ -54,7 +59,7 @@ $(document).ready(function(){
       {
         //alert(data.resultset.data[0]['6s']);
         //alert($(this).attr('id'));
-        html=                '<span class="statout-close">X</span>';
+        html=                '<span onclick="hideMe(\''+targetID+'\');" class="statout-close">X</span>';
         html+=                '<div class="ipl-statout-title">';
         html+=                  '<h4>Batting Statistics, Max 6s</h4>';
         html+=                  '<p>'+rank+' '+data.resultset.data[0].pfullName+'</p>';
@@ -159,7 +164,36 @@ function searchresult(pid)
 function cmpsearchresult(pid)
 {
   $('#cmp_pname').val("");
+  $('#cmp_imput').hide();
   $('#cmpsearchul').html("");
-  $('#cmp_panel').append('<div class="cmp_label" id="'+pid+'">'+$('#r'+pid).attr('pname')+'<span class="cmp_label_close">X</span></div>');
-  $('#compareform').append('<input type="hidden" pid="'+pid+'" />');
+  $('#cmp_panel').append('<div class="cmp_label pToCmp" id="'+pid+'">'+$('#r'+pid).attr('pname')+'<span onclick="removeMe('+pid+');" class="cmp_label_close">X</span></div>');
+  $('#compareform').append('<input type="hidden" id="input'+pid+'" pid="'+pid+'" />');
+  listcount = $('.pToCmp').length;
+  $('#compform').show();
+  if(listcount === 4)
+  {
+    $('#compare, #cmp_imput').hide();
+  }
+  else
+  {
+    $('#compare').show();
+  }
+}
+function removeMe(divId)
+{
+  $('#compare').show();
+  $('#'+divId+' , #input'+divId).remove();
+  listcount = $('.pToCmp').length;
+  if(listcount <= 0)
+  {
+    $('#compform').hide();  
+  }
+  else
+  {
+    $('#compform').show();
+  }
+}
+function hideMe(divId)
+{
+  $('#'+divId).hide();
 }

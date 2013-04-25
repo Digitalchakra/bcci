@@ -42,20 +42,20 @@
 			</div>
 		 	<div id="cmp_panel" >
 		  	</div>
-		  	<div class="cmp_search">
-				<input type="text" id="cmp_pname" autocomplete="off" placeholder="Add Player" />
+		  	<div id="cmp_imput" style="display:none;" class="cmp_search">
+				<input type="text" id="cmp_pname" autocomplete="off" count="1" placeholder="Add Player" />
 				<div class="cmp_searchul">
 					<ul id="cmpsearchul"></ul>
 				</div>
 			</div>
-			<div class="cmp_player_btn">
+			<div id="compare" class="cmp_player_btn">
 				<button class="btn btn-info floatLeft">Add Another Player</button>
 			</div>
 			
 		 </div>
 		
-		<div class=" span12 bs2_3">
-		  <form class="cmpBtn" action="" method="POST" id="compareform">
+		<div class=" span12 bs2_3" id="compform"  style="display:none;">
+		  <form class="cmpBtn" action="" method="POST" id="compareform" >
 			<button class="btn btn-success">Compare Players</button>
 		  </form>
 		</div>
@@ -86,46 +86,7 @@
 			  </span> <span class="clearfix"></span> 
 			  <!-- popup -->
 					  <div class="ipl-statout" id="<? echo 'er'.$single->pid;?>">
-					   <!-- <div class="ipl-statout-title">
-						  <h4>Batting Statistics, Max 6s</h4>
-						  <p><?=$count?>. <?=$single->pfullName?></p>
-						</div>
-						<div class="ipl-RCB ipl-floatLeft ipl-statout-spacer"> </div>
-						<div class="ipl-statout-table ">
-						  <table WIDTH="100%" HEIGHT="100%">
-							<tr WIDTH="100%">
-							  <td class="clbl1"><p><?=$single->m?></p>
-								<h4>MAT</h4></td>
-							  <td class="clbl2"><p><?=$single->inns?></p>
-								<h4>INN</h4></td>
-							  <td class="clbl3"><p><?=$single->no?></p>
-								<h4>NO</h4></td>
-							  <td class="clbl3 ipl-statout-down"><p><?=$single->r?></p>
-								<h4>RUNS</h4></td>
-							</tr>
-							<tr WIDTH="100%">
-							  <td class="clbl4"><p><?=$single->{'hs*'}?></p>
-								<h4>HS</h4></td>
-							  <td class="clbl5"><p><?=$single->a?></p>
-								<h4>Ave.</h4></td>
-							  <td class="clbl6"><p><?=$single->b?></p>
-								<h4>BF</h4></td>
-							  <td class="clbl3 ipl-statout-down"><p><?=$single->sr?></p>
-								<h4>SR</h4></td>
-							</tr>
-							<tr WIDTH="100%">
-							  <td class="clbl7"><p><?=$single->{'100s'}?></p>
-								<h4>100</h4></td>
-							  <td class="clbl8"><p><?=$single->{'50s'}?></p>
-								<h4>50</h4></td>
-							  <td class="clbl3"><p><?=$single->{'4s'}?></p>
-								<h4>4s</h4></td>
-							  <td class="clbl3"><p><?=$single->{'6s'}?></p>
-								<h4>6s</h4></td>
-							</tr>
-						  </table>
-						</div>
-						<div class="ipl-statout-leftarrow" > </div>-->
+
 					  </div></li>
 			<?$count++; }?>
 		  </ul>
@@ -152,46 +113,7 @@
 			  </span> <span class="clearfix"></span>
 			  <!-- popup -->
 					  <div class="ipl-statout" id="<? echo 'es'.$single->pid;?>">
-					   <!-- <div class="ipl-statout-title">
-						  <h4>Batting Statistics, Max 6s</h4>
-						  <p><?=$count?>. <?=$single->pfullName?></p>
-						</div>
-						<div class="ipl-RCB ipl-floatLeft ipl-statout-spacer"> </div>
-						<div class="ipl-statout-table ">
-						  <table WIDTH="100%" HEIGHT="100%">
-							<tr WIDTH="100%">
-							  <td class="clbl1"><p><?=$single->m?></p>
-								<h4>MAT</h4></td>
-							  <td class="clbl2"><p><?=$single->inns?></p>
-								<h4>INN</h4></td>
-							  <td class="clbl3"><p><?=$single->no?></p>
-								<h4>NO</h4></td>
-							  <td class="clbl3 ipl-statout-down"><p><?=$single->r?></p>
-								<h4>RUNS</h4></td>
-							</tr>
-							<tr WIDTH="100%">
-							  <td class="clbl4"><p><?=$single->{'hs*'}?></p>
-								<h4>HS</h4></td>
-							  <td class="clbl5"><p><?=$single->a?></p>
-								<h4>Ave.</h4></td>
-							  <td class="clbl6"><p><?=$single->b?></p>
-								<h4>BF</h4></td>
-							  <td class="clbl3 ipl-statout-down"><p><?=$single->sr?></p>
-								<h4>SR</h4></td>
-							</tr>
-							<tr WIDTH="100%">
-							  <td class="clbl7"><p><?=$single->{'100s'}?></p>
-								<h4>100</h4></td>
-							  <td class="clbl8"><p><?=$single->{'50s'}?></p>
-								<h4>50</h4></td>
-							  <td class="clbl3"><p><?=$single->{'4s'}?></p>
-								<h4>4s</h4></td>
-							  <td class="clbl3"><p><?=$single->{'6s'}?></p>
-								<h4>6s</h4></td>
-							</tr>
-						  </table>
-						</div>
-						<div class="ipl-statout-leftarrow" > </div>-->
+
 					  </div> </li>
 			  <?$count++; }?>
 		  </ul>
@@ -218,46 +140,7 @@
 			  </span> <span class="clearfix"></span> 
 			  <!-- popup -->
 					  <div class="ipl-statout" id="<? echo 'ehs'.$single->pid;?>">
-						<!--<div class="ipl-statout-title">
-						  <h4>Batting Statistics, Max 6s</h4>
-						  <p><?=$count?>. <?=$single->pfullName?></p>
-						</div>
-						<div class="ipl-RCB ipl-floatLeft ipl-statout-spacer"> </div>
-						<div class="ipl-statout-table ">
-						  <table WIDTH="100%" HEIGHT="100%">
-							<tr WIDTH="100%">
-							  <td class="clbl1"><p><?=$single->m?></p>
-								<h4>MAT</h4></td>
-							  <td class="clbl2"><p><?=$single->inns?></p>
-								<h4>INN</h4></td>
-							  <td class="clbl3"><p><?=$single->no?></p>
-								<h4>NO</h4></td>
-							  <td class="clbl3 ipl-statout-down"><p><?=$single->r?></p>
-								<h4>RUNS</h4></td>
-							</tr>
-							<tr WIDTH="100%">
-							  <td class="clbl4"><p><?=$single->{'hs*'}?></p>
-								<h4>HS</h4></td>
-							  <td class="clbl5"><p><?=$single->a?></p>
-								<h4>Ave.</h4></td>
-							  <td class="clbl6"><p><?=$single->b?></p>
-								<h4>BF</h4></td>
-							  <td class="clbl3 ipl-statout-down"><p><?=$single->sr?></p>
-								<h4>SR</h4></td>
-							</tr>
-							<tr WIDTH="100%">
-							  <td class="clbl7"><p><?=$single->{'100s'}?></p>
-								<h4>100</h4></td>
-							  <td class="clbl8"><p><?=$single->{'50s'}?></p>
-								<h4>50</h4></td>
-							  <td class="clbl3"><p><?=$single->{'4s'}?></p>
-								<h4>4s</h4></td>
-							  <td class="clbl3"><p><?=$single->{'6s'}?></p>
-								<h4>6s</h4></td>
-							</tr>
-						  </table>
-						</div>
-						<div class="ipl-statout-leftarrow" > </div>-->
+
 					  </div></li>
 			  <?$count++; }?>
 		  </ul>
@@ -284,46 +167,7 @@
 			  </span> <span class="clearfix"></span> 
 			  <!-- popup -->
 					  <div class="ipl-statout" id="<? echo 'esr'.$single->pid;?>">
-						<!--<div class="ipl-statout-title">
-						  <h4>Batting Statistics, Max 6s</h4>
-						  <p><?=$count?>. <?=$single->pfullName?></p>
-						</div>
-						<div class="ipl-RCB ipl-floatLeft ipl-statout-spacer"> </div>
-						<div class="ipl-statout-table ">
-						  <table WIDTH="100%" HEIGHT="100%">
-							<tr WIDTH="100%">
-							  <td class="clbl1"><p><?=$single->m?></p>
-								<h4>MAT</h4></td>
-							  <td class="clbl2"><p><?=$single->inns?></p>
-								<h4>INN</h4></td>
-							  <td class="clbl3"><p><?=$single->no?></p>
-								<h4>NO</h4></td>
-							  <td class="clbl3 ipl-statout-down"><p><?=$single->r?></p>
-								<h4>RUNS</h4></td>
-							</tr>
-							<tr WIDTH="100%">
-							  <td class="clbl4"><p><?=$single->{'hs*'}?></p>
-								<h4>HS</h4></td>
-							  <td class="clbl5"><p><?=$single->a?></p>
-								<h4>Ave.</h4></td>
-							  <td class="clbl6"><p><?=$single->b?></p>
-								<h4>BF</h4></td>
-							  <td class="clbl3 ipl-statout-down"><p><?=$single->sr?></p>
-								<h4>SR</h4></td>
-							</tr>
-							<tr WIDTH="100%">
-							  <td class="clbl7"><p><?=$single->{'100s'}?></p>
-								<h4>100</h4></td>
-							  <td class="clbl8"><p><?=$single->{'50s'}?></p>
-								<h4>50</h4></td>
-							  <td class="clbl3"><p><?=$single->{'4s'}?></p>
-								<h4>4s</h4></td>
-							  <td class="clbl3"><p><?=$single->{'6s'}?></p>
-								<h4>6s</h4></td>
-							</tr>
-						  </table>
-						</div>
-						<div class="ipl-statout-leftarrow" > </div>-->
+						
 					  </div></li>
 			  <?$count++; }?>
 		  </ul>
