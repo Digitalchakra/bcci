@@ -8,9 +8,9 @@
 				<div class="btn-group margint20 small-menu">
 					<button class="btn dropdown-toggle" data-toggle="dropdown">Batting Statistics<span class="drop-icon"></span></button>
 					<ul class="dropdown-menu">
-						<li><a href="">Statistics</a></li>
-						<li><a href="">Batting Statistics</a></li>
-						<li><a href="">Bowling Statistics</a></li>
+						<li><a href="<? echo base_url('ipl/stats'); ?>">Statistics</a></li>
+						<li><a href="<? echo base_url('ipl/bowling_stats'); ?>">Bowling Statistics</a></li>
+						<li><a href="<? echo base_url('ipl/compare_stats'); ?>">Compare Players</a></li>
 					</ul>
 				</div>
 			 </div>
@@ -56,7 +56,7 @@
 		
 		<div class=" span12 bs2_3" id="compform"  style="display:none;">
 		  <form class="cmpBtn" action="<?=base_url('ipl/compare_stats')?>" method="POST" id="compareform" >
-			<button class="btn btn-success">Compare Players</button>
+			<button class="btn btn-success big_btn">Compare Players</button>
 		  </form>
 		</div>
 	  	</div>
@@ -84,10 +84,14 @@
 			  <h5><?=$single->pfullName?></h5>
 			  <h5><?=$single->r?> Runs, <?=$single->team_abbreviation?></h5>
 			  </span> <span class="clearfix"></span> 
+			</li>
 			  <!-- popup -->
-					  <div class="ipl-statout" id="<? echo 'er'.$single->pid;?>">
+			  		<div class="ipl-statout-outer">
+			  			<div class="ipl-statout" id="<? echo 'er'.$single->pid;?>">
 
-					  </div></li>
+					  </div>
+			  		</div>
+					 
 			<?$count++; }?>
 		  </ul>
 		</div>
@@ -112,9 +116,14 @@
 			  <h5><?=$single->{'6s'}?> Sixes, <?=$single->team_abbreviation?></h5>
 			  </span> <span class="clearfix"></span>
 			  <!-- popup -->
-					  <div class="ipl-statout" id="<? echo 'es'.$single->pid;?>">
 
-					  </div> </li>
+					   </li>
+
+					  <div class="ipl-statout-outer">
+					  	<div class="ipl-statout" id="<? echo 'es'.$single->pid;?>">
+
+					  </div>
+					  </div>
 			  <?$count++; }?>
 		  </ul>
 		</div>
@@ -139,9 +148,12 @@
 			  <h5><?=$single->{'hs*'}?> Runs, <?=$single->team_abbreviation?></h5>
 			  </span> <span class="clearfix"></span> 
 			  <!-- popup -->
-					  <div class="ipl-statout" id="<? echo 'ehs'.$single->pid;?>">
+					  </li>
+					  <div class="ipl-statout-outer">
+					  	<div class="ipl-statout" id="<? echo 'ehs'.$single->pid;?>">
 
-					  </div></li>
+					  </div>
+					  </div>
 			  <?$count++; }?>
 		  </ul>
 		</div>
@@ -166,9 +178,12 @@
 			  <h5>S/R: <?=$single->sr?>, <?=$single->team_abbreviation?></h5>
 			  </span> <span class="clearfix"></span> 
 			  <!-- popup -->
-					  <div class="ipl-statout" id="<? echo 'esr'.$single->pid;?>">
+					  </li>
+					  <div class="ipl-statout-outer">
+					  	<div class="ipl-statout" id="<? echo 'esr'.$single->pid;?>">
 						
-					  </div></li>
+					  </div>
+					  </div>
 			  <?$count++; }?>
 		  </ul>
 		</div>

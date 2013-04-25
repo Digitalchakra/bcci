@@ -35,9 +35,16 @@ function searchresult(pid)
   $('#search_pname').hide();
   $('#search_pname').val('');
   $('#searchul').html('');
-  html='<div class="input-append floatLeft searchIds" id="'+pid+'">';
+
+
+ // $('#cmp_panel').append('<div class="cmp_label" id="'+pid+'">'+$('#r'+pid).attr('pname')+'<span class="cmp_label_close">X</span></div>');
+ //  $('#compareform').append('<input type="hidden" pid="'+pid+'" />');
+
+ // html='<div class="cmp_label searchIds" id="'+pid+'">'+$('#s'+pid).attr('pname')+'<span class="cmp_label_close" lableid="'+pid+'" type="button">X</span></div>');
+
+  html='<div class="cmp_label searchIds" id="'+pid+'">';
   html+='<lable class="span2">'+$('#s'+pid).attr('pname')+'</lable>';
-  html+='<button class="btn" lableid="'+pid+'" type="button"><i class="icon-minus-sign"></i></button>';
+  html+='<span class="cmp_label_close" style="margin-top:-5px;" lableid="'+pid+'" type="button">X</span>';
   html+='</div>';
   $('#filterList').append(html);
 }

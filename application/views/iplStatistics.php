@@ -6,10 +6,11 @@
       <div class = "row">
         <div class = "span12">
           <div class="btn-group margint20 small-menu">
-            <button class="btn dropdown-toggle" data-toggle="dropdown">Statistics<span class="caret"></span></button>
+            <button class="btn dropdown-toggle" data-toggle="dropdown">Statistics<span class="drop-icon"></span></button>
             <ul class="dropdown-menu">
-              <li><a href="<? echo base_url('ipl/batting_stats'); ?>">Batting Statistics</a></li>
-              <li><a href="">Bowling Statistics</a></li>
+            <li><a href="<? echo base_url('ipl/batting_stats'); ?>">Batting Statistics</a></li>
+            <li><a href="<? echo base_url('ipl/bowling_stats'); ?>">Bowling Statistics</a></li>
+            <li><a href="<? echo base_url('ipl/compare_stats'); ?>">Compare Players</a></li>
             </ul>
           </div>
         </div>

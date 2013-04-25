@@ -154,8 +154,16 @@
 						</div>
 					
 			</div>
-				<!-- <div class="ipl-header-stats" id="ipl-header-stats">
-				</div> -->
+				<div class="ipl-header-stats" id="ipl-header-stats">
+				</div>
+				<div class="ipl-header-video">
+					<div class="ipl_video_title">
+						<p> Watch now to lorem ipsum doler sit amet  </p>
+					</div>
+					<div class="ipl_video_title2">
+						<a href="" class="ipl_video_thumbnail">bcci video</a>
+					</div>
+				</div>
 			</div>
 			<div class="span3 ipl-logo">
 				<!--<div class="ipl-logo-inner1">
@@ -303,7 +311,7 @@
 				<p>2604</p>
 				<h4>RUNS FROM BOUNDARIES</h4>
 			</div>
-			<div class="ipl-stats-cell"> 
+			<div class="ipl-stats-cell ipl-statscelllast"> 
 				<p>23</p>
 				<h4>HALF CENTURIES</h4>
 			</div>
@@ -314,7 +322,7 @@
 	
 <div class="container">
 	<!--======================================================ADs=======================-->
-	<div class="span12">
+	
 		<div class="row">
 			<div class="span9 ipl-ads">
 				<script type="text/javascript"><!--
@@ -329,7 +337,7 @@
 					src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 				</script>
 			</div>
-			<div class="span3 ipl-ads">
+			<div class="span3 ipl-ads ipl-ads2">
 				<script type="text/javascript"><!--
 					google_ad_client = "ca-pub-1444369114752839";
 					/* live-score-top */
@@ -338,16 +346,49 @@
 					google_ad_height = 90;
 					//-->
 				</script>
-				<script type="text/javascript"
+				<script type="text/javascript"	
 					src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 				</script>
 			</div>
 		</div>
-	</div>
+	
 	
 	<!--=====================================================Content=======================-->
-	<div class="row-fluid ipl-content" >
+	<div class="row ipl-content" >
+		<span class="carousel_leftArrow">
+			<span class="carousel_leftArrow_icon"></span>
+		</span>
+		<span class="carousel_rightArrow">
+			<span class="carousel_leftArrow_icon"></span>
+		</span>
 		<div style="width:100%">	
+
+			<div class="ipl-cards4 ipl-cards5">
+					<!--========================================================Campaign=======================-->
+				<div class="ipl-cards-title ipl-forums">
+					<h3>IPL on BCCI</h3>
+				</div>
+				<div class="ipl-cards-content">
+					<div class="ipl-cards3-inner">
+						<div class="bg-red">
+							
+						</div>
+					</div>
+						
+						<!-- <div class='ipl-camp-title'><h4>IPL Campaign</h4></div> -->
+					
+					<div class="ipl-campIntro">
+						<h4>Register with us and get access to a lot more fun on Bindaas Cricket Cafe! </h4>
+						<a href="" class="ipl_video_thumbnail">bcci video</a>
+					</div>
+					
+					<a class="white" href="<?=base_url('forum')?>"><button class="ipl-button2">Join the Cafe</button></a>
+				</div>
+				<div class="ipl-photos-footer">
+					<a href="<?=base_url('photos')?>">
+					<div class="ipl-forums-arrow"></div></a>
+				</div>
+			</div>
 			<div class="ipl-cards3">
 				<!--=============================================================Forums=======================-->
 				<div class="ipl-cards-title ipl-forums">
@@ -438,9 +479,6 @@
 					<div class="ipl-schedule-arrow"></div></a>
 				</div>
 			</div>
-			
-
-		
 			
 			<div class="ipl-cards5">
 				<!--==============================================================Polls=======================-->
