@@ -35,7 +35,7 @@
   color:#A82E0F;"
 }
 .container {
-	width:960px;
+  width:960px;
 }
 
 </style>
@@ -56,7 +56,7 @@
   <div class = "row">
     <div class = "span3 margint20"> <a href="<?php echo base_url();?>"><div class="logo"></div></a></div>
     <div class="span3 offset6 margint20">
-    	 <!-- kvm ads start -->
+       <!-- kvm ads start -->
             <div id="kvmslider" class="pull-right margint20"> <!-- Slider container -->
               <div id="mask"> <!-- Mask -->
                 
@@ -81,7 +81,7 @@
               <span id="defaultCountdown" class="countdown"></span>
       </div>-->
       </div>
-			<div class = "row">
+      <div class = "row">
        <!-- <div class = "span4  margint20">
           <div class="input-append search-box pull-right">
              <input class="span2 search-icon" id="appendedInputButton" type="text" placeholder= "Search the site">
@@ -95,6 +95,7 @@
   </div>
 </div>
 </div>
+<? $userdata=$this->phpbb_library->get_session_user(); ?>
 <!--NAV MENU-->
 <div class = "container">
   <div class = "row">
@@ -138,7 +139,7 @@
           </div>
         </li>
         <li <?php if($view_page=='result') echo 'class="active"';?>><a href="<?php echo base_url('result'); ?>" class="drop">Results</a></li>
-       <!-- <li <?php //if($view_page=='forum') echo 'class="active"';?>><a href="<?php //echo base_url('forum'); ?>" class="drop">Forum</a></li>-->
+        <li <?php //if($view_page=='forum') echo 'class="active"';?>><a href="<?php echo base_url('forum'); ?>" class="drop">Forum</a></li>
         <li <?php if($view_page=='team_rank') echo 'class="active"';?>><a class="drop">Rankings</a><!-- Begin 4 columns Item -->
          <div class="dropdown_2columns">
             <div class = "col_2">
@@ -166,23 +167,26 @@
         <li <?php if($view_page=='photos') echo 'class="active"';?>><a href="<?php echo base_url('photos');?>" class="drop">Photos</a></li>
         <li <?php if($view_page=='videos') echo 'class="active"';?>><a href="<?php echo base_url('videos');?>" class="drop">Videos</a></li>
        
-         <?php if(!$session_data = $this->session->userdata('logged_in'))
+         <?php if($userdata['is_registered'] != 1)
         { ?>
         <li class = "dropdown menu_right">
+        <a href="<?php echo base_url('forum/ucp.php?mode=register');?>">Register</a> 
+        </li>
+        <!--<li class = "dropdown menu_right">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px">
-            	<i class = "icon-lock icon-white" style="margin-right:15px;"></i>Register
+              <i class = "icon-lock icon-white" style="margin-right:15px;"></i>Register
             </a>
                 <div class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
                   <div class="row">
-                  	<div class = "span3">
-                  	<div class="padding20" style="text-align:left">
-                    	<h4 style = "text-align:left;margin-left:0;">Registration</h4>
+                    <div class = "span3">
+                    <div class="padding20" style="text-align:left">
+                      <h4 style = "text-align:left;margin-left:0;">Registration</h4>
                       <div class="divider"></div>
                       <span id="error_msg1" class="errorMessage"></span>
 
                       <form class="form-horizontal" id="register_form">
-                     		 <div class="margint10"></div>
-                      	<span>E-Mail: </span><input type="text" class="input-large" name="email_address" id="inputEmail" style="text-align:left">
+                         <div class="margint10"></div>
+                        <span>E-Mail: </span><input type="text" class="input-large" name="email_address" id="inputEmail" style="text-align:left">
                          <div class="margint10"></div>
                          <span>Password: </span><input type="password" class="input-large" name="pass_word" id="inputPassword" style="text-align:left">
                          <div class="margint10"></div>
@@ -191,21 +195,21 @@
                          <span>Last Name: </span><input type="text" class="input-large" name="lastname" id="lastname" style="text-align:left">
                          <div class="margint20"></div>
                          <a class="btn btn-mini btn-primary span1 pull-right marginb15" id="signupsubmit">Register</a>
-                  		</form>
+                      </form>
                       
                     </div>
                   </div>
                   </div>
                 </div>
-          </li>
+          </li>-->
           <?php } ?>
         
         
-         <?php if($session_data = $this->session->userdata('logged_in'))
+        <?php if($userdata['is_registered'] == 1)
         { ?>
         <li class = "menu_right dropdown" >
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px">
-           <i class = "icon-user icon-white" style="margin-right:15px;"></i><?php echo $session_data['firstname']; ?>
+           <i class = "icon-user icon-white" style="margin-right:15px;"></i><?php echo $userdata['username_clean']; ?>
           </a>
           <!-- 
           <div class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
@@ -225,21 +229,21 @@
         </li>
         
          <?php }
-				else
-				{ ?>
+        else
+        { ?>
         <li class = "menu_right dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px">
-         	 <i class = "icon-user icon-white" style="margin-right:15px;"></i>Login
+           <i class = "icon-user icon-white" style="margin-right:15px;"></i>Login
           </a>
           <div class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
             <div class="row">
               <div class = "span3">
                 <div class="padding20" style="text-align:left">
-                	
+                  
                   <h4 style = "text-align:left;margin-left:0;" id="login_header">Login</h4>
                   <div class="divider"></div><span id="error_msg" class="errorMessage"></span>
                   <form class="form-horizontal">
-                  	<span class="login">Email: </span><input type="text" class="input-large login" id="username" name="username" style="text-align:left">
+                    <span class="login">Email: </span><input type="text" class="input-large login" id="username" name="username" style="text-align:left">
                     <div class="margint10"></div>
                     <span class="login">Password: </span><input type="password" class="input-large login" id="passowrd" name="password">
                     <span id="forgot_pw_txt"></span><input type="text"  class="forget input-large margint20" id="fusername" name="fusername" style="display:none; margin-top:10px">
@@ -263,36 +267,36 @@
 
 <!--Static Live Score-->
 <div class="static-bottom-container static-bottom-bg visible-desktop" id="closeBg" style="width:96%; display:none !important;">
-	<div class="row-fluid">
-  	<div class="span12">
-    	<div class="container-fluid"  id="lsClose">
-      	<div class="row-fluid">
-        	<div class="span12">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="container-fluid"  id="lsClose">
+        <div class="row-fluid">
+          <div class="span12">
         <!--Toggle Box-->
-        	<div class="static-toggle livescore_bg livescore_bg_white" id="lsToggleBox">
+          <div class="static-toggle livescore_bg livescore_bg_white" id="lsToggleBox">
           <div class="ls_close pull-right"  id="lsCloseButton"></div>
           <?php if($view_page=='home') echo '<div class="ls_default pull-right"  id="lsMakeDefault" listid="0"><a class="btn">Make Default</a></div>'?>
-          	<!--Toggle Box Live Score-->
-          	<div class="row-fluid">
-            	<div class="span12">
-              	<div class="padding20">
-                	<div class="span12 red team_name align-center matchstate" style="color:#900;">
+            <!--Toggle Box Live Score-->
+            <div class="row-fluid">
+              <div class="span12">
+                <div class="padding20">
+                  <div class="span12 red team_name align-center matchstate" style="color:#900;">
                   </div>
-                	<div class="row-fluid  align-center">
-                  	<div class="span5">
-                    	<div class="team_icon1">
-                      	<div class="team1_image"></div>
+                  <div class="row-fluid  align-center">
+                    <div class="span5">
+                      <div class="team_icon1">
+                        <div class="team1_image"></div>
                       </div>
                       <h5 class="team_name team1" style="color:#4d4d4d"></h5>
                       <h4 class="red not_live team1_score" style = "font-weight:bold"></h4>
                       <p class="not_live small-text team1_over"></p>
                     </div>
                     <div class="span1">
-                    	<h3 style="margin-top:42px; font-weight:bold; font-size:16px" class="red">vs</h3>
+                      <h3 style="margin-top:42px; font-weight:bold; font-size:16px" class="red">vs</h3>
                     </div>
                     <div class="span5 pull-right">
-                    	<div class="team_icon2">
-                      	<div class="team2_image"></div>
+                      <div class="team_icon2">
+                        <div class="team2_image"></div>
                       </div>
                       <h5 class="team_name team2" style="color:#4d4d4d"></h5>
                       <h4 class="nolive team2_score"  style = "font-weight:bold"></h4>
@@ -301,11 +305,11 @@
                   </div>
                   
                   <div class="row-fluid  align-center margint10">
-                  	 <h6 class="red"><!--<span id="status">CSK Needs 46 Runs to win</span>--> 
+                     <h6 class="red"><!--<span id="status">CSK Needs 46 Runs to win</span>--> 
                   <span class="marginl20 red not_live rrr"></span> <span class="marginl20 red not_live crr" style="text-shadow:none;font-weight:bold"></span> </h6>
                   </div>
                   
-             			<div style="text-align:center" class="row-fluid margint20 playerstate"><!--Player Stats-->
+                  <div style="text-align:center" class="row-fluid margint20 playerstate"><!--Player Stats-->
               <div class = "span1 batsman-dark"></div>
               <div class="span5">
                 <h5 class="team_name striker" style="color:#900"></h5>
@@ -351,7 +355,7 @@
               </div>
               <div class="runner-dark span1"></div>
             </div>
-            			<div class="row-fluid margint20 align-center bowlerstate">
+                  <div class="row-fluid margint20 align-center bowlerstate">
               <div class="span1 bowler-dark"></div>
               <div class="span6">
                 <p class="small-text strikerbowler" style="color:#4d4d4d;font-weight:bold;font-size:12px"></p>
@@ -388,8 +392,8 @@
             <!--End of Toggle Box Live Score-->
           </div>
         <!--EO Toggle Box-->
-        	<div class="pull-right">
-        	<ul class="grid" id="livescore_dd">
+          <div class="pull-right">
+          <ul class="grid" id="livescore_dd">
            
           </ul>
           </div>
@@ -405,44 +409,44 @@
 <!--<div id="chat_minimize" class="chat-button pull-right visible-desktop"><img src="<?php echo base_url('assets/Images/chat_button.png');?>" class="res-image" id="chat-button"> </div>-->
  
   <!--Old Toggle Script-->
-	<!--<script type="text/javascript">
-		
-		$("#ls_bt_close").click(function() {
+  <!--<script type="text/javascript">
+    
+    $("#ls_bt_close").click(function() {
     $("#lsClose").toggle(200);
-		$("#closeBg").toggleClass("static-bottom-bg");
-		});
-		
-		$(".slides li").click(function() {
-			var offset = $(this).offset();
-			var toggleboxOffset = $("#lsToggleBox").offset();
-			if (toggleboxOffset.left === -350 || toggleboxOffset.left != (offset.left-30))
-			{
-			$("#lsToggleBox").animate({"left":(offset.left-50)},{duration:300});
-			}
-			if (toggleboxOffset.left === (offset.left-50))
-			{
-			$("#lsToggleBox").animate({"left":"-350px"},{duration:300});
-			}
-			$(".slides li").removeClass("active");
-			$(this).addClass("active");
-		});
-		
-		$("#lsMakeDefault").click(function() {
-			$("html, body").animate({ scrollTop: (100) }, 500);
-		});
-		
-		$("#lsCloseButton").click(function() {
-			$("#lsToggleBox").animate({"left":"-350px"},{duration:300});
-			toggleState=0;
-		});
-		
-		$("#forget").click(function(){
-			$("#login_header").text("Forgot Password?");
-			$("#forgot_pw_txt").text("Email: ");
-		});
-		$("#login").click(function(){
-			$("#login_header").text("Login");
-			$("#forgot_pw_txt").text("");
-		});
-		
-	</script>-->
+    $("#closeBg").toggleClass("static-bottom-bg");
+    });
+    
+    $(".slides li").click(function() {
+      var offset = $(this).offset();
+      var toggleboxOffset = $("#lsToggleBox").offset();
+      if (toggleboxOffset.left === -350 || toggleboxOffset.left != (offset.left-30))
+      {
+      $("#lsToggleBox").animate({"left":(offset.left-50)},{duration:300});
+      }
+      if (toggleboxOffset.left === (offset.left-50))
+      {
+      $("#lsToggleBox").animate({"left":"-350px"},{duration:300});
+      }
+      $(".slides li").removeClass("active");
+      $(this).addClass("active");
+    });
+    
+    $("#lsMakeDefault").click(function() {
+      $("html, body").animate({ scrollTop: (100) }, 500);
+    });
+    
+    $("#lsCloseButton").click(function() {
+      $("#lsToggleBox").animate({"left":"-350px"},{duration:300});
+      toggleState=0;
+    });
+    
+    $("#forget").click(function(){
+      $("#login_header").text("Forgot Password?");
+      $("#forgot_pw_txt").text("Email: ");
+    });
+    $("#login").click(function(){
+      $("#login_header").text("Login");
+      $("#forgot_pw_txt").text("");
+    });
+    
+  </script>-->

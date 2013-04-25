@@ -5,7 +5,7 @@ class VerifyLogin extends CI_Controller {
  function __construct()
  {
    parent::__construct();
-   $this->load->model('user','',TRUE);
+  // $this->load->helper('url');
  }
 
  function index()
@@ -38,31 +38,25 @@ class VerifyLogin extends CI_Controller {
  {
    //Field validation succeeded.&nbsp; Validate against database
    $username = $this->input->post('username');
-
-   //query the database
-   $result = $this->user->login($username, $password);
-
-   if($result)
-   {
-     $sess_array = array();
-     foreach($result as $row)
-     {
-       $sess_array = array(
-         'id' => $row->id,
-         'firstname' => $row->firstname,
-         'lastname' => $row->lastname,
-         'email' => $row->email,
-         'admin' => $row->admin,
-       );
-       $this->session->set_userdata('logged_in', $sess_array);
-     }
-     return TRUE;
-   }
-   else
+$auth = new auth();
+$result=$auth->login($username, $password);
+//print_r($result); die;
+if($result['status']==3)
+  {
+	       $sess_array = array(
+           'id' => $result['user_row']['user_id'],
+           'firstname' => $result['user_row']['username'],
+           'lastname' => $result['user_row']['username'],
+           'email' => $result['user_row']['user_email'],
+           'admin' => 1,
+         );
+         $this->session->set_userdata('logged_in', $sess_array);
+}
+ else
    {
      $this->form_validation->set_message('check_database', 'Invalid username or password');
      return false;
    }
- }
+}
 }
 ?>
