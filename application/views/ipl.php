@@ -156,9 +156,9 @@
 			</div>
 				<div class="ipl-header-stats" id="ipl-header-stats">
 				</div>
-				<div class="ipl-header-video">
+				<div class="ipl-header-video" >
 					<div class="ipl_video_title">
-						<p> Watch now to lorem ipsum doler sit amet  </p>
+						<p> BCCI.com just got more interesting! Watch our video now!  </p>
 					</div>
 					<div class="ipl_video_title2">
 						<a href="" class="ipl_video_thumbnail">bcci video</a>
@@ -277,47 +277,10 @@
 				</div>
 			</div>
 		</div>
-<div class="row">
-		<div class="span12 ipl-stats-bottom">
-			<div class="ipl-stats-cell ipl-statscelltitle">
-				<p>IPL13 </p>
-				<h4>in numbers</h4>
-			</div>
-			<div class="ipl-stats-cell ipl-statscell1"> 
-				<p>5116</p>
-				<h4>RUNS</h4>
-			</div>
-			<div class="ipl-stats-cell ipl-statscell-small"> 
-				<p>224</p>
-				<h4>WICKETS</h4>
-			</div>
-			<div class="ipl-stats-cell ipl-statscell-small"> 
-				<p>1621</p>
-				<h4>DOT BALLS</h4>
-			</div>
-			<div class="ipl-stats-cell ipl-statscell1"> 
-				<p>106m</p>
-				<h4>LONGEST SIX</h4>
-			</div>
-			<div class="ipl-stats-cell ipl-statscell-small"> 
-				<p>136</p>
-				<h4>SIXES</h4>
-			</div>
-			<div class="ipl-stats-cell ipl-statscell2"> 
-				<p>152.40KM</p>
-				<h4>FASTEST BALL</h4>
-			</div>
-			<div class="ipl-stats-cell ipl-statscell3"> 
-				<p>2604</p>
-				<h4>RUNS FROM BOUNDARIES</h4>
-			</div>
-			<div class="ipl-stats-cell ipl-statscelllast"> 
-				<p>23</p>
-				<h4>HALF CENTURIES</h4>
-			</div>
+		<div id="ipl-header-stats2" class="row">
+			
+			<!-- <button class="ipl-button3">Statistics<i class="icon-arrow-up icon-white" style="margin-left:10px; margin-top:-1px;"></i></button> -->
 		</div>
-		<button class="ipl-button3">Statistics<i class="icon-arrow-up icon-white" style="margin-left:10px; margin-top:-1px;"></i></button>
-	</div>
 	</div>	 
 	
 <div class="container">
@@ -359,7 +322,7 @@
 			<span class="carousel_leftArrow_icon"></span>
 		</span>
 		<span class="carousel_rightArrow">
-			<span class="carousel_leftArrow_icon"></span>
+			<span class="carousel_rightArrow_icon"></span>
 		</span>
 		<div style="width:100%">	
 
@@ -378,7 +341,7 @@
 						<!-- <div class='ipl-camp-title'><h4>IPL Campaign</h4></div> -->
 					
 					<div class="ipl-campIntro">
-						<h4>Register with us and get access to a lot more fun on Bindaas Cricket Cafe! </h4>
+						<h4>BCCI is a One Stop Shop for all you sports enthusiasts to share your views and interact with your social circle. Bring your friends over to our Cafe! </h4>
 						<a href="" class="ipl_video_thumbnail">bcci video</a>
 					</div>
 					

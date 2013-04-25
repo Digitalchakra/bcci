@@ -439,14 +439,11 @@ border: 1px solid #282828;
 }
 
 .ipl-campIntro a{
-	margin-top:20px;
-	margin-left: 10px; 
+	margin-top:0px;
+	margin-left: 31px; 
 }
 
-.ipl-campIntro h4{
-	font-size: 14px;
-	height: 20px;
-}
+
 
 .ipl-forumIntro h4{
 	font-size: 14px;
@@ -948,12 +945,12 @@ display: block;
 .ipl_video_title{
 	background-color: #67130d;
 	border-bottom: solid 1px #52120e;
-	padding-top: 20px;
+	padding-top: 16px;
 	padding-bottom: 10px;
 }
 
 .ipl_video_title p{
-	font-size: 18px;
+	font-size: 17px;
 	color: #ffffff;
 	padding-right: 10px;
 	padding-left: 10px;
@@ -967,6 +964,19 @@ display: block;
 .ipl_video_thumbnail:hover{
 	background:transparent url(../Images/bccivideo_thumb_hover.png) no-repeat left top; width: 190px; height: 119px; text-indent: -999em; display: block;
 }
+
+
+.ipl-campIntro .ipl_video_thumbnail{
+	width: 150px; height: 94px;  
+	background-size: contain;
+}
+
+.ipl-campIntro .ipl_video_thumbnail:hover{
+	width: 150px; height: 94px;  
+	background-size: contain;
+}
+
+
 .ipl_video_title2{
 
 	padding-top: 20px;
@@ -1287,6 +1297,10 @@ display: block;
 	background:#2594c9;
 	border:1px solid #4ab3e5;
 }
+
+
+
+
 .orange-cap ul li:hover .rank{
 	background:#f25a29;
 	color:#FFF !important;
@@ -1561,8 +1575,8 @@ display: block;
 
 .ipl-statscell-small{	width: 62px;}
 .ipl-statscell3{ width: 151px;}
-.ipl-statscell2{ width: 127px;}
-.ipl-statscell1{ width: 70px;}
+.ipl-statscell2{ width: 112px;}
+.ipl-statscell1{ width: 80px;}
 .ipl-statscelllast{ border: none;}
 
 .ipl-stats-cell h4{
@@ -1623,8 +1637,12 @@ display: block;
 .big_btn{
 	width: 260px;
 	height: 40px;
+	font-size: 18px !important;
 }
 
+.big_btn button{
+	font-size: 18px !important;
+}
 
 #bat_comparedstats table:nth-child(1) thead td{	background-color: #3f86f2 !important;}
 #bat_comparedstats table:nth-child(2) thead td{	background-color: #6db842 !important;}
@@ -1800,6 +1818,10 @@ display: block;
 		  margin: 5px; /*width: 160px; float: left;*/ font-size: 14px; vertical-align: middle; height: 100%;
 }
 
+.cmp_title h4{
+		  color: #000000;
+}
+
 .cmp_search{
 	float: left; display: block; width: 200px; height: 30px; position: relative; padding-top: 5px;
 }
@@ -1824,7 +1846,7 @@ display: block;
 .cmp_player_btn{
 	float: left;
 
-	width: 160px;
+	width: 180px;
 	padding-left: 20px;
 	margin-top: 10px;
 }
@@ -1853,5 +1875,20 @@ display: block;
 }
 
 .ipl-statout h4{
+
 	text-transform: none;
 }
+
+.cmp_title h4{
+
+	color: #000000;
+}
+
+.ipl-campIntro h4{
+	text-transform: none;
+	font-size: 16px;
+	line-height: 18px;
+	padding-top: 5px;
+	padding-bottom: 0px;
+}
+

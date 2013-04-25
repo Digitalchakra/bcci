@@ -49,7 +49,7 @@
 				</div>
 			</div>
 			<div id="compare" class="cmp_player_btn">
-				<button class="btn btn-info floatLeft">Add Another Player</button>
+				<button class="btn btn-info floatLeft"><i class="icon-plus icon-white"></i>Add Another Player</button>
 			</div>
 			
 		 </div>
