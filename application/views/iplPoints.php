@@ -28,7 +28,7 @@
                 <th style="text-align:left">Teams</th>
                 <th>Played</th>
                 <th>Points</th>
-                <th>N/R</th>
+                <th>NRR</th>
                 <th>Won</th>
                 <th>Lost</th>
                 <th>Tied</th>

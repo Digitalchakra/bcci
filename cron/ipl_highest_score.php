@@ -32,9 +32,11 @@ try
 			$data['6s']=$single['battingStats']['6s'];
 			$data['no']=$single['battingStats']['no'];
 			$data['hs']=$single['battingStats']['hs'];
+			$data['hs*']=$single['battingStats']['hs'];
 			$data['50s']=$single['battingStats']['50s'];
 			$data['100s']=$single['battingStats']['100s'];
 			$data['inns']=$single['battingStats']['inns'];
+			$data['m']=$single['battingStats']['m'];
 			$data['team_id']=$single['team']['id'];
 			$data['matchDate']=$single['matchDate'];
 			$data['opt_fullName']=$single['opposition']['fullName'];

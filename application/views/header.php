@@ -106,6 +106,18 @@
       <ul class ="menu"> 
         <li <?php if($view_page=='home') echo 'class="active"';?> ><a href="<?php echo base_url('home'); ?>" class="drop">Home</a></li>
         <li <?php if($this->uri->segment(1) =='ipl' || $this->uri->segment(1) =='') echo 'class="ipl-blue"';?> id="ipl_menu"><a href="<?php echo base_url('ipl'); ?>" class="drop" >IPL 2013</a>
+        <div class="dropdown_2columns">
+            <div class = "col_2">
+              <ul class="greybox">
+                <h2>IPL 2013</h2>
+                <li><a href="<?php echo base_url('ipl/stats'); ?>">Statistics</a></li>
+                <li><a href="<?php echo base_url('ipl/crossword'); ?>">Crossword</a></li>
+                <li><a href="<?php echo base_url('ipl/quiz'); ?>">Quiz</a></li>
+                <li><a href="<?php echo base_url('ipl/points'); ?>">Points Table</a></li>
+              </ul>
+            </div>
+          </div>
+          </li>        
         <li <?php if($view_page=='schedule') echo 'class="active"';?>><a href="<?php echo base_url('schedule'); ?>" class="drop">Schedule</a><!-- Begin Shedule columns Item -->
 
           <div class="dropdown_2columns"><!-- Begin 5 columns container -->

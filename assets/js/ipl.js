@@ -252,11 +252,12 @@ function ipllivescoredisplay(data)
 				{
 					$('#ipl_playerstate').hide();
 					$('#ipl_bowlerstate').hide();
+					$('#ipl-header-stats').show();
 				}
 				if(data.state=='preview')
 				{
 				$('#ipl_playerstate, #ipl_bowlerstate, .iplnot_live').hide();
-				//$('#ipl-header-stats').show();
+				$('#ipl-header-stats').show();
 				$('#ipl_matchstate').html('Starting '+new Date(data.startdayandtimeGMT));
 				}
 }

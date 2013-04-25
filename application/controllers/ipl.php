@@ -22,6 +22,24 @@ class Ipl extends CI_Controller
 		//print_r($data); die;
 		$this->load->view('template', $data);
 	}
+	function stats()
+	{
+		$this->load->helper('url');
+		$this->load->model('iplmodel');
+		$data['content']=$this->iplmodel->getPoints(10,0);
+		$data['view_page'] = 'iplStatistics';
+		$this->load->view('template', $data);
+	}
+	function compare_stats()
+	{
+		$this->load->helper('url');
+		$data['pids']=$this->input->post('pids', TRUE);
+		$data['pnames']=$this->input->post('pnames', TRUE);
+		$this->load->model('iplmodel');
+		$data['view_page'] = 'iplStatsCompare';
+		$data['players'] = $this->get_player_list();
+		$this->load->view('template', $data);
+	}
 	function batting_stats()
 	{
 		$this->load->helper('url');
@@ -31,10 +49,48 @@ class Ipl extends CI_Controller
 		$data['mostSix']=$this->iplmodel->mostSix();
 		$data['highestScore']=$this->iplmodel->highestScore();
 		$data['highestStrikeRate']=$this->iplmodel->highestStrikeRate();
-		$data['view_page'] = 'ipl_batting_stats';
+		$data['view_page'] = 'iplBattingStatistics';
 		//echo "<pre>";
 		//print_r($data); die;
 		$this->load->view('template', $data);
+	}
+	function batting_player()
+	{
+		$this->load->helper('url');
+		$this->load->model('iplmodel');
+		if($pids=$this->input->get('pids', TRUE))
+		{
+			$data['resultset']['data']=$this->iplmodel->mostRun($pids);
+			$data['resultset']['success']=1;
+		}
+		else
+		{
+			$data['resultset']['success']=-1;
+		}
+		$this->load->view('json',$data);
+	}
+	function get_player_list()
+	{
+		$this->load->helper('url');
+		$this->load->model('iplmodel');
+		return $this->iplmodel->getPlayersList();
+	}
+	function get_players()
+	{
+		$this->load->helper('url');
+		$this->load->model('iplmodel');
+		if($pids=$this->input->get('pids', TRUE))
+		{
+			$data['resultset']['data']=$this->iplmodel->getPlayers(explode(',', $pids));
+			$data['resultset']['success']=1;
+		}
+		else
+		{
+			$data['resultset']['success']=-1;
+		}
+		//echo "<pre>";
+		//print_r($data);
+		$this->load->view('json',$data);
 	}
 	function bowling_stats()
 	{
@@ -45,10 +101,25 @@ class Ipl extends CI_Controller
 		$data['bestBowling']=$this->iplmodel->bestBowling();
 		$data['bestBowlingAvg']=$this->iplmodel->bestBowlingAvg();
 		$data['bestBowlingEconomy']=$this->iplmodel->bestBowlingEconomy();
-		$data['view_page'] = 'ipl_bowling_stats';
+		$data['view_page'] = 'iplBowlingStatistics';
 		//echo "<pre>";
 		//print_r($data); die;
 		$this->load->view('template', $data);
+	}
+	function bowling_player()
+	{
+		$this->load->helper('url');
+		$this->load->model('iplmodel');
+		if($pids=$this->input->get('pids', TRUE))
+		{
+			$data['resultset']['data']=$this->iplmodel->mostWicket($pids);
+			$data['resultset']['success']=1;
+		}
+		else
+		{
+			$data['resultset']['success']=-1;
+		}
+		$this->load->view('json',$data);
 	}
 	function points_json()
 	{
