@@ -101,10 +101,25 @@ class Ipl extends CI_Controller
 		$data['bestBowling']=$this->iplmodel->bestBowling();
 		$data['bestBowlingAvg']=$this->iplmodel->bestBowlingAvg();
 		$data['bestBowlingEconomy']=$this->iplmodel->bestBowlingEconomy();
-		$data['view_page'] = 'ipl_bowling_stats';
+		$data['view_page'] = 'iplBowlingStatistics';
 		//echo "<pre>";
 		//print_r($data); die;
 		$this->load->view('template', $data);
+	}
+	function bowling_player()
+	{
+		$this->load->helper('url');
+		$this->load->model('iplmodel');
+		if($pids=$this->input->get('pids', TRUE))
+		{
+			$data['resultset']['data']=$this->iplmodel->mostWicket($pids);
+			$data['resultset']['success']=1;
+		}
+		else
+		{
+			$data['resultset']['success']=-1;
+		}
+		$this->load->view('json',$data);
 	}
 	function points_json()
 	{
