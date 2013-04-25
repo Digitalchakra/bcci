@@ -30,9 +30,8 @@
 				<h4>Add players to Compare</h4>
 			</div>
 		 	<div id="filterList" >
-		 		<?if($pids)
+		 		<? $count=0; if($pids)
 					{
-						$count=0;
 						foreach($pids as $pid) 
 							{?>
 					<div class="cmp_label searchIds" id="<?=$pid?>">
@@ -47,7 +46,12 @@
 					<ul id="searchul"></ul>
 				</div>
 			</div>
-			<div class="cmp_player_btn" id="addPlayer">
+			<? if($count >=5)
+			{?>
+				<div class="cmp_player_btn" id="addPlayer" style="display:none">
+			<?} else {?>
+				<div class="cmp_player_btn" id="addPlayer">
+			<? } ?>
 				<button class="btn btn-info floatLeft"><i class="icon-plus icon-white"></i>Add Player</button>
 			</div>
 			

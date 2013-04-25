@@ -54,7 +54,7 @@ function searchresult(pid)
   html+='</div>';
   $('#filterList').append(html);
   listcount = $('.searchIds').length;
-  if(listcount >= 4)
+  if(listcount >= 5)
   {
     $('#addPlayer').hide();  
   }

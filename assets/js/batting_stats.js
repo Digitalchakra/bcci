@@ -171,7 +171,7 @@ function cmpsearchresult(pid)
   $('#compareform').append('<input type="hidden" name="pids[]" id="input'+pid+'" pid="'+pid+'" value="'+pid+'" /><input type="hidden" name="pnames[]" id="inputName'+pid+'" pid="'+pid+'" value="'+$('#r'+pid).attr('pname')+'" />');
   listcount = $('.pToCmp').length;
   $('#compform').show();
-  if(listcount === 4)
+  if(listcount >= 4)
   {
     $('#compare, #cmp_imput').hide();
   }
