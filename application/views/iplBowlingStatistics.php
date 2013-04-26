@@ -181,7 +181,7 @@
 		  <? }?>
 			<span class="rank"><?=$count?></span> <span class="details">
 			  <h5><?=$single->pfullName?></h5>
-			  <h5><?=$single->a?> Average, <?=$single->team_abbreviation?></h5>
+			  <h5><?=$single->ba?> Average, <?=$single->team_abbreviation?></h5>
 			  </span> <span class="clearfix"></span>
 			  </li> 
 			  <!-- popup -->

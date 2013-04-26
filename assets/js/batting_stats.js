@@ -81,7 +81,7 @@ $(document).ready(function(){
         html+=                      '<td class="clbl4"><p>'+data.resultset.data[0]['hs*']+'</p>';
         html+=                        '<h4>HS</h4></td>';
         html+=                      '<td class="clbl5"><p>'+data.resultset.data[0].a+'</p>';
-        html+=                        '<h4>Ave.</h4></td>';
+        html+=                        '<h4>AVE</h4></td>';
         html+=                      '<td class="clbl6"><p>'+data.resultset.data[0].b+'</p>';
         html+=                        '<h4>BF</h4></td>';
         html+=                      '<td class="clbl3 ipl-statout-down"><p>'+data.resultset.data[0].sr+'</p>';

@@ -19,14 +19,14 @@ class Iplmodel extends CI_Model
 	function mostRun($pids=NULL)	
 	{
 		$data=array();
-		$this->db->select('ipl_most_runs.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
-		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_most_runs.team_id');
+		$this->db->select('ipl_players_stats.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
+		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_players_stats.team_id');
 		if($pids)
 		{
 			$this->db->where('pid', $pids);
 		}
 		//$this->db->where('r >', 0);
-		$qry = $this->db->order_by("r", "desc")->get('ipl_most_runs');
+		$qry = $this->db->order_by("r", "desc")->get('ipl_players_stats');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)
@@ -39,10 +39,10 @@ class Iplmodel extends CI_Model
 	function mostSix()
 	{
 		$data=array();
-		$this->db->select('ipl_most_runs.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
-		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_most_runs.team_id');
+		$this->db->select('ipl_players_stats.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
+		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_players_stats.team_id');
 		$this->db->where('6s >', 0);
-		$qry = $this->db->order_by("6s", "desc")->get('ipl_most_runs');
+		$qry = $this->db->order_by("6s", "desc")->get('ipl_players_stats');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)
@@ -55,10 +55,10 @@ class Iplmodel extends CI_Model
 	function highestScore()
 	{
 		$data=array();
-		$this->db->select('ipl_most_runs.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
-		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_most_runs.team_id');
+		$this->db->select('ipl_players_stats.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
+		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_players_stats.team_id');
 		$this->db->where('hs >', 0);
-		$qry = $this->db->order_by("hs", "desc")->get('ipl_most_runs');
+		$qry = $this->db->order_by("hs", "desc")->get('ipl_players_stats');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)
@@ -71,10 +71,10 @@ class Iplmodel extends CI_Model
 	function highestStrikeRate()
 	{
 		$data=array();
-		$this->db->select('ipl_most_runs.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
-		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_most_runs.team_id');
+		$this->db->select('ipl_players_stats.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
+		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_players_stats.team_id');
 		$this->db->where('sr >', 0);
-		$qry = $this->db->order_by("sr", "desc")->get('ipl_most_runs');
+		$qry = $this->db->order_by("sr", "desc")->get('ipl_players_stats');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)
@@ -87,13 +87,13 @@ class Iplmodel extends CI_Model
 	function mostWicket($pids=NULL)	
 	{
 		$data=array();
-		$this->db->select('ipl_most_wickets.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
-		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_most_wickets.team_id');
+		$this->db->select('ipl_players_stats.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
+		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_players_stats.team_id');
 		if($pids)
 		{
 			$this->db->where('pid', $pids);
 		}
-		$qry = $this->db->order_by("w", "desc")->get('ipl_most_wickets');
+		$qry = $this->db->order_by("w", "desc")->get('ipl_players_stats');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)
@@ -106,10 +106,10 @@ class Iplmodel extends CI_Model
 	function bestBowling()	
 	{
 		$data=array();
-		$this->db->select('ipl_most_wickets.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
-		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_most_wickets.team_id');
+		$this->db->select('ipl_players_stats.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
+		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_players_stats.team_id');
 		$this->db->where('w >', 0);
-		$qry = $this->db->order_by("bbiw", "desc")->order_by("bbir", "asc")->get('ipl_most_wickets');
+		$qry = $this->db->order_by("bbiw", "desc")->order_by("bbir", "asc")->get('ipl_players_stats');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)
@@ -122,10 +122,10 @@ class Iplmodel extends CI_Model
 	function bestBowlingAvg()	
 	{
 		$data=array();
-		$this->db->select('ipl_most_wickets.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
-		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_most_wickets.team_id');
-		$this->db->where('a >', 0);
-		$qry = $this->db->order_by("a", "asc")->get('ipl_most_wickets');
+		$this->db->select('ipl_players_stats.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
+		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_players_stats.team_id');
+		$this->db->where('ba >', 0);
+		$qry = $this->db->order_by("ba", "asc")->get('ipl_players_stats');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)
@@ -138,10 +138,10 @@ class Iplmodel extends CI_Model
 	function bestBowlingEconomy()	
 	{
 		$data=array();
-		$this->db->select('ipl_most_wickets.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
-		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_most_wickets.team_id');
+		$this->db->select('ipl_players_stats.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
+		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_players_stats.team_id');
 		$this->db->where('e >', 0);
-		$qry = $this->db->order_by("e", "asc")->get('ipl_most_wickets');
+		$qry = $this->db->order_by("e", "asc")->get('ipl_players_stats');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)
