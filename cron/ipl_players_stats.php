@@ -65,6 +65,7 @@ try
 		$json = substr($json, 0, -2);
 		$json_output = json_decode($json,true);
 		foreach ($json_output['mostWickets'][0]['topPlayers'] as $single) {
+			$data=array();
 			$data['pid']=$single['player']['id'];
 			/*$data['pfullName']=$single['player']['fullName'];
 			$data['pdob']=$single['player']['dateOfBirth'];
