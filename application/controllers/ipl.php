@@ -176,11 +176,13 @@ class Ipl extends CI_Controller
 	}
 
 	function crossword(){
+		$this->load->helper('url');
 		$data['view_page'] = 'crossword';
 		$this->load->view('template', $data);
 	}
 
 	function quiz(){
+		$this->load->helper('url');
 		$data['view_page'] = 'quiz';
 		$this->load->view('template', $data);
 	}
