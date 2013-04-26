@@ -318,13 +318,13 @@
 	
 	<!--=====================================================Content=======================-->
 	<div class="row ipl-content" >
-		<span class="carousel_leftArrow">
+		<span class="carousel_leftArrow" id="prev">
 			<span class="carousel_leftArrow_icon"></span>
 		</span>
-		<span class="carousel_rightArrow">
+		<span class="carousel_rightArrow" id="next">
 			<span class="carousel_rightArrow_icon"></span>
 		</span>
-		<div style="width:100%">	
+		<div style="width:100%" id="iplCarousel">	
 
 			<div class="ipl-cards4 ipl-cards5">
 					<!--========================================================Campaign=======================-->
@@ -570,5 +570,6 @@
 
 <script src="<?php echo base_url('assets/js/ipl.js');?>"></script>
 <script src="<?php echo base_url('assets/js/ipl_statistics.js');?>"></script>
+<script src="<?php echo base_url('assets/js/jquery.carouFredSel-6.2.1-packed.js');?>"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.js"></script>               
  				            

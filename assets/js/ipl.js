@@ -21,6 +21,25 @@ $(document).ready(function()
          //$('#ipl-schedule-back, #ipl-schedule-front').toggle('drop', {direction: 'right'}, 150)
          $('#ipl-schedule-back, #ipl-schedule-front').toggle("blind", {}, 'slow');
 			}, 3000);
+
+     $("#iplCarousel").carouFredSel({
+		items				: 3,
+		responsive			: true,
+		//direction			: "up",
+		//comment infinite and circular to make slides continues infinite
+		infinite			:false,
+		circular			:false,
+		auto				:false,
+		prev: '#prev',
+		next: '#next',
+		scroll : {
+			items			: 1,
+			easing			: "elastic",
+			duration		: 1000,							
+			pauseOnHover	: true,
+			fx				: "none",
+		}					
+	});
 });
 
 
