@@ -367,3 +367,13 @@ function setpoll()
 	});
 
 }
+function ShowVideo() {
+
+        $( "#dialog:ui-dialog" ).dialog( "destroy" );
+
+        $( "#dialog-modal" ).dialog({
+            height: 470,
+                        width: 550,
+            modal: true
+        });
+    }
