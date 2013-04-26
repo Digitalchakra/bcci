@@ -109,7 +109,7 @@ class Iplmodel extends CI_Model
 		$this->db->select('ipl_most_wickets.* , ipl_team_ranks.fullName AS team_fullName, ipl_team_ranks.abbreviation AS team_abbreviation');
 		$this->db->join('ipl_team_ranks', 'ipl_team_ranks.team_id = ipl_most_wickets.team_id');
 		$this->db->where('w >', 0);
-		$qry = $this->db->get('ipl_most_wickets');
+		$qry = $this->db->order_by("bbiw", "desc")->order_by("bbir", "asc")->get('ipl_most_wickets');
 		if($qry->num_rows()>0)
 			{
 				foreach($qry->result() as $row)

@@ -112,7 +112,7 @@
 			<? } ?>
 			<span class="rank"><?=$count?></span> <span class="details">
 			  <h5><?=$single->pfullName?></h5>
-			  <h5>W/R: <?=$single->w?>/<?=$single->r?>, <?=$single->team_abbreviation?></h5>
+			  <h5>W/R: <?=$single->bbiw?>/<?=$single->bbir?>, <?=$single->team_abbreviation?></h5>
 			  </span> <span class="clearfix"></span>
 			</li>
 			  <!-- popup -->
