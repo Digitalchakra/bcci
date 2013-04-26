@@ -22,7 +22,7 @@
         </div>
          <!-- <div class = "span4">
           <div class = "ads-200X90 pull-left"> 
-          <script type="text/javascript"><!--
+          <script type="text/javascript">
 		google_ad_client = "ca-pub-1444369114752839";
 		/* live-score-top */
 		google_ad_slot = "7901791092";

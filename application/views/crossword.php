@@ -1,6 +1,63 @@
+<style type="text/css">
+.ipl_head{  height:32px;  background-color: #19398a;  border: solid 1px #163480; margin-top: -3px;}
 
+.ipl_head ul{ list-style-type: none; }
+
+.ipl_head li{ float: left; line-height: 32px;}
+.ipl_head li a{padding-left: 13px; padding-right: 13px;  color: #ffffff; border-right: solid 1px #0d286a; height: 32px;   display: block;  text-decoration: none;}
+.ipl_head li:nth-child(5) a{ border: none !important;}
+
+
+.ipl_head li a:hover {  background-color: #091d4e; }
+.ipl_head_current{background-color: #091d4e; cursor: default;}
+
+.ipl-ads{  margin-top: 10px;  margin-bottom: 10px;  background: transparent;  /*border: solid 1px #a2a2a2;*/    display: block;  text-align: center;  padding-top: 4px;}
+.ipl-ads2{  padding-left: 10px;}
+}
+
+</style>
 <div class = "container">
-  <div class = "row">
+ 
+    <div class="row">
+    <div class="span12 ipl_head">
+          <ul>
+            <li><a href="<? echo base_url('ipl/ipl'); ?>">IPL</a></li>
+            <li><a href="<? echo base_url('ipl/stats'); ?>">Statistics</a></li>
+            <li><a class="ipl_head_current" href="<? echo base_url('ipl/crossword'); ?>">Crossword</a></li>
+            <li><a href="<? echo base_url('ipl/quiz'); ?>">Quiz</a></li>
+            <li><a href="<? echo base_url('ipl/points'); ?>">Points table</a></li>
+          </ul>
+    </div>
+  </div>
+  <div class="row">
+      <div class="span9 ipl-ads">
+        <script type="text/javascript"><!--
+          google_ad_client = "ca-pub-1444369114752839";
+          /* 728x90, created 12/12/07 */
+          google_ad_slot = "2932032750";
+          google_ad_width = 728;
+          google_ad_height = 90;
+          //-->
+        </script>
+        <script type="text/javascript"
+          src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+      </div>
+      <div class="span3 ipl-ads ipl-ads2">
+        <script type="text/javascript"><!--
+          google_ad_client = "ca-pub-1444369114752839";
+          /* live-score-top */
+          google_ad_slot = "7901791092";
+          google_ad_width = 200;
+          google_ad_height = 90;
+          //-->
+        </script>
+        <script type="text/javascript"  
+          src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+      </div>
+    </div>
+     <div class = "row">
     <div class = "span12"> 
       
       <!--Page Heading-->
@@ -33,15 +90,15 @@
           </div>
         </div>
       </div>-->
-       <div class="row margint20">
+       <div class="row">
   <div class="span12">
-       <div class="row crossword">
-      <div class="span5 margint20">
+       <div class="row crossword" style="margin-left:0px;">
+      <div class="span5">
       <div class="pull-left">
       <div class="padding20">
           	<img src="<?php echo base_url('assets/Images/games/crossword/crossgrid.jpg');?>" class="res-image" />
           </div></div></div>
-      <div class="span7">
+      <div class="span7" style="padding-left: 0px; margin-left: -21px;">
        <div class="padding20">
       <div class="page-header">
             <h3 style="color:#FFF;">IPL Crossword Contest for BCCI.com (IPL-6/002)</h3>

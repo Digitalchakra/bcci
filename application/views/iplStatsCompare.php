@@ -6,6 +6,45 @@
 </ul>
 
 <div class="container">
+	<div class="row">
+    <div class="span12 ipl_head">
+          <ul>
+            <li><a href="<? echo base_url('ipl/ipl'); ?>">IPL</a></li>
+            <li><a class="ipl_head_current" href="<? echo base_url('ipl/stats'); ?>">Statistics</a></li>
+            <li><a href="<? echo base_url('ipl/crossword'); ?>">Crossword</a></li>
+            <li><a href="<? echo base_url('ipl/quiz'); ?>">Quiz</a></li>
+            <li><a href="<? echo base_url('ipl/points'); ?>">Points table</a></li>
+          </ul>
+    </div>
+  </div>
+  <div class="row">
+			<div class="span9 ipl-ads">
+				<script type="text/javascript"><!--
+					google_ad_client = "ca-pub-1444369114752839";
+					/* 728x90, created 12/12/07 */
+					google_ad_slot = "2932032750";
+					google_ad_width = 728;
+					google_ad_height = 90;
+					//-->
+				</script>
+				<script type="text/javascript"
+					src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+				</script>
+			</div>
+			<div class="span3 ipl-ads ipl-ads2">
+				<script type="text/javascript"><!--
+					google_ad_client = "ca-pub-1444369114752839";
+					/* live-score-top */
+					google_ad_slot = "7901791092";
+					google_ad_width = 200;
+					google_ad_height = 90;
+					//-->
+				</script>
+				<script type="text/javascript"	
+					src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+				</script>
+			</div>
+		</div>
 		<div class="row">
 			<div class = "span12">
 				<div class="btn-group margint20 small-menu">
@@ -86,6 +125,7 @@
 		</div>
 	</div> -->
 	<!-- my code - mani-->
+	
 <div id="compareDiv" style="display:none;">
 	<div class="row com3" >
 		<div class="span12 ">
@@ -133,6 +173,7 @@
 			</div>
 		
 	</div>
+</div>
 </div>
 </div>
 <script src="<?php echo base_url('assets/js/stats_compare.js');?>"></script>

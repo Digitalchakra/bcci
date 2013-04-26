@@ -24,7 +24,7 @@ body{ background:#e6e6e6; font:12px;  }
 	background-color: #e6e6e6;
 	color: #ffffff;
 	text-align: center;
-	padding-top: 12px;
+	padding-top: 19px;
 	padding-bottom: 10px;
 	
 }
@@ -894,8 +894,8 @@ display: block;
 @media (max-width: 767px){
 
 
-
-
+}
+/*
 .ipl-ads{  	margin-top: 20px;
 	display: block;
 	border: solid 1px #a2a2a2;
@@ -903,7 +903,7 @@ display: block;
 	width: 200px; 
 	background-color: #232323;}
 
-}
+}*/
 
 .ipl-ads{
 	margin-top: 10px;
@@ -916,7 +916,7 @@ display: block;
 	padding-top: 4px;
 }
 
-.ipl-ads2{	padding-left: 5px;}
+.ipl-ads2{	padding-left: 10px;}
 
 .ipl-polls-question{
 	color:#784a9f;
@@ -958,7 +958,7 @@ display: block;
 }
 
 .ipl_video_thumbnail{
-	background:transparent url(../Images/bccivideo_thumb.png) no-repeat left top; width: 190px; height: 119px; text-indent: -999em; display: block;
+	background:transparent url(../Images/bccivideo_thumb.png) no-repeat left top; width: 190px; height: 119px; text-indent: -999em; display: block; cursor: pointer;
 }
 
 .ipl_video_thumbnail:hover{
@@ -1350,7 +1350,6 @@ display: block;
   *background-color: #e6e6e6;
   background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
   background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
   background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
   background-repeat: repeat-x;*/
@@ -1892,3 +1891,15 @@ display: block;
 	padding-bottom: 0px;
 }
 
+
+.ipl_head{	height:32px;	background-color: #19398a;	border: solid 1px #163480; margin-top: -3px;}
+
+.ipl_head ul{ list-style-type: none; }
+
+.ipl_head li{ float: left; line-height: 32px;}
+.ipl_head li a{padding-left: 13px; padding-right: 13px;  color: #ffffff; border-right: solid 1px #0d286a; height: 32px;   display: block;  text-decoration: none;}
+.ipl_head li:nth-child(5) a{ border: none !important;}
+
+
+.ipl_head li a:hover {  background-color: #091d4e; }
+.ipl_head_current{background-color: #091d4e; cursor: default;}
