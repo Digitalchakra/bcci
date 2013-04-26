@@ -172,7 +172,7 @@
 						<p> BCCI.com just got more interesting! Watch our video now!  </p>
 					</div>
 					<div class="ipl_video_title2">
-						<a class="ipl_video_thumbnail" onclick="ShowVideo();">bcci video</a>
+						<a class="ipl_video_thumbnail" href="#">bcci video</a>
 					</div>
 				</div>
 			</div>
@@ -353,7 +353,7 @@
 					
 					<div class="ipl-campIntro">
 						<h4>BCCI is a One Stop Shop for all you sports enthusiasts to share your views and interact with your social circle. Bring your friends over to our Cafe! </h4>
-						<a class="ipl_video_thumbnail" onclick="ShowVideo();">bcci video</a>
+						<a class="ipl_video_thumbnail" href="#" >bcci video</a>
 					</div>
 					
 					<a class="white" href="<?=base_url('forum')?>"><button class="ipl-button2">Join the Cafe</button></a>
@@ -563,18 +563,6 @@
 		</div>	
 	</div>
 </div>
-<!-- youtube video -->
-<div id="dialog-modal" Title="Youtube Video" style="display:none">
-
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/rllHmz9D8Pc?
-
-fs=1&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" 
-
-value="always"></param><embed src="http://www.youtube.com/v/rllHmz9D8Pc?fs=1&amp;hl=en_US" type="application/x-
-
-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object>
-
-</div>
 
 <!--<footer>
 	<div class="container">
@@ -595,5 +583,6 @@ shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" h
 <script src="<?php echo base_url('assets/js/ipl.js');?>"></script>
 <script src="<?php echo base_url('assets/js/ipl_statistics.js');?>"></script>
 <script src="<?php echo base_url('assets/js/jquery.carouFredSel-6.2.1-packed.js');?>"></script>
+<script src="<?php echo base_url('assets/js/jquery.youtubepopup.min.js');?>"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.js"></script>               
  				            

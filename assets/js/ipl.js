@@ -5,6 +5,7 @@ $(document).ready(function()
 		$.iplmyplaceholder.checkreload=0;
 		$.iplmyplaceholder.checkloaded=0;
 		ipllivescore();
+		$(".ipl_video_thumbnail").YouTubePopup({ youtubeId: 'rllHmz9D8Pc', title: 'Bindaas Cricket Cafe !' });
 		getpoll();
 		$('#ipl-polls-button').click(function(){
 			setpoll();
@@ -367,13 +368,3 @@ function setpoll()
 	});
 
 }
-function ShowVideo() {
-
-        $( "#dialog:ui-dialog" ).dialog( "destroy" );
-
-        $( "#dialog-modal" ).dialog({
-            height: 470,
-                        width: 550,
-            modal: true
-        });
-    }
