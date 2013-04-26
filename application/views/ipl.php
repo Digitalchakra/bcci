@@ -1,7 +1,18 @@
 <link href="<?php echo base_url('assets/css/bcci-ipl.css'); ?>" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
 	
-	<div class="container" > 
+	<div class="container" >
+	<div class="row">
+		<div class="span12 ipl_head">
+					<ul>
+						<li><a class="ipl_head_current" href="<? echo base_url('ipl/ipl'); ?>">IPL</a></li>
+						<li><a href="<? echo base_url('ipl/stats'); ?>">Statistics</a></li>
+						<li><a href="<? echo base_url('ipl/crossword'); ?>">Crossword</a></li>
+						<li><a href="<? echo base_url('ipl/quiz'); ?>">Quiz</a></li>
+						<li><a href="<? echo base_url('ipl/points'); ?>">Points table</a></li>
+					</ul>
+		</div>
+	</div> 
 		<div class="row">
 			<div class="span12 ipl-maintitle">
 			<h4 style="color:#19398A;">INDIAN PREMIER LEAGUE</h4>
