@@ -20,7 +20,7 @@ $(document).ready(function(){
     //$('.run_pname').hide();
     if(search_txt.length>0)
     {
-      $("li[run_pname^='"+$('#run_pname').val().toLowerCase()+"'], div[run_pname*='"+$('#run_pname').val().toLowerCase()+"']").each(function(){
+      $("li[run_pname^='"+$('#run_pname').val().toLowerCase()+"'], li[run_pname*='"+$('#run_pname').val().toLowerCase()+"']").each(function(){
         $('#searchul').append('<li onclick=searchresult("'+$(this).attr('pid')+'");>'+$(this).attr('pname')+'</li>');
       });
     }
@@ -36,7 +36,7 @@ $(document).ready(function(){
     //$('.run_pname').hide();
     if(search_txt.length>0)
     {
-      $("li[run_pname^='"+$('#cmp_pname').val().toLowerCase()+"'], div[run_pname*='"+$('#cmp_pname').val().toLowerCase()+"']").each(function(){
+      $("li[run_pname^='"+$('#cmp_pname').val().toLowerCase()+"'], li[run_pname*='"+$('#cmp_pname').val().toLowerCase()+"']").each(function(){
         $('#cmpsearchul').append('<li onclick=cmpsearchresult("'+$(this).attr('pid')+'");>'+$(this).attr('pname')+'</li>');
       });
     }
