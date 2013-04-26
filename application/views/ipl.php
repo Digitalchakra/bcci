@@ -554,14 +554,13 @@
 </div>
 <!-- youtube video -->
 <div id="dialog-modal" Title="Youtube Video" style="display:none">
-
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/rllHmz9D8Pc?
-
-fs=1&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" 
-
-value="always"></param><embed src="http://www.youtube.com/v/rllHmz9D8Pc?fs=1&amp;hl=en_US" type="application/x-
-
-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object>
+  <object width="425" height="350">
+  <param name="movie" value="http://www.youtube.com/v/rllHmz9D8Pc" />
+  <param name="wmode" value="transparent" />
+  <embed src="http://www.youtube.com/v/rllHmz9D8Pc"
+         type="application/x-shockwave-flash"
+         wmode="transparent" width="425" height="350" />
+</object>
 
 </div>
 
