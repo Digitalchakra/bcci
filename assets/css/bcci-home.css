@@ -1117,3 +1117,13 @@ box-shadow:inset 0px 0px 3px rgba(0,0,0,0.5);
 	font-weight:bold;
 	overflow:hidden;
 }
+
+.ipl_video_logo{
+	background:transparent url(../Images/bccivideo_thumb.png) no-repeat left top; width: 130px; height: 74px; text-indent: -999em; display: block; cursor: pointer; position: absolute; top: 0; margin-top: 16px; margin-left: 220px;
+	background-size: contain;
+}
+
+.ipl_video_logo:hover{
+	background:transparent url(../Images/bccivideo_thumb_hover.png) no-repeat left top; 
+	background-size: contain;
+}

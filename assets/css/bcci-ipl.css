@@ -933,6 +933,7 @@ display: block;
 
 /*-------------------------------------------------BCCI campaign video-----------------------------------------*/
 .ipl-header-video{
+	display: none;
 	background-color: #710f08;
 	width: 58%;
 	top: 0px;
@@ -964,6 +965,18 @@ display: block;
 .ipl_video_thumbnail:hover{
 	background:transparent url(../Images/bccivideo_thumb_hover.png) no-repeat left top; width: 190px; height: 119px; text-indent: -999em; display: block;
 }
+
+
+.ipl_video_logo{
+	background:transparent url(../Images/bccivideo_thumb.png) no-repeat left top; width: 130px; height: 74px; text-indent: -999em; display: block; cursor: pointer; position: absolute; top: 0; margin-top: 16px; margin-left: 220px;
+	background-size: contain;
+}
+
+.ipl_video_logo:hover{
+	background:transparent url(../Images/bccivideo_thumb_hover.png) no-repeat left top; 
+	background-size: contain;
+}
+
 
 
 .ipl-campIntro .ipl_video_thumbnail{
@@ -1297,8 +1310,6 @@ display: block;
 	background:#2594c9;
 	border:1px solid #4ab3e5;
 }
-
-
 
 
 .orange-cap ul li:hover .rank{
@@ -1718,10 +1729,15 @@ display: block;
 
 
 .bs1_search{
-
+	
 	padding-top: 5px;
 	padding-bottom: 10px;
 }
+
+.bs1_searchUl,.cmp_searchul ul li {
+	cursor: pointer;
+}
+
 .bs1_searchUl{
 	text-align: left;
 	min-height: 0px;
@@ -1903,3 +1919,21 @@ display: block;
 
 .ipl_head li a:hover {  background-color: #091d4e; }
 .ipl_head_current{background-color: #091d4e; cursor: default;}
+
+
+.bowl_cap1 ul .heading{ 	background-color: #602d91 !important;	border:solid 1px #552584 !important;}
+.bowl_cap2 ul .heading{ 	background-color: #ab4a9c !important;	border:solid 1px #9e3e8f !important;}
+.bowl_cap3 ul .heading{ 	background-color: #d82452 !important;	border:solid 1px #cd1b48 !important;}
+.bowl_cap4 ul .heading{ 	background-color: #9a1037 !important;	border:solid 1px #910b31 !important;}
+
+.bowl_cap1 ul li:hover .rank{ background-color: #602d91 !important; }
+.bowl_cap1 .first .rank{ background-color: #602d91 !important; }
+
+.bowl_cap2 ul li:hover .rank{ background-color: #ab4a9c !important; }
+.bowl_cap2 .first .rank{ background-color: #ab4a9c !important; }
+
+.bowl_cap3 ul li:hover .rank{ background-color: #d82452 !important; }
+.bowl_cap3 .first .rank{ background-color: #d82452 !important; }
+
+.bowl_cap4 ul li:hover .rank{ background-color: #9a1037 !important; }
+.bowl_cap4 .first .rank{ background-color: #9a1037 !important; }

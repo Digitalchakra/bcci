@@ -1,6 +1,6 @@
 <link href="<?php echo base_url('assets/css/bcci-ipl.css'); ?>" rel="stylesheet" type="text/css">
 <div class = "container">
-	<div class="row">
+	<!-- <div class="row">
     <div class="span12 ipl_head">
           <ul>
             <li><a href="<? echo base_url('ipl/ipl'); ?>">IPL</a></li>
@@ -10,7 +10,7 @@
             <li><a href="<? echo base_url('ipl/points'); ?>">Points table</a></li>
           </ul>
     </div>
-  </div>
+  </div> -->
   <div class="row">
 			<div class="span9 ipl-ads">
 				<script type="text/javascript"><!--
@@ -48,7 +48,7 @@
 					<button class="btn dropdown-toggle" data-toggle="dropdown">Bowling Statistics<span class="drop-icon"></span></button>
 					<ul class="dropdown-menu">
 						<li><a href="<? echo base_url('ipl/stats'); ?>">Statistics</a></li>
-						<li><a href="<? echo base_url('ipl/batting_stats'); ?>">Bowling Statistics</a></li>
+						<li><a href="<? echo base_url('ipl/batting_stats'); ?>">Batting Statistics</a></li>
 						<li><a href="<? echo base_url('ipl/compare_stats'); ?>">Compare Players</a></li>
 					</ul>
 				</div>
@@ -103,7 +103,7 @@
 		</div>
 	  
 	  <div class="row ipl-stats-columns">
-		<div class="span3 margint20 marginb10  orange-cap">
+		<div class="span3 margint20 marginb10  orange-cap bowl_cap1">
 		  <ul>
 			 <li class="heading">
 			  <h4>Purple Cap <span class="pull-right ipl-settings-icon" id="orange-cap-settings-icon"></span></h4>
@@ -133,7 +133,7 @@
 			<?$count++; }?>
 		  </ul>
 		</div>
-		<div class="span3 margint20 marginb10  max-sixes">
+		<div class="span3 margint20 marginb10  max-sixes bowl_cap2">
 		  <ul class="ipl_stats_list">
 			<li class="heading">
 			  <h4>Best Bowling Figures<span class="pull-right ipl-settings-icon" id="max-sixes-settings-icon"></span></h4>
@@ -163,7 +163,7 @@
 			  <?$count++; }?>
 		  </ul>
 		</div>
-		<div class="span3 margint20 marginb10  high-score">
+		<div class="span3 margint20 marginb10  high-score bowl_cap3">
 		  <ul class="ipl_stats_list">
 			<li class="heading">
 			  <h4>Best Averages<span class="pull-right ipl-settings-icon" id="high-score-settings-icon"></span></h4>
@@ -193,7 +193,7 @@
 			  <?$count++; }?>
 		  </ul>
 		</div>
-		<div class="span3 margint20 marginb10  high-strike">
+		<div class="span3 margint20 marginb10  high-strike bowl_cap4">
 		  <ul class="ipl_stats_list">
 			<li class="heading">
 			  <h4>Best Economy Rates<span class="pull-right ipl-settings-icon" id="high-strike-settings-icon"></span></h4>

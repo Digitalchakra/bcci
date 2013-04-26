@@ -5,7 +5,7 @@ $(document).ready(function()
 		$.iplmyplaceholder.checkreload=0;
 		$.iplmyplaceholder.checkloaded=0;
 		ipllivescore();
-		$(".ipl_video_thumbnail").YouTubePopup({ youtubeId: 'rllHmz9D8Pc', title: 'Bindaas Cricket Cafe !' });
+		$(".ipl_video_thumbnail").YouTubePopup({ youtubeId: 'rllHmz9D8Pc', title: 'Bindaas Cricket café !' });
 		getpoll();
 		$('#ipl-polls-button').click(function(){
 			setpoll();
@@ -272,7 +272,8 @@ function ipllivescoredisplay(data)
 				{
 					$('#ipl_playerstate').hide();
 					$('#ipl_bowlerstate').hide();
-					$('#ipl-header-stats').show();
+					$('#ipl-header-video').show();
+					//$('#ipl-header-stats').show();
 				}
 				if(data.state=='preview')
 				{

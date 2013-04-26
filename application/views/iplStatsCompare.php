@@ -6,7 +6,7 @@
 </ul>
 
 <div class="container">
-	<div class="row">
+	<!-- <div class="row">
     <div class="span12 ipl_head">
           <ul>
             <li><a href="<? echo base_url('ipl/ipl'); ?>">IPL</a></li>
@@ -16,7 +16,7 @@
             <li><a href="<? echo base_url('ipl/points'); ?>">Points table</a></li>
           </ul>
     </div>
-  </div>
+  </div> -->
   <div class="row">
 			<div class="span9 ipl-ads">
 				<script type="text/javascript"><!--

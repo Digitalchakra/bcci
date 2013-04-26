@@ -54,7 +54,7 @@
 <!--LOGO and SEARCH-->
 <div class = "container">
   <div class = "row">
-    <div class = "span3 margint20"> <a href="<?php echo base_url();?>"><div class="logo"></div></a></div>
+    <div class = "span3 margint20" style="position:relative"> <a href="<?php echo base_url();?>"><div class="logo"></div></a><a href="#" class="ipl_video_logo"></a></div>
     <div class="span3 offset6 margint20">
        <!-- kvm ads start -->
             <div id="kvmslider" class="pull-right margint20"> <!-- Slider container -->

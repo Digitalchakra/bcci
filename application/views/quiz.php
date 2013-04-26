@@ -16,7 +16,7 @@
 
 <div class = "container">
 
-  <div class="row">
+  <!-- <div class="row">
     <div class="span12 ipl_head">
           <ul>
             <li><a href="<? echo base_url('ipl/ipl'); ?>">IPL</a></li>
@@ -26,7 +26,7 @@
             <li><a href="<? echo base_url('ipl/points'); ?>">Points table</a></li>
           </ul>
     </div>
-  </div>
+  </div> -->
   <div class="row">
       <div class="span9 ipl-ads">
         <script type="text/javascript"><!--
@@ -100,9 +100,9 @@
         </div>
       </div>
       <div class="row">
-      	<div class="span6 margint20">
-          <p>Rules: </p>
-          <ul class="margint20" style="font-size:10px; font-weight:bold;">
+      	<div class="span12 margint20">
+          <h4>Rules: </h4>
+          <ul class="margint20" style="font-size:12px; font-weight:regular;">
           	<li>One IPL Quiz will be published on BCCI.com every Wednesday till the end of IPL-6. That gives you SEVEN great ways to win!</li>
             <li>All entries will need to be sent to contact@bcci.com with the subject line, "IPL Quiz Entry". All entries should be received latest by 6 PM IST the Wednesday after the Quiz was published.</li>
             <li>Include your full name, home city, mobile number and email address in your email entry.</li>

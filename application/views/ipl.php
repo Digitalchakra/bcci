@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
 	
 	<div class="container" >
-	<div class="row">
+	<!-- <div class="row">
 		<div class="span12 ipl_head">
 					<ul>
 						<li><a class="ipl_head_current" href="<? echo base_url('ipl/ipl'); ?>">IPL</a></li>
@@ -12,7 +12,7 @@
 						<li><a href="<? echo base_url('ipl/points'); ?>">Points table</a></li>
 					</ul>
 		</div>
-	</div> 
+	</div>  -->
 		<div class="row">
 			<div class="span12 ipl-maintitle">
 			<h4 style="color:#19398A;">INDIAN PREMIER LEAGUE</h4>
@@ -167,7 +167,7 @@
 			</div>
 				<div class="ipl-header-stats" id="ipl-header-stats">
 				</div>
-				<div class="ipl-header-video" >
+				<div class="ipl-header-video" id="ipl-header-video" >
 					<div class="ipl_video_title">
 						<p> BCCI.com just got more interesting! Watch our video now!  </p>
 					</div>
@@ -352,11 +352,11 @@
 						<!-- <div class='ipl-camp-title'><h4>IPL Campaign</h4></div> -->
 					
 					<div class="ipl-campIntro">
-						<h4>BCCI is a One Stop Shop for all you sports enthusiasts to share your views and interact with your social circle. Bring your friends over to our Cafe! </h4>
+						<h4>BCCI is a One Stop Shop for all you sports enthusiasts to share your views and interact with your social circle. Bring your friends over to our café! </h4>
 						<a class="ipl_video_thumbnail" href="#" >bcci video</a>
 					</div>
 					
-					<a class="white" href="<?=base_url('forum')?>"><button class="ipl-button2">Join the Cafe</button></a>
+					<a class="white" href="<?=base_url('forum')?>"><button class="ipl-button2">Join the café</button></a>
 				</div>
 				<div class="ipl-photos-footer">
 					<a href="<?=base_url('photos')?>">
