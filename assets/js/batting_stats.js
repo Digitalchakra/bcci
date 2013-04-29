@@ -154,7 +154,7 @@ function searchresult(pid)
         $('#searchResult').html(html);
         $('#run_pname').val(data.resultset.data[0].pfullName);
         $('#cmp_with').html('Compare '+data.resultset.data[0].pfullName+' with');
-         $('#compareform').append('<input type="hidden" name="pids[]" id="input'+data.resultset.data[0].pid+'" pid="'+data.resultset.data[0].pid+'" value="'+data.resultset.data[0].pid+'" /><input type="hidden" name="pnames[]" id="inputName'+data.resultset.data[0].pid+'" pid="'+data.resultset.data[0].pid+'" value="'+data.resultset.data[0].pfullName+'" />');
+         $('#compareform').append('<input type="hidden" autocomplete="off" name="pids[]" id="input'+data.resultset.data[0].pid+'" pid="'+data.resultset.data[0].pid+'" value="'+data.resultset.data[0].pid+'" /><input type="hidden" autocomplete="off" name="pnames[]" id="inputName'+data.resultset.data[0].pid+'" pid="'+data.resultset.data[0].pid+'" value="'+data.resultset.data[0].pfullName+'" />');
       },  
       error:function()
       {
@@ -168,7 +168,7 @@ function cmpsearchresult(pid)
   $('#cmp_imput').hide();
   $('#cmpsearchul').html("");
   $('#cmp_panel').append('<div class="cmp_label pToCmp" id="'+pid+'">'+$('#r'+pid).attr('pname')+'<span onclick="removeMe('+pid+');" class="cmp_label_close">X</span></div>');
-  $('#compareform').append('<input type="hidden" name="pids[]" id="input'+pid+'" pid="'+pid+'" value="'+pid+'" /><input type="hidden" name="pnames[]" id="inputName'+pid+'" pid="'+pid+'" value="'+$('#r'+pid).attr('pname')+'" />');
+  $('#compareform').append('<input type="hidden" autocomplete="off" name="pids[]" id="input'+pid+'" pid="'+pid+'" value="'+pid+'" /><input type="hidden" autocomplete="off" name="pnames[]" id="inputName'+pid+'" pid="'+pid+'" value="'+$('#r'+pid).attr('pname')+'" />');
   listcount = $('.pToCmp').length;
   $('#compform').show();
   if(listcount >= 4)
