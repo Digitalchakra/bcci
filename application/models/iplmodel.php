@@ -170,6 +170,10 @@ class Iplmodel extends CI_Model
 		$data=array();
 		$this->db->select('*');
 		$this->db->where_in('pid', $pids);
+		$orderby=trim(implode(',', $pids), ",");
+		$this->db->_protect_identifiers = FALSE;
+		$this->db->order_by('FIELD ( pid, '.$orderby.' )');
+		$this->db->_protect_identifiers = TRUE;
 		$qry = $this->db->get('ipl_players_stats');
 		if($qry->num_rows()>0)
 			{
