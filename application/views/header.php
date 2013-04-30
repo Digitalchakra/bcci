@@ -103,7 +103,7 @@
       <!--MEGA MENU
       -->
 
-      <ul class ="menu"> 
+      <ul class ="menu b_main_header"> 
         <li <?php if($view_page=='home') echo 'class="active"';?> ><a href="<?php echo base_url('home'); ?>" class="drop">Home</a></li>
         <li <?php if($this->uri->segment(1) =='ipl' || $this->uri->segment(1) =='') echo 'class="ipl-blue"';?> id="ipl_menu"><a href="<?php echo base_url('ipl'); ?>" class="drop" >IPL 2013</a>
         <div class="dropdown_2columns">
