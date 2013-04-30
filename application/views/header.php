@@ -186,7 +186,7 @@
 
                       <form class="form-horizontal" id="register_form">
                          <div class="margint10"></div>
-                        <span>User Name: </span><input type="text" class="input-large" name="uname" id="uname" style="text-align:left">
+                        <span>Username: </span><input type="text" class="input-large" name="uname" id="uname" style="text-align:left">
                          <div class="margint10"></div>
                          <span>Password: </span><input type="password" class="input-large" name="pass_word" id="inputPassword" style="text-align:left">
                          <div class="margint10"></div>
@@ -243,7 +243,7 @@
                   <h4 style = "text-align:left;margin-left:0;" id="login_header">Login</h4>
                   <div class="divider"></div><span id="error_msg" class="errorMessage"></span>
                   <form class="form-horizontal">
-                    <span class="login">Email: </span><input type="text" class="input-large login" id="username" name="username" style="text-align:left">
+                    <span class="login">Username: </span><input type="text" class="input-large login" id="username" name="username" style="text-align:left">
                     <div class="margint10"></div>
                     <span class="login">Password: </span><input type="password" class="input-large login" id="passowrd" name="password">
                     <span id="forgot_pw_txt"></span><input type="text"  class="forget input-large margint20" id="fusername" name="fusername" style="display:none; margin-top:10px">
