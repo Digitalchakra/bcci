@@ -4,8 +4,13 @@
 
 	<div class="row">
 		<div class="span12 cpn_header">
+			<div class="patch_borderLine"></div>
 			<div class="cpn_logo">
+				<div class="patch_logocurve">
+					
+				</div>
 				<div class="logo"></div>	
+					
 			</div>
 			
 		</div>

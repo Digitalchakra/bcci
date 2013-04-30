@@ -57,10 +57,10 @@
 <!-- search panel -->
 	
 		<div class="span12 bs1">
-			<div class="input-append bs1_search">
+			<div class="input-append input-prepend bs1_search">
+				<span class="ipl_search_override" ><center><p>Search</p></center></span>
 				<input class="span4"  type="text" id="run_pname" autocomplete="off" placeholder="Enter player name to view statistics">
-				<button class="btn" type="button">Search</button>
-				<button id="clearsearch" class="btn" type="button">clear</button>
+				<button id="clearsearch" class="btn" type="button"><i class="icon-remove"></i></button>
 			</div>
 			<div class="span12 bs1_searchUl">
 				<ul id="searchul"></ul>
