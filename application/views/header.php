@@ -169,10 +169,10 @@
        
          <?php if($userdata['is_registered'] != 1)
         { ?>
-        <li class = "dropdown menu_right">
-        <a href="<?php echo base_url('forum/ucp.php?mode=register');?>">Register</a> 
-        </li>
         <!--<li class = "dropdown menu_right">
+        <a href="<?php echo base_url('forum/ucp.php?mode=register');?>">Register</a> 
+        </li>-->
+        <li class = "dropdown menu_right">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px">
               <i class = "icon-lock icon-white" style="margin-right:15px;"></i>Register
             </a>
@@ -186,13 +186,13 @@
 
                       <form class="form-horizontal" id="register_form">
                          <div class="margint10"></div>
-                        <span>E-Mail: </span><input type="text" class="input-large" name="email_address" id="inputEmail" style="text-align:left">
+                        <span>User Name: </span><input type="text" class="input-large" name="uname" id="uname" style="text-align:left">
                          <div class="margint10"></div>
                          <span>Password: </span><input type="password" class="input-large" name="pass_word" id="inputPassword" style="text-align:left">
                          <div class="margint10"></div>
-                         <span>First Name: </span><input type="text" class="input-large" name="firstname" id="firstname" style="text-align:left">
-                         <div class="margint10"></div>
-                         <span>Last Name: </span><input type="text" class="input-large" name="lastname" id="lastname" style="text-align:left">
+                         <span>E-Mail: </span><input type="text" class="input-large" name="email_address" id="inputEmail" style="text-align:left">
+                         <!--<div class="margint10"></div>
+                         <span>Last Name: </span><input type="text" class="input-large" name="lastname" id="lastname" style="text-align:left">-->
                          <div class="margint20"></div>
                          <a class="btn btn-mini btn-primary span1 pull-right marginb15" id="signupsubmit">Register</a>
                       </form>
@@ -201,7 +201,7 @@
                   </div>
                   </div>
                 </div>
-          </li>-->
+          </li>
           <?php } ?>
         
         
