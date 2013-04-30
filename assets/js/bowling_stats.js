@@ -60,11 +60,11 @@ $(document).ready(function(){
         //alert(data.resultset.data[0]['6s']);
         //alert($(this).attr('id'));
         html=                '<span onclick="hideMe(\''+targetID+'\');" class="statout-close">X</span>';
+        html+=                '<div class="ipl-'+data.resultset.data[0].team_abbreviation+' ipl-floatLeft ipl-statout-spacer"> </div>';
         html+=                '<div class="ipl-statout-title">';
         html+=                  '<h4>Batting Statistics, Max 6s</h4>';
         html+=                  '<p>'+rank+' '+data.resultset.data[0].pfullName+'</p>';
         html+=                '</div>';
-        html+=                '<div class="ipl-'+data.resultset.data[0].team_abbreviation+' ipl-floatLeft ipl-statout-spacer"> </div>';
         html+=                '<div class="ipl-statout-table ">';
         html+=                  '<table WIDTH="100%" HEIGHT="100%">';
         html+=                    '<tr WIDTH="100%">';
