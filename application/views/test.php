@@ -38,14 +38,15 @@
 			
 		</div>
 		<div class="span4 cpn3">
+			<div>
+				<button class="btn btn-warning cpn_join"> Join the café</button>
+			</div>
 			<div class="cpn3_inner">
 
 				<!-- <div class="cpn_icn">
 				</div> -->
 			</div>
-			<div>
-				<button class="btn btn-warning cpn_join"> Join the café</button>
-			</div>
+			
 			
 		</div>
 	</div>
