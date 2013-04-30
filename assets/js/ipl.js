@@ -26,6 +26,7 @@ $(document).ready(function()
      $("#iplCarousel").carouFredSel({
 		items				: 3,
 		responsive			: true,
+		width				: '98%',
 		//direction			: "up",
 		//comment infinite and circular to make slides continues infinite
 		infinite			:false,
