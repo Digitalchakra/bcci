@@ -6,6 +6,7 @@ $(document).ready(function(){
       $('.ipl-statout, #cmp_div').hide();
       $('#searchResult, #cmp_with, #cmp_panel').html("");
       $('#run_pname').val("");
+      $('#compareform').html('<button class="btn btn-success big_btn">Compare Players</button>');
 
     });
   $('#compare').click(function(){
