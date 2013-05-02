@@ -126,12 +126,14 @@ class Forget extends CI_Controller {
 		 }
 		 else
 		 {
-			 redirect('login', 'refresh');
+		 	show_404();
+			 //redirect('login', 'refresh');
 		 }
 	 }
 	 else
 	 {
-		 redirect('login', 'refresh');
+	 	show_404();
+		 //redirect('login', 'refresh');
 	 }
  }
 }
