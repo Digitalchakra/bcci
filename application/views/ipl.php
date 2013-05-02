@@ -350,16 +350,16 @@
 					</div>
 						
 						<!-- <div class='ipl-camp-title'><h4>IPL Campaign</h4></div> -->
-					
+					<a class="white" href="<?=base_url('forum')?>"><button class="ipl-button2">Join the Café</button></a>
 					<div class="ipl-campIntro">
-						<h4>BCCI is a One Stop Shop for all you sports enthusiasts to share your views and interact with your social circle. Bring your friends over to our café! </h4>
+						<h4>BCCI is a One Stop Shop for all you sports enthusiasts to share your views and interact with your social circle. Bring your friends over to our Café! </h4>
 						<a class="ipl_video_thumbnail" id="ipl_video_thumbnail1" href="#" >bcci video</a>
 					</div>
 					
-					<a class="white" href="<?=base_url('forum')?>"><button class="ipl-button2">Join the café</button></a>
+					
 				</div>
 				<div class="ipl-photos-footer">
-					<a href="<?=base_url('photos')?>">
+					<a href="<?=base_url('forum')?>">
 					<div class="ipl-forums-arrow"></div></a>
 				</div>
 			</div>
