@@ -19,6 +19,7 @@ class Disclaimer extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->helper('url');
 		$data['view_page'] = 'disclaimer';
 		$this->load->view('template', $data);
 	}
