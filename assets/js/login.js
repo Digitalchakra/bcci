@@ -58,7 +58,7 @@ $(document).ready(function()
 					if(data.resultset.success=='yes')
 					{
 						//window.location.reload();
-						window.location.href=baseurl+"home";
+						window.location.href=data.resultset.ref;
 					}
 					else
 					{

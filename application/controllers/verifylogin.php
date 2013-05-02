@@ -11,6 +11,7 @@ class VerifyLogin extends CI_Controller {
  function index()
  {
    //This method will have the credentials validation
+  $data['ref']=$_SERVER['HTTP_REFERER']; 
    $this->load->library('form_validation');
 
    $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
