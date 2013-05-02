@@ -6,23 +6,27 @@ class Forget extends CI_Controller {
  function __construct()
  {
    parent::__construct();
+   $this->load->helper('url');
  }
 
  function index()
  {
-	 $email = $this->input->post('username');
-	 $this->load->helper('email');
-	 if (valid_email($email))
-	 {
-		 $this->load->model('user');
-		 $check_data=array('email'=>$email);
-			if($result = $this->user->check_user($check_data))
+	 $username = $this->input->post('username');
+		 $this->load->model('user_forum');
+		 $check_data=array('username'=>$username);
+			if($result = $this->user_forum->check_user($check_data))
 			{
+				$seed = str_split('abcdefghijklmnopqrstuvwxyz'.time().'ABCDEFGHIJKLMNOPQRSTUVWXYZ'); // and any other characters
+				$randStr = '';
+				for ($p = 0; $p<10; $p++) 
+				{
+					$randStr .= $seed[mt_rand(0, 40)];
+				}
 				$update_data= array(
-							'active'=>sha1(mt_rand(10000,99999).time().$email)
+							'user_actkey'=>$randStr
 						  );
-				$where=array('email'=>$email);
-				if($this->user->update_user($where,$update_data))
+				$where=array('username'=>$username);
+				if($this->user_forum->update_user($where,$update_data))
 				{
 					$this->load->library('email');
 					#$config['protocol'] = 'sendmail';
@@ -32,11 +36,11 @@ class Forget extends CI_Controller {
 					$config['mailtype']='html';
 					$this->email->initialize($config);
 					$this->email->from('bcci@digitalchakra.in', 'Bindaas Cricket Cafe!');
-					$this->email->to($email);
+					$this->email->to($result[0]['user_email']);
 					#$this->email->cc('another@another-example.com');
 					#$this->email->bcc('them@their-example.com');
 					$this->email->subject('Reset your bcci.com password');
-					$message= '<b>Forgot your password , '.$result[0]['firstname'].' '.$result[0]['lastname'].'?</b> <br><br>Bcci.com received a request to reset the password to your bcci.com account. To reset your password, click the link below (or copy and paste the URL into your browser):<br><br>'.base_url('forget/reset/'.$result[0]['id'].'/'.$update_data['active']).
+					$message= '<b>Forgot your password, '.$result[0]['username'].' ?</b> <br><br>Bcci.com received a request to reset the password to your bcci.com account. To reset your password, click the link below (or copy and paste the URL into your browser):<br><br>'.base_url('forget/reset/'.$result[0]['user_id'].'/'.$update_data['user_actkey']).
 					'<br><br><b>It\'s your Bindas Cricket Cafe!</b>'; 
 					$this->email->message($message);
 					$this->email->send();
@@ -61,14 +65,6 @@ class Forget extends CI_Controller {
 				$result['resultset']=$data;
       			$this->load->view('json',$result);
 			}
-	 }
-	 else
-	 {
-		$data['errors']="invalid email";
-		$data['success']='no';
-		$result['resultset']=$data;
-    	$this->load->view('json',$result);
-	 }
  }
  function activation()
  {
@@ -81,12 +77,12 @@ class Forget extends CI_Controller {
 	 {
 	 if($password == $cpassword && strlen($password)>4)
 	 {
-		 $update_data=array('password'=>md5($password),'active'=>1);
-		 $where=array('id'=>$id,'active'=>$active);
-		 $this->load->model('user');
-		 if($this->user->update_user($where,$update_data))
+		 $update_data=array('user_password'=>phpbb_hash($password),'user_actkey '=>'');
+		 $where=array('user_id'=>$id,'user_actkey '=>$active);
+		 $this->load->model('user_forum');
+		 if($this->user_forum->update_user($where,$update_data))
 		 {
-		 	$check_data=array('active'=>'bcci','id'=>'bcci', 'email'=>'', 'error'=>'Your password was reset successfully!');
+		 	$check_data=array('user_actkey'=>'bcci','user_id'=>'bcci', 'username'=>'', 'error'=>'Your password was reset successfully!');
 			$check_data['view_page'] = 'reset';
 			header( "refresh:5; url=".base_url() );
 			$this->load->view('template', $check_data);
@@ -95,14 +91,14 @@ class Forget extends CI_Controller {
 		 }
 		 else
 		 {
-			$check_data=array('active'=>$active,'id'=>$id, 'email'=>$email, 'error'=>'internal error');
+			$check_data=array('user_actkey'=>$active,'user_id'=>$id, 'username'=>$email, 'error'=>'internal error');
 			$check_data['view_page'] = 'reset';
 			$this->load->view('template', $check_data);
 		 }
 	 }
 	 else
 	 {
-		$check_data=array('active'=>$active,'email'=>$email,'id'=>$id, 'error'=>'invalid password');
+		$check_data=array('user_actkey'=>$active,'username'=>$email,'user_id'=>$id, 'error'=>'invalid password');
 		$check_data['view_page'] = 'reset';
 		$this->load->view('template', $check_data);
 	 }
@@ -118,13 +114,13 @@ class Forget extends CI_Controller {
 	 $code = ($this->uri->segment(4)) ? $this->uri->segment(4) : NULL;
 	 if(($code) &&  strlen($code)>2)
 	 {
-		 $this->load->model('user');
-		 $check_data=array('id'=>$id,'active'=>$code);
-		 if($result = $this->user->check_user($check_data))
+		 $this->load->model('user_forum');
+		 $check_data=array('user_id'=>$id,'user_actkey'=>$code);
+		 if($result = $this->user_forum->check_user($check_data))
 		 {
 			$check_data['error']='';
-			$check_data['email']=$result[0]['email'];
-			$check_data['id']=$result[0]['id'];
+			$check_data['username']=$result[0]['username'];
+			$check_data['id']=$result[0]['user_id'];
 			$check_data['view_page'] = 'reset';
 			$this->load->view('template', $check_data);
 		 }

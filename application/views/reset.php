@@ -22,11 +22,11 @@
         <div class = "span8 margint10">
           <div class = "well">
             <form class="form-horizontal" action="<?=base_url("forget/activation")?>" method="post">
-               <input type="hidden" name="uid" value="<?=$id?>" >
+               <input type="hidden" name="uid" value="<?=$user_id?>" >
               <div class="control-group">
-                <label class="control-label" for="inputEmail">Email</label>
+                <label class="control-label" for="inputEmail">Username</label>
                 <div class="controls">
-                  <input type="text" id="inputEmail" name="email" value="<?=$email?>">
+                  <input type="text" id="inputEmail" name="email" value="<?=$username?>">
                 </div>
               </div>
               <div class="control-group">

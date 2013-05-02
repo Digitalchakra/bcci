@@ -4,9 +4,9 @@ Class User_forum extends CI_Model
 {
  function update_user($where,$data)
  {
-	// $code=sha1(mt_rand(10000,99999).time().$this->input->post('email_address'));
+	
 	$this->db->where($where);
-  if($newuser = $this->db->update('users',$data))
+  if($newuser = $this->db->update('phpbb_users',$data))
   {
 		return true;
   }
@@ -18,7 +18,7 @@ Class User_forum extends CI_Model
  function check_user($data)
  {
     //$email=$this->input->post('email_address');
-	$this -> db -> select('user_id, user_email');
+	$this -> db -> select('user_id,username,user_email');
 	$this -> db -> from('phpbb_users');
 	$this -> db -> where($data);
 	$query = $this -> db -> get();
