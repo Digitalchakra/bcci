@@ -172,7 +172,7 @@
 						<p> BCCI.com just got more interesting! Watch our video now!  </p>
 					</div>
 					<div class="ipl_video_title2">
-						<a class="ipl_video_thumbnail" href="#">bcci video</a>
+						<a class="ipl_video_thumbnail" id="ipl_video_thumbnail2" href="#">bcci video</a>
 					</div>
 				</div>
 			</div>
@@ -353,7 +353,7 @@
 					
 					<div class="ipl-campIntro">
 						<h4>BCCI is a One Stop Shop for all you sports enthusiasts to share your views and interact with your social circle. Bring your friends over to our café! </h4>
-						<a class="ipl_video_thumbnail" href="#" >bcci video</a>
+						<a class="ipl_video_thumbnail" id="ipl_video_thumbnail1" href="#" >bcci video</a>
 					</div>
 					
 					<a class="white" href="<?=base_url('forum')?>"><button class="ipl-button2">Join the café</button></a>
