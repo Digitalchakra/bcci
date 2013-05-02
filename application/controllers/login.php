@@ -10,7 +10,7 @@ class Login extends CI_Controller {
   $this->session->unset_userdata('logged_in');
   $this->session->sess_destroy();
   $this->load->helper('url');
-  header( 'Location:'.base_url() ) ;
+  header( 'Location:'.$_SERVER['HTTP_REFERER'] ) ;
  }
  function getjsonp()
  {
