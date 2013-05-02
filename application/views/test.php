@@ -66,7 +66,7 @@
         <!-- not logged in -->
         <div class="span4">
         <li class = "dropdown menu_right">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px" id="cregtab">
               <i class = "icon-lock icon-white" style="margin-right:15px;"></i>Register
             </a>
                 <div class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
@@ -111,6 +111,7 @@
                     <div class="margint10"></div>
                     <span class="clogin">Password: </span><input type="password" class="input-large clogin" id="cpassowrd" name="cpassword">
                     <span id="cforgot_pw_txt"></span><input type="text"  class="cforget input-large margint20" id="cfusername" name="cfusername" style="display:none; margin-top:10px">
+                    <span id="cnewuser" class="pull-right margint10 login red" style="cursor:pointer;margin-left:0;" >New user?</span>
                     <span id="cforget" class="pull-right margint10 clogin red" style="cursor:pointer;margin-left:0;" >Forgot Password?</span>
                     <div class="margint20"></div>
                          <a class="btn btn-mini btn-primary span1 pull-right marginb15 margint10 clogin" id="cloginsubmit">Login</a>

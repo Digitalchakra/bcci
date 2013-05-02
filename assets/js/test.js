@@ -1,5 +1,8 @@
 $(document).ready(function()
 {
+	$('#cnewuser').click(function(){
+		$('#cregtab').click();
+	});
 	$('#cforget').click(function(){
 		$('#cfusername').val($('#cusername').val());
 		$('.clogin').hide();

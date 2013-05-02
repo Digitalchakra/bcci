@@ -1,5 +1,8 @@
 $(document).ready(function()
 {
+	$('#newuser').click(function(){
+		$('#regtab').click();
+	});
 	$('#forget').click(function(){
 		$('#fusername').val($('#username').val());
 		$('.login').hide();

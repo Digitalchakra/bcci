@@ -173,7 +173,7 @@
         <a href="<?php echo base_url('forum/ucp.php?mode=register');?>">Register</a> 
         </li>-->
         <li class = "dropdown menu_right">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px" id="regtab">
               <i class = "icon-lock icon-white" style="margin-right:15px;"></i>Register
             </a>
                 <div class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
@@ -247,7 +247,8 @@
                     <div class="margint10"></div>
                     <span class="login">Password: </span><input type="password" class="input-large login" id="passowrd" name="password">
                     <span id="forgot_pw_txt"></span><input type="text"  class="forget input-large margint20" id="fusername" name="fusername" style="display:none; margin-top:10px">
-                    <span id="forget" class="pull-right margint10 login red" style="cursor:pointer;margin-left:0;" >Forgot Password?</span>
+                    <span id="newuser" class="pull-right margint10 login red" style="cursor:pointer;margin-left:0;" >New user?</span>
+                     <span id="forget" class="pull-right margint10 login red" style="cursor:pointer;margin-left:0;" >Forgot Password?</span>
                     <div class="margint20"></div>
                          <a class="btn btn-mini btn-primary span1 pull-right marginb15 margint10 login" id="loginsubmit">Login</a>
                          <a id="login" class="btn btn-mini btn-primary pull-left margint10 forget red" style="display:none;cursor:pointer;">Cancel</a>
