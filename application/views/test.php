@@ -21,27 +21,50 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="span5 cpn1">
-			<p class="cpn_p1">Our café brings you Cricket with a difference, you don't just get Live Scores with Cricket statistics.</p>
-			
-			<p>You get a world that is a lot bigger than that!</p>
+    <?php if($userdata['is_registered'] != 1)
+        { ?>
+        <!--not logged in -->
+		 <div class="span5 cpn1">
+      <p class="cpn_p1"> IMG Our café brings you Cricket with a difference, you don't just get Live Scores with Cricket statistics.</p>
+      
+      <p>IMG You get a world that is a lot bigger than that!</p>
 
-			<iframe style="margin-left:14px;" width="350" height="197" src="http://www.youtube.com/embed/Ju8gxy5eI34?rel=0" frameborder="0" allowfullscreen></iframe>
-		</div>
-		<div class="span3 cpn2">
-			<p class="cpn_p1">Get access to your very own Sports social network in one click!</p>
-			
-			<p>Register with us and get access to a lot more fun on Bindaas Cricket café!</p>
-			<br/>
-			<br/>
-			
-			
-		</div>
-		<div class="span4 cpn3">
+      <iframe style="margin-left:14px;" width="350" height="197" src="http://www.youtube.com/embed/Ju8gxy5eI34?rel=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="span3 cpn2">
+      <p class="cpn_p1">IMG Get access to your very own Sports social network in one click!</p>
+      
+      <p>IMG Register with us and get access to a lot more fun on Bindaas Cricket café!</p>
+      <br/>
+      <br/>
+      
+      
+    </div>
+    <? }  else { ?>
+    <!-- logged in -->
+    <div class="span5 cpn1">
+      <p class="cpn_p1">Our café brings you Cricket with a difference, you don't just get Live Scores with Cricket statistics.</p>
+      
+      <p>You get a world that is a lot bigger than that!</p>
+
+      <iframe style="margin-left:14px;" width="350" height="197" src="http://www.youtube.com/embed/Ju8gxy5eI34?rel=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="span3 cpn2">
+      <p class="cpn_p1">Get access to your very own Sports social network in one click!</p>
+      
+      <p>Register with us and get access to a lot more fun on Bindaas Cricket café!</p>
+      <br/>
+      <br/>
+      
+      
+    </div>
+    <? } ?>
 
 			<!-- if not logged in show registration and login form -->
 			 <?php if($userdata['is_registered'] != 1)
         { ?>
+        <!-- not logged in -->
+        <div class="span4">
         <li class = "dropdown menu_right">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px">
               <i class = "icon-lock icon-white" style="margin-right:15px;"></i>Register
@@ -72,36 +95,7 @@
                   </div>
                 </div>
           </li>
-          <?php } ?>
-          <?php if($userdata['is_registered'] == 1)
-        { ?>
-        <li class = "menu_right dropdown" >
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px">
-           <i class = "icon-user icon-white" style="margin-right:15px;"></i><?php echo $userdata['username_clean']; ?>
-          </a>
-          <!-- 
-          <div class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
-           <div class="row">
-              <div class = "span2">
-                <div class="padding20" style="text-align:left">
--->                <ul class="dropdown-menu pull-right profile-dropdown">
-                   <!-- <li><a tabindex="-1" href="#">Profile</a></li>
-                    <li><a tabindex="-1" href="#">Settings</a></li>-->
-                    <li><a tabindex="-1" href="<?php echo base_url('login/logout'); ?>">Logout</a></li>
-                  </ul>
-<!--                </div>
-              </div>
-            </div>
-         </div>
-         --> 
-        </li>
-        	<div>
-				<button class="btn btn-warning cpn_join"> logged in  :)</button>
-			</div>
-         <?php }
-        else
-        { ?>
-        <li class = "menu_right dropdown">
+          <li class = "menu_right dropdown open">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px">
            <i class = "icon-user icon-white" style="margin-right:15px;"></i>Login
           </a>
@@ -129,18 +123,55 @@
             </div>
           </div>
         </li>
-        <div>
-				<button class="btn btn-warning cpn_join"> Join the café</button>
-			</div>
-        <?php } ?>
-			<div class="cpn3_inner">
+        <!--<div>
+        <button class="btn btn-warning cpn_join"> Join the café</button>
+      </div>-->
+      <div class="cpn3_inner">
 
-				<!-- <div class="cpn_icn">
-				</div> -->
+        <!-- <div class="cpn_icn">
+        </div> -->
+      </div>
+      
+      
+    </div>
+          <?php } 
+          //if($userdata['is_registered'] == 1)
+          else
+        { ?>
+      <!-- logged in -->
+      <div class="span4 cpn3">
+        <li class = "menu_right dropdown" >
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px">
+           <i class = "icon-user icon-white" style="margin-right:15px;"></i><?php echo $userdata['username_clean']; ?>
+          </a>
+          <!-- 
+          <div class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
+           <div class="row">
+              <div class = "span2">
+                <div class="padding20" style="text-align:left">
+-->                <ul class="dropdown-menu pull-right profile-dropdown">
+                   <!-- <li><a tabindex="-1" href="#">Profile</a></li>
+                    <li><a tabindex="-1" href="#">Settings</a></li>-->
+                    <li><a tabindex="-1" href="<?php echo base_url('login/logout'); ?>">Logout</a></li>
+                  </ul>
+<!--                </div>
+              </div>
+            </div>
+         </div>
+         --> 
+        </li>
+        	<div>
+				<a class="btn btn-warning cpn_join" href="<?=base_url('forum');?>">Go to Forum</a>
 			</div>
-			
-			
-		</div>
+      <div class="cpn3_inner">
+
+        <!-- <div class="cpn_icn">
+        </div> -->
+      </div>
+      
+      
+    </div>
+         <?php } ?>
 	</div>
 </div>
 <script src="<?php echo base_url('assets/js/test.js');?>"></script>
