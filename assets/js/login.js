@@ -5,7 +5,7 @@ $(document).ready(function()
 		$('.login').hide();
 		$('.forget').show();
 		$("#login_header").text("Forgot Password?");
-		$("#forgot_pw_txt").text("Email: ");
+		$("#forgot_pw_txt").text("Username: ");
 	});
 	$('#login').click(function(){
 		$('.forget').hide();
