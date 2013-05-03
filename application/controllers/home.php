@@ -16,5 +16,12 @@ class Home extends CI_Controller
 		$this->load->view('template', $data);
 
 	}
+	function splash()
+	{
+		$this->load->helper('url');
+		$data['view_page'] = 'splash';
+		$this->load->view('template', $data);
+
+	}
 
 }
