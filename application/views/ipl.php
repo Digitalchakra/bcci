@@ -349,6 +349,7 @@
 						</div>
 					</div>
 						
+						<style type="text/css"></style>
 						<!-- <div class='ipl-camp-title'><h4>IPL Campaign</h4></div> -->
 					<a class="white" href="<?=base_url('forum')?>"><button class="ipl-button2">Join the Café</button></a>
 					<div class="ipl-campIntro">

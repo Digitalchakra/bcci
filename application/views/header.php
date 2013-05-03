@@ -180,7 +180,7 @@
                   <div class="row">
                     <div class = "span3">
                     <div class="padding20" style="text-align:left">
-                      <h4 style = "text-align:left;margin-left:0;">Registration</h4>
+                      <h4 style = "text-align:left;margin-left:0; color:#a82e0f;">Registration</h4>
                       <div class="divider"></div>
                       <span id="error_msg1" class="errorMessage"></span>
 
@@ -240,15 +240,16 @@
               <div class = "span3">
                 <div class="padding20" style="text-align:left">
                   
-                  <h4 style = "text-align:left;margin-left:0;" id="login_header">Login</h4>
+                  <h4 style = "text-align:left;margin-left:0; color:#a82e0f;" id="login_header">Login</h4>
                   <div class="divider"></div><span id="error_msg" class="errorMessage"></span>
                   <form class="form-horizontal">
                     <span class="login">Username: </span><input type="text" class="input-large login" id="username" name="username" style="text-align:left">
                     <div class="margint10"></div>
                     <span class="login">Password: </span><input type="password" class="input-large login" id="passowrd" name="password">
                     <span id="forgot_pw_txt"></span><input type="text"  class="forget input-large margint20" id="fusername" name="fusername" style="display:none; margin-top:10px">
-                    <span id="newuser" class="pull-right margint10 login red" style="cursor:pointer;margin-left:0;" >New user?</span>
-                     <span id="forget" class="pull-right margint10 login red" style="cursor:pointer;margin-left:0;" >Forgot Password?</span>
+                    <span id="newuser" class="pull-right margint10 login red" style="cursor:pointer;" >New user?</span>
+
+                     <span id="forget" class="pull-right margint10 login red" style="cursor:pointer;margin-right:10px;" >Forgot Password?</span>
                     <div class="margint20"></div>
                          <a class="btn btn-mini btn-primary span1 pull-right marginb15 margint10 login" id="loginsubmit">Login</a>
                          <a id="login" class="btn btn-mini btn-primary pull-left margint10 forget red" style="display:none;cursor:pointer;">Cancel</a>
