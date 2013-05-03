@@ -23,7 +23,7 @@ function statistics()
 		
 		html='<div class="span12 ipl-stats-bottom">';
 		html+='<div class="ipl-stats-cell ipl-statscelltitle">';
-		html+='		<p>IPL13 </p>';
+		html+='		<p>IPL 6 </p>';
 		html+='		<h4>in numbers</h4></div>';
 		html+='	<div class="ipl-stats-cell ipl-statscell1">';
 		html+='		<p>'+jsondata.tournamentInNumbers[0].runs+'</p>';
