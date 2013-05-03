@@ -147,7 +147,7 @@
         { ?>
       <!-- logged in -->
       <div class="span4 cpn3">
-        <li class = "menu_right dropdown" >
+        <!--<li class = "menu_right dropdown" >
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:5px">
            <i class = "icon-user icon-white" style="margin-right:15px;"></i><?php echo $userdata['username_clean']; ?>
           </a>
@@ -156,17 +156,17 @@
            <div class="row">
               <div class = "span2">
                 <div class="padding20" style="text-align:left">
--->                <ul class="dropdown-menu pull-right profile-dropdown">
+                <ul class="dropdown-menu pull-right profile-dropdown">
                    <!-- <li><a tabindex="-1" href="#">Profile</a></li>
-                    <li><a tabindex="-1" href="#">Settings</a></li>-->
+                    <li><a tabindex="-1" href="#">Settings</a></li>
                     <li><a tabindex="-1" href="<?php echo base_url('login/logout'); ?>">Logout</a></li>
                   </ul>
-<!--                </div>
+               </div>
               </div>
             </div>
          </div>
-         --> 
-        </li>
+         
+        </li>--> 
         	<div>
 				<a class="btn btn-warning cpn_join" href="<?=base_url('forum');?>">Go to Forum</a>
 			</div>
