@@ -202,7 +202,10 @@ function ipllivescoredisplay(data)
 				$('#ipl_team2_score').html(data['currentBowlTeamScore'].runsAndWicket);
 				$('#ipl_team2_over').html(data['currentBowlTeamScore'].overs+" Overs");
 				//}
+				if(data.state === 'inprogress')
+				{
 				$('#ipl_matchstate').html(data.status);
+				}
 				//if(1)
 				if(data.state != 'complete')
 				{
@@ -211,7 +214,7 @@ function ipllivescoredisplay(data)
 				{
 					if(data.state === 'stump')
 					{
-						$('#matchstate').html('Stumps - '+data.status);
+						//$('#matchstate').html('Stumps - '+data.status);
 					}
 				}
 				//striker's
@@ -281,7 +284,7 @@ function ipllivescoredisplay(data)
 				{
 				$('#ipl_playerstate, #ipl_bowlerstate, .iplnot_live').hide();
 				$('#ipl-header-stats').show();
-				$('#ipl_matchstate').html('Starting '+new Date(data.startdayandtimeGMT));
+				//$('#ipl_matchstate').html('Starting '+new Date(data.startdayandtimeGMT));
 				}
 }
 function getpoll()
