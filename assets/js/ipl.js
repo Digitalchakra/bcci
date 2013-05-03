@@ -5,8 +5,8 @@ $(document).ready(function()
 		$.iplmyplaceholder.checkreload=0;
 		$.iplmyplaceholder.checkloaded=0;
 		ipllivescore();
-		$("#ipl_video_thumbnail1").YouTubePopup({ youtubeId: 'HpCEeJ5JfIM', title: 'Bindaas Cricket Café !' });
-		$("#ipl_video_thumbnail2").YouTubePopup({ youtubeId: 'NchAgKi-kgI', title: 'Bindaas Cricket Café !' });
+		$("#ipl_video_thumbnail1").YouTubePopup({ youtubeId: 'AMif3k0NKNI', title: 'Bindaas Cricket Café !' });
+		$("#ipl_video_thumbnail2").YouTubePopup({ youtubeId: 'AMif3k0NKNI', title: 'Bindaas Cricket Café !' });
 		getpoll();
 		$('#ipl-polls-button').click(function(){
 			setpoll();
