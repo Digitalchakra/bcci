@@ -1,5 +1,11 @@
 $(document).ready(function()
 {
+	$('#cregtab').click(function(){
+		$('#cregtabform').show();$('#clogintabform').hide();
+	});
+	$('#clogintab').click(function(){
+		$('#clogintabform').show();$('#cregtabform').hide();
+	});
 	$('#cnewuser').click(function(){
 		$('#cregtab').click();
 	});

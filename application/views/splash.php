@@ -76,15 +76,15 @@
         <!-- not logged in -->
         <div class="span4 cpn3">
         <li class = "dropdown menu_right cpn3_btn1">
-            <a href="#" class="dropdown-toggle cpn3_link1" data-toggle="dropdown" style="margin-right:5px" id="cregtab">
+            <span href="" class="dropdown-toggle cpn3_link1" style="margin-right:5px" id="cregtab">
               <i class = "icon-lock icon-white" style="margin-right:15px;"></i>Register
-            </a>
-                <div class="dropdown-menu pull-right x1 x2" role="menu" aria-labelledby="dLabel">
+            </span>
+                <div id="cregtabform" class="dropdown-menu pull-right x1 x2" role="menu" aria-labelledby="dLabel">
                  
                     <div class="padding20" style="text-align:left">
                       <h4 style = "text-align:left;margin-left:0;">Registration</h4>
                       <div class="divider"></div>
-                      <span id="cerror_msg1" class="errorMessage"></span>
+                      <span id="cerror_msg1" class=""></span>
 
                       <form class="form-horizontal" id="cregister_form">
                          <div class="margint10"></div>
@@ -104,15 +104,15 @@
                 </div>
           </li>
           <li class = "menu_right dropdown open cpn3_btn2">
-          <a href="#" class="dropdown-toggle cpn3_link1" data-toggle="dropdown" style="margin-right:5px">
+          <span href="" class="dropdown-toggle cpn3_link1" style="margin-right:5px"  id="clogintab">
            <i class = "icon-user icon-white" style="margin-right:15px;"></i>Login
-          </a>
-          <div class="dropdown-menu pull-right x1" role="menu" aria-labelledby="dLabel">
+          </span>
+          <div id="clogintabform" class="dropdown-menu pull-right x1" role="menu" aria-labelledby="dLabel">
            
                 <div class="padding20" style="text-align:left">
                   
                   <h4 style = "text-align:left;margin-left:0;" id="clogin_header">Login</h4>
-                  <div class="divider"></div><span id="cerror_msg" class="errorMessage"></span>
+                  <div class="divider"></div><span id="cerror_msg" class=""></span>
                   <form class="form-horizontal">
                     <span class="clogin">Username: </span><input type="text" class="input-large clogin" id="cusername" name="cusername" style="text-align:left">
                     <div class="margint10"></div>

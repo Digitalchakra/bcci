@@ -838,3 +838,7 @@ li a {
 .red-bg,.redfx,.darktex,.dark-bg  {
 		min-width:960px !important;
 	}
+#clogintab, #cregtab {
+	color:#8d8d8d;,
+	cursor: hand;
+}
