@@ -34,7 +34,7 @@ Class User_forum extends CI_Model
  }
  function activate_user($id,$code)
  {
-	$this -> db -> select('user_id');
+	$this -> db -> select('user_id,username');
 	$this -> db -> from('phpbb_users');
 	$this -> db -> where('user_actkey', $code);
 	$this -> db -> where('user_id', $id);
@@ -42,8 +42,19 @@ Class User_forum extends CI_Model
 
    if($query -> num_rows() == 1)
    {
-	   $data = array('user_actkey' => "",'user_type' => 0);
-	   $this ->db ->update('phpbb_users',$data);
+    $usr_result=$query->result();
+    $data = array('user_actkey' => "",'user_type' => 0);
+    $this ->db ->update('phpbb_users',$data);
+    
+     $this->db->flush_cache();
+     $data = array('config_value' => $usr_result[0]->user_id);
+     $this -> db -> where('config_name', 'newest_user_id');
+     $this ->db ->update('phpbb_config',$data);
+
+     $this->db->flush_cache();
+     $data = array('config_value' => $usr_result[0]->username);
+     $this -> db -> where('config_name', 'newest_username');
+     $this ->db ->update('phpbb_config',$data);
      return true;
    }
    else
