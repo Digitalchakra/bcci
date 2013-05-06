@@ -38,7 +38,7 @@ body {
 
 html, body {
 	background: url({T_THEME_PATH}/images/bkg.png) repeat-x;
-	background-color: #80160c;
+	background-color: #e6e6e6;
 }
 
 
