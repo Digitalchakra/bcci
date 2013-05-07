@@ -20,12 +20,14 @@ $(document).ready(function()
 		$('.cforget').show();
 		$("#clogin_header").text("Forgot Password?");
 		$("#cforgot_pw_txt").text("Username: ");
+		$('#cerror_msg').html();	
 	});
 	$('#clogin').click(function(){
 		$('.cforget').hide();
 		$('.clogin').show();
 		$("#clogin_header").text("Login");
 		$("#cforgot_pw_txt").text("");
+		$('#cerror_msg').html();	
 	});
 	$('#cfirstname , #clastname , #cinputEmail , #cinputPassword').keypress(function(e) 
 	{
@@ -106,7 +108,7 @@ $(document).ready(function()
 		{
 			//alert('inv');
 			//$('#apploginusernamecontainer').addClass('control-group error');
-			$('#cerror_msg1').html("Enter valid email id.");
+			$('#cerror_msg1').html("Enter valid username.");
 		}
 		else
 		{
@@ -151,7 +153,7 @@ $(document).ready(function()
 		}*/
 		if(email.length <=0)
 		{
-			$('#cerror_msg').html("Enter your email.");
+			$('#cerror_msg').html("Enter your username.");
 		}
 		else
 		{
