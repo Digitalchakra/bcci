@@ -15,7 +15,7 @@ $(document).ready(function()
     //$('.run_pname').hide();
     if(search_txt.length>0)
     {
-      $("li[sname^='"+$('#search_pname').val().toLowerCase()+"']").each(function(){
+      $("li[sname^='"+$('#search_pname').val().toLowerCase()+"'], li[sname*='"+$('#search_pname').val().toLowerCase()+"']").each(function(){
         $('#searchul').append('<li onclick=searchresult("'+$(this).attr('pid')+'");>'+$(this).attr('pname')+'</li>');
       });
     }
