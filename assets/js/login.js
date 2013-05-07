@@ -9,14 +9,14 @@ $(document).ready(function()
 		$('.forget').show();
 		$("#login_header").text("Forgot Password?");
 		$("#forgot_pw_txt").text("Username: ");
-		$('#error_msg').html();
+		$('#error_msg').html("");
 	});
 	$('#login').click(function(){
 		$('.forget').hide();
 		$('.login').show();
 		$("#login_header").text("Login");
 		$("#forgot_pw_txt").text("");
-		$('#error_msg').html();
+		$('#error_msg').html("");
 	});
 	$('#firstname , #lastname , #inputEmail , #inputPassword').keypress(function(e) 
 	{

@@ -20,14 +20,14 @@ $(document).ready(function()
 		$('.cforget').show();
 		$("#clogin_header").text("Forgot Password?");
 		$("#cforgot_pw_txt").text("Username: ");
-		$('#cerror_msg').html();	
+		$('#cerror_msg').html("");	
 	});
 	$('#clogin').click(function(){
 		$('.cforget').hide();
 		$('.clogin').show();
 		$("#clogin_header").text("Login");
 		$("#cforgot_pw_txt").text("");
-		$('#cerror_msg').html();	
+		$('#cerror_msg').html("");	
 	});
 	$('#cfirstname , #clastname , #cinputEmail , #cinputPassword').keypress(function(e) 
 	{
