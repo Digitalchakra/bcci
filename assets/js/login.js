@@ -70,7 +70,7 @@ $(document).ready(function()
 				},
 				error:function()
 				{
-					$('#error_msg').html('Internal error, try agian...');
+					$('#error_msg').html('Internal error, try again...');
 				}
 			});
 		}
@@ -119,7 +119,7 @@ $(document).ready(function()
 				},
 				error:function()
 				{
-					$('#error_msg1').html('Internal error, try agian...');
+					$('#error_msg1').html('Internal error, try again...');
 				}
 			});
 		}
@@ -166,7 +166,7 @@ $(document).ready(function()
 				},
 				error:function()
 				{
-					$('#error_msg').html('Internal error, try agian...');
+					$('#error_msg').html('Internal error, try again...');
 				}
 			});
 		}
