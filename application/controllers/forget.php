@@ -60,7 +60,7 @@ class Forget extends CI_Controller {
 			}
 			else
 			{
-				$data['errors']="Invalid email";
+				$data['errors']="Invalid username";
 				$data['success']='no';
 				$result['resultset']=$data;
       			$this->load->view('json',$result);
