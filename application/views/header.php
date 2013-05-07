@@ -112,9 +112,9 @@
                 <h2>IPL 2013</h2>
                 <li><a href="<?php echo base_url('ipl/stats'); ?>">Statistics</a></li>
                 <li><a href="<?php echo base_url('ipl/compare_stats'); ?>">Compare Players</a></li>
+                <li><a href="<?php echo base_url('ipl/points'); ?>">Points Table</a></li>
                 <li><a href="<?php echo base_url('ipl/crossword'); ?>">Crossword</a></li>
                 <li><a href="<?php echo base_url('ipl/quiz'); ?>">Quiz</a></li>
-                <li><a href="<?php echo base_url('ipl/points'); ?>">Points Table</a></li>
               </ul>
             </div>
           </div>
