@@ -10,6 +10,7 @@ class Subpoll extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->library('poll');
+		$this->load->helper('url');
 	}
 	
 	public function index()
@@ -109,12 +110,12 @@ class Subpoll extends CI_Controller
 			}
 			else
 			{
-				redirect('home');
+				redirect(base_url());
 			}
 		}
 		else
 		{
-			redirect('home');
+			redirect(base_url());
 		}
 	}
 	
