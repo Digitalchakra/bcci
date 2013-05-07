@@ -360,7 +360,7 @@
 					
 				</div>
 				<div class="ipl-photos-footer">
-					<a href="<?=base_url('forum')?>">
+					<a href="<?=base_url('home/splash')?>">
 					<div class="ipl-forums-arrow"></div></a>
 				</div>
 			</div>
@@ -384,7 +384,7 @@
 					<a class="white" href="<?=base_url('forum')?>"><button class="ipl-button2">Join Now</button></a>
 				</div>   
 				<div class="ipl-forums-footer">
-					<a href="<?=base_url('forum')?>"><div class="ipl-forums-arrow"></div></a>
+					<a href="<?=base_url('splash')?>"><div class="ipl-forums-arrow"></div></a>
 				</div>
 			</div>
 			
