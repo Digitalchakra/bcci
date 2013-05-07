@@ -41,7 +41,7 @@ class Forget extends CI_Controller {
 					#$this->email->bcc('them@their-example.com');
 					$this->email->subject('Reset your bcci.com password');
 					$message= '<b>Forgot your password, '.$result[0]['username'].' ?</b> <br><br>Bcci.com received a request to reset the password to your bcci.com account. To reset your password, click the link below (or copy and paste the URL into your browser):<br><br>'.base_url('forget/reset/'.$result[0]['user_id'].'/'.$update_data['user_actkey']).
-					'<br><br><b>It\'s your Bindas Cricket Cafe!</b>'; 
+					'<br><br><b>It\'s your Bindaas Cricket Cafe!</b>'; 
 					$this->email->message($message);
 					$this->email->send();
 					$data['success']='yes';

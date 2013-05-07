@@ -110,7 +110,7 @@ function test()
 					'.base_url('registration/activation/'.$userID.'/'.$randStr).'
 					<br><br>
 					<br><br>
-					<b>It\'s your Bindas Cricket Cafe!</b>	'; 
+					<b> It\'s your Bindaas Cricket Cafe!</b>	'; 
 					$this->email->message($message);
 					if($this->email->send())
 					{
