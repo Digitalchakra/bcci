@@ -55,6 +55,17 @@ Class User_forum extends CI_Model
      $data = array('config_value' => $usr_result[0]->username);
      $this -> db -> where('config_name', 'newest_username');
      $this ->db ->update('phpbb_config',$data);
+
+     $this->db->flush_cache();
+     $where=array('user_type !=' => 1, 'group_id !=' => 6);
+     $this -> db -> where($where);
+     $this->db->from('phpbb_users');
+     $user_count= $this->db->count_all_results();
+
+     $this->db->flush_cache();
+     $data = array('config_value' => $user_count);
+     $this -> db -> where('config_name', 'num_users');
+     $this ->db ->update('phpbb_config',$data);
      return true;
    }
    else
