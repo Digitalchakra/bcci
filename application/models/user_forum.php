@@ -57,8 +57,8 @@ Class User_forum extends CI_Model
      $this ->db ->update('phpbb_config',$data);
 
      $this->db->flush_cache();
-     $where=array('user_type !=' => 1, 'group_id !=' => 6);
-     $this -> db -> where($where);
+     //$where=array('user_type !=' => 1, 'group_id !=' => 6);
+     //$this -> db -> where($where);
      $this->db->from('phpbb_users');
      $user_count= $this->db->count_all_results();
 

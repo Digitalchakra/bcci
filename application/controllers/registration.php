@@ -10,30 +10,14 @@ class Registration extends CI_Controller {
  }
 function test()
 {
-	echo "Rgvrgv";
-	$user_row = array(
-     'username'              => "manimani1014",
-     'user_password'         => phpbb_hash("password"),
-     'user_email'            => "manimani1014@gmail.com",
-     'group_id'              => 2, // by default, the REGISTERED user group is id 2
-     'user_timezone'         => (float) date('T'),
-     'user_lang'             => 'en',
-     'user_type'             => USER_NORMAL,
-     'user_ip'               => $_SERVER['REMOTE_ADDR'],
-     'user_regdate'          => time(),
-     'user_type'				 => 1,
-     'user_actkey'			 =>'dddddddddddddd',
-   );
-		if($result = user_add($user_row))
-		{
-			echo "weefewfew";
-		}
-		else
-		{
-			echo "wrvssdvrrv";
-		}
-         print_r($result); 
-          echo "fgwrfwgrwe";
+	$this->db->flush_cache();
+     
+     $user_count = $this->db->query('SELECT user_id FROM `phpbb_users` WHERE `group_id` !=6 ');
+echo $user_count->num_rows(); die;
+     $this->db->flush_cache();
+     $data = array('config_value' => $user_count);
+     $this -> db -> where('config_name', 'num_users');
+     $this ->db ->update('phpbb_config',$data);
 }
  function index()
  {
