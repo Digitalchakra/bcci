@@ -209,7 +209,7 @@ margin-bottom: 1px;
 
 	-webkit-border-radius: 10px 0 0 0;
 	border-radius: 10px 0 0 0;
-	cursor: pointer;
+	
 
 }
 
@@ -217,7 +217,6 @@ margin-bottom: 1px;
 
 	-webkit-border-radius: 0 10px 0 0;
 	border-radius: 0 10px 0 0;
-	cursor: pointer;
 	
 }
 
@@ -281,4 +280,7 @@ color: #ffffff !important;
 .cforget{
 	height: 30px;
 	line-height: 30px;
+}
+#cregtab,#clogintab{
+	cursor: pointer;
 }
