@@ -874,7 +874,7 @@ display: block;
 
 
 .ipl-button3{
-display: block;	
+	display: block;	
 	margin-left: 20px;
 	width: 110px;
 	margin-top: 12px;	
@@ -1001,7 +1001,7 @@ display: block;
 /*-------------------------------------------------IPL header no match stats-----------------------------------------*/
 .ipl-header-stats{
 	display: none;
-	background-color: #adadad;
+	background-color: transparent;
 	width: 58%;
 	top: 27px;
 	right: 0px;
