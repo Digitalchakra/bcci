@@ -115,11 +115,11 @@
 			{
 			if($count==1)
 			{?>
-			  <li class="pname run_pname first ipl_stats_list" pname="<?=$single->pfullName?>" run_pname="<?=strtolower($single->pfullName)?>" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 'r'.$single->pid;?>"> 
+			  <li class="pname run_pname first ipl_stats_list" txt="Most Wickets" pname="<?=$single->pfullName?>" run_pname="<?=strtolower($single->pfullName)?>" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 'r'.$single->pid;?>"> 
 			<?}
 			else
 			{?>
-			  <li class="pname run_pname ipl_stats_list" pname="<?=$single->pfullName?>" run_pname="<?=strtolower($single->pfullName)?>" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 'r'.$single->pid;?>"> 
+			  <li class="pname run_pname ipl_stats_list" txt="Most Wickets" pname="<?=$single->pfullName?>" run_pname="<?=strtolower($single->pfullName)?>" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 'r'.$single->pid;?>"> 
 			<? } ?>
 			<span class="rank"><?=$count?></span> <span class="details">
 			  <h5><?=$single->pfullName?></h5>
@@ -145,11 +145,11 @@
 			 {
 			if($count==1)
 			{ ?>
-			  <li class="pname first ipl_stats_list" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 's'.$single->pid;?>"> 
+			  <li class="pname first ipl_stats_list" txt="Best Bowling" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 's'.$single->pid;?>"> 
 			<? }
 		  else
 			{ ?>
-			  <li class="pname ipl_stats_list" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 's'.$single->pid;?>"> 
+			  <li class="pname ipl_stats_list" txt="Best Bowling" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 's'.$single->pid;?>"> 
 			<? } ?>
 			<span class="rank"><?=$count?></span> <span class="details">
 			  <h5><?=$single->pfullName?></h5>
@@ -175,11 +175,11 @@
 			{
 			if($count==1)
 			{?>
-				<li class="pname first ipl_stats_list" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 'hs'.$single->pid;?>"> 
+				<li class="pname first ipl_stats_list" txt="Best Averages" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 'hs'.$single->pid;?>"> 
 			<?}
 			else
 			  {?>
-				<li class="pname ipl_stats_list" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 'hs'.$single->pid;?>"> 
+				<li class="pname ipl_stats_list" txt="Best Averages" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 'hs'.$single->pid;?>"> 
 		  <? }?>
 			<span class="rank"><?=$count?></span> <span class="details">
 			  <h5><?=$single->pfullName?></h5>
@@ -205,11 +205,11 @@
 			{
 			if($count==1)
 			{?>
-				<li class="pname first ipl_stats_list" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 'sr'.$single->pid;?>">
+				<li class="pname first ipl_stats_list" txt="Best Economy Rates" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 'sr'.$single->pid;?>">
 			<?}
 			else
 			  {?>
-				<li class="pname ipl_stats_list" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 'sr'.$single->pid;?>">
+				<li class="pname ipl_stats_list" txt="Best Economy Rates" pid="<? echo $single->pid;?>" rank="<?=$count?>" id="<? echo 'sr'.$single->pid;?>">
 		  <? }?>
 			<span class="rank"><?=$count?></span> <span class="details">
 			   <h5><?=$single->pfullName?></h5>
