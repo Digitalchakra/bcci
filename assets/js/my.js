@@ -170,6 +170,8 @@ function news()
 
 function livescore()
 {
+	$.myplaceholder={};
+	$.myplaceholder.mylivescore=[];
 	var iplteams={};
 	iplteams['KOL']="KKR";
 	iplteams['DEL']="DD";
@@ -301,9 +303,10 @@ function livescore()
 				$('#lsMakeDefault').attr('listid',this.value);
 				$('.live_team').removeClass('active');
 				//$(this).addClass("active");
-				livescoredisplay($.myplaceholder.mylivescore[this.value]);
-				//defaultlivescoredisplay($.myplaceholder.mylivescore[this.value]);
 				document.cookie="bot_live="+this.value;
+				livescoredisplay($.myplaceholder.mylivescore[getCookieValue("bot_live")]);
+				//defaultlivescoredisplay($.myplaceholder.mylivescore[this.value]);
+				
 				var offset = $(this).offset();
 				var toggleboxOffset = $("#lsToggleBox").offset();
 				if (toggleboxOffset.left === -350 || toggleboxOffset.left != (offset.left-30))
