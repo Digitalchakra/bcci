@@ -62,12 +62,12 @@ class Subpoll extends CI_Controller
 			if($this->session->userdata('voted') != 'true')
 			{
 				$this->poll->set_poll($this->input->post('answer'));
-				redirect('subpoll/poll_result');
+				redirect(base_url('subpoll/poll_result'));
 			}
 			else
 			{
 				$this->session->set_flashdata('message', 'You have already voted on this poll!');
-				redirect('subpoll');
+				redirect(base_url('subpoll'));
 			}			
 		}
 		else
@@ -147,19 +147,19 @@ class Subpoll extends CI_Controller
 					{
 						$data['question'] = $val->set_value('poll');
 						$this->poll->save_new_poll($data);
-						redirect('subpoll/admin_polls');
+						redirect(base_url('subpoll/admin_polls'));
 					}
 				}
 				$this->load->view('poll_new');
 			}
 			else
 			{
-				redirect('home');
+				redirect(base_url());
 			}
 		}
 		else
 		{
-			redirect('home');
+			redirect(base_url());
 		}
 	}
 	
@@ -175,16 +175,16 @@ class Subpoll extends CI_Controller
 			if($session_data['admin']==1)
 			{
 				$this->poll->set_poll_status($id);
-				redirect('subpoll/admin_polls');
+				redirect(base_url('subpoll/admin_polls'));
 			}
 			else
 			{
-				redirect('home');
+				redirect(base_url());
 			}
 		}
 		else
 		{
-			redirect('home');
+			redirect(base_url());
 		}
 	}
 	
@@ -200,16 +200,16 @@ class Subpoll extends CI_Controller
 			if($session_data['admin']==1)
 			{
 				$this->poll->reset_poll($id);
-				redirect('subpoll/admin_polls');
+				redirect(base_url('subpoll/admin_polls'));
 			}
 			else
 			{
-				redirect('home');
+				redirect(base_url());
 			}
 		}
 		else
 		{
-			redirect('home');
+			redirect(base_url());
 		}	
 	}
 }
