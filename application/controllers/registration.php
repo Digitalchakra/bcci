@@ -87,7 +87,7 @@ echo $user_count->num_rows(); die;
 					$message= 'You\'re almost there! Just confirm your Email.<br><br>
 					You have successfully created a bcci.com account and all you need to do is activate it. It will give you full access to bcci.com and all future notifications will be sent to this email address.
 					<br><br>
-					Please click on the link below to verify your email.  <a href="'.base_url('registration/activation/'.$userID.'/'.$randStr).'">Confirm my account now</a>
+					Please click on the one-time activation link below to verify your email.  <a href="'.base_url('registration/activation/'.$userID.'/'.$randStr).'">Confirm my account now</a>
 					<br><br>
 					Or click on the link below:
 					<br><br>
