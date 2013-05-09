@@ -83,8 +83,8 @@ function getresult(pids)
         html+=      '</thead>';
         html+=      '<tbody>';
         html+=          '<tr><td>'+player.r+'</td></tr>';
-        html+=          '<tr><td>'+player['4s']+'</td></tr>';
         html+=          '<tr><td>'+player['6s']+'</td></tr>';
+        html+=          '<tr><td>'+player['4s']+'</td></tr>';
         html+=          '<tr><td>'+player.a+'</td></tr>';
         html+=          '<tr><td>'+player.no+'</td></tr>';
         html+=          '<tr><td>'+player['50s']+'</td></tr>';
