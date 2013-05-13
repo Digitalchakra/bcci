@@ -55,7 +55,7 @@
 <div class = "container">
   <div class = "row">
     <div class = "span3 margint20" style="position:relative"> <a href="<?php echo base_url();?>"><div class="logo"></div></a><a href="<?=base_url('home/splash')?>" class="ipl_video_logo"></a></div>
-    <div class="span3 offset6 margint20">
+    <div class="span2 offset7" style="margin-top:45px; margin-right:0px; padding-left:13px;">
 
     <!-- twiter start-->
         <a href="https://twitter.com/BCCICOM" class="twitter-follow-button" data-show-count="false">Follow @BCCICOM</a>

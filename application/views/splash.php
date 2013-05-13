@@ -37,11 +37,11 @@
       <iframe style="margin-left:14px;" width="350" height="197" src=" http://www.youtube.com/embed/AMif3k0NKNI?rel=0" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="span3 cpn2">
-    	<div class="cup cup1 cup_spaces2">
+    	<div class="cup cup3 cup_spaces2">
 				
 			</div>
       <p class="cpn_p1">Get access to your very own Sports social network in one click!</p>
-      <div class="cup cup1 cup_spaces2">
+      <div class="cup cup4 cup_spaces2">
 				
 			</div>
       <p>Register with us and get access to a lot more fun on Bindaas Cricket Café!</p>
@@ -76,7 +76,7 @@
         <!-- not logged in -->
         <div class="span4 cpn3">
         <li class = "dropdown menu_right cpn3_btn1">
-            <span href="" class="dropdown-toggle cpn3_link1" style="margin-right:5px" id="cregtab">
+            <span href="" class="dropdown-toggle cpn3_link1" style="margin-right:5px; font-size:16px;" id="cregtab">
               <i class = "icon-lock icon-white" style="margin-right:15px;"></i>Register
             </span>
                 <div id="cregtabform" class="dropdown-menu pull-right x1 x2" role="menu" aria-labelledby="dLabel">
@@ -88,11 +88,11 @@
 
                       <form class="form-horizontal" id="cregister_form">
                          <div class="margint10"></div>
-                        <span>Username: </span><input type="text" class="input-large inputx1" name="cuname" id="cuname" style="text-align:left">
+                        <span style=" font-size:16px;">Username: </span><input type="text" class="input-large inputx1" name="cuname" id="cuname" style="text-align:left;">
                          <div class="margint10"></div>
-                         <span>Password: </span><input type="password" class="input-large" name="cpass_word" id="cinputPassword" style="text-align:left">
+                         <span style=" font-size:16px;">Password: </span><input type="password" class="input-large" name="cpass_word" id="cinputPassword" style="text-align:left;">
                          <div class="margint10"></div>
-                         <span>E-Mail: </span><input type="text" class="input-large" name="cemail_address" id="cinputEmail" style="text-align:left">
+                         <span style=" font-size:16px;">E-Mail: </span><input type="text" class="input-large" name="cemail_address" id="cinputEmail" style="text-align:left">
                          <!--<div class="margint10"></div>
                          <span>Last Name: </span><input type="text" class="input-large" name="lastname" id="lastname" style="text-align:left">-->
                          <div class="margint20"></div>
@@ -104,7 +104,7 @@
                 </div>
           </li>
           <li class = "menu_right dropdown open cpn3_btn2">
-          <span href="" class="dropdown-toggle cpn3_link1" style="margin-right:5px"  id="clogintab">
+          <span href="" class="dropdown-toggle cpn3_link1" style="margin-right:5px; font-size:16px;"  id="clogintab">
            <i class = "icon-user icon-white" style="margin-right:15px;"></i>Login
           </span>
           <div id="clogintabform" class="dropdown-menu pull-right x1" role="menu" aria-labelledby="dLabel">
@@ -114,10 +114,10 @@
                   <h4 style = "text-align:left;margin-left:0;" id="clogin_header">Login</h4>
                   <div class="divider"></div><span id="cerror_msg" class=""></span>
                   <form class="form-horizontal">
-                    <span class="clogin">Username: </span><input type="text" class="input-large clogin" id="cusername" name="cusername" style="text-align:left">
+                    <span class="clogin" style=" font-size:16px;">Username: </span><input type="text" class="input-large clogin" id="cusername" name="cusername" style="text-align:left">
                     <div class="margint10"></div>
-                    <span class="clogin">Password: </span><input type="password" class="input-large clogin" id="cpassowrd" name="cpassword">
-                    <span id="cforgot_pw_txt"></span><input type="text"  class="cforget input-large margint20" id="cfusername" name="cfusername" style="display:none; margin-top:10px">
+                    <span class="clogin" style=" font-size:16px;">Password: </span><input type="password" class="input-large clogin" id="cpassowrd" name="cpassword">
+                    <span id="cforgot_pw_txt" style="font-size:16px;"></span><input type="text"  class="cforget input-large margint20" id="cfusername" name="cfusername" style="display:none; margin-top:10px">
                     <span id="cnewuser" class="pull-right margint10 clogin red" style="cursor:pointer; color:#ffffff; margin-right:10px;" >New user?</span>
                     <span id="cforget" class="pull-right margint10 clogin red" style="cursor:pointer; color:#ffffff; margin-right:10px;" >Forgot Password?</span>
                     <div class="margint20"></div>
@@ -184,4 +184,16 @@
          <?php } ?>
 	</div>
 </div>
+sadasfdsdfsdadfssdaffsddsf
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-1444369114752839";
+/* 200X200 */
+google_ad_slot = "7599225492";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
 <script src="<?php echo base_url('assets/js/splash.js');?>"></script>

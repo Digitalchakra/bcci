@@ -4,12 +4,16 @@ $(document).ready(function()
 	$('#cregtab').click(function(){
 		$('#cregtabform').show();$('#clogintabform').hide();
 		$(this).parent().css('background-color', '#424242');
+		$(this).css('color', '#ffffff');
+		$('#clogintab').css('color', '#8d8d8d');
 		$('#clogintab').parent().css('background-color', '#232323');
 	});
 	$('#clogintab').click(function(){
 		$('#clogintabform').show();$('#cregtabform').hide();
 		$(this).parent().css('background-color', '#424242');
 		$('#cregtab').parent().css('background-color', '#232323');
+		$(this).css('color', '#ffffff');
+		$('#cregtab').css('color', '#8d8d8d');
 	});
 	$('#cnewuser').click(function(){
 		$('#cregtab').click();

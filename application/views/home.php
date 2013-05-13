@@ -1,9 +1,32 @@
  <!--MAIN CONTENT
 ===================================================================  -->
-       <!-- kvm ads start -->
+
+
+        
+<div class = "container margint10">
+  <!--Top Ads-->
+	<div class="span12">
+  <div class="row">
+        <div class="span8 " style="margin-left:0px;">
+          <div class = "ads-728X90" style="margin-left0px;"> 
+            <script type="text/javascript"><!--
+          		google_ad_client = "ca-pub-1444369114752839";
+          		/* 728x90, created 12/12/07 */
+          		google_ad_slot = "2932032750";
+          		google_ad_width = 728;
+          		google_ad_height = 90;
+          		//-->
+          		</script>
+          		<script type="text/javascript"
+          		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+          		</script> 
+          </div>
+        </div>
+        <div class="span4" >
+                 <!-- kvm ads start -->
        <?php if($view_page=='home')
        { ?>
-            <div id="kvmslider" class="pull-right margint20"> <!-- Slider container -->
+            <div id="kvmslider" class="pull-right"> <!-- Slider container -->
               <div id="mask"> <!-- Mask -->
                 
                 <ul style="list-style:none">
@@ -19,26 +42,6 @@
             </div>
             <? } ?>
         <!-- End Slider Container --> 
-
-        
-<div class = "container margint10">
-  <!--Top Ads-->
-	<div class="span12">
-  <div class="row">
-        <div class="span8 offset1">
-          <div class = "ads-728X90" style="margin-left:10px;"> 
-            <script type="text/javascript"><!--
-		google_ad_client = "ca-pub-1444369114752839";
-		/* 728x90, created 12/12/07 */
-		google_ad_slot = "2932032750";
-		google_ad_width = 728;
-		google_ad_height = 90;
-		//-->
-		</script>
-		<script type="text/javascript"
-		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-		</script> 
-          </div>
         </div>
          <!-- <div class = "span4">
           <div class = "ads-200X90 pull-left"> 
