@@ -13,7 +13,7 @@
         <!--First Row-->
         <div class = "row">
           <div class = "span12">
-            <div class = "bottom-logo pull-right margint20"> <div class="logo pull-left"></div> </div>
+            <div class = "bottom-logo pull-right margint20"> <a href="<?=base_url('home/splash')?>" class="logo pull-left"></a> </div>
             <div class = "clearfix"></div>
           </div>
         </div>

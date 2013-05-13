@@ -57,11 +57,6 @@
     <div class = "span3 margint20" style="position:relative"> <a href="<?php echo base_url();?>"><div class="logo"></div></a><a href="<?=base_url('home/splash')?>" class="ipl_video_logo"></a></div>
     <div class="span2 offset7" style="margin-top:45px; margin-right:0px; padding-left:13px;">
 
-    <!-- twiter start-->
-        <a href="https://twitter.com/BCCICOM" class="twitter-follow-button" data-show-count="false">Follow @BCCICOM</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-    <!-- twiter end-->
-
     <!-- face book start ref:https://developers.facebook.com/docs/reference/plugins/like/-->
    <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -74,6 +69,13 @@
 
 <div class="fb-like" data-href="http://www.facebook.com/pages/Bccicom/142468105918978?fref=ts" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
 <!-- face book end -->
+
+
+    <!-- twiter start-->
+        <a href="https://twitter.com/BCCICOM" class="twitter-follow-button" data-show-count="false">Follow @BCCICOM</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <!-- twiter end-->
+    
     </div>
     <div class = "span3 hidden-phone">
       <div class = "row">
