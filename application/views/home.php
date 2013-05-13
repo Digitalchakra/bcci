@@ -1,6 +1,26 @@
  <!--MAIN CONTENT
 ===================================================================  -->
+       <!-- kvm ads start -->
+       <?php if($view_page=='home')
+       { ?>
+            <div id="kvmslider" class="pull-right margint20"> <!-- Slider container -->
+              <div id="mask"> <!-- Mask -->
+                
+                <ul style="list-style:none">
+                  <li id="img1" class="kvmslider" style=""> <!-- ID for tooltip and class for animation --> 
+                    <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k1.jpg'); ?>" alt="KVM Academy"/> </a> </li>
+                  <li id="img2" class="kvmslider" style="display:none;"> <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k2.jpg'); ?>" alt="KVM Academy"/> </a> </li>
+                  <li id="img3" class="kvmslider" style="display:none;"> <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k3.jpg'); ?>" alt="KVM Academy"/> </a> </li>
+                  <li id="img4" class="kvmslider" style="display:none;"> <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k4.jpg'); ?>" alt="KVM Academy"/> </a> </li>
+                  <li id="img5" class="kvmslider" style="display:none;"> <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k5.jpg'); ?>" alt="KVM Academy"/> </a> </li>
+                </ul>
+              </div>
+              <!-- End Mask --> 
+            </div>
+            <? } ?>
+        <!-- End Slider Container --> 
 
+        
 <div class = "container margint10">
   <!--Top Ads-->
 	<div class="span12">

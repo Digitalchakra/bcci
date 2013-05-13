@@ -56,22 +56,24 @@
   <div class = "row">
     <div class = "span3 margint20" style="position:relative"> <a href="<?php echo base_url();?>"><div class="logo"></div></a><a href="<?=base_url('home/splash')?>" class="ipl_video_logo"></a></div>
     <div class="span3 offset6 margint20">
-       <!-- kvm ads start -->
-            <div id="kvmslider" class="pull-right margint20"> <!-- Slider container -->
-              <div id="mask"> <!-- Mask -->
-                
-                <ul style="list-style:none">
-                  <li id="img1" class="kvmslider" style=""> <!-- ID for tooltip and class for animation --> 
-                    <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k1.jpg'); ?>" alt="KVM Academy"/> </a> </li>
-                  <li id="img2" class="kvmslider" style="display:none;"> <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k2.jpg'); ?>" alt="KVM Academy"/> </a> </li>
-                  <li id="img3" class="kvmslider" style="display:none;"> <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k3.jpg'); ?>" alt="KVM Academy"/> </a> </li>
-                  <li id="img4" class="kvmslider" style="display:none;"> <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k4.jpg'); ?>" alt="KVM Academy"/> </a> </li>
-                  <li id="img5" class="kvmslider" style="display:none;"> <a target="_blank" href="http://kvmacademy.com/index.php/employment-guarantee"> <img src="<?php echo base_url('assets/Images/k5.jpg'); ?>" alt="KVM Academy"/> </a> </li>
-                </ul>
-              </div>
-              <!-- End Mask --> 
-            </div>
-        <!-- End Slider Container --> 
+
+    <!-- twiter start-->
+        <a href="https://twitter.com/BCCICOM" class="twitter-follow-button" data-show-count="false">Follow @BCCICOM</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <!-- twiter end-->
+
+    <!-- face book start ref:https://developers.facebook.com/docs/reference/plugins/like/-->
+   <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=278659298917414";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="http://www.facebook.com/pages/Bccicom/142468105918978?fref=ts" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+<!-- face book end -->
     </div>
     <div class = "span3 hidden-phone">
       <div class = "row">
