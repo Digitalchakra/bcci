@@ -1,5 +1,17 @@
  <!-- ######## FOOTER ######## --> 
+<!-- face book start ref:https://developers.facebook.com/docs/reference/plugins/like/-->
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=278659298917414";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
+<div class="fb-like" data-href="http://www.facebook.com/pages/BCCI/163557337024450" data-send="true" data-width="450" data-show-faces="true"></div>
+
+<!-- face book end -->
 <!--REDFX-->
 <div class = "row-fluid redfx"></div>
 
