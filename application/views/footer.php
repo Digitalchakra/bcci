@@ -9,8 +9,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="fb-like" data-href="http://www.facebook.com/pages/BCCI/163557337024450" data-send="true" data-width="450" data-show-faces="true"></div>
-
+<div class="fb-like" data-href="http://www.facebook.com/pages/Bccicom/142468105918978?fref=ts" data-send="true" data-width="450" data-show-faces="true"></div>
 <!-- face book end -->
 <!--REDFX-->
 <div class = "row-fluid redfx"></div>
