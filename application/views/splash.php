@@ -104,7 +104,7 @@
                 </div>
           </li>
           <li class = "menu_right dropdown open cpn3_btn2">
-          <span href="" class="dropdown-toggle cpn3_link1" style="margin-right:5px; font-size:16px;"  id="clogintab">
+          <span href="" class="dropdown-toggle cpn3_link1" style="margin-right:5px; font-size:16px; color:#ffffff"  id="clogintab">
            <i class = "icon-user icon-white" style="margin-right:15px;"></i>Login
           </span>
           <div id="clogintabform" class="dropdown-menu pull-right x1" role="menu" aria-labelledby="dLabel">
@@ -184,16 +184,4 @@
          <?php } ?>
 	</div>
 </div>
-sadasfdsdfsdadfssdaffsddsf
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-1444369114752839";
-/* 200X200 */
-google_ad_slot = "7599225492";
-google_ad_width = 200;
-google_ad_height = 200;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
 <script src="<?php echo base_url('assets/js/splash.js');?>"></script>
