@@ -2680,6 +2680,11 @@ function meta_refresh($time, $url, $disable_cd_check = false)
 	global $template;
 
 	$url = redirect($url, true, $disable_cd_check);
+	//-- mod: Prime Instant Redirect --------------------------------------------//
+	global $phpbb_root_path, $phpEx;
+	include($phpbb_root_path . 'includes/prime_instant_redirect.' . $phpEx);
+	$prime_instant_redirect->redirect($url, $time);
+	//-- end: Prime Instant Redirect --------------------------------------------//
 	$url = str_replace('&', '&amp;', $url);
 
 	// For XHTML compatibility we change back & to &amp;

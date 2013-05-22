@@ -55,12 +55,16 @@ function display_forums($root_data = '', $display_moderators = true, $return_mod
 	if ($mark_read == 'all')
 	{
 		$redirect = build_url(array('mark', 'hash'));
-		meta_refresh(3, $redirect);
-
+		//-- mod: Prime Instant Redirect --------------------------------------------//
+		//// We are commenting out this line because we are moving it elsewhere:
+		////		meta_refresh(3, $redirect);
+		////-- mod: Prime Instant Redirect --------------------------------------------//
 		if (check_link_hash(request_var('hash', ''), 'global'))
 		{
 			markread('all');
-
+			//-- mod: Prime Instant Redirect --------------------------------------------//
+						meta_refresh(3, $redirect);
+			//			//-- mod: Prime Instant Redirect --------------------------------------------//
 			trigger_error(
 				$user->lang['FORUMS_MARKED'] . '<br /><br />' .
 				sprintf($user->lang['RETURN_INDEX'], '<a href="' . $redirect . '">', '</a>')
@@ -68,6 +72,9 @@ function display_forums($root_data = '', $display_moderators = true, $return_mod
 		}
 		else
 		{
+			//-- mod: Prime Instant Redirect --------------------------------------------//
+			meta_refresh(3, $redirect);
+			//			//-- mod: Prime Instant Redirect --------------------------------------------//
 			trigger_error(sprintf($user->lang['RETURN_PAGE'], '<a href="' . $redirect . '">', '</a>'));
 		}
 	}
