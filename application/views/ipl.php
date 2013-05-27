@@ -395,6 +395,8 @@
 				</div>
 						<?php
 						$scheduleCount=1;
+						if(count($schedule['upcoming']))
+						{
 							foreach($schedule['upcoming'] as $single_schedule)
 							{
 								if($scheduleCount==1)
@@ -426,6 +428,11 @@
 								echo "<div class='ipl-schedule-venue'>";
 								echo "<p>".date("M d, Y H:i",strtotime($single_schedule->sdate." ".$single_schedule->time." GMT"))." <br/>".$single_schedule->mt_vnu."</p></div></div></div>";
 								}
+							}
+							else
+							{?>
+								<div class='ipl-cards-content'> No Schedule</div>
+							<?}
 						?>
 				<!-- <div class="ipl-cards-content">
 					<div class="bg-orange">

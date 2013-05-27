@@ -33,6 +33,8 @@
 				<?php
         //make IST time zone
                 date_default_timezone_set('Asia/Kolkata');
+                if(count($content['upcoming']))
+                {
 				foreach($content['upcoming'] as $row)
 				{ ?>
               <tr>
@@ -45,7 +47,7 @@
                 <td><p><?php echo date("M d, Y H:i",strtotime($row->sdate." ".$row->time." GMT")); if($row->sdate != $row->edate) echo "<span style='color:#a82e0f'> to </span>".date("Y-m-d",strtotime($row->edate)); ?></p></td>
               </tr>
               <?php
-				} ?>
+				} }?>
             </tbody>
         </table>
         </div>
