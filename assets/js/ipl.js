@@ -24,7 +24,7 @@ $(document).ready(function()
          $('#ipl-schedule-back, #ipl-schedule-front').toggle("blind", {}, 'slow');
 			}, 3000);
 
-     $("#iplCarousel").carouFredSel({
+    /* $("#iplCarousel").carouFredSel({
 		items				: 3,
 		responsive			: true,
 		width				: '98%',
@@ -42,7 +42,7 @@ $(document).ready(function()
 			pauseOnHover	: true,
 			fx				: "none",
 		}					
-	});
+	});*/
 });
 
 
