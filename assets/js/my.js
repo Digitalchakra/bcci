@@ -579,7 +579,7 @@ function article()
 				html+='<li class="media news-thumb-small">';
 				html+='<div class="media-body">';
                 html+='    	<h4 class="media-heading"><a href="article/get/'+data.resultset[i]['id']+'">'+data.resultset[i]['title']+'</a></h4>';
-                html+='    	<h5>By '+data.resultset[i]['author']+'<br>'+formattedTime+'</h5>';
+                html+='    	<h5>By '+data.resultset[i]['author']+', '+formattedTime+'</h5>';
                 html+='    </div></li>';
 				if((mod==0) || (i==(data.resultset.length-1)))
                 {
