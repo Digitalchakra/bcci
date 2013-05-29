@@ -88,7 +88,7 @@ class Article extends CI_Controller
 		}
 		else
 		{
-			redirect(base_url());
+			redirect(base_url("unauthorized"));
 		}
 		
 	}
@@ -111,7 +111,7 @@ class Article extends CI_Controller
 		}
 		else
 		{
-			redirect(base_url());
+			redirect(base_url("unauthorized"));
 		}
 
 	}
@@ -137,7 +137,7 @@ class Article extends CI_Controller
 		}
 		else
 		{
-			redirect(base_url());
+			redirect(base_url("unauthorized"));
 		}
 
 	}
@@ -166,7 +166,7 @@ class Article extends CI_Controller
 		}
 		else
 		{
-			redirect(base_url());
+			redirect(base_url("unauthorized"));
 		}
 
 	}
@@ -187,7 +187,7 @@ class Article extends CI_Controller
 		}
 		else
 		{
-			redirect(base_url());
+			redirect(base_url("unauthorized"));
 		}
 		
 	}

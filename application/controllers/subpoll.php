@@ -111,12 +111,12 @@ class Subpoll extends CI_Controller
 			}
 			else
 			{
-				redirect(base_url());
+				redirect(base_url("unauthorized"));
 			}
 		}
 		else
 		{
-			redirect(base_url());
+			redirect(base_url("unauthorized"));
 		}
 	}
 	
@@ -156,12 +156,12 @@ class Subpoll extends CI_Controller
 			}
 			else
 			{
-				redirect(base_url());
+				redirect(base_url("unauthorized"));
 			}
 		}
 		else
 		{
-			redirect(base_url());
+			redirect(base_url("unauthorized"));
 		}
 	}
 	
@@ -182,12 +182,12 @@ class Subpoll extends CI_Controller
 			}
 			else
 			{
-				redirect(base_url());
+				redirect(base_url("unauthorized"));
 			}
 		}
 		else
 		{
-			redirect(base_url());
+			redirect(base_url("unauthorized"));
 		}
 	}
 	
@@ -208,12 +208,12 @@ class Subpoll extends CI_Controller
 			}
 			else
 			{
-				redirect(base_url());
+				redirect(base_url("unauthorized"));
 			}
 		}
 		else
 		{
-			redirect(base_url());
+			redirect(base_url("unauthorized"));
 		}	
 	}
 }
