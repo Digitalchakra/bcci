@@ -54,13 +54,19 @@ $result=$auth->login($username, $password);
 //print_r($result); die;
 if($result['status']==3)
   {
+    $userdata=$this->phpbb_library->get_session_user();
+
 	       $sess_array = array(
            'id' => $result['user_row']['user_id'],
            'firstname' => $result['user_row']['username'],
            'lastname' => $result['user_row']['username'],
            'email' => $result['user_row']['user_email'],
-           'admin' => 1,
+           'admin' => 0,
          );
+         if($userdata['group_id'] ==5)
+          {
+            $sess_array['admin']=1;
+          }
          $this->session->set_userdata('logged_in', $sess_array);
 }
  else
