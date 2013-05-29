@@ -27,7 +27,7 @@
                 <a href = "<?php echo base_url('article/get'); echo '/'.$row->id; ?>"><h4 class="media-heading"><?php echo $row->title; ?></h4></a>
                 <a class = "red pull-right" href = "<?php echo base_url('article/edit'); echo '/'.$row->id; ?>">Edit</a>
                 <p>
-               <h5>By <?php echo $row->author.", ".date('M d, Y', $row->created_on); ?></h5>
+               <h5>By <?php echo $row->author."<br>".date('M d, Y', $row->created_on); ?></h5>
                 </p>
                 <p><?php 
                 if(strlen($row->content)>100)
