@@ -21,13 +21,11 @@ class Article extends CI_Controller
 	function index()
 	{
 		$this->load->helper('url');
-		if($session_data = $this->session->userdata('logged_in'))
-		{
-			if($session_data['admin']==1)
+		$userdata=$this->phpbb_library->get_session_user();
+			if($userdata['group_id']==5)
 			{
 				redirect(base_url("article/admin_list"));
 			}
-		}
 		else
 
 		{
@@ -56,9 +54,10 @@ class Article extends CI_Controller
 	function admin_list()
 	{
 					$this->load->helper('url');
-		if($session_data = $this->session->userdata('logged_in'))
+					$userdata=$this->phpbb_library->get_session_user();
+		if($userdata['is_registered']==1)
 		{
-			if($session_data['admin']==1)
+			if($userdata['group_id']==5)
 			{
 
 			$this->load->model('articlemodel');
@@ -96,9 +95,10 @@ class Article extends CI_Controller
 	function add()
 	{
 		$this->load->helper('url');
-		if($session_data = $this->session->userdata('logged_in'))
+			$userdata=$this->phpbb_library->get_session_user();
+		if($userdata['is_registered']==1)
 		{
-			if($session_data['admin']==1)
+			if($session_data['group_id']==5)
 			{
 		$this->load->model('articlemodel');
 		$data['view_page'] = 'article_edit';
@@ -118,9 +118,10 @@ class Article extends CI_Controller
 	function edit()
 	{
 				$this->load->helper('url');
-		if($session_data = $this->session->userdata('logged_in'))
+			$userdata=$this->phpbb_library->get_session_user();
+		if($userdata['is_registered']==1)
 		{
-			if($session_data['admin']==1)
+			if($session_data['group_id']==5)
 			{
 
 		$id = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
@@ -143,9 +144,10 @@ class Article extends CI_Controller
 	function save()
 	{
 				$this->load->helper('url');
-		if($session_data = $this->session->userdata('logged_in'))
+			$userdata=$this->phpbb_library->get_session_user();
+		if($userdata['is_registered']==1)
 		{
-			if($session_data['admin']==1)
+			if($userdata['group_id']==5)
 			{
 
 		$id=$this->input->post('art_id', TRUE);
@@ -170,9 +172,10 @@ class Article extends CI_Controller
 	}
 	function date_add_existing_record()
 	{
-		if($session_data = $this->session->userdata('logged_in'))
+		$userdata=$this->phpbb_library->get_session_user();
+		if($userdata['is_registered']==1)
 		{
-			if($session_data['admin']==1)
+			if($userdata['group_id']==5)
 			{
 				$this->load->model('articlemodel');
 				$this->articlemodel->date_add_existing_record($this->articlemodel->recordCount());

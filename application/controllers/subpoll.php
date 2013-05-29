@@ -101,9 +101,10 @@ class Subpoll extends CI_Controller
 	 */
 	public function admin_polls()
 	{
-		if($session_data = $this->session->userdata('logged_in'))
+			$userdata=$this->phpbb_library->get_session_user();
+		if($userdata['is_registered']==1)
 		{
-			if($session_data['admin']==1)
+			if($userdata['group_id']==5)
 			{
 				$data['polls'] = $this->poll->get_all_polls();
 				$this->load->view('poll_admin', $data);
@@ -125,9 +126,10 @@ class Subpoll extends CI_Controller
 	 */
 	public function add_new_poll()
 	{
-		if($session_data = $this->session->userdata('logged_in'))
+			$userdata=$this->phpbb_library->get_session_user();
+		if($userdata['is_registered']==1)
 		{
-			if($session_data['admin']==1)
+			if($userdata['group_id']==5)
 			{
 		
 				if($this->input->post('submit'))
@@ -170,9 +172,10 @@ class Subpoll extends CI_Controller
 	 */
 	public function set_poll_status($id)
 	{
-		if($session_data = $this->session->userdata('logged_in'))
+			$userdata=$this->phpbb_library->get_session_user();
+		if($userdata['is_registered']==1)
 		{
-			if($session_data['admin']==1)
+			if($userdata['group_id']==5)
 			{
 				$this->poll->set_poll_status($id);
 				redirect(base_url('subpoll/admin_polls'));
@@ -195,9 +198,10 @@ class Subpoll extends CI_Controller
 	 */
 	public function reset_poll($id)
 	{
-		if($session_data = $this->session->userdata('logged_in'))
+			$userdata=$this->phpbb_library->get_session_user();
+		if($userdata['is_registered']==1)
 		{
-			if($session_data['admin']==1)
+			if($userdata['group_id']==5)
 			{
 				$this->poll->reset_poll($id);
 				redirect(base_url('subpoll/admin_polls'));
