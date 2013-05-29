@@ -565,19 +565,21 @@ function article()
         async: false,
         success: function(data) {
 			recentArticle='';
+			formattedTime = formatTime(data.resultset[0]['created_on']);
 			html='<h4 class="media-heading"><a href="#">'+data.resultset[0]['title']+'</a></h4>';
-			html+='<h5> By '+data.resultset[0]['author']+'</h5>';
+			html+='<h5> By '+data.resultset[0]['author']+', '+formattedTime+'</h5>';
 			html+=data.resultset[0]['content'].substring(0,500)+'...';
             $('#farticle').html(html);
             $('#farticlerm').attr('href','article/get/'+data.resultset[0]['id']);
             html='';
 			for(i=1;i<data.resultset.length;i++)
 			{
+				formattedTime = formatTime(data.resultset[i]['created_on']);
 				mod=i%3;
 				html+='<li class="media news-thumb-small">';
 				html+='<div class="media-body">';
                 html+='    	<h4 class="media-heading"><a href="article/get/'+data.resultset[i]['id']+'">'+data.resultset[i]['title']+'</a></h4>';
-                html+='    	<h5>By '+data.resultset[i]['author']+'</h5>';
+                html+='    	<h5>By '+data.resultset[i]['author']+', '+formattedTime+'</h5>';
                 html+='    </div></li>';
 				if((mod==0) || (i==(data.resultset.length-1)))
                 {
@@ -870,3 +872,18 @@ function getCookieValue(key)
     }
     return "";
 }
+function formatTime(unixTimestamp) {
+    var pubDate = new Date(unixTimestamp * 1000);
+   
+
+var weekday=new Array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
+
+var monthname=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
+
+var formattedDate = monthname[pubDate.getMonth()] + ' ' 
+
+                    + pubDate.getDate() + ', ' + pubDate.getFullYear()
+return formattedDate;
+//return dt.toDateString('dddd, MMMM ,yyyy');
+	
+} 

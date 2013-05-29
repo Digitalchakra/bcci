@@ -55,11 +55,12 @@ class Article extends CI_Controller
 	}
 	function admin_list()
 	{
+					$this->load->helper('url');
 		if($session_data = $this->session->userdata('logged_in'))
 		{
 			if($session_data['admin']==1)
 			{
-			$this->load->helper('url');
+
 			$this->load->model('articlemodel');
 			$config = array();
 	        $config['base_url'] = base_url() . 'article/admin_list';
@@ -94,11 +95,11 @@ class Article extends CI_Controller
 	}
 	function add()
 	{
+		$this->load->helper('url');
 		if($session_data = $this->session->userdata('logged_in'))
 		{
 			if($session_data['admin']==1)
 			{
-		$this->load->helper('url');
 		$this->load->model('articlemodel');
 		$data['view_page'] = 'article_edit';
 		$this->load->view('template', $data);
@@ -116,11 +117,12 @@ class Article extends CI_Controller
 	}
 	function edit()
 	{
+				$this->load->helper('url');
 		if($session_data = $this->session->userdata('logged_in'))
 		{
 			if($session_data['admin']==1)
 			{
-		$this->load->helper('url');
+
 		$id = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 		$this->load->model('articlemodel');
 		$data['content'] = $this->articlemodel->getArticle($id);
@@ -140,11 +142,12 @@ class Article extends CI_Controller
 	}
 	function save()
 	{
+				$this->load->helper('url');
 		if($session_data = $this->session->userdata('logged_in'))
 		{
 			if($session_data['admin']==1)
 			{
-		$this->load->helper('url');
+
 		$id=$this->input->post('art_id', TRUE);
 		$data['author']=$this->input->post('author', TRUE);
 		$data['content']=nl2br($this->input->post('content', TRUE));

@@ -12,7 +12,7 @@
         			<a href="#" rel="tooltip" title="View as Grid"><i class = "icon-th-large"></i></a>
         			<a href="#" rel="tooltip" title="View as blog"><i class = "icon-align-justify"></i></a>
         			<a href="#" rel="tooltip" title="View as list"><i class = "icon-th-list"></i></a>
-            </span>--></h3>
+            </span>--> <a href="<?=base_url('article/add')?>" style="font-size:14px">add new</a></h3>
       </div>
       <!--Articles-Blog-->
       <div class = "row">
@@ -27,7 +27,7 @@
                 <a href = "<?php echo base_url('article/get'); echo '/'.$row->id; ?>"><h4 class="media-heading"><?php echo $row->title; ?></h4></a>
                 <a class = "red pull-right" href = "<?php echo base_url('article/edit'); echo '/'.$row->id; ?>">Edit</a>
                 <p>
-               <h5>By <?php echo $row->author." - ".date('d-M-Y', $row->created_on); ?></h5>
+               <h5>By <?php echo $row->author.", ".date('M,d Y', $row->created_on); ?></h5>
                 </p>
                 <p><?php 
                 if(strlen($row->content)>100)

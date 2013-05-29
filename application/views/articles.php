@@ -26,7 +26,7 @@
               <div class="media-body">
                 <a href = "<?php echo base_url('article/get'); echo '/'.$row->id; ?>"><h4 class="media-heading"><?php echo $row->title; ?></h4></a>
                 <p>
-                <h5>By <?php echo $row->author." - ".date('d-M-Y', $row->created_on); ?></h5>
+                 <h5>By <?php echo $row->author.", ".date('M,d Y', $row->created_on); ?></h5>
                 <p></p>
                 <!----Article short description-->
                 <p><?php 

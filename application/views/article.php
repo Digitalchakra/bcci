@@ -21,7 +21,7 @@
             <li class="media"> <a class="pull-left" href="#"> <!--<img src="" class="media-object">--> </a>
               <div class="media-body">
                 <h4 class="media-heading"><?php echo $content[0]->title; ?></h4>
-                <h5>By <?php echo $content[0]->author; ?></h5>
+                 <h5>By <?php echo $content[0]->author.", ".date('M,d Y', $content[0]->created_on); ?></h5>
                 
                 <!----Article short description-->
                 <p><?php echo $content[0]->content; ?></p>
