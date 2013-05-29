@@ -98,7 +98,7 @@ class Article extends CI_Controller
 			$userdata=$this->phpbb_library->get_session_user();
 		if($userdata['is_registered']==1)
 		{
-			if($session_data['group_id']==5)
+			if($userdata['group_id']==5)
 			{
 		$this->load->model('articlemodel');
 		$data['view_page'] = 'article_edit';
@@ -121,7 +121,7 @@ class Article extends CI_Controller
 			$userdata=$this->phpbb_library->get_session_user();
 		if($userdata['is_registered']==1)
 		{
-			if($session_data['group_id']==5)
+			if($userdata['group_id']==5)
 			{
 
 		$id = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
