@@ -17,30 +17,29 @@
       <!--Articles-Blog-->
       <div class = "row">
         <div class = "span8">
-          <ul class="media-list">
+          <ul class="">
 			  <?php
 			  foreach($content as $row)
 			  {
 				?>
-            <li class="media"> <a class="pull-left" href="<?php echo base_url('article/get'); echo '/'.$row->id; ?>"> <!--<img src="" class="media-object">--> </a>
+            <li>
               <div class="media-body">
                 <a href = "<?php echo base_url('article/get'); echo '/'.$row->id; ?>"><h4 class="media-heading"><?php echo $row->title; ?></h4></a>
+                <a class = "red pull-right" href = "<?php echo base_url('article/edit'); echo '/'.$row->id; ?>">Edit</a>
                 <p>
-                <h5>By <?php echo $row->author." - ".date('d-M-Y', $row->created_on); ?></h5>
-                <p></p>
-                <!----Article short description-->
+               <h5>By <?php echo $row->author." - ".date('d-M-Y', $row->created_on); ?></h5>
+                </p>
                 <p><?php 
-                if(strlen($row->content)>500)
+                if(strlen($row->content)>100)
                 {
-                  echo substr($row->content,0,strpos($row->content,' ',500)).'...';
+                  echo substr($row->content,0,strpos($row->content,' ',100)).'...';
                 }
               else
               {
                 echo $row->content;
               }
-                  ?></p>
-                <!--Read More-->
-                <a class = "red pull-right" href = "<?php echo base_url('article/get'); echo '/'.$row->id; ?>">Read More</a> </div>
+                ?></p>
+             </div>
             </li>
             <?php
 			}
