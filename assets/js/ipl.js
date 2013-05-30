@@ -76,7 +76,7 @@ function ipllivescore()
 			//alert(data[listcount].matchDataType);
 			$(data).each(function()
 			{
-				if(data[listcount].matchDataType==='Live Data'&& data[listcount].seriesFolder==='2013_T20_LEAGUE')
+				if(data[listcount].matchDataType==='Live Data')
 				{
 					if(data[listcount].series === 'T20 Cricket League 2013')
 					data[listcount].series='Indian Premier League VI 2013'
@@ -167,8 +167,8 @@ function ipllivescoredisplay(data)
 				//$('#ipl_team2_image').removeAttr('class');
 				//$('#ipl_team1_image').addClass("flag flag_"+data.battingTeamName);
 				//$('#ipl_team2_image').addClass("flag flag_"+data.bowlingTeamName);
-				$('#ipl_team1_image').addClass("ipl-"+data.battingTeamName);
-				$('#ipl_team2_image').addClass("ipl-"+data.bowlingTeamName);
+				$('#ipl_team1_image').addClass("flag flag_"+data.battingTeamName);
+				$('#ipl_team2_image').addClass("flag flag_"+data.bowlingTeamName);
 
 				//batting team score/over
 				$('#ipl_team1_score').html(data['currentBatTeamScore'].runsAndWicket+'*');

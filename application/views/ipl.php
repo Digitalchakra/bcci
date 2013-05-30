@@ -32,11 +32,13 @@
 						
 						<div class="span5">
 							<div class="span6 ipl-sb-flag">
-								<div >
+								<!--<div >
 									<h3 id="ipl_team1" class="centerFix"></h3>
-								</div>
+								</div>-->
 								 
-								<div id="ipl_team1_image" class="clearBoth centerFix leftFix">
+								<!--<div id="ipl_team1_image" class="clearBoth centerFix leftFix">
+								</div>-->
+								<div id="ipl_team1_image" class="clearBoth centerFix">
 								</div>
 							</div>
 							<div class="span6 ipl-sb-score iplnot_live">
@@ -113,8 +115,10 @@
 						<div class="span5">
 							<div class="span6 ipl-sb-flag ">
 								<p class="ipl-sb-vs">Vs</p>
-								<h3 id="ipl_team2" class="centerFix"></h3>
-								<div id="ipl_team2_image" class="clearBoth centerFix leftFix">
+								<!--<h3 id="ipl_team2" class="centerFix"></h3>-->
+								<!--<div id="ipl_team2_image" class="clearBoth centerFix leftFix">
+								</div>-->
+								<div id="ipl_team2_image" class="clearBoth centerFix">
 								</div>
 
 							</div>
