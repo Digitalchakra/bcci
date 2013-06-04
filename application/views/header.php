@@ -109,8 +109,8 @@
 
       <ul class ="menu b_main_header"> 
         <li <?php if($view_page=='home') echo 'class="active"';?> ><a href="<?php echo base_url('home'); ?>" class="drop">Home</a></li>
-        <li <?php if($this->uri->segment(1) =='ipl' || $this->uri->segment(1) =='') echo 'class="ipl-blue"';?> id="ipl_menu"><a href="<?php echo base_url('ipl'); ?>" class="drop" >IPL 2013</a>
-        <div class="dropdown_2columns">
+        <li <?php if($this->uri->segment(1) =='ipl' || $this->uri->segment(1) =='') echo 'class="ipl-blue"';?> id="ipl_menu"><a href="<?php echo base_url('ipl'); ?>" style="margin-top:-8px;line-height:16px;margin-bottom:-4px;" class="drop" >Champions <br/>Trophy</a>
+        <!--<div class="dropdown_2columns">
             <div class = "col_2">
               <ul class="greybox">
                 <h2>IPL 2013</h2>
@@ -121,7 +121,7 @@
                 <li><a href="<?php echo base_url('ipl/quiz'); ?>">Quiz</a></li>
               </ul>
             </div>
-          </div>
+          </div>-->
           </li>        
         <li <?php if($view_page=='schedule') echo 'class="active"';?>><a href="<?php echo base_url('schedule'); ?>" class="drop">Schedule</a><!-- Begin Shedule columns Item -->
 

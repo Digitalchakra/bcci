@@ -132,11 +132,14 @@ body{ background:#e6e6e6; font:12px;  }
 }
 
 .ipl-header3{
-	margin-left: 5px;
-	overflow: hidden;
-	position: relative;
-	height: 225px;
-	width:233px;
+	background-color: #232323;
+    height: 213px;
+    margin-left: 5px;
+    overflow: hidden;
+    padding-top: 12px;
+    position: relative;
+    text-align: center;
+    width: 233px;
 }
 /*----------------------------------------------------IPL RANKINGS-----------------------------*/
 

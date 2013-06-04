@@ -15,7 +15,7 @@
 	</div>  -->
 		<div class="row">
 			<div class="span12 ipl-maintitle">
-			<h4 style="color:#19398A;">INDIAN PREMIER LEAGUE</h4>
+			<h4 style="color:#19398A;">CHAMPIONS TROPHY</h4>
 			</div>
 		</div>
 		<div  class="ipl-header">
@@ -213,7 +213,7 @@
 	
 			</div>
 			<div class="span3 ipl-header3">
-				<div class="ipl-pts">
+			<!--	<div class="ipl-pts">
 					<table border="1">
 					<thead>
 						<tr>
@@ -286,13 +286,37 @@
 
 						</div>
 					</div>
-					</div>
+					</div>-->
 
+<!-- ads -->
+
+
+<script type="text/javascript"><!--
+
+google_ad_client = "ca-pub-1444369114752839";
+
+/* 200X200 */
+
+google_ad_slot = "7599225492";
+
+google_ad_width = 200;
+
+google_ad_height = 200;
+
+//-->
+
+</script>
+
+<script type="text/javascript"
+
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+
+</script>
 
 				</div>
 			</div>
 		</div>
-		<div id="ipl-header-stats2" class="row">
+		<div id="ipl-header-stats2" class="row" style="display:none;">
 			
 			<!-- <button class="ipl-button3">Statistics<i class="icon-arrow-up icon-white" style="margin-left:10px; margin-top:-1px;"></i></button> -->
 		</div>
@@ -344,7 +368,7 @@
 			<div class="ipl-cards4 ipl-cards5">
 					<!--========================================================Campaign=======================-->
 				<div class="ipl-cards-title ipl-forums">
-					<h3>IPL on BCCI</h3>
+					<h3>BCCI CAFE</h3>
 				</div>
 				<div class="ipl-cards-content">
 					<div class="ipl-cards3-inner">
@@ -469,7 +493,7 @@
 			<div class="ipl-cards5">
 				<!--==============================================================Polls=======================-->
 				<div class="ipl-cards-title ipl-polls">
-					<h3>IPL Polls</h3>
+					<h3>Polls</h3>
 				</div>
 				<div class="ipl-cards-content">
 					<div class="ipl-cards3-inner">
@@ -496,7 +520,7 @@
 			<div class="ipl-cards4">
 					<!--========================================================Photos=======================-->
 				<div class="ipl-cards-title ipl-photos">
-					<h3>IPL Photos</h3>
+					<h3>Photos</h3>
 				</div>
 				<div class="ipl-cards-content">
 					<div class="ipl-cards3-inner">
@@ -504,7 +528,7 @@
 						</div>
 					</div>
 					<div class="ipl-photo-content">
-						<div class='ipl-photo-title'><h4>IPL Highlights</h4></div>
+						<div class='ipl-photo-title'><h4>Highlights</h4></div>
 						<div>
 							<?php
 							$photocount=0;
@@ -544,7 +568,7 @@
 			</div>
 			<div class="ipl-cards1">
 				<div class="ipl-cards-title ipl-news">
-					<h3>IPL News</h3>
+					<h3>News</h3>
 				</div>
 				<div class="ipl-cards-content ">
 					<div class="bg-blue">
