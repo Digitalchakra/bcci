@@ -16,7 +16,10 @@ class Ipl extends CI_Controller
 
 		$this->load->model('photosmodel');
 		$data['photos']=$this->photosmodel->getList(10,0);
-
+		
+		$data['latest_post']=$this->phpbb_library->get_latest_post();
+		
+		
 		$data['view_page'] = 'ipl';
 		//echo "<pre>";
 		//print_r($data); die;

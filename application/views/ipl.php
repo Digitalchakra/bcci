@@ -191,7 +191,7 @@
 					</div> -->	
 				
 					<div>
-						<a href="<?=base_url('ipl/crossword')?>">
+						<!--<a href="<?=base_url('ipl/crossword')?>">
 						
 						<span class="ipl-crossword-btn">
 							<p>Crossword</p>
@@ -199,7 +199,26 @@
 							<div class="clearBoth"></div>
 							<div class="ipl-crossword-btn-bg"></div>
 						</span>
+						</a>-->
+						<?if($latest_post) { ?>
+						<a href="<?=base_url('forum')?>">
+						
+						<span class="ipl-crossword-btn">
+							Latest Forum topic
+							<p>
+								<?=$latest_post['TOPIC_TITLE']?>
+							</p>
+						</span>
 						</a>
+						<? } else { ?>
+						<a href="<?=base_url('forum')?>">
+						<span class="ipl-crossword-btn clearBoth">
+							<p>
+								FORUM
+							</p>
+						</span> </a>
+						<? } ?>
+						
 						<a href="<?=base_url('ipl/quiz')?>">
 						<span class="ipl-quiz-btn">
 							<p>Quiz</p>
