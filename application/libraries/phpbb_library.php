@@ -113,7 +113,7 @@ class Phpbb_library
  }
  function get_latest_post()
 {
-	global $db, $auth;
+	global $phpbb_root_path, $phpEx, $user, $auth, $cache, $db, $config, $template, $table_prefix;
 	 $search_limit = 1;
                   $posts_ary = array(
     'SELECT' => 'p.*, t.*, u.username, u.user_colour',
@@ -149,8 +149,8 @@ class Phpbb_library
     $topic_title = $posts_row['topic_title'];
     $post_author = get_username_string('full', $posts_row['poster_id'], $posts_row['username'], $posts_row['user_colour']);
     $post_date = date($this->_user->data['user_dateformat'],$posts_row['post_time']);
-    $post_link = append_sid("{$phpbb_root_path}viewtopic.$phpEx", "p=" . $posts_row['post_id'] . "#p" . $posts_row['post_id']);
-
+    //$post_link = append_sid("{$phpbb_root_path}viewtopic.$phpEx", "p=" . $posts_row['post_id'] . "#p" . $posts_row['post_id']);
+    $post_link = append_sid("{$phpbb_root_path}viewtopic.$phpEx", "p=" . $posts_row['post_id']);
     $post_text = nl2br($posts_row['post_text']);
 
     $bbcode = new bbcode(base64_encode($bbcode_bitfield));

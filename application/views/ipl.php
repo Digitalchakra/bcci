@@ -201,7 +201,7 @@
 						</span>
 						</a>-->
 						<?if($latest_post) { ?>
-						<a href="<?=base_url('forum')?>">
+						<a href="<?=base_url($latest_post['POST_LINK'])?>">
 						
 						<span class="ipl-crossword-btn">
 							Latest Forum topic
