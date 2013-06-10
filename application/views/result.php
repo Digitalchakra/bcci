@@ -14,7 +14,7 @@
       
               <!--Matches Tabs COntent-->
               <div style="height: 280px;" class="tab-content" id="matchestabContent">
-                <div id="ODIMatches" class="tab-pane fade"> 
+                <div id="ODIMatches" class="tab-pane fade active in"> 
                   <table class="table table-bordered table-striped">
                   <colgroup>
                     <col class="span3">
@@ -86,7 +86,7 @@
               </table>
                   
                 </div>
-                <div id="T20Matches" class="tab-pane fade active in"> 
+                <div id="T20Matches" class="tab-pane fade"> 
                   <table class="table table-bordered table-striped">
                   <colgroup>
                     <col class="span3">
