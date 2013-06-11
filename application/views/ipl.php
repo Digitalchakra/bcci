@@ -200,16 +200,24 @@
 							<div class="ipl-crossword-btn-bg"></div>
 						</span>
 						</a>-->
-						<?if($latest_post) { ?>
+						<?if($latest_post) {
+							//$latest_post['TOPIC_TITLE']=" my makdb  wbef ugwrr fhbds uy sug fjb wufy bsd cu hb f sudcasda sb uygwefuguyguhgef svcx svrv ";
+							
+							 ?>
 						<a href="<?=base_url($latest_post['POST_LINK'])?>">
 						<span class="ipl-crossword-btn">
 							<p style="font-size:18px; width:73%;">Latest Forum Topic</p>
 							<div class="ipl-crs-text"></div>
 							<p style="font-size:13px; width:60%;">
 								<? 
-								if(strlen($latest_post['TOPIC_TITLE']) >61)
+								if(strlen($latest_post['TOPIC_TITLE']) >=61)
 								{
-									echo substr($latest_post['TOPIC_TITLE'],0,60).'...';
+									$str_cut = wordwrap($latest_post['TOPIC_TITLE'],60);
+									$i = strpos($str_cut, "\n");
+									if ($i) {
+											$str_cut = substr($str_cut, 0, $i);
+										}
+									echo $str_cut.'...';
 								}
 								else
 								{
