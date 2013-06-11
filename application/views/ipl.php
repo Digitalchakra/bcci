@@ -202,20 +202,20 @@
 						</a>-->
 						<?if($latest_post) { ?>
 						<a href="<?=base_url($latest_post['POST_LINK'])?>">
-						
 						<span class="ipl-crossword-btn">
-							Latest Forum topic
-							<p>
-								<?=$latest_post['TOPIC_TITLE']?>
-							</p>
+							<p style="font-size:18px; width:73%;">Latest Forum Topic</p>
+							<div class="ipl-crs-text"></div>
+							<p style="font-size:13px; width:60%;"><?=$latest_post['TOPIC_TITLE']?></p>
+							<div class="clearBoth"></div>
+							<div class="ipl-crossword-btn-bg2"></div>
 						</span>
 						</a>
 						<? } else { ?>
 						<a href="<?=base_url('forum')?>">
 						<span class="ipl-crossword-btn clearBoth">
-							<p>
-								FORUM
-							</p>
+							<p>FORUM</p>
+							<div class="clearBoth"></div>
+							<div class="ipl-crossword-btn-bg2"></div>
 						</span> </a>
 						<? } ?>
 						
