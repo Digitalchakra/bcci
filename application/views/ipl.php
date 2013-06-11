@@ -205,7 +205,18 @@
 						<span class="ipl-crossword-btn">
 							<p style="font-size:18px; width:73%;">Latest Forum Topic</p>
 							<div class="ipl-crs-text"></div>
-							<p style="font-size:13px; width:60%;"><?=$latest_post['TOPIC_TITLE']?></p>
+							<p style="font-size:13px; width:60%;">
+								<? 
+								if(strlen($latest_post['TOPIC_TITLE']) >61)
+								{
+									echo substr($latest_post['TOPIC_TITLE'],0,60).'...';
+								}
+								else
+								{
+									echo $latest_post['TOPIC_TITLE'];
+								}
+								?>
+							</p>
 							<div class="clearBoth"></div>
 							<div class="ipl-crossword-btn-bg2"></div>
 						</span>
