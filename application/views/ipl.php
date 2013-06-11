@@ -209,7 +209,9 @@
 							<p style="font-size:18px; width:73%;">Latest Forum Topic</p>
 							<div class="ipl-crs-text"></div>
 							<p style="font-size:13px; width:60%;">
-								<? 
+								<?
+								echo $latest_post['TOPIC_TITLE'];
+								/* 
 								if(strlen($latest_post['TOPIC_TITLE']) >=61)
 								{
 									$str_cut = wordwrap($latest_post['TOPIC_TITLE'],60);
@@ -222,7 +224,7 @@
 								else
 								{
 									echo $latest_post['TOPIC_TITLE'];
-								}
+								}*/
 								?>
 							</p>
 							<div class="clearBoth"></div>
