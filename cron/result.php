@@ -25,7 +25,12 @@ foreach($html->find('table.cricket-results-table tr') as $main)
 				{
 					if($td_txt!='ODD' && $td_txt!='SHEF')
 					{
+						if($td_txt=='CT'){
+							$td_txt='ODI';
+						}
+
 						$list['type'] = $td_txt;
+
 					}
 					else
 					{
