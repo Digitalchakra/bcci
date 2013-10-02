@@ -60,7 +60,7 @@
             <p></p>
             <ul>
               <li><a href="<?php echo base_url();?>">Home</a></li>
-              <li><a href="<?php echo base_url('ipl');?>">Champions Trophy</a></li>
+              <li><a href="<?php echo base_url('ipl');?>">CLT20</a></li>
               <li><a href="<?php echo base_url('schedule');?>">Schedule</a></li>
               <li><a href="<?php echo base_url('result');?>">Results</a></li>
              <!-- <li><a href="<?php echo base_url('forum');?>">Forum</a></li>-->
