@@ -109,7 +109,7 @@
 
       <ul class ="menu b_main_header"> 
         <li <?php if($view_page=='home') echo 'class="active"';?> ><a href="<?php echo base_url('home'); ?>" class="drop">Home</a></li>
-        <li <?php if($this->uri->segment(1) =='ipl' || $this->uri->segment(1) =='') echo 'class="ipl-blue"';?> id="ipl_menu"><a href="<?php echo base_url('ipl'); ?>" style="margin-top:-8px;line-height:32px;margin-bottom:-4px;" class="drop" >CLT20</a>
+        <li <?php if($this->uri->segment(1) =='ipl' || $this->uri->segment(1) =='') echo 'class="ipl-blue"';?> id="ipl_menu"><a href="<?php echo base_url('ipl'); ?>" style="margin-top:-8px;line-height:32px;margin-bottom:-4px;" class="drop" >Series</a>
         <!--<div class="dropdown_2columns">
             <div class = "col_2">
               <ul class="greybox">

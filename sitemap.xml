@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://bcci.com/</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://bcci.com/schedule</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://bcci.com/result</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://bcci.com/rank/team</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://bcci.com/rank/batting</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://bcci.com/rank/bowling</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://bcci.com/rank/allrounder</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://bcci.com/news</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://bcci.com/article</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://bcci.com/photos</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://bcci.com/videos</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://bcci.com/disclaimer</loc>
+  <changefreq>weekly</changefreq>
+</url>
+</urlset>

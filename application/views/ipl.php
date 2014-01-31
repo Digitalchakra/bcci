@@ -15,7 +15,7 @@
 	</div>  -->
 		<div class="row">
 			<div class="span12 ipl-maintitle">
-			<h4 style="color:#19398A;">CLT20</h4>
+			<h4 style="color:#19398A;">CURRENT SERIES</h4>
 			</div>
 		</div>
 		<div  class="ipl-header">
