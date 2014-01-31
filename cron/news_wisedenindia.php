@@ -17,10 +17,11 @@ try
 				$node['media2']= '/assets/Images/news-default.png';
 				$node['media1']= '/assets/Images/news-default.png';
 				$node['news_id']=$id=ereg_replace("[^0-9]","",$div->getAttribute('id'));
-				foreach($div->find('img.attachment-general') as $img)
+				foreach($div->find('img') as $img)
 				{
 					$node['media2']= $img->getAttribute('src');
-					$node['media1']= str_replace("-300x180","",$img->getAttribute('src'));
+					//$node['media1']= str_replace("-300x180","",$img->getAttribute('src'));
+					$node['media1']= str_replace("-405x270","",$img->getAttribute('src'));
 				}
 				foreach($div->find('div.post-meta') as $postDate)
 				{
@@ -30,7 +31,7 @@ try
 					}
 					$node['pubdate']=trim(str_replace("&middot;","",$postDate->innertext));
 				}
-				foreach($div->find('h2 a') as $title)
+				foreach($div->find('h3 a') as $title)
 				{
 					$node['link']=$title->getAttribute('href');
 					$node['title']=mb_convert_encoding(trim($title->innertext), "HTML-ENTITIES", "UTF-8");
@@ -41,8 +42,6 @@ try
 				}
 				$result[]=$node;
 			}
-
-			
 		//db insertion
 		if(count($result)>0)
 		{
